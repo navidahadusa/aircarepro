@@ -340,6 +340,7 @@ ${glance('Lincoln Park', [
       { q: 'Do I need to bleed my radiators every year?', a: 'On hot-water systems, bleeding trapped air at the start of the season helps radiators heat fully. Steam radiators don’t get bled; they rely on working air vents.' },
       { q: 'Can I add air conditioning to a Ravenswood home with radiators?', a: 'Yes. Ductless mini-splits add cooling and supplemental heat without opening walls for ductwork.' },
       { q: 'Why is the pressure relief valve on my boiler dripping?', a: 'Often the expansion tank has lost its air charge, so pressure climbs as the water heats. We test the tank and system pressure to confirm.' },
+      { q: "Can a loft near the Metra tracks be heated and cooled evenly?", a: "Yes, with careful supply and return placement. Supplies aimed at the living space and returns placed to pull warm air from up high keep a tall open room from layering." },
       emergencyFaq('Ravenswood'),
     ],
     nearbySlugs: ['lincoln-square', 'uptown', 'andersonville-edgewater'],
@@ -378,6 +379,7 @@ ${glance('Lincoln Park', [
       { q: 'Can I install a mini-split in my condo?', a: 'Usually, with your association’s approval for the outdoor unit location. We can help you prepare the details they ask for.' },
       { q: 'Can a mini-split heat my unit before the building heat comes on?', a: 'Yes. Heat-pump mini-splits heat as well as cool, which gives you control in spring and fall when building steam is off or running too warm.' },
       { q: 'Do you service hot-water boilers in Sheridan Park and Buena Park homes?', a: 'Yes. Yearly service and radiator balancing keep older boilers reliable and rooms even.' },
+      { q: "Who services the steam boiler in my condo building?", a: "Central steam boilers belong to the association, which decides who services them. We service equipment that serves only your unit, such as a mini-split or your own furnace." },
       emergencyFaq('Uptown'),
     ],
     nearbySlugs: ['lakeview', 'andersonville-edgewater', 'ravenswood'],
@@ -416,6 +418,7 @@ ${glance('Lincoln Park', [
       { q: 'Can a hot-water boiler also heat my water?', a: 'Yes, with an indirect water heater connected to the boiler. It can replace a separate water heater.' },
       { q: 'Why is the upstairs unit of my two-flat always warmer?', a: 'Heat rises and the upper unit gains heat from below. Separate thermostats or zoning by unit is usually the fix.' },
       { q: 'How do you add cooling to a large radiator-heated home?', a: 'With ductless mini-splits, or a high-velocity system that uses small ducts routed through closets and floor cavities. We assess the house first.' },
+      { q: "My central air is decades old. Should the new one be the same size?", a: "Not necessarily. We size new systems to the home rather than the old unit. A properly sized system runs longer, quieter cycles and removes more humidity." },
       emergencyFaq('Andersonville & Edgewater'),
     ],
     nearbySlugs: ['uptown', 'rogers-park', 'ravenswood'],
@@ -443,7 +446,7 @@ ${glance('Lincoln Park', [
       },
       {
         h2: 'What a steam boiler service covers',
-        html: `<p>We check the sight glass and water level, test the low-water cutoff, inspect the pressure control and burner, and look at the venting. Then we walk the system: main vents, radiator vents, and pipes that have lost their pitch and trap condensate. Water level and venting fixes are usually inexpensive and often solve years of banging and uneven heat. See <a href="/boiler-repair/">boiler repair</a>.</p>`,
+        html: `<p>We check the sight glass and water level, test the low-water cutoff, inspect the pressure control and burner, and look at the venting. Then we walk the system: main vents, radiator vents, and pipes that have lost their pitch and trap condensate. Water level and venting fixes are usually small jobs, and they often solve years of banging and uneven heat. See <a href="/boiler-repair/">boiler repair</a>.</p>`,
       },
       {
         h2: 'Utilities and rebates in Rogers Park',
@@ -454,6 +457,7 @@ ${glance('Lincoln Park', [
       { q: 'Why do my steam pipes bang?', a: 'Usually condensate pooling in pipes that have lost their pitch, or a boiler water level that’s too high. Both are fixable.' },
       { q: 'One radiator never gets hot. What’s wrong?', a: 'On steam systems it’s often a radiator vent stuck closed, so air can’t escape and steam can’t enter. Replacing the vent usually fixes it.' },
       { q: 'Can I replace window AC units with a ductless system?', a: 'Yes. Ductless mini-splits give quieter cooling and supplemental heat. In condos, the association approves the outdoor unit location.' },
+      { q: "Should I get my older furnace checked even if it still runs?", a: "Yes. A yearly safety check of the heat exchanger and venting catches problems a running furnace won’t show, such as a crack or a blocked flue. Working carbon monoxide alarms matter too." },
       emergencyFaq('Rogers Park'),
     ],
     nearbySlugs: ['west-ridge', 'andersonville-edgewater', 'evanston'],
@@ -477,7 +481,7 @@ ${glance('Lincoln Park', [
 <h3>Mid-century furnace replacements</h3>
 <p>Replacing chimney-vented furnaces with high-efficiency models requires new PVC venting and attention to the remaining water heater’s venting. A water heater left alone on a large masonry chimney may not draft properly and may need a liner.</p>
 <h3>Raised ranch comfort</h3>
-<p>Raised ranches can have lower levels cooler than upper levels; balancing dampers and returns help. Seasonal damper settings, one for heating and one for cooling, are a simple fix many homes never use.</p>`,
+<p>Raised ranches can have lower levels cooler than upper levels; balancing dampers and returns help. Seasonal damper settings, one for heating and one for cooling, are a simple adjustment worth trying first.</p>`,
       },
       {
         h2: 'Repair or replace in a West Ridge home',
@@ -543,7 +547,7 @@ ${glance('Logan Square', [['Between 2013 and 2019, 224 two-to-four-unit building
 
   avondale: {
     h1: 'Furnace, Boiler & AC Repair in Avondale, Chicago',
-    title: 'Furnace & AC Repair in Avondale, Chicago | Chicago Aircare Pro',
+    title: 'Furnace & AC Repair in Avondale | Chicago Aircare Pro',
     meta: 'Boiler-to-furnace conversions, basement apartment airflow and furnace and AC repair or replacement in Avondale bungalows and two-flats. 24/7.',
     intro: `${business.displayName} services heating and cooling systems in Avondale homes, including bungalows, frame houses and two-flats along and around Milwaukee Avenue. Renovations are reshaping the neighborhood’s mechanical systems, and we help owners plan conversions and keep aging equipment running.`,
     sections: [
@@ -574,6 +578,7 @@ ${glance('Logan Square', [['Between 2013 and 2019, 224 two-to-four-unit building
       { q: 'Is it worth converting from a boiler to forced air?', a: 'It depends on whether you want central air and how much ductwork the building can take. We compare it with keeping the boiler and adding mini-splits.' },
       { q: 'Does a basement apartment need its own ductwork?', a: 'It needs its own supply and return air paths. Leftover airflow from the main system usually isn’t enough.' },
       { q: 'My furnace is over 20 years old. Should I replace it?', a: 'Not automatically. If the heat exchanger, venting and controls check out, repair can make sense. We show both options with prices.' },
+      { q: "Can you plan HVAC for our two-flat renovation?", a: "Yes. We plan duct routes to fit existing walls and chases, size each furnace to its unit and plan the venting. It works best before the walls are closed." },
       emergencyFaq('Avondale'),
     ],
     nearbySlugs: ['logan-square', 'irving-park', 'albany-park'],
@@ -612,6 +617,7 @@ ${glance('Logan Square', [['Between 2013 and 2019, 224 two-to-four-unit building
       { q: 'My old house has huge round ducts in the basement. Is that a problem?', a: 'Not necessarily, but they often came from a gravity furnace. We check whether the airflow matches your current furnace and AC.' },
       { q: 'Why won’t my second floor cool down?', a: 'Older homes with central air added later often have no upstairs returns. Adding returns, balancing, or a separate upstairs system usually fixes it.' },
       { q: 'Does a big Old Irving Park house need two systems?', a: 'Not always, but larger homes often need two systems or zoning for even comfort. We measure the load and airflow first.' },
+      { q: "Is it worth fixing ductwork before replacing my furnace?", a: "Often, yes. Adjusting old gravity duct connections and adding returns can fix comfort complaints on their own, and they help a new furnace or AC perform as rated." },
       emergencyFaq('Irving Park'),
     ],
     nearbySlugs: ['portage-park', 'north-center', 'avondale'],
@@ -650,6 +656,8 @@ ${glance('Logan Square', [['Between 2013 and 2019, 224 two-to-four-unit building
       { q: 'Can a shared boiler be zoned by unit?', a: 'Often, with zone valves or separate circulators, if the piping is arranged by unit. We inspect the piping first.' },
       { q: 'Why is our basement unit uncomfortable?', a: 'Lower-level units often lack proper supply and return paths and get damp in summer. Better airflow and humidity control usually fix it.' },
       { q: 'Should I repair or replace my older furnace?', a: 'It depends on safety and condition. We check the heat exchanger, venting and controls, then show repair and replacement options with prices.' },
+      { q: "Can a steam system be split by unit?", a: "It is harder than with hot water. Steam systems are more difficult to zone by unit, so separate systems may make more sense. We inspect the piping before recommending anything." },
+      { q: "Do you help with Peoples Gas rebates in Albany Park?", a: "Yes. Rebate amounts and rules change, so we confirm what applies when we quote new equipment." },
       emergencyFaq('Albany Park'),
     ],
     nearbySlugs: ['irving-park', 'lincoln-square', 'west-ridge'],
@@ -726,6 +734,7 @@ ${glance('Logan Square', [['Between 2013 and 2019, 224 two-to-four-unit building
       { q: 'Do I need a chimney liner with a new furnace?', a: 'If the new furnace is high-efficiency, the water heater may be left alone on the chimney and may need a liner. We check during the estimate.' },
       { q: 'How do I fix the upstairs of a Cape Cod?', a: 'Ductless heads or a small upstairs system usually work best, because knee-wall ducts lose too much heating and cooling on the way.' },
       { q: 'Should my new furnace be the same size as the old one?', a: 'Not necessarily. We size it to the home’s actual heating load. Many older furnaces are oversized.' },
+      { q: "Can a bungalow attic in Jefferson Park be cooled without new ducts?", a: "Yes. A ductless mini-split cools and heats the attic on its own thermostat, without running new ducts from the basement." },
       emergencyFaq('Jefferson Park'),
     ],
     nearbySlugs: ['portage-park', 'norwood-park', 'edison-park'],
@@ -764,6 +773,8 @@ ${glance('Logan Square', [['Between 2013 and 2019, 224 two-to-four-unit building
       { q: 'Why is the bedroom at the end of my ranch always cold?', a: 'It’s usually the last run on a long trunk. Balancing and sealing often fix it.' },
       { q: 'Should crawlspace ducts be insulated?', a: 'Yes. Sealed and insulated crawlspace ducts lose less heat in winter and avoid condensation in summer.' },
       { q: 'Can you service both a boiler and central air in the same house?', a: 'Yes. Many historic homes have a boiler for heat and added cooling, and we work on both.' },
+      { q: "Do you work on homes in the Norwood Park historic district?", a: "Yes. Historic homes there may combine boilers with added cooling, and we work on both." },
+      { q: "Do I need a whole new duct system for my ranch?", a: "Rarely. Setting branch dampers, sealing joints, insulating crawlspace runs and adding returns usually come first. Resizing is reserved for the weakest branches." },
       emergencyFaq('Norwood Park'),
     ],
     nearbySlugs: ['jefferson-park', 'edison-park', 'portage-park'],
@@ -791,7 +802,7 @@ ${glance('Logan Square', [['Between 2013 and 2019, 224 two-to-four-unit building
       },
       {
         h2: 'Maintaining a two-system Edison Park home',
-        html: `<p>We service each system on its own schedule: furnaces before heating season, air conditioners before cooling season. We keep track of what each system serves, its filter size and its service history, so each visit picks up where the last left off. Our ${business.maintenancePlanName} maintenance plan covers recurring tune-ups. See <a href="/furnace-tune-up/">furnace tune-up</a> and <a href="/ac-tune-up/">AC tune-up</a>.</p>`,
+        html: `<p>We service each system on its own schedule: furnaces before heating season, air conditioners before cooling season. We keep track of what each system serves, its filter size and its service history, so each visit picks up where the last left off. Our ${business.maintenancePlanName} maintenance plan covers two tune-ups a year: AC in spring, heating in fall. See <a href="/furnace-tune-up/">furnace tune-up</a> and <a href="/ac-tune-up/">AC tune-up</a>.</p>`,
       },
       {
         h2: 'Utilities and rebates in Edison Park',
@@ -802,6 +813,8 @@ ${glance('Logan Square', [['Between 2013 and 2019, 224 two-to-four-unit building
       { q: 'How often should a high-efficiency furnace be serviced?', a: 'Once a year before heating season, including the condensate trap and drain.' },
       { q: 'Why are the two levels of my raised ranch different temperatures?', a: 'Air favors the easiest path. Returns and balancing dampers are the first fixes.' },
       { q: 'What does a condensate safety switch do?', a: 'It shuts the system off if the drain backs up, so water doesn’t overflow from attic or closet equipment. We test it during service.' },
+      { q: "Do you service attic furnaces and air handlers in newer Edison Park homes?", a: "Yes. We service each system and check attic equipment for condensate safety, including the drain and the float switch." },
+      { q: "Why does my high-efficiency furnace shut off on cold nights?", a: "A blocked condensate trap or drain trips a pressure switch and shuts the furnace down. Keeping the trap and drain clear before winter prevents it." },
       emergencyFaq('Edison Park'),
     ],
     nearbySlugs: ['norwood-park', 'jefferson-park', 'des-plaines'],
@@ -814,7 +827,7 @@ ${glance('Logan Square', [['Between 2013 and 2019, 224 two-to-four-unit building
 const westSide: Record<string, AreaContent> = {
   bucktown: {
     h1: 'Furnace & AC Repair in Bucktown, Chicago',
-    title: 'Furnace & AC Repair in Bucktown, Chicago | Chicago Aircare Pro',
+    title: 'Furnace & AC Repair in Bucktown | Chicago Aircare Pro',
     meta: 'Two-system new construction, attic air handlers, hot top floors and compact cottage furnaces in Bucktown. Furnace and AC repair, 24/7.',
     intro: `${business.displayName} repairs and installs heating and cooling systems in Bucktown homes, from original frame cottages to new-construction single-family homes and condos. Two-system homes with attic equipment and top floors that run hot are our most common Bucktown calls.`,
     sections: [
@@ -845,6 +858,8 @@ const westSide: Record<string, AreaContent> = {
       { q: 'Why is my top floor always warmer?', a: 'Heat rises, upper floors gain sun through the roof, and returns are often undersized upstairs. Balancing, added returns or zoning usually help.' },
       { q: 'How often should my attic air handler be serviced?', a: 'Every year before cooling season, including the condensate drain and safety switch.' },
       { q: 'My cottage basement is low. Can a new furnace fit?', a: 'Usually, with a compact or horizontal unit. We check the space before recommending equipment.' },
+      { q: "Do you service condo units in Bucktown?", a: "Yes, for equipment that serves your unit, such as your furnace, air handler or condenser. Building-wide systems are handled by the association." },
+      { q: "Our top floor has a roof deck. Do we need a bigger AC?", a: "Not always. We check duct sizing, top-floor returns and zoning first. If the upper system is undersized for the floor, we size a replacement properly." },
       emergencyFaq('Bucktown'),
     ],
     nearbySlugs: ['wicker-park', 'logan-square', 'lincoln-park'],
@@ -883,6 +898,8 @@ const westSide: Record<string, AreaContent> = {
       { q: 'Do you service rooftop condensers on loft buildings?', a: 'Yes, where there is safe roof access. We coordinate with building management when required.' },
       { q: 'How do I keep a high-ceiling loft comfortable?', a: 'Return placement, ceiling fans and correct supply sizing keep warm air from collecting near the ceiling.' },
       { q: 'Can I add cooling to a greystone heated by a boiler?', a: 'Yes. Ductless mini-splits are a common way to add cooling to boiler-heated homes without ductwork.' },
+      { q: "Why is there a water stain on the ceiling under my loft air handler?", a: "Usually a clogged condensate drain or an overflowing pan. Turn the system off and call. We clear the drain and test the safety switch." },
+      { q: "Do you service boilers in Wicker Park greystones?", a: "Yes. Large boiler-heated homes need balanced radiators and well-maintained boilers, and we work on both hot-water and steam systems." },
       emergencyFaq('Wicker Park'),
     ],
     nearbySlugs: ['bucktown', 'ukrainian-village', 'west-town'],
@@ -890,7 +907,7 @@ const westSide: Record<string, AreaContent> = {
 
   'humboldt-park': {
     h1: 'Boiler, Furnace & AC Repair in Humboldt Park, Chicago',
-    title: 'Boiler & Furnace Repair in Humboldt Park | Chicago Aircare Pro',
+    title: 'Boiler & Furnace Repair Humboldt Park | Chicago Aircare Pro',
     meta: 'Older boiler safety checks, unit-by-unit furnace venting and rehab HVAC planning for Humboldt Park greystones, two-flats and frame homes. 24/7.',
     intro: `${business.displayName} repairs and installs heating and cooling systems in Humboldt Park homes, including greystones, two-flats and frame houses around the park. Older boilers, buildings with a furnace per unit and gut rehabs are the work we see most.`,
     sections: [
@@ -921,6 +938,8 @@ const westSide: Record<string, AreaContent> = {
       { q: 'I’m rehabbing a two-flat. When should HVAC be planned?', a: 'Before framing is finished, so ducts, returns, venting and equipment locations fit.' },
       { q: 'Is my old boiler safe?', a: 'It can be, if the low-water cutoff, pressure controls and venting test properly. A yearly service checks all three.' },
       { q: 'We replaced one furnace in our building. Do the others need checking?', a: 'Yes. If the furnaces shared a chimney, the remaining appliances’ venting and combustion should be checked after the change.' },
+      { q: "Do you work on the furnace in each unit of a three-flat?", a: "Yes. We check each furnace’s venting and combustion, which matters most after one of the furnaces has been replaced." },
+      { q: "Are estimates free for a rehab?", a: "Estimates for new furnaces, boilers, air conditioners and heat pumps are free. Bring us in before framing is finished so the plan fits." },
       emergencyFaq('Humboldt Park'),
     ],
     nearbySlugs: ['logan-square', 'west-town', 'ukrainian-village'],
@@ -959,6 +978,8 @@ const westSide: Record<string, AreaContent> = {
       { q: 'My closet furnace is loud. Why?', a: 'Often an undersized return or a restrictive filter. We measure static pressure to find the cause.' },
       { q: 'Does my gangway condenser have enough room?', a: 'It needs clearance on its sides and top for airflow and service. We check clearance on every AC visit.' },
       { q: 'Do you service shared boilers in older two-flats?', a: 'Yes. Shared boilers need regular service, including safety controls and venting.' },
+      { q: "Can a new furnace fit in my renovated closet?", a: "Usually, if there is adequate return air and room for service access. We measure the space and check both before recommending equipment." },
+      { q: "Can you work on a roof-mounted condenser in Ukrainian Village?", a: "Yes, where there is safe access and enough clearance for airflow and service." },
       emergencyFaq('Ukrainian Village'),
     ],
     nearbySlugs: ['wicker-park', 'west-town', 'humboldt-park'],
@@ -997,6 +1018,8 @@ const westSide: Record<string, AreaContent> = {
       { q: 'Water is dripping from my ceiling under the air handler. What should I do?', a: 'Turn the system off at the thermostat and call. It’s usually a clogged condensate drain or an overflowing pan.' },
       { q: 'Can you service a rooftop condenser for my condo?', a: 'Yes, with safe roof access. We coordinate with building management.' },
       { q: 'Why is the top floor of my townhome too warm?', a: 'One system serving several levels struggles to satisfy all of them. Zoning or a second system usually fixes it.' },
+      { q: "Where is the filter for an air handler above my ceiling?", a: "Usually in a return grille or at the air handler itself, behind an access panel. If it is hard to reach, filters get skipped, so we look at improving access." },
+      { q: "Do you work in River West, Noble Square and East Village?", a: "Yes. We serve all of West Town, including River West, Noble Square and East Village." },
       emergencyFaq('West Town'),
     ],
     nearbySlugs: ['wicker-park', 'ukrainian-village', 'old-town-gold-coast'],
@@ -1004,7 +1027,7 @@ const westSide: Record<string, AreaContent> = {
 
   austin: {
     h1: 'Furnace, Boiler & AC Repair in Austin, Chicago',
-    title: 'Furnace & Boiler Repair in Austin, Chicago | Chicago Aircare Pro',
+    title: 'Furnace & Boiler Repair in Austin | Chicago Aircare Pro',
     meta: 'Boiler and radiator service for Austin’s Victorian homes, bungalow furnace safety checks and repair-first HVAC service on the West Side. 24/7.',
     intro: `${business.displayName} repairs and replaces furnaces, boilers and air conditioners in Austin homes on Chicago’s West Side. We show repair options first and recommend replacement only when a system is unsafe or no longer worth repairing.`,
     sections: [
@@ -1035,8 +1058,363 @@ const westSide: Record<string, AreaContent> = {
       { q: 'Is it safe to keep running a very old furnace?', a: 'It can be, if the heat exchanger, venting and safety controls check out. A yearly safety check tells you.' },
       { q: 'Do you repair boilers in large Austin homes?', a: 'Yes, both hot-water and steam. Boiler service, radiator balancing and venting checks keep large older homes warm.' },
       { q: 'Will you tell me if a repair isn’t worth it?', a: 'Yes. We show repair options first and recommend replacement only when a system is unsafe or no longer worth repairing.' },
+      { q: "Do you service furnaces in Austin bungalows?", a: "Yes. Bungalows in Austin typically have forced-air furnaces, and we recommend a safety check of the heat exchanger and venting before winter." },
+      { q: "Do you work in Austin’s historic districts?", a: "Yes. Large Victorian and Queen Anne homes there often still heat with boilers and radiators, and we service both hot-water and steam systems." },
       emergencyFaq('Austin'),
     ],
     nearbySlugs: ['humboldt-park', 'portage-park', 'chicago'],
   },
 };
+
+/* ------------------------------------------------------------------ */
+/* North suburbs                                                       */
+/* ------------------------------------------------------------------ */
+const northSuburbs: Record<string, AreaContent> = {
+  evanston: {
+    h1: 'HVAC Repair in Evanston, IL: Furnaces, Boilers & AC',
+    title: 'HVAC Repair in Evanston, IL | Chicago Aircare Pro',
+    meta: 'Steam and hot-water boilers, furnace and AC repair, ductless cooling and condo HVAC for Evanston homes, lakefront to west side. 24/7. Call or text.',
+    intro: `${business.displayName} provides heating and cooling repair, replacement and maintenance for Evanston homes, from the lakefront to the west side. Early-20th-century houses on boilers, big homes that need more than one zone and condo units with their own equipment are the core of our Evanston work.`,
+    sections: [
+      {
+        h2: 'Homes and HVAC systems in Evanston',
+        html: `<p>Evanston has many early-20th-century single-family homes, including Victorian, Prairie-style and Tudor houses, along with two-flats, courtyard buildings and condos near downtown and Northwestern. Older homes frequently heat with hot-water or steam boilers.</p>
+<p>Boiler heat suits these houses, but it leaves them without cooling, and their size makes even comfort harder. The condo buildings bring the opposite problem: compact equipment in small spaces that needs good return air to run quietly.</p>
+${glance('Evanston', [
+  ['About 55.8% of Evanston homes are owner-occupied (2019-2023).', 'U.S. Census QuickFacts: Evanston', 'https://www.census.gov/quickfacts/evanstoncityillinois'],
+  ['The City of Evanston lists Nicor Gas as the natural gas provider.', 'City of Evanston utilities', 'https://cityofevanston.org/departments/public_works/services/utilities.php'],
+])}`,
+      },
+      {
+        h2: 'Common heating and cooling issues in Evanston',
+        html: `<h3>Boiler homes adding cooling</h3>
+<p>Ductless mini-splits and high-velocity systems add cooling to radiator-heated homes with minimal disruption. Ductless heads need only a small wall opening for the line set; high-velocity systems run small flexible ducts through closets and attics.</p>
+<h3>Large older homes</h3>
+<p>Bigger homes may need multiple zones or systems for even comfort. A three-story house rarely heats or cools evenly from a single thermostat.</p>
+<h3>Condo units</h3>
+<p>Condo owners with their own furnace or heat pump often need compact equipment and good return air. Equipment that serves your unit is usually yours to maintain; building-wide systems belong to the association.</p>`,
+      },
+      {
+        h2: 'Steam and hot-water boiler service in Evanston',
+        html: `<p>We work on both. Hot-water systems get air purging, an expansion tank and circulator check and a pressure relief valve test. Steam systems get a sight-glass and water-level check, a low-water cutoff test and a look at main and radiator vents, the usual cause of uneven heat and banging pipes. Both get burner, venting and safety-control checks. When a boiler is near the end of its life, we compare replacement options and the Nicor Gas boiler rebates. See <a href="/boiler-repair/">boiler repair</a>.</p>`,
+      },
+      {
+        h2: 'Utilities and rebates in Evanston',
+        html: nicor('Evanston', 'For Evanston’s many boiler homes, note that Nicor Gas lists boiler rebates alongside its furnace rebates, so a boiler replacement may qualify too.'),
+      },
+    ],
+    faqs: [
+      { q: 'Do you work on steam boilers in Evanston homes?', a: 'Yes, both steam and hot-water boilers. See our boiler repair page for details.' },
+      { q: 'Can I add central air to an Evanston home with radiators?', a: 'Yes, usually with ductless mini-splits or a high-velocity system that uses small ducts. Both add cooling with minimal disruption.' },
+      { q: 'Do you service condo units in Evanston?', a: 'Yes, when the furnace, heat pump or AC serves your unit. Building-wide systems are handled by the association.' },
+      { q: "Who provides natural gas in Evanston?", a: "The City of Evanston lists Nicor Gas as the natural gas provider, and electricity comes from ComEd. Your gas bill shows which utility serves your address." },
+      { q: "Does a big older Evanston home need more than one system?", a: "Not always, but bigger homes may need multiple zones or systems for even comfort. We assess the load and layout first." },
+      emergencyFaq('Evanston'),
+    ],
+    nearbySlugs: ['skokie', 'wilmette', 'rogers-park'],
+  },
+
+  skokie: {
+    h1: 'HVAC Repair in Skokie, IL: Furnace & AC Service',
+    title: 'HVAC Repair in Skokie, IL | Chicago Aircare Pro',
+    meta: 'Furnace and AC repair and replacement for Skokie ranches, split-levels and Cape Cods. Split-level balancing, added returns, condos. 24/7.',
+    intro: `${business.displayName} repairs and installs heating and cooling systems in Skokie, including east and west Skokie and the Old Orchard area. Post-war homes on original ductwork and furnaces and ACs at the end of their life are what we see most.`,
+    sections: [
+      {
+        h2: 'Homes and HVAC systems in Skokie',
+        html: `<p>Much of Skokie was built after World War II: brick ranches, split-levels, raised ranches and Cape Cods, plus townhomes and condos near Old Orchard. Many homes are on aging furnaces and ACs and original ductwork.</p>
+<p>Original ductwork in these homes was usually sized for heating. It often has too few returns for today’s equipment, and the split-level layout makes some levels harder to reach than others. Fix the airflow and a new system performs as rated; skip it and the same comfort complaints follow the new equipment.</p>
+${glance('Skokie', [['The median Skokie home was built in 1959, and about 74% of homes are owner-occupied (ACS data via a secondary aggregator).', 'City-Stats: Skokie housing', 'https://city-stats.com/illinois/skokie/housing']])}`,
+      },
+      {
+        h2: 'Common heating and cooling issues in Skokie',
+        html: `<h3>Split-level temperature differences</h3>
+<p>Split-levels often have one level noticeably warmer or cooler. Balancing dampers, added returns or zoning help. Many homes benefit from two damper settings, one for heating season and one for cooling.</p>
+<h3>Undersized returns</h3>
+<p>Original ductwork often has too few returns for modern equipment, causing noise and reduced airflow. We measure static pressure to confirm before recommending changes.</p>
+<h3>End-of-life equipment</h3>
+<p>Many systems from the 1990s and 2000s are due for replacement; we size new equipment to the home. Copying the old nameplate often repeats an oversizing mistake.</p>`,
+      },
+      {
+        h2: 'Replacing a furnace and AC in a Skokie home',
+        html: `<p>We start with a load calculation and a duct check, then quote options: a matched furnace and AC, and where it makes sense a heat pump paired with a furnace. Each quote includes the venting, return-air and electrical work the job needs, so the price you see is the price of a system that works. New-system estimates are free, and financing is available through ${business.financingPartner}, subject to credit approval. See <a href="/furnace-installation/">furnace installation</a> and <a href="/ac-installation/">AC installation</a>.</p>`,
+      },
+      {
+        h2: 'Utilities and rebates in Skokie',
+        html: nicor('Skokie', 'Furnace replacements in Skokie’s post-war homes are the most common case for the Nicor Gas furnace rebates; a smart thermostat installed with the new system may qualify too.'),
+      },
+    ],
+    faqs: [
+      { q: 'Do you service townhomes and condos in Skokie?', a: 'Yes, for equipment that serves your unit.' },
+      { q: 'Why is one level of my split-level always warmer?', a: 'Air favors the easiest path. Balancing dampers, added returns or zoning usually even it out.' },
+      { q: 'Is my original ductwork good enough for a new AC?', a: 'Often, but many Skokie homes have too few returns. We measure static pressure and check returns before sizing a new system.' },
+      { q: "Do you serve both east and west Skokie?", a: "Yes, including east and west Skokie and the Old Orchard area." },
+      { q: "Can a heat pump work in a Skokie home?", a: "Yes, often paired with a gas furnace as a dual-fuel system: the heat pump cools in summer and heats in mild weather, and the furnace takes over in deep cold." },
+      emergencyFaq('Skokie'),
+    ],
+    nearbySlugs: ['evanston', 'wilmette', 'west-ridge'],
+  },
+
+  wilmette: {
+    h1: 'HVAC Repair in Wilmette, IL: Furnaces, Boilers & AC',
+    title: 'HVAC Repair in Wilmette, IL | Chicago Aircare Pro',
+    meta: 'Boilers and radiators in east Wilmette, forced air west of the Edens, two-system homes and whole-home humidity control. 24/7 HVAC service.',
+    intro: `${business.displayName} provides heating and cooling service for Wilmette homes, from older houses on the east side to mid-century homes west of the Edens. Boiler homes, two-system homes and dry winter air are the recurring themes here.`,
+    sections: [
+      {
+        h2: 'Homes and HVAC systems in Wilmette',
+        html: `<p>East Wilmette has many older single-family homes, some with boilers and radiators; west Wilmette has more mid-century ranches and two-stories with forced air. Larger homes commonly have two systems.</p>
+<p>Which side of town you’re on often tells us what we’ll find in the basement. East-side boiler homes need water-side care and a plan for cooling; west-side forced-air homes need airflow, filtration and, in larger houses, two systems kept in step.</p>`,
+      },
+      {
+        h2: 'Common heating and cooling issues in Wilmette',
+        html: `<h3>Two-system homes</h3>
+<p>Homes with separate upstairs and downstairs systems need both serviced; attic units need condensate safety checks. If the upstairs system is in the attic, a clogged drain can leak into the ceiling below.</p>
+<h3>Boilers in older homes</h3>
+<p>Boiler service and radiator balancing keep older homes comfortable; ductless adds cooling.</p>
+<h3>Humidity</h3>
+<p>Large homes benefit from whole-home humidification in winter and dehumidification in damp basements. Forced-air heating dries indoor air, which shows up as static, dry skin and gaps in wood floors.</p>`,
+      },
+      {
+        h2: 'Whole-home humidity control in Wilmette',
+        html: `<p>A <a href="/whole-home-humidifiers/">whole-home humidifier</a> mounts on the furnace and adds moisture to the air it distributes, controlled by a humidistat so windows don’t fog. In summer, a <a href="/whole-home-dehumidifiers/">whole-home dehumidifier</a> keeps a basement dry without a portable unit to empty. Both need yearly service: a new water panel or pad for the humidifier, a clean filter and drain for the dehumidifier.</p>`,
+      },
+      {
+        h2: 'Utilities and rebates in Wilmette',
+        html: nicor('Wilmette', 'East-side boiler homes should note the Nicor Gas boiler rebates; west-side forced-air homes, the furnace rebates. A smart thermostat on each system may qualify too.'),
+      },
+    ],
+    faqs: [
+      { q: 'Should I add a humidifier to my furnace?', a: 'If winter air is dry (static, dry skin, gaps in wood floors), a whole-home humidifier helps. See our whole-home humidifiers page.' },
+      { q: 'Do both of my systems need yearly service?', a: 'Yes. Homes with separate upstairs and downstairs systems need both serviced, and attic units need their condensate safety switch checked.' },
+      { q: 'Can I add cooling to an east Wilmette home with radiators?', a: 'Yes. Ductless mini-splits add cooling to boiler-heated homes without ductwork.' },
+      { q: "Do you work on both sides of Wilmette?", a: "Yes, from older homes on the east side to mid-century ranches and two-stories west of the Edens." },
+      { q: "Do I need a dehumidifier for my Wilmette basement?", a: "If the basement feels damp or smells musty in summer, a whole-home dehumidifier keeps it dry without a portable unit to empty." },
+      { q: "Can you balance the radiators in my older Wilmette home?", a: "Yes. Boiler service and radiator balancing keep older homes comfortable from room to room." },
+      emergencyFaq('Wilmette'),
+    ],
+    nearbySlugs: ['evanston', 'skokie', 'highland-park'],
+  },
+
+  'highland-park': {
+    h1: 'HVAC Repair in Highland Park, IL: Multi-System Homes',
+    title: 'HVAC Repair in Highland Park, IL | Chicago Aircare Pro',
+    meta: 'Multi-system and zoned homes, mid-century slab ductwork, humidifiers, media filters and UV lights in Highland Park. Furnace, boiler and AC, 24/7.',
+    intro: `${business.displayName} repairs and installs heating and cooling systems in Highland Park homes. Larger houses with several systems and zoning, mid-century homes with ducts in tight spaces, and air quality equipment that needs regular service make up most of our work here.`,
+    sections: [
+      {
+        h2: 'Homes and HVAC systems in Highland Park',
+        html: `<p>Highland Park has a wide range of homes: older houses near the lake and ravines, mid-century modern homes, and large newer houses. Bigger homes often have multiple systems, zoning, humidifiers and air cleaners.</p>
+<p>More equipment means more to keep track of. We record what each system serves, its model, filter size and service history, so every visit starts from a complete picture instead of a guess.</p>`,
+      },
+      {
+        h2: 'Common heating and cooling issues in Highland Park',
+        html: `<h3>Multiple systems and zoning</h3>
+<p>Large homes may have three or more systems; we service each and check zoning controls. A stuck damper or misconfigured zone board can make one wing too hot while the equipment itself is fine.</p>
+<h3>Mid-century homes</h3>
+<p>Slab and low-profile homes can have ductwork in slabs or tight spaces; we assess before recommending changes. Ducts in a slab can’t easily be replaced, so the options often involve working around them.</p>
+<h3>Air quality equipment</h3>
+<p>Humidifiers, media filters and UV lights on larger systems need regular service. A UV lamp loses output over time even while it still glows, and a clogged media filter restricts airflow. See <a href="/uv-air-sanitizers/">UV air sanitizers</a> and <a href="/air-purifiers/">air purifiers</a>.</p>`,
+      },
+      {
+        h2: 'Boilers and hot water in Highland Park homes',
+        html: `<p>Older homes near the lake may heat with hot-water or steam boilers. We service both, and when replacement is due we compare high-efficiency hot-water boilers with like-for-like steam replacements, since a steam system can’t simply be swapped for a hot-water boiler without changing the piping. See <a href="/boiler-installation/">boiler installation</a>.</p>`,
+      },
+      {
+        h2: 'Utilities and rebates in Highland Park',
+        html: `<p>Most Highland Park homes get natural gas from North Shore Gas and electricity from ComEd.</p>
+<p>For 2026, North Shore Gas lists rebates of $200 for a 95% AFUE or higher furnace, $350 for a hot-water boiler (88% AFUE or higher), $150 for a steam boiler and $25 for a smart thermostat. In multi-system homes, each qualifying furnace or thermostat may count. Check current amounts before you buy: ${ext('https://www.northshoregasdelivery.com/savings/rebates-residential', 'North Shore Gas Home Energy Rebates')}.</p>${CONFIRM}`,
+      },
+    ],
+    faqs: [
+      { q: 'Can you service a home with several HVAC systems?', a: 'Yes. We keep a record of each system’s equipment and service history.' },
+      { q: 'My mid-century home has ducts in the slab. Can it get new equipment?', a: 'Usually, yes. We assess the slab ducts and tight spaces before recommending changes, and plan around ducts that can’t be replaced.' },
+      { q: 'How often do humidifiers, media filters and UV lights need service?', a: 'They need regular service, typically checked at each system tune-up. Pads, filters and lamps are replaced as needed.' },
+      { q: "Who provides natural gas in Highland Park?", a: "Most Highland Park homes get natural gas from North Shore Gas and electricity from ComEd." },
+      { q: "Can you check the zoning in a large Highland Park home?", a: "Yes. We service each system and check the zoning controls, including dampers and the zone board." },
+      emergencyFaq('Highland Park'),
+    ],
+    nearbySlugs: ['wilmette', 'skokie', 'evanston'],
+  },
+};
+
+/* ------------------------------------------------------------------ */
+/* Northwest & west suburbs                                            */
+/* ------------------------------------------------------------------ */
+const westSuburbs: Record<string, AreaContent> = {
+  'des-plaines': {
+    h1: 'HVAC Repair in Des Plaines, IL: Furnace & AC Service',
+    title: 'HVAC Repair in Des Plaines, IL | Chicago Aircare Pro',
+    meta: 'Furnace and AC repair and matched replacements for Des Plaines ranches, split-levels and bungalows. Airflow balancing, basements. 24/7.',
+    intro: `${business.displayName} provides heating and cooling service in Des Plaines homes. Mid-century ranches and split-levels on original ductwork, with furnaces and ACs that are both getting old, describe most of the homes we work in here.`,
+    sections: [
+      {
+        h2: 'Homes and HVAC systems in Des Plaines',
+        html: `<p>Des Plaines has many mid-century ranches, split-levels and bungalows, along with newer homes and townhomes. Original ductwork and aging furnaces and ACs are common.</p>
+<p>When the equipment is old and the ducts are original, the question isn’t only which furnace to buy. It’s whether the duct system can deliver what a new furnace and AC are rated for, and how to fix the rooms that have always been uncomfortable.</p>`,
+      },
+      {
+        h2: 'Common heating and cooling issues in Des Plaines',
+        html: `<h3>Ranch and split-level airflow</h3>
+<p>Long duct runs and level changes cause uneven rooms; balancing and returns are the first fixes. They cost far less than new equipment and often solve the complaint outright.</p>
+<h3>Furnace and AC replacement</h3>
+<p>When both are aging, a matched replacement is often the better long-term choice. The indoor coil sits on the furnace, and a matched pair is designed to work together.</p>
+<h3>Basements</h3>
+<p>Finished basements in older homes often need added supply and return paths, and humidity control.</p>`,
+      },
+      {
+        h2: 'Sizing a new furnace for a Des Plaines home',
+        html: `<p>Many older furnaces are oversized. An oversized furnace heats in short bursts, leaves rooms uneven and cycles more often, which wears parts. We size from the home’s heating load, accounting for insulation, windows and any additions, not from the old furnace’s rating. The same goes for the AC: right-sized equipment runs longer, steadier cycles and removes more humidity. New-system estimates are free. See <a href="/furnace-installation/">furnace installation</a>.</p>`,
+      },
+      {
+        h2: 'Utilities and rebates in Des Plaines',
+        html: nicor('Des Plaines', 'A matched furnace and AC replacement is the typical Des Plaines project; the furnace side may qualify for the Nicor Gas rebate, and so may a smart thermostat installed with it.'),
+      },
+    ],
+    faqs: [
+      { q: 'How do I know if my furnace is the right size?', a: 'We look at the home’s heating load, not the old furnace’s rating. Many older furnaces are oversized.' },
+      { q: 'Some rooms in my ranch are always uncomfortable. What helps?', a: 'Long duct runs leave far rooms weak. Balancing and added returns are the first fixes.' },
+      { q: 'Should I replace my furnace and AC together?', a: 'When both are aging, a matched replacement is often the better long-term choice. If one is still healthy, we’ll tell you.' },
+      { q: "Can you add heating and cooling to a finished basement?", a: "Yes. Finished basements in older homes often need added supply and return paths, plus humidity control." },
+      { q: "Do you service townhomes in Des Plaines?", a: "Yes, for equipment that serves your unit." },
+      emergencyFaq('Des Plaines'),
+    ],
+    nearbySlugs: ['edison-park', 'arlington-heights', 'skokie'],
+  },
+
+  'arlington-heights': {
+    h1: 'HVAC Repair in Arlington Heights, IL: Furnace, AC & Heat Pumps',
+    title: 'HVAC Repair in Arlington Heights, IL | Chicago Aircare Pro',
+    meta: 'Furnace, AC and dual-fuel heat pump service in Arlington Heights. Two-story comfort, right-sized replacements for 1990s and 2000s systems. 24/7.',
+    intro: `${business.displayName} repairs and replaces furnaces, air conditioners and heat pumps in Arlington Heights homes. Systems from the 1990s and 2000s are reaching replacement age here, and many owners want to know about heat pumps as well as furnaces.`,
+    sections: [
+      {
+        h2: 'Homes and HVAC systems in Arlington Heights',
+        html: `<p>Arlington Heights has many ranches, split-levels and two-story homes built from the 1950s to the 1980s, plus newer construction and townhomes. Systems from the 1990s and 2000s are reaching replacement age.</p>
+<p>A replacement is the best chance in decades to fix comfort problems the old system never solved: the hot upstairs, the cold family room over the garage, the noisy return. It’s also when owners decide between a straight furnace-and-AC swap and a dual-fuel heat pump.</p>`,
+      },
+      {
+        h2: 'Common heating and cooling issues in Arlington Heights',
+        html: `<h3>Two-story comfort</h3>
+<p>Upstairs rooms running hot in summer usually point to returns, duct sizing or a need for zoning.</p>
+<h3>Replacement sizing</h3>
+<p>Replacing like-for-like often repeats oversizing; we size to the home. Homes that have had new windows or insulation since the original install usually need less capacity, not more.</p>
+<h3>Heat pump options</h3>
+<p>Dual-fuel heat pumps paired with an existing furnace are an option for homeowners interested in electrification.</p>`,
+      },
+      {
+        h2: 'Dual-fuel heat pumps in Arlington Heights',
+        html: `<p>A dual-fuel system replaces the air conditioner with a heat pump and keeps a gas furnace. The heat pump cools in summer and heats in mild weather; the furnace takes over in deep cold. The changeover point is set in the thermostat. It’s a practical way to add electric heating without giving up gas heat on the coldest days. We compare it side by side with a standard AC replacement. See <a href="/heat-pump-installation/">heat pump installation</a>.</p>`,
+      },
+      {
+        h2: 'Utilities and rebates in Arlington Heights',
+        html: nicor('Arlington Heights', 'If a replacement includes a high-efficiency furnace, the Nicor Gas furnace rebate may apply; a smart thermostat, needed to run a dual-fuel system well, may qualify too.'),
+      },
+    ],
+    faqs: [
+      { q: 'Can I add a heat pump and keep my furnace?', a: 'Yes. Dual-fuel systems use the heat pump in mild weather and the furnace in deep cold. See our heat pump installation page.' },
+      { q: 'Why is my upstairs hot in summer?', a: 'Usually returns, duct sizing or a need for zoning. We check those before recommending equipment.' },
+      { q: 'Should my new system be the same size as the old one?', a: 'Not necessarily. Like-for-like replacement often repeats oversizing; we size to the home.' },
+      { q: "My system is from the 1990s. Should I replace it now?", a: "Not automatically. Many systems from the 1990s and 2000s are reaching replacement age, but if the equipment is safe and a repair makes sense, we show you that option first." },
+      { q: "Do you work on townhomes and newer construction in Arlington Heights?", a: "Yes, along with ranches, split-levels and two-story homes." },
+      emergencyFaq('Arlington Heights'),
+    ],
+    nearbySlugs: ['schaumburg', 'des-plaines', 'skokie'],
+  },
+
+  schaumburg: {
+    h1: 'HVAC Repair in Schaumburg, IL: Homes, Townhomes & Condos',
+    title: 'HVAC Repair in Schaumburg, IL | Chicago Aircare Pro',
+    meta: 'Closet furnaces in townhomes and condos, aging subdivision systems and HOA-friendly AC replacement in Schaumburg. Furnace and AC repair, 24/7.',
+    intro: `${business.displayName} provides heating and cooling service for Schaumburg homes, townhomes and condos. Closet furnaces, original or second-generation subdivision systems and association rules for outdoor units shape most of our work here.`,
+    sections: [
+      {
+        h2: 'Homes and HVAC systems in Schaumburg',
+        html: `<p>Schaumburg grew mostly from the 1960s through the 1990s: single-family subdivisions, townhomes and condo communities. Townhomes and condos often have furnaces in closets or utility rooms and condensers on pads or patios.</p>
+<p>Closet installs work well when there is enough combustion air and return air, and poorly when there isn’t. Subdivision homes, many on their original or second set of equipment, raise the repair-or-replace question.</p>`,
+      },
+      {
+        h2: 'Common heating and cooling issues in Schaumburg',
+        html: `<h3>Closet furnaces in townhomes</h3>
+<p>Compact spaces need adequate combustion and return air; we check both on service and replacement. A closet door that was replaced with a solid one, or a return grille that was blocked, can starve a furnace.</p>
+<h3>Aging subdivision equipment</h3>
+<p>Many original or second-generation systems are due for replacement. We check safety first, then show repair and replacement options with prices.</p>
+<h3>HOA rules</h3>
+<p>Townhome and condo associations may have rules about outdoor unit placement; we plan around them.</p>`,
+      },
+      {
+        h2: 'Replacing a closet furnace or patio condenser in a Schaumburg townhome',
+        html: `<p>We measure the closet, check combustion and return air, and choose equipment that fits with room for service. For the condenser, we confirm the pad location, clearances and any association requirements before the install. If the furnace and AC are both aging, a matched pair avoids fitting a new coil to an old furnace. New-system estimates are free, and financing is available through ${business.financingPartner}, subject to credit approval. See <a href="/furnace-installation/">furnace installation</a>.</p>`,
+      },
+      {
+        h2: 'Utilities and rebates in Schaumburg',
+        html: nicor('Schaumburg', 'Townhomes and single-family homes replacing a furnace may qualify for the Nicor Gas furnace rebates; a smart thermostat may qualify too.'),
+      },
+    ],
+    faqs: [
+      { q: 'Do you work in townhome communities?', a: 'Yes. We service and replace equipment that serves your unit and follow your association’s rules.' },
+      { q: 'My townhome furnace is in a closet. Is that a problem?', a: 'Not if it has adequate combustion and return air. We check both on every service and replacement.' },
+      { q: 'Is my original subdivision furnace due for replacement?', a: 'Many are, but not all. We check safety first, then show repair and replacement options with prices.' },
+      { q: "Does my association need to approve a new condenser location?", a: "Often, yes. Townhome and condo associations may have rules about outdoor unit placement, and we plan the installation around them." },
+      { q: "Why does my closet furnace overheat or shut off?", a: "A common cause is not enough return or combustion air, for example a blocked return grille or a closet door that seals too tightly. We check both." },
+      { q: "Are estimates free in Schaumburg?", a: "Estimates for new furnaces, air conditioners and heat pumps are free. Repair visits start with a diagnosis, and you get the price before any work begins." },
+      emergencyFaq('Schaumburg'),
+    ],
+    nearbySlugs: ['arlington-heights', 'des-plaines', 'naperville'],
+  },
+
+  naperville: {
+    h1: 'HVAC Repair in Naperville, IL: Furnace, AC & Zoning',
+    title: 'HVAC Repair in Naperville, IL | Chicago Aircare Pro',
+    meta: 'Two-story and two-system homes, zoning, humidity control and furnace and AC replacement in Naperville. Nicor Gas and Naperville Electric rebates.',
+    intro: `${business.displayName} repairs and installs heating and cooling systems in Naperville homes. Large two-story homes with two systems or zoning, equipment from the 2000s reaching replacement age, and year-round humidity control are what we see most here.`,
+    sections: [
+      {
+        h2: 'Homes and HVAC systems in Naperville',
+        html: `<p>Naperville has a historic district of older homes near downtown, and many large two-story homes built from the 1980s through the 2000s. Larger homes often have two systems or zoning.</p>
+<p>In the newer homes, the most common complaint is a warm second floor in summer. In the historic district, older homes bring their own mix of equipment. Either way, a good diagnosis starts with airflow, not with a new unit.</p>`,
+      },
+      {
+        h2: 'Common heating and cooling issues in Naperville',
+        html: `<h3>Two-story and two-system homes</h3>
+<p>Second floors running warm is the most common comfort complaint; zoning or a separate upstairs system helps. Before either, we check returns, duct sizing and blower settings, which often fix it on their own.</p>
+<h3>Equipment reaching replacement age</h3>
+<p>Systems from the 2000s are aging out; we compare repair and replacement.</p>
+<h3>Humidity control</h3>
+<p>Large homes benefit from humidifiers in winter and dehumidifiers in summer basements. See <a href="/whole-home-humidifiers/">whole-home humidifiers</a> and <a href="/whole-home-dehumidifiers/">whole-home dehumidifiers</a>.</p>`,
+      },
+      {
+        h2: 'Fixing a warm second floor in a Naperville home',
+        html: `<p>We work from least to most invasive: confirm the upstairs returns are adequate, check duct sizing to the far bedrooms, set the blower speed for cooling, and adjust balancing dampers. If the home has one system for two floors and that isn’t enough, zoning with a correctly configured control board is the next step. A separate upstairs system is the last resort for homes where the duct layout can’t be fixed. See <a href="/thermostat-installation/">thermostats and zoning</a>.</p>`,
+      },
+      {
+        h2: 'Utilities and rebates in Naperville',
+        html: `<p>Naperville homes get natural gas from Nicor Gas and electricity from the City of Naperville Electric Utility, not ComEd.</p>
+<p>For 2026, Nicor Gas lists furnace rebates of $150 to $225 depending on efficiency. The city’s electric utility runs its own rebates for smart thermostats, replacement central air conditioners and air-source heat pumps; see ${ext('https://www.naperville.il.us/energygrants/', 'Naperville Electric Utility energy efficiency programs')}. Check current amounts before you buy: ${ext(NICOR_URL, 'Nicor Gas Energy Efficiency Program rebates')}.</p>
+<p>That means a Naperville AC or heat pump replacement may be eligible for a city electric rebate, while the furnace side may be eligible through Nicor Gas.</p>${CONFIRM}`,
+      },
+    ],
+    faqs: [
+      { q: 'My upstairs is always warmer in summer. Can that be fixed?', a: 'Usually: we check returns, duct sizing and blower settings first, then zoning or a second system if needed.' },
+      { q: 'Is Naperville electricity from ComEd?', a: 'No. Naperville homes get electricity from the City of Naperville Electric Utility, which runs its own rebates for smart thermostats, replacement central air conditioners and air-source heat pumps. Natural gas comes from Nicor Gas.' },
+      { q: 'Should I add a humidifier or dehumidifier?', a: 'Large homes often benefit from a whole-home humidifier in winter and a dehumidifier for damp basements in summer.' },
+      { q: "Do you work on older homes in Naperville’s historic district?", a: "Yes. Older homes near downtown bring their own mix of equipment, and we start every visit with a diagnosis of what is there." },
+      { q: "Can I get a rebate on a new air conditioner in Naperville?", a: "Possibly. The City of Naperville Electric Utility runs its own rebates for replacement central air conditioners, air-source heat pumps and smart thermostats. Check current amounts before you buy." },
+      emergencyFaq('Naperville'),
+    ],
+    nearbySlugs: ['schaumburg', 'arlington-heights', 'des-plaines'],
+  },
+};
+
+/** All 33 area pages keyed by slug (must match business.serviceAreas). */
+export const areaContent: Record<string, AreaContent> = {
+  ...hub,
+  ...northSide,
+  ...northwestSide,
+  ...westSide,
+  ...northSuburbs,
+  ...westSuburbs,
+};
+
+/** Area slugs that have dedicated service+city pages (/furnace-repair-<city>/, /ac-repair-<city>/, /furnace-installation-<city>/). */
+export const serviceCitySlugs = ['chicago', 'evanston', 'skokie', 'wilmette', 'highland-park', 'des-plaines', 'arlington-heights', 'schaumburg', 'naperville'] as const;
