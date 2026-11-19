@@ -1,0 +1,24 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LeadForm from '../components/LeadForm.astro';
+import CallSmsCta from '../components/CallSmsCta.astro';
+import { business } from '../data/business';
+const primary = business.serviceAreas.find((a) => a.primary) ?? business.serviceAreas[0];
+---
+
+<BaseLayout
+  title={`${business.name} | HVAC Repair & Installation in ${primary.name}`}
+  description={`${business.tagline}. AC & furnace repair, replacement and maintenance in ${primary.name}. Call ${business.phoneDisplay}.`}
+>
+  <section class="hero container">
+    <div>
+      <h1>{business.tagline} in {primary.name}</h1>
+      <p>Fast, honest heating and cooling service. Upfront pricing, licensed technicians{business.emergency24x7 && ', 24/7 emergency response'}.</p>
+      <CallSmsCta placement="home_hero" heading="Talk to a real person now" />
+      <ul>
+        {business.services.map((s) => <li>{s}</li>)}
+      </ul>
+    </div>
+    <LeadForm funnel="quote" placement="home_hero" />
+  </section>
+</BaseLayout>

@@ -1,0 +1,17 @@
+priority,tier,directory,url_to_submit,listing_url,status,nap_match,claimed,login_location,date_submitted,date_live,last_checked,in_sameAs,notes
+1,1,Google Business Profile,https://business.google.com,,todo,,,,,,,no,
+2,1,Bing Places,https://www.bingplaces.com,,todo,,,,,,,no,Import from GBP
+3,1,Apple Business Connect,https://businessconnect.apple.com,,todo,,,,,,,no,
+4,1,Facebook,https://www.facebook.com/pages/create,,todo,,,,,,,no,
+5,1,Yelp,https://biz.yelp.com,,todo,,,,,,,no,
+6,1,BBB,https://www.bbb.org/get-listed,,todo,,,,,,,no,
+7,1,Nextdoor,https://business.nextdoor.com,,todo,,,,,,,no,
+8,2,Data Axle,https://www.data-axle.com,,todo,,,,,,,no,Aggregator
+9,2,Neustar Localeze,https://www.neustarlocaleze.biz,,todo,,,,,,,no,Aggregator
+10,2,Foursquare,https://foursquare.com/add-place,,todo,,,,,,,no,Aggregator
+11,3,Angi,https://www.angi.com/pro,,todo,,,,,,,no,
+12,3,HomeAdvisor,https://pro.homeadvisor.com,,todo,,,,,,,no,
+13,3,Thumbtack,https://www.thumbtack.com/pro,,todo,,,,,,,no,
+14,3,Houzz,https://pro.houzz.com,,todo,,,,,,,no,
+15,3,Porch,https://pro.porch.com,,todo,,,,,,,no,
+16,4,Chamber of Commerce,TBD,,todo,,,,,,,no,TODO(city)

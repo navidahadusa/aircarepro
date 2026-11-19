@@ -1,0 +1,37 @@
+---
+/**
+ * Renders the canonical NAP exactly as defined in src/data/business.ts.
+ * Use this anywhere the name/address/phone is shown — never hard-code NAP.
+ */
+import { business, telHref } from '../data/business';
+
+interface Props {
+  showHours?: boolean;
+  class?: string;
+}
+const { showHours = false, class: className } = Astro.props;
+const b = business;
+const a = b.address;
+---
+
+<address class:list={['nap', className]}>
+  <strong class="nap-name">{b.name}</strong>
+  {b.showAddress && (
+    <span class="nap-address">
+      {a.street}{a.suite && ` ${a.suite}`}<br />
+      {a.city}, {a.region} {a.postalCode}
+    </span>
+  )}
+  <a class="nap-phone" href={telHref()} data-track="click_to_call" data-placement="nap">{b.phoneDisplay}</a>
+  {showHours && (
+    <span class="nap-hours">
+      {b.emergency24x7 ? '24/7 emergency service' : b.hours.map((h) => `${h.days.join(', ')} ${h.opens}–${h.closes}`).join(' · ')}
+    </span>
+  )}
+</address>
+
+<style>
+  .nap { font-style: normal; display: grid; gap: 0.25rem; }
+  .nap-phone { font-weight: 700; color: var(--brand-accent); text-decoration: none; }
+  .nap-hours { font-size: 0.875rem; color: var(--muted); }
+</style>

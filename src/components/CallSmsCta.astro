@@ -1,0 +1,37 @@
+---
+/**
+ * Inline call + text CTA pair for hero sections, service pages and footers.
+ * `placement` is sent with tracking events so you can see which CTA converts.
+ */
+import { business, telHref, smsHref } from '../data/business';
+
+interface Props {
+  placement: string;
+  heading?: string;
+  sub?: string;
+  showSms?: boolean;
+}
+const { placement, heading, sub, showSms = true } = Astro.props;
+---
+
+<div class="cta">
+  {heading && <p class="cta-heading">{heading}</p>}
+  {sub && <p class="cta-sub">{sub}</p>}
+  <div class="cta-buttons">
+    <a class="btn btn-primary" href={telHref()} data-track="click_to_call" data-placement={placement}>
+      📞 Call {business.phoneDisplay}
+    </a>
+    {showSms && (
+      <a class="btn btn-secondary" href={smsHref(business)} data-track="click_to_sms" data-placement={placement}>
+        💬 Text Us
+      </a>
+    )}
+  </div>
+</div>
+
+<style>
+  .cta { display: grid; gap: 0.5rem; }
+  .cta-heading { font-size: 1.25rem; font-weight: 700; margin: 0; }
+  .cta-sub { margin: 0; color: var(--muted); }
+  .cta-buttons { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+</style>

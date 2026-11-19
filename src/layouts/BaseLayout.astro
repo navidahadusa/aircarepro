@@ -1,0 +1,109 @@
+---
+import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
+import EmergencyBanner from '../components/EmergencyBanner.astro';
+import NapBlock from '../components/NapBlock.astro';
+import { business } from '../data/business';
+import type { ServiceArea } from '../data/business';
+
+interface Props {
+  title: string;
+  description: string;
+  /** Pass for city landing pages so schema areaServed narrows to that area. */
+  area?: ServiceArea;
+  noindex?: boolean;
+  hideBanner?: boolean;
+}
+const { title, description, area, noindex = false, hideBanner = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? business.url).toString();
+const gtmId = import.meta.env.PUBLIC_GTM_ID;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    {noindex && <meta name="robots" content="noindex" />}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content="website" />
+    <meta name="theme-color" content="#0b5cab" />
+    {gtmId && (
+      <script is:inline define:vars={{ gtmId }}>
+        window.dataLayer = window.dataLayer || [];
+        (function(w,d,s,l,i){w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer',gtmId);
+      </script>
+    )}
+    <LocalBusinessSchema area={area} pageUrl={canonical} />
+  </head>
+  <body>
+    {!hideBanner && <EmergencyBanner />}
+    <header class="site-header container">
+      <a href="/" class="logo">{business.name}</a>
+      <nav aria-label="Main">
+        <a href="/free-estimate/">Free Estimate</a>
+        <a href="/maintenance-plan/">Maintenance Plan</a>
+        <a href="/emergency/" class="nav-emergency">Emergency</a>
+      </nav>
+    </header>
+    <main>
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <NapBlock showHours />
+        <div>
+          <strong>Service areas</strong>
+          <ul>
+            {business.serviceAreas.map((a) => <li><a href={`/service-areas/${a.slug}/`}>{a.name}</a></li>)}
+          </ul>
+        </div>
+        {business.sameAs.length > 0 && (
+          <div>
+            <strong>Find us on</strong>
+            <ul>{business.sameAs.map((u) => <li><a href={u} rel="noopener">{new URL(u).hostname.replace('www.', '')}</a></li>)}</ul>
+          </div>
+        )}
+      </div>
+    </footer>
+    <script>
+      import { bindClickTracking, captureAttribution } from '../lib/tracking';
+      captureAttribution();
+      bindClickTracking();
+    </script>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    --brand: #0b5cab; --brand-accent: #0b5cab; --emergency: #c62828;
+    --bg: #ffffff; --surface: #ffffff; --text: #1a1f2b; --muted: #5b6475; --border: #cfd6e2;
+    color-scheme: light;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif; color: var(--text); background: var(--bg); line-height: 1.55; }
+  .container { width: min(72rem, 100% - 2rem); margin-inline: auto; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.4rem; min-height: 48px;
+    padding: 0.75rem 1.25rem; border-radius: 10px; font-weight: 700; font-size: 1rem; text-decoration: none; border: 2px solid var(--brand); cursor: pointer; }
+  .btn-primary { background: var(--brand); color: #fff; }
+  .btn-secondary { background: transparent; color: var(--brand); }
+  .btn:disabled { opacity: 0.6; cursor: wait; }
+  .site-header { display: flex; justify-content: space-between; align-items: center; padding-block: 1rem; flex-wrap: wrap; gap: 0.5rem; }
+  .site-header nav { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .site-header a { color: var(--text); text-decoration: none; font-weight: 600; }
+  .logo { font-size: 1.25rem; color: var(--brand) !important; }
+  .nav-emergency { color: var(--emergency) !important; }
+  .site-footer { background: #f3f5f9; padding: 2rem 0 5rem; margin-top: 4rem; }
+  .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 2rem; }
+  .footer-grid ul { padding-left: 1rem; }
+  .section { padding-block: 3rem; }
+  .hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 2rem; align-items: start; padding-block: 2.5rem; }
+  @media (max-width: 860px) { .hero { grid-template-columns: 1fr; } }
+</style>

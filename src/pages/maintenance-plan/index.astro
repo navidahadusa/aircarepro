@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import { business } from '../../data/business';
+---
+
+<BaseLayout
+  title={`HVAC Maintenance Plan & Seasonal Tune-Ups | ${business.name}`}
+  description={`Spring AC and fall furnace tune-ups, priority service and member discounts from ${business.name}.`}
+>
+  <section class="hero container">
+    <div>
+      <h1>Seasonal Tune-Ups & Maintenance Plan</h1>
+      <p>Prevent breakdowns before peak season. Members get priority scheduling, discounts on repairs and reminders so they never miss a tune-up.</p>
+      <ul>
+        <li>Spring AC tune-up + fall furnace tune-up</li>
+        <li>Priority scheduling during heat waves and cold snaps</li>
+        <li>Member discount on repairs</li>
+      </ul>
+    </div>
+    <LeadForm funnel="maintenance" placement="maintenance_hero" />
+  </section>
+</BaseLayout>

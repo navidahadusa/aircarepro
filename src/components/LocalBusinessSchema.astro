@@ -1,0 +1,13 @@
+---
+/**
+ * Emits HVACBusiness / LocalBusiness JSON-LD with sameAs support.
+ * Usage: <LocalBusinessSchema />            (site-wide, in BaseLayout)
+ *        <LocalBusinessSchema area={area} /> (city landing pages)
+ */
+import { buildLocalBusinessSchema, type SchemaOptions } from '../lib/schema';
+
+type Props = SchemaOptions;
+const schema = buildLocalBusinessSchema(Astro.props);
+---
+
+<script type="application/ld+json" set:html={JSON.stringify(schema)} />

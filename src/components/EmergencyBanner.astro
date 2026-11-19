@@ -1,0 +1,64 @@
+---
+/**
+ * Sticky click-to-call emergency banner. On mobile it pins to the bottom of the
+ * viewport (thumb zone); on desktop it sits at the top of the page.
+ * Hidden automatically when business.emergency24x7 is false unless `force`.
+ */
+import { business, telHref, smsHref } from '../data/business';
+
+interface Props {
+  message?: string;
+  force?: boolean;
+  showSms?: boolean;
+}
+const {
+  message = business.emergency24x7 ? 'No heat or AC? 24/7 emergency service' : 'Need HVAC service today?',
+  force = false,
+  showSms = true,
+} = Astro.props;
+const visible = force || business.emergency24x7;
+---
+
+{visible && (
+  <aside class="emergency-banner" role="region" aria-label="Emergency service">
+    <span class="eb-msg">
+      <span class="eb-dot" aria-hidden="true"></span>
+      {message}
+    </span>
+    <span class="eb-actions">
+      <a class="eb-call" href={telHref()} data-track="click_to_call" data-placement="emergency_banner">
+        Call {business.phoneDisplay}
+      </a>
+      {showSms && (
+        <a class="eb-sms" href={smsHref(business, 'I need HVAC service at ')} data-track="click_to_sms" data-placement="emergency_banner">
+          Text us
+        </a>
+      )}
+      <a class="eb-form" href="/emergency/">Request dispatch</a>
+    </span>
+  </aside>
+)}
+
+<style>
+  .emergency-banner {
+    position: sticky; top: 0; z-index: 50;
+    display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.5rem 1rem;
+    padding: 0.6rem 1rem; background: var(--emergency); color: #fff; font-weight: 600;
+  }
+  .eb-msg { display: inline-flex; align-items: center; gap: 0.5rem; }
+  .eb-dot { width: 0.6rem; height: 0.6rem; border-radius: 50%; background: #fff; animation: pulse 1.6s infinite; }
+  .eb-actions { display: inline-flex; gap: 0.5rem; flex-wrap: wrap; }
+  .eb-actions a {
+    color: #fff; text-decoration: none; padding: 0.4rem 0.8rem; border-radius: 999px;
+    border: 2px solid #fff; min-height: 44px; display: inline-flex; align-items: center;
+  }
+  .eb-call { background: #fff; color: var(--emergency) !important; }
+  @keyframes pulse { 50% { opacity: 0.3; } }
+  @media (prefers-reduced-motion: reduce) { .eb-dot { animation: none; } }
+  @media (max-width: 640px) {
+    .emergency-banner { position: fixed; top: auto; bottom: 0; left: 0; right: 0; }
+    .eb-msg, .eb-form { display: none; }
+    .eb-actions { width: 100%; }
+    .eb-actions a { flex: 1; justify-content: center; }
+  }
+</style>

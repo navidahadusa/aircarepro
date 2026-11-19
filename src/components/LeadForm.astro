@@ -1,0 +1,170 @@
+---
+/**
+ * High-converting lead capture form. One component, three funnels:
+ *   <LeadForm funnel="emergency" />   – dispatch request
+ *   <LeadForm funnel="quote" />       – replacement / install estimate
+ *   <LeadForm funnel="maintenance" /> – seasonal tune-up / plan signup
+ *
+ * Fields come from src/data/leadForms.ts. Submissions POST JSON to
+ * PUBLIC_LEAD_ENDPOINT (CRM / webhook), include UTM + click-ID attribution,
+ * fire a dataLayer conversion event, then redirect to /thank-you/.
+ */
+import { funnels, type FunnelId } from '../data/leadForms';
+import { business, telHref } from '../data/business';
+
+interface Props {
+  funnel: FunnelId;
+  /** Where on the page the form sits, for tracking (e.g. "hero", "sidebar"). */
+  placement?: string;
+  compact?: boolean;
+}
+const { funnel: funnelId, placement = 'inline', compact = false } = Astro.props;
+const f = funnels[funnelId];
+const endpoint = import.meta.env.PUBLIC_LEAD_ENDPOINT ?? '';
+const formId = `lead-${f.id}-${placement}`;
+---
+
+<form
+  id={formId}
+  class:list={['lead-form', { compact }]}
+  data-lead-form
+  data-funnel={f.id}
+  data-event={f.conversionEvent}
+  data-value={f.conversionValue}
+  data-placement={placement}
+  data-endpoint={endpoint}
+  method="post"
+  action={endpoint || '/thank-you/'}
+  novalidate
+>
+  <header>
+    <h2>{f.title}</h2>
+    {!compact && <p>{f.subtitle}</p>}
+  </header>
+
+  {f.fields.map((field) => {
+    const id = `${formId}-${field.name}`;
+    if (field.type === 'select') return (
+      <label for={id}>{field.label}{field.required && <span aria-hidden="true"> *</span>}
+        <select id={id} name={field.name} required={field.required}>
+          <option value="">Choose one…</option>
+          {field.options?.map((o) => <option value={o}>{o}</option>)}
+        </select>
+      </label>
+    );
+    if (field.type === 'radio') return (
+      <fieldset>
+        <legend>{field.label}{field.required && <span aria-hidden="true"> *</span>}</legend>
+        {field.options?.map((o, i) => (
+          <label class="inline"><input type="radio" name={field.name} value={o} required={field.required && i === 0} /> {o}</label>
+        ))}
+      </fieldset>
+    );
+    if (field.type === 'checkbox') return (
+      <label class="inline"><input type="checkbox" id={id} name={field.name} value="yes" /> {field.label}</label>
+    );
+    if (field.type === 'textarea') return (
+      <label for={id}>{field.label}
+        <textarea id={id} name={field.name} rows="3" placeholder={field.placeholder}></textarea>
+      </label>
+    );
+    return (
+      <label for={id}>{field.label}{field.required && <span aria-hidden="true"> *</span>}
+        <input id={id} type={field.type} name={field.name} required={field.required}
+          autocomplete={field.autocomplete} placeholder={field.placeholder}
+          inputmode={field.type === 'tel' ? 'tel' : field.name === 'zip' ? 'numeric' : undefined} />
+      </label>
+    );
+  })}
+
+  <!-- Spam honeypot: real users never see or fill this. -->
+  <input type="text" name="company_website" tabindex="-1" autocomplete="off" class="hp" aria-hidden="true" />
+  <input type="hidden" name="funnel" value={f.id} />
+
+  <button type="submit" class="btn btn-primary">{f.submitLabel}</button>
+  <p class="form-status" role="status" aria-live="polite"></p>
+  <p class="form-alt">
+    {funnelId === 'emergency' ? 'Faster: ' : 'Prefer to talk? '}
+    <a href={telHref()} data-track="click_to_call" data-placement={`${placement}_form`}>call {business.phoneDisplay}</a>
+  </p>
+</form>
+
+<script>
+  import { track, captureAttribution } from '../lib/tracking';
+
+  const attribution = captureAttribution();
+
+  document.querySelectorAll<HTMLFormElement>('form[data-lead-form]').forEach((form) => {
+    if (form.dataset.bound) return;
+    form.dataset.bound = '1';
+    const status = form.querySelector<HTMLElement>('.form-status')!;
+    const { funnel, event, value, placement, endpoint } = form.dataset;
+
+    let started = false;
+    form.addEventListener('focusin', () => {
+      if (started) return;
+      started = true;
+      track('form_start', { funnel, placement });
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        track('form_error', { funnel, placement, reason: 'validation' });
+        return;
+      }
+      const data = Object.fromEntries(new FormData(form).entries());
+      if (data.company_website) return; // bot
+      delete data.company_website;
+
+      const payload = { ...data, ...attribution, placement, submitted_at: new Date().toISOString(), page: location.href };
+      const button = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
+      button.disabled = true;
+      status.textContent = 'Sending…';
+
+      try {
+        if (endpoint) {
+          const res = await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify(payload),
+          });
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        } else {
+          console.warn('[LeadForm] PUBLIC_LEAD_ENDPOINT not set — payload:', payload);
+        }
+        // Lead value + funnel let GTM fire Google Ads / Meta conversions with value.
+        track(event as Parameters<typeof track>[0], { funnel, placement, value: Number(value), currency: 'USD' });
+        location.href = `/thank-you/?funnel=${funnel}`;
+      } catch (err) {
+        track('form_error', { funnel, placement, reason: String(err) });
+        status.textContent = 'Something went wrong. Please call us instead — we answer 24/7.';
+        button.disabled = false;
+      }
+    });
+  });
+</script>
+
+<style>
+  .lead-form {
+    display: grid; gap: 0.9rem; padding: 1.5rem; border-radius: 12px;
+    background: var(--surface); box-shadow: 0 8px 30px rgb(0 0 0 / 0.08); max-width: 32rem;
+  }
+  .lead-form.compact { padding: 1rem; gap: 0.6rem; }
+  .lead-form h2 { margin: 0; font-size: 1.4rem; }
+  .lead-form header p { margin: 0.25rem 0 0; color: var(--muted); }
+  label { display: grid; gap: 0.3rem; font-weight: 600; font-size: 0.95rem; }
+  label.inline { display: flex; align-items: flex-start; gap: 0.5rem; font-weight: 400; }
+  fieldset { border: 0; padding: 0; margin: 0; display: grid; gap: 0.3rem; }
+  legend { font-weight: 600; font-size: 0.95rem; margin-bottom: 0.3rem; }
+  input:not([type=checkbox]):not([type=radio]), select, textarea {
+    font: inherit; padding: 0.7rem 0.8rem; border: 1px solid var(--border); border-radius: 8px; min-height: 44px;
+    background: var(--bg); color: var(--text);
+  }
+  input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--brand-accent); outline-offset: 1px; }
+  .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .form-status:empty { display: none; }
+  .form-alt { margin: 0; font-size: 0.9rem; text-align: center; }
+  button { width: 100%; }
+</style>

@@ -1,0 +1,25 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import CallSmsCta from '../../components/CallSmsCta.astro';
+import { business } from '../../data/business';
+---
+
+<BaseLayout
+  title={`Free HVAC Replacement Estimate | ${business.name}`}
+  description={`Get a free, no-pressure estimate for AC, furnace or heat pump replacement from ${business.name}. Financing available.`}
+>
+  <section class="hero container">
+    <div>
+      <h1>Free, No-Pressure System Estimate</h1>
+      <p>Tell us about your home and current system. A comfort advisor will follow up with options at every budget, including financing.</p>
+      <ul>
+        <li>Written, upfront pricing</li>
+        <li>Correct sizing (load calculation), not guesswork</li>
+        <li>Financing options available</li>
+      </ul>
+      <CallSmsCta placement="quote_hero" sub="Prefer to talk it through?" />
+    </div>
+    <LeadForm funnel="quote" placement="quote_hero" />
+  </section>
+</BaseLayout>

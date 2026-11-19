@@ -1,0 +1,33 @@
+---
+/**
+ * City/area landing pages generated from business.serviceAreas.
+ * Each page narrows LocalBusiness areaServed to the city and repeats canonical NAP.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import CallSmsCta from '../../components/CallSmsCta.astro';
+import NapBlock from '../../components/NapBlock.astro';
+import { business, type ServiceArea } from '../../data/business';
+
+export function getStaticPaths() {
+  return business.serviceAreas.map((area) => ({ params: { slug: area.slug }, props: { area } }));
+}
+const { area } = Astro.props as { area: ServiceArea };
+---
+
+<BaseLayout
+  title={`HVAC Repair & AC Service in ${area.name} | ${business.name}`}
+  description={`Heating and air conditioning repair, replacement and maintenance in ${area.name}. Call ${business.phoneDisplay}.`}
+  area={area}
+>
+  <section class="hero container">
+    <div>
+      <h1>Heating & Air Conditioning Service in {area.name}</h1>
+      <!-- TODO(content): unique local copy per city (neighborhoods, climate, housing stock, local projects). -->
+      <p>{business.name} serves homeowners and businesses throughout {area.name}.</p>
+      <CallSmsCta placement={`area_${area.slug}`} />
+      <NapBlock showHours />
+    </div>
+    <LeadForm funnel="quote" placement={`area_${area.slug}`} />
+  </section>
+</BaseLayout>

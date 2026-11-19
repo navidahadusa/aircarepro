@@ -1,0 +1,6 @@
+date_found,category,prospect,url,service_area,contact_name,contact_role,contact_email_source,relevance_1to5,authority_1to5,likelihood_1to5,link_type,target_page,status,last_contact,next_followup,link_url,rel,notes
+,local-sponsorship,TBD (youth sports league),,,,,,,,,sponsor-page,/,prospect,,,,sponsored,
+,community,TBD (Chamber of Commerce),,,,,,,,,member-directory,/,prospect,,,,,
+,trade,TBD (state HVAC contractors association),,,,,,,,,member-directory,/,prospect,,,,,
+,supplier,TBD (equipment distributor dealer locator),,,,,,,,,find-a-contractor,/,prospect,,,,,
+,local-press,TBD (local news seasonal safety story),,,,,,,,,editorial,/guides/,prospect,,,,,
