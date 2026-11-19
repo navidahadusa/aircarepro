@@ -25,7 +25,7 @@ const visible = force || business.emergency24x7;
       <span class="eb-actions">
         <a class="eb-call" href={telHref()} data-track="click_to_call" data-placement="emergency_banner">Call {business.phoneDisplay}</a>
         <a class="eb-link" href={smsHref(business, 'EMERGENCY: I need HVAC service at ')} data-track="click_to_sms" data-placement="emergency_banner">Text</a>
-        <a class="eb-link" href="/emergency-hvac/#dispatch" data-track="click_form_link" data-placement="emergency_banner">Request dispatch →</a>
+        <a class="eb-link" href={business.bookingUrl} target="_blank" rel="noopener" data-track="click_book_online" data-placement="emergency_banner">Book online →</a>
       </span>
     </div>
   </aside>

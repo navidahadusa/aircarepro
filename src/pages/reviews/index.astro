@@ -1,0 +1,9 @@
+---
+import SimplePage from '../../components/SimplePage.astro';
+import ReviewsBlock from '../../components/ReviewsBlock.astro';
+import { business } from '../../data/business';
+---
+<SimplePage title={`${business.displayName} Reviews | Chicago HVAC`} description={`Read what Chicago homeowners say about ${business.displayName} on Google, Yelp and BBB, and leave a review of your own service visit.`}
+  h1="Customer reviews" lead="Real reviews from our customers on independent platforms." crumb="Reviews" path="/reviews/" eyebrow="Reviews">
+  <section class="section"><div class="container"><ReviewsBlock /></div></section>
+</SimplePage>

@@ -6,6 +6,7 @@
  */
 import NavList from './NavList.astro';
 import { business, telHref } from '../data/business';
+import Icon from './Icon.astro';
 ---
 
 <header class="site-header">
@@ -25,6 +26,7 @@ import { business, telHref } from '../data/business';
       </a>
     </div>
 
+    <a class="m-call" href={telHref()} data-track="click_to_call" data-placement="header_mobile" aria-label={`Call ${business.phoneDisplay}`}><Icon name="phone" size={22} /></a>
     <details class="mobile-toggle">
       <summary aria-label="Menu"><span class="burger" aria-hidden="true"></span><span class="label">Menu</span></summary>
       <nav class="mobile-nav" aria-label="Mobile">
@@ -61,6 +63,7 @@ import { business, telHref } from '../data/business';
   .phone { display: grid; text-align: right; text-decoration: none; font-weight: 900; font-size: 1.15rem; color: var(--navy-900); line-height: 1.1; white-space: nowrap; }
   .phone small { font-size: 0.7rem; font-weight: 700; color: var(--green-600); text-transform: uppercase; letter-spacing: 0.05em; }
   .mobile-toggle { display: none; }
+  .m-call { display: none; }
 
   @media (max-width: 1140px) {
     .desktop-nav { display: none; }
@@ -80,6 +83,8 @@ import { business, telHref } from '../data/business';
     .brand-text small { display: none; }
     .brand img { width: 34px; height: 34px; }
     .phone { display: none; } /* Call/Text live in the sticky bottom bar on mobile */
+    .m-call { display: inline-grid; place-items: center; width: 46px; height: 46px; margin-left: auto; border-radius: 12px; background: var(--cta); color: #fff; }
+    .header-cta { margin-left: 0; }
     .mobile-toggle .label { display: none; }
   }
 </style>

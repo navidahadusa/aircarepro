@@ -1,0 +1,139 @@
+---
+/**
+ * Blog post page (root URL /<slug>/). Content: Maya Lin · Schema/links: Elena Brooks ·
+ * CTAs: Rachel Morgan (intent-aware BookingPanel, tracked placements) · Design: Chloe Vance.
+ */
+import { render } from 'astro:content';
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import JsonLd from './JsonLd.astro';
+import FaqSection from './FaqSection.astro';
+import BookingPanel from './BookingPanel.astro';
+import CallSmsCta from './CallSmsCta.astro';
+import Icon from './Icon.astro';
+import { business, telHref } from '../data/business';
+import { services, categories } from '../data/services';
+import { photos, categoryPhoto } from '../data/photos';
+import { blogCategories, getPosts, type Post } from '../data/blog';
+import { buildBlogPostingSchema } from '../lib/schema';
+
+interface Props { post: Post }
+const { post } = Astro.props;
+const d = post.data;
+const { Content } = await render(post);
+const pageUrl = new URL(`/${post.id}/`, Astro.site ?? business.url).toString();
+const cat = blogCategories[d.category];
+const photo = (d.photo && photos[d.photo as keyof typeof photos]) || categoryPhoto[d.category] || photos.rooftopMiniSplit;
+const emergency = d.intent === 'emergency';
+const all = await getPosts();
+const relServices = d.related.map((s) => services.find((x) => x.slug === s)).filter((x): x is NonNullable<typeof x> => Boolean(x));
+const relPosts = [
+  ...d.related.map((s) => all.find((p) => p.id === s)).filter((x): x is Post => Boolean(x)),
+  ...all.filter((p) => p.data.category === d.category && p.id !== post.id),
+].filter((p, i, arr) => p.id !== post.id && arr.findIndex((q) => q.id === p.id) === i).slice(0, 4);
+const fallbackService = services.find((s) => s.category === (categories.find((c) => c.slug === d.category)?.name ?? 'Heating'));
+const fmt = (dt: Date) => dt.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric', timeZone: 'UTC' });
+const schema = buildBlogPostingSchema({ title: d.title, description: d.description, pageUrl, pubDate: d.pubDate, updatedDate: d.updatedDate, image: new URL(photo.src.src, business.url).toString() });
+const placement = `blog_${post.id}`;
+---
+<BaseLayout title={`${d.title} | ${business.displayName}`} description={d.description}>
+  <Breadcrumbs items={[{ name: 'Blog', href: '/blog/' }, { name: cat.name, href: `/blog/${d.category}/` }, { name: d.title, href: `/${post.id}/` }]} />
+  <JsonLd data={schema} />
+
+  <header class="post-hero">
+    <div class="container post-hero-grid">
+      <div>
+        <a class="eyebrow" href={`/blog/${d.category}/`}>{cat.name}</a>
+        <h1>{d.title}</h1>
+        <p class="lead">{d.description}</p>
+        <p class="meta">By Navid, NATE-certified technician · {business.displayName} · Updated {fmt(d.updatedDate ?? d.pubDate)}</p>
+        {emergency && (
+          <div class="urgent">
+            <a class="btn btn-emergency" href={telHref()} data-track="click_to_call" data-placement={`${placement}_top`}><Icon name="phone" /> Call {business.phoneDisplay}</a>
+            <span>Answering 24/7, nights and holidays</span>
+          </div>
+        )}
+      </div>
+      <div class="photo post-photo"><Image src={photo.src} alt={photo.alt} widths={[480, 800]} sizes="(max-width: 900px) 100vw, 38vw" loading="eager" /></div>
+    </div>
+  </header>
+
+  <div class="container post-layout">
+    <article class="prose post-body">
+      {emergency && (
+        <aside class="callout danger"><strong>Smell gas or hear a CO alarm?</strong> Leave the home and call 911 or your gas utility from outside first. Then call us.</aside>
+      )}
+      {d.quickAnswer && (
+        <aside class="quick"><h2>Quick answer</h2><p>{d.quickAnswer}</p></aside>
+      )}
+      {d.takeaways.length > 0 && (
+        <aside class="takeaways"><h2>Key takeaways</h2><ul class="check-list">{d.takeaways.map((t) => <li>{t}</li>)}</ul></aside>
+      )}
+      <Content />
+      <FaqSection faqs={d.faqs} heading="Frequently asked questions" id="post-faq" />
+    </article>
+
+    <aside class="post-side">
+      <div class="sticky">
+        <BookingPanel funnel={emergency ? 'emergency' : 'quick'} placement={`${placement}_side`} />
+        {(relServices.length > 0 || fallbackService) && (
+          <nav class="card side-links" aria-label="Related services">
+            <h2>Related services</h2>
+            <ul>
+              {(relServices.length ? relServices : [fallbackService!]).map((s) => <li><a href={`/${s.slug}/`}>{s.name} <Icon name="arrow" size={16} /></a></li>)}
+            </ul>
+          </nav>
+        )}
+      </div>
+    </aside>
+  </div>
+
+  <section class="section section-alt">
+    <div class="container">
+      <h2>More from our blog</h2>
+      <ul class="post-grid" role="list">
+        {relPosts.map((p) => (
+          <li><a class="post-card" href={`/${p.id}/`}><span class="eyebrow">{blogCategories[p.data.category].name}</span><strong>{p.data.title}</strong><span>{p.data.description}</span></a></li>
+        ))}
+      </ul>
+      <div class="end-cta card">
+        <CallSmsCta placement={`${placement}_end`} heading={emergency ? 'Need help right now? We answer 24/7.' : 'Want a technician to take a look?'} />
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .post-hero { background: linear-gradient(135deg, var(--navy-900), var(--navy-800)); color: #dce7f3; }
+  .post-hero-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(1.25rem, 4vw, 3rem); align-items: center; padding-block: clamp(1.75rem, 1.25rem + 3vw, 3.25rem); }
+  .post-hero h1 { color: #fff; font-size: clamp(1.8rem, 1.3rem + 2vw, 2.6rem); }
+  .post-hero .lead { color: #c9d8e8; }
+  .post-hero .eyebrow { text-decoration: none; }
+  .meta { font-size: 0.88rem; color: #a9bdd3; }
+  .urgent { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1rem; margin-top: 1rem; }
+  .urgent span { font-weight: 700; color: #fff; }
+  .post-photo { aspect-ratio: 4 / 3; }
+  @media (max-width: 900px) { .post-hero-grid { grid-template-columns: 1fr; } .post-photo { aspect-ratio: 16 / 9; } }
+  .post-layout { display: grid; grid-template-columns: minmax(0, 1fr) 22rem; gap: clamp(1.5rem, 4vw, 3.5rem); padding-block: 2.5rem; }
+  @media (max-width: 1000px) { .post-layout { grid-template-columns: 1fr; } }
+  .post-body { max-width: 46rem; }
+  .post-body :global(h2) { margin-top: 2rem; }
+  .post-body :global(p), .post-body :global(li) { font-size: 1.05rem; }
+  .quick, .takeaways { background: var(--ice); border-radius: var(--radius); padding: 1.1rem 1.25rem; margin-bottom: 1.25rem; }
+  .quick { border-left: 5px solid var(--cta); }
+  .quick h2, .takeaways h2 { margin: 0 0 0.4rem !important; font-size: 1.15rem; }
+  .quick p { margin: 0; }
+  .callout { padding: 1rem 1.1rem; border-radius: var(--radius-sm); margin-bottom: 1.25rem; }
+  .callout.danger { background: #fdecec; border-left: 5px solid var(--emergency); }
+  .sticky { position: sticky; top: 90px; display: grid; gap: 1rem; }
+  .side-links h2 { font-size: 1.05rem; margin: 0 0 0.5rem; }
+  .side-links ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.4rem; }
+  .side-links a { display: inline-flex; align-items: center; gap: 0.35rem; font-weight: 700; text-decoration: none; }
+  .post-grid { list-style: none; padding: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
+  .post-card { display: grid; gap: 0.4rem; height: 100%; padding: 1.25rem; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); text-decoration: none; color: var(--text); }
+  .post-card:hover { border-color: var(--blue-500); box-shadow: var(--shadow); }
+  .post-card strong { font-family: var(--font-heading); color: var(--navy-900); }
+  .post-card span:last-child { color: var(--muted); font-size: 0.92rem; }
+  .end-cta { margin-top: 2rem; }
+</style>

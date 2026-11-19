@@ -51,7 +51,8 @@ const avg = (xs) => (xs.reduce((a, b) => a + b, 0) / Math.max(xs.length, 1)).toF
 const kpis = {
   pages_total: pages.length,
   pages_indexable: indexable.length,
-  area_pages: indexable.filter((p) => p.route.startsWith('/hvac-')).length,
+  area_pages: indexable.filter((p) => p.route.startsWith('/hvac-') && !p.types.includes('BlogPosting')).length,
+  blog_posts: indexable.filter((p) => p.types.includes('BlogPosting')).length,
   pages_with_HVACBusiness: has('HVACBusiness'),
   pages_with_Service_schema: has('Service'),
   pages_with_FAQPage: has('FAQPage'),

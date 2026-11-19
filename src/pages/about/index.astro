@@ -1,0 +1,35 @@
+---
+import { Image } from 'astro:assets';
+import SimplePage from '../../components/SimplePage.astro';
+import TrustBlock from '../../components/TrustBlock.astro';
+import { business } from '../../data/business';
+import { photos } from '../../data/photos';
+---
+<SimplePage title={`About ${business.displayName} | Chicago HVAC Company`} description={`${business.displayName} is a Chicago residential HVAC company: NATE and EPA 608 certified, BBB accredited, Comfortmaker dealer. Meet the company and how we work.`}
+  h1={`About ${business.displayName}`} lead="A Chicago residential HVAC company built on diagnosis first and honest options." crumb="About" path="/about/" eyebrow="Our company">
+  <section class="section">
+    <div class="container about-grid">
+      <div class="prose">
+        <p>{business.displayName} is a residential heating, cooling and indoor air quality company based in Chicago, Illinois. It was founded by Navid, a NATE-certified HVAC technician. Our team of NATE- and EPA 608-certified technicians works every day of the week, with 24/7 emergency service.</p>
+        <h2>How we work</h2>
+        <ul>
+          <li><strong>Diagnosis first.</strong> We measure before replacing parts: gas pressure, temperature rise, refrigerant superheat and subcooling, electrical readings and airflow.</li>
+          <li><strong>Options before work.</strong> You see what we found and the choices, with prices, and you decide.</li>
+          <li><strong>Repair what can be repaired.</strong> We recommend replacement when a system is unsafe, beyond economical repair, or can’t keep the home comfortable, and we explain why.</li>
+          <li><strong>Clean, careful work.</strong> Shoe covers, protected floors, and the work area left as we found it.</li>
+        </ul>
+        <h2>What we work on</h2>
+        <p>Gas furnaces, hot-water and steam boilers, central air conditioners, heat pumps, ductless mini-splits, thermostats and zoning, humidifiers, dehumidifiers, air filtration and ductwork. See <a href="/heating/">heating</a>, <a href="/cooling/">cooling</a> and <a href="/air-quality/">indoor air quality</a>.</p>
+        <h2>Where we work</h2>
+        <p>Chicago neighborhoods and nearby suburbs. See our <a href="/service-areas/">service areas</a>.</p>
+      </div>
+      <div class="photo about-photo"><Image src={photos.gangwayCondenser.src} alt={photos.gangwayCondenser.alt} widths={[400, 700]} sizes="(max-width: 900px) 100vw, 35vw" /></div>
+    </div>
+  </section>
+  <section class="section section-alt"><div class="container"><h2>Credentials</h2><TrustBlock variant="credentials" /></div></section>
+</SimplePage>
+<style>
+  .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start; }
+  .about-photo { aspect-ratio: 4 / 5; }
+  @media (max-width: 900px) { .about-grid { grid-template-columns: 1fr; } .about-photo { aspect-ratio: 16 / 10; } }
+</style>

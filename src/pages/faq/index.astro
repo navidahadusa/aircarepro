@@ -1,0 +1,10 @@
+---
+import SimplePage from '../../components/SimplePage.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import { siteFaqs } from '../../data/faqs';
+import { business } from '../../data/business';
+---
+<SimplePage title={`HVAC FAQ | ${business.displayName}`} description="Answers about service areas, 24/7 emergency service, pricing, furnaces, boilers, AC, heat pumps, financing and brands from Chicago Aircare Pro."
+  h1="Frequently asked questions" lead="Straight answers about how we work, what we work on and where we go." crumb="FAQ" path="/faq/" eyebrow="FAQ">
+  <section class="section"><div class="container prose"><FaqSection faqs={siteFaqs} heading="Common questions" /></div></section>
+</SimplePage>

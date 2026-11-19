@@ -1,0 +1,21 @@
+---
+/** Shared layout for company pages (about, contact, reviews, financing, faq). Owner: Chloe Vance. */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import CallSmsCta from './CallSmsCta.astro';
+interface Props { title: string; description: string; h1: string; lead: string; crumb: string; path: string; eyebrow?: string }
+const { title, description, h1, lead, crumb, path, eyebrow } = Astro.props;
+---
+<BaseLayout {title} {description}>
+  <Breadcrumbs items={[{ name: crumb, href: path }]} />
+  <section class="hero">
+    <div class="container simple-hero">
+      {eyebrow && <span class="eyebrow">{eyebrow}</span>}
+      <h1>{h1}</h1>
+      <p class="lead">{lead}</p>
+      <CallSmsCta placement={`${crumb.toLowerCase()}_hero`} />
+    </div>
+  </section>
+  <slot />
+</BaseLayout>
+<style>.simple-hero { position: relative; z-index: 1; padding-block: clamp(2rem, 1.5rem + 3vw, 3.5rem); max-width: 50rem; }</style>

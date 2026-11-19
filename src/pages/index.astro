@@ -16,8 +16,16 @@ import Icon from '../components/Icon.astro';
 import Skyline from '../components/Skyline.astro';
 import { business, areasByGroup, heroHeadline } from '../data/business';
 import { photos } from '../data/photos';
+import { getPosts, blogCategories } from '../data/blog';
 
 const hero = heroHeadline();
+const allPosts = await getPosts();
+// Seasonal picks (Maya Lin): winter topics Nov–Feb, cooling topics otherwise.
+const m = new Date().getMonth();
+const picks = (m >= 10 || m <= 1)
+  ? ['furnace-wont-turn-on', 'boiler-not-heating', 'best-temperature-chicago-winter', 'carbon-monoxide-safety-tips']
+  : ['ac-not-cooling', 'ac-freezing-up', 'prepare-ac-for-summer', 'mini-splits-for-older-homes'];
+const featuredPosts = picks.map((id) => allPosts.find((p) => p.id === id)).filter((p): p is NonNullable<typeof p> => Boolean(p));
 const steps = [
   { icon: 'gauge' as const, t: 'We test first', d: 'Gas pressure, temperature rise, refrigerant and electrical readings, measured before any part is replaced.' },
   { icon: 'clipboard' as const, t: 'You see the options', d: 'We explain what we found and give you choices with prices, before any work begins.' },
@@ -150,6 +158,16 @@ const faqs = [
     </div>
   </section>
 
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">From our blog</span><h2>{m >= 10 || m <= 1 ? 'Winter guides for Chicago homes' : 'Cooling guides for Chicago homes'}</h2>
+        <p><a href="/blog/">All {allPosts.length} HVAC guides <Icon name="arrow" size={16} /></a></p></div>
+      <ul class="home-posts" role="list">
+        {featuredPosts.map((p) => <li><a href={`/${p.id}/`}><span class="eyebrow">{blogCategories[p.data.category].name}</span><strong>{p.data.title}</strong><span>{p.data.description}</span></a></li>)}
+      </ul>
+    </div>
+  </section>
+
   <section class="section section-alt">
     <div class="container grid grid-2">
       <div class="prose"><FaqSection faqs={faqs} /></div>
@@ -204,4 +222,9 @@ const faqs = [
   .areas ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.25rem; }
   .areas h3 { font-size: 1rem; }
   .guide-cta { align-self: start; border-top: 4px solid var(--cta); }
+  .home-posts { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); }
+  .home-posts a { display: grid; gap: 0.4rem; align-content: start; height: 100%; padding: 1.25rem; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); text-decoration: none; color: var(--text); }
+  .home-posts a:hover { border-color: var(--blue-500); box-shadow: var(--shadow); }
+  .home-posts strong { font-family: var(--font-heading); color: var(--navy-900); }
+  .home-posts span:last-child { color: var(--muted); font-size: 0.9rem; }
 </style>

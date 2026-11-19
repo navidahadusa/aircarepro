@@ -5,7 +5,6 @@
  */
 import Icon from './Icon.astro';
 import { business, telHref, smsHref } from '../data/business';
-const onEmergency = Astro.url.pathname.startsWith('/emergency-hvac');
 ---
 
 <nav class="mobile-cta" aria-label="Quick contact">
@@ -15,8 +14,8 @@ const onEmergency = Astro.url.pathname.startsWith('/emergency-hvac');
   <a class="mc-sms" href={smsHref(business, 'Hi, I need HVAC help at ')} data-track="click_to_sms" data-placement="mobile_bar">
     <Icon name="sms" size={20} /> Text
   </a>
-  <a class="mc-quote" href={onEmergency ? '#dispatch' : business.bookingUrl} target={onEmergency ? undefined : '_blank'} rel="noopener" data-track={onEmergency ? 'click_form_link' : 'click_book_online'} data-placement="mobile_bar">
-    <Icon name="calendar" size={20} /> {onEmergency ? 'Dispatch' : 'Book'}
+  <a class="mc-quote" href={business.bookingUrl} target="_blank" rel="noopener" data-track="click_book_online" data-placement="mobile_bar">
+    <Icon name="calendar" size={20} /> Book
   </a>
 </nav>
 

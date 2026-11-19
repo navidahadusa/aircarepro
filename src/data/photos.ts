@@ -1,7 +1,7 @@
 /**
  * Real job photos from the owner's live site (aircareprohvac.com). Selected by
  * Maya Lin + Chloe Vance. Alt text describes only what is visible: no invented
- * locations, names or claims. TODO(owner): confirm these are the company's own photos.
+ * locations, names or claims. Confirmed by the owner (2026-11-19) as the company's own job photos.
  */
 import type { ImageMetadata } from 'astro';
 import rooftopMiniSplit from '../assets/photos/technician-rooftop-mini-split.webp';
