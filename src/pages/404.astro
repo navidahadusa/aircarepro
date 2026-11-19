@@ -1,0 +1,9 @@
+---
+import SimplePage from '../components/SimplePage.astro';
+import ServiceCards from '../components/ServiceCards.astro';
+import { business } from '../data/business';
+---
+<SimplePage title={`Page not found | ${business.displayName}`} description="The page you’re looking for has moved or doesn’t exist."
+  h1="We couldn’t find that page" lead="It may have moved. Call or text us 24/7, or pick a service below." crumb="Not found" path="/404/" noindex>
+  <section class="section"><div class="container"><ServiceCards /><p style="margin-top:1.5rem"><a href="/blog/">Browse our HVAC guides</a> · <a href="/service-areas/">Service areas</a> · <a href="/sitemap/">Sitemap</a></p></div></section>
+</SimplePage>
