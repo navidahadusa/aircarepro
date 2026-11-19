@@ -14,6 +14,7 @@ export type TrackEvent =
   | 'lead_emergency'
   | 'lead_quote'
   | 'lead_maintenance'
+  | 'lead_quick'
   | 'click_to_call'
   | 'click_to_sms'
   | 'click_book_online'

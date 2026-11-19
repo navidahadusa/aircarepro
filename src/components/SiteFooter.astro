@@ -1,0 +1,74 @@
+---
+/** Site footer: canonical NAP, services, areas, trust. Owners: Chloe Vance + Hannah Carter. */
+import NapBlock from './NapBlock.astro';
+import CallSmsCta from './CallSmsCta.astro';
+import { business, areasByGroup } from '../data/business';
+import { categories, servicesIn } from '../data/services';
+const year = new Date().getFullYear();
+---
+<section class="pre-footer">
+  <div class="container pf-inner">
+    <div>
+      <h2>No heat? No cooling? Planning a new system?</h2>
+      <p>Call or text 24/7, or get a fast quote online.</p>
+    </div>
+    <CallSmsCta placement="pre_footer" />
+  </div>
+</section>
+<footer class="site-footer">
+  <div class="container footer-top">
+    <div class="f-brand">
+      <NapBlock showHours />
+      <p class="f-desc">{business.description}</p>
+    </div>
+    {categories.map((c) => (
+      <div>
+        <h3><a href={`/${c.slug}/`}>{c.name}</a></h3>
+        <ul>{servicesIn(c.name).map((s) => <li><a href={`/${s.slug}/`}>{s.name}</a></li>)}</ul>
+      </div>
+    ))}
+    <div>
+      <h3>Company</h3>
+      <ul>
+        <li><a href="/emergency-hvac/">24/7 Emergency Service</a></li>
+        <li><a href="/free-estimate/">Free Estimate</a></li>
+        <li><a href="/maintenance-plan/">{business.maintenancePlanName}</a></li>
+        <li><a href="/chicago-hvac-homeowner-guide/">Chicago Homeowner HVAC Guide</a></li>
+        <li><a href="/service-areas/">Service Areas</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container footer-areas">
+    {[...areasByGroup()].map(([group, areas]) => (
+      <div>
+        <h3>{group}</h3>
+        <ul>{areas.map((a) => <li><a href={`/hvac-${a.slug}/`}>{a.name}</a></li>)}</ul>
+      </div>
+    ))}
+  </div>
+  <div class="container footer-legal">
+    <p>© {year} {business.name}. City of Chicago License #{business.licenseNumber}. NATE &amp; EPA 608 certified · BBB accredited · {business.dealerOf} dealer.</p>
+    {business.sameAs.length > 0 && (
+      <p>Find us on: {business.sameAs.map((u, i) => <>{i > 0 && ' · '}<a href={u} rel="noopener">{new URL(u).hostname.replace('www.', '')}</a></>)}</p>
+    )}
+  </div>
+</footer>
+
+<style>
+  .pre-footer { background: var(--orange-50); border-top: 1px solid #f6d6c0; }
+  .pf-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 1.25rem; padding-block: 2rem; }
+  .pf-inner h2 { margin: 0 0 0.25rem; } .pf-inner p { margin: 0; color: var(--muted); }
+  .site-footer { background: var(--navy-900); color: #b9c9da; font-size: 0.92rem; padding-top: 3rem; }
+  .site-footer a { color: #e3ecf5; text-decoration: none; }
+  .site-footer a:hover { text-decoration: underline; color: #fff; }
+  .site-footer h3 { color: #fff; font-size: 1rem; margin-bottom: 0.6rem; }
+  .site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.3rem; }
+  .footer-top, .footer-areas { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); }
+  .f-brand { grid-column: span 2; } @media (max-width: 640px) { .f-brand { grid-column: auto; } }
+  .f-brand :global(.nap) { color: #fff; } .f-brand :global(.nap-phone) { color: #ffb88a; font-size: 1.3rem; }
+  .f-brand :global(.nap-hours) { color: #9fb3c8; }
+  .f-desc { margin-top: 1rem; }
+  .footer-areas { border-top: 1px solid rgb(255 255 255 / 0.1); margin-top: 2rem; padding-top: 2rem; }
+  .footer-legal { border-top: 1px solid rgb(255 255 255 / 0.1); margin-top: 2rem; padding-block: 1.25rem; font-size: 0.82rem; }
+  .footer-legal p { margin: 0.25rem 0; }
+</style>

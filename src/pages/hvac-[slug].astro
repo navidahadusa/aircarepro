@@ -1,43 +1,123 @@
 ---
 /**
- * Area landing pages at /hvac-<slug>/, matching the live WordPress URL pattern
- * (e.g. https://aircareprohvac.com/hvac-evanston/) so a migration keeps rankings.
- * Each page narrows LocalBusiness areaServed to the area and repeats canonical NAP.
+ * Area landing pages at /hvac-<slug>/ (mirrors live WordPress URLs).
+ * Owner: Elena Brooks (Local SEO Architect). Sprint 1 upgrade:
+ * breadcrumbs, area-scoped Service schema linked to the single HVACBusiness @id,
+ * local FAQ + FAQPage schema, hub-and-spoke internal links (Chicago hub ↔ group ↔ neighbors ↔ services).
  */
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
 import LeadForm from '../components/LeadForm.astro';
 import CallSmsCta from '../components/CallSmsCta.astro';
-import NapBlock from '../components/NapBlock.astro';
+import ServiceCards from '../components/ServiceCards.astro';
+import TrustBlock from '../components/TrustBlock.astro';
+import FaqSection from '../components/FaqSection.astro';
+import JsonLd from '../components/JsonLd.astro';
 import { business, type ServiceArea } from '../data/business';
+import { serviceBySlug, type Service } from '../data/services';
+import { buildServiceSchema } from '../lib/schema';
 
 export function getStaticPaths() {
   return business.serviceAreas.map((area) => ({ params: { slug: area.slug }, props: { area } }));
 }
 const { area } = Astro.props as { area: ServiceArea };
+const isHub = area.slug === 'chicago';
 const isNeighborhood = area.group?.startsWith('Chicago');
-const place = area.slug === 'chicago' ? 'Chicago' : isNeighborhood ? `${area.name}, Chicago` : `${area.name}, IL`;
+const place = isHub ? 'Chicago' : isNeighborhood ? `${area.name}, Chicago` : `${area.name}, IL`;
+const short = isHub ? 'Chicago' : area.name;
+const pageUrl = new URL(Astro.url.pathname, Astro.site ?? business.url).toString();
+
 const nearby = business.serviceAreas.filter((a) => a.group && a.group === area.group && a.slug !== area.slug);
+const otherGroups = [...new Set(business.serviceAreas.map((a) => a.group).filter(Boolean))].filter((g) => g !== area.group);
+const featured = ['furnace-repair', 'boiler-repair', 'ac-repair', 'furnace-installation', 'mini-split-installation', 'furnace-tune-up']
+  .map(serviceBySlug).filter((x): x is Service => Boolean(x));
+
+const housing = isHub || isNeighborhood
+  ? 'two-flats, greystones, bungalows, vintage courtyard buildings and newer condos, many still heated by hot-water or steam boilers'
+  : 'single-family homes, split-levels and townhomes, most with forced-air furnaces and central air';
+
+const faqs = [
+  { q: `Do you offer 24/7 emergency HVAC service in ${short}?`, a: `Yes. ${business.displayName} answers 24/7, including nights and holidays. Call or text ${business.phoneDisplay} for no heat, no cooling or boiler problems in ${short}.` },
+  { q: `What heating and cooling systems do you work on in ${short}?`, a: `Gas furnaces, hot-water and steam boilers, central air conditioners, heat pumps and ductless mini-splits, the systems common in ${short}’s ${housing.split(',')[0]} and other homes.` },
+  { q: `Are estimates free in ${short}?`, a: 'Estimates for new furnaces, boilers, air conditioners and heat pumps are free. Repair visits include a diagnosis, and you get the price before any work begins.' },
+  { q: `How do I book HVAC service in ${short}?`, a: `Call or text ${business.phoneDisplay}, request a fast quote on this page, or use Book Online to pick a time.` },
+];
+
+const title = isHub ? `HVAC Repair in Chicago | 24/7 Heating & AC | ${business.displayName}` : `HVAC Repair in ${place} | ${business.displayName}`;
+const description = `Furnace, boiler & AC repair and installation in ${place}. NATE-certified, 24/7 emergency service. Call ${business.phoneDisplay}.`;
+const crumbs = isHub
+  ? [{ name: 'Service Areas', href: '/service-areas/' }, { name: 'Chicago', href: '/hvac-chicago/' }]
+  : [{ name: 'Service Areas', href: '/service-areas/' }, ...(isNeighborhood ? [{ name: 'Chicago', href: '/hvac-chicago/' }] : []), { name: area.name, href: `/hvac-${area.slug}/` }];
+const schema = buildServiceSchema({ name: `HVAC service in ${place}`, serviceType: 'HVAC repair, installation and maintenance', description, pageUrl, areas: [area] });
 ---
 
-<BaseLayout
-  title={`HVAC Repair in ${place} | ${business.displayName}`}
-  description={`Furnace, boiler and AC repair and installation in ${place}. NATE-certified technicians, 24/7 emergency service. Call ${business.phoneDisplay}.`}
-  area={area}
->
-  <section class="hero container">
-    <div>
-      <h1>HVAC Service in {place}</h1>
-      <!-- TODO(content): port the unique local copy from the live page (housing stock, common issues, utilities & rebates, FAQs). -->
-      <p>{business.displayName} repairs, replaces and maintains furnaces, boilers, central air, heat pumps and mini-splits in {place}, 24/7 for emergencies.</p>
-      <CallSmsCta placement={`area_${area.slug}`} />
-      <NapBlock showHours />
+<BaseLayout title={title} description={description}>
+  <Breadcrumbs items={crumbs} />
+  <JsonLd data={schema} />
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">{area.group ?? 'Chicago, IL'} · 24/7</span>
+        <h1>HVAC Service in {place}</h1>
+        <p class="lead">{business.displayName} repairs, replaces and maintains furnaces, boilers, central air, heat pumps and mini-splits in {short}. Certified technicians, honest options, and you approve every repair.</p>
+        <!-- TODO(content): port the unique local sections from the live page (housing stock, common issues, utilities & rebates). -->
+        <CallSmsCta placement={`area_${area.slug}`} />
+        <ul class="badge-row"><li>NATE &amp; EPA 608</li><li>License #{business.licenseNumber}</li><li>BBB accredited</li></ul>
+      </div>
+      <div id="quote"><LeadForm funnel="quick" placement={`area_${area.slug}`} /></div>
     </div>
-    <LeadForm funnel="quote" placement={`area_${area.slug}`} />
   </section>
-  {nearby.length > 0 && (
-    <section class="section container">
-      <h2>Nearby areas we serve</h2>
-      <ul>{nearby.map((a) => <li><a href={`/hvac-${a.slug}/`}>{a.name}</a></li>)}</ul>
-    </section>
-  )}
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <h2>Heating &amp; cooling services in {short}</h2>
+        <p>Homes in {short} include {housing}. We work on all of them.</p>
+      </div>
+      <ServiceCards items={featured} />
+      <p class="more"><a href="/heating/">All heating services</a> · <a href="/cooling/">All cooling services</a> · <a href="/air-quality/">Air quality</a></p>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container"><TrustBlock /></div>
+  </section>
+
+  <section class="section">
+    <div class="container grid grid-2">
+      <div class="prose"><FaqSection faqs={faqs} heading={`${short} HVAC questions`} /></div>
+      <aside>
+        {nearby.length > 0 && (
+          <>
+            <h2>Nearby areas we serve</h2>
+            <ul class="pills" role="list">{nearby.map((a) => <li><a href={`/hvac-${a.slug}/`}>{a.name}</a></li>)}</ul>
+          </>
+        )}
+        {isHub && (
+          <>
+            <h2>Chicago neighborhoods</h2>
+            <ul class="pills" role="list">{business.serviceAreas.filter((a) => a.group?.startsWith('Chicago')).map((a) => <li><a href={`/hvac-${a.slug}/`}>{a.name}</a></li>)}</ul>
+          </>
+        )}
+        <h2 class="mt">Also serving</h2>
+        <ul class="pills" role="list">
+          {!isHub && <li><a href="/hvac-chicago/">Chicago</a></li>}
+          {otherGroups.map((g) => <li><a href="/service-areas/">{g}</a></li>)}
+        </ul>
+        <div class="card mt">
+          <h3>Emergency in {short}?</h3>
+          <p>No heat, no AC or a boiler that won’t fire, day or night.</p>
+          <a class="btn btn-emergency" href="/emergency-hvac/#dispatch">Request emergency dispatch</a>
+        </div>
+      </aside>
+    </div>
+  </section>
 </BaseLayout>
+
+<style>
+  .more { margin-top: 1rem; font-weight: 700; }
+  .mt { margin-top: 2rem; }
+  .pills { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .pills a { display: inline-block; padding: 0.4rem 0.85rem; border-radius: 999px; background: var(--blue-50); text-decoration: none; font-weight: 700; font-size: 0.9rem; }
+</style>

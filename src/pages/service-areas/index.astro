@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import CallSmsCta from '../../components/CallSmsCta.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import { business, areasByGroup } from '../../data/business';
 ---
 
@@ -8,6 +9,7 @@ import { business, areasByGroup } from '../../data/business';
   title={`Service Areas | Chicago & Suburbs HVAC | ${business.displayName}`}
   description={`Heating and cooling service across Chicago's North, Northwest and West Sides and the north and northwest suburbs. Call ${business.phoneDisplay}.`}
 >
+  <Breadcrumbs items={[{ name: 'Service Areas', href: '/service-areas/' }]} />
   <section class="section container">
     <h1>Service Areas</h1>
     <p>Chicago’s North, Northwest and West Sides, the north and northwest suburbs, and Naperville.</p>
@@ -25,5 +27,6 @@ import { business, areasByGroup } from '../../data/business';
 </BaseLayout>
 
 <style>
+  .areas ul { list-style: none; padding: 0; display: grid; gap: 0.25rem; }
   .areas { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1.5rem; margin-block: 1.5rem; }
 </style>

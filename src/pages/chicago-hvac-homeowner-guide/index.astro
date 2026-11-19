@@ -1,0 +1,183 @@
+---
+/**
+ * Link-worthy homeowner resource. Owners: Natalie Foster (outreach asset) + Maya Lin (content).
+ * Pitched to chambers, block clubs, aldermanic newsletters, realtors and local press
+ * (see marketing/backlink-outreach.md). Facts only; anything time-sensitive points readers
+ * to the official source (311, utilities) rather than quoting figures that change.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import CallSmsCta from '../../components/CallSmsCta.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import JsonLd from '../../components/JsonLd.astro';
+import { business } from '../../data/business';
+import { businessId } from '../../lib/schema';
+
+const pageUrl = new URL(Astro.url.pathname, Astro.site ?? business.url).toString();
+const updated = '2026-11-19';
+const embedCode = `<a href="${pageUrl}">The Chicago Homeowner’s HVAC Guide</a> by ${business.displayName}`;
+const article = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: 'The Chicago Homeowner’s HVAC Guide',
+  description: 'What to do when the heat goes out, cold-snap and heat-wave checklists, a month-by-month maintenance calendar, carbon monoxide safety and how to hire an HVAC contractor in Chicago.',
+  mainEntityOfPage: pageUrl,
+  dateModified: updated,
+  datePublished: updated,
+  author: { '@id': businessId() },
+  publisher: { '@id': businessId() },
+};
+const calendar: Array<[string, string]> = [
+  ['January', 'Peak heating. Check the furnace filter monthly in deep cold; keep snow and ice clear of high-efficiency furnace vent pipes on the side of the house.'],
+  ['February', 'Watch for short-cycling or uneven heat, early signs of a failing part. Check humidity; dry air below about 30% causes static and cracked woodwork.'],
+  ['March', 'Book your spring AC tune-up before the first warm week. Replace the filter.'],
+  ['April', 'Clear leaves and debris around the outdoor AC unit. Test cooling on the first warm day so problems surface before demand spikes.'],
+  ['May', 'Clean or replace the filter; flush the AC condensate drain if you see standing water.'],
+  ['June', 'Heat-wave prep: close blinds on sunny sides, check that supply vents are open and unblocked.'],
+  ['July', 'Peak cooling. If the AC runs constantly without cooling, turn it off and check for ice on the lines (a sign of low airflow or refrigerant).'],
+  ['August', 'Damp basement? Check dehumidifier settings. Change the filter.'],
+  ['September', 'Book the fall furnace or boiler tune-up before the first cold night. Test CO alarms.'],
+  ['October', 'Turn on the heat for a test run. Bleed hot-water radiators that are cold at the top.'],
+  ['November', 'Disconnect garden hoses, close outdoor spigot valves, and check boiler pressure and the furnace filter.'],
+  ['December', 'Cold-snap readiness: know where your gas shut-off and breaker panel are, and keep our number handy.'],
+];
+const faqs = [
+  { q: 'What temperature should I set my thermostat to during a Chicago cold snap?', a: 'Keep the heat on and steady, at a normal comfortable temperature. Deep overnight setbacks in extreme cold can let pipes on exterior walls freeze and make the system run for hours to recover.' },
+  { q: 'How often should I change my furnace filter?', a: 'Standard 1-inch filters usually every 1–3 months; 4–5 inch media filters usually every 6–12 months. Check monthly during peak heating and cooling, and more often with pets or construction dust.' },
+  { q: 'Is my landlord required to provide heat in Chicago?', a: 'Yes. Chicago has a heat ordinance that sets minimum indoor temperatures for rental units during the heating season. If your landlord isn’t providing heat, call 311 to report it.' },
+  { q: 'Where should carbon monoxide alarms go?', a: 'Illinois law requires working CO alarms within 15 feet of every room used for sleeping in homes with a fuel-burning appliance, fireplace or attached garage. One on every level is good practice.' },
+];
+---
+
+<BaseLayout
+  title={`Chicago Homeowner’s HVAC Guide | ${business.displayName}`}
+  description="Free Chicago HVAC guide: no-heat checklist, cold-snap and heat-wave prep, a month-by-month maintenance calendar and carbon monoxide safety."
+>
+  <Breadcrumbs items={[{ name: 'Homeowner Guide', href: '/chicago-hvac-homeowner-guide/' }]} />
+  <JsonLd data={article} />
+
+  <section class="hero">
+    <div class="container hero-inner">
+      <span class="eyebrow">Free resource · Updated {updated}</span>
+      <h1>The Chicago Homeowner’s HVAC Guide</h1>
+      <p class="lead">Practical, no-sales advice for Chicago homes and two-flats: what to do when the heat goes out, how to get ready for a cold snap or heat wave, a month-by-month maintenance calendar, and carbon monoxide safety.</p>
+      <nav class="toc" aria-label="On this page">
+        <a href="#no-heat">No heat checklist</a><a href="#cold-snap">Cold snap</a><a href="#heat-wave">Heat wave</a>
+        <a href="#co">CO safety</a><a href="#calendar">Maintenance calendar</a><a href="#hiring">Hiring a contractor</a><a href="#share">Share this guide</a>
+      </nav>
+    </div>
+  </section>
+
+  <article class="section">
+    <div class="container prose guide">
+      <section id="no-heat">
+        <h2>No heat? Check these first</h2>
+        <p>Many no-heat calls in Chicago have a simple cause. Check these before calling, and stop at any step that involves the smell of gas.</p>
+        <ol>
+          <li><strong>Thermostat:</strong> set to <em>Heat</em>, set above room temperature, and fresh batteries if it uses them.</li>
+          <li><strong>Power:</strong> the furnace or boiler switch (it looks like a light switch, often at the top of the basement stairs) is on, and the breaker hasn’t tripped.</li>
+          <li><strong>Filter:</strong> a clogged furnace filter can trip a safety limit. Replace it if it’s gray and matted.</li>
+          <li><strong>Furnace door:</strong> the blower door must be fully seated, or a safety switch keeps the furnace off.</li>
+          <li><strong>Error code:</strong> note any blinking light pattern on the control board. It helps the technician bring the right part.</li>
+          <li><strong>Boiler:</strong> compare the pressure gauge to the normal range on the boiler’s label, and check whether radiators are cold at the top (air in the system).</li>
+          <li><strong>High-efficiency furnace vents:</strong> after heavy snow, make sure the white PVC pipes outside aren’t blocked by snow or ice.</li>
+        </ol>
+        <div class="callout danger"><strong>Smell gas or hear a CO alarm?</strong> Leave the home and call 911 or your gas utility from outside. Don’t flip switches or try to relight anything.</div>
+        <div class="callout"><strong>Renting?</strong> Chicago’s heat ordinance requires landlords to keep rental units heated to minimum temperatures during the heating season. If your landlord doesn’t respond, call <strong>311</strong>.</div>
+      </section>
+
+      <section id="cold-snap">
+        <h2>Cold-snap checklist (below zero)</h2>
+        <ul>
+          <li>Keep the heat on and steady. Skip deep overnight setbacks during extreme cold.</li>
+          <li>Open cabinet doors under sinks on exterior walls; let those faucets drip.</li>
+          <li>Keep interior doors open so heat reaches every room.</li>
+          <li>Clear snow from furnace and water-heater vent pipes and the gas meter.</li>
+          <li>Never heat the home with a gas oven, grill or unvented heater.</li>
+          <li>Know where your main water shut-off, gas shut-off and breaker panel are.</li>
+        </ul>
+      </section>
+
+      <section id="heat-wave">
+        <h2>Heat-wave checklist</h2>
+        <ul>
+          <li>Replace the AC filter and clear 2 feet around the outdoor unit.</li>
+          <li>Close blinds on sunny sides; run ceiling fans counter-clockwise.</li>
+          <li>Set the thermostat and leave it. Big swings make the system work harder.</li>
+          <li>If the AC blows warm air or the lines ice up, turn it off and call. Running it frozen can damage the compressor.</li>
+          <li>Check on elderly neighbors. During extreme heat the City opens cooling centers; call 311 for locations.</li>
+        </ul>
+      </section>
+
+      <section id="co">
+        <h2>Carbon monoxide safety</h2>
+        <p>Every gas furnace, boiler, water heater and fireplace can produce carbon monoxide (CO) if venting or combustion goes wrong. CO is odorless.</p>
+        <ul>
+          <li>Illinois law requires working CO alarms within 15 feet of every sleeping room in homes with fuel-burning appliances, a fireplace or an attached garage.</li>
+          <li>Test alarms monthly and replace them at the end of their rated life (printed on the back).</li>
+          <li>Warning signs: headaches or nausea that ease when you leave home, soot around appliances, a yellow flickering burner flame.</li>
+          <li>An annual furnace or boiler tune-up should include a CO and venting check.</li>
+        </ul>
+      </section>
+
+      <section id="calendar">
+        <h2>Month-by-month Chicago HVAC calendar</h2>
+        <table class="cal">
+          <thead><tr><th scope="col">Month</th><th scope="col">What to do</th></tr></thead>
+          <tbody>{calendar.map(([m, t]) => <tr><th scope="row">{m}</th><td>{t}</td></tr>)}</tbody>
+        </table>
+      </section>
+
+      <section id="savings">
+        <h2>Rebates and lower bills</h2>
+        <p>ComEd and the local gas utilities (Peoples Gas, North Shore Gas and Nicor Gas, depending on your address) run energy-efficiency programs that can include rebates on qualifying furnaces, boilers, heat pumps, smart thermostats and tune-ups. Federal incentives have changed recently, so check current eligibility before you buy. A good contractor will look up what applies to your equipment and address.</p>
+      </section>
+
+      <section id="hiring">
+        <h2>How to hire an HVAC contractor in Chicago</h2>
+        <ul>
+          <li><strong>License:</strong> ask for the contractor’s City of Chicago license number and verify it.</li>
+          <li><strong>Certifications:</strong> refrigerant work requires EPA Section 608 certification; NATE certification shows tested technician skills.</li>
+          <li><strong>Sizing:</strong> for a new system, ask how it was sized. A load calculation beats “same size as the old one.”</li>
+          <li><strong>Written options:</strong> get the price and options in writing before work begins.</li>
+          <li><strong>Reviews:</strong> read reviews on independent platforms (Google, Yelp, BBB), not just testimonials on the contractor’s own site.</li>
+        </ul>
+      </section>
+
+      <FaqSection faqs={faqs} heading="Quick answers" id="guide-faq" />
+
+      <section id="share" class="share card">
+        <h2>Share this guide</h2>
+        <p>Block clubs, chambers, property managers and neighborhood newsletters are welcome to link to or reference this guide.</p>
+        <label for="embed">Copy this link for your site or newsletter:</label>
+        <textarea id="embed" readonly rows="2" set:text={embedCode}></textarea>
+        <button class="btn btn-secondary" type="button" onclick="window.print()">Print this guide</button>
+      </section>
+
+      <div class="card cta-box">
+        <CallSmsCta placement="guide_bottom" heading="Need a technician? We answer 24/7." />
+      </div>
+    </div>
+  </article>
+</BaseLayout>
+
+<style>
+  .hero-inner { position: relative; z-index: 1; padding-block: clamp(2rem, 1.5rem + 3vw, 3.5rem); max-width: 52rem; }
+  .toc { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem; }
+  .toc a { color: #fff; background: rgb(255 255 255 / 0.1); border: 1px solid rgb(255 255 255 / 0.25); padding: 0.35rem 0.8rem; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 0.9rem; }
+  .guide ol li, .guide ul li { margin-bottom: 0.4rem; }
+  .callout { padding: 1rem 1.1rem; border-radius: var(--radius-sm); background: var(--blue-50); border-left: 4px solid var(--blue-500); margin: 1rem 0; }
+  .callout.danger { background: #fdecec; border-color: var(--emergency); }
+  .cal { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+  .cal th, .cal td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
+  .cal thead th { background: var(--navy-800); color: #fff; }
+  .cal tbody th { color: var(--navy-900); white-space: nowrap; }
+  .share { margin-top: 2.5rem; }
+  .share textarea { width: 100%; font: 0.85rem ui-monospace, monospace; padding: 0.6rem; border-radius: var(--radius-sm); border: 1px solid var(--border); margin: 0.4rem 0 1rem; }
+  .cta-box { margin-top: 1.5rem; }
+  @media print {
+    :global(.utility), :global(.emergency-banner), :global(.site-header), :global(.mobile-cta), :global(.pre-footer), :global(.site-footer), .toc, .share button, .cta-box { display: none !important; }
+    :global(.hero) { background: none !important; color: #000 !important; }
+    :global(.hero) h1, :global(.hero) .lead { color: #000 !important; }
+  }
+</style>

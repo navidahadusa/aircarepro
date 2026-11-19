@@ -1,3 +1,6 @@
+import { categories, servicesIn } from './services';
+import { PHONE_DISPLAY, PHONE_E164 } from './contact';
+
 /**
  * SINGLE SOURCE OF TRUTH for NAP (Name, Address, Phone) and location data.
  *
@@ -47,12 +50,28 @@ export interface ServiceCategory {
   services: Array<{ name: string; path: string }>;
 }
 
+export type ListingRebrandState = 'pending-name-update' | 'name-updated' | 'verified-live';
+
+export interface RebrandStatus {
+  /** The approved change from the old legal name to the brand. */
+  from: string;
+  to: string;
+  legalApproved: boolean;
+  /** Existing listings whose display name must change before new citations roll out. */
+  listings: Record<'Google Business Profile' | 'Yelp' | 'BBB', ListingRebrandState>;
+  /** New citations stay blocked until every existing listing is 'verified-live'. */
+  newCitationsBlocked: boolean;
+}
+
 export interface Business {
   /** Name exactly as on the Google Business Profile. Used in NAP and schema. */
   name: string;
   /** Title-case brand for headings and body copy (never in citations). */
   displayName: string;
   legalName?: string;
+  /** Names the business has traded under; used to find and fix old citations. */
+  formerNames?: string[];
+  rebrand: RebrandStatus;
   tagline: string;
   description: string;
   url: string;
@@ -78,6 +97,8 @@ export interface Business {
   serviceAreas: ServiceArea[];
   /** Official profile URLs for JSON-LD sameAs. Only add live, claimed profiles. */
   sameAs: string[];
+  /** Review platforms shown in ReviewsBlock. url stays undefined until the rebranded listing is live. */
+  reviewProfiles: Array<{ platform: 'Google' | 'Yelp' | 'BBB'; url?: string }>;
   licenseNumber?: string;
   credentials: string[];
   brandsServiced: string[];
@@ -89,46 +110,12 @@ export interface Business {
   services: string[];
 }
 
-const serviceCategories: ServiceCategory[] = [
-  {
-    name: 'Heating',
-    path: '/heating/',
-    services: [
-      { name: 'Furnace Repair', path: '/furnace-repair/' },
-      { name: 'Furnace Installation', path: '/furnace-installation/' },
-      { name: 'Furnace Tune-Up', path: '/furnace-tune-up/' },
-      { name: 'Boiler Repair', path: '/boiler-repair/' },
-      { name: 'Boiler Installation', path: '/boiler-installation/' },
-      { name: 'Heat Pump Repair', path: '/heat-pump-repair/' },
-      { name: 'Heat Pump Installation', path: '/heat-pump-installation/' },
-      { name: 'Thermostats & Zoning', path: '/thermostat-installation/' },
-    ],
-  },
-  {
-    name: 'Cooling',
-    path: '/cooling/',
-    services: [
-      { name: 'AC Repair', path: '/ac-repair/' },
-      { name: 'AC Installation', path: '/ac-installation/' },
-      { name: 'AC Tune-Up', path: '/ac-tune-up/' },
-      { name: 'Mini-Split Installation', path: '/mini-split-installation/' },
-      { name: 'Mini-Split Repair', path: '/mini-split-repair/' },
-      { name: 'Refrigerant Leak Repair', path: '/refrigerant-leak-repair/' },
-    ],
-  },
-  {
-    name: 'Air Quality',
-    path: '/air-quality/',
-    services: [
-      { name: 'Whole-Home Humidifiers', path: '/whole-home-humidifiers/' },
-      { name: 'Whole-Home Dehumidifiers', path: '/whole-home-dehumidifiers/' },
-      { name: 'Air Purifiers', path: '/air-purifiers/' },
-      { name: 'UV Air Sanitizers', path: '/uv-air-sanitizers/' },
-      { name: 'Ductwork Repair', path: '/ductwork-repair/' },
-      { name: 'Carbon Monoxide Safety', path: '/carbon-monoxide-safety/' },
-    ],
-  },
-];
+/** Derived from src/data/services.ts (single source for service content). */
+const serviceCategories: ServiceCategory[] = categories.map((c) => ({
+  name: c.name,
+  path: `/${c.slug}/`,
+  services: servicesIn(c.name).map((sv) => ({ name: sv.name, path: `/${sv.slug}/` })),
+}));
 
 const area = (name: string, group: AreaGroup, slug?: string): ServiceArea => ({
   name,
@@ -140,15 +127,28 @@ const area = (name: string, group: AreaGroup, slug?: string): ServiceArea => ({
 export const business: Business = {
   name: 'CHICAGO AIRCARE PRO',
   displayName: 'Chicago Aircare Pro',
-  legalName: 'Shad Heating and Cooling LLC',
+  // Legal rebrand approved by the owner (2026-11-19): Shad Heating and Cooling LLC → CHICAGO AIRCARE PRO.
+  legalName: 'CHICAGO AIRCARE PRO',
+  formerNames: ['Shad Heating and Cooling LLC', 'Shad Heating and Cooling'],
+  rebrand: {
+    from: 'Shad Heating and Cooling LLC',
+    to: 'CHICAGO AIRCARE PRO',
+    legalApproved: true,
+    listings: {
+      'Google Business Profile': 'pending-name-update',
+      Yelp: 'pending-name-update',
+      BBB: 'pending-name-update',
+    },
+    newCitationsBlocked: true,
+  },
   tagline: 'Heating & Cooling',
   description:
     'Residential heating, cooling and indoor air quality company serving Chicago and nearby suburbs. NATE- and EPA 608-certified technicians, 24/7 emergency service, free estimates on new systems.',
   url: 'https://aircareprohvac.com',
   logo: '/logo.svg',
   image: '/og-image.jpg', // TODO: export a 1200×630 brand image
-  phoneDisplay: '(773) 644-8227',
-  phoneE164: '+17736448227',
+  phoneDisplay: PHONE_DISPLAY,
+  phoneE164: PHONE_E164,
   email: 'info@aircareprohvac.com',
   bookingUrl: 'https://book.housecallpro.com/book/Shad-Heating-and-Cooling/8d48b75104b0455da0f38ddcf1519bd3?v2=true',
   // Live site and schema publish no street address → service-area business.
@@ -205,11 +205,13 @@ export const business: Business = {
   ],
   sameAs: [
     'https://www.facebook.com/Aircareprohvac/', // listed in the live site's schema
-    // TODO(owner): paste the exact live URLs of the existing profiles:
+    // TODO(owner): add these ONLY after each listing's name update to CHICAGO AIRCARE PRO is live:
     // Google Business Profile → 'https://www.google.com/maps?cid=…' (or the share link)
     // Yelp → 'https://www.yelp.com/biz/…'
     // BBB  → 'https://www.bbb.org/us/il/chicago/profile/…'
   ],
+  // TODO(owner): set each url once that listing shows CHICAGO AIRCARE PRO (also add to sameAs).
+  reviewProfiles: [{ platform: 'Google' }, { platform: 'Yelp' }, { platform: 'BBB' }],
   licenseNumber: '3065598', // City of Chicago
   credentials: [
     'NATE-certified technicians',

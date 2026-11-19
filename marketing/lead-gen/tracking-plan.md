@@ -7,13 +7,15 @@ All events go to `window.dataLayer` via `src/lib/tracking.ts`. GTM (`PUBLIC_GTM_
 | `lead_emergency` | Emergency form submitted OK | funnel, placement, value, currency | ✔ | Emergency lead ($300 TODO) |
 | `lead_quote` | Quote form submitted OK | funnel, placement, value, currency | ✔ | Estimate request ($500 TODO) |
 | `lead_maintenance` | Maintenance form submitted OK | funnel, placement, value, currency | ✔ | Tune-up signup ($150 TODO) |
+| `lead_quick` | Fast 4-field quote submitted OK | funnel, placement, value, currency | ✔ | Fast quote ($200 TODO) |
 | `click_to_call` | Any `tel:` link with `data-track` clicked | placement | ✔ | Website call click (secondary) |
 | `click_to_sms` | Any `sms:` link with `data-track` clicked | placement | ✔ | (secondary) |
 | `click_book_online` | Housecall Pro "Book online" link clicked | placement | ✔ | Booking click (secondary); primary = HCP booking webhook |
 | `form_start` | First focus inside a lead form | funnel, placement | ✗ | — |
 | `form_error` | Validation fails or endpoint errors | funnel, placement, reason | ✗ | — |
 
-Every event also carries `page_path`.
+Every event also carries `page_path`. All `lead_*` events also carry `lead_score` and `lead_tier` (`hot` ≥ 7, `warm` 4–6, `nurture` ≤ 3) from `src/lib/leadScore.ts`. Use `lead_tier = hot` as a GTM condition for a high-value Ads conversion, and route hot leads to an immediate callback.
+Placements include `mobile_bar`, `emergency_banner`, `emergency_banner_mobile`, `header`, `pre_footer`, `<page>_hero`, `area_<slug>`.
 
 ## GTM setup checklist
 - [ ] Custom Event triggers for each event name above

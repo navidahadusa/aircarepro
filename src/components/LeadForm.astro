@@ -45,7 +45,7 @@ const formId = `lead-${f.id}-${placement}`;
   {f.fields.map((field) => {
     const id = `${formId}-${field.name}`;
     if (field.type === 'select') return (
-      <label for={id}>{field.label}{field.required && <span aria-hidden="true"> *</span>}
+      <label for={id}><span class="lbl">{field.label}{field.required && <span class="req" aria-hidden="true"> *</span>}</span>
         <select id={id} name={field.name} required={field.required}>
           <option value="">Choose one…</option>
           {field.options?.map((o) => <option value={o}>{o}</option>)}
@@ -64,12 +64,12 @@ const formId = `lead-${f.id}-${placement}`;
       <label class="inline"><input type="checkbox" id={id} name={field.name} value="yes" /> {field.label}</label>
     );
     if (field.type === 'textarea') return (
-      <label for={id}>{field.label}
+      <label for={id}><span class="lbl">{field.label}</span>
         <textarea id={id} name={field.name} rows="3" placeholder={field.placeholder}></textarea>
       </label>
     );
     return (
-      <label for={id}>{field.label}{field.required && <span aria-hidden="true"> *</span>}
+      <label for={id}><span class="lbl">{field.label}{field.required && <span class="req" aria-hidden="true"> *</span>}</span>
         <input id={id} type={field.type} name={field.name} required={field.required}
           autocomplete={field.autocomplete} placeholder={field.placeholder}
           inputmode={field.type === 'tel' ? 'tel' : field.name === 'zip' ? 'numeric' : undefined} />
@@ -91,6 +91,7 @@ const formId = `lead-${f.id}-${placement}`;
 
 <script>
   import { track, captureAttribution } from '../lib/tracking';
+  import { scoreLead } from '../lib/leadScore';
 
   const attribution = captureAttribution();
 
@@ -118,7 +119,8 @@ const formId = `lead-${f.id}-${placement}`;
       if (data.company_website) return; // bot
       delete data.company_website;
 
-      const payload = { ...data, ...attribution, placement, submitted_at: new Date().toISOString(), page: location.href };
+      const { score, tier, inArea } = scoreLead(data);
+      const payload = { ...data, ...attribution, placement, lead_score: score, lead_tier: tier, in_service_area: inArea, submitted_at: new Date().toISOString(), page: location.href };
       const button = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
       button.disabled = true;
       status.textContent = 'Sending…';
@@ -135,11 +137,11 @@ const formId = `lead-${f.id}-${placement}`;
           console.warn('[LeadForm] PUBLIC_LEAD_ENDPOINT not set — payload:', payload);
         }
         // Lead value + funnel let GTM fire Google Ads / Meta conversions with value.
-        track(event as Parameters<typeof track>[0], { funnel, placement, value: Number(value), currency: 'USD' });
+        track(event as Parameters<typeof track>[0], { funnel, placement, value: Number(value), currency: 'USD', lead_score: score, lead_tier: tier });
         location.href = `/thank-you/?funnel=${funnel}`;
       } catch (err) {
         track('form_error', { funnel, placement, reason: String(err) });
-        status.textContent = 'Something went wrong. Please call us instead — we answer 24/7.';
+        status.textContent = 'Something went wrong. Please call or text us instead. We answer 24/7.';
         button.disabled = false;
       }
     });
@@ -164,6 +166,7 @@ const formId = `lead-${f.id}-${placement}`;
   }
   input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid var(--brand-accent); outline-offset: 1px; }
   .hp { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; }
+  .req { color: var(--emergency, #c62828); }
   .form-status:empty { display: none; }
   .form-alt { margin: 0; font-size: 0.9rem; text-align: center; }
   button { width: 100%; }

@@ -14,7 +14,7 @@ CTAs: `<EmergencyBanner>` (site-wide, sticky; bottom bar on mobile) and `<CallSm
 
 ## 2. Quote / estimate (`quote`)
 - **Intent:** replacement or new install; high value, longer consideration.
-- **Entry points:** home hero, `/free-estimate/`, all 34 `/hvac-<area>/` pages, installation service pages, `/financing/`.
+- **Entry points:** home hero, `/free-estimate/`, all 33 `/hvac-<area>/` pages, installation service pages, `/financing/`.
 - **Fields:** name, phone, ZIP, email, project (furnace/boiler/AC/heat pump/mini-split), system age, property type (single-family/two-flat/condo/rent), timeline, financing interest, rebate help.
 - **After submit:** comfort advisor contact within **TODO(hours)**; email follow-up sequence (day 0 / 2 / 7).
 - **KPIs:** lead → appointment → sold rate, avg. ticket, cost per lead.

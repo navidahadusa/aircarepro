@@ -6,7 +6,7 @@
 | Field | Canonical value | Notes |
 |---|---|---|
 | Business name | `CHICAGO AIRCARE PRO` | Exactly as on Google Business Profile. No keywords or city suffixes. Title case "Chicago Aircare Pro" is OK in body copy, never in citations. |
-| Legal entity | `Shad Heating and Cooling LLC` | Use only where a directory asks for the legal name (BBB, chamber, utility programs). |
+| Legal name | `CHICAGO AIRCARE PRO` | Legal rebrand from `Shad Heating and Cooling LLC` approved 2026-11-19. Former name is retired. |
 | Street / ZIP | *(hidden: service-area business)* | TODO(owner): record privately for directories that require verification. Never publish. |
 | City, State | `Chicago, IL` | |
 | Phone (display) | `(773) 644-8227` | Never use a tracking number in citations. |
@@ -28,7 +28,7 @@
 ## Known variants to hunt down
 | Variant | Where seen | Fix |
 |---|---|---|
-| `Shad Heating and Cooling` (as public name) | Housecall Pro booking page and URL | Rename public profile to brand |
+| `Shad Heating and Cooling` / `… LLC` (former legal name) | Housecall Pro booking page; possibly GBP, Yelp, BBB | Rename (pending) → see `../citations-tracker.md` |
 | `Chicago Aircare Pro` vs `CHICAGO AIRCARE PRO` | Live-site copy vs schema | Use GBP casing in NAP |
 | `7736448227` (unformatted) | Live-site Rank Math schema | Use `+17736448227` in schema |
 

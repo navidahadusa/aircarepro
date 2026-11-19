@@ -1,0 +1,123 @@
+---
+/**
+ * Service pages (/furnace-repair/ …) and category hubs (/heating/, /cooling/, /air-quality/).
+ * Content: Maya Lin. Schema + internal links: Elena Brooks. Layout/CRO: Chloe Vance. Forms: Rachel Morgan.
+ * Paths mirror the live WordPress site.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import LeadForm from '../components/LeadForm.astro';
+import CallSmsCta from '../components/CallSmsCta.astro';
+import FaqSection from '../components/FaqSection.astro';
+import ServiceCards from '../components/ServiceCards.astro';
+import TrustBlock from '../components/TrustBlock.astro';
+import JsonLd from '../components/JsonLd.astro';
+import { business } from '../data/business';
+import { categories, services, servicesIn, serviceBySlug, type Service, type Category } from '../data/services';
+import { buildServiceSchema } from '../lib/schema';
+
+export function getStaticPaths() {
+  return [
+    ...services.map((s) => ({ params: { slug: s.slug }, props: { kind: 'service' as const, service: s } })),
+    ...categories.map((c) => ({ params: { slug: c.slug }, props: { kind: 'category' as const, category: c } })),
+  ];
+}
+
+type Props = { kind: 'service'; service: Service } | { kind: 'category'; category: Category };
+const props = Astro.props as Props;
+const pageUrl = new URL(Astro.url.pathname, Astro.site ?? business.url).toString();
+const topAreas = business.serviceAreas.filter((a) => ['chicago', 'evanston', 'skokie', 'lincoln-park', 'lakeview', 'logan-square', 'andersonville-edgewater', 'arlington-heights', 'naperville'].includes(a.slug));
+
+let svc: Service | undefined;
+let cat: Category;
+if (props.kind === 'service') {
+  svc = props.service;
+  cat = categories.find((c) => c.name === svc!.category)!;
+} else {
+  cat = props.category;
+}
+const related = svc ? svc.related.map(serviceBySlug).filter((x): x is Service => Boolean(x)) : [];
+const catServices = servicesIn(cat.name);
+const catFaqs = catServices.flatMap((s) => s.faqs.slice(0, 1)).slice(0, 5);
+const title = svc ? `${svc.name} in Chicago | ${svc.funnel === 'emergency' ? '24/7 Service | ' : ''}${business.displayName}` : `${cat.name} Services in Chicago | ${business.displayName}`;
+const description = svc ? svc.meta : cat.meta;
+const schema = buildServiceSchema({ name: svc ? svc.name : `${cat.name} services`, description, pageUrl });
+---
+
+<BaseLayout title={title} description={description}>
+  <Breadcrumbs items={svc ? [{ name: cat.name, href: `/${cat.slug}/` }, { name: svc.name, href: `/${svc.slug}/` }] : [{ name: cat.name, href: `/${cat.slug}/` }]} />
+  <JsonLd data={schema} />
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">{cat.name} · Chicago &amp; suburbs</span>
+        <h1>{svc ? `${svc.name} in Chicago` : cat.headline}</h1>
+        <p class="lead">{svc ? svc.intro : cat.intro}</p>
+        <CallSmsCta placement={`${svc ? svc.slug : cat.slug}_hero`} heading={svc?.funnel === 'emergency' ? 'Need it fixed now? Call or text 24/7' : undefined} />
+        <ul class="badge-row">
+          <li>NATE &amp; EPA 608</li><li>License #{business.licenseNumber}</li><li>BBB accredited</li><li>Free estimates on new systems</li>
+        </ul>
+      </div>
+      <div id="quote"><LeadForm funnel={svc ? svc.funnel : 'quick'} placement={`${svc ? svc.slug : cat.slug}_hero`} /></div>
+    </div>
+  </section>
+
+  {svc ? (
+    <section class="section">
+      <div class="container grid grid-2">
+        <div class="card">
+          <h2>Signs you need {svc.name.toLowerCase()}</h2>
+          <ul class="check-list">{svc.signs.map((x) => <li>{x}</li>)}</ul>
+        </div>
+        <div class="card">
+          <h2>What’s included</h2>
+          <ul class="check-list">{svc.included.map((x) => <li>{x}</li>)}</ul>
+          <p><small>You get the price before any work starts. Repairs are done only with your approval.</small></p>
+        </div>
+      </div>
+    </section>
+  ) : (
+    <section class="section">
+      <div class="container">
+        <div class="section-head"><h2>{cat.name} services</h2></div>
+        <ServiceCards items={catServices} />
+      </div>
+    </section>
+  )}
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Why homeowners call us</span><h2>Diagnosis first. Options before any work.</h2></div>
+      <TrustBlock />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid grid-2">
+      <div class="prose">
+        <FaqSection faqs={svc ? svc.faqs : catFaqs} heading={svc ? `${svc.name} questions` : `${cat.name} questions`} />
+      </div>
+      <div>
+        {related.length > 0 && (
+          <>
+            <h2>Related services</h2>
+            <ServiceCards items={related} />
+          </>
+        )}
+        <h2 class="mt">{svc ? svc.name : cat.name} near you</h2>
+        <p>We serve Chicago’s North, Northwest and West Sides and nearby suburbs.</p>
+        <ul class="area-pills" role="list">
+          {topAreas.map((a) => <li><a href={`/hvac-${a.slug}/`}>{a.name}</a></li>)}
+          <li><a href="/service-areas/">All areas →</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .mt { margin-top: 2rem; }
+  .area-pills { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .area-pills a { display: inline-block; padding: 0.4rem 0.85rem; border-radius: 999px; background: var(--blue-50); text-decoration: none; font-weight: 700; font-size: 0.9rem; }
+</style>

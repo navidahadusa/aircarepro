@@ -1,6 +1,6 @@
 # Lead-gen funnels and improvements: CHICAGO AIRCARE PRO
 
-Owner agent: `lead-gen-architect` · Specs: `lead-gen/funnels.md` · Fields and scoring: `lead-gen/qualification-fields.md` · Tracking: `lead-gen/tracking-plan.md`
+Owner: **Rachel Morgan, Lead Generation Architect** (`lead-gen-architect`) · Reports to Sophia Reynolds · Specs: `lead-gen/funnels.md` · Fields and scoring: `lead-gen/qualification-fields.md` · Tracking: `lead-gen/tracking-plan.md`
 Based on the live-site audit in `site-audit-2026-11-19.md`.
 
 ## Current state on aircareprohvac.com
@@ -17,7 +17,10 @@ Based on the live-site audit in `site-audit-2026-11-19.md`.
 | 4 | **Emergency dispatch form** on `/emergency-hvac/` for people who can't talk (boiler/radiator option, brand/error code field) | Emergency | ✅ `LeadForm funnel="emergency"` |
 | 5 | **Free estimate page and form** (`/free-estimate/`): project, system age, property type (two-flat/condo), timeline, financing + rebate interest | Quote | ✅ `LeadForm funnel="quote"` |
 | 6 | **Comfort Club signup form** with heating type (furnace/hot-water/steam boiler/heat pump) | Maintenance | ✅ `LeadForm funnel="maintenance"` |
-| 7 | Quote form in the hero of every area page (`/hvac-<area>/`) | Quote | ✅ |
+| 7 | **Fast 4-field quote** in the hero of the homepage, every area page and the category hubs | Quick | ✅ Sprint 1 (`funnel="quick"`) |
+| 7b | Mobile sticky **Call 24/7 / Text / Quote** bar | All | ✅ Sprint 1 (`MobileCtaBar.astro`) |
+| 7c | **Lead scoring** (hot/warm/nurture) in every payload and event | All | ✅ Sprint 1 (`leadScore.ts`) |
+| 7d | Service pages use the funnel that matches intent (repair → emergency, install → quote, tune-up → maintenance) | All | ✅ Sprint 1 |
 | 8 | Publish Comfort Club pricing (or "from $X/mo") | Maintenance | ☐ owner decision |
 | 9 | Name the financing lender, add a prequal link and a monthly payment example | Quote | ☐ owner |
 | 10 | Reviews page: embed real Google/BBB reviews, star rating, "Leave a review" links | All (trust) | ☐ needs profile URLs |
@@ -25,11 +28,12 @@ Based on the live-site audit in `site-audit-2026-11-19.md`.
 | 12 | Seasonal campaigns: fall furnace/boiler tune-up (Sep–Nov), spring AC tune-up (Mar–May), first-freeze emergency push | Maintenance / Emergency | ☐ |
 
 ## Conversion events (GTM `GTM-K3PBQCR9`)
-`lead_emergency` · `lead_quote` · `lead_maintenance` · `click_to_call` · `click_to_sms` · `click_book_online` · `form_start` · `form_error`. See `lead-gen/tracking-plan.md`.
+`lead_emergency` · `lead_quick` · `lead_quote` · `lead_maintenance` · `click_to_call` · `click_to_sms` · `click_book_online` · `form_start` · `form_error`. See `lead-gen/tracking-plan.md`.
 
 ## Goals (fill in)
 | Funnel | Monthly target | Value per lead | Response SLA |
 |---|---|---|---|
 | Emergency (calls + forms) | TODO | $300 placeholder | TODO |
+| Fast quote | TODO | $200 placeholder | TODO |
 | Free estimate | TODO | $500 placeholder | TODO |
 | Comfort Club signups | TODO | $150 placeholder | TODO |

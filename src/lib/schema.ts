@@ -1,13 +1,13 @@
 import { business as defaultBusiness, type Business, type ServiceArea } from '../data/business';
 
+export const businessId = (b: Business = defaultBusiness) => `${b.url.replace(/\/$/, '')}/#business`;
+
 /**
  * Builds schema.org HVACBusiness (a LocalBusiness subtype) JSON-LD from the
  * canonical business record so NAP in schema always matches NAP on the page.
  */
 export interface SchemaOptions {
   business?: Business;
-  /** Restrict areaServed to one area (for city landing pages). */
-  area?: ServiceArea;
   /** Page-specific URL (defaults to business.url). */
   pageUrl?: string;
   aggregateRating?: { ratingValue: number; reviewCount: number };
@@ -15,8 +15,8 @@ export interface SchemaOptions {
 
 export function buildLocalBusinessSchema(opts: SchemaOptions = {}) {
   const b = opts.business ?? defaultBusiness;
-  const id = `${b.url.replace(/\/$/, '')}/#business`;
-  const areas = opts.area ? [opts.area] : b.serviceAreas;
+  const id = businessId(b);
+  const areas = b.serviceAreas;
 
   const hours = b.emergency24x7
     ? [
@@ -42,7 +42,7 @@ export function buildLocalBusinessSchema(opts: SchemaOptions = {}) {
     ...(b.legalName && { legalName: b.legalName }),
     alternateName: b.displayName,
     description: b.description,
-    url: opts.pageUrl ?? b.url,
+    url: b.url,
     logo: absolute(b.url, b.logo),
     image: absolute(b.url, b.image),
     telephone: b.phoneE164,
@@ -102,3 +102,34 @@ const DAY: Record<string, string> = {
 };
 const dayName = (d: string) => DAY[d];
 const absolute = (base: string, path: string) => (path.startsWith('http') ? path : new URL(path, base).toString());
+
+/**
+ * Service JSON-LD for service and area pages. References the single business
+ * entity by @id instead of repeating (and risking drift in) NAP.
+ */
+export function buildServiceSchema(opts: {
+  name: string;
+  description: string;
+  pageUrl: string;
+  areas?: ServiceArea[];
+  serviceType?: string;
+  business?: Business;
+}) {
+  const b = opts.business ?? defaultBusiness;
+  const areas = opts.areas ?? b.serviceAreas;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: opts.name,
+    serviceType: opts.serviceType ?? opts.name,
+    description: opts.description,
+    url: opts.pageUrl,
+    provider: { '@id': businessId(b) },
+    areaServed: areas.map((a) => ({ '@type': a.type, name: a.name })),
+    availableChannel: {
+      '@type': 'ServiceChannel',
+      servicePhone: { '@type': 'ContactPoint', telephone: b.phoneE164, contactType: 'customer service' },
+      serviceUrl: opts.pageUrl,
+    },
+  };
+}

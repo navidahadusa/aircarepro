@@ -18,7 +18,7 @@ export interface LeadField {
   qualifies?: 'urgency' | 'intent' | 'value' | 'fit';
 }
 
-export type FunnelId = 'emergency' | 'quote' | 'maintenance';
+export type FunnelId = 'emergency' | 'quote' | 'maintenance' | 'quick';
 
 export interface Funnel {
   id: FunnelId;
@@ -39,6 +39,28 @@ const contactFields: LeadField[] = [
 ];
 
 export const funnels: Record<FunnelId, Funnel> = {
+  /** Fast 4-field form for heroes, service pages and the mobile bar. Owner: Rachel Morgan. */
+  quick: {
+    id: 'quick',
+    title: 'Get a Fast Quote',
+    subtitle: 'Four quick fields. We’ll call or text you back with next steps and pricing.',
+    submitLabel: 'Get My Fast Quote',
+    conversionEvent: 'lead_quick',
+    conversionValue: 200,
+    fields: [
+      { name: 'name', label: 'Name', type: 'text', required: true, autocomplete: 'name' },
+      { name: 'phone', label: 'Mobile phone', type: 'tel', required: true, autocomplete: 'tel', placeholder: '(773) 555-0100' },
+      { name: 'zip', label: 'ZIP code', type: 'text', required: true, autocomplete: 'postal-code', qualifies: 'fit' },
+      {
+        name: 'need',
+        label: 'What do you need?',
+        type: 'select',
+        required: true,
+        qualifies: 'intent',
+        options: ['Repair – no heat / no cooling now', 'Repair – not urgent', 'New system estimate', 'Tune-up / Comfort Club', 'Air quality / humidity', 'Other'],
+      },
+    ],
+  },
   emergency: {
     id: 'emergency',
     title: 'Request Emergency Service',

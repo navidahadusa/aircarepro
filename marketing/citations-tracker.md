@@ -1,43 +1,59 @@
 # Citations tracker: CHICAGO AIRCARE PRO
 
-Owner agent: `local-citations-specialist` · Row-level data: `citations/citation-tracker.csv` · Rules: `citations/nap-standard.md`
+Owner: **Hannah Carter, Local Citations & NAP Specialist** · Reports to Sophia Reynolds
+Rows: `citations/citation-tracker.csv` · Rules: `citations/nap-standard.md` · Code: `business.rebrand` in `src/data/business.ts`
 
-## Canonical NAP
+## Rebrand status (updated 2026-11-19)
+| Item | Status |
+|---|---|
+| Legal rebrand **Shad Heating and Cooling LLC → CHICAGO AIRCARE PRO** | ✅ **Approved** |
+| Google Business Profile name update | ⏳ **Pending** |
+| Yelp name update | ⏳ **Pending** |
+| BBB name update (business name / DBA on the accredited profile) | ⏳ **Pending** |
+| Housecall Pro public booking name (still "Shad Heating and Cooling") | ⏳ Pending: owner can change it in HCP settings |
+| `sameAs` / review links for GBP, Yelp, BBB | 🔒 `TODO` until the owner sends the live URLs |
+| New citations (Bing, Apple, Nextdoor, aggregators, directories) | 🔒 **Blocked** until all three existing listings show the new name |
+
+**Why we wait:** if new directories go live while Google, Yelp and BBB still show the old name, the aggregators spread two competing names, which is the NAP inconsistency that suppresses local rankings. Rename the core three first, then roll out.
+
+## Canonical NAP (use exactly)
 ```
 CHICAGO AIRCARE PRO
 Chicago, IL   (service-area business, street address hidden)
 (773) 644-8227
 https://aircareprohvac.com
 ```
-Legal entity: Shad Heating and Cooling LLC · City of Chicago License #3065598 · info@aircareprohvac.com · Open 24/7
+Email info@aircareprohvac.com · City of Chicago License #3065598 · Open 24/7
+Former names to retire everywhere: `Shad Heating and Cooling LLC`, `Shad Heating and Cooling`
 
-## Existing profiles: optimize and audit first
-
-| Profile | Status | Audit checklist | Profile URL (→ `sameAs`) |
+## Step 1: Rename the existing listings (owner actions, Hannah prepared)
+| Listing | What to change | Proof the platform may ask for | When live → |
 |---|---|---|---|
-| **Google Business Profile** | Live (owner-confirmed) | ☐ Name exactly `CHICAGO AIRCARE PRO` (no keywords) ☐ Primary category *HVAC contractor*; secondary: *Air conditioning repair service, Furnace repair service, Heating contractor, Boiler supplier?* (only if accurate) ☐ Address hidden; service areas = the 33 areas (max 20; prioritize by revenue) ☐ Hours 24/7 ☐ Phone (773) 644-8227 ☐ Website `https://aircareprohvac.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp` ☐ Booking link = Housecall Pro ☐ Services list mirrors the 20 site services ☐ Products: Comfort Club, Comfortmaker systems ☐ 10+ real job photos ☐ Weekly posts ☐ Q&A seeded with real FAQs ☐ Review link set up in Housecall Pro follow-ups | TODO(owner) |
-| **Yelp** | Live (owner-confirmed) | ☐ Claimed at biz.yelp.com ☐ Name/phone/website match ☐ Service-area mode, address hidden ☐ Categories: Heating & Air Conditioning/HVAC ☐ Hours 24/7 ☐ Photos ☐ "Request a Quote" enabled and answered fast ☐ Don't solicit reviews (Yelp policy) | TODO(owner) |
-| **BBB** | Live, accredited (site claims "BBB accredited") | ☐ Business name shows brand + legal entity correctly (DBA) ☐ Phone/website/license match ☐ Accreditation seal on the site links to the BBB profile ☐ Respond to any complaints ☐ Add service areas | TODO(owner) |
-| Facebook | Live (in site schema) | ☐ Page name, phone, website, hours match ☐ "Call now" button ☐ Service area set | https://www.facebook.com/Aircareprohvac/ |
+| **Google Business Profile** | Business name → `CHICAGO AIRCARE PRO` (no added keywords). Confirm phone (773) 644-8227, website, 24/7 hours, service areas, categories (*HVAC contractor* primary) | Updated business registration / assumed-name filing, license, branded signage or vehicle photos, invoice with the new name | Send the profile/share URL → added to `sameAs` + `reviewProfiles` |
+| **Yelp** | Business name → `CHICAGO AIRCARE PRO` via biz.yelp.com (name changes may go to Yelp support for review) | Registration documents, website showing the new name | Send the `yelp.com/biz/...` URL |
+| **BBB** | Update the accredited profile's business name (keep the legal entity record accurate) | Updated registration with the state | Send the `bbb.org/us/il/chicago/profile/...` URL; we'll add the seal link on the site |
+| Facebook | Page name matches; "Call now" button; service area | n/a | Already in `sameAs` |
+| Housecall Pro | Public business name → CHICAGO AIRCARE PRO (booking URL slug may stay) | n/a | Reply when done |
 
-**Site fixes these profiles need:** add all four URLs to `sameAs` (in `src/data/business.ts` for this repo, and in Rank Math → Local SEO on the live WordPress site), link them from `/reviews/` and the footer, and embed the BBB seal.
+**Audit checklist for each renamed listing:** exact name · phone (773) 644-8227 · website https://aircareprohvac.com (GBP with `?utm_source=google&utm_medium=organic&utm_campaign=gbp`) · hours 24/7 · address hidden (service area) · categories · description from `nap-standard.md` · photos · no duplicate listings under the old name.
 
-## Next priority citations
+## Step 2: Rollout queue (starts when Step 1 is complete)
 | # | Directory | Why |
 |---|---|---|
-| 1 | Bing Places | Imports from GBP; feeds Bing, ChatGPT search and Copilot |
-| 2 | Apple Business Connect | Apple Maps/Siri, iPhone-heavy North Side market |
-| 3 | Nextdoor Business | Neighborhood referrals; strong in Edgewater, Lincoln Square, Evanston |
-| 4 | Comfortmaker dealer locator | Confirmed dealer: high-trust, relevant link |
-| 5 | Angi / HomeAdvisor | Major home-services directory |
-| 6 | Thumbtack | Lead source + citation |
-| 7 | Houzz | Install and remodel audience |
-| 8 | Data Axle, Neustar Localeze, Foursquare | Aggregators that feed hundreds of downstream sites |
-| 9 | Andersonville or Edgewater Chamber of Commerce | Closest to the business's geo point; local link + citation |
-| 10 | ComEd, Peoples Gas / North Shore Gas, Nicor Gas contractor (trade ally) lists | Rebate shoppers; high-intent referral traffic |
+| 1 | Bing Places | Imports from GBP; feeds Bing, Copilot and ChatGPT search |
+| 2 | Apple Business Connect | Apple Maps and Siri |
+| 3 | Nextdoor Business | Neighborhood referrals (Edgewater, Lincoln Square, Evanston) |
+| 4 | Comfortmaker dealer locator | Confirmed dealer: high-trust, relevant |
+| 5 | Data Axle · Neustar Localeze · Foursquare | Aggregators that push the new name to hundreds of sites |
+| 6 | Angi / HomeAdvisor · Thumbtack · Houzz · Porch | Home-services directories |
+| 7 | Andersonville and Edgewater chambers | Local citation + backlink (with Natalie Foster) |
+| 8 | ComEd / Peoples Gas / North Shore Gas / Nicor Gas contractor lists | Rebate-shopper referrals |
 
-## Clean-up items found on the live site
-- [ ] Merge the two LocalBusiness schema blocks into one (`CHICAGO AIRCARE PRO`, `+17736448227`, valid hours)
-- [ ] Rename the Housecall Pro public profile from "Shad Heating and Cooling" to the brand (keep the LLC as legal name)
-- [ ] Decide on casing: `CHICAGO AIRCARE PRO` (GBP) everywhere NAP is printed
-- [ ] Search for duplicate or old listings under "Shad Heating and Cooling" and merge or redirect them
+## Step 3: Clean-up (after rollout)
+- [ ] Search for listings under "Shad Heating and Cooling" (Google, Yelp, BBB, Facebook, aggregators). Request merges or name updates.
+- [ ] Live WordPress site: merge the two LocalBusiness schema blocks into one (`CHICAGO AIRCARE PRO`, `+17736448227`, valid 24/7 hours) and add `sameAs`.
+- [ ] Remove "Operated by Shad Heating and Cooling LLC" from the live site footer once the legal paperwork is final.
+
+## Already done in this repo
+- `business.ts`: `legalName: CHICAGO AIRCARE PRO`, `formerNames`, `rebrand` status object, `reviewProfiles` placeholders (render without links until the URLs arrive).
+- The site footer and schema show **CHICAGO AIRCARE PRO** only. The former name appears nowhere on the site.

@@ -1,0 +1,98 @@
+---
+/**
+ * Site header + navigation. Owner: Chloe Vance (UI/UX & CRO).
+ * Fixes vs. live site: phone and Free Estimate CTA always visible, trust strip,
+ * keyboard/no-JS accessible menus (<details>), compact mobile header (Call/Text live in the bottom bar).
+ */
+import NavList from './NavList.astro';
+import { business, telHref } from '../data/business';
+---
+
+<div class="utility">
+  <div class="container utility-inner">
+    <span>✔ City of Chicago License #{business.licenseNumber}</span>
+    <span class="hide-sm">✔ NATE &amp; EPA 608 certified</span>
+    <span class="hide-sm">✔ BBB accredited</span>
+    <span class="hide-sm">✔ {business.dealerOf} dealer</span>
+  </div>
+</div>
+
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="brand" aria-label={`${business.displayName} home`}>
+      <img src="/logo.svg" alt="" width="40" height="40" />
+      <span class="brand-text"><strong>Chicago Aircare Pro</strong><small>Heating &amp; Cooling</small></span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main">
+      <NavList />
+    </nav>
+
+    <div class="header-cta">
+      <a class="phone" href={telHref()} data-track="click_to_call" data-placement="header">
+        <small>Call or text 24/7</small>{business.phoneDisplay}
+      </a>
+      <a class="btn btn-primary hide-md" href="/free-estimate/">Free Estimate</a>
+    </div>
+
+    <details class="mobile-toggle">
+      <summary aria-label="Menu"><span class="burger" aria-hidden="true"></span><span class="label">Menu</span></summary>
+      <nav class="mobile-nav" aria-label="Mobile">
+        <NavList stacked />
+        <a class="btn btn-primary block" href="/free-estimate/">Free Estimate</a>
+      </nav>
+    </details>
+  </div>
+</header>
+
+<script>
+  // One dropdown open at a time; close on outside click or Escape.
+  const menus = [...document.querySelectorAll<HTMLDetailsElement>('.has-menu > details')];
+  menus.forEach((d) => d.addEventListener('toggle', () => {
+    if (d.open) menus.forEach((o) => o !== d && (o.open = false));
+  }));
+  document.addEventListener('click', (e) => {
+    if (!(e.target as Element).closest('.has-menu')) menus.forEach((d) => (d.open = false));
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') menus.forEach((d) => (d.open = false));
+  });
+</script>
+
+<style>
+  .utility { background: var(--navy-900); color: #c9d8e8; font-size: 0.8rem; font-weight: 600; }
+  .utility-inner { display: flex; gap: 1.25rem; justify-content: center; padding-block: 0.35rem; flex-wrap: wrap; }
+  .site-header { position: sticky; top: 0; z-index: 40; background: rgb(255 255 255 / 0.97); backdrop-filter: blur(6px); border-bottom: 1px solid var(--border); }
+  .header-inner { display: flex; align-items: center; gap: 1rem; min-height: 72px; }
+  .brand { flex: none; display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--navy-900); }
+  .brand-text { display: grid; line-height: 1.1; font-size: 1.15rem; white-space: nowrap; }
+  .brand-text strong { font-weight: 900; }
+  .brand-text small { font-size: 0.7rem; font-weight: 700; color: var(--orange-600); text-transform: uppercase; letter-spacing: 0.08em; }
+  .desktop-nav { margin-left: auto; min-width: 0; }
+  .header-cta { flex: none; display: flex; align-items: center; gap: 0.75rem; }
+  .phone { display: grid; text-align: right; text-decoration: none; font-weight: 900; font-size: 1.15rem; color: var(--navy-900); line-height: 1.1; white-space: nowrap; }
+  .phone small { font-size: 0.7rem; font-weight: 700; color: var(--green-600); text-transform: uppercase; letter-spacing: 0.05em; }
+  .mobile-toggle { display: none; }
+
+  @media (max-width: 1320px) { .hide-md { display: none; } }
+  @media (max-width: 1140px) {
+    .desktop-nav { display: none; }
+    .header-cta { margin-left: auto; }
+    .mobile-toggle { display: block; }
+    .mobile-toggle > summary { display: flex; align-items: center; gap: 0.4rem; padding: 0.6rem 0.75rem; min-height: 44px; font-weight: 800; cursor: pointer; list-style: none; border: 1px solid var(--border); border-radius: var(--radius-sm); }
+    .mobile-toggle > summary::-webkit-details-marker { display: none; }
+    .burger, .burger::before, .burger::after { display: block; width: 20px; height: 2px; background: var(--navy-900); content: ''; }
+    .burger { position: relative; }
+    .burger::before { position: absolute; top: -6px; } .burger::after { position: absolute; top: 6px; }
+    .mobile-nav { position: absolute; left: 0; right: 0; top: 100%; background: #fff; border-bottom: 1px solid var(--border); padding: 0.75rem 1rem 1rem; box-shadow: var(--shadow); max-height: calc(100vh - 140px); overflow: auto; }
+    .block { width: 100%; margin-top: 0.75rem; }
+  }
+  @media (max-width: 640px) {
+    .hide-sm { display: none !important; }
+    .brand-text { font-size: 1.02rem; }
+    .brand-text small { display: none; }
+    .brand img { width: 34px; height: 34px; }
+    .phone { display: none; } /* Call/Text live in the sticky bottom bar on mobile */
+    .mobile-toggle .label { display: none; }
+  }
+</style>

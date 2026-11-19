@@ -1,27 +1,33 @@
 ---
+/** Free estimate funnel. Owner: Rachel Morgan. */
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import CallSmsCta from '../../components/CallSmsCta.astro';
+import TrustBlock from '../../components/TrustBlock.astro';
 import { business } from '../../data/business';
 ---
-
-<BaseLayout
-  title={`Free Estimate on a New Furnace, Boiler or AC | ${business.displayName}`}
-  description={`Free written estimates on new furnaces, boilers, air conditioners, heat pumps and mini-splits in Chicago. Financing available, subject to credit approval.`}
->
-  <section class="hero container">
-    <div>
-      <h1>Free Estimate on a New System</h1>
-      <p>Tell us about your home and current system. We’ll size it properly, explain the options with prices, and you decide.</p>
-      <ul>
-        <li>Free written estimate with options</li>
-        <li>Load-calculated sizing for Chicago bungalows, two-flats, greystones and suburban homes</li>
-        <li><a href="/financing/">Financing</a> available, subject to credit approval</li>
-        <li>We check current ComEd, Peoples Gas and Nicor Gas rebates for your equipment</li>
-        <li>{business.dealerOf} dealer</li>
-      </ul>
-      <CallSmsCta placement="quote_hero" sub="Prefer to talk it through?" />
+<BaseLayout title={`Free Estimate on a New Furnace, Boiler or AC | ${business.displayName}`}
+  description="Free written estimates on new furnaces, boilers, air conditioners, heat pumps and mini-splits in Chicago. Financing available, subject to credit approval.">
+  <Breadcrumbs items={[{ name: 'Free Estimate', href: '/free-estimate/' }]} />
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Free · No pressure</span>
+        <h1>Free Estimate on a New System</h1>
+        <p class="lead">Tell us about your home and current system. We’ll size it properly, explain the options with prices, and you decide.</p>
+        <ul class="check-list light">
+          <li>Free written estimate with options</li>
+          <li>Sized for Chicago bungalows, two-flats, greystones and suburban homes</li>
+          <li>Financing available, subject to credit approval</li>
+          <li>We check current utility rebates for your equipment</li>
+          <li>{business.dealerOf} dealer</li>
+        </ul>
+        <CallSmsCta placement="quote_hero" sub="Prefer to talk it through?" />
+      </div>
+      <div id="quote"><LeadForm funnel="quote" placement="quote_hero" /></div>
     </div>
-    <LeadForm funnel="quote" placement="quote_hero" />
   </section>
+  <section class="section"><div class="container"><TrustBlock /></div></section>
 </BaseLayout>
+<style>.light li { color: #e8f0f8; }</style>

@@ -1,9 +1,10 @@
 # Lead qualification fields & scoring
 
-Keep in sync with `src/data/leadForms.ts` (`qualifies:` tags). Each extra field costs conversions, so every field must change how the lead is handled.
+Keep in sync with `src/data/leadForms.ts` (`qualifies:` tags) **and the implementation in `src/lib/leadScore.ts`** (Rachel Morgan). Each extra field costs conversions, so every field must change how the lead is handled.
 
 | Field | Funnels | Qualifies | Values → score |
 |---|---|---|---|
+| `need` | quick | intent | Repair now +5 (in-area urgent repair = hot) · New system +3 · Tune-up/Comfort Club +2 · Other +1 |
 | `zip` | all | fit | In service area +2 · outside −5 (route to referral) |
 | `issue` | emergency | urgency | No heat furnace or boiler (winter) / No cooling (summer) +3 · Leak / smell +3 · Other +1 |
 | `equipment_brand` | emergency | — | Free text; lets the tech bring parts |
@@ -19,4 +20,4 @@ Keep in sync with `src/data/leadForms.ts` (`qualifies:` tags). Each extra field 
 **Routing (suggested):** score ≥ 7 → call within 5 min · 4–6 → same day · ≤ 3 → nurture email.
 
 ## Payload sent to `PUBLIC_LEAD_ENDPOINT`
-All form fields plus: `funnel`, `placement`, `page`, `submitted_at`, `landing_page`, `referrer`, `utm_*`, `gclid`, `gbraid`, `wbraid`, `fbclid`, `msclkid`.
+All form fields plus: `funnel`, `placement`, `lead_score`, `lead_tier`, `in_service_area`, `page`, `submitted_at`, `landing_page`, `referrer`, `utm_*`, `gclid`, `gbraid`, `wbraid`, `fbclid`, `msclkid`.
