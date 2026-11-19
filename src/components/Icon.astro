@@ -1,0 +1,29 @@
+---
+/**
+ * Inline SVG line icons (Lucide, ISC license) replacing emoji. Owner: Chloe Vance.
+ * Only the icons imported here end up in the HTML (no icon font, no runtime JS).
+ */
+import {
+  Phone, MessageSquareText, CalendarCheck, Flame, Snowflake, Wind, ShieldCheck, Award, Clock,
+  Wrench, MapPin, Gauge, Recycle, Factory, Landmark, Siren, Thermometer, House, ArrowRight,
+  BadgeCheck, ClipboardCheck, Sparkles, Droplets, Fan, Zap,
+} from 'lucide-static';
+
+const icons = {
+  phone: Phone, sms: MessageSquareText, calendar: CalendarCheck, flame: Flame, snowflake: Snowflake,
+  wind: Wind, shield: ShieldCheck, award: Award, clock: Clock, wrench: Wrench, pin: MapPin,
+  gauge: Gauge, recycle: Recycle, factory: Factory, license: Landmark, siren: Siren,
+  thermometer: Thermometer, house: House, arrow: ArrowRight, badge: BadgeCheck,
+  clipboard: ClipboardCheck, sparkles: Sparkles, droplets: Droplets, fan: Fan, zap: Zap,
+} as const;
+export type IconName = keyof typeof icons;
+
+interface Props { name: IconName; size?: number; class?: string; label?: string }
+const { name, size = 20, class: className, label } = Astro.props;
+const svg = icons[name]
+  .replace(/width="24"/, `width="${size}"`)
+  .replace(/height="24"/, `height="${size}"`)
+  .replace(/class="[^"]*"/, `class="icon${className ? ' ' + className : ''}"`)
+  .replace('<svg', label ? `<svg role="img" aria-label="${label}"` : '<svg aria-hidden="true" focusable="false"');
+---
+<Fragment set:html={svg} />

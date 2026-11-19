@@ -1,0 +1,67 @@
+---
+/**
+ * Lead capture card for leadCapture = 'housecall-pro' (owner decision 2026-11-19).
+ * Owners: Rachel Morgan (flow/tracking) + Chloe Vance (design).
+ * Planned work → "Book online" (Housecall Pro, primary). Emergencies → Call (primary).
+ * Every click is tracked before the visitor leaves the site.
+ */
+import Icon from './Icon.astro';
+import { business, telHref, smsHref } from '../data/business';
+import type { FunnelId } from '../data/leadForms';
+
+interface Props { funnel: FunnelId; placement?: string }
+const { funnel, placement = 'inline' } = Astro.props;
+const emergency = funnel === 'emergency';
+const copy: Record<FunnelId, { title: string; sub: string; bookLabel: string }> = {
+  emergency: { title: 'Emergency? Call now.', sub: 'A real person answers 24/7, including nights and holidays. Can’t talk? Text us or book online.', bookLabel: 'Book online instead' },
+  quick: { title: 'Book service online', sub: 'Pick a time that works for you in about a minute. Prefer to talk? Call or text 24/7.', bookLabel: 'Book online now' },
+  quote: { title: 'Book your free estimate', sub: 'Estimates on new furnaces, boilers, AC and heat pumps are free. Pick a time online.', bookLabel: 'Book free estimate' },
+  maintenance: { title: `Schedule your ${business.maintenancePlanName} tune-up`, sub: 'Spring AC or fall furnace and boiler tune-up. Pick a time online, or call to join the plan.', bookLabel: 'Book a tune-up' },
+};
+const c = copy[funnel];
+---
+<div class:list={['booking', { emergency }]} id={`book-${funnel}`}>
+  <p class="kicker">{emergency ? <><Icon name="siren" size={16} /> Emergency dispatch</> : <><Icon name="calendar" size={16} /> Online booking</>}</p>
+  <h2>{c.title}</h2>
+  <p class="sub">{c.sub}</p>
+
+  {emergency ? (
+    <a class="btn btn-emergency big" href={telHref()} data-track="click_to_call" data-placement={`${placement}_panel`}>
+      <Icon name="phone" /> Call {business.phoneDisplay}
+    </a>
+  ) : (
+    <a class="btn btn-primary big" href={business.bookingUrl} target="_blank" rel="noopener" data-track="click_book_online" data-placement={`${placement}_panel`}>
+      <Icon name="calendar" /> {c.bookLabel} <span class="sr-only">(opens Housecall Pro in a new tab)</span>
+    </a>
+  )}
+
+  <div class="alt">
+    {emergency ? (
+      <a class="btn btn-secondary" href={business.bookingUrl} target="_blank" rel="noopener" data-track="click_book_online" data-placement={`${placement}_panel`}><Icon name="calendar" size={18} /> {c.bookLabel}</a>
+    ) : (
+      <a class="btn btn-secondary" href={telHref()} data-track="click_to_call" data-placement={`${placement}_panel`}><Icon name="phone" size={18} /> Call</a>
+    )}
+    <a class="btn btn-secondary" href={smsHref(business, emergency ? 'EMERGENCY: I need HVAC service at ' : 'Hi, I need HVAC service at ')} data-track="click_to_sms" data-placement={`${placement}_panel`}><Icon name="sms" size={18} /> Text</a>
+  </div>
+
+  <ul class="assure">
+    <li><Icon name="clipboard" size={16} /> Diagnosis first, price before any work</li>
+    <li><Icon name="badge" size={16} /> NATE &amp; EPA 608 certified technicians</li>
+    <li><Icon name="license" size={16} /> City of Chicago License #{business.licenseNumber}</li>
+  </ul>
+</div>
+
+<style>
+  .booking { background: #fff; color: var(--text); border-radius: var(--radius); padding: clamp(1.25rem, 1rem + 1vw, 1.75rem); box-shadow: 0 20px 50px rgb(11 37 69 / 0.25); border-top: 5px solid var(--cta); max-width: 30rem; }
+  .booking.emergency { border-top-color: var(--emergency); }
+  .kicker { display: flex; align-items: center; gap: 0.4rem; margin: 0 0 0.4rem; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--cta); }
+  .emergency .kicker { color: var(--emergency); }
+  h2 { margin: 0 0 0.4rem; font-size: clamp(1.4rem, 1.2rem + 0.8vw, 1.75rem); }
+  .sub { color: var(--muted); margin-bottom: 1.1rem; }
+  .big { width: 100%; font-size: 1.1rem; min-height: 56px; }
+  .alt { display: grid; grid-template-columns: 1fr 1fr; gap: 0.6rem; margin-top: 0.6rem; }
+  .alt .btn { min-height: 48px; padding-inline: 0.75rem; }
+  .assure { list-style: none; padding: 1rem 0 0; margin: 1.1rem 0 0; border-top: 1px solid var(--border); display: grid; gap: 0.45rem; font-size: 0.88rem; color: var(--muted); }
+  .assure li { display: flex; gap: 0.5rem; align-items: center; }
+  .assure :global(.icon) { color: var(--green-600); flex: none; }
+</style>

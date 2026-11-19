@@ -28,6 +28,15 @@ Owner shortcuts (`.claude/commands/`): `/daily [focus]` · `/sprint <goal>` · `
 ### Redesign authority
 **Sophia Reynolds, Chloe Vance and Elena Brooks** are explicitly authorized to overhaul the site's visual look, UI components, navigation, page templates and architecture whenever the current design or structure (including patterns inherited from aircareprohvac.com) is weak, outdated or under-optimized for conversions or SEO. Don't preserve weak legacy layouts; upgrade them to a modern, high-trust Chicago HVAC brand standard. Keep URLs stable or document redirects.
 
+### Owner decisions (2026-11-19)
+- **Design:** Direction A "Lakefront Trust", selected by the team (Chloe, Elena, Rachel, Maya) and approved by Sophia Reynolds. Self-hosted Plus Jakarta Sans + Inter, Lucide icons (`Icon.astro`), skyline SVG, license ribbon. Record: `marketing/design-review-2026-11-19.md`.
+- **Leads:** all leads go to the **Housecall Pro booking link** (`business.bookingUrl`). `business.leadCapture = 'housecall-pro'` makes every `LeadForm` render `BookingPanel`. Emergencies lead with Call. Don't re-enable forms without the owner.
+- **Headline:** `heroHeadline()` in `business.ts`: "No heat tonight? Call or text, day or night." (Nov–Feb), "Furnace, boiler and AC service from one Chicago crew." (rest of year).
+- **Photos:** use the owner's real job photos (`src/data/photos.ts`, from aircareprohvac.com). No stock photos posing as the team.
+- **Approval:** Sophia Reynolds gives final approval inside the team. Publishing happens only when the owner merges to `main`.
+- **Daily run:** scheduled task every day 7:45 AM Central (report ready by 8:00), works on `agency/sprint-2`, never publishes.
+- **Open:** the owner referred to the brand as "SHAD Heating & Cooling"; the site keeps the approved name CHICAGO AIRCARE PRO until the owner confirms otherwise.
+
 ### Rebrand status (keep exact)
 - Legal rebrand **"Shad Heating and Cooling LLC" → "CHICAGO AIRCARE PRO": APPROVED.**
 - **Google Business Profile, Yelp, BBB name updates: PENDING.**
@@ -66,7 +75,9 @@ File: `marketing/daily-reports/YYYY-MM-DD.md` (template: `marketing/daily-report
 | `src/lib/leadScore.ts` | Lead scoring (hot/warm/nurture) sent with every lead | Rachel |
 | `src/lib/schema.ts` | `HVACBusiness` (single `@id`) + `Service` JSON-LD builders | Elena |
 | `src/lib/tracking.ts` | dataLayer events, attribution, `[data-track]` binding | Rachel |
-| `src/styles/global.css` | Design system tokens and utilities | Chloe |
+| `src/styles/global.css` | Design system (Direction A tokens, fonts, icons, ribbon, photo) | Chloe |
+| `src/components/Icon.astro`, `Skyline.astro`, `BookingPanel.astro` | Line icons, skyline band, Housecall Pro booking card | Chloe / Rachel |
+| `src/data/photos.ts`, `src/assets/photos/` | Owner's real job photos + alt text | Maya / Chloe |
 | `src/layouts/BaseLayout.astro` | Page shell: emergency strip, header, footer, mobile bar, site-wide schema | Sophia / Chloe |
 | `src/components/SiteHeader.astro`, `NavList.astro`, `SiteFooter.astro` | Navigation and footer | Chloe |
 | `src/components/EmergencyBanner.astro`, `MobileCtaBar.astro`, `CallSmsCta.astro` | Emergency strip, mobile sticky Call/Text/Quote, CTA group | Chloe / Rachel |
@@ -153,7 +164,7 @@ Known NAP issues: duplicate LocalBusiness schema on the live site (unformatted p
 | Free estimate | TODO | $500 (placeholder) | TODO hrs |
 | Comfort Club signups | TODO | $150 (placeholder) | TODO |
 
-- **Lead destination:** Housecall Pro (booking in use) → TODO: webhook/Zapier for form leads (`PUBLIC_LEAD_ENDPOINT`)
+- **Lead destination:** **Housecall Pro booking link** (owner decision 2026-11-19). On-page forms are off (`leadCapture: 'housecall-pro'`).
 - **Analytics:** GTM `GTM-K3PBQCR9` (installed on the live site)
 - **Built in this repo (Sprint 1):** forms on 60 pages, tap-to-text on every page, tracked booking clicks, lead scoring, Comfort Club signup. **Still open:** Comfort Club pricing, review links (pending renames), CRM endpoint
 - **Call tracking / financing partner / baseline leads:** TODO

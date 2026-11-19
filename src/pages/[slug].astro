@@ -15,6 +15,8 @@ import JsonLd from '../components/JsonLd.astro';
 import { business } from '../data/business';
 import { categories, services, servicesIn, serviceBySlug, type Service, type Category } from '../data/services';
 import { buildServiceSchema } from '../lib/schema';
+import { Image } from 'astro:assets';
+import { servicePhoto, categoryPhoto } from '../data/photos';
 
 export function getStaticPaths() {
   return [
@@ -41,6 +43,7 @@ const catServices = servicesIn(cat.name);
 const catFaqs = catServices.flatMap((s) => s.faqs.slice(0, 1)).slice(0, 5);
 const title = svc ? `${svc.name} in Chicago | ${svc.funnel === 'emergency' ? '24/7 Service | ' : ''}${business.displayName}` : `${cat.name} Services in Chicago | ${business.displayName}`;
 const description = svc ? svc.meta : cat.meta;
+const photo = svc ? servicePhoto[svc.slug] ?? categoryPhoto[cat.slug] : categoryPhoto[cat.slug];
 const schema = buildServiceSchema({ name: svc ? svc.name : `${cat.name} services`, description, pageUrl });
 ---
 
@@ -65,7 +68,8 @@ const schema = buildServiceSchema({ name: svc ? svc.name : `${cat.name} services
 
   {svc ? (
     <section class="section">
-      <div class="container grid grid-2">
+      <div class:list={['container', 'svc-grid', { 'has-photo': photo }]}>
+        {photo && <div class="photo svc-photo"><Image src={photo.src} alt={photo.alt} widths={[400, 700]} sizes="(max-width: 900px) 100vw, 30vw" /></div>}
         <div class="card">
           <h2>Signs you need {svc.name.toLowerCase()}</h2>
           <ul class="check-list">{svc.signs.map((x) => <li>{x}</li>)}</ul>
@@ -118,6 +122,10 @@ const schema = buildServiceSchema({ name: svc ? svc.name : `${cat.name} services
 
 <style>
   .mt { margin-top: 2rem; }
+  .svc-grid { display: grid; gap: 1.25rem; grid-template-columns: 1fr 1fr; }
+  .svc-grid.has-photo { grid-template-columns: 0.9fr 1fr 1fr; align-items: stretch; }
+  .svc-photo { min-height: 320px; }
+  @media (max-width: 1000px) { .svc-grid, .svc-grid.has-photo { grid-template-columns: 1fr; } .svc-photo { aspect-ratio: 16 / 10; min-height: 0; } }
   .area-pills { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
   .area-pills a { display: inline-block; padding: 0.4rem 0.85rem; border-radius: 999px; background: var(--blue-50); text-decoration: none; font-weight: 700; font-size: 0.9rem; }
 </style>

@@ -11,6 +11,8 @@
  */
 import { funnels, type FunnelId } from '../data/leadForms';
 import { business, telHref } from '../data/business';
+import BookingPanel from './BookingPanel.astro';
+const useBooking = business.leadCapture === 'housecall-pro';
 
 interface Props {
   funnel: FunnelId;
@@ -24,6 +26,7 @@ const endpoint = import.meta.env.PUBLIC_LEAD_ENDPOINT ?? '';
 const formId = `lead-${f.id}-${placement}`;
 ---
 
+{useBooking ? <BookingPanel funnel={funnelId} placement={placement} /> : (
 <form
   id={formId}
   class:list={['lead-form', { compact }]}
@@ -88,6 +91,7 @@ const formId = `lead-${f.id}-${placement}`;
     <a href={telHref()} data-track="click_to_call" data-placement={`${placement}_form`}>call {business.phoneDisplay}</a>
   </p>
 </form>
+)}
 
 <script>
   import { track, captureAttribution } from '../lib/tracking';

@@ -4,6 +4,8 @@
  * Site-wide: HVACBusiness + WebSite JSON-LD (Elena Brooks), emergency strip, sticky header,
  * footer with canonical NAP (Hannah Carter), mobile Call/Text/Quote bar and click tracking (Rachel Morgan).
  */
+import '@fontsource-variable/plus-jakarta-sans';
+import '@fontsource-variable/inter';
 import '../styles/global.css';
 import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
 import JsonLd from '../components/JsonLd.astro';
@@ -49,7 +51,7 @@ const website = {
     <meta property="og:url" content={canonical} />
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content={business.displayName} />
-    <meta name="theme-color" content="#0a1f33" />
+    <meta name="theme-color" content="#0b2545" />
     {gtmId && (
       <script is:inline define:vars={{ gtmId }}>
         window.dataLayer = window.dataLayer || [];

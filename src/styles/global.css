@@ -1,23 +1,26 @@
 /*
- * CHICAGO AIRCARE PRO design system. Owner: Chloe Vance (UI/UX & CRO Designer).
- * Brand direction: high-trust Chicago trade brand. Deep "lake" navy, a warm
- * "furnace" orange for primary CTAs, and red reserved for emergencies only.
+ * CHICAGO AIRCARE PRO design system: Direction A "Lakefront Trust"
+ * (team-selected, approved by Sophia Reynolds 2026-11-19). Owner: Chloe Vance.
+ * Lake navy + ice, amber CTAs (white text ≥ 4.5:1), red reserved for emergencies.
+ * Fonts are self-hosted (@fontsource-variable): Plus Jakarta Sans headings, Inter body.
  */
 :root {
-  --navy-900: #0a1f33;
-  --navy-800: #0f2d4a;
-  --navy-700: #163f66;
+  --navy-900: #0b2545;
+  --navy-800: #13315c;
+  --navy-700: #1d4373;
   --blue-500: #1f6fb2;
-  --blue-50: #eef5fb;
+  --blue-50: #eef4f8;
+  --ice: #eef4ed;
+  --amber: #e8590c; /* decorative only; too light for white text */
   --orange-600: #d9560b;
   --orange-500: #f06a1d;
   --orange-50: #fff3ea;
-  --red-600: #c62828;
+  --red-600: #b42318;
   --green-600: #1e7f4f;
 
   --bg: #ffffff;
   --surface: #ffffff;
-  --surface-alt: #f5f8fb;
+  --surface-alt: var(--ice);
   --text: #13202e;
   --muted: #546273;
   --border: #d6dee8;
@@ -31,7 +34,8 @@
   --radius: 14px;
   --radius-sm: 8px;
   --shadow: 0 1px 2px rgb(10 31 51 / 0.06), 0 8px 24px rgb(10 31 51 / 0.08);
-  --font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  --font-heading: 'Plus Jakarta Sans Variable', 'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
   --step-1: clamp(1.2rem, 1.1rem + 0.4vw, 1.375rem);
   --step-2: clamp(1.45rem, 1.25rem + 0.9vw, 1.875rem);
@@ -46,7 +50,7 @@ img, svg { max-width: 100%; height: auto; }
 a { color: var(--brand-accent); }
 a:hover { color: var(--navy-700); }
 :focus-visible { outline: 3px solid var(--cta); outline-offset: 2px; border-radius: 4px; }
-h1, h2, h3 { line-height: 1.15; color: var(--navy-900); letter-spacing: -0.01em; }
+h1, h2, h3 { font-family: var(--font-heading); line-height: 1.12; color: var(--navy-900); letter-spacing: -0.02em; font-weight: 800; }
 h1 { font-size: var(--step-3); margin: 0 0 0.75rem; }
 h2 { font-size: var(--step-2); margin: 0 0 0.75rem; }
 h3 { font-size: var(--step-1); margin: 0 0 0.5rem; }
@@ -58,7 +62,7 @@ p { margin: 0 0 1rem; }
 .section-dark { background: var(--navy-900); color: #e8f0f8; }
 .section-dark h2, .section-dark h3 { color: #fff; }
 .section-head { max-width: 46rem; margin-bottom: 2rem; }
-.eyebrow { display: inline-block; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8rem; font-weight: 800; color: var(--orange-600); margin-bottom: 0.5rem; }
+.eyebrow { display: inline-flex; align-items: center; gap: 0.4rem; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8rem; font-weight: 800; color: var(--orange-600); margin-bottom: 0.5rem; }
 .lead { font-size: var(--step-1); color: var(--muted); }
 
 .grid { display: grid; gap: 1.25rem; }
@@ -69,8 +73,8 @@ p { margin: 0 0 1rem; }
 .card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow); }
 .card h3 { margin-top: 0; }
 
-.btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 48px;
-  padding: 0.75rem 1.25rem; border-radius: 999px; font-weight: 800; font-size: 1rem; text-decoration: none;
+.btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 52px;
+  padding: 0.8rem 1.4rem; border-radius: 12px; font-weight: 800; font-family: var(--font-heading); font-size: 1rem; text-decoration: none;
   border: 2px solid transparent; cursor: pointer; white-space: nowrap; transition: background 0.15s, transform 0.15s; line-height: 1.1; }
 .btn:active { transform: translateY(1px); }
 .btn-primary { background: var(--cta); color: #fff; }
@@ -87,9 +91,9 @@ p { margin: 0 0 1rem; }
 .check-list li::before { content: ''; position: absolute; left: 0; top: 0.35em; width: 1.1rem; height: 1.1rem; border-radius: 50%;
   background: var(--green-600) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/80% no-repeat; }
 
-.hero { position: relative; background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-700) 100%); color: #e8f0f8; overflow: hidden; }
+.hero { position: relative; background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%); color: #e8f0f8; overflow: hidden; }
 .hero::after { content: ''; position: absolute; inset: auto -10% -40% auto; width: 40rem; height: 40rem; border-radius: 50%;
-  background: radial-gradient(circle, rgb(240 106 29 / 0.18), transparent 65%); pointer-events: none; }
+  background: radial-gradient(circle, rgb(232 89 12 / 0.16), transparent 65%); pointer-events: none; }
 .hero h1 { color: #fff; }
 .hero .lead { color: #c9d8e8; }
 .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; padding-block: clamp(2rem, 1.5rem + 3vw, 4rem); }
@@ -109,3 +113,18 @@ p { margin: 0 0 1rem; }
 /* Leave room for the mobile sticky CTA bar */
 @media (max-width: 760px) { body { padding-bottom: 76px; } }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* Icons */
+.icon { flex: none; vertical-align: middle; }
+.btn .icon { width: 1.15em; height: 1.15em; }
+.icon-tile { display: inline-grid; place-items: center; width: 2.75rem; height: 2.75rem; border-radius: 12px; background: var(--ice); color: var(--navy-800); flex: none; }
+.icon-tile.amber { background: #fdeee4; color: var(--cta); }
+
+/* License ribbon (borrowed from Direction B) */
+.license-ribbon { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.45rem 0.9rem 0.45rem 0.7rem; background: #fff; color: var(--navy-900);
+  border-radius: 999px; font-weight: 800; font-size: 0.85rem; box-shadow: 0 4px 14px rgb(0 0 0 / 0.18); }
+.license-ribbon .icon { color: var(--cta); }
+
+/* Photos */
+.photo { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); background: var(--ice); }
+.photo img { display: block; width: 100%; height: 100%; object-fit: cover; }

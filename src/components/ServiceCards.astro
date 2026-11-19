@@ -1,5 +1,6 @@
 ---
 /** Service cards grouped by category. Owners: Chloe Vance (design) + Maya Lin (content). */
+import Icon from './Icon.astro';
 import { categories, servicesIn, type Service } from '../data/services';
 
 interface Props {
@@ -9,19 +10,19 @@ interface Props {
   compact?: boolean;
 }
 const { items, compact = false } = Astro.props;
-const icons: Record<string, string> = { Heating: '🔥', Cooling: '❄️', 'Air Quality': '🌿' };
+const icons = { Heating: 'flame', Cooling: 'snowflake', 'Air Quality': 'wind' } as const;
 ---
 {items ? (
   <ul class="svc-grid flat" role="list">
     {items.map((s) => (
-      <li><a class="svc-card" href={`/${s.slug}/`}><span class="ico" aria-hidden="true">{icons[s.category]}</span><strong>{s.name}</strong><span>{s.card}</span><em>Learn more →</em></a></li>
+      <li><a class="svc-card" href={`/${s.slug}/`}><span class="ico"><Icon name={icons[s.category]} size={22} /></span><strong>{s.name}</strong><span>{s.card}</span><em>Learn more <Icon name="arrow" size={16} /></em></a></li>
     ))}
   </ul>
 ) : (
   <div class="cat-grid">
     {categories.map((c) => (
       <div class="cat card">
-        <div class="cat-head"><span class="ico" aria-hidden="true">{icons[c.name]}</span><h3><a href={`/${c.slug}/`}>{c.name}</a></h3></div>
+        <div class="cat-head"><span class="ico"><Icon name={icons[c.name]} size={22} /></span><h3><a href={`/${c.slug}/`}>{c.name}</a></h3></div>
         {!compact && <p>{c.headline}</p>}
         <ul role="list">
           {servicesIn(c.name).map((s) => <li><a href={`/${s.slug}/`}>{s.name}</a><span>{s.card}</span></li>)}
@@ -37,7 +38,7 @@ const icons: Record<string, string> = { Heating: '🔥', Cooling: '❄️', 'Air
   .cat { display: flex; flex-direction: column; }
   .cat-head { display: flex; align-items: center; gap: 0.6rem; }
   .cat-head h3 { margin: 0; } .cat-head a { color: var(--navy-900); text-decoration: none; }
-  .ico { display: inline-grid; place-items: center; width: 2.6rem; height: 2.6rem; border-radius: 12px; background: var(--orange-50); font-size: 1.3rem; flex: none; }
+  .ico { display: inline-grid; place-items: center; width: 2.6rem; height: 2.6rem; border-radius: 12px; background: #fdeee4; color: var(--cta); flex: none; }
   .cat ul { list-style: none; padding: 0; margin: 1rem 0 1.25rem; display: grid; gap: 0.5rem; flex: 1; }
   .cat li { display: grid; border-bottom: 1px dashed var(--border); padding-bottom: 0.45rem; }
   .cat li a { font-weight: 800; text-decoration: none; }

@@ -5,6 +5,7 @@
  * The live site only had tel: links + an untracked Housecall Pro button; this
  * adds SMS ("Call or text 24/7" was promised but not linked) and tracks booking clicks.
  */
+import Icon from './Icon.astro';
 import { business, telHref, smsHref } from '../data/business';
 
 interface Props {
@@ -24,18 +25,18 @@ const { placement, heading, sub, showSms = true, showBooking = true, showCall = 
   <div class="cta-buttons">
     {showCall && (
       <a class="btn btn-primary" href={telHref()} data-track="click_to_call" data-placement={placement}>
-        📞 Call {business.phoneDisplay}
+        <Icon name="phone" /> Call {business.phoneDisplay}
       </a>
     )}
     {showSms && (
       <a class="btn btn-secondary" href={smsHref(business)} data-track="click_to_sms" data-placement={placement}>
-        💬 Text Us
+        <Icon name="sms" /> Text Us
       </a>
     )}
     {showBooking && business.bookingUrl && (
       <a class="btn btn-secondary" href={business.bookingUrl} target="_blank" rel="noopener"
         data-track="click_book_online" data-placement={placement}>
-        📅 Book Online <span class="sr-only">(opens in a new tab)</span>
+        <Icon name="calendar" /> Book Online <span class="sr-only">(opens in a new tab)</span>
       </a>
     )}
   </div>
@@ -46,5 +47,10 @@ const { placement, heading, sub, showSms = true, showBooking = true, showCall = 
   .cta-heading { font-size: 1.25rem; font-weight: 700; margin: 0; }
   .cta-sub { margin: 0; color: var(--muted); }
   .cta-buttons { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  @media (max-width: 640px) {
+    .cta-buttons { display: grid; grid-template-columns: 1fr 1fr; }
+    .cta-buttons > :first-child { grid-column: 1 / -1; }
+    .cta-buttons > :only-child { grid-column: 1 / -1; }
+  }
   .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 </style>

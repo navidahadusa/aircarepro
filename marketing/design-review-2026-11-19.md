@@ -35,7 +35,19 @@ Team in uniforms (individual and group) · vans, only once wrapped with the new 
 - Mobile bar Quote button and banner "Request dispatch" link now tracked (`click_form_link`); on the emergency page the mobile bar shows "Dispatch"
 - Unverified "Factory-backed" claim softened to "Authorized dealer for new equipment"
 
-## Decisions needed from the owner
+## Final decision (team vote + Manager approval)
+| Direction | Chloe (design) | Elena (UX/SEO) | Rachel (conversion) | Maya (brand) |
+|---|---|---|---|---|
+| **A. Lakefront Trust** | **Recommended** | **9/10** | **9/10** | **8/10** |
+| B. Two-Flat Craft | — | 7/10 | 5/10 | 7/10 |
+| C. Dispatch Modern | — | 6/10 | 7/10 | 6/10 |
+
+**Approved by Sophia Reynolds: Direction A**, with these borrowings: the license ribbon badge from B, and the large mobile tap targets from C. Requirements: CTA buttons `#C2410C` (AA contrast), self-hosted fonts with `font-display: swap`, inline SVG under 4 KB, no layout shift, place-name H1 kept on area pages.
+**Headline (Maya, approved):** "No heat tonight? Call or text, day or night." Nov–Feb; "Furnace, boiler and AC service from one Chicago crew." the rest of the year.
+**Photos:** the owner's 6 real job photos from aircareprohvac.com (technician on a rooftop mini-split, gangway condenser, rooftop unit with the skyline, gas-pressure test, furnace diagnostics, boiler circulator).
+**Leads:** the Housecall Pro booking link (owner decision). `BookingPanel` replaces forms.
+
+## Decisions previously needed from the owner (resolved)
 1. Pick a visual direction: A (recommended), B or C.
 2. Pick a hero headline: A, B, or the seasonal C.
 3. Photos: can you supply them (shot list above)?
