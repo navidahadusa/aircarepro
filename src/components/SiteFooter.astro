@@ -1,6 +1,7 @@
 ---
 /** Site footer: canonical NAP, services, areas, trust. Owners: Chloe Vance + Hannah Carter. */
 import NapBlock from './NapBlock.astro';
+import BrandMark from './BrandMark.astro';
 import CallSmsCta from './CallSmsCta.astro';
 import { business, areasByGroup } from '../data/business';
 import { categories, servicesIn } from '../data/services';
@@ -18,7 +19,8 @@ const year = new Date().getFullYear();
 <footer class="site-footer">
   <div class="container footer-top">
     <div class="f-brand">
-      <NapBlock showHours />
+      <BrandMark variant="dark" size={84} />
+      <div class="f-nap"><NapBlock showHours /></div>
       <p class="f-desc">{business.description}</p>
     </div>
     {categories.map((c) => (
@@ -71,10 +73,13 @@ const year = new Date().getFullYear();
   .site-footer h3 { color: #fff; font-size: 1rem; margin-bottom: 0.6rem; }
   .site-footer ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.3rem; }
   .footer-top, .footer-areas { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); }
+  @media (min-width: 1100px) { .footer-top { grid-template-columns: 1.7fr repeat(4, 1fr); } .f-brand { grid-column: auto !important; } }
   .f-brand { grid-column: span 2; } @media (max-width: 640px) { .f-brand { grid-column: auto; } }
   .f-brand :global(.nap) { color: #fff; } .f-brand :global(.nap-phone) { color: #ffb88a; font-size: 1.3rem; }
   .f-brand :global(.nap-hours) { color: #9fb3c8; }
   .f-desc { margin-top: 1rem; }
+  .f-nap { margin-top: 1.25rem; }
+  .f-nap :global(.nap-name) { display: none; }
   .f-brand :global(.nap-email) { color: #e3ecf5; }
   .footer-areas { border-top: 1px solid rgb(255 255 255 / 0.1); margin-top: 2rem; padding-top: 2rem; }
   .footer-legal { border-top: 1px solid rgb(255 255 255 / 0.1); margin-top: 2rem; padding-block: 1.25rem; font-size: 0.82rem; }

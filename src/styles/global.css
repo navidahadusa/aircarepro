@@ -5,7 +5,15 @@
  * Fonts are self-hosted (@fontsource-variable): Plus Jakarta Sans headings, Inter body.
  */
 :root {
-  --navy-900: #0b2545;
+  /* Brand colors taken from the owner's logo (2026-11-19) */
+  --brand-navy: #0e2648;
+  --brand-coral: #ff5a50;       /* "PRO" on dark backgrounds */
+  --brand-coral-text: #e5483b;  /* "PRO" on white: bold ≥19px, AA large text */
+  --brand-red: #d7261e;         /* Chicago stars / heating */
+  --brand-blue: #1565d0;        /* cooling / tagline */
+  --brand-sky: #41b6e6;         /* Chicago-flag stripes */
+  --brand-sky-light: #7dd3fc;
+  --navy-900: #0e2648;
   --navy-800: #13315c;
   --navy-700: #1d4373;
   --blue-500: #1f6fb2;

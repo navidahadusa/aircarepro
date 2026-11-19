@@ -1,0 +1,58 @@
+---
+/**
+ * Brand lockup: owner's logo + wordmark. Owner: Chloe Vance (UI/UX & CRO).
+ * Colors come from the logo: navy #0E2648, coral "PRO" #FF5A50, Chicago-star red #D7261E,
+ * lake blue #1565D0, sky #41B6E6. Variant "dark" is for navy backgrounds (footer).
+ */
+import { Image } from 'astro:assets';
+import logo from '../assets/brand/chicago-aircare-pro-logo.png';
+import { business } from '../data/business';
+
+interface Props { variant?: 'light' | 'dark'; size?: number; tagline?: boolean; href?: string }
+const { variant = 'light', size = 56, tagline = true, href = '/' } = Astro.props;
+// Six-point Chicago flag star
+const star = 'M12 1.5l2.6 5.9 6.4-.7-3.8 5.3 3.8 5.3-6.4-.7L12 22.5l-2.6-5.9-6.4.7 3.8-5.3-3.8-5.3 6.4.7z';
+---
+<a href={href} class:list={['brandmark', variant]} aria-label={`${business.displayName} home`}>
+  <Image src={logo} alt="" width={size} height={size} densities={[1, 2]} loading="eager" class="bm-logo" />
+  <span class="bm-text">
+    <span class="bm-name">Chicago Aircare <span class="bm-pro">Pro</span></span>
+    {tagline && (
+      <span class="bm-tag">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d={star} /></svg>
+        Heating &amp; Cooling
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d={star} /></svg>
+      </span>
+    )}
+  </span>
+</a>
+
+<style>
+  .brandmark { display: inline-flex; align-items: center; gap: 0.7rem; text-decoration: none; flex: none; }
+  .bm-logo { display: block; flex: none; filter: drop-shadow(0 2px 6px rgb(14 38 72 / 0.25)); transition: transform 0.2s; }
+  .brandmark:hover .bm-logo { transform: rotate(-6deg) scale(1.04); }
+  .bm-text { display: grid; gap: 0.15rem; line-height: 1; }
+  .bm-name {
+    font-family: var(--font-heading); font-weight: 800; text-transform: uppercase;
+    font-size: 1.22rem; letter-spacing: 0.045em; color: var(--brand-navy); white-space: nowrap;
+  }
+  .bm-pro { color: var(--brand-coral-text); font-weight: 900; }
+  .bm-tag {
+    display: inline-flex; align-items: center; gap: 0.35rem;
+    font-family: var(--font-heading); font-weight: 800; text-transform: uppercase;
+    font-size: 0.66rem; letter-spacing: 0.24em; color: var(--brand-blue); white-space: nowrap;
+  }
+  .bm-tag svg { width: 0.7rem; height: 0.7rem; fill: var(--brand-red); flex: none; }
+  /* On navy (footer) */
+  .dark .bm-name { color: #fff; }
+  .dark .bm-pro { color: var(--brand-coral); }
+  .dark .bm-tag { color: var(--brand-sky-light); }
+  .dark .bm-tag svg { fill: var(--brand-coral); }
+  @media (max-width: 640px) {
+    .bm-name { font-size: 1.02rem; letter-spacing: 0.03em; }
+    .bm-tag { display: none; }
+    .brandmark { gap: 0.5rem; }
+  }
+  @media (max-width: 400px) { .bm-name { font-size: 0.84rem; letter-spacing: 0.02em; } .brandmark { gap: 0.4rem; } }
+  @media (prefers-reduced-motion: reduce) { .brandmark:hover .bm-logo { transform: none; } }
+</style>
