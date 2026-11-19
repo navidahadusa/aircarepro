@@ -59,7 +59,9 @@ import BrandMark from './BrandMark.astro';
   .mobile-toggle { display: none; }
   .m-call { display: none; flex: none; }
 
-  @media (max-width: 1140px) {
+  /* The red emergency strip above always shows the Call button, so the header phone yields to the menu on mid-size screens. */
+  @media (max-width: 1399px) { .phone { display: none; } }
+  @media (max-width: 1199px) {
     .desktop-nav { display: none; }
     .header-cta { margin-left: auto; }
     .mobile-toggle { display: block; }
