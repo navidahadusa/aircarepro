@@ -65,7 +65,7 @@ const title = `${svcLabel[d.service]} ${d.city === 'chicago' ? 'Chicago' : cityN
       <FaqSection faqs={d.faqs} heading={`${svcLabel[d.service]} questions in ${cityName}`} id="local-faq" />
     </article>
     <aside class="local-side">
-      <div class="photo side-photo"><Image src={photo.src} alt={photo.alt} widths={[360, 640]} sizes="(max-width: 1000px) 100vw, 22rem" /></div>
+      <div class="photo side-photo"><Image quality={50} src={photo.src} alt={photo.alt} widths={[360, 640]} sizes="(max-width: 1000px) 100vw, 22rem" /></div>
       <nav class="card side-links" aria-label={`More services in ${cityName}`}>
         <h2>More in {cityName}</h2>
         <ul>

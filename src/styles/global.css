@@ -8,7 +8,7 @@
   /* Brand colors taken from the owner's logo (2026-11-19) */
   --brand-navy: #0e2648;
   --brand-coral: #ff5a50;       /* "PRO" on dark backgrounds */
-  --brand-coral-text: #e5483b;  /* "PRO" on white: bold ≥19px, AA large text */
+  --brand-coral-text: #c43c2f;  /* "PRO" on white: 5.2:1 (AA at any size) */
   --brand-red: #d7261e;         /* Chicago stars / heating */
   --brand-blue: #1565d0;        /* cooling / tagline */
   --brand-sky: #41b6e6;         /* Chicago-flag stripes */
@@ -70,7 +70,8 @@ p { margin: 0 0 1rem; }
 .section-dark { background: var(--navy-900); color: #e8f0f8; }
 .section-dark h2, .section-dark h3 { color: #fff; }
 .section-head { max-width: 46rem; margin-bottom: 2rem; }
-.eyebrow { display: inline-flex; align-items: center; gap: 0.4rem; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8rem; font-weight: 800; color: var(--orange-600); margin-bottom: 0.5rem; }
+.eyebrow { display: inline-flex; align-items: center; gap: 0.4rem; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8rem; font-weight: 800; color: #bb4208; margin-bottom: 0.5rem; } /* 5.4:1 on white, 4.8:1 on ice */
+.hero .eyebrow, .section-dark .eyebrow, .post-hero .eyebrow { color: #ff9a5c; } /* 7.2:1 on navy */
 .lead { font-size: var(--step-1); color: var(--muted); }
 
 .grid { display: grid; gap: 1.25rem; }

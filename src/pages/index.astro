@@ -67,7 +67,7 @@ const faqs = [
       </div>
       <div class="hero-visual">
         <div class="photo hero-photo">
-          <Image src={photos.rooftopMiniSplit.src} alt={photos.rooftopMiniSplit.alt} widths={[480, 720]} sizes="(max-width: 900px) 100vw, 40vw" loading="eager" fetchpriority="high" />
+          <Image quality={50} src={photos.rooftopMiniSplit.src} alt={photos.rooftopMiniSplit.alt} widths={[360, 540, 720]} sizes="(max-width: 900px) calc(100vw - 2rem), 34vw" loading="eager" fetchpriority="high" />
         </div>
         <div class="hero-card" id="quote"><LeadForm funnel="quick" placement="home_hero" /></div>
       </div>
@@ -87,7 +87,7 @@ const faqs = [
   <section class="section">
     <div class="container process">
       <div class="photo process-photo">
-        <Image src={photos.gasPressureTest.src} alt={photos.gasPressureTest.alt} widths={[400, 700]} sizes="(max-width: 900px) 100vw, 35vw" />
+        <Image quality={50} src={photos.gasPressureTest.src} alt={photos.gasPressureTest.alt} widths={[360, 540, 700]} sizes="(max-width: 900px) calc(100vw - 2rem), 35vw" />
       </div>
       <div>
         <span class="eyebrow">How every visit works</span>
@@ -123,7 +123,7 @@ const faqs = [
         </ul>
       </div>
       <div class="photo boiler-photo">
-        <Image src={photos.boilerCirculator.src} alt={photos.boilerCirculator.alt} widths={[400, 700]} sizes="(max-width: 900px) 100vw, 35vw" />
+        <Image quality={50} src={photos.boilerCirculator.src} alt={photos.boilerCirculator.alt} widths={[360, 540, 700]} sizes="(max-width: 900px) calc(100vw - 2rem), 35vw" />
       </div>
     </div>
   </section>
@@ -131,7 +131,7 @@ const faqs = [
   <section class="section section-dark crew">
     <div class="container crew-grid">
       <div class="photo">
-        <Image src={photos.gangwayCondenser.src} alt={photos.gangwayCondenser.alt} widths={[400, 720]} sizes="(max-width: 900px) 100vw, 40vw" />
+        <Image quality={50} src={photos.gangwayCondenser.src} alt={photos.gangwayCondenser.alt} widths={[360, 540, 720]} sizes="(max-width: 900px) calc(100vw - 2rem), 40vw" />
       </div>
       <div>
         <span class="eyebrow">Why {business.displayName}</span>

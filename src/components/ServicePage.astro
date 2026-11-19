@@ -79,7 +79,7 @@ const schema = buildServiceSchema({ name: svc ? svc.name : `${cat.name} services
   {svc ? (
     <section class="section">
       <div class:list={['container', 'svc-grid', { 'has-photo': photo }]}>
-        {photo && <div class="photo svc-photo"><Image src={photo.src} alt={photo.alt} widths={[400, 700]} sizes="(max-width: 900px) 100vw, 30vw" /></div>}
+        {photo && <div class="photo svc-photo"><Image quality={50} src={photo.src} alt={photo.alt} widths={[400, 700]} sizes="(max-width: 900px) 100vw, 30vw" /></div>}
         <div class="card">
           <h2>Signs you need {svc.name.toLowerCase()}</h2>
           <ul class="check-list">{svc.signs.map((x) => <li>{x}</li>)}</ul>

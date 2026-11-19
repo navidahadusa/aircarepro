@@ -55,7 +55,7 @@ const placement = `blog_${post.id}`;
           </div>
         )}
       </div>
-      <div class="photo post-photo"><Image src={photo.src} alt={photo.alt} widths={[480, 800]} sizes="(max-width: 900px) 100vw, 38vw" loading="eager" /></div>
+      <div class="photo post-photo"><Image quality={50} src={photo.src} alt={photo.alt} widths={[480, 800]} sizes="(max-width: 900px) 100vw, 38vw" loading="eager" /></div>
     </div>
   </header>
 
