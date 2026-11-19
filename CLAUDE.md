@@ -181,6 +181,6 @@ Known NAP issues: duplicate LocalBusiness schema on the live site (unformatted p
 | Comfort Club signups | TODO | $150 (placeholder) | TODO |
 
 - **Lead destination:** **Housecall Pro booking link** (owner decision 2026-11-19). On-page forms are off (`leadCapture: 'housecall-pro'`).
-- **Analytics:** GTM `GTM-K3PBQCR9` (installed on the live site)
+- **Analytics:** GTM `GTM-K3PBQCR9` (installed on the live site) → GA4 `G-J25SG73ES5` (Google tag inside GTM, enhanced measurement on; verified 2026-11-19). Reporting: Windsor.ai `googleanalytics4` (live sessions). Custom click events → GA4: owner step in GTM, see `marketing/lead-gen/tracking-plan.md`
 - **Built in this repo (Sprint 1):** forms on 60 pages, tap-to-text on every page, tracked booking clicks, lead scoring, Comfort Club signup. **Still open:** Comfort Club pricing, CRM endpoint. Google review link live (`business.googleReviewUrl`, `/review/` page, QR in `marketing/reviews/`)
 - **Financing partner:** Optimus (owner-confirmed). **Call tracking / baseline leads:** TODO
