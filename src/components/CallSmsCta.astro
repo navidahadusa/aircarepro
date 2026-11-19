@@ -1,7 +1,9 @@
 ---
 /**
- * Inline call + text CTA pair for hero sections, service pages and footers.
+ * Inline call / text / book-online CTA group for heroes, service pages and footers.
  * `placement` is sent with tracking events so you can see which CTA converts.
+ * The live site only had tel: links + an untracked Housecall Pro button; this
+ * adds SMS ("Call or text 24/7" was promised but not linked) and tracks booking clicks.
  */
 import { business, telHref, smsHref } from '../data/business';
 
@@ -10,8 +12,9 @@ interface Props {
   heading?: string;
   sub?: string;
   showSms?: boolean;
+  showBooking?: boolean;
 }
-const { placement, heading, sub, showSms = true } = Astro.props;
+const { placement, heading, sub, showSms = true, showBooking = true } = Astro.props;
 ---
 
 <div class="cta">
@@ -26,6 +29,12 @@ const { placement, heading, sub, showSms = true } = Astro.props;
         💬 Text Us
       </a>
     )}
+    {showBooking && business.bookingUrl && (
+      <a class="btn btn-secondary" href={business.bookingUrl} target="_blank" rel="noopener"
+        data-track="click_book_online" data-placement={placement}>
+        📅 Book Online <span class="sr-only">(opens in a new tab)</span>
+      </a>
+    )}
   </div>
 </div>
 
@@ -34,4 +43,5 @@ const { placement, heading, sub, showSms = true } = Astro.props;
   .cta-heading { font-size: 1.25rem; font-weight: 700; margin: 0; }
   .cta-sub { margin: 0; color: var(--muted); }
   .cta-buttons { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+  .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
 </style>

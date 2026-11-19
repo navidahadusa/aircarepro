@@ -1,6 +1,6 @@
 # Conversion tracking plan
 
-All events go to `window.dataLayer` via `src/lib/tracking.ts`. GTM (`PUBLIC_GTM_ID`) forwards them to GA4, Google Ads, Meta, etc.
+All events go to `window.dataLayer` via `src/lib/tracking.ts`. GTM (`PUBLIC_GTM_ID`, live container `GTM-K3PBQCR9`) forwards them to GA4, Google Ads, Meta, etc.
 
 | Event | Fired when | Params | GA4 key event | Google Ads conversion (value) |
 |---|---|---|---|---|
@@ -9,6 +9,7 @@ All events go to `window.dataLayer` via `src/lib/tracking.ts`. GTM (`PUBLIC_GTM_
 | `lead_maintenance` | Maintenance form submitted OK | funnel, placement, value, currency | ✔ | Tune-up signup ($150 TODO) |
 | `click_to_call` | Any `tel:` link with `data-track` clicked | placement | ✔ | Website call click (secondary) |
 | `click_to_sms` | Any `sms:` link with `data-track` clicked | placement | ✔ | (secondary) |
+| `click_book_online` | Housecall Pro "Book online" link clicked | placement | ✔ | Booking click (secondary); primary = HCP booking webhook |
 | `form_start` | First focus inside a lead form | funnel, placement | ✗ | — |
 | `form_error` | Validation fails or endpoint errors | funnel, placement, reason | ✗ | — |
 
@@ -21,6 +22,7 @@ Every event also carries `page_path`.
 - [ ] Google Ads Conversion tags using `value` / `currency`; enable Enhanced Conversions for leads
 - [ ] Google Ads call conversions (calls from ads plus website call tracking via Google forwarding number)
 - [ ] Call tracking (CallRail etc.): dynamic number insertion via JS only; canonical number stays in HTML and schema
+- [ ] Housecall Pro: send completed online bookings back as a conversion (HCP webhook → Zapier → GA4 Measurement Protocol / Ads offline import), or set up cross-domain tracking if HCP supports a GTM container
 - [ ] Offline conversion import from CRM using `gclid` (closes the loop on booked/sold jobs)
 - [ ] Consent mode v2 configured if required for your audience
 

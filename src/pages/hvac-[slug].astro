@@ -1,0 +1,43 @@
+---
+/**
+ * Area landing pages at /hvac-<slug>/, matching the live WordPress URL pattern
+ * (e.g. https://aircareprohvac.com/hvac-evanston/) so a migration keeps rankings.
+ * Each page narrows LocalBusiness areaServed to the area and repeats canonical NAP.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LeadForm from '../components/LeadForm.astro';
+import CallSmsCta from '../components/CallSmsCta.astro';
+import NapBlock from '../components/NapBlock.astro';
+import { business, type ServiceArea } from '../data/business';
+
+export function getStaticPaths() {
+  return business.serviceAreas.map((area) => ({ params: { slug: area.slug }, props: { area } }));
+}
+const { area } = Astro.props as { area: ServiceArea };
+const isNeighborhood = area.group?.startsWith('Chicago');
+const place = area.slug === 'chicago' ? 'Chicago' : isNeighborhood ? `${area.name}, Chicago` : `${area.name}, IL`;
+const nearby = business.serviceAreas.filter((a) => a.group && a.group === area.group && a.slug !== area.slug);
+---
+
+<BaseLayout
+  title={`HVAC Repair in ${place} | ${business.displayName}`}
+  description={`Furnace, boiler and AC repair and installation in ${place}. NATE-certified technicians, 24/7 emergency service. Call ${business.phoneDisplay}.`}
+  area={area}
+>
+  <section class="hero container">
+    <div>
+      <h1>HVAC Service in {place}</h1>
+      <!-- TODO(content): port the unique local copy from the live page (housing stock, common issues, utilities & rebates, FAQs). -->
+      <p>{business.displayName} repairs, replaces and maintains furnaces, boilers, central air, heat pumps and mini-splits in {place}, 24/7 for emergencies.</p>
+      <CallSmsCta placement={`area_${area.slug}`} />
+      <NapBlock showHours />
+    </div>
+    <LeadForm funnel="quote" placement={`area_${area.slug}`} />
+  </section>
+  {nearby.length > 0 && (
+    <section class="section container">
+      <h2>Nearby areas we serve</h2>
+      <ul>{nearby.map((a) => <li><a href={`/hvac-${a.slug}/`}>{a.name}</a></li>)}</ul>
+    </section>
+  )}
+</BaseLayout>

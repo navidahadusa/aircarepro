@@ -12,7 +12,7 @@ interface Props {
   showSms?: boolean;
 }
 const {
-  message = business.emergency24x7 ? 'No heat or AC? 24/7 emergency service' : 'Need HVAC service today?',
+  message = business.emergency24x7 ? 'No heat or AC? Call or text 24/7, nights & holidays' : 'Need HVAC service today?',
   force = false,
   showSms = true,
 } = Astro.props;
@@ -34,7 +34,7 @@ const visible = force || business.emergency24x7;
           Text us
         </a>
       )}
-      <a class="eb-form" href="/emergency/">Request dispatch</a>
+      <a class="eb-form" href="/emergency-hvac/">Request dispatch</a>
     </span>
   </aside>
 )}

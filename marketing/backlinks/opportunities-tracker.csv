@@ -1,6 +1,17 @@
 date_found,category,prospect,url,service_area,contact_name,contact_role,contact_email_source,relevance_1to5,authority_1to5,likelihood_1to5,link_type,target_page,status,last_contact,next_followup,link_url,rel,notes
-,local-sponsorship,TBD (youth sports league),,,,,,,,,sponsor-page,/,prospect,,,,sponsored,
-,community,TBD (Chamber of Commerce),,,,,,,,,member-directory,/,prospect,,,,,
-,trade,TBD (state HVAC contractors association),,,,,,,,,member-directory,/,prospect,,,,,
-,supplier,TBD (equipment distributor dealer locator),,,,,,,,,find-a-contractor,/,prospect,,,,,
-,local-press,TBD (local news seasonal safety story),,,,,,,,,editorial,/guides/,prospect,,,,,
+2026-11-19,supplier,Comfortmaker dealer locator,TBD,all,TBD,,,5,4,5,dealer-listing,/,prospect,,,,,Confirmed dealer - verify listing NAP
+2026-11-19,community,BBB profile website field,TBD,all,,,,5,4,5,profile,/,prospect,,,,,Existing accredited profile
+2026-11-19,community,Andersonville Chamber of Commerce,TBD,Andersonville & Edgewater,TBD,,,5,3,4,member-directory,/hvac-andersonville-edgewater/,prospect,,,,,Closest to base; verify membership cost
+2026-11-19,community,Edgewater Chamber of Commerce,TBD,Andersonville & Edgewater,TBD,,,5,3,4,member-directory,/hvac-andersonville-edgewater/,prospect,,,,,
+2026-11-19,community,Lincoln Square Ravenswood Chamber of Commerce,TBD,Lincoln Square,TBD,,,4,3,4,member-directory,/hvac-lincoln-square/,prospect,,,,,
+2026-11-19,community,Evanston Chamber of Commerce,TBD,Evanston,TBD,,,4,3,3,member-directory,/hvac-evanston/,prospect,,,,,
+2026-11-19,community,Skokie Chamber of Commerce & Industry,TBD,Skokie,TBD,,,4,3,3,member-directory,/hvac-skokie/,prospect,,,,,
+2026-11-19,community,Naperville Area Chamber of Commerce,TBD,Naperville,TBD,,,4,3,3,member-directory,/hvac-naperville/,prospect,,,,,
+2026-11-19,trade,PHCC of Illinois,TBD,all,TBD,,,4,3,3,member-directory,/,prospect,,,,,If joining
+2026-11-19,trade,Utility trade-ally lists (ComEd / Peoples Gas / North Shore Gas / Nicor Gas),TBD,all,TBD,,,5,5,3,contractor-list,/financing/,prospect,,,,,Check eligibility requirements
+2026-11-19,local-press,Block Club Chicago,TBD,Chicago neighborhoods,TBD,reporter,,5,4,2,editorial,/emergency-hvac/,prospect,,,,,Cold-snap / CO safety expert pitch
+2026-11-19,local-press,Evanston RoundTable,TBD,Evanston,TBD,reporter,,4,3,2,editorial,/hvac-evanston/,prospect,,,,,
+2026-11-19,local-press,Daily Herald,TBD,NW suburbs,TBD,reporter,,4,4,2,editorial,/,prospect,,,,,
+2026-11-19,local-sponsorship,Neighborhood festival sponsorship (e.g. Andersonville Midsommarfest),TBD,Andersonville & Edgewater,TBD,,,4,3,3,sponsor-page,/,prospect,,,,sponsored,Verify sponsor tiers include a link
+2026-11-19,local-sponsorship,Youth sports league (Edgewater / Lincoln Square / Evanston),TBD,,TBD,,,3,2,4,sponsor-page,/,prospect,,,,sponsored,
+2026-11-19,referral-partner,Real-estate agents / property managers (North & NW Sides),TBD,,TBD,,,4,2,3,partner-page,/maintenance-plan/,prospect,,,,,Two-flat/condo HVAC guide co-marketing

@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import CallSmsCta from '../../components/CallSmsCta.astro';
+import { business } from '../../data/business';
+---
+
+<BaseLayout
+  title={`24/7 Emergency HVAC Repair | ${business.displayName}`}
+  description={`No heat, no AC or a boiler problem at night or on a weekend? 24/7 emergency HVAC repair in Chicago. Call ${business.phoneDisplay} now.`}
+>
+  <section class="hero container">
+    <div>
+      <h1>24/7 Emergency HVAC Service in Chicago</h1>
+      <p>Calling is the fastest way to reach a technician, any time, nights and holidays included. If you can’t talk right now, send the form and we’ll call you back.</p>
+      <CallSmsCta placement="emergency_hero" heading="Fastest: call now" showBooking={false} />
+      <h2>Call 911 or your gas utility first if</h2>
+      <p>You smell gas or your carbon monoxide alarm is sounding. Leave the home first, then call us.</p>
+    </div>
+    <LeadForm funnel="emergency" placement="emergency_hero" />
+  </section>
+</BaseLayout>

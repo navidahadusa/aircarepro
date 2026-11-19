@@ -34,7 +34,7 @@ export interface Funnel {
 
 const contactFields: LeadField[] = [
   { name: 'name', label: 'Full name', type: 'text', required: true, autocomplete: 'name' },
-  { name: 'phone', label: 'Mobile phone', type: 'tel', required: true, autocomplete: 'tel', placeholder: '(555) 555-0100' },
+  { name: 'phone', label: 'Mobile phone', type: 'tel', required: true, autocomplete: 'tel', placeholder: '(773) 555-0100' },
   { name: 'zip', label: 'ZIP code', type: 'text', required: true, autocomplete: 'postal-code', qualifies: 'fit' },
 ];
 
@@ -42,7 +42,7 @@ export const funnels: Record<FunnelId, Funnel> = {
   emergency: {
     id: 'emergency',
     title: 'Request Emergency Service',
-    subtitle: 'No heat or no cooling? Tell us what’s happening and a dispatcher will call you back fast.',
+    subtitle: 'No heat, no cooling or a boiler problem, day or night? Tell us what’s happening and a technician will call you back.',
     submitLabel: 'Dispatch a Technician',
     conversionEvent: 'lead_emergency',
     conversionValue: 300,
@@ -54,8 +54,9 @@ export const funnels: Record<FunnelId, Funnel> = {
         type: 'select',
         required: true,
         qualifies: 'urgency',
-        options: ['No cooling', 'No heat', 'Water leak', 'Strange smell / burning odor', 'Unit won’t turn on', 'Other'],
+        options: ['No heat (furnace)', 'No heat (boiler / radiators)', 'No cooling', 'Water leak', 'Strange smell / burning odor', 'Unit won’t turn on', 'Other'],
       },
+      { name: 'equipment_brand', label: 'Equipment brand & any error code (if known)', type: 'text', placeholder: 'e.g. Carrier, blinking 3 times' },
       { name: 'details', label: 'Anything else we should know?', type: 'textarea' },
       {
         name: 'sms_consent',
@@ -80,7 +81,7 @@ export const funnels: Record<FunnelId, Funnel> = {
         type: 'select',
         required: true,
         qualifies: 'intent',
-        options: ['AC replacement', 'Furnace replacement', 'Heat pump', 'Ductless mini-split', 'Full system', 'Not sure yet'],
+        options: ['Furnace replacement', 'Boiler replacement (hot-water or steam)', 'Central AC replacement', 'Heat pump / dual fuel', 'Ductless mini-split', 'Full system (heating + cooling)', 'Not sure yet'],
       },
       {
         name: 'system_age',
@@ -94,7 +95,7 @@ export const funnels: Record<FunnelId, Funnel> = {
         label: 'Property type',
         type: 'radio',
         qualifies: 'fit',
-        options: ['Own – home', 'Rent', 'Commercial'],
+        options: ['Own – single-family', 'Own – two-flat / multi-unit', 'Own – condo', 'Rent'],
       },
       {
         name: 'timeline',
@@ -103,14 +104,15 @@ export const funnels: Record<FunnelId, Funnel> = {
         qualifies: 'urgency',
         options: ['ASAP', 'Within 2 weeks', 'Within 1–3 months', 'Just researching'],
       },
-      { name: 'financing', label: 'I’m interested in financing options', type: 'checkbox', qualifies: 'value' },
+      { name: 'financing', label: 'I’m interested in financing (subject to credit approval)', type: 'checkbox', qualifies: 'value' },
+      { name: 'rebates', label: 'Help me check utility rebates (ComEd, Peoples Gas, Nicor Gas)', type: 'checkbox', qualifies: 'value' },
     ],
   },
   maintenance: {
     id: 'maintenance',
-    title: 'Join Our Maintenance Plan',
-    subtitle: 'Seasonal tune-ups, priority scheduling and member discounts. Book your spring or fall visit.',
-    submitLabel: 'Reserve My Tune-Up',
+    title: 'Join the Comfort Club',
+    subtitle: 'Spring AC tune-up, fall furnace or boiler safety check, priority appointments and member repair discounts.',
+    submitLabel: 'Join & Schedule My Tune-Up',
     conversionEvent: 'lead_maintenance',
     conversionValue: 150,
     fields: [
@@ -121,8 +123,9 @@ export const funnels: Record<FunnelId, Funnel> = {
         label: 'Preferred tune-up',
         type: 'radio',
         required: true,
-        options: ['Spring AC tune-up', 'Fall furnace tune-up', 'Both (plan member)'],
+        options: ['Comfort Club membership (both tune-ups)', 'Spring AC tune-up only', 'Fall furnace / boiler tune-up only'],
       },
+      { name: 'heating_type', label: 'Heating system', type: 'select', qualifies: 'fit', options: ['Gas furnace', 'Hot-water boiler', 'Steam boiler', 'Heat pump', 'Not sure'] },
       { name: 'systems', label: 'Number of systems', type: 'select', qualifies: 'value', options: ['1', '2', '3+'] },
       { name: 'email_consent', label: 'Send me seasonal reminders and member offers', type: 'checkbox' },
     ],

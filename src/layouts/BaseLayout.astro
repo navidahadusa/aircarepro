@@ -2,7 +2,7 @@
 import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
 import EmergencyBanner from '../components/EmergencyBanner.astro';
 import NapBlock from '../components/NapBlock.astro';
-import { business } from '../data/business';
+import { business, areasByGroup, telHref } from '../data/business';
 import type { ServiceArea } from '../data/business';
 
 interface Props {
@@ -46,11 +46,13 @@ const gtmId = import.meta.env.PUBLIC_GTM_ID;
   <body>
     {!hideBanner && <EmergencyBanner />}
     <header class="site-header container">
-      <a href="/" class="logo">{business.name}</a>
+      <a href="/" class="logo">{business.displayName}</a>
       <nav aria-label="Main">
         <a href="/free-estimate/">Free Estimate</a>
-        <a href="/maintenance-plan/">Maintenance Plan</a>
-        <a href="/emergency/" class="nav-emergency">Emergency</a>
+        <a href="/maintenance-plan/">{business.maintenancePlanName}</a>
+        <a href="/service-areas/">Service Areas</a>
+        <a href="/emergency-hvac/" class="nav-emergency">24/7 Emergency</a>
+        <a href={telHref()} data-track="click_to_call" data-placement="header">{business.phoneDisplay}</a>
       </nav>
     </header>
     <main>
@@ -58,13 +60,16 @@ const gtmId = import.meta.env.PUBLIC_GTM_ID;
     </main>
     <footer class="site-footer">
       <div class="container footer-grid">
-        <NapBlock showHours />
         <div>
-          <strong>Service areas</strong>
-          <ul>
-            {business.serviceAreas.map((a) => <li><a href={`/service-areas/${a.slug}/`}>{a.name}</a></li>)}
-          </ul>
+          <NapBlock showHours />
+          <p class="legal">Operated by {business.legalName}. City of Chicago License #{business.licenseNumber}.</p>
         </div>
+        {[...areasByGroup()].map(([group, areas]) => (
+          <div>
+            <strong>{group}</strong>
+            <ul>{areas.map((a) => <li><a href={`/hvac-${a.slug}/`}>{a.name}</a></li>)}</ul>
+          </div>
+        ))}
         {business.sameAs.length > 0 && (
           <div>
             <strong>Find us on</strong>
@@ -103,6 +108,7 @@ const gtmId = import.meta.env.PUBLIC_GTM_ID;
   .site-footer { background: #f3f5f9; padding: 2rem 0 5rem; margin-top: 4rem; }
   .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 2rem; }
   .footer-grid ul { padding-left: 1rem; }
+  .legal { font-size: 0.8rem; color: var(--muted); }
   .section { padding-block: 3rem; }
   .hero { display: grid; grid-template-columns: 1.1fr 1fr; gap: 2rem; align-items: start; padding-block: 2.5rem; }
   @media (max-width: 860px) { .hero { grid-template-columns: 1fr; } }

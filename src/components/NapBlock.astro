@@ -16,16 +16,19 @@ const a = b.address;
 
 <address class:list={['nap', className]}>
   <strong class="nap-name">{b.name}</strong>
-  {b.showAddress && (
+  {b.showAddress && a.street ? (
     <span class="nap-address">
       {a.street}{a.suite && ` ${a.suite}`}<br />
       {a.city}, {a.region} {a.postalCode}
     </span>
+  ) : (
+    <span class="nap-address">Serving {a.city}, {a.region} &amp; nearby suburbs</span>
   )}
+  <a class="nap-email" href={`mailto:${b.email}`}>{b.email}</a>
   <a class="nap-phone" href={telHref()} data-track="click_to_call" data-placement="nap">{b.phoneDisplay}</a>
   {showHours && (
     <span class="nap-hours">
-      {b.emergency24x7 ? '24/7 emergency service' : b.hours.map((h) => `${h.days.join(', ')} ${h.opens}–${h.closes}`).join(' · ')}
+      {b.emergency24x7 ? 'Open 24/7, including nights & holidays' : b.hours.map((h) => `${h.days.join(', ')} ${h.opens}–${h.closes}`).join(' · ')}
     </span>
   )}
 </address>

@@ -40,6 +40,8 @@ export function buildLocalBusinessSchema(opts: SchemaOptions = {}) {
     '@id': id,
     name: b.name,
     ...(b.legalName && { legalName: b.legalName }),
+    alternateName: b.displayName,
+    description: b.description,
     url: opts.pageUrl ?? b.url,
     logo: absolute(b.url, b.logo),
     image: absolute(b.url, b.image),
@@ -47,16 +49,25 @@ export function buildLocalBusinessSchema(opts: SchemaOptions = {}) {
     email: b.email,
     priceRange: b.priceRange,
     ...(b.foundingYear && { foundingDate: String(b.foundingYear) }),
-    ...(b.showAddress && {
-      address: {
-        '@type': 'PostalAddress',
+    // Service-area businesses (showAddress=false) publish city/region only, never the street.
+    address: {
+      '@type': 'PostalAddress',
+      ...(b.showAddress && b.address.street && {
         streetAddress: [b.address.street, b.address.suite].filter(Boolean).join(' '),
-        addressLocality: b.address.city,
-        addressRegion: b.address.region,
-        postalCode: b.address.postalCode,
-        addressCountry: b.address.country,
+        ...(b.address.postalCode && { postalCode: b.address.postalCode }),
+      }),
+      addressLocality: b.address.city,
+      addressRegion: b.address.region,
+      addressCountry: b.address.country,
+    },
+    ...(b.licenseNumber && {
+      hasCredential: {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'license',
+        name: `City of Chicago License #${b.licenseNumber}`,
       },
     }),
+    ...(b.brandsServiced.length > 0 && { knowsAbout: [...b.services, ...b.brandsServiced] }),
     ...(b.geo && { geo: { '@type': 'GeoCoordinates', ...b.geo } }),
     areaServed: areas.map((a) => ({ '@type': a.type, name: a.name })),
     openingHoursSpecification: hours,

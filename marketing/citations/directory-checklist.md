@@ -3,12 +3,12 @@
 Work top-down. Fix duplicates and mismatches on Tier 1 before adding new listings. Log every action in `citation-tracker.csv`.
 
 ## Tier 1: core platforms (do first)
-- [ ] Google Business Profile: categories, service areas, hours, photos, products/services, booking link
-- [ ] Bing Places for Business (can import from GBP)
+- [x] Google Business Profile: **existing**, run the audit in `../citations-tracker.md`
+- [x] Yelp for Business: **existing**, audit
+- [x] Better Business Bureau (BBB): **existing, accredited**, audit
+- [x] Facebook Page: **existing** (facebook.com/Aircareprohvac), audit
+- [ ] Bing Places for Business (import from GBP)
 - [ ] Apple Business Connect
-- [ ] Facebook Page
-- [ ] Yelp for Business
-- [ ] Better Business Bureau (BBB)
 - [ ] Nextdoor Business Page
 
 ## Tier 2: data aggregators (feed hundreds of downstream sites)
@@ -23,14 +23,14 @@ Work top-down. Fix duplicates and mismatches on Tier 1 before adding new listing
 - [ ] Houzz
 - [ ] Porch
 - [ ] Networx
-- [ ] Manufacturer dealer locator (only if authorized: Carrier / Trane / Lennox / Rheem / Goodman / Daikin…) TODO
+- [ ] Comfortmaker dealer locator (confirmed dealer)
 - [ ] ACCA contractor directory (if member)
-- [ ] Utility rebate "participating contractor" list TODO(utility name)
+- [ ] Utility program contractor lists: ComEd, Peoples Gas / North Shore Gas, Nicor Gas
 - [ ] ENERGY STAR / state energy-office contractor lists (if eligible)
 
 ## Tier 4: local
-- [ ] Chamber of Commerce: TODO(city)
-- [ ] City / county business directory
+- [ ] Andersonville or Edgewater Chamber of Commerce (closest to base), then chambers in the top-revenue areas (see `../backlink-outreach.md`)
+- [ ] City of Chicago business license lookup (verify license #3065598 shows correctly)
 - [ ] Local newspaper business directory
 - [ ] Neighborhood / HOA vendor lists
 

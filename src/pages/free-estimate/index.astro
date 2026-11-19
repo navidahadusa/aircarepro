@@ -6,17 +6,19 @@ import { business } from '../../data/business';
 ---
 
 <BaseLayout
-  title={`Free HVAC Replacement Estimate | ${business.name}`}
-  description={`Get a free, no-pressure estimate for AC, furnace or heat pump replacement from ${business.name}. Financing available.`}
+  title={`Free Estimate on a New Furnace, Boiler or AC | ${business.displayName}`}
+  description={`Free written estimates on new furnaces, boilers, air conditioners, heat pumps and mini-splits in Chicago. Financing available, subject to credit approval.`}
 >
   <section class="hero container">
     <div>
-      <h1>Free, No-Pressure System Estimate</h1>
-      <p>Tell us about your home and current system. A comfort advisor will follow up with options at every budget, including financing.</p>
+      <h1>Free Estimate on a New System</h1>
+      <p>Tell us about your home and current system. We’ll size it properly, explain the options with prices, and you decide.</p>
       <ul>
-        <li>Written, upfront pricing</li>
-        <li>Correct sizing (load calculation), not guesswork</li>
-        <li>Financing options available</li>
+        <li>Free written estimate with options</li>
+        <li>Load-calculated sizing for Chicago bungalows, two-flats, greystones and suburban homes</li>
+        <li><a href="/financing/">Financing</a> available, subject to credit approval</li>
+        <li>We check current ComEd, Peoples Gas and Nicor Gas rebates for your equipment</li>
+        <li>{business.dealerOf} dealer</li>
       </ul>
       <CallSmsCta placement="quote_hero" sub="Prefer to talk it through?" />
     </div>

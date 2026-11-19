@@ -2,21 +2,25 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import { business } from '../../data/business';
+const plan = business.maintenancePlanName;
 ---
 
 <BaseLayout
-  title={`HVAC Maintenance Plan & Seasonal Tune-Ups | ${business.name}`}
-  description={`Spring AC and fall furnace tune-ups, priority service and member discounts from ${business.name}.`}
+  title={`${plan} HVAC Maintenance Plan | ${business.displayName}`}
+  description={`Two tune-ups a year (spring AC, fall furnace), priority appointments and member repair discounts for Chicago homeowners. Join the ${plan}.`}
 >
   <section class="hero container">
     <div>
-      <h1>Seasonal Tune-Ups & Maintenance Plan</h1>
-      <p>Prevent breakdowns before peak season. Members get priority scheduling, discounts on repairs and reminders so they never miss a tune-up.</p>
+      <h1>{plan} Maintenance Plan</h1>
+      <p>Two tune-ups a year, priority appointments and member repair discounts.</p>
       <ul>
-        <li>Spring AC tune-up + fall furnace tune-up</li>
-        <li>Priority scheduling during heat waves and cold snaps</li>
-        <li>Member discount on repairs</li>
+        <li><strong>Spring AC tune-up:</strong> coil cleaning, capacitor and refrigerant checks, drain flush</li>
+        <li><strong>Fall furnace tune-up:</strong> ignition, flame sensor, venting, safety controls and a carbon monoxide check</li>
+        <li>Priority appointments when you need a repair</li>
+        <li>Member discounts on repairs</li>
+        <li>Boilers and heat pumps are covered too: the visits fit the equipment you have</li>
       </ul>
+      <!-- TODO(owner): publish membership pricing; "call for pricing" adds friction. -->
     </div>
     <LeadForm funnel="maintenance" placement="maintenance_hero" />
   </section>

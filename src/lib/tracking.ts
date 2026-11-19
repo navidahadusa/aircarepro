@@ -16,6 +16,7 @@ export type TrackEvent =
   | 'lead_maintenance'
   | 'click_to_call'
   | 'click_to_sms'
+  | 'click_book_online'
   | 'form_start'
   | 'form_error';
 

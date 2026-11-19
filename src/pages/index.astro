@@ -3,22 +3,41 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import LeadForm from '../components/LeadForm.astro';
 import CallSmsCta from '../components/CallSmsCta.astro';
 import { business } from '../data/business';
-const primary = business.serviceAreas.find((a) => a.primary) ?? business.serviceAreas[0];
 ---
 
 <BaseLayout
-  title={`${business.name} | HVAC Repair & Installation in ${primary.name}`}
-  description={`${business.tagline}. AC & furnace repair, replacement and maintenance in ${primary.name}. Call ${business.phoneDisplay}.`}
+  title={`${business.displayName} | Heating, Cooling & HVAC Repair 24/7`}
+  description={`Furnace, boiler and AC repair, installation and maintenance for Chicago homes. NATE-certified, 24/7 emergency service, free estimates. ${business.phoneDisplay}.`}
 >
   <section class="hero container">
     <div>
-      <h1>{business.tagline} in {primary.name}</h1>
-      <p>Fast, honest heating and cooling service. Upfront pricing, licensed technicians{business.emergency24x7 && ', 24/7 emergency response'}.</p>
-      <CallSmsCta placement="home_hero" heading="Talk to a real person now" />
-      <ul>
-        {business.services.map((s) => <li>{s}</li>)}
+      <p class="eyebrow">Answering 24/7 in Chicago</p>
+      <h1>Heating and cooling for Chicago homes. One crew for both seasons.</h1>
+      <p>Furnace, boiler and air conditioning repair, installation and maintenance, done by certified technicians who explain your options before any work begins.</p>
+      <CallSmsCta placement="home_hero" heading="Call or text 24/7" />
+      <ul class="trust">
+        {business.credentials.map((c) => <li>✔ {c}</li>)}
       </ul>
     </div>
     <LeadForm funnel="quote" placement="home_hero" />
   </section>
+
+  <section class="section container">
+    <h2>Heating, cooling and air quality for Chicago homes</h2>
+    <div class="cats">
+      {business.serviceCategories.map((c) => (
+        <div>
+          <h3>{c.name}</h3>
+          <ul>{c.services.map((s) => <li>{s.name}</li>)}</ul>
+        </div>
+      ))}
+    </div>
+    <p>We service {business.brandsServiced.join(', ')}, and install {business.dealerOf} equipment.</p>
+  </section>
 </BaseLayout>
+
+<style>
+  .eyebrow { text-transform: uppercase; letter-spacing: 0.06em; font-weight: 700; color: var(--brand); margin: 0; }
+  .trust { list-style: none; padding: 0; display: grid; gap: 0.25rem; font-weight: 600; }
+  .cats { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1.5rem; }
+</style>

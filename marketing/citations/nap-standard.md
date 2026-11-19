@@ -5,29 +5,32 @@
 
 | Field | Canonical value | Notes |
 |---|---|---|
-| Business name | `AirCare Pro` TODO(business-details) | Exactly as on Google Business Profile and legal/DBA. No keywords or city names added. |
-| Street | `123 Main St` TODO | USPS abbreviations (`St`, `Ave`, `Blvd`, `Ste`). |
-| Suite | — | Use `Ste 100`, never `#100` or `Suite 100`. |
-| City, State ZIP | `Anytown, ST 00000` TODO | 2-letter state; 5-digit ZIP. |
-| Phone (display) | `(555) 555-0100` TODO | Local number, not a tracking number. |
-| Phone (E.164) | `+15555550100` TODO | Used in `tel:` links and schema. |
-| Website | `https://www.example.com/` TODO | Same protocol and `www` choice everywhere. |
-| Email | `service@example.com` TODO | |
-| Hours | Mon–Fri 7:00–19:00, Sat 8:00–16:00; 24/7 emergency TODO | Must match GBP. |
-| Address visible? | Yes TODO | If a service-area business hides its address on GBP, set `showAddress: false` and omit it everywhere. |
+| Business name | `CHICAGO AIRCARE PRO` | Exactly as on Google Business Profile. No keywords or city suffixes. Title case "Chicago Aircare Pro" is OK in body copy, never in citations. |
+| Legal entity | `Shad Heating and Cooling LLC` | Use only where a directory asks for the legal name (BBB, chamber, utility programs). |
+| Street / ZIP | *(hidden: service-area business)* | TODO(owner): record privately for directories that require verification. Never publish. |
+| City, State | `Chicago, IL` | |
+| Phone (display) | `(773) 644-8227` | Never use a tracking number in citations. |
+| Phone (E.164) | `+17736448227` | `tel:` links and schema. |
+| Website | `https://aircareprohvac.com` | No `www`, https. Add UTMs only on GBP (`utm_source=google&utm_medium=organic&utm_campaign=gbp`). |
+| Email | `info@aircareprohvac.com` | Lowercase. |
+| Hours | Open 24 hours, 7 days | |
+| License | City of Chicago License #3065598 | |
+| Booking | Housecall Pro link in `business.bookingUrl` | Rename the HCP public profile to the brand. |
 
-## Primary categories
-- GBP primary: `HVAC contractor` TODO
-- Secondary: `Air conditioning repair service`, `Furnace repair service`, `Heating contractor` TODO
+## Categories
+- GBP primary: `HVAC contractor`
+- Secondary (only if accurate): `Air conditioning repair service`, `Furnace repair service`, `Heating contractor`, `Air duct cleaning service` (only if offered)
 
-## Standard descriptions (reuse across directories)
-- **Short (≤ 160 chars):** TODO
-- **Long (≤ 750 chars):** TODO
+## Standard descriptions (from live-site copy)
+- **Short (≤160):** Chicago heating & cooling: furnace, boiler & AC repair, installation and maintenance. NATE-certified, 24/7 emergency service. (773) 644-8227
+- **Long (≤750):** CHICAGO AIRCARE PRO is a residential heating, cooling and indoor air quality company serving Chicago's North, Northwest and West Sides and nearby suburbs including Evanston, Skokie, Wilmette, Highland Park, Des Plaines, Arlington Heights, Schaumburg and Naperville. We repair, replace and maintain gas furnaces, hot-water and steam boilers, central air conditioners, heat pumps and ductless mini-splits. Our technicians are NATE and EPA 608 certified, we're a Comfortmaker dealer, and we answer 24/7. Every visit follows the same rule: find the actual cause, explain the options with prices, and repair only with your approval. City of Chicago License #3065598.
 
-## Known old or incorrect NAP variants to hunt down
-| Variant | Where seen | Fix status |
+## Known variants to hunt down
+| Variant | Where seen | Fix |
 |---|---|---|
-| _e.g. old phone (555) 555-0199_ | | |
+| `Shad Heating and Cooling` (as public name) | Housecall Pro booking page and URL | Rename public profile to brand |
+| `Chicago Aircare Pro` vs `CHICAGO AIRCARE PRO` | Live-site copy vs schema | Use GBP casing in NAP |
+| `7736448227` (unformatted) | Live-site Rank Math schema | Use `+17736448227` in schema |
 
 ## Call tracking rule
 Use dynamic number insertion **only via JavaScript** on the site. The canonical number stays in HTML, schema and all citations.
