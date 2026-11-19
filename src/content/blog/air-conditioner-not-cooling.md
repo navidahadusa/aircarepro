@@ -11,7 +11,8 @@
   "related": [],
   "source": "https://aircareprohvac.com/air-conditioner-not-cooling/",
   "intent": "emergency",
-  "migrated": true
+  "migrated": true,
+  "photo": "dirtyCondenserCoil"
 }
 ---
 

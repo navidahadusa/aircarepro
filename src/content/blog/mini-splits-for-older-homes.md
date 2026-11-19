@@ -38,7 +38,8 @@
   ],
   "source": "https://aircareprohvac.com/mini-splits-for-older-homes/",
   "intent": "planned",
-  "migrated": true
+  "migrated": true,
+  "photo": "miniSplitInstall"
 }
 ---
 

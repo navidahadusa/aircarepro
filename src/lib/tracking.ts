@@ -19,6 +19,7 @@ export type TrackEvent =
   | 'click_to_sms'
   | 'click_book_online'
   | 'click_form_link'
+  | 'click_review_link'
   | 'form_start'
   | 'form_error';
 

@@ -38,7 +38,8 @@
   ],
   "source": "https://aircareprohvac.com/steam-heat-banging-pipes/",
   "intent": "emergency",
-  "migrated": true
+  "migrated": true,
+  "photo": "steamBoiler"
 }
 ---
 

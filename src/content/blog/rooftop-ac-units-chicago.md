@@ -38,7 +38,8 @@
   ],
   "source": "https://aircareprohvac.com/rooftop-ac-units-chicago/",
   "intent": "planned",
-  "migrated": true
+  "migrated": true,
+  "photo": "rooftopCondenserSkyline"
 }
 ---
 

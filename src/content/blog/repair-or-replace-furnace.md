@@ -38,7 +38,8 @@
   ],
   "source": "https://aircareprohvac.com/repair-or-replace-furnace/",
   "intent": "planned",
-  "migrated": true
+  "migrated": true,
+  "photo": "payneFurnace"
 }
 ---
 

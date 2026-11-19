@@ -1,0 +1,38 @@
+---
+/**
+ * /review/: short, stable link for review requests (texts, emails, QR card on invoices).
+ * Hannah Carter + Rachel Morgan. Everyone gets the same link: no review gating (Google policy).
+ * noindex + excluded from the sitemap: it's a utility page, /reviews/ is the indexable one.
+ */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Icon from '../../components/Icon.astro';
+import { business, telHref, smsHref } from '../../data/business';
+const url = business.googleReviewUrl;
+---
+<BaseLayout title={`Leave a Review | ${business.displayName}`} description={`Share how your service visit with ${business.displayName} went. Leave an honest Google review in about 30 seconds.`} noindex hideBanner>
+  <section class="section">
+    <div class="container review-wrap">
+      <span class="eyebrow">Thank you</span>
+      <h1>How did we do?</h1>
+      <p class="lead">Thanks for choosing {business.displayName}. An honest Google review, good or bad, takes about 30 seconds and helps your neighbors pick an HVAC company they can trust.</p>
+      {url && (
+        <a class="btn btn-primary review-btn" href={url} rel="noopener" data-track="click_review_link" data-placement="review_page">
+          <Icon name="star" /> Leave a Google review
+        </a>
+      )}
+      <ol class="steps">
+        <li>Tap the button. Google opens our profile with the review box.</li>
+        <li>Pick a star rating and write a sentence or two about your visit.</li>
+        <li>Tap <strong>Post</strong>. That’s it.</li>
+      </ol>
+      <p class="help">Questions about your service, or something we should fix? Call <a href={telHref()} data-track="click_to_call" data-placement="review_page">{business.phoneDisplay}</a> or <a href={smsHref()} data-track="click_to_sms" data-placement="review_page">send a text</a>. We read every review and every message.</p>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .review-wrap { max-width: 40rem; text-align: center; }
+  .review-btn { font-size: 1.15rem; min-height: 60px; padding-inline: 2rem; margin: 0.5rem 0 1.75rem; }
+  .steps { text-align: left; display: grid; gap: 0.5rem; margin: 0 auto 1.5rem; max-width: 30rem; padding-left: 1.4rem; }
+  .help { color: var(--muted); }
+</style>

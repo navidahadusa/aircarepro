@@ -5,5 +5,5 @@ import sitemap from '@astrojs/sitemap';
 export default defineConfig({
   site: 'https://aircareprohvac.com',
   build: { inlineStylesheets: 'always' },
-  integrations: [sitemap({ filter: (page) => !page.includes('/thank-you/') && !page.includes('/404') })],
+  integrations: [sitemap({ filter: (page) => !page.includes('/thank-you/') && !page.includes('/review/') && !page.includes('/404') })],
 });

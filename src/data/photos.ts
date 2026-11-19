@@ -24,6 +24,18 @@ import uvSanitizer from '../assets/photos/jobs/uv-air-sanitizer-installed.jpg';
 import humidifier from '../assets/photos/jobs/whole-home-humidifier-installed.jpg';
 import acGauges from '../assets/photos/jobs/ac-condenser-gauges.jpg';
 import boilerBurnerService from '../assets/photos/jobs/boiler-burner-service.jpg';
+import steamBoiler from '../assets/photos/jobs/steam-boiler-controls.jpg';
+import rooftopCondenserSkyline from '../assets/photos/jobs/rooftop-condenser-chicago-skyline.jpg';
+import payneFurnace from '../assets/photos/jobs/payne-furnace-basement.jpg';
+import carrierFurnace from '../assets/photos/jobs/carrier-high-efficiency-furnace.jpg';
+import newCondenserRoof from '../assets/photos/jobs/new-ac-condenser-rooftop.jpg';
+import dirtyCondenserCoil from '../assets/photos/jobs/condenser-coil-before-cleaning.jpg';
+import nitrogenTest from '../assets/photos/jobs/nitrogen-pressure-test.jpg';
+import horizontalFurnace from '../assets/photos/jobs/horizontal-furnace-tight-space.jpg';
+import coilBrushing from '../assets/photos/jobs/technician-brushing-condenser-coil.jpg';
+import fanCoilAssembly from '../assets/photos/jobs/technician-fan-coil-assembly.jpg';
+import coilCleanerSpray from '../assets/photos/jobs/technician-coil-cleaner-spray.jpg';
+import miniSplitInstall from '../assets/photos/jobs/technicians-mini-split-install.jpg';
 
 export interface Photo { src: ImageMetadata; alt: string }
 
@@ -47,6 +59,18 @@ export const photos = {
   humidifier: { src: humidifier, alt: 'Whole-home humidifier mounted on furnace ductwork' },
   acGauges: { src: acGauges, alt: 'Outdoor AC condenser with refrigerant gauge hoses connected for diagnostics' },
   boilerBurnerService: { src: boilerBurnerService, alt: 'Gas boiler with the burner access panel open during service' },
+  steamBoiler: { src: steamBoiler, alt: 'Gas steam boiler with burner control, low-water cutoff and gauge glass in a basement' },
+  rooftopCondenserSkyline: { src: rooftopCondenserSkyline, alt: 'Rooftop AC condenser on a flat roof with the Chicago skyline in the distance' },
+  payneFurnace: { src: payneFurnace, alt: 'Payne gas furnace with PVC venting in a basement, technician tool bags beside it' },
+  carrierFurnace: { src: carrierFurnace, alt: 'Carrier high-efficiency furnace with PVC vent and condensate piping in a utility room' },
+  newCondenserRoof: { src: newCondenserRoof, alt: 'New Ameristar air conditioner condenser installed on a pad on a flat roof' },
+  dirtyCondenserCoil: { src: dirtyCondenserCoil, alt: 'Outdoor AC condenser opened up, showing the coil, compressor and built-up debris before cleaning' },
+  nitrogenTest: { src: nitrogenTest, alt: 'Nitrogen cylinder and regulator connected to an AC service valve for a leak pressure test' },
+  horizontalFurnace: { src: horizontalFurnace, alt: 'Horizontal high-efficiency furnace installed in a tight space behind an opened wall' },
+  coilBrushing: { src: coilBrushing, alt: 'Technician brushing the coil of an outdoor AC condenser during a tune-up' },
+  fanCoilAssembly: { src: fanCoilAssembly, alt: 'Technician assembling a new hydronic fan coil unit inside an apartment' },
+  coilCleanerSpray: { src: coilCleanerSpray, alt: 'Technician spraying coil cleaner into an opened AC condenser during maintenance' },
+  miniSplitInstall: { src: miniSplitInstall, alt: 'Two technicians mounting a ductless mini-split outdoor unit, with a digital refrigerant manifold connected' },
 } satisfies Record<string, Photo>;
 
 /** Best photo per service category / service slug. */
@@ -59,17 +83,17 @@ export const servicePhoto: Record<string, Photo> = {
   'boiler-repair': photos.boilerControl,
   'boiler-installation': photos.newBoiler,
   'furnace-repair': photos.heatExchanger,
-  'furnace-installation': photos.furnaceDiagnostics,
+  'furnace-installation': photos.carrierFurnace,
   'furnace-tune-up': photos.blowerWheel,
   'carbon-monoxide-safety': photos.corrodedFlue,
   'ac-repair': photos.acGauges,
-  'ac-installation': photos.rooftopSkyline,
-  'ac-tune-up': photos.gangwayCondenser,
-  'mini-split-installation': photos.rooftopMiniSplit,
+  'ac-installation': photos.newCondenserRoof,
+  'ac-tune-up': photos.coilBrushing,
+  'mini-split-installation': photos.miniSplitInstall,
   'mini-split-repair': photos.rooftopMiniSplit,
   'heat-pump-installation': photos.rooftopMiniSplit,
   'heat-pump-repair': photos.rooftopMiniSplit,
-  'refrigerant-leak-repair': photos.acGauges,
+  'refrigerant-leak-repair': photos.nitrogenTest,
   'thermostat-installation': photos.zoneValves,
   'uv-air-sanitizers': photos.uvSanitizer,
   'whole-home-humidifiers': photos.humidifier,
@@ -77,6 +101,6 @@ export const servicePhoto: Record<string, Photo> = {
 
 /** "Recent work" gallery (homepage + About): the owner's own job photos. */
 export const recentWork: Photo[] = [
-  photos.newBoiler, photos.heatExchanger, photos.humidifier, photos.acGauges,
-  photos.zoneValves, photos.uvSanitizer, photos.burnersCleaning, photos.airVentCorroded,
+  photos.coilBrushing, photos.miniSplitInstall, photos.newBoiler, photos.steamBoiler,
+  photos.coilCleanerSpray, photos.heatExchanger, photos.newCondenserRoof, photos.fanCoilAssembly,
 ];

@@ -11,7 +11,8 @@
   "related": [],
   "source": "https://aircareprohvac.com/furnace-replacement-vs-repair/",
   "intent": "planned",
-  "migrated": true
+  "migrated": true,
+  "photo": "carrierFurnace"
 }
 ---
 
