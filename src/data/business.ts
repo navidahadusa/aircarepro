@@ -104,7 +104,9 @@ export interface Business {
   /** Official profile URLs for JSON-LD sameAs. Only add live, claimed profiles. */
   sameAs: string[];
   /** Review platforms shown in ReviewsBlock. url stays undefined until the rebranded listing is live. */
-  reviewProfiles: Array<{ platform: 'Google' | 'Yelp' | 'BBB'; url?: string }>;
+  reviewProfiles: Array<{ platform: 'Google' | 'Yelp' | 'BBB'; url?: string; writeReviewUrl?: string }>;
+  /** Owner-supplied Google "Ask for reviews" link (opens the write-a-review box). */
+  googleReviewUrl?: string;
   licenseNumber?: string;
   credentials: string[];
   brandsServiced: string[];
@@ -220,7 +222,9 @@ export const business: Business = {
     // BBB  → 'https://www.bbb.org/us/il/chicago/profile/…'
   ],
   // TODO(owner): set each url once that listing shows CHICAGO AIRCARE PRO (also add to sameAs).
-  reviewProfiles: [{ platform: 'Google' }, { platform: 'Yelp' }, { platform: 'BBB' }],
+  // Google write-review link from the owner (2026-11-19). The public profile URL for sameAs stays TODO until the rename is live.
+  googleReviewUrl: 'https://g.page/r/CclD2bGyjAf7EBE/review',
+  reviewProfiles: [{ platform: 'Google', writeReviewUrl: 'https://g.page/r/CclD2bGyjAf7EBE/review' }, { platform: 'Yelp' }, { platform: 'BBB' }],
   licenseNumber: '3065598', // City of Chicago
   credentials: [
     'NATE-certified technicians',

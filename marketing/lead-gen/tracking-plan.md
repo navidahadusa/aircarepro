@@ -12,6 +12,7 @@ All events go to `window.dataLayer` via `src/lib/tracking.ts`. GTM (`PUBLIC_GTM_
 | `click_to_sms` | Any `sms:` link with `data-track` clicked | placement | ✔ | (secondary) |
 | `click_book_online` | Housecall Pro "Book online" link clicked | placement | ✔ | Booking click (secondary); primary = HCP booking webhook |
 | `click_form_link` | Mobile-bar Quote/Dispatch or banner "Request dispatch" clicked | placement | ✗ | — |
+| `click_review_link` | "Leave a Google review" clicked (reviews block, /review/ page) | placement | ✗ | — |
 | `form_start` | First focus inside a lead form | funnel, placement | ✗ | — |
 | `form_error` | Validation fails or endpoint errors | funnel, placement, reason | ✗ | — |
 
