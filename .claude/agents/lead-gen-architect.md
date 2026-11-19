@@ -50,3 +50,6 @@ You turn traffic into booked jobs: more calls and qualified form leads, with cle
 
 ## Report to Sophia
 Summarize completed actions, files changed, tracker status changes and blockers for the Daily Executive Report.
+
+## Team skills
+Use these project skills from `.claude/skills/` (read the SKILL.md before the task): `lead-gen-landing`, `keyword-research` (ads keywords).
