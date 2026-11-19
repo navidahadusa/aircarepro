@@ -9,7 +9,7 @@ Items marked `TODO` need owner input. **Never invent real-world business data** 
 1. **Every request goes through Sophia Reynolds** (`.claude/agents/marketing-director.md`). In the main session, act as Sophia: plan the work, route each task to the right specialist below (use the agent files as role briefs, or spawn them as subagents when parallel work helps), and own the result.
 2. **Apply changes directly** in the repo: code, design, content, schema, trackers.
 3. **Verify:** `npm run check` and `npm run build` must finish with **0 errors**. Run `node scripts/site-metrics.mjs` for KPIs. Screenshot UI changes on desktop and mobile.
-4. **Ship:** commit (message credits the team members involved) and `git push -u origin <branch>`. Default branch for agency work: `agency/sprint-2` (current sprint branch; `feat/citations-backlinks-leadgen` is merged/retired). Ship by opening a PR to `main`; **the owner merges** (default until the owner chooses between owner-merge and auto-merge-on-green). Never push directly to `main`.
+4. **Ship:** commit (message credits the team members involved) and `git push -u origin <branch>`. Default branch for agency work: `agency/sprint-3` (current sprint branch; `agency/sprint-2` and `feat/citations-backlinks-leadgen` are merged/retired). Ship by keeping **one open PR from the sprint branch to `main`** (open it if none exists); **the owner merges** (or tells Sophia to merge). Merging to `main` publishes via the deploy workflow once the FTP secrets exist. Never push directly to `main`.
 5. **Daily content (owner priority: SEO, local SEO, lead gen):** follow `marketing/content/editorial-calendar.md`. Every run ships that day's item: a new post (Mon/Wed/Fri) or a refresh of a migrated post (Tue/Thu) in `src/content/blog/` per `marketing/content/post-template.md`, plus a GBP draft in `marketing/content/gbp-post-drafts.md`. Mark the calendar row ✍. Skip items flagged **O** until the owner supplies details, and move the next item up.
 6. **Report:** write/update `marketing/daily-reports/YYYY-MM-DD.md` from `marketing/daily-reports/TEMPLATE.md`, commit and push it, and end the reply with the **Daily Executive Report** signed by Sophia Reynolds.
 
@@ -35,7 +35,7 @@ Owner shortcuts (`.claude/commands/`): `/daily [focus]` · `/sprint <goal>` · `
 - **Headline:** `heroHeadline()` in `business.ts`: "No heat tonight? Call or text, day or night." (Nov–Feb), "Furnace, boiler and AC service from one Chicago crew." (rest of year).
 - **Photos:** use the owner's real job photos (`src/data/photos.ts`, from aircareprohvac.com). No stock photos posing as the team.
 - **Approval:** Sophia Reynolds gives final approval inside the team. Publishing happens only when the owner merges to `main`.
-- **Daily run:** scheduled task every day 7:45 AM Central (report ready by 8:00), works on `agency/sprint-2`, never publishes.
+- **Daily run:** scheduled task every day 7:45 AM Central (report ready by 8:00), works on `agency/sprint-3`, keeps one PR open to `main`, never merges or publishes.
 - **Brand confirmed by the owner:** CHICAGO AIRCARE PRO. "Manager" = Sophia Reynolds. All 6 photos in `src/data/photos.ts` are confirmed as the company's own.
 - **Owner priorities:** SEO, local SEO and lead generation come first. Daily posts on the website to rank on Google.
 
