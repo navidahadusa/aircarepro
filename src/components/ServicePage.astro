@@ -35,7 +35,22 @@ if (props.kind === 'service') {
 const related = svc ? svc.related.map(serviceBySlug).filter((x): x is Service => Boolean(x)) : [];
 const catServices = servicesIn(cat.name);
 const catFaqs = catServices.flatMap((s) => s.faqs.slice(0, 1)).slice(0, 5);
-const title = svc ? `${svc.name} in Chicago | ${svc.funnel === 'emergency' ? '24/7 Service | ' : ''}${business.displayName}` : `${cat.name} Services in Chicago | ${business.displayName}`;
+// Keyword-led title head from services.ts when present (≤ 38 chars + brand ≤ 60).
+const title = svc
+  ? svc.title
+    ? `${svc.title} | ${business.displayName}`
+    : `${svc.name} in Chicago | ${svc.funnel === 'emergency' ? '24/7 Service | ' : ''}${business.displayName}`
+  : cat.title
+    ? `${cat.title} | ${business.displayName}`
+    : `${cat.name} Services in Chicago | ${business.displayName}`;
+const sections = (svc ? svc.sections : cat.sections) ?? [];
+// Service + city landing pages (routes built by Sophia: /<service>-<city>/).
+const CITY_PAGE_SERVICES = ['furnace-repair', 'furnace-installation', 'ac-repair'];
+const CITY_PAGE_SLUGS = ['chicago', 'evanston', 'skokie', 'wilmette', 'highland-park', 'des-plaines', 'arlington-heights', 'schaumburg', 'naperville'];
+const cityLinks = svc && CITY_PAGE_SERVICES.includes(svc.slug)
+  ? CITY_PAGE_SLUGS.map((slug) => business.serviceAreas.find((a) => a.slug === slug)).filter((a): a is NonNullable<typeof a> => Boolean(a))
+      .map((a) => ({ name: a.name, href: `/${svc!.slug}-${a.slug}/` }))
+  : [];
 const description = svc ? svc.meta : cat.meta;
 const photo = svc ? servicePhoto[svc.slug] ?? categoryPhoto[cat.slug] : categoryPhoto[cat.slug];
 const blogPosts = svc ? await postsForService(svc.slug) : [];
@@ -85,6 +100,21 @@ const schema = buildServiceSchema({ name: svc ? svc.name : `${cat.name} services
     </section>
   )}
 
+  {sections.length > 0 && (
+    <section class="section svc-content">
+      <div class="container">
+        <div class="prose svc-prose">
+          {sections.map((s) => (
+            <>
+              <h2>{s.h2}</h2>
+              <Fragment set:html={s.html} />
+            </>
+          ))}
+        </div>
+      </div>
+    </section>
+  )}
+
   <section class="section section-alt">
     <div class="container">
       <div class="section-head"><span class="eyebrow">Why homeowners call us</span><h2>Diagnosis first. Options before any work.</h2></div>
@@ -102,6 +132,14 @@ const schema = buildServiceSchema({ name: svc ? svc.name : `${cat.name} services
           <>
             <h2>Related services</h2>
             <ServiceCards items={related} />
+          </>
+        )}
+        {svc && cityLinks.length > 0 && (
+          <>
+            <h2 class="mt">{svc.name} by city</h2>
+            <ul class="area-pills" role="list">
+              {cityLinks.map((c) => <li><a href={c.href}>{svc!.name} {c.name}</a></li>)}
+            </ul>
           </>
         )}
         <h2 class="mt">{svc ? svc.name : cat.name} near you</h2>
@@ -136,5 +174,13 @@ const schema = buildServiceSchema({ name: svc ? svc.name : `${cat.name} services
   .svc-photo { min-height: 320px; }
   @media (max-width: 1000px) { .svc-grid, .svc-grid.has-photo { grid-template-columns: 1fr; } .svc-photo { aspect-ratio: 16 / 10; min-height: 0; } }
   .area-pills { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .svc-content { padding-top: 0; }
+  .svc-prose > :global(h2:first-child) { margin-top: 0; }
+  .svc-prose :global(h3) { margin: 1.4rem 0 0.4rem; font-size: 1.1rem; }
+  .svc-prose :global(ol), .svc-prose :global(ul) { padding-left: 1.25rem; }
+  .svc-prose :global(li) { margin-bottom: 0.35rem; }
+  .svc-prose :global(table) { display: block; max-width: 100%; overflow-x: auto; border-collapse: collapse; margin: 1rem 0 1.5rem; font-size: 0.95rem; }
+  .svc-prose :global(th), .svc-prose :global(td) { border: 1px solid var(--border); padding: 0.6rem 0.75rem; text-align: left; vertical-align: top; }
+  .svc-prose :global(th) { background: var(--blue-50); color: var(--navy-900); }
   .area-pills a { display: inline-block; padding: 0.4rem 0.85rem; border-radius: 999px; background: var(--blue-50); text-decoration: none; font-weight: 700; font-size: 0.9rem; }
 </style>
