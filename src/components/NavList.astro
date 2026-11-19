@@ -25,6 +25,7 @@ const navCats = categories.map((c) => ({ ...c, items: servicesIn(c.name) }));
   ))}
   <li><a href="/service-areas/">Service Areas</a></li>
   <li><a href="/maintenance-plan/">{business.maintenancePlanName}</a></li>
+  <li><a href="/blog/" aria-current={currentPath.startsWith('/blog/') ? 'page' : undefined}>Blog</a></li>
   <li class:list={{ "only-stacked": !stacked }}><a href="/chicago-hvac-homeowner-guide/">Homeowner Guide</a></li>
   <li><a href="/emergency-hvac/" class="nav-emergency">{stacked ? "24/7 Emergency" : "Emergency"}</a></li>
 </ul>

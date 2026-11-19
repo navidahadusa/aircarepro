@@ -7,14 +7,12 @@
 import NavList from './NavList.astro';
 import { business, telHref } from '../data/business';
 import Icon from './Icon.astro';
+import BrandMark from './BrandMark.astro';
 ---
 
 <header class="site-header">
   <div class="container header-inner">
-    <a href="/" class="brand" aria-label={`${business.displayName} home`}>
-      <img src="/logo.svg" alt="" width="40" height="40" />
-      <span class="brand-text"><strong>Chicago Aircare Pro</strong><small>Heating &amp; Cooling</small></span>
-    </a>
+    <BrandMark size={58} />
 
     <nav class="desktop-nav" aria-label="Main">
       <NavList />
@@ -53,19 +51,17 @@ import Icon from './Icon.astro';
 
 <style>
   .site-header { position: sticky; top: 0; z-index: 40; background: rgb(255 255 255 / 0.97); backdrop-filter: blur(6px); border-bottom: 1px solid var(--border); }
-  .header-inner { display: flex; align-items: center; gap: 1rem; min-height: 72px; width: min(84rem, 100% - 2rem); }
-  .brand { flex: none; display: flex; align-items: center; gap: 0.6rem; text-decoration: none; color: var(--navy-900); }
-  .brand-text { display: grid; line-height: 1.1; font-size: 1.15rem; white-space: nowrap; }
-  .brand-text strong { font-weight: 900; }
-  .brand-text small { font-size: 0.7rem; font-weight: 700; color: var(--orange-600); text-transform: uppercase; letter-spacing: 0.08em; }
+  .header-inner { display: flex; align-items: center; gap: 1rem; min-height: 80px; width: min(84rem, 100% - 2rem); }
   .desktop-nav { margin-left: auto; min-width: 0; }
   .header-cta { flex: none; display: flex; align-items: center; gap: 0.75rem; }
   .phone { display: grid; text-align: right; text-decoration: none; font-weight: 900; font-size: 1.15rem; color: var(--navy-900); line-height: 1.1; white-space: nowrap; }
   .phone small { font-size: 0.7rem; font-weight: 700; color: var(--green-600); text-transform: uppercase; letter-spacing: 0.05em; }
   .mobile-toggle { display: none; }
-  .m-call { display: none; }
+  .m-call { display: none; flex: none; }
 
-  @media (max-width: 1140px) {
+  /* The red emergency strip above always shows the Call button, so the header phone yields to the menu on mid-size screens. */
+  @media (max-width: 1399px) { .phone { display: none; } }
+  @media (max-width: 1199px) {
     .desktop-nav { display: none; }
     .header-cta { margin-left: auto; }
     .mobile-toggle { display: block; }
@@ -77,11 +73,15 @@ import Icon from './Icon.astro';
     .mobile-nav { position: absolute; left: 0; right: 0; top: 100%; background: #fff; border-bottom: 1px solid var(--border); padding: 0.75rem 1rem 1rem; box-shadow: var(--shadow); max-height: calc(100vh - 140px); overflow: auto; }
     .block { width: 100%; margin-top: 0.75rem; }
   }
+  @media (max-width: 400px) {
+    .header-inner :global(.bm-logo) { width: 38px; height: 38px; }
+    .m-call, .mobile-toggle > summary { width: 44px; height: 44px; padding: 0; justify-content: center; }
+  }
   @media (max-width: 640px) {
     .hide-sm { display: none !important; }
-    .brand-text { font-size: 1.02rem; }
-    .brand-text small { display: none; }
-    .brand img { width: 34px; height: 34px; }
+    .header-inner { min-height: 68px; gap: 0.6rem; }
+    .header-inner :global(.bm-logo) { width: 44px; height: 44px; }
+    .header-inner :global(.brandmark) { flex: 1 1 auto; min-width: 0; }
     .phone { display: none; } /* Call/Text live in the sticky bottom bar on mobile */
     .m-call { display: inline-grid; place-items: center; width: 46px; height: 46px; margin-left: auto; border-radius: 12px; background: var(--cta); color: #fff; }
     .header-cta { margin-left: 0; }

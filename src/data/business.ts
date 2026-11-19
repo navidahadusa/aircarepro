@@ -153,8 +153,8 @@ export const business: Business = {
   description:
     'Residential heating, cooling and indoor air quality company serving Chicago and nearby suburbs. NATE- and EPA 608-certified technicians, 24/7 emergency service, free estimates on new systems.',
   url: 'https://aircareprohvac.com',
-  logo: '/logo.svg',
-  image: '/og-image.jpg', // TODO: export a 1200×630 brand image
+  logo: '/logo.png', // owner's logo (512px), also used in schema
+  image: '/og-image.jpg', // 1200×630 share image built from the owner's logo
   phoneDisplay: PHONE_DISPLAY,
   phoneE164: PHONE_E164,
   email: 'info@aircareprohvac.com',
