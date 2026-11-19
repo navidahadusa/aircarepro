@@ -1,6 +1,9 @@
 # CHICAGO AIRCARE PRO: staging/test subdomain on Hostinger. Hidden from search engines.
 Options -Indexes
 DirectoryIndex index.html
+<FilesMatch "\.(php|phtml|phar)$">
+  Require all denied
+</FilesMatch>
 RewriteEngine On
 RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}/$1 [R=301,L]
