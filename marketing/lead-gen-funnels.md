@@ -3,6 +3,9 @@
 Owner: **Rachel Morgan, Lead Generation Architect** (`lead-gen-architect`) · Reports to Sophia Reynolds · Specs: `lead-gen/funnels.md` · Fields and scoring: `lead-gen/qualification-fields.md` · Tracking: `lead-gen/tracking-plan.md`
 Based on the live-site audit in `site-audit-2026-11-19.md`.
 
+## Owner decision (2026-11-19): all leads go to Housecall Pro
+Every lead CTA opens the Housecall Pro booking link (`business.bookingUrl`); `business.leadCapture = 'housecall-pro'` renders `BookingPanel` in place of on-page forms. Emergencies lead with **Call**, and planned work with **Book online**. All clicks are tracked (`click_book_online`, `click_to_call`, `click_to_sms`). Bookings completed inside Housecall Pro are not visible to GA4 until an HCP → GA4/Ads conversion import is set up (see `lead-gen/tracking-plan.md`). The form code stays in the repo for later.
+
 ## Current state on aircareprohvac.com
 - Lead paths: **phone** (`tel:+17736448227`) and **"Book online"** (off-site Housecall Pro). Email for non-urgent questions.
 - No on-site forms, no `sms:` link, no estimate request, no Comfort Club signup, no review links.

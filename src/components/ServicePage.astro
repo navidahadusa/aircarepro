@@ -1,0 +1,140 @@
+---
+/**
+ * Service pages (/furnace-repair/ …) and category hubs (/heating/, /cooling/, /air-quality/).
+ * Content: Maya Lin. Schema + internal links: Elena Brooks. Layout/CRO: Chloe Vance. Forms: Rachel Morgan.
+ * Paths mirror the live WordPress site. Rendered by src/pages/[slug].astro.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from '../components/Breadcrumbs.astro';
+import LeadForm from '../components/LeadForm.astro';
+import CallSmsCta from '../components/CallSmsCta.astro';
+import FaqSection from '../components/FaqSection.astro';
+import ServiceCards from '../components/ServiceCards.astro';
+import TrustBlock from '../components/TrustBlock.astro';
+import JsonLd from '../components/JsonLd.astro';
+import { business } from '../data/business';
+import { categories, services, servicesIn, serviceBySlug, type Service, type Category } from '../data/services';
+import { buildServiceSchema } from '../lib/schema';
+import { Image } from 'astro:assets';
+import { servicePhoto, categoryPhoto } from '../data/photos';
+import { postsForService, blogCategories } from '../data/blog';
+
+type Props = { kind: 'service'; service: Service } | { kind: 'category'; category: Category };
+const props = Astro.props as Props;
+const pageUrl = new URL(Astro.url.pathname, Astro.site ?? business.url).toString();
+const topAreas = business.serviceAreas.filter((a) => ['chicago', 'evanston', 'skokie', 'lincoln-park', 'lakeview', 'logan-square', 'andersonville-edgewater', 'arlington-heights', 'naperville'].includes(a.slug));
+
+let svc: Service | undefined;
+let cat: Category;
+if (props.kind === 'service') {
+  svc = props.service;
+  cat = categories.find((c) => c.name === svc!.category)!;
+} else {
+  cat = props.category;
+}
+const related = svc ? svc.related.map(serviceBySlug).filter((x): x is Service => Boolean(x)) : [];
+const catServices = servicesIn(cat.name);
+const catFaqs = catServices.flatMap((s) => s.faqs.slice(0, 1)).slice(0, 5);
+const title = svc ? `${svc.name} in Chicago | ${svc.funnel === 'emergency' ? '24/7 Service | ' : ''}${business.displayName}` : `${cat.name} Services in Chicago | ${business.displayName}`;
+const description = svc ? svc.meta : cat.meta;
+const photo = svc ? servicePhoto[svc.slug] ?? categoryPhoto[cat.slug] : categoryPhoto[cat.slug];
+const blogPosts = svc ? await postsForService(svc.slug) : [];
+const schema = buildServiceSchema({ name: svc ? svc.name : `${cat.name} services`, description, pageUrl });
+---
+
+<BaseLayout title={title} description={description}>
+  <Breadcrumbs items={svc ? [{ name: cat.name, href: `/${cat.slug}/` }, { name: svc.name, href: `/${svc.slug}/` }] : [{ name: cat.name, href: `/${cat.slug}/` }]} />
+  <JsonLd data={schema} />
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">{cat.name} · Chicago &amp; suburbs</span>
+        <h1>{svc ? `${svc.name} in Chicago` : cat.headline}</h1>
+        <p class="lead">{svc ? svc.intro : cat.intro}</p>
+        <CallSmsCta placement={`${svc ? svc.slug : cat.slug}_hero`} heading={svc?.funnel === 'emergency' ? 'Need it fixed now? Call or text 24/7' : undefined} />
+        <ul class="badge-row">
+          <li>NATE &amp; EPA 608</li><li>License #{business.licenseNumber}</li><li>BBB accredited</li><li>Free estimates on new systems</li>
+        </ul>
+      </div>
+      <div id="quote"><LeadForm funnel={svc ? svc.funnel : 'quick'} placement={`${svc ? svc.slug : cat.slug}_hero`} /></div>
+    </div>
+  </section>
+
+  {svc ? (
+    <section class="section">
+      <div class:list={['container', 'svc-grid', { 'has-photo': photo }]}>
+        {photo && <div class="photo svc-photo"><Image src={photo.src} alt={photo.alt} widths={[400, 700]} sizes="(max-width: 900px) 100vw, 30vw" /></div>}
+        <div class="card">
+          <h2>Signs you need {svc.name.toLowerCase()}</h2>
+          <ul class="check-list">{svc.signs.map((x) => <li>{x}</li>)}</ul>
+        </div>
+        <div class="card">
+          <h2>What’s included</h2>
+          <ul class="check-list">{svc.included.map((x) => <li>{x}</li>)}</ul>
+          <p><small>You get the price before any work starts. Repairs are done only with your approval.</small></p>
+        </div>
+      </div>
+    </section>
+  ) : (
+    <section class="section">
+      <div class="container">
+        <div class="section-head"><h2>{cat.name} services</h2></div>
+        <ServiceCards items={catServices} />
+      </div>
+    </section>
+  )}
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Why homeowners call us</span><h2>Diagnosis first. Options before any work.</h2></div>
+      <TrustBlock />
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container grid grid-2">
+      <div class="prose">
+        <FaqSection faqs={svc ? svc.faqs : catFaqs} heading={svc ? `${svc.name} questions` : `${cat.name} questions`} />
+      </div>
+      <div>
+        {related.length > 0 && (
+          <>
+            <h2>Related services</h2>
+            <ServiceCards items={related} />
+          </>
+        )}
+        <h2 class="mt">{svc ? svc.name : cat.name} near you</h2>
+        <p>We serve Chicago’s North, Northwest and West Sides and nearby suburbs.</p>
+        <ul class="area-pills" role="list">
+          {topAreas.map((a) => <li><a href={`/hvac-${a.slug}/`}>{a.name}</a></li>)}
+          <li><a href="/service-areas/">All areas →</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  {blogPosts.length > 0 && (
+    <section class="section section-alt">
+      <div class="container">
+        <h2>From our blog</h2>
+        <ul class="blog-links" role="list">
+          {blogPosts.map((p) => <li><a href={`/${p.id}/`}><span class="eyebrow">{blogCategories[p.data.category].name}</span><strong>{p.data.title}</strong></a></li>)}
+        </ul>
+      </div>
+    </section>
+  )}
+</BaseLayout>
+
+<style>
+  .mt { margin-top: 2rem; }
+  .blog-links { list-style: none; padding: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
+  .blog-links a { display: grid; gap: 0.3rem; padding: 1.1rem 1.25rem; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); text-decoration: none; color: var(--navy-900); }
+  .blog-links a:hover { border-color: var(--blue-500); }
+  .blog-links strong { font-family: var(--font-heading); }
+  .svc-grid { display: grid; gap: 1.25rem; grid-template-columns: 1fr 1fr; }
+  .svc-grid.has-photo { grid-template-columns: 0.9fr 1fr 1fr; align-items: stretch; }
+  .svc-photo { min-height: 320px; }
+  @media (max-width: 1000px) { .svc-grid, .svc-grid.has-photo { grid-template-columns: 1fr; } .svc-photo { aspect-ratio: 16 / 10; min-height: 0; } }
+  .area-pills { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .area-pills a { display: inline-block; padding: 0.4rem 0.85rem; border-radius: 999px; background: var(--blue-50); text-decoration: none; font-weight: 700; font-size: 0.9rem; }
+</style>

@@ -64,7 +64,7 @@ export const funnels: Record<FunnelId, Funnel> = {
   emergency: {
     id: 'emergency',
     title: 'Request Emergency Service',
-    subtitle: 'No heat, no cooling or a boiler problem, day or night? Tell us what’s happening and a technician will call you back.',
+    subtitle: 'No heat, no cooling or a boiler problem, day or night? Tell us what’s happening.',
     submitLabel: 'Dispatch a Technician',
     conversionEvent: 'lead_emergency',
     conversionValue: 300,

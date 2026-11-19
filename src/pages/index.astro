@@ -1,10 +1,10 @@
 ---
 /**
- * Homepage, Sprint 1 redesign. Owners: Sophia Reynolds + Chloe Vance.
- * Fixes from the live-site audit: on-page fast-quote form above the fold, tap-to-text,
- * clear repair/replace/maintain paths, credential trust block, review platforms,
- * service-area directory and FAQ with schema.
+ * Homepage: Direction A "Lakefront Trust" (team-selected 2026-11-19; final approval: Sophia Reynolds).
+ * Design: Chloe Vance · Copy/photos: Maya Lin · CTAs: Rachel Morgan · Structure: Elena Brooks.
+ * Leads go to Housecall Pro (owner decision): BookingPanel replaces on-page forms.
  */
+import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import LeadForm from '../components/LeadForm.astro';
 import CallSmsCta from '../components/CallSmsCta.astro';
@@ -12,24 +12,37 @@ import ServiceCards from '../components/ServiceCards.astro';
 import TrustBlock from '../components/TrustBlock.astro';
 import ReviewsBlock from '../components/ReviewsBlock.astro';
 import FaqSection from '../components/FaqSection.astro';
-import { business, areasByGroup } from '../data/business';
+import Icon from '../components/Icon.astro';
+import Skyline from '../components/Skyline.astro';
+import { business, areasByGroup, heroHeadline } from '../data/business';
+import { photos } from '../data/photos';
+import { getPosts, blogCategories } from '../data/blog';
 
-const triage = [
-  { t: 'No heat or furnace problem', href: '/furnace-repair/', icon: '🔥' },
-  { t: 'Boiler or radiator problem', href: '/boiler-repair/', icon: '♨️' },
-  { t: 'AC not cooling', href: '/ac-repair/', icon: '❄️' },
-  { t: 'Free estimate on a new system', href: '/free-estimate/', icon: '📝' },
+const hero = heroHeadline();
+const allPosts = await getPosts();
+// Seasonal picks (Maya Lin): winter topics Nov–Feb, cooling topics otherwise.
+const m = new Date().getMonth();
+const picks = (m >= 10 || m <= 1)
+  ? ['furnace-wont-turn-on', 'boiler-not-heating', 'best-temperature-chicago-winter', 'carbon-monoxide-safety-tips']
+  : ['ac-not-cooling', 'ac-freezing-up', 'prepare-ac-for-summer', 'mini-splits-for-older-homes'];
+const featuredPosts = picks.map((id) => allPosts.find((p) => p.id === id)).filter((p): p is NonNullable<typeof p> => Boolean(p));
+const steps = [
+  { icon: 'gauge' as const, t: 'We test first', d: 'Gas pressure, temperature rise, refrigerant and electrical readings, measured before any part is replaced.' },
+  { icon: 'clipboard' as const, t: 'You see the options', d: 'We explain what we found and give you choices with prices, before any work begins.' },
+  { icon: 'wrench' as const, t: 'Repair with your OK', d: 'We repair what can be repaired, and recommend replacement only when it’s unsafe or uneconomical.' },
+  { icon: 'sparkles' as const, t: 'We leave it clean', d: 'Shoe covers, protected floors, and the work area left the way we found it.' },
 ];
-const paths = [
-  { t: 'Repair', d: 'Something stopped working', links: [['Furnace repair', '/furnace-repair/'], ['Boiler repair', '/boiler-repair/'], ['AC repair', '/ac-repair/'], ['24/7 emergency', '/emergency-hvac/']] },
-  { t: 'Replace', d: 'Time for a new system', links: [['Furnace installation', '/furnace-installation/'], ['Boiler installation', '/boiler-installation/'], ['AC installation', '/ac-installation/'], ['Heat pumps', '/heat-pump-installation/']] },
-  { t: 'Maintain', d: 'Keep it running', links: [[`${business.maintenancePlanName} plan`, '/maintenance-plan/'], ['Furnace tune-up', '/furnace-tune-up/'], ['AC tune-up', '/ac-tune-up/'], ['CO safety check', '/carbon-monoxide-safety/']] },
+const triage = [
+  { t: 'No heat or furnace problem', href: '/furnace-repair/', icon: 'flame' as const },
+  { t: 'Boiler or radiator problem', href: '/boiler-repair/', icon: 'thermometer' as const },
+  { t: 'AC not cooling', href: '/ac-repair/', icon: 'snowflake' as const },
+  { t: 'Free estimate on a new system', href: '/free-estimate/', icon: 'clipboard' as const },
 ];
 const faqs = [
   { q: 'Do you offer 24/7 emergency service?', a: `Yes. Call or text ${business.phoneDisplay} any time for no heat, no cooling or other urgent HVAC problems, including nights and holidays.` },
+  { q: 'How do I book?', a: 'Use Book Online to pick a time on our scheduling page, or call or text us 24/7.' },
   { q: 'Which areas do you serve?', a: 'Chicago’s North, Northwest and West Sides and nearby suburbs including Evanston, Skokie, Wilmette, Highland Park, Des Plaines, Arlington Heights, Schaumburg and Naperville.' },
   { q: 'Are estimates free?', a: 'Estimates for new heating and cooling systems are free. Repair visits include a diagnosis, and you get the price before any repair starts.' },
-  { q: 'Do you offer financing?', a: 'Yes, for new systems, subject to credit approval.' },
   { q: 'Which brands do you work on?', a: `We service the brands common in Chicago homes, including ${business.brandsServiced.join(', ')}, and install ${business.dealerOf} equipment.` },
 ];
 ---
@@ -38,31 +51,57 @@ const faqs = [
   title={`${business.displayName} | Heating, Cooling & HVAC Repair 24/7`}
   description={`Furnace, boiler and AC repair, installation and maintenance for Chicago homes. NATE-certified, 24/7 emergency service, free estimates. ${business.phoneDisplay}.`}
 >
-  <section class="hero">
+  <section class="hero home-hero">
     <div class="container hero-grid">
-      <div>
-        <span class="eyebrow">Answering 24/7 in Chicago</span>
-        <h1>Heating and cooling for Chicago homes. One crew for both seasons.</h1>
-        <p class="lead">Furnace, boiler and air conditioning repair, installation and maintenance by certified technicians who explain your options before any work begins.</p>
-        <CallSmsCta placement="home_hero" />
-        <ul class="badge-row">
-          <li>NATE certified</li><li>EPA 608</li><li>Chicago License #{business.licenseNumber}</li><li>BBB accredited</li><li>{business.dealerOf} dealer</li>
-        </ul>
+      <div class="hero-copy">
+        <span class="eyebrow"><Icon name="clock" size={16} /> {hero.eyebrow}</span>
+        <h1>{hero.h1}</h1>
+        <p class="lead">{hero.sub}</p>
+        <CallSmsCta placement="home_hero" showBooking={false} />
+        <div class="ribbons">
+          <span class="license-ribbon"><Icon name="license" size={18} /> City of Chicago License #{business.licenseNumber}</span>
+          <ul class="badge-row">
+            <li>NATE &amp; EPA 608</li><li>BBB accredited</li><li>{business.dealerOf} dealer</li>
+          </ul>
+        </div>
       </div>
-      <div id="quote"><LeadForm funnel="quick" placement="home_hero" /></div>
+      <div class="hero-visual">
+        <div class="photo hero-photo">
+          <Image src={photos.rooftopMiniSplit.src} alt={photos.rooftopMiniSplit.alt} widths={[480, 720]} sizes="(max-width: 900px) 100vw, 40vw" loading="eager" fetchpriority="high" />
+        </div>
+        <div class="hero-card" id="quote"><LeadForm funnel="quick" placement="home_hero" /></div>
+      </div>
     </div>
+    <Skyline />
   </section>
 
   <section class="triage-wrap">
     <div class="container">
       <div class="triage card">
         <div><strong>Need service today?</strong><span>Tell us what your system is doing, and we’ll tell you the next step.</span></div>
-        <ul role="list">{triage.map((x) => <li><a href={x.href}><span aria-hidden="true">{x.icon}</span>{x.t} →</a></li>)}</ul>
+        <ul role="list">{triage.map((x) => <li><a href={x.href}><Icon name={x.icon} /> {x.t}</a></li>)}</ul>
       </div>
     </div>
   </section>
 
   <section class="section">
+    <div class="container process">
+      <div class="photo process-photo">
+        <Image src={photos.gasPressureTest.src} alt={photos.gasPressureTest.alt} widths={[400, 700]} sizes="(max-width: 900px) 100vw, 35vw" />
+      </div>
+      <div>
+        <span class="eyebrow">How every visit works</span>
+        <h2>Diagnosis first. Options and prices before any work.</h2>
+        <ol class="steps">
+          {steps.map((s, i) => (
+            <li><span class="icon-tile amber"><Icon name={s.icon} size={22} /></span><div><strong>{i + 1}. {s.t}</strong><p>{s.d}</p></div></li>
+          ))}
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
     <div class="container">
       <div class="section-head"><span class="eyebrow">What we do</span><h2>Heating, cooling and air quality for Chicago homes</h2>
         <p class="lead">Gas furnaces, hot-water and steam boilers, central air, heat pumps and ductless mini-splits, in bungalows, two-flats, greystones and suburban homes.</p></div>
@@ -70,25 +109,36 @@ const faqs = [
     </div>
   </section>
 
-  <section class="section section-alt">
-    <div class="container">
-      <div class="section-head"><span class="eyebrow">Repair, replace or maintain</span><h2>We’ll tell you straight</h2></div>
-      <div class="grid grid-3">
-        {paths.map((p) => (
-          <div class="card path">
-            <h3>{p.t}</h3><p>{p.d}</p>
-            <ul role="list">{p.links.map(([t, h]) => <li><a href={h}>{t} →</a></li>)}</ul>
-          </div>
-        ))}
+  <section class="section">
+    <div class="container boilers">
+      <div>
+        <span class="eyebrow"><Icon name="thermometer" size={16} /> Chicago boilers &amp; radiators</span>
+        <h2>Steam and hot-water heat in greystones, two-flats and bungalows</h2>
+        <p>Much of Chicago still heats with boilers. We troubleshoot pressure, air in the lines, low-water cut-offs, zone valves and circulators, and keep old radiator systems running safely.</p>
+        <ul class="link-list">
+          <li><a href="/boiler-repair/">Boiler repair <Icon name="arrow" size={16} /></a></li>
+          <li><a href="/boiler-installation/">Boiler installation <Icon name="arrow" size={16} /></a></li>
+          <li><a href="/carbon-monoxide-safety/">Carbon monoxide safety <Icon name="arrow" size={16} /></a></li>
+          <li><a href="/chicago-hvac-homeowner-guide/">Chicago homeowner’s HVAC guide <Icon name="arrow" size={16} /></a></li>
+        </ul>
+      </div>
+      <div class="photo boiler-photo">
+        <Image src={photos.boilerCirculator.src} alt={photos.boilerCirculator.alt} widths={[400, 700]} sizes="(max-width: 900px) 100vw, 35vw" />
       </div>
     </div>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <div class="section-head"><span class="eyebrow">Why {business.displayName}</span><h2>A certified, owner-led team on call every day</h2>
-        <p class="lead">Every technician is NATE and EPA 608 certified. Every visit follows the same process.</p></div>
-      <TrustBlock />
+  <section class="section section-dark crew">
+    <div class="container crew-grid">
+      <div class="photo">
+        <Image src={photos.gangwayCondenser.src} alt={photos.gangwayCondenser.alt} widths={[400, 720]} sizes="(max-width: 900px) 100vw, 40vw" />
+      </div>
+      <div>
+        <span class="eyebrow">Why {business.displayName}</span>
+        <h2>A certified, owner-led crew, on call every day</h2>
+        <p>Every technician is NATE and EPA 608 certified. We know Chicago housing, from gangway condensers to rooftop units and basement boilers.</p>
+        <TrustBlock variant="credentials" />
+      </div>
     </div>
   </section>
 
@@ -98,13 +148,23 @@ const faqs = [
 
   <section class="section">
     <div class="container">
-      <div class="section-head"><span class="eyebrow">Service areas</span><h2>Chicago neighborhoods and nearby suburbs</h2>
-        <p><a href="/hvac-chicago/">HVAC service in Chicago →</a></p></div>
+      <div class="section-head"><span class="eyebrow"><Icon name="pin" size={16} /> Service areas</span><h2>Chicago neighborhoods and nearby suburbs</h2>
+        <p><a href="/hvac-chicago/">HVAC service in Chicago</a> · <a href="/service-areas/">All service areas</a></p></div>
       <div class="grid grid-4 areas">
         {[...areasByGroup()].map(([g, list]) => (
           <div><h3>{g}</h3><ul role="list">{list.map((a) => <li><a href={`/hvac-${a.slug}/`}>{a.name}</a></li>)}</ul></div>
         ))}
       </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">From our blog</span><h2>{m >= 10 || m <= 1 ? 'Winter guides for Chicago homes' : 'Cooling guides for Chicago homes'}</h2>
+        <p><a href="/blog/">All {allPosts.length} HVAC guides <Icon name="arrow" size={16} /></a></p></div>
+      <ul class="home-posts" role="list">
+        {featuredPosts.map((p) => <li><a href={`/${p.id}/`}><span class="eyebrow">{blogCategories[p.data.category].name}</span><strong>{p.data.title}</strong><span>{p.data.description}</span></a></li>)}
+      </ul>
     </div>
   </section>
 
@@ -115,25 +175,56 @@ const faqs = [
         <span class="eyebrow">Free homeowner resource</span>
         <h2>The Chicago Homeowner’s HVAC Guide</h2>
         <p>What to do when the heat goes out, how to prepare for a cold snap or heat wave, a month-by-month maintenance calendar and carbon monoxide safety.</p>
-        <a class="btn btn-secondary" href="/chicago-hvac-homeowner-guide/">Read the guide</a>
+        <a class="btn btn-secondary" href="/chicago-hvac-homeowner-guide/">Read the guide <Icon name="arrow" size={18} /></a>
       </div>
     </div>
   </section>
 </BaseLayout>
 
 <style>
-  .triage-wrap { margin-top: -2rem; position: relative; z-index: 2; }
+  .home-hero .hero-grid { padding-bottom: 1rem; }
+  .ribbons { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; margin-top: 1.5rem; }
+  .ribbons .badge-row { margin: 0; }
+  .hero-visual { position: relative; display: grid; }
+  .hero-photo { aspect-ratio: 4 / 5; max-height: 560px; width: 78%; justify-self: end; }
+  .hero-card { position: absolute; left: 0; bottom: -1.5rem; width: min(26rem, 72%); }
+  @media (max-width: 900px) {
+    .hero-photo { width: 100%; aspect-ratio: 16 / 11; }
+    .hero-card { position: static; width: 100%; margin-top: -3rem; padding-inline: 0.75rem; }
+  }
+
+  .triage-wrap { margin-top: -1rem; position: relative; z-index: 2; }
   .triage { display: grid; grid-template-columns: 1fr 2fr; gap: 1rem 2rem; align-items: center; }
-  .triage strong { display: block; font-size: 1.15rem; color: var(--navy-900); }
+  .triage strong { display: block; font-family: var(--font-heading); font-size: 1.15rem; color: var(--navy-900); }
   .triage span { color: var(--muted); }
   .triage ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
-  .triage a { display: flex; gap: 0.5rem; align-items: center; padding: 0.75rem 1rem; border-radius: var(--radius-sm); background: var(--blue-50); font-weight: 800; text-decoration: none; color: var(--navy-900); min-height: 48px; }
-  .triage a:hover { background: #dcebf7; }
-  .triage a span { color: inherit; }
+  .triage a { display: flex; gap: 0.6rem; align-items: center; padding: 0.8rem 1rem; border-radius: var(--radius-sm); background: var(--ice); font-weight: 700; text-decoration: none; color: var(--navy-900); min-height: 52px; }
+  .triage a :global(.icon) { color: var(--cta); }
+  .triage a:hover { background: #e2ece0; }
   @media (max-width: 860px) { .triage { grid-template-columns: 1fr; } .triage-wrap { margin-top: 1.5rem; } }
-  .path ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.4rem; }
-  .path a { font-weight: 700; text-decoration: none; }
+
+  .process, .boilers, .crew-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; }
+  .boilers { grid-template-columns: 1.2fr 1fr; }
+  .process-photo, .boiler-photo { aspect-ratio: 4 / 5; max-height: 520px; }
+  .crew-grid .photo { aspect-ratio: 4 / 5; max-height: 560px; }
+  @media (max-width: 900px) {
+    .process, .boilers, .crew-grid { grid-template-columns: 1fr; }
+    .process-photo, .boiler-photo, .crew-grid .photo { aspect-ratio: 16 / 10; }
+    .boilers .photo { order: -1; }
+  }
+  .steps { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 1.1rem; }
+  .steps li { display: flex; gap: 1rem; align-items: flex-start; }
+  .steps strong { font-family: var(--font-heading); color: var(--navy-900); font-size: 1.05rem; }
+  .steps p { margin: 0.2rem 0 0; color: var(--muted); }
+  .link-list { list-style: none; padding: 0; margin: 1.25rem 0 0; display: grid; gap: 0.5rem; }
+  .link-list a { display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 800; text-decoration: none; }
+  .crew p { color: #c9d6e6; }
   .areas ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.25rem; }
   .areas h3 { font-size: 1rem; }
   .guide-cta { align-self: start; border-top: 4px solid var(--cta); }
+  .home-posts { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); }
+  .home-posts a { display: grid; gap: 0.4rem; align-content: start; height: 100%; padding: 1.25rem; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); text-decoration: none; color: var(--text); }
+  .home-posts a:hover { border-color: var(--blue-500); box-shadow: var(--shadow); }
+  .home-posts strong { font-family: var(--font-heading); color: var(--navy-900); }
+  .home-posts span:last-child { color: var(--muted); font-size: 0.9rem; }
 </style>

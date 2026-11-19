@@ -133,3 +133,23 @@ export function buildServiceSchema(opts: {
     },
   };
 }
+
+/** BlogPosting JSON-LD (Elena Brooks). Author: the founder (verified on the live About page). */
+export function buildBlogPostingSchema(opts: {
+  title: string; description: string; pageUrl: string; pubDate: Date; updatedDate?: Date; image?: string; business?: Business;
+}) {
+  const b = opts.business ?? defaultBusiness;
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: opts.title,
+    description: opts.description,
+    mainEntityOfPage: opts.pageUrl,
+    url: opts.pageUrl,
+    datePublished: opts.pubDate.toISOString().slice(0, 10),
+    dateModified: (opts.updatedDate ?? opts.pubDate).toISOString().slice(0, 10),
+    ...(opts.image && { image: opts.image }),
+    author: { '@type': 'Person', name: 'Navid', jobTitle: 'Founder, NATE-certified HVAC technician', worksFor: { '@id': businessId(b) } },
+    publisher: { '@id': businessId(b) },
+  };
+}

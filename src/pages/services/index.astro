@@ -1,0 +1,12 @@
+---
+/** All-services hub (live URL /services/). Owners: Maya Lin + Elena Brooks. */
+import SimplePage from '../../components/SimplePage.astro';
+import ServiceCards from '../../components/ServiceCards.astro';
+import TrustBlock from '../../components/TrustBlock.astro';
+import { business } from '../../data/business';
+---
+<SimplePage title={`HVAC Services in Chicago | Heating, Cooling & Air Quality | ${business.displayName}`} description={`Furnace, boiler, AC, heat pump, mini-split and indoor air quality services in Chicago and nearby suburbs. 24/7 emergency service. Call ${business.phoneDisplay}.`}
+  h1="Heating, cooling and air quality services" lead="Repair, replacement and maintenance for every system common in Chicago homes, from steam boilers to ductless mini-splits." crumb="Services" path="/services/" eyebrow="Services">
+  <section class="section"><div class="container"><ServiceCards /></div></section>
+  <section class="section section-alt"><div class="container"><TrustBlock /></div></section>
+</SimplePage>

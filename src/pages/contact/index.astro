@@ -1,0 +1,34 @@
+---
+import SimplePage from '../../components/SimplePage.astro';
+import BookingPanel from '../../components/BookingPanel.astro';
+import NapBlock from '../../components/NapBlock.astro';
+import { business } from '../../data/business';
+---
+<SimplePage title={`Contact ${business.displayName} | Chicago HVAC | ${business.phoneDisplay}`} description={`Call or text ${business.phoneDisplay} for heating and cooling service in Chicago, 24/7 for emergencies. Book online or email ${business.email}.`}
+  h1={`Contact ${business.displayName}`} lead="Call, text, book online or email. Emergency service 24/7." crumb="Contact" path="/contact/" eyebrow="Contact">
+  <section class="section">
+    <div class="container contact-grid">
+      <div class="prose">
+        <h2>Ways to reach us</h2>
+        <NapBlock showHours />
+        <p>Email is best for non-urgent questions. For no heat or no cooling, call or text.</p>
+        <h2>When you call, it helps to have</h2>
+        <ul>
+          <li>What the system is doing (or not doing) and when it started</li>
+          <li>The type of equipment (furnace, boiler, AC, heat pump, mini-split) and the brand, if you know it</li>
+          <li>Any error code or blinking light on the equipment</li>
+          <li>Your address and the best time to visit</li>
+        </ul>
+        <h2>Service area</h2>
+        <p>We come to you anywhere in our <a href="/service-areas/">service area</a>, which covers Chicago and nearby suburbs.</p>
+        <div class="callout"><strong>Smell gas or hear a CO alarm?</strong> Leave the home and call 911 or your gas utility first. Then call us.</div>
+      </div>
+      <BookingPanel funnel="quick" placement="contact" />
+    </div>
+  </section>
+</SimplePage>
+<style>
+  .contact-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start; }
+  @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; } }
+  .callout { padding: 1rem 1.1rem; border-radius: var(--radius-sm); background: #fdecec; border-left: 5px solid var(--emergency); }
+</style>

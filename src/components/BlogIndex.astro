@@ -1,0 +1,56 @@
+---
+/** Blog index + category pages. Owners: Maya Lin + Elena Brooks. */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import CallSmsCta from './CallSmsCta.astro';
+import { business } from '../data/business';
+import { blogCategories, getPosts, type BlogCategory } from '../data/blog';
+
+interface Props { category?: BlogCategory }
+const { category } = Astro.props;
+const all = await getPosts();
+const posts = category ? all.filter((p) => p.data.category === category) : all;
+const cat = category ? blogCategories[category] : undefined;
+const usedCats = (Object.keys(blogCategories) as BlogCategory[]).filter((c) => all.some((p) => p.data.category === c));
+const title = cat ? `${cat.name} Guides for Chicago Homes | ${business.displayName}` : `Chicago HVAC Blog & Homeowner Guides | ${business.displayName}`;
+const description = cat ? `${cat.blurb} Practical advice from ${business.displayName}.` : `Practical heating, cooling and air quality advice for Chicago homes, two-flats and bungalows from ${business.displayName}.`;
+---
+<BaseLayout {title} {description}>
+  <Breadcrumbs items={cat ? [{ name: 'Blog', href: '/blog/' }, { name: cat.name, href: `/blog/${category}/` }] : [{ name: 'Blog', href: '/blog/' }]} />
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">{business.displayName} blog</span>
+        <h1>{cat ? `${cat.name} guides` : 'HVAC guides for Chicago homeowners'}</h1>
+        <p class="lead">{cat ? cat.blurb : 'Straight answers on furnaces, boilers, AC, heat pumps and indoor air, written by our technicians for Chicago homes.'}</p>
+      </div>
+      <nav class="cats" aria-label="Blog categories">
+        <a href="/blog/" aria-current={!category ? 'page' : undefined}>All ({all.length})</a>
+        {usedCats.map((c) => <a href={`/blog/${c}/`} aria-current={category === c ? 'page' : undefined}>{blogCategories[c].name} ({all.filter((p) => p.data.category === c).length})</a>)}
+      </nav>
+      <ul class="posts" role="list">
+        {posts.map((p) => (
+          <li>
+            <a class="post-card" href={`/${p.id}/`}>
+              <span class="eyebrow">{blogCategories[p.data.category].name}{p.data.intent === 'emergency' ? ' · Urgent fix' : ''}</span>
+              <strong>{p.data.title}</strong>
+              <span>{p.data.description}</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+      <div class="card end"><CallSmsCta placement={`blog_index${category ? '_' + category : ''}`} heading="Rather talk to a technician? We answer 24/7." /></div>
+    </div>
+  </section>
+</BaseLayout>
+<style>
+  .cats { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 1.5rem; }
+  .cats a { padding: 0.45rem 0.9rem; border-radius: 999px; background: var(--ice); text-decoration: none; font-weight: 700; color: var(--navy-900); }
+  .cats a[aria-current] { background: var(--navy-800); color: #fff; }
+  .posts { list-style: none; padding: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); }
+  .post-card { display: grid; gap: 0.4rem; align-content: start; height: 100%; padding: 1.25rem; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); text-decoration: none; color: var(--text); }
+  .post-card:hover { border-color: var(--blue-500); box-shadow: var(--shadow); }
+  .post-card strong { font-family: var(--font-heading); color: var(--navy-900); font-size: 1.08rem; }
+  .post-card span:last-child { color: var(--muted); font-size: 0.92rem; }
+  .end { margin-top: 2rem; }
+</style>

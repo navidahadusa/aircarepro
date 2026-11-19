@@ -36,6 +36,7 @@ const pages = files.map((f) => {
     tel: (html.match(/href="tel:/g) || []).length,
     sms: (html.match(/href="sms:/g) || []).length,
     forms: (html.match(/data-lead-form/g) || []).length,
+    booking: (html.match(/data-track="click_book_online"/g) || []).length,
     h1: (html.match(/<h1[\s>]/g) || []).length,
   };
 });
@@ -50,13 +51,15 @@ const avg = (xs) => (xs.reduce((a, b) => a + b, 0) / Math.max(xs.length, 1)).toF
 const kpis = {
   pages_total: pages.length,
   pages_indexable: indexable.length,
-  area_pages: indexable.filter((p) => p.route.startsWith('/hvac-')).length,
+  area_pages: indexable.filter((p) => p.route.startsWith('/hvac-') && !p.types.includes('BlogPosting')).length,
+  blog_posts: indexable.filter((p) => p.types.includes('BlogPosting')).length,
   pages_with_HVACBusiness: has('HVACBusiness'),
   pages_with_Service_schema: has('Service'),
   pages_with_FAQPage: has('FAQPage'),
   pages_with_BreadcrumbList: has('BreadcrumbList'),
   jsonld_parse_errors: pages.reduce((a, p) => a + p.schemaErrors, 0),
   pages_with_lead_form: indexable.filter((p) => p.forms > 0).length,
+  pages_with_booking_link: indexable.filter((p) => p.booking > 0).length,
   pages_with_tel_link: indexable.filter((p) => p.tel > 0).length,
   pages_with_sms_link: indexable.filter((p) => p.sms > 0).length,
   avg_internal_links_per_page: Number(avg(indexable.map((p) => p.internal.size))),

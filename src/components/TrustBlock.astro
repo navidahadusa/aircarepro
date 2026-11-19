@@ -3,7 +3,10 @@
  * Trust signals + how-we-work process. Owner: Chloe Vance.
  * Only verified facts from business.ts. No invented stats, years or review counts.
  */
+import Icon from './Icon.astro';
 import { business } from '../data/business';
+interface Props { variant?: 'full' | 'credentials' }
+const { variant = 'full' } = Astro.props;
 const steps = [
   { t: 'Test the system', d: 'Gas pressure, temperature rise, refrigerant readings, electrical and airflow, measured before any part is replaced.' },
   { t: 'Explain what we found', d: 'You see the cause and your options, with prices, before any work begins.' },
@@ -11,29 +14,29 @@ const steps = [
   { t: 'Leave it clean', d: 'Shoe covers, protected floors, and the work area left as we found it.' },
 ];
 const creds = [
-  { icon: '🏛️', t: `City of Chicago License #${business.licenseNumber}`, d: 'Licensed for HVAC work in Chicago' },
-  { icon: '🎓', t: 'NATE-certified technicians', d: 'Industry-recognized HVAC certification' },
-  { icon: '♻️', t: 'EPA 608 certified', d: 'Legal, safe refrigerant handling' },
-  { icon: '🛡️', t: 'BBB accredited', d: 'Accredited business, Better Business Bureau' },
-  { icon: '🏭', t: `${business.dealerOf} dealer`, d: 'Factory-backed new equipment' },
-  { icon: '⏱️', t: 'Answering 24/7', d: 'Nights, weekends and holidays' },
+  { icon: 'license' as const, t: `City of Chicago License #${business.licenseNumber}`, d: 'Licensed for HVAC work in Chicago' },
+  { icon: 'award' as const, t: 'NATE-certified technicians', d: 'Industry-recognized HVAC certification' },
+  { icon: 'recycle' as const, t: 'EPA 608 certified', d: 'Legal, safe refrigerant handling' },
+  { icon: 'shield' as const, t: 'BBB accredited', d: 'Accredited business, Better Business Bureau' },
+  { icon: 'factory' as const, t: `${business.dealerOf} dealer`, d: 'Authorized dealer for new equipment' },
+  { icon: 'clock' as const, t: 'Answering 24/7', d: 'Nights, weekends and holidays' },
 ];
 ---
-<div class="trust">
+<div class:list={["trust", { only: variant === "credentials" }]}>
   <ul class="creds" role="list">
-    {creds.map((c) => <li><span aria-hidden="true">{c.icon}</span><div><strong>{c.t}</strong><small>{c.d}</small></div></li>)}
+    {creds.map((c) => <li><span class="icon-tile"><Icon name={c.icon} size={22} /></span><div><strong>{c.t}</strong><small>{c.d}</small></div></li>)}
   </ul>
-  <ol class="steps">
+  {variant === "full" && <ol class="steps">
     {steps.map((s, i) => <li><span class="num" aria-hidden="true">{i + 1}</span><div><strong>{s.t}</strong><p>{s.d}</p></div></li>)}
-  </ol>
+  </ol>}
 </div>
 
 <style>
   .trust { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); align-items: start; }
   .creds { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); }
+  .only { grid-template-columns: 1fr; }
   .creds li { display: flex; gap: 0.75rem; align-items: flex-start; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; }
-  .creds li > span { font-size: 1.5rem; }
-  .creds strong { display: block; color: var(--navy-900); }
+  .creds strong { display: block; color: var(--navy-900); font-family: var(--font-heading); }
   .creds small { color: var(--muted); }
   .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
   .steps li { display: flex; gap: 1rem; }

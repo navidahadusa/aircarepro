@@ -86,6 +86,12 @@ export interface Business {
   email: string;
   /** Online booking (Housecall Pro). */
   bookingUrl?: string;
+  /**
+   * Where leads go. 'housecall-pro' (owner decision 2026-11-19): every lead CTA sends
+   * visitors to the Housecall Pro booking link; on-page forms are not shown.
+   * 'forms' re-enables LeadForm (requires PUBLIC_LEAD_ENDPOINT).
+   */
+  leadCapture: 'housecall-pro' | 'forms';
   /** Service-area business: street address hidden on GBP → false. */
   showAddress: boolean;
   address: PostalAddress;
@@ -105,6 +111,8 @@ export interface Business {
   dealerOf?: string;
   foundingYear?: number;
   maintenancePlanName: string;
+  /** Financing lender (owner-confirmed 2026-11-19). */
+  financingPartner?: string;
   serviceCategories: ServiceCategory[];
   /** Flat list used in schema OfferCatalog. Derived from serviceCategories. */
   services: string[];
@@ -151,6 +159,7 @@ export const business: Business = {
   phoneE164: PHONE_E164,
   email: 'info@aircareprohvac.com',
   bookingUrl: 'https://book.housecallpro.com/book/Shad-Heating-and-Cooling/8d48b75104b0455da0f38ddcf1519bd3?v2=true',
+  leadCapture: 'housecall-pro',
   // Live site and schema publish no street address → service-area business.
   showAddress: false,
   address: {
@@ -224,6 +233,7 @@ export const business: Business = {
   dealerOf: 'Comfortmaker',
   foundingYear: 2026,
   maintenancePlanName: 'Comfort Club',
+  financingPartner: 'Optimus',
   serviceCategories,
   services: serviceCategories.flatMap((c) => c.services.map((s) => s.name)),
 };
@@ -245,4 +255,16 @@ export const areasByGroup = (b: Business = business) => {
     groups.set(a.group, [...(groups.get(a.group) ?? []), a]);
   }
   return groups;
+};
+
+/**
+ * Homepage hero headline. Recommended by Maya Lin, approved by Sophia Reynolds (2026-11-19).
+ * Brand-name independent. The heating message runs Nov–Feb, year-round copy the rest of the year.
+ */
+export const heroHeadline = (date = new Date()) => {
+  const m = date.getMonth(); // 0 = Jan
+  const heatingSeason = m >= 10 || m <= 1;
+  return heatingSeason
+    ? { eyebrow: 'Answering 24/7 · nights & holidays', h1: 'No heat tonight? Call or text, day or night.', sub: 'Furnaces, hot-water and steam boilers. Diagnosis first, then options and prices before any work.' }
+    : { eyebrow: 'One crew for both seasons', h1: 'Furnace, boiler and AC service from one Chicago crew.', sub: 'Diagnosis first, then options and prices before any work. Two-flats, greystones, bungalows, steam boilers. Call or text 24/7.' };
 };

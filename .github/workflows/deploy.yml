@@ -1,0 +1,63 @@
+name: Deploy to Hostinger
+
+# Publishes the built site over FTP whenever main changes (or on manual run).
+# Setup (owner, once): GitHub repo → Settings → Secrets and variables → Actions
+#   Secrets:   FTP_SERVER, FTP_USERNAME, FTP_PASSWORD   (from Hostinger hPanel → Files → FTP Accounts)
+#              LEAD_ENDPOINT (optional: form webhook URL)
+#   Variables: DEPLOY_TARGET = staging | production   (default: staging)
+#              FTP_SERVER_DIR = folder on the server, e.g. /   (the FTP account's root)
+# Until the FTP secrets exist, the build still runs and the upload step is skipped.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: deploy-hostinger
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      DEPLOY_TARGET: ${{ vars.DEPLOY_TARGET || 'staging' }}
+      HAS_FTP: ${{ secrets.FTP_SERVER != '' && secrets.FTP_USERNAME != '' && secrets.FTP_PASSWORD != '' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - name: Build
+        env:
+          PUBLIC_LEAD_ENDPOINT: ${{ secrets.LEAD_ENDPOINT }}
+          # Analytics only on the real site, so test visits don't pollute GA4/Ads.
+          PUBLIC_GTM_ID: ${{ (vars.DEPLOY_TARGET || 'staging') == 'production' && 'GTM-K3PBQCR9' || '' }}
+        run: npm run build
+      - name: Add server config for ${{ env.DEPLOY_TARGET }}
+        run: |
+          cp "deploy/htaccess.${DEPLOY_TARGET}" dist/.htaccess
+          if [ "$DEPLOY_TARGET" != "production" ]; then
+            printf 'User-agent: *\nDisallow: /\n' > dist/robots.txt
+          fi
+          rm -rf dist/.prerender
+      - name: Upload to Hostinger (FTP)
+        if: env.HAS_FTP == 'true'
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./dist/
+          server-dir: ${{ vars.FTP_SERVER_DIR || './' }}
+      - name: FTP not configured yet
+        if: env.HAS_FTP != 'true'
+        run: echo "::notice::Build OK. Add FTP_SERVER, FTP_USERNAME and FTP_PASSWORD secrets to enable publishing to Hostinger."

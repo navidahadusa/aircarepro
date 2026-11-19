@@ -5,7 +5,11 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import CallSmsCta from '../../components/CallSmsCta.astro';
 import FaqSection from '../../components/FaqSection.astro';
-import { business } from '../../data/business';
+import { business, telHref } from '../../data/business';
+import Icon from '../../components/Icon.astro';
+import TrustBlock from '../../components/TrustBlock.astro';
+import { Image } from 'astro:assets';
+import { photos } from '../../data/photos';
 const faqs = [
   { q: 'What counts as an HVAC emergency?', a: 'No heat in cold weather, no cooling during a heat wave (especially with infants, seniors or anyone with health conditions), water leaking from equipment, a burning smell, or a boiler that won’t fire.' },
   { q: 'What should I do while I wait with no heat?', a: 'Check the thermostat and breaker, replace a clogged filter if you can, keep interior doors open and faucets on exterior walls dripping. Never use a gas oven or grill to heat the home.' },
@@ -20,9 +24,9 @@ const faqs = [
       <div>
         <span class="eyebrow">Emergency dispatch · 24/7</span>
         <h1>24/7 Emergency HVAC Service in Chicago</h1>
-        <p class="lead">Calling is the fastest way to reach a technician, any time, nights and holidays included. Can’t talk right now? Send a dispatch request and we’ll call you back.</p>
-        <a class="btn btn-emergency big" href={`tel:${business.phoneE164}`} data-track="click_to_call" data-placement="emergency_hero_big">📞 Call {business.phoneDisplay} now</a>
-        <CallSmsCta placement="emergency_hero" showBooking={false} />
+        <p class="lead">Calling is the fastest way to reach a technician, any time, nights and holidays included. Can’t talk right now? Text us, or book a visit online.</p>
+        <a class="btn btn-emergency big" href={telHref()} data-track="click_to_call" data-placement="emergency_hero_big"><Icon name="phone" /> Call {business.phoneDisplay} now</a>
+        <CallSmsCta placement="emergency_hero" showCall={false} />
         <div class="safety">
           <strong>⚠️ Smell gas or hear a CO alarm?</strong> Leave the home and call 911 or your gas utility first. Then call us.
         </div>
@@ -30,9 +34,29 @@ const faqs = [
       <div id="dispatch"><LeadForm funnel="emergency" placement="emergency_hero" /></div>
     </div>
   </section>
+  <section class="section">
+    <div class="container em-grid">
+      <div class="photo em-photo"><Image src={photos.furnaceDiagnostics.src} alt={photos.furnaceDiagnostics.alt} widths={[400, 700]} sizes="(max-width: 900px) 100vw, 35vw" /></div>
+      <div>
+        <span class="eyebrow">What happens when you call</span>
+        <h2>From your call to heat (or cooling) back on</h2>
+        <ol class="em-steps">
+          <li><strong>You call or text {business.phoneDisplay}.</strong> Tell us what the system is doing and any error code you see.</li>
+          <li><strong>We talk you through safety first.</strong> Gas smell or CO alarm? Leave the home and call 911 or your gas utility.</li>
+          <li><strong>A technician comes out and tests the system.</strong> Gas pressure, ignition, venting, refrigerant and electrical readings.</li>
+          <li><strong>You get options and the price before any repair.</strong> You decide; we repair only with your approval.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <section class="section section-alt"><div class="container"><TrustBlock /></div></section>
   <section class="section"><div class="container prose"><FaqSection faqs={faqs} heading="Emergency questions" /></div></section>
 </BaseLayout>
 <style>
+  .em-grid { display: grid; grid-template-columns: 1fr 1.3fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: center; }
+  .em-photo { aspect-ratio: 4 / 5; max-height: 480px; }
+  .em-steps { padding-left: 1.25rem; display: grid; gap: 0.8rem; }
+  @media (max-width: 900px) { .em-grid { grid-template-columns: 1fr; } .em-photo { aspect-ratio: 16 / 10; } }
   .big { font-size: 1.2rem; padding: 1rem 1.5rem; margin-bottom: 1rem; }
   .safety { margin-top: 1.5rem; padding: 1rem; border-radius: var(--radius-sm); background: rgb(198 40 40 / 0.18); border: 1px solid rgb(255 255 255 / 0.25); color: #fff; }
 </style>

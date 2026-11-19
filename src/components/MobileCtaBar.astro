@@ -3,18 +3,19 @@
  * Mobile sticky Call / Text / Quote bar (thumb zone). Owners: Chloe Vance + Rachel Morgan.
  * Visible ≤ 760px only. Every button is tracked with placement "mobile_bar".
  */
+import Icon from './Icon.astro';
 import { business, telHref, smsHref } from '../data/business';
 ---
 
 <nav class="mobile-cta" aria-label="Quick contact">
   <a class="mc-call" href={telHref()} data-track="click_to_call" data-placement="mobile_bar">
-    <span aria-hidden="true">📞</span> Call 24/7
+    <Icon name="phone" size={20} /> Call 24/7
   </a>
   <a class="mc-sms" href={smsHref(business, 'Hi, I need HVAC help at ')} data-track="click_to_sms" data-placement="mobile_bar">
-    <span aria-hidden="true">💬</span> Text
+    <Icon name="sms" size={20} /> Text
   </a>
-  <a class="mc-quote" href="/free-estimate/#quote">
-    <span aria-hidden="true">⚡</span> Quote
+  <a class="mc-quote" href={business.bookingUrl} target="_blank" rel="noopener" data-track="click_book_online" data-placement="mobile_bar">
+    <Icon name="calendar" size={20} /> Book
   </a>
 </nav>
 
