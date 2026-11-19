@@ -1,0 +1,49 @@
+---
+/** Main navigation list, rendered in the desktop bar and inside the mobile menu. Owner: Chloe Vance. */
+import { business } from '../data/business';
+import { categories, servicesIn } from '../data/services';
+interface Props { stacked?: boolean }
+const { stacked = false } = Astro.props;
+const currentPath = Astro.url.pathname;
+const navCats = categories.map((c) => ({ ...c, items: servicesIn(c.name) }));
+---
+<ul class="nav-list" class:list={{ stacked }}>
+  {navCats.map((c) => (
+    <li class="has-menu">
+      <details>
+        <summary>{c.name}</summary>
+        <div class="mega">
+          <a class="mega-head" href={`/${c.slug}/`}>All {c.name} services →</a>
+          <ul>
+            {c.items.map((s) => (
+              <li><a href={`/${s.slug}/`} aria-current={currentPath === `/${s.slug}/` ? 'page' : undefined}><strong>{s.name}</strong><span>{s.card}</span></a></li>
+            ))}
+          </ul>
+        </div>
+      </details>
+    </li>
+  ))}
+  <li><a href="/service-areas/">Service Areas</a></li>
+  <li><a href="/maintenance-plan/">{business.maintenancePlanName}</a></li>
+  <li class:list={{ "only-stacked": !stacked }}><a href="/chicago-hvac-homeowner-guide/">Homeowner Guide</a></li>
+  <li><a href="/emergency-hvac/" class="nav-emergency">{stacked ? "24/7 Emergency" : "Emergency"}</a></li>
+</ul>
+
+<style>
+  .nav-list { display: flex; align-items: center; gap: 0.25rem; list-style: none; margin: 0; padding: 0; }
+  .only-stacked { display: none; }
+  .nav-list > li > a, .has-menu summary { display: block; white-space: nowrap; padding: 0.55rem 0.6rem; font-weight: 700; color: var(--navy-900); text-decoration: none; border-radius: var(--radius-sm); cursor: pointer; list-style: none; }
+  .has-menu summary::-webkit-details-marker { display: none; }
+  .has-menu summary::after { content: '▾'; margin-left: 0.3rem; font-size: 0.8em; color: var(--muted); }
+  .nav-list > li > a:hover, .has-menu summary:hover { background: var(--blue-50); }
+  .nav-emergency { color: var(--emergency) !important; }
+  .has-menu { position: relative; }
+  .mega { position: absolute; top: calc(100% + 0.5rem); left: 0; width: 22rem; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 0.75rem; z-index: 50; }
+  .mega ul { list-style: none; margin: 0; padding: 0; }
+  .mega li a { display: grid; padding: 0.5rem 0.6rem; border-radius: var(--radius-sm); text-decoration: none; color: var(--text); }
+  .mega li a:hover, .mega li a[aria-current] { background: var(--blue-50); }
+  .mega li span { font-size: 0.85rem; color: var(--muted); }
+  .mega-head { display: block; font-weight: 800; padding: 0.5rem 0.6rem; text-decoration: none; }
+  .stacked { flex-direction: column; align-items: stretch; }
+  .stacked .mega { position: static; width: auto; box-shadow: none; border: 0; padding: 0 0 0 0.75rem; }
+</style>

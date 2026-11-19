@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import CallSmsCta from '../../components/CallSmsCta.astro';
+import { business } from '../../data/business';
+---
+
+<BaseLayout title={`Thank You | ${business.displayName}`} description="We received your request." noindex>
+  <section class="section container">
+    <h1>Thanks, we got your request!</h1>
+    <p id="ty-msg" data-phone={business.phoneDisplay}>A member of our team will contact you shortly.</p>
+    <CallSmsCta placement="thank_you" sub="Need us sooner?" />
+  </section>
+  <script>
+    const funnel = new URLSearchParams(location.search).get('funnel');
+    const msg: Record<string, string> = {
+      emergency: 'A technician will call you back as soon as possible. Keep your phone nearby, and call PHONE if it can’t wait.',
+      quote: 'We’ll reach out to schedule your free estimate.',
+      maintenance: 'Welcome to the Comfort Club! We’ll contact you to confirm your tune-up date.',
+    };
+    const el = document.getElementById('ty-msg');
+    if (el && funnel && msg[funnel]) el.textContent = msg[funnel].replace('PHONE', el.dataset.phone ?? '');
+  </script>
+</BaseLayout>

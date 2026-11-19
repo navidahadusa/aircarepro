@@ -1,0 +1,42 @@
+---
+/**
+ * Trust signals + how-we-work process. Owner: Chloe Vance.
+ * Only verified facts from business.ts. No invented stats, years or review counts.
+ */
+import { business } from '../data/business';
+const steps = [
+  { t: 'Test the system', d: 'Gas pressure, temperature rise, refrigerant readings, electrical and airflow, measured before any part is replaced.' },
+  { t: 'Explain what we found', d: 'You see the cause and your options, with prices, before any work begins.' },
+  { t: 'Repair with your approval', d: 'We repair what can be repaired and recommend replacement only when it’s unsafe or uneconomical.' },
+  { t: 'Leave it clean', d: 'Shoe covers, protected floors, and the work area left as we found it.' },
+];
+const creds = [
+  { icon: '🏛️', t: `City of Chicago License #${business.licenseNumber}`, d: 'Licensed for HVAC work in Chicago' },
+  { icon: '🎓', t: 'NATE-certified technicians', d: 'Industry-recognized HVAC certification' },
+  { icon: '♻️', t: 'EPA 608 certified', d: 'Legal, safe refrigerant handling' },
+  { icon: '🛡️', t: 'BBB accredited', d: 'Accredited business, Better Business Bureau' },
+  { icon: '🏭', t: `${business.dealerOf} dealer`, d: 'Factory-backed new equipment' },
+  { icon: '⏱️', t: 'Answering 24/7', d: 'Nights, weekends and holidays' },
+];
+---
+<div class="trust">
+  <ul class="creds" role="list">
+    {creds.map((c) => <li><span aria-hidden="true">{c.icon}</span><div><strong>{c.t}</strong><small>{c.d}</small></div></li>)}
+  </ul>
+  <ol class="steps">
+    {steps.map((s, i) => <li><span class="num" aria-hidden="true">{i + 1}</span><div><strong>{s.t}</strong><p>{s.d}</p></div></li>)}
+  </ol>
+</div>
+
+<style>
+  .trust { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); align-items: start; }
+  .creds { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); }
+  .creds li { display: flex; gap: 0.75rem; align-items: flex-start; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; }
+  .creds li > span { font-size: 1.5rem; }
+  .creds strong { display: block; color: var(--navy-900); }
+  .creds small { color: var(--muted); }
+  .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
+  .steps li { display: flex; gap: 1rem; }
+  .steps p { margin: 0.2rem 0 0; color: var(--muted); }
+  .num { display: grid; place-items: center; width: 2.2rem; height: 2.2rem; border-radius: 50%; background: var(--navy-800); color: #fff; font-weight: 900; flex: none; }
+</style>

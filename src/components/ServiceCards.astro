@@ -1,0 +1,52 @@
+---
+/** Service cards grouped by category. Owners: Chloe Vance (design) + Maya Lin (content). */
+import { categories, servicesIn, type Service } from '../data/services';
+
+interface Props {
+  /** Show a flat list of specific services instead of the three category groups. */
+  items?: Service[];
+  /** Append to links on area pages to keep users in local context (e.g. analytics). */
+  compact?: boolean;
+}
+const { items, compact = false } = Astro.props;
+const icons: Record<string, string> = { Heating: '🔥', Cooling: '❄️', 'Air Quality': '🌿' };
+---
+{items ? (
+  <ul class="svc-grid flat" role="list">
+    {items.map((s) => (
+      <li><a class="svc-card" href={`/${s.slug}/`}><span class="ico" aria-hidden="true">{icons[s.category]}</span><strong>{s.name}</strong><span>{s.card}</span><em>Learn more →</em></a></li>
+    ))}
+  </ul>
+) : (
+  <div class="cat-grid">
+    {categories.map((c) => (
+      <div class="cat card">
+        <div class="cat-head"><span class="ico" aria-hidden="true">{icons[c.name]}</span><h3><a href={`/${c.slug}/`}>{c.name}</a></h3></div>
+        {!compact && <p>{c.headline}</p>}
+        <ul role="list">
+          {servicesIn(c.name).map((s) => <li><a href={`/${s.slug}/`}>{s.name}</a><span>{s.card}</span></li>)}
+        </ul>
+        <a class="btn btn-secondary" href={`/${c.slug}/`}>All {c.name} services</a>
+      </div>
+    ))}
+  </div>
+)}
+
+<style>
+  .cat-grid { display: grid; gap: 1.25rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); }
+  .cat { display: flex; flex-direction: column; }
+  .cat-head { display: flex; align-items: center; gap: 0.6rem; }
+  .cat-head h3 { margin: 0; } .cat-head a { color: var(--navy-900); text-decoration: none; }
+  .ico { display: inline-grid; place-items: center; width: 2.6rem; height: 2.6rem; border-radius: 12px; background: var(--orange-50); font-size: 1.3rem; flex: none; }
+  .cat ul { list-style: none; padding: 0; margin: 1rem 0 1.25rem; display: grid; gap: 0.5rem; flex: 1; }
+  .cat li { display: grid; border-bottom: 1px dashed var(--border); padding-bottom: 0.45rem; }
+  .cat li a { font-weight: 800; text-decoration: none; }
+  .cat li span { font-size: 0.88rem; color: var(--muted); }
+  .cat .btn { align-self: flex-start; }
+  .svc-grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); }
+  .svc-card { display: grid; gap: 0.35rem; height: 100%; padding: 1.25rem; border: 1px solid var(--border); border-radius: var(--radius); background: #fff; text-decoration: none; color: var(--text); transition: border-color 0.15s, box-shadow 0.15s; }
+  .svc-card:hover { border-color: var(--blue-500); box-shadow: var(--shadow); color: var(--text); }
+  .svc-card strong { color: var(--navy-900); font-size: 1.05rem; }
+  .svc-card span:not(.ico) { color: var(--muted); font-size: 0.9rem; }
+  .svc-card em { font-style: normal; font-weight: 800; color: var(--brand-accent); font-size: 0.9rem; }
+</style>

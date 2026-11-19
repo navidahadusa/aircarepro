@@ -1,0 +1,37 @@
+---
+/**
+ * Reviews / social proof block. Owners: Chloe Vance + Hannah Carter.
+ * Never fabricates reviews, ratings or counts. Platform links appear automatically
+ * once their URLs are added to business.reviewProfiles (pending the rebrand name updates).
+ */
+import { business, telHref } from '../data/business';
+---
+<div class="reviews">
+  <div>
+    <span class="eyebrow">Reviews</span>
+    <h2>Real reviews, on independent platforms</h2>
+    <p>Reviews of {business.displayName} are written by customers on Google, Yelp and the BBB. We don’t edit, filter or write reviews, and we read and respond to every one.</p>
+    <p>Had a visit from us? You’ll get a review link by text or email after your appointment. Something not right? Call <a href={telHref()} data-track="click_to_call" data-placement="reviews">{business.phoneDisplay}</a> and we’ll make it right.</p>
+  </div>
+  <ul class="platforms" role="list">
+    {business.reviewProfiles.map((p) => (
+      <li class:list={['platform', { pending: !p.url }]}>
+        {p.url ? (
+          <a href={p.url} rel="noopener" target="_blank"><strong>{p.platform}</strong><span>Read our reviews →</span></a>
+        ) : (
+          <div><strong>{p.platform}</strong><span>{p.platform === 'BBB' ? 'BBB accredited business' : 'Verified customer reviews'}</span></div>
+        )}
+      </li>
+    ))}
+  </ul>
+</div>
+
+<style>
+  .reviews { display: grid; gap: 2rem; grid-template-columns: 1.3fr 1fr; align-items: center; }
+  @media (max-width: 860px) { .reviews { grid-template-columns: 1fr; } }
+  .platforms { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem; }
+  .platform > a, .platform > div { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: 1.1rem 1.25rem; border-radius: var(--radius); background: #fff; border: 1px solid var(--border); text-decoration: none; color: var(--text); }
+  .platform > a:hover { border-color: var(--blue-500); box-shadow: var(--shadow); }
+  .platform strong { font-size: 1.15rem; color: var(--navy-900); }
+  .platform span { font-size: 0.9rem; color: var(--muted); }
+</style>

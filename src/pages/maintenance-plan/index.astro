@@ -1,0 +1,37 @@
+---
+/** Comfort Club signup. Owners: Rachel Morgan + Maya Lin. */
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import LeadForm from '../../components/LeadForm.astro';
+import FaqSection from '../../components/FaqSection.astro';
+import { business } from '../../data/business';
+const plan = business.maintenancePlanName;
+const faqs = [
+  { q: 'When are the tune-ups scheduled?', a: 'We contact you in spring for the AC visit and in fall for the heating visit.' },
+  { q: 'Does the plan cover parts?', a: 'The plan covers the two tune-ups. Repairs are discounted for members and always quoted before work.' },
+  { q: 'I have a boiler or heat pump. Is that covered?', a: 'Yes. The plan’s visits cover the equipment you have.' },
+];
+---
+<BaseLayout title={`${plan} HVAC Maintenance Plan | ${business.displayName}`}
+  description={`Two tune-ups a year (spring AC, fall furnace), priority appointments and member repair discounts for Chicago homeowners. Join the ${plan}.`}>
+  <Breadcrumbs items={[{ name: plan, href: '/maintenance-plan/' }]} />
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Maintenance plan</span>
+        <h1>{plan} Maintenance Plan</h1>
+        <p class="lead">Two tune-ups a year, priority appointments and member repair discounts.</p>
+        <ul class="check-list light">
+          <li><strong>Spring AC tune-up:</strong> coil cleaning, capacitor and refrigerant checks, drain flush</li>
+          <li><strong>Fall furnace or boiler tune-up:</strong> ignition, flame sensor, venting, safety controls and a carbon monoxide check</li>
+          <li>Priority appointments when you need a repair</li>
+          <li>Member discounts on repairs</li>
+        </ul>
+        <!-- TODO(owner): publish membership pricing. "Call for pricing" adds friction. -->
+      </div>
+      <div id="quote"><LeadForm funnel="maintenance" placement="maintenance_hero" /></div>
+    </div>
+  </section>
+  <section class="section"><div class="container prose"><FaqSection faqs={faqs} heading={`${plan} questions`} /></div></section>
+</BaseLayout>
+<style>.light li { color: #e8f0f8; } .light strong { color: #fff; }</style>

@@ -1,0 +1,28 @@
+---
+/** Visible breadcrumbs + BreadcrumbList schema. Owner: Elena Brooks. */
+import JsonLd from './JsonLd.astro';
+import { business } from '../data/business';
+
+interface Props { items: Array<{ name: string; href: string }> }
+const items = [{ name: 'Home', href: '/' }, ...Astro.props.items];
+const base = business.url.replace(/\/$/, '');
+const schema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: items.map((it, i) => ({ '@type': 'ListItem', position: i + 1, name: it.name, item: `${base}${it.href}` })),
+};
+---
+<nav class="crumbs container" aria-label="Breadcrumb">
+  <ol>
+    {items.map((it, i) => (
+      <li>{i === items.length - 1 ? <span aria-current="page">{it.name}</span> : <a href={it.href}>{it.name}</a>}</li>
+    ))}
+  </ol>
+</nav>
+<JsonLd data={schema} />
+
+<style>
+  .crumbs ol { list-style: none; display: flex; flex-wrap: wrap; gap: 0.25rem; padding: 0.75rem 0 0; margin: 0; font-size: 0.85rem; color: var(--muted); }
+  .crumbs li + li::before { content: '›'; margin: 0 0.4rem; }
+  .crumbs a { color: var(--muted); }
+</style>

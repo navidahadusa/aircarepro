@@ -1,0 +1,37 @@
+---
+/**
+ * Mobile sticky Call / Text / Quote bar (thumb zone). Owners: Chloe Vance + Rachel Morgan.
+ * Visible ≤ 760px only. Every button is tracked with placement "mobile_bar".
+ */
+import { business, telHref, smsHref } from '../data/business';
+---
+
+<nav class="mobile-cta" aria-label="Quick contact">
+  <a class="mc-call" href={telHref()} data-track="click_to_call" data-placement="mobile_bar">
+    <span aria-hidden="true">📞</span> Call 24/7
+  </a>
+  <a class="mc-sms" href={smsHref(business, 'Hi, I need HVAC help at ')} data-track="click_to_sms" data-placement="mobile_bar">
+    <span aria-hidden="true">💬</span> Text
+  </a>
+  <a class="mc-quote" href="/free-estimate/#quote">
+    <span aria-hidden="true">⚡</span> Quote
+  </a>
+</nav>
+
+<style>
+  .mobile-cta { display: none; }
+  @media (max-width: 760px) {
+    .mobile-cta {
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
+      display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 0.5rem;
+      padding: 0.6rem 0.75rem calc(0.6rem + env(safe-area-inset-bottom));
+      background: rgb(10 31 51 / 0.97); box-shadow: 0 -6px 20px rgb(0 0 0 / 0.2);
+    }
+    .mobile-cta a {
+      display: flex; align-items: center; justify-content: center; gap: 0.35rem;
+      min-height: 52px; border-radius: 12px; font-weight: 800; text-decoration: none; color: #fff;
+      border: 2px solid rgb(255 255 255 / 0.35);
+    }
+    .mc-call { background: var(--cta); border-color: var(--cta) !important; }
+  }
+</style>

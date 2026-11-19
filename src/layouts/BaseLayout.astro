@@ -1,0 +1,81 @@
+---
+/**
+ * Base layout. Structure owned by Sophia Reynolds (Marketing Manager) and Chloe Vance (UI/UX & CRO).
+ * Site-wide: HVACBusiness + WebSite JSON-LD (Elena Brooks), emergency strip, sticky header,
+ * footer with canonical NAP (Hannah Carter), mobile Call/Text/Quote bar and click tracking (Rachel Morgan).
+ */
+import '../styles/global.css';
+import LocalBusinessSchema from '../components/LocalBusinessSchema.astro';
+import JsonLd from '../components/JsonLd.astro';
+import EmergencyBanner from '../components/EmergencyBanner.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import MobileCtaBar from '../components/MobileCtaBar.astro';
+import { business } from '../data/business';
+
+interface Props {
+  title: string;
+  description: string;
+  noindex?: boolean;
+  hideBanner?: boolean;
+}
+const { title, description, noindex = false, hideBanner = false } = Astro.props;
+const canonical = new URL(Astro.url.pathname, Astro.site ?? business.url).toString();
+const gtmId = import.meta.env.PUBLIC_GTM_ID;
+const base = business.url.replace(/\/$/, '');
+const website = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  '@id': `${base}/#website`,
+  url: base,
+  name: business.name,
+  alternateName: business.displayName,
+  publisher: { '@id': `${base}/#business` },
+};
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+    {noindex && <meta name="robots" content="noindex" />}
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content={business.displayName} />
+    <meta name="theme-color" content="#0a1f33" />
+    {gtmId && (
+      <script is:inline define:vars={{ gtmId }}>
+        window.dataLayer = window.dataLayer || [];
+        (function(w,d,s,l,i){w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+        var f=d.getElementsByTagName(s)[0],j=d.createElement(s);j.async=true;
+        j.src='https://www.googletagmanager.com/gtm.js?id='+i;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer',gtmId);
+      </script>
+    )}
+    <LocalBusinessSchema pageUrl={canonical} />
+    <JsonLd data={website} />
+    <slot name="head" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    {!hideBanner && <EmergencyBanner />}
+    <SiteHeader />
+    <main id="main">
+      <slot />
+    </main>
+    <SiteFooter />
+    <MobileCtaBar />
+    <script>
+      import { bindClickTracking, captureAttribution } from '../lib/tracking';
+      captureAttribution();
+      bindClickTracking();
+    </script>
+  </body>
+</html>

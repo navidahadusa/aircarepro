@@ -1,0 +1,50 @@
+---
+/**
+ * Emergency dispatch strip, pinned above the header on every page.
+ * Owners: Chloe Vance (design) + Rachel Morgan (tracking).
+ * Mobile keeps it to one line; the full call/text/quote buttons live in MobileCtaBar.
+ */
+import { business, telHref, smsHref } from '../data/business';
+
+interface Props {
+  message?: string;
+  force?: boolean;
+}
+const {
+  message = 'No heat? No AC? Boiler down? Emergency dispatch 24/7, nights & holidays.',
+  force = false,
+} = Astro.props;
+const visible = force || business.emergency24x7;
+---
+
+{visible && (
+  <aside class="emergency-banner" aria-label="Emergency service">
+    <div class="container eb-inner">
+      <span class="eb-msg"><span class="eb-dot" aria-hidden="true"></span><span class="eb-long">{message}</span>
+        <a class="eb-short" href={telHref()} data-track="click_to_call" data-placement="emergency_banner_mobile">24/7 emergency: {business.phoneDisplay}</a></span>
+      <span class="eb-actions">
+        <a class="eb-call" href={telHref()} data-track="click_to_call" data-placement="emergency_banner">Call {business.phoneDisplay}</a>
+        <a class="eb-link" href={smsHref(business, 'EMERGENCY: I need HVAC service at ')} data-track="click_to_sms" data-placement="emergency_banner">Text</a>
+        <a class="eb-link" href="/emergency-hvac/#dispatch">Request dispatch →</a>
+      </span>
+    </div>
+  </aside>
+)}
+
+<style>
+  .emergency-banner { background: var(--emergency); color: #fff; font-weight: 700; font-size: 0.92rem; }
+  .eb-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.4rem 1.25rem; padding-block: 0.45rem; }
+  .eb-msg { display: inline-flex; align-items: center; gap: 0.5rem; }
+  .eb-dot { width: 0.55rem; height: 0.55rem; border-radius: 50%; background: #fff; animation: pulse 1.6s infinite; flex: none; }
+  .eb-actions { display: inline-flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
+  .eb-actions a { color: #fff; text-decoration: none; }
+  .eb-call { background: #fff; color: var(--emergency) !important; padding: 0.25rem 0.8rem; border-radius: 999px; font-weight: 900; }
+  .eb-link { text-decoration: underline !important; text-underline-offset: 3px; }
+  @keyframes pulse { 50% { opacity: 0.3; } }
+  .eb-short { display: none; color: #fff; text-decoration: none; }
+  @media (max-width: 760px) {
+    .emergency-banner { font-size: 0.88rem; }
+    .eb-actions, .eb-long { display: none; }
+    .eb-short { display: inline; }
+  }
+</style>

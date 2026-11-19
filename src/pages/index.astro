@@ -1,0 +1,139 @@
+---
+/**
+ * Homepage, Sprint 1 redesign. Owners: Sophia Reynolds + Chloe Vance.
+ * Fixes from the live-site audit: on-page fast-quote form above the fold, tap-to-text,
+ * clear repair/replace/maintain paths, credential trust block, review platforms,
+ * service-area directory and FAQ with schema.
+ */
+import BaseLayout from '../layouts/BaseLayout.astro';
+import LeadForm from '../components/LeadForm.astro';
+import CallSmsCta from '../components/CallSmsCta.astro';
+import ServiceCards from '../components/ServiceCards.astro';
+import TrustBlock from '../components/TrustBlock.astro';
+import ReviewsBlock from '../components/ReviewsBlock.astro';
+import FaqSection from '../components/FaqSection.astro';
+import { business, areasByGroup } from '../data/business';
+
+const triage = [
+  { t: 'No heat or furnace problem', href: '/furnace-repair/', icon: '🔥' },
+  { t: 'Boiler or radiator problem', href: '/boiler-repair/', icon: '♨️' },
+  { t: 'AC not cooling', href: '/ac-repair/', icon: '❄️' },
+  { t: 'Free estimate on a new system', href: '/free-estimate/', icon: '📝' },
+];
+const paths = [
+  { t: 'Repair', d: 'Something stopped working', links: [['Furnace repair', '/furnace-repair/'], ['Boiler repair', '/boiler-repair/'], ['AC repair', '/ac-repair/'], ['24/7 emergency', '/emergency-hvac/']] },
+  { t: 'Replace', d: 'Time for a new system', links: [['Furnace installation', '/furnace-installation/'], ['Boiler installation', '/boiler-installation/'], ['AC installation', '/ac-installation/'], ['Heat pumps', '/heat-pump-installation/']] },
+  { t: 'Maintain', d: 'Keep it running', links: [[`${business.maintenancePlanName} plan`, '/maintenance-plan/'], ['Furnace tune-up', '/furnace-tune-up/'], ['AC tune-up', '/ac-tune-up/'], ['CO safety check', '/carbon-monoxide-safety/']] },
+];
+const faqs = [
+  { q: 'Do you offer 24/7 emergency service?', a: `Yes. Call or text ${business.phoneDisplay} any time for no heat, no cooling or other urgent HVAC problems, including nights and holidays.` },
+  { q: 'Which areas do you serve?', a: 'Chicago’s North, Northwest and West Sides and nearby suburbs including Evanston, Skokie, Wilmette, Highland Park, Des Plaines, Arlington Heights, Schaumburg and Naperville.' },
+  { q: 'Are estimates free?', a: 'Estimates for new heating and cooling systems are free. Repair visits include a diagnosis, and you get the price before any repair starts.' },
+  { q: 'Do you offer financing?', a: 'Yes, for new systems, subject to credit approval.' },
+  { q: 'Which brands do you work on?', a: `We service the brands common in Chicago homes, including ${business.brandsServiced.join(', ')}, and install ${business.dealerOf} equipment.` },
+];
+---
+
+<BaseLayout
+  title={`${business.displayName} | Heating, Cooling & HVAC Repair 24/7`}
+  description={`Furnace, boiler and AC repair, installation and maintenance for Chicago homes. NATE-certified, 24/7 emergency service, free estimates. ${business.phoneDisplay}.`}
+>
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow">Answering 24/7 in Chicago</span>
+        <h1>Heating and cooling for Chicago homes. One crew for both seasons.</h1>
+        <p class="lead">Furnace, boiler and air conditioning repair, installation and maintenance by certified technicians who explain your options before any work begins.</p>
+        <CallSmsCta placement="home_hero" />
+        <ul class="badge-row">
+          <li>NATE certified</li><li>EPA 608</li><li>Chicago License #{business.licenseNumber}</li><li>BBB accredited</li><li>{business.dealerOf} dealer</li>
+        </ul>
+      </div>
+      <div id="quote"><LeadForm funnel="quick" placement="home_hero" /></div>
+    </div>
+  </section>
+
+  <section class="triage-wrap">
+    <div class="container">
+      <div class="triage card">
+        <div><strong>Need service today?</strong><span>Tell us what your system is doing, and we’ll tell you the next step.</span></div>
+        <ul role="list">{triage.map((x) => <li><a href={x.href}><span aria-hidden="true">{x.icon}</span>{x.t} →</a></li>)}</ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">What we do</span><h2>Heating, cooling and air quality for Chicago homes</h2>
+        <p class="lead">Gas furnaces, hot-water and steam boilers, central air, heat pumps and ductless mini-splits, in bungalows, two-flats, greystones and suburban homes.</p></div>
+      <ServiceCards />
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Repair, replace or maintain</span><h2>We’ll tell you straight</h2></div>
+      <div class="grid grid-3">
+        {paths.map((p) => (
+          <div class="card path">
+            <h3>{p.t}</h3><p>{p.d}</p>
+            <ul role="list">{p.links.map(([t, h]) => <li><a href={h}>{t} →</a></li>)}</ul>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Why {business.displayName}</span><h2>A certified, owner-led team on call every day</h2>
+        <p class="lead">Every technician is NATE and EPA 608 certified. Every visit follows the same process.</p></div>
+      <TrustBlock />
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container"><ReviewsBlock /></div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head"><span class="eyebrow">Service areas</span><h2>Chicago neighborhoods and nearby suburbs</h2>
+        <p><a href="/hvac-chicago/">HVAC service in Chicago →</a></p></div>
+      <div class="grid grid-4 areas">
+        {[...areasByGroup()].map(([g, list]) => (
+          <div><h3>{g}</h3><ul role="list">{list.map((a) => <li><a href={`/hvac-${a.slug}/`}>{a.name}</a></li>)}</ul></div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt">
+    <div class="container grid grid-2">
+      <div class="prose"><FaqSection faqs={faqs} /></div>
+      <div class="card guide-cta">
+        <span class="eyebrow">Free homeowner resource</span>
+        <h2>The Chicago Homeowner’s HVAC Guide</h2>
+        <p>What to do when the heat goes out, how to prepare for a cold snap or heat wave, a month-by-month maintenance calendar and carbon monoxide safety.</p>
+        <a class="btn btn-secondary" href="/chicago-hvac-homeowner-guide/">Read the guide</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .triage-wrap { margin-top: -2rem; position: relative; z-index: 2; }
+  .triage { display: grid; grid-template-columns: 1fr 2fr; gap: 1rem 2rem; align-items: center; }
+  .triage strong { display: block; font-size: 1.15rem; color: var(--navy-900); }
+  .triage span { color: var(--muted); }
+  .triage ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
+  .triage a { display: flex; gap: 0.5rem; align-items: center; padding: 0.75rem 1rem; border-radius: var(--radius-sm); background: var(--blue-50); font-weight: 800; text-decoration: none; color: var(--navy-900); min-height: 48px; }
+  .triage a:hover { background: #dcebf7; }
+  .triage a span { color: inherit; }
+  @media (max-width: 860px) { .triage { grid-template-columns: 1fr; } .triage-wrap { margin-top: 1.5rem; } }
+  .path ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.4rem; }
+  .path a { font-weight: 700; text-decoration: none; }
+  .areas ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.25rem; }
+  .areas h3 { font-size: 1rem; }
+  .guide-cta { align-self: start; border-top: 4px solid var(--cta); }
+</style>
