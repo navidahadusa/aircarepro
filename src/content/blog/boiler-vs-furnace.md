@@ -38,7 +38,8 @@
   ],
   "source": "https://aircareprohvac.com/boiler-vs-furnace/",
   "intent": "planned",
-  "migrated": true
+  "migrated": true,
+  "photo": "newBoiler"
 }
 ---
 

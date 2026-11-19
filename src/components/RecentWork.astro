@@ -1,0 +1,45 @@
+---
+/**
+ * "Recent work" gallery: the owner's own job photos (no stock). Design: Chloe Vance · Photo selection + alt text: Maya Lin.
+ * Lazy-loaded, small responsive sizes so it doesn't affect LCP.
+ */
+import { Image } from 'astro:assets';
+import { recentWork, type Photo } from '../data/photos';
+import { business } from '../data/business';
+
+interface Props { title?: string; intro?: string; items?: Photo[]; alt?: boolean }
+const {
+  title = 'Recent work from our crew',
+  intro = `Real photos from ${business.displayName} jobs: boilers, furnaces, AC and indoor air quality.`,
+  items = recentWork,
+  alt = false,
+} = Astro.props;
+---
+<section class:list={['section', { 'section-alt': alt }]} aria-labelledby="recent-work-h">
+  <div class="container">
+    <div class="section-head">
+      <p class="eyebrow">Our work</p>
+      <h2 id="recent-work-h">{title}</h2>
+      <p class="lead">{intro}</p>
+    </div>
+    <ul class="rw-grid">
+      {items.map((p) => (
+        <li class="rw-item">
+          <figure class="photo">
+            <Image quality={50} src={p.src} alt={p.alt} widths={[300, 480]} sizes="(max-width: 600px) 50vw, (max-width: 1000px) 33vw, 18rem" loading="lazy" />
+            <figcaption aria-hidden="true">{p.alt}</figcaption>
+          </figure>
+        </li>
+      ))}
+    </ul>
+  </div>
+</section>
+
+<style>
+  .rw-grid { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; grid-template-columns: repeat(4, 1fr); }
+  .rw-item figure { margin: 0; position: relative; aspect-ratio: 3 / 4; }
+  .rw-item figcaption { position: absolute; inset: auto 0 0 0; padding: 2rem 0.75rem 0.7rem; font-size: 0.82rem; line-height: 1.35; font-weight: 600;
+    color: #fff; background: linear-gradient(transparent, rgb(14 38 72 / 0.92)); }
+  @media (max-width: 1000px) { .rw-grid { grid-template-columns: repeat(3, 1fr); } }
+  @media (max-width: 600px) { .rw-grid { grid-template-columns: repeat(2, 1fr); gap: 0.6rem; } .rw-item figcaption { font-size: 0.74rem; padding: 1.5rem 0.5rem 0.5rem; } }
+</style>

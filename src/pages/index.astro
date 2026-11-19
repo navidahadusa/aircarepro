@@ -14,6 +14,7 @@ import ReviewsBlock from '../components/ReviewsBlock.astro';
 import FaqSection from '../components/FaqSection.astro';
 import Icon from '../components/Icon.astro';
 import Skyline from '../components/Skyline.astro';
+import RecentWork from '../components/RecentWork.astro';
 import { business, areasByGroup, heroHeadline } from '../data/business';
 import { photos } from '../data/photos';
 import { getPosts, blogCategories } from '../data/blog';
@@ -141,6 +142,8 @@ const faqs = [
       </div>
     </div>
   </section>
+
+  <RecentWork />
 
   <section class="section section-alt">
     <div class="container"><ReviewsBlock /></div>

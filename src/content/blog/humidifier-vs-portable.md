@@ -38,7 +38,8 @@
   ],
   "source": "https://aircareprohvac.com/humidifier-vs-portable/",
   "intent": "planned",
-  "migrated": true
+  "migrated": true,
+  "photo": "humidifier"
 }
 ---
 

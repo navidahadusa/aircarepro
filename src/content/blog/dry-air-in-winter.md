@@ -38,7 +38,8 @@
   ],
   "source": "https://aircareprohvac.com/dry-air-in-winter/",
   "intent": "planned",
-  "migrated": true
+  "migrated": true,
+  "photo": "humidifier"
 }
 ---
 

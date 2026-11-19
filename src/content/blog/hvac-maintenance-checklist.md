@@ -38,7 +38,8 @@
   ],
   "source": "https://aircareprohvac.com/hvac-maintenance-checklist/",
   "intent": "planned",
-  "migrated": true
+  "migrated": true,
+  "photo": "burnersCleaning"
 }
 ---
 

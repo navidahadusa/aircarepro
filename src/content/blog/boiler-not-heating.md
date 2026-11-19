@@ -38,7 +38,8 @@
   ],
   "source": "https://aircareprohvac.com/boiler-not-heating/",
   "intent": "emergency",
-  "migrated": true
+  "migrated": true,
+  "photo": "boilerBurnerService"
 }
 ---
 

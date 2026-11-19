@@ -38,7 +38,8 @@
   ],
   "source": "https://aircareprohvac.com/carbon-monoxide-safety-tips/",
   "intent": "emergency",
-  "migrated": true
+  "migrated": true,
+  "photo": "corrodedFlue"
 }
 ---
 

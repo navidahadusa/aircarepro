@@ -38,7 +38,8 @@
   ],
   "source": "https://aircareprohvac.com/hvac-zoning-explained/",
   "intent": "planned",
-  "migrated": true
+  "migrated": true,
+  "photo": "zoneValves"
 }
 ---
 

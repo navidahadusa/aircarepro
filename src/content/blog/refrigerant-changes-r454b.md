@@ -38,7 +38,8 @@
   ],
   "source": "https://aircareprohvac.com/refrigerant-changes-r454b/",
   "intent": "planned",
-  "migrated": true
+  "migrated": true,
+  "photo": "acGauges"
 }
 ---
 
