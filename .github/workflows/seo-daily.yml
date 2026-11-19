@@ -1,0 +1,58 @@
+name: SEO daily (Search Console)
+
+# Every morning before the team's 7:45 AM Central run: submit the sitemap, pull Search
+# Console performance + index status, and save it to the `seo-data` branch (gsc/latest.md,
+# gsc/latest.json, gsc/YYYY-MM-DD.md). Read by Elena Brooks in the daily run.
+# Setup (owner, once): repo secret GSC_SERVICE_ACCOUNT_JSON (service-account key JSON);
+# optional repo variable GSC_SITE (default sc-domain:aircareprohvac.com).
+
+on:
+  schedule:
+    - cron: '20 12 * * *'   # 12:20 UTC = 6:20 AM CST / 7:20 AM CDT
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: seo-daily
+  cancel-in-progress: false
+
+jobs:
+  gsc:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      HAS_KEY: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON != '' }}
+    steps:
+      - name: Search Console key not configured yet
+        if: env.HAS_KEY != 'true'
+        run: echo "::notice::Add the GSC_SERVICE_ACCOUNT_JSON secret to enable the daily Search Console report."
+      - uses: actions/checkout@v4
+        if: env.HAS_KEY == 'true'
+      - uses: actions/setup-node@v4
+        if: env.HAS_KEY == 'true'
+        with:
+          node-version: 22
+      - name: Pull Search Console data
+        if: env.HAS_KEY == 'true'
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GSC_SITE: ${{ vars.GSC_SITE || 'sc-domain:aircareprohvac.com' }}
+          OUT_DIR: ${{ runner.temp }}/gsc
+        run: node scripts/gsc-report.mjs >> "$GITHUB_STEP_SUMMARY"
+      - name: Save to seo-data branch
+        if: env.HAS_KEY == 'true'
+        run: |
+          git config user.name "agency-seo-bot"
+          git config user.email "agency-seo-bot@users.noreply.github.com"
+          git fetch origin seo-data || true
+          if git rev-parse --verify origin/seo-data >/dev/null 2>&1; then
+            git checkout -B seo-data origin/seo-data
+          else
+            git checkout --orphan seo-data && git rm -rf --quiet . || true
+          fi
+          mkdir -p gsc && cp -r "$RUNNER_TEMP"/gsc/* gsc/
+          git add gsc
+          git commit -m "Search Console snapshot $(date -u +%F)" || echo "no changes"
+          git push origin seo-data
