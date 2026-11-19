@@ -38,7 +38,8 @@
   ],
   "source": "https://aircareprohvac.com/mini-split-vs-central-air/",
   "intent": "planned",
-  "migrated": true
+  "migrated": true,
+  "photo": "miniSplitInstall"
 }
 ---
 

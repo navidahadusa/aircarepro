@@ -38,7 +38,8 @@
   ],
   "source": "https://aircareprohvac.com/prepare-ac-for-summer/",
   "intent": "planned",
-  "migrated": true
+  "migrated": true,
+  "photo": "coilCleanerSpray"
 }
 ---
 

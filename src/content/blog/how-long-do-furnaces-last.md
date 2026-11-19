@@ -38,7 +38,8 @@
   ],
   "source": "https://aircareprohvac.com/how-long-do-furnaces-last/",
   "intent": "planned",
-  "migrated": true
+  "migrated": true,
+  "photo": "horizontalFurnace"
 }
 ---
 
