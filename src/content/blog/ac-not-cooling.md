@@ -38,7 +38,8 @@
   ],
   "source": "https://aircareprohvac.com/ac-not-cooling/",
   "intent": "emergency",
-  "migrated": true
+  "migrated": true,
+  "photo": "acGauges"
 }
 ---
 

@@ -2,6 +2,8 @@
 import { Image } from 'astro:assets';
 import SimplePage from '../../components/SimplePage.astro';
 import TrustBlock from '../../components/TrustBlock.astro';
+import RecentWork from '../../components/RecentWork.astro';
+import { photos as P } from '../../data/photos';
 import { business } from '../../data/business';
 import { photos } from '../../data/photos';
 ---
@@ -27,6 +29,7 @@ import { photos } from '../../data/photos';
     </div>
   </section>
   <section class="section section-alt"><div class="container"><h2>Credentials</h2><TrustBlock variant="credentials" /></div></section>
+  <RecentWork title="Inside our recent jobs" items={[P.newBoiler, P.boilerControl, P.airVentCorroded, P.airVentNew, P.heatExchanger, P.corrodedFlue, P.blowerWheel, P.burnersCleaning, P.zoneValves, P.humidifier, P.uvSanitizer, P.acGauges]} />
 </SimplePage>
 <style>
   .about-grid { display: grid; grid-template-columns: 1.4fr 1fr; gap: clamp(1.5rem, 4vw, 3rem); align-items: start; }

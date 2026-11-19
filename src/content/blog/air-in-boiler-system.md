@@ -38,7 +38,8 @@
   ],
   "source": "https://aircareprohvac.com/air-in-boiler-system/",
   "intent": "emergency",
-  "migrated": true
+  "migrated": true,
+  "photo": "airVentCorroded"
 }
 ---
 

@@ -38,7 +38,8 @@
   ],
   "source": "https://aircareprohvac.com/cracked-heat-exchanger-signs/",
   "intent": "emergency",
-  "migrated": true
+  "migrated": true,
+  "photo": "heatExchanger"
 }
 ---
 

@@ -38,7 +38,8 @@
   ],
   "source": "https://aircareprohvac.com/uv-lights-worth-it/",
   "intent": "planned",
-  "migrated": true
+  "migrated": true,
+  "photo": "uvSanitizer"
 }
 ---
 

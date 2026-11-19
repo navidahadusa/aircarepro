@@ -38,7 +38,8 @@
   ],
   "source": "https://aircareprohvac.com/boiler-pressure-guide/",
   "intent": "planned",
-  "migrated": true
+  "migrated": true,
+  "photo": "boilerControl"
 }
 ---
 
