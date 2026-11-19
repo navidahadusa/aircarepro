@@ -25,7 +25,7 @@ Owner shortcuts (`.claude/commands/`): `/daily [focus]` · `/sprint <goal>` · `
 | **Chloe Vance** | UI/UX & CRO Designer | `cro-designer` | Visual redesign, site structure, trust signals, mobile/desktop conversion | `chloe-vance.jpg` (pending) · red |
 | **Hannah Carter** | Local Citations & NAP Specialist | `local-citations-specialist` | Rebrand transition, GBP/Yelp/BBB alignment, citation rollouts | `hannah-carter.jpg` (pending) · green |
 | **Natalie Foster** | Backlink & PR Specialist | `backlink-linkbuilder` | Chicago local & HVAC industry backlinks, link-worthy resources, outreach | `natalie-foster.jpg` (pending) · violet |
-| **Rachel Morgan** | Lead Generation Architect | `lead-gen-architect` | 24/7 emergency dispatch, fast quote forms, call/SMS CTAs for (773) 644-8227, conversion tracking | `rachel-morgan.jpg` (pending) · amber |
+| **Rachel Morgan** | Lead Generation Architect + Paid Ads | `lead-gen-architect` | 24/7 emergency dispatch, call/SMS/booking CTAs for (773) 644-8227, conversion tracking, **paid ads** (Google LSA, Google Search, Meta; `marketing/ads/ads-plan.md`) | `rachel-morgan.jpg` (pending) · amber |
 
 ### Redesign authority
 **Sophia Reynolds, Chloe Vance and Elena Brooks** are explicitly authorized to overhaul the site's visual look, UI components, navigation, page templates and architecture whenever the current design or structure (including patterns inherited from aircareprohvac.com) is weak, outdated or under-optimized for conversions or SEO. Don't preserve weak legacy layouts; upgrade them to a modern, high-trust Chicago HVAC brand standard. Keep URLs stable or document redirects.
@@ -38,6 +38,7 @@ Owner shortcuts (`.claude/commands/`): `/daily [focus]` · `/sprint <goal>` · `
 - **Approval:** Sophia Reynolds gives final approval inside the team. Publishing happens only when the owner merges to `main`.
 - **Daily run:** scheduled task every day 7:45 AM Central (report ready by 8:00), works on `agency/sprint-3`, keeps one PR open to `main`, never merges or publishes.
 - **Brand confirmed by the owner:** CHICAGO AIRCARE PRO. "Manager" = Sophia Reynolds. All 6 photos in `src/data/photos.ts` are confirmed as the company's own.
+- **Advertising is the team's job (owner, 2026-11-19):** Rachel Morgan owns paid ads, with Sophia approving. **No spend, launch or budget change without the owner's explicit OK.** Plan: `marketing/ads/ads-plan.md`.
 - **Owner priorities:** SEO, local SEO and lead generation come first. Daily posts on the website to rank on Google.
 
 ### Rebrand status (keep exact)

@@ -245,8 +245,10 @@ export const napLine = (b: Business = business): string =>
     : `${b.name} · ${b.address.city}, ${b.address.region} · ${b.phoneDisplay}`;
 
 export const telHref = (b: Business = business) => `tel:${b.phoneE164}`;
-export const smsHref = (b: Business = business, body?: string) =>
-  `sms:${b.smsE164 ?? b.phoneE164}${body ? `?&body=${encodeURIComponent(body)}` : ''}`;
+/** One SMS target site-wide (Lighthouse: identical links must share a purpose). The body arg is ignored on purpose. */
+export const SMS_BODY = 'Hi, I need HVAC service at ';
+export const smsHref = (b: Business = business, _body?: string) =>
+  `sms:${b.smsE164 ?? b.phoneE164}?&body=${encodeURIComponent(SMS_BODY)}`;
 
 export const areasByGroup = (b: Business = business) => {
   const groups = new Map<AreaGroup, ServiceArea[]>();
