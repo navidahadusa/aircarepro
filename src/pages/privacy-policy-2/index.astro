@@ -1,0 +1,17 @@
+---
+/** Privacy policy, ported from the live site (owner's wording; brand name updated). URL kept for parity. */
+import SimplePage from '../../components/SimplePage.astro';
+import { business, telHref } from '../../data/business';
+---
+<SimplePage title={`Privacy Policy | ${business.displayName}`} description={`How ${business.displayName} handles your information.`}
+  h1="Privacy Policy" lead={`How ${business.displayName} handles your information.`} crumb="Privacy" path="/privacy-policy-2/">
+  <section class="section">
+    <div class="container prose">
+      <p>{business.name} (“we”) respects your privacy. When you call, email or book service with us, we collect the information you give us, such as your name, address, phone number, email and details about your heating and cooling system. We use it only to schedule and provide service, send estimates and invoices, and contact you about your appointment.</p>
+      <p>We do not sell your personal information. We may share it with service providers who help us run our business, such as scheduling, payment and financing partners, only as needed to serve you.</p>
+      <p>This website may use basic analytics to understand how visitors use the site. You can disable cookies in your browser settings.</p>
+      <p>Questions? Email <a href={`mailto:${business.email}`}>{business.email}</a> or call <a href={telHref()} data-track="click_to_call" data-placement="privacy">{business.phoneDisplay}</a>.</p>
+      <p><small>Last updated 2026-11-15.</small></p>
+    </div>
+  </section>
+</SimplePage>

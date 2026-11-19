@@ -111,6 +111,8 @@ export interface Business {
   dealerOf?: string;
   foundingYear?: number;
   maintenancePlanName: string;
+  /** Financing lender (owner-confirmed 2026-11-19). */
+  financingPartner?: string;
   serviceCategories: ServiceCategory[];
   /** Flat list used in schema OfferCatalog. Derived from serviceCategories. */
   services: string[];
@@ -231,6 +233,7 @@ export const business: Business = {
   dealerOf: 'Comfortmaker',
   foundingYear: 2026,
   maintenancePlanName: 'Comfort Club',
+  financingPartner: 'Optimus',
   serviceCategories,
   services: serviceCategories.flatMap((c) => c.services.map((s) => s.name)),
 };

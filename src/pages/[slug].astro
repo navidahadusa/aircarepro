@@ -14,7 +14,7 @@ export async function getStaticPaths() {
   const reserved = new Set([
     ...services.map((s) => s.slug), ...categories.map((c) => c.slug),
     ...business.serviceAreas.map((a) => `hvac-${a.slug}`),
-    'blog', 'service-areas', 'about', 'contact', 'reviews', 'financing', 'faq', 'emergency-hvac', 'free-estimate', 'maintenance-plan', 'thank-you', 'chicago-hvac-homeowner-guide',
+    'blog', 'service-areas', 'about', 'contact', 'reviews', 'financing', 'faq', 'services', 'sitemap', 'privacy-policy-2', 'emergency-hvac', 'free-estimate', 'maintenance-plan', 'thank-you', 'chicago-hvac-homeowner-guide',
   ]);
   const posts = await getPosts();
   for (const p of posts) {

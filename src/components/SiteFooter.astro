@@ -53,6 +53,7 @@ const year = new Date().getFullYear();
     ))}
   </div>
   <div class="container footer-legal">
+    <p><a href="/privacy-policy-2/">Privacy Policy</a> · <a href="/sitemap/">Sitemap</a> · <a href="/services/">All services</a></p>
     <p>© {year} {business.name}. City of Chicago License #{business.licenseNumber}. NATE &amp; EPA 608 certified · BBB accredited · {business.dealerOf} dealer.</p>
     {business.sameAs.length > 0 && (
       <p>Find us on: {business.sameAs.map((u, i) => <>{i > 0 && ' · '}<a href={u} rel="noopener">{new URL(u).hostname.replace('www.', '')}</a></>)}</p>

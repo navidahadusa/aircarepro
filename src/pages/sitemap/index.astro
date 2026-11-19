@@ -1,0 +1,27 @@
+---
+/** HTML sitemap (live URL /sitemap/). Generated from site data. Owner: Elena Brooks. */
+import SimplePage from '../../components/SimplePage.astro';
+import { business, areasByGroup } from '../../data/business';
+import { categories, servicesIn } from '../../data/services';
+import { getPosts } from '../../data/blog';
+const posts = await getPosts();
+const company = [['Home', '/'], ['Services', '/services/'], ['24/7 Emergency', '/emergency-hvac/'], ['Free Estimate', '/free-estimate/'], [business.maintenancePlanName, '/maintenance-plan/'], ['Financing', '/financing/'], ['About', '/about/'], ['Reviews', '/reviews/'], ['FAQ', '/faq/'], ['Contact', '/contact/'], ['Blog', '/blog/'], ['Chicago Homeowner HVAC Guide', '/chicago-hvac-homeowner-guide/'], ['Service Areas', '/service-areas/'], ['Privacy Policy', '/privacy-policy-2/']];
+---
+<SimplePage title={`Sitemap | ${business.displayName}`} description={`Every page on the ${business.displayName} website.`} h1="Sitemap" lead="Every page on our website." crumb="Sitemap" path="/sitemap/">
+  <section class="section">
+    <div class="container smap">
+      <div><h2>Company</h2><ul>{company.map(([t, h]) => <li><a href={h}>{t}</a></li>)}</ul></div>
+      {categories.map((c) => <div><h2><a href={`/${c.slug}/`}>{c.name}</a></h2><ul>{servicesIn(c.name).map((s) => <li><a href={`/${s.slug}/`}>{s.name}</a></li>)}</ul></div>)}
+      {[...areasByGroup()].map(([g, list]) => <div><h2>{g}</h2><ul>{list.map((a) => <li><a href={`/hvac-${a.slug}/`}>{a.name}</a></li>)}</ul></div>)}
+      <div class="wide"><h2><a href="/blog/">Blog</a></h2><ul class="cols">{posts.map((p) => <li><a href={`/${p.id}/`}>{p.data.title}</a></li>)}</ul></div>
+    </div>
+  </section>
+</SimplePage>
+<style>
+  .smap { display: grid; gap: 1.5rem 2rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); }
+  .smap ul { padding-left: 1.1rem; margin: 0; display: grid; gap: 0.25rem; }
+  .smap h2 { font-size: 1.1rem; }
+  .wide { grid-column: 1 / -1; }
+  .cols { columns: 3 16rem; display: block !important; }
+  .cols li { margin-bottom: 0.3rem; break-inside: avoid; }
+</style>

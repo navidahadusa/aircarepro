@@ -4,12 +4,12 @@ import BookingPanel from '../../components/BookingPanel.astro';
 import { business } from '../../data/business';
 ---
 <SimplePage title={`HVAC Financing | ${business.displayName}`} description={`Financing is available for new furnaces, boilers, air conditioners and heat pumps, subject to credit approval. Free estimates. ${business.phoneDisplay}.`}
-  h1="HVAC financing" lead="Financing for new heating and cooling systems, subject to credit approval." crumb="Financing" path="/financing/" eyebrow="Financing">
+  h1="HVAC financing" lead={`Financing through ${business.financingPartner} for new heating and cooling systems, subject to credit approval.`} crumb="Financing" path="/financing/" eyebrow="Financing">
   <section class="section">
     <div class="container fin-grid">
       <div class="prose">
-        <p>Financing is available for new heating and cooling systems installed by {business.displayName}, subject to credit approval. Ask about current financing options during your free estimate, or call {business.phoneDisplay}.</p>
-        <!-- TODO(owner): lender name, prequalification link and a sample monthly payment would raise conversions. -->
+        <p>Financing for new heating and cooling systems installed by {business.displayName} is available through <strong>{business.financingPartner}</strong>, subject to credit approval. Ask about current plans during your free estimate, or call {business.phoneDisplay}.</p>
+        <!-- TODO(owner): an Optimus prequalification link would let customers apply online. -->
         <h2>What can be financed</h2>
         <ul>
           <li><a href="/furnace-installation/">Furnace replacement</a></li>
@@ -21,7 +21,7 @@ import { business } from '../../data/business';
         <h2>How it works</h2>
         <ol>
           <li>We visit, size the system and give you a free written estimate with options.</li>
-          <li>If you’d like to finance, we explain the available plans and terms. Approval depends on the lender’s credit review.</li>
+          <li>If you’d like to finance, we explain the available {business.financingPartner} plans and terms. Approval depends on {business.financingPartner}’s credit review.</li>
           <li>Once approved and you’ve chosen a system, we schedule the installation.</li>
         </ol>
         <h2>Other ways to lower the cost</h2>

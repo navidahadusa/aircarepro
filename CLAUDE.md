@@ -122,7 +122,7 @@ File: `marketing/daily-reports/YYYY-MM-DD.md` (template: `marketing/daily-report
 | License | City of Chicago License #3065598 |
 | Credentials | NATE-certified techs · EPA 608 · BBB accredited · Comfortmaker dealer |
 | Brands serviced | Carrier, Lennox, Trane, Goodman, Rheem, York, Comfortmaker (installs Comfortmaker) |
-| Offers | Free estimates on new systems · financing (subject to credit approval; lender TODO) · **Comfort Club** maintenance plan (pricing TODO) · utility rebate help |
+| Offers | Free estimates on new systems · financing through **Optimus** (subject to credit approval) · **Comfort Club** maintenance plan (pricing TODO) · utility rebate help |
 | Positioning | "One crew for both seasons." Diagnosis first, options with prices before any work, repair what can be repaired; Chicago two-flat, greystone and bungalow know-how |
 
 ### Service areas (Chicago hub + 32 neighborhoods & suburbs)
@@ -173,4 +173,4 @@ Known NAP issues: duplicate LocalBusiness schema on the live site (unformatted p
 - **Lead destination:** **Housecall Pro booking link** (owner decision 2026-11-19). On-page forms are off (`leadCapture: 'housecall-pro'`).
 - **Analytics:** GTM `GTM-K3PBQCR9` (installed on the live site)
 - **Built in this repo (Sprint 1):** forms on 60 pages, tap-to-text on every page, tracked booking clicks, lead scoring, Comfort Club signup. **Still open:** Comfort Club pricing, review links (pending renames), CRM endpoint
-- **Call tracking / financing partner / baseline leads:** TODO
+- **Financing partner:** Optimus (owner-confirmed). **Call tracking / baseline leads:** TODO

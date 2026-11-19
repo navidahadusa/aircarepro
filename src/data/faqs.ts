@@ -51,7 +51,7 @@ export const siteFaqs: Faq[] = [
   },
   {
     "q": "Do you offer financing?",
-    "a": "Yes, for new systems, subject to credit approval."
+    "a": "Yes. Financing for new systems is available through Optimus, subject to credit approval."
   },
   {
     "q": "Which brands do you install?",
