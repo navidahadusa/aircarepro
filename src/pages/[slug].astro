@@ -6,6 +6,8 @@
  */
 import ServicePage from '../components/ServicePage.astro';
 import BlogPost from '../components/BlogPost.astro';
+import LocalServicePage from '../components/LocalServicePage.astro';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import { categories, services, type Service, type Category } from '../data/services';
 import { getPosts, type Post } from '../data/blog';
 import { business } from '../data/business';
@@ -17,20 +19,25 @@ export async function getStaticPaths() {
     'blog', 'service-areas', 'about', 'contact', 'reviews', 'financing', 'faq', 'services', 'sitemap', 'privacy-policy-2', 'emergency-hvac', 'free-estimate', 'maintenance-plan', 'thank-you', 'chicago-hvac-homeowner-guide',
   ]);
   const posts = await getPosts();
+  const locals = await getCollection('local');
+  const localIds = new Set(locals.map((l) => l.id));
   for (const p of posts) {
+    if (localIds.has(p.id)) throw new Error(`Blog post slug "${p.id}" collides with a service+city page.`);
     if (reserved.has(p.id)) throw new Error(`Blog post slug "${p.id}" collides with a site page. Rename the post file.`);
   }
   return [
     ...services.map((s) => ({ params: { slug: s.slug }, props: { kind: 'service' as const, service: s } })),
     ...categories.map((c) => ({ params: { slug: c.slug }, props: { kind: 'category' as const, category: c } })),
     ...posts.map((p) => ({ params: { slug: p.id }, props: { kind: 'post' as const, post: p } })),
+    ...locals.map((l) => ({ params: { slug: l.id }, props: { kind: 'local' as const, page: l } })),
   ];
 }
 
 type Props =
   | { kind: 'service'; service: Service }
   | { kind: 'category'; category: Category }
-  | { kind: 'post'; post: Post };
+  | { kind: 'post'; post: Post }
+  | { kind: 'local'; page: CollectionEntry<'local'> };
 const props = Astro.props as Props;
 ---
-{props.kind === 'post' ? <BlogPost post={props.post} /> : <ServicePage {...props} />}
+{props.kind === 'post' ? <BlogPost post={props.post} /> : props.kind === 'local' ? <LocalServicePage page={props.page} /> : <ServicePage {...props} />}

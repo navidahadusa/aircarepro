@@ -1,0 +1,105 @@
+---
+/**
+ * Service + city page, e.g. /furnace-repair-evanston/. Owners: Elena Brooks (local SEO, links,
+ * schema) · Rachel Morgan (CTA by intent) · Chloe Vance (layout). Content: the owner's own
+ * WordPress copy (src/content/local), plus the service's verified signs/included lists.
+ */
+import { render, getCollection, type CollectionEntry } from 'astro:content';
+import { Image } from 'astro:assets';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import JsonLd from './JsonLd.astro';
+import FaqSection from './FaqSection.astro';
+import LeadForm from './LeadForm.astro';
+import CallSmsCta from './CallSmsCta.astro';
+import TrustBlock from './TrustBlock.astro';
+import Icon from './Icon.astro';
+import { business } from '../data/business';
+import { serviceBySlug } from '../data/services';
+import { servicePhoto, photos } from '../data/photos';
+import { buildServiceSchema } from '../lib/schema';
+
+interface Props { page: CollectionEntry<'local'> }
+const { page } = Astro.props;
+const d = page.data;
+const { Content } = await render(page);
+const svc = serviceBySlug(d.service)!;
+const area = business.serviceAreas.find((a) => a.slug === d.city);
+const cityName = area?.name ?? d.city.replace(/-/g, ' ').replace(/\b\w/g, (m) => m.toUpperCase());
+const place = d.city === 'chicago' ? 'Chicago' : `${cityName}, IL`;
+const pageUrl = new URL(`/${page.id}/`, Astro.site ?? business.url).toString();
+const photo = servicePhoto[d.service] ?? photos.rooftopMiniSplit;
+const all = await getCollection('local');
+const sameCity = all.filter((p) => p.data.city === d.city && p.id !== page.id);
+const sameService = all.filter((p) => p.data.service === d.service && p.id !== page.id);
+const svcLabel: Record<string, string> = { 'furnace-repair': 'Furnace Repair', 'ac-repair': 'AC Repair', 'furnace-installation': 'Furnace Installation' };
+const cityLabel = (slug: string) => business.serviceAreas.find((a) => a.slug === slug)?.name ?? slug;
+const description = d.meta ?? `${svcLabel[d.service]} in ${place} by NATE-certified technicians. 24/7 emergency service, upfront options. Call ${business.phoneDisplay}.`;
+const schema = buildServiceSchema({ name: `${svcLabel[d.service]} in ${place}`, serviceType: svc.name, description, pageUrl, areas: area ? [area] : undefined });
+const title = `${svcLabel[d.service]} ${d.city === 'chicago' ? 'Chicago' : cityName + ', IL'} | ${svc.funnel === 'emergency' ? '24/7 | ' : ''}${business.displayName}`;
+---
+<BaseLayout title={title.length > 70 ? `${svcLabel[d.service]} ${cityName} | ${business.displayName}` : title} description={description}>
+  <Breadcrumbs items={[{ name: svc.name, href: `/${svc.slug}/` }, { name: `${svcLabel[d.service]} in ${cityName}`, href: `/${page.id}/` }]} />
+  <JsonLd data={schema} />
+
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <span class="eyebrow"><Icon name="pin" size={16} /> {place} · {svc.category}</span>
+        <h1>{d.h1}</h1>
+        <p class="lead">{d.intro}</p>
+        <CallSmsCta placement={`local_${page.id}_hero`} showBooking={false} />
+        <ul class="badge-row"><li>NATE &amp; EPA 608</li><li>License #{business.licenseNumber}</li><li>BBB accredited</li><li>24/7</li></ul>
+      </div>
+      <div id="quote"><LeadForm funnel={svc.funnel === 'quick' ? 'quick' : svc.funnel} placement={`local_${page.id}_hero`} /></div>
+    </div>
+  </section>
+
+  <div class="container local-layout">
+    <article class="prose local-body">
+      <Content />
+      <h2>Signs you need {svc.name.toLowerCase()} in {cityName}</h2>
+      <ul class="check-list">{svc.signs.map((x) => <li>{x}</li>)}</ul>
+      <h2>What’s included</h2>
+      <ul class="check-list">{svc.included.map((x) => <li>{x}</li>)}</ul>
+      <FaqSection faqs={d.faqs} heading={`${svcLabel[d.service]} questions in ${cityName}`} id="local-faq" />
+    </article>
+    <aside class="local-side">
+      <div class="photo side-photo"><Image src={photo.src} alt={photo.alt} widths={[360, 640]} sizes="(max-width: 1000px) 100vw, 22rem" /></div>
+      <nav class="card side-links" aria-label={`More services in ${cityName}`}>
+        <h2>More in {cityName}</h2>
+        <ul>
+          {area && <li><a href={`/hvac-${area.slug}/`}>All HVAC services in {cityName} <Icon name="arrow" size={16} /></a></li>}
+          {sameCity.map((p) => <li><a href={`/${p.id}/`}>{svcLabel[p.data.service]} in {cityName} <Icon name="arrow" size={16} /></a></li>)}
+          <li><a href={`/${svc.slug}/`}>{svc.name}: full service details <Icon name="arrow" size={16} /></a></li>
+        </ul>
+      </nav>
+    </aside>
+  </div>
+
+  <section class="section section-alt"><div class="container"><TrustBlock /></div></section>
+
+  <section class="section">
+    <div class="container">
+      <h2>{svcLabel[d.service]} in nearby areas</h2>
+      <ul class="pills" role="list">{sameService.map((p) => <li><a href={`/${p.id}/`}>{cityLabel(p.data.city)}</a></li>)}</ul>
+      <div class="card end"><CallSmsCta placement={`local_${page.id}_end`} heading={`Need ${svc.name.toLowerCase()} in ${cityName}? We answer 24/7.`} /></div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  .local-layout { display: grid; grid-template-columns: minmax(0, 1fr) 22rem; gap: clamp(1.5rem, 4vw, 3.5rem); padding-block: 2.5rem; }
+  @media (max-width: 1000px) { .local-layout { grid-template-columns: 1fr; } }
+  .local-body { max-width: 46rem; }
+  .local-body :global(h2) { margin-top: 2rem; }
+  .local-body :global(p), .local-body :global(li) { font-size: 1.05rem; }
+  .local-side { display: grid; gap: 1rem; align-content: start; }
+  .side-photo { aspect-ratio: 4 / 3; }
+  .side-links h2 { font-size: 1.05rem; margin: 0 0 0.5rem; }
+  .side-links ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.45rem; }
+  .side-links a { display: inline-flex; align-items: center; gap: 0.35rem; font-weight: 700; text-decoration: none; }
+  .pills { list-style: none; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .pills a { display: inline-block; padding: 0.45rem 0.9rem; border-radius: 999px; background: var(--ice); text-decoration: none; font-weight: 700; }
+  .end { margin-top: 2rem; }
+</style>

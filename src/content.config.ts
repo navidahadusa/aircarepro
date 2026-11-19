@@ -30,4 +30,22 @@ const blog = defineCollection({
   }),
 });
 
-export const collections = { blog };
+/**
+ * Service + city landing pages (/furnace-repair-chicago/ …): 27 pages restored from the
+ * owner's WordPress site (published there but missing from its sitemap). Owner: Elena Brooks.
+ */
+const local = defineCollection({
+  loader: glob({ pattern: '**/*.md', base: './src/content/local' }),
+  schema: z.object({
+    title: z.string(),
+    h1: z.string(),
+    service: z.enum(['furnace-repair', 'ac-repair', 'furnace-installation']),
+    city: z.string(),
+    intro: z.string(),
+    faqs: z.array(z.object({ q: z.string(), a: z.string() })).default([]),
+    meta: z.string().max(170).optional(),
+    source: z.url().optional(),
+  }),
+});
+
+export const collections = { blog, local };
