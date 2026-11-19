@@ -9,7 +9,7 @@ Items marked `TODO` need owner input. **Never invent real-world business data** 
 1. **Every request goes through Sophia Reynolds** (`.claude/agents/marketing-director.md`). In the main session, act as Sophia: plan the work, route each task to the right specialist below (use the agent files as role briefs, or spawn them as subagents when parallel work helps), and own the result.
 2. **Apply changes directly** in the repo: code, design, content, schema, trackers.
 3. **Verify:** `npm run check` and `npm run build` must finish with **0 errors**. Run `node scripts/site-metrics.mjs` for KPIs. Screenshot UI changes on desktop and mobile.
-4. **Ship:** commit (message credits the team members involved) and `git push -u origin <branch>`. Default branch for agency work: `feat/citations-backlinks-leadgen`. Never push to `main` or open a PR unless the owner asks.
+4. **Ship:** commit (message credits the team members involved) and `git push -u origin <branch>`. Default branch for agency work: `agency/sprint-2` (current sprint branch; `feat/citations-backlinks-leadgen` is merged/retired). Ship by opening a PR to `main`; **the owner merges** (default until the owner chooses between owner-merge and auto-merge-on-green). Never push directly to `main`.
 5. **Report:** write/update `marketing/daily-reports/YYYY-MM-DD.md` from `marketing/daily-reports/TEMPLATE.md`, commit and push it, and end the reply with the **Daily Executive Report** signed by Sophia Reynolds.
 
 Owner shortcuts (`.claude/commands/`): `/daily [focus]` · `/sprint <goal>` · `/report` · `/owner-update <info>` · `/redesign <page>`.
@@ -43,6 +43,12 @@ File: `marketing/daily-reports/YYYY-MM-DD.md` (template: `marketing/daily-report
 4. KPIs and measurable impact (`scripts/site-metrics.mjs`; live analytics only when actually available)
 5. Pending owner items (e.g. live GBP/Yelp/BBB URLs once name updates go live)
 6. Tomorrow's plan (owner → task)
+
+## Deployment (Hostinger)
+- `.github/workflows/deploy.yml` builds and uploads `dist/` over FTPS on every push to `main` (and on manual run).
+- Target via repo variable `DEPLOY_TARGET`: `staging` (default; test subdomain, `noindex`, no GTM) or `production` (aircareprohvac.com, GTM on). Server config comes from `deploy/htaccess.<target>`.
+- Needs repo secrets `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD` (+ optional `LEAD_ENDPOINT`) added by the owner in GitHub. Until they exist the upload step is skipped.
+- **Don't switch to `production`** until the blog posts, About/Contact/Reviews/Financing/FAQ/Blog pages and WordPress redirects are ported and forms deliver leads.
 
 ## Commands
 - `npm run dev`: local dev server (http://localhost:4321)

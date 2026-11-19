@@ -5,7 +5,7 @@ import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import LeadForm from '../../components/LeadForm.astro';
 import CallSmsCta from '../../components/CallSmsCta.astro';
 import FaqSection from '../../components/FaqSection.astro';
-import { business } from '../../data/business';
+import { business, telHref } from '../../data/business';
 const faqs = [
   { q: 'What counts as an HVAC emergency?', a: 'No heat in cold weather, no cooling during a heat wave (especially with infants, seniors or anyone with health conditions), water leaking from equipment, a burning smell, or a boiler that won’t fire.' },
   { q: 'What should I do while I wait with no heat?', a: 'Check the thermostat and breaker, replace a clogged filter if you can, keep interior doors open and faucets on exterior walls dripping. Never use a gas oven or grill to heat the home.' },
@@ -21,8 +21,8 @@ const faqs = [
         <span class="eyebrow">Emergency dispatch · 24/7</span>
         <h1>24/7 Emergency HVAC Service in Chicago</h1>
         <p class="lead">Calling is the fastest way to reach a technician, any time, nights and holidays included. Can’t talk right now? Send a dispatch request and we’ll call you back.</p>
-        <a class="btn btn-emergency big" href={`tel:${business.phoneE164}`} data-track="click_to_call" data-placement="emergency_hero_big">📞 Call {business.phoneDisplay} now</a>
-        <CallSmsCta placement="emergency_hero" showBooking={false} />
+        <a class="btn btn-emergency big" href={telHref()} data-track="click_to_call" data-placement="emergency_hero_big">📞 Call {business.phoneDisplay} now</a>
+        <CallSmsCta placement="emergency_hero" showBooking={false} showCall={false} />
         <div class="safety">
           <strong>⚠️ Smell gas or hear a CO alarm?</strong> Leave the home and call 911 or your gas utility first. Then call us.
         </div>

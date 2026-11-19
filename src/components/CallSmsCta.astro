@@ -13,17 +13,20 @@ interface Props {
   sub?: string;
   showSms?: boolean;
   showBooking?: boolean;
+  showCall?: boolean;
 }
-const { placement, heading, sub, showSms = true, showBooking = true } = Astro.props;
+const { placement, heading, sub, showSms = true, showBooking = true, showCall = true } = Astro.props;
 ---
 
 <div class="cta">
   {heading && <p class="cta-heading">{heading}</p>}
   {sub && <p class="cta-sub">{sub}</p>}
   <div class="cta-buttons">
-    <a class="btn btn-primary" href={telHref()} data-track="click_to_call" data-placement={placement}>
-      📞 Call {business.phoneDisplay}
-    </a>
+    {showCall && (
+      <a class="btn btn-primary" href={telHref()} data-track="click_to_call" data-placement={placement}>
+        📞 Call {business.phoneDisplay}
+      </a>
+    )}
     {showSms && (
       <a class="btn btn-secondary" href={smsHref(business)} data-track="click_to_sms" data-placement={placement}>
         💬 Text Us

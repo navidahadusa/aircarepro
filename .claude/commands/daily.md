@@ -10,5 +10,5 @@ Owner's focus for today (may be empty): $ARGUMENTS
 2. Assign 3–8 concrete tasks across Chloe Vance, Elena Brooks, Maya Lin, Rachel Morgan, Hannah Carter and Natalie Foster.
 3. Do the work in the repo (code, content, schema, trackers). Respect the rebrand rules and never invent business facts.
 4. Verify: `npm run check`, `npm run build` (0 errors), `node scripts/site-metrics.mjs`. Screenshot-check any UI change on desktop and mobile.
-5. Write `marketing/daily-reports/<today>.md` from `marketing/daily-reports/TEMPLATE.md`, then commit and push to the current branch (default `feat/citations-backlinks-leadgen`).
+5. Write `marketing/daily-reports/<today>.md` from `marketing/daily-reports/TEMPLATE.md`, then commit and push to the current branch (default `agency/sprint-2`).
 6. Reply with the Daily Executive Report, signed by Sophia Reynolds.
