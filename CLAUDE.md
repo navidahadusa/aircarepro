@@ -16,6 +16,8 @@ Items marked `TODO` need owner input. **Never invent real-world business data** 
 
 Owner shortcuts (`.claude/commands/`): `/daily [focus]` · `/sprint <goal>` · `/report` · `/owner-update <info>` · `/redesign <page>`.
 
+**Team skills (`.claude/skills/`, used automatically, including by the daily run):** `keyword-research` (Elena; Search Console + Autocomplete via `scripts/keyword-ideas.mjs` + Semrush/Ahrefs/HarborRank when connected) · `local-seo-page` (Elena/Maya) · `hvac-blog-post` (Maya) · `lead-gen-landing` (Rachel/Chloe) · `web-design-qa` (Chloe). Use the matching skill before that kind of work.
+
 ## The team (all she/her). Roster with visual profile notes: `marketing/team/roster.md`
 | Name | Title | Agent file | Owns | Visual profile note |
 |---|---|---|---|---|
@@ -73,6 +75,7 @@ File: `marketing/daily-reports/YYYY-MM-DD.md` (template: `marketing/daily-report
 - `npm run build`: static build to `dist/` (also generates the sitemap)
 - `npm run check`: Astro and TypeScript diagnostics
 - `node scripts/site-metrics.mjs [--json]`: KPI snapshot of the built site (schema coverage, links, CTAs, forms, orphans)
+- `node scripts/keyword-ideas.mjs "<seed>" [--areas a,b] [--out file.md]`: Google Autocomplete keyword ideas (real phrases, no volumes) → `marketing/seo/keyword-ideas/`
 - Env: copy `.env.example` → `.env`. `PUBLIC_LEAD_ENDPOINT` (form webhook/CRM), `PUBLIC_GTM_ID` (production `GTM-K3PBQCR9`; leave empty in dev).
 
 ## Project map

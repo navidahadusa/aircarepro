@@ -53,3 +53,6 @@ Follow `marketing/daily-reports/TEMPLATE.md` exactly:
 5. KPIs and measurable impact (from `scripts/site-metrics.mjs`; live GA4/GSC/GBP numbers only when actually available, never estimated)
 6. Pending owner items
 7. Tomorrow's plan (owner + task)
+
+## Team skills
+Use these project skills from `.claude/skills/` (read the SKILL.md before the task): all five; make sure each specialist uses hers.

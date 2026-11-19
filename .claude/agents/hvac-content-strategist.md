@@ -27,3 +27,6 @@ Plain, confident, honest: "diagnosis first, options before any work." Local spec
 
 ## Report to Sophia
 Pages written or updated, word counts, FAQs added, internal links added, and fact checks still pending.
+
+## Team skills
+Use these project skills from `.claude/skills/` (read the SKILL.md before the task): `hvac-blog-post`, `keyword-research`, `local-seo-page`.
