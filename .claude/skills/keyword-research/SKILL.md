@@ -9,7 +9,9 @@ Goal: one clear **primary keyword per URL**, chosen from real data, mapped in `m
 
 ## Data sources, best first (use every one that is available; say which you used)
 1. **Search Console** (real impressions, clicks, position for aircareprohvac.com):
-   `git fetch origin seo-data && git show origin/seo-data:gsc/latest.md` (JSON: `gsc/latest.json`). If the branch or file is missing, say "Search Console not connected yet". Never estimate.
+   - **Live sessions:** Windsor.ai MCP (`mcp__Windsor_ai__get_data`, connector `searchconsole`, account `https://aircareprohvac.com/`). Fields: `query`, `page`, `date`, `clicks`, `impressions`, `ctr`, `position`; e.g. `date_preset: "last_28d"`. Connected 2026-11-19.
+   - **Scheduled runs (no MCP):** `git fetch origin seo-data && git show origin/seo-data:gsc/latest.md` (JSON: `gsc/latest.json`).
+   - If neither is available, say "Search Console not connected yet". Never estimate. Save a dated snapshot to `marketing/seo/gsc/YYYY-MM-DD.md` when you pull data live.
 2. **Connected keyword tools**, if their tools are loaded in this session (check before claiming):
    - Semrush (`keyword_research`, `organic_research`): volume, difficulty, competitor keywords
    - Ahrefs: volume, keyword difficulty, competitor backlinks
