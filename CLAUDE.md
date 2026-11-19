@@ -11,7 +11,8 @@ Items marked `TODO` need owner input. **Never invent real-world business data** 
 3. **Verify:** `npm run check` and `npm run build` must finish with **0 errors**. Run `node scripts/site-metrics.mjs` for KPIs. Screenshot UI changes on desktop and mobile.
 4. **Ship:** commit (message credits the team members involved) and `git push -u origin <branch>`. Default branch for agency work: `agency/sprint-3` (current sprint branch; `agency/sprint-2` and `feat/citations-backlinks-leadgen` are merged/retired). Ship by keeping **one open PR from the sprint branch to `main`** (open it if none exists); **the owner merges** (or tells Sophia to merge). Merging to `main` publishes via the deploy workflow once the FTP secrets exist. Never push directly to `main`.
 5. **Daily content (owner priority: SEO, local SEO, lead gen):** follow `marketing/content/editorial-calendar.md`. Every run ships that day's item: a new post (Mon/Wed/Fri) or a refresh of a migrated post (Tue/Thu) in `src/content/blog/` per `marketing/content/post-template.md`, plus a GBP draft in `marketing/content/gbp-post-drafts.md`. Mark the calendar row ✍. Skip items flagged **O** until the owner supplies details, and move the next item up.
-6. **Report:** write/update `marketing/daily-reports/YYYY-MM-DD.md` from `marketing/daily-reports/TEMPLATE.md`, commit and push it, and end the reply with the **Daily Executive Report** signed by Sophia Reynolds.
+6. **Search Console (daily, Elena Brooks):** read the latest Google data with `git fetch origin seo-data && git show origin/seo-data:gsc/latest.md` (written each morning by `.github/workflows/seo-daily.yml`). Act on it: pages not indexed → fix internal links/content; queries ranking 5–20 → strengthen that page's title, H1, content and FAQ; high impressions + low CTR → rewrite title/meta. Put the numbers in the report's KPI section (never estimate if the data is missing).
+7. **Report:** write/update `marketing/daily-reports/YYYY-MM-DD.md` from `marketing/daily-reports/TEMPLATE.md`, commit and push it, and end the reply with the **Daily Executive Report** signed by Sophia Reynolds.
 
 Owner shortcuts (`.claude/commands/`): `/daily [focus]` · `/sprint <goal>` · `/report` · `/owner-update <info>` · `/redesign <page>`.
 
@@ -60,6 +61,11 @@ File: `marketing/daily-reports/YYYY-MM-DD.md` (template: `marketing/daily-report
 - Target via repo variable `DEPLOY_TARGET`: `staging` (default; test subdomain, `noindex`, no GTM) or `production` (aircareprohvac.com, GTM on). Server config comes from `deploy/htaccess.<target>`.
 - Needs repo secrets `FTP_SERVER`, `FTP_USERNAME`, `FTP_PASSWORD` (+ optional `LEAD_ENDPOINT`) added by the owner in GitHub. Until they exist the upload step is skipped.
 - **Don't switch to `production`** until the blog posts, About/Contact/Reviews/Financing/FAQ/Blog pages and WordPress redirects are ported and forms deliver leads.
+
+## Search Console
+- `scripts/gsc-report.mjs` + `.github/workflows/seo-daily.yml`: daily at 12:20 UTC, submits the sitemap, pulls 28-day clicks/impressions/CTR/position (current vs previous), top and local queries, and index status of key URLs. Writes to branch `seo-data` (`gsc/latest.md`, `gsc/latest.json`).
+- Needs repo secret `GSC_SERVICE_ACCOUNT_JSON` (Google Cloud service account with the Search Console API enabled, added as a Full user on the `sc-domain:aircareprohvac.com` property). Optional variable `GSC_SITE`.
+- Google has no API to request indexing for normal pages. The sitemap + internal links + URL Inspection status are the supported path; the owner can still click "Request indexing" in Search Console for urgent pages.
 
 ## Commands
 - `npm run dev`: local dev server (http://localhost:4321)
