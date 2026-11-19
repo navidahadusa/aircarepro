@@ -24,6 +24,8 @@ RewriteCond %{REQUEST_URI} !/$
 RewriteRule ^(.*)$ /$1/ [R=301,L]
 # Migration redirects (old WordPress URLs → new pages). Owner: Elena Brooks.
 # All 34 posts and all live pages keep their exact URLs; only WordPress system URLs need redirects.
+# Old WordPress / Rank Math sitemap URLs (saved in Google Search Console) → the new sitemap
+RedirectMatch 301 ^/(sitemap|sitemap_index|wp-sitemap|page-sitemap|post-sitemap|category-sitemap|local-sitemap)\.xml$ /sitemap-index.xml
 RedirectMatch 301 ^/feed/?$ /blog/
 RedirectMatch 301 ^/comments/feed/?$ /blog/
 RedirectMatch 301 ^/category/.*$ /blog/
