@@ -322,7 +322,7 @@ export const services: Service[] = [
   },
   {
     slug: 'furnace-tune-up', name: 'Furnace Tune-Up', category: 'Heating', funnel: 'maintenance',
-    title: 'Furnace Tune-Up & Inspection Chicago',
+    title: 'Furnace Tune-Up Chicago | Inspection',
     card: 'Fall safety and efficiency check',
     meta: `Furnace tune-up in Chicago: igniter, flame sensor, venting, safety controls and a carbon monoxide check. Comfort Club available. ${PHONE_DISPLAY}.`,
     intro: 'A furnace tune-up is a yearly inspection, cleaning and safety check done before the heating season, so the parts most likely to fail are caught early. Chicago Aircare Pro performs furnace tune-ups in Chicago and nearby suburbs. A fall visit catches worn igniters, dirty flame sensors and venting problems before the first cold snap, when every HVAC company in Chicago is booked solid.',
@@ -1016,9 +1016,9 @@ export const services: Service[] = [
   // ───────────── Air quality
   {
     slug: 'whole-home-humidifiers', name: 'Whole-Home Humidifiers', category: 'Air Quality', funnel: 'quick',
-    title: 'Whole-Home Humidifiers Chicago',
+    title: 'Whole House Humidifier Install Chicago',
     card: 'Comfort in dry Chicago winters',
-    meta: `Whole-home humidifier installation in Chicago: bypass, fan-powered and steam models for dry winter air, static shocks and cracked woodwork. ${PHONE_DISPLAY}.`,
+    meta: `Whole-house humidifier installation in Chicago: bypass, fan-powered and steam models for dry winter air, static shocks and cracked woodwork. ${PHONE_DISPLAY}.`,
     intro: 'A whole-home humidifier mounts on your furnace and adds moisture to the air throughout the house during the heating season. Chicago winter air gets very dry indoors once the heat runs, causing static shocks, dry skin and sinuses, and gaps in wood floors and trim. Chicago Aircare Pro installs and services whole-home humidifiers, sized and controlled so humidity stays comfortable without fogging the windows.',
     signs: ['Static shocks and dry skin all winter', 'Gaps in hardwood floors or cracking trim', 'Running several portable humidifiers', 'Dry sinuses or scratchy throat when the heat runs'],
     included: ['Bypass, fan-powered or steam options compared', 'Water line and drain connection', 'Wiring to the furnace and a humidistat or compatible thermostat', 'Outdoor-temperature compensation setup', 'Yearly maintenance walkthrough'],
@@ -1179,9 +1179,9 @@ export const services: Service[] = [
   },
   {
     slug: 'uv-air-sanitizers', name: 'UV Air Sanitizers', category: 'Air Quality', funnel: 'quick',
-    title: 'HVAC UV Lights Chicago | UV Sanitizers',
+    title: 'UV Air Sanitizer Installation Chicago',
     card: 'UV lights for coils and air',
-    meta: `HVAC UV light installation in Chicago: ozone-free UV-C lamps that keep the AC coil and drain pan clean of mold and odors. Honest advice. ${PHONE_DISPLAY}.`,
+    meta: `UV air sanitizer installation in Chicago: ozone-free UV-C lamps that keep the AC coil and drain pan clean of mold and odors. Honest advice. ${PHONE_DISPLAY}.`,
     intro: 'A UV air sanitizer is a UV-C lamp installed inside your HVAC system, usually aimed at the AC coil and drain pan, to stop mold and bacteria from growing on these damp surfaces. A clean coil keeps airflow and efficiency up and odors down. Chicago Aircare Pro installs and services ozone-free UV systems in Chicago homes, and we’ll tell you honestly whether your home would benefit.',
     signs: ['A musty smell when the AC starts', 'Slime in the drain pan or a drain that keeps clogging', 'A dirty indoor coil that keeps coming back', 'Household members with allergies'],
     included: ['Coil or air-stream UV options explained', 'Lamp mounted near the coil, with a safety switch where required', 'Power connection, often from the furnace', 'Labelled access panel and lamp replacement schedule'],
