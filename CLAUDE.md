@@ -46,7 +46,8 @@ Owner shortcuts (`.claude/commands/`): `/daily [focus]` · `/sprint <goal>` · `
 
 ### Rebrand status (keep exact)
 - Legal rebrand **"Shad Heating and Cooling LLC" → "CHICAGO AIRCARE PRO": APPROVED.**
-- **Google Business Profile, Yelp, BBB name updates: PENDING.**
+- **Google Business Profile: name change SUBMITTED by the owner 2026-11-20, Google review pending** (prep for a documents/video request: `marketing/citations/gbp-rename-evidence.md`).
+- **Yelp, BBB name updates: PENDING.**
 - `sameAs` / `reviewProfiles` for GBP, Yelp and BBB stay `TODO` until the owner provides the live URLs.
 - **New citations wait** until the existing listings are updated (`business.rebrand.newCitationsBlocked = true`).
 - Code source of truth: `business.rebrand` in `src/data/business.ts`; tracker: `marketing/citations-tracker.md`.
@@ -153,7 +154,7 @@ File: `marketing/daily-reports/YYYY-MM-DD.md` (template: `marketing/daily-report
 
 | Platform | Status | URL (→ `sameAs`) |
 |---|---|---|
-| Google Business Profile | Existing · **name update to CHICAGO AIRCARE PRO pending** | TODO(owner) after rename |
+| Google Business Profile | Existing · **name change submitted 2026-11-20, under Google review** | TODO(owner) after the new name shows publicly |
 | Yelp | Existing · **name update pending** | TODO(owner) after rename |
 | BBB | Existing, accredited · **name update pending** | TODO(owner) after rename |
 | Facebook | Existing (found in live-site schema) | https://www.facebook.com/Aircareprohvac/ |

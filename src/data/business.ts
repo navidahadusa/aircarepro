@@ -50,7 +50,7 @@ export interface ServiceCategory {
   services: Array<{ name: string; path: string }>;
 }
 
-export type ListingRebrandState = 'pending-name-update' | 'name-updated' | 'verified-live';
+export type ListingRebrandState = 'pending-name-update' | 'submitted-under-review' | 'name-updated' | 'verified-live';
 
 export interface RebrandStatus {
   /** The approved change from the old legal name to the brand. */
@@ -145,7 +145,7 @@ export const business: Business = {
     to: 'CHICAGO AIRCARE PRO',
     legalApproved: true,
     listings: {
-      'Google Business Profile': 'pending-name-update',
+      'Google Business Profile': 'submitted-under-review', // owner submitted the name change 2026-11-20; Google review pending
       Yelp: 'pending-name-update',
       BBB: 'pending-name-update',
     },
