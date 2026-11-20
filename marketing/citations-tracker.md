@@ -7,7 +7,7 @@ Rows: `citations/citation-tracker.csv` · Rules: `citations/nap-standard.md` · 
 | Item | Status |
 |---|---|
 | Legal rebrand **Shad Heating and Cooling LLC → CHICAGO AIRCARE PRO** | ✅ **Approved** |
-| Google Business Profile name update | 📨 **Submitted 2026-11-20, under Google review** (evidence kit: `citations/gbp-rename-evidence.md`) |
+| Google Business Profile name update | ✅ **Live 2026-11-20** → `sameAs`: https://www.google.com/maps?cid=18088581127472759753 |
 | Yelp name update | ⏳ **Pending** |
 | BBB name update (business name / DBA on the accredited profile) | ⏳ **Pending** |
 | Housecall Pro public booking name (still "Shad Heating and Cooling") | ⏳ Pending: owner can change it in HCP settings |

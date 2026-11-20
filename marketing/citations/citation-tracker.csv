@@ -1,5 +1,5 @@
 priority,tier,directory,url_to_submit,listing_url,status,nap_match,claimed,login_location,date_submitted,date_live,last_checked,in_sameAs,notes
-1,1,Google Business Profile,https://business.google.com,TODO(owner),submitted-under-review,pending Google review,yes,,2026-11-20,,2026-11-20,no,Owner submitted rename to CHICAGO AIRCARE PRO 2026-11-20; send URL for sameAs once the new name shows publicly
+1,1,Google Business Profile,https://business.google.com,https://www.google.com/maps?cid=18088581127472759753,name-updated,match: CHICAGO AIRCARE PRO,yes,,2026-11-20,2026-11-20,2026-11-20,yes,Renamed and live (verified via owner's Maps share link)
 2,1,Yelp,https://biz.yelp.com,TODO(owner),pending-name-update,mismatch: old name until rename,yes,,,,,no,Existing listing - rename to CHICAGO AIRCARE PRO (owner); then send URL for sameAs
 3,1,BBB,https://www.bbb.org,TODO(owner),pending-name-update,mismatch: old name until rename,yes,,,,,no,Existing listing - rename to CHICAGO AIRCARE PRO (owner); then send URL for sameAs
 4,1,Facebook,https://www.facebook.com/Aircareprohvac/,https://www.facebook.com/Aircareprohvac/,live,audit,yes,,,,,yes,Found in live-site schema; verify NAP + hours 24/7

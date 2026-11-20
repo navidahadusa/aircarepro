@@ -46,9 +46,9 @@ Owner shortcuts (`.claude/commands/`): `/daily [focus]` · `/sprint <goal>` · `
 
 ### Rebrand status (keep exact)
 - Legal rebrand **"Shad Heating and Cooling LLC" → "CHICAGO AIRCARE PRO": APPROVED.**
-- **Google Business Profile: name change SUBMITTED by the owner 2026-11-20, Google review pending** (prep for a documents/video request: `marketing/citations/gbp-rename-evidence.md`).
+- **Google Business Profile: name UPDATED, live as CHICAGO AIRCARE PRO (2026-11-20).** URL in `sameAs` + `reviewProfiles`: https://www.google.com/maps?cid=18088581127472759753 (if Google later asks for proof: `marketing/citations/gbp-rename-evidence.md`).
 - **Yelp, BBB name updates: PENDING.**
-- `sameAs` / `reviewProfiles` for GBP, Yelp and BBB stay `TODO` until the owner provides the live URLs.
+- `sameAs` / `reviewProfiles` for Yelp and BBB stay `TODO` until the owner provides the live URLs (GBP done).
 - **New citations wait** until the existing listings are updated (`business.rebrand.newCitationsBlocked = true`).
 - Code source of truth: `business.rebrand` in `src/data/business.ts`; tracker: `marketing/citations-tracker.md`.
 
@@ -154,11 +154,11 @@ File: `marketing/daily-reports/YYYY-MM-DD.md` (template: `marketing/daily-report
 
 | Platform | Status | URL (→ `sameAs`) |
 |---|---|---|
-| Google Business Profile | Existing · **name change submitted 2026-11-20, under Google review** | TODO(owner) after the new name shows publicly |
+| Google Business Profile | **Renamed to CHICAGO AIRCARE PRO (live 2026-11-20)** | https://www.google.com/maps?cid=18088581127472759753 |
 | Yelp | Existing · **name update pending** | TODO(owner) after rename |
 | BBB | Existing, accredited · **name update pending** | TODO(owner) after rename |
 | Facebook | Existing (found in live-site schema) | https://www.facebook.com/Aircareprohvac/ |
-| Next: Bing Places, Apple Business Connect, Nextdoor, Comfortmaker locator, Angi/HomeAdvisor, Thumbtack, Houzz, aggregators, Andersonville/Edgewater chambers | **Blocked until the 3 renames are live** | |
+| Next: Bing Places, Apple Business Connect, Nextdoor, Comfortmaker locator, Angi/HomeAdvisor, Thumbtack, Houzz, aggregators, Andersonville/Edgewater chambers | **Blocked until Yelp and BBB renames are live** (GBP done) | |
 
 Known NAP issues: duplicate LocalBusiness schema on the live site (unformatted phone, malformed hours); Housecall Pro public name "Shad Heating and Cooling"; name casing.
 
