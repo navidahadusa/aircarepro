@@ -5,11 +5,22 @@
 import { createSign } from 'node:crypto';
 
 export function loadKey() {
-  const raw = process.env.GOOGLE_SERVICE_ACCOUNT_JSON || process.env.GSC_SERVICE_ACCOUNT_JSON || '';
+  const raw = (process.env.GOOGLE_SERVICE_ACCOUNT_JSON || process.env.GSC_SERVICE_ACCOUNT_JSON || '').trim();
   let key = {};
-  try { key = JSON.parse(raw); } catch { /* handled below */ }
+  let parseError = '';
+  const tryParse = (text) => { try { return JSON.parse(text); } catch (e) { parseError = e.message; return null; } };
+  key = tryParse(raw)
+    // Accept a base64-encoded key file too.
+    ?? (/^[A-Za-z0-9+/=\s]+$/.test(raw) && raw.length > 100 ? tryParse(Buffer.from(raw, 'base64').toString('utf8')) : null)
+    ?? {};
   if (!key.client_email || !key.private_key) {
-    console.error('Service-account key missing or invalid: add the whole JSON key file as the GitHub secret GSC_SERVICE_ACCOUNT_JSON.');
+    // Safe diagnostics: shape only, never the secret's value.
+    const why = !raw ? 'the secret is empty'
+      : raw.startsWith('{') && parseError ? `the text starts like JSON but is not valid JSON (${parseError}); paste the whole file, nothing more or less`
+      : !raw.startsWith('{') ? `the text does not start with "{" (it starts with a ${/^[A-Za-z]/.test(raw) ? 'letter' : 'symbol'}); it may be a file name, an email or an API key instead of the JSON key file`
+      : `the JSON has no ${!key.client_email ? '"client_email"' : ''}${!key.client_email && !key.private_key ? ' or ' : ''}${!key.private_key ? '"private_key"' : ''} field (fields found: ${Object.keys(key).join(', ') || 'none'}); make sure it is a *service account* key (type "service_account")`;
+    console.error(`Service-account key problem: ${why}. Length: ${raw.length} characters (a real key file is about 2,300).`);
+    console.error('Fix: GitHub → Settings → Secrets and variables → Actions → GSC_SERVICE_ACCOUNT_JSON → Update → paste the full contents of the downloaded .json key file.');
     process.exit(1);
   }
   return key;
