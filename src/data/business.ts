@@ -50,7 +50,7 @@ export interface ServiceCategory {
   services: Array<{ name: string; path: string }>;
 }
 
-export type ListingRebrandState = 'pending-name-update' | 'name-updated' | 'verified-live';
+export type ListingRebrandState = 'pending-name-update' | 'submitted-under-review' | 'name-updated' | 'verified-live';
 
 export interface RebrandStatus {
   /** The approved change from the old legal name to the brand. */
@@ -145,7 +145,7 @@ export const business: Business = {
     to: 'CHICAGO AIRCARE PRO',
     legalApproved: true,
     listings: {
-      'Google Business Profile': 'pending-name-update',
+      'Google Business Profile': 'name-updated', // live as CHICAGO AIRCARE PRO (verified from the owner's Maps link 2026-11-20)
       Yelp: 'pending-name-update',
       BBB: 'pending-name-update',
     },
@@ -216,15 +216,16 @@ export const business: Business = {
   ],
   sameAs: [
     'https://www.facebook.com/Aircareprohvac/', // listed in the live site's schema
+    // Google Business Profile: owner's share link (2026-11-20) resolves to "CHICAGO AIRCARE PRO" (ftid …:0xfb078cb2b1d943c9 → cid below).
+    'https://www.google.com/maps?cid=18088581127472759753',
     // TODO(owner): add these ONLY after each listing's name update to CHICAGO AIRCARE PRO is live:
-    // Google Business Profile → 'https://www.google.com/maps?cid=…' (or the share link)
     // Yelp → 'https://www.yelp.com/biz/…'
     // BBB  → 'https://www.bbb.org/us/il/chicago/profile/…'
   ],
   // TODO(owner): set each url once that listing shows CHICAGO AIRCARE PRO (also add to sameAs).
-  // Google write-review link from the owner (2026-11-19). The public profile URL for sameAs stays TODO until the rename is live.
+  // Google write-review link from the owner (2026-11-19).
   googleReviewUrl: 'https://g.page/r/CclD2bGyjAf7EBE/review',
-  reviewProfiles: [{ platform: 'Google', writeReviewUrl: 'https://g.page/r/CclD2bGyjAf7EBE/review' }, { platform: 'Yelp' }, { platform: 'BBB' }],
+  reviewProfiles: [{ platform: 'Google', url: 'https://www.google.com/maps?cid=18088581127472759753', writeReviewUrl: 'https://g.page/r/CclD2bGyjAf7EBE/review' }, { platform: 'Yelp' }, { platform: 'BBB' }],
   licenseNumber: '3065598', // City of Chicago
   credentials: [
     'NATE-certified technicians',
