@@ -1,10 +1,11 @@
 name: SEO daily (Search Console)
 
 # Every morning before the team's 7:45 AM Central run: submit the sitemap, pull Search
-# Console performance + index status, and save it to the `seo-data` branch (gsc/latest.md,
-# gsc/latest.json, gsc/YYYY-MM-DD.md). Read by Elena Brooks in the daily run.
+# Console performance + index status and GA4 traffic/lead events, and save them to the `seo-data`
+# branch (gsc/latest.md|json, ga4/latest.md|json, dated copies). Read by Elena Brooks and Rachel Morgan.
 # Setup (owner, once): repo secret GSC_SERVICE_ACCOUNT_JSON (service-account key JSON);
-# optional repo variable GSC_SITE (default sc-domain:aircareprohvac.com).
+# add the service-account email in Search Console (Users) and GA4 (Viewer). Optional repo variables
+# GSC_SITE and GA4_PROPERTY_ID (both auto-detected when empty). Free: no paid connector.
 
 on:
   schedule:
@@ -38,9 +39,17 @@ jobs:
         if: env.HAS_KEY == 'true'
         env:
           GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
-          GSC_SITE: ${{ vars.GSC_SITE || 'sc-domain:aircareprohvac.com' }}
+          GSC_SITE: ${{ vars.GSC_SITE }}   # empty = auto-detect the aircareprohvac.com property
           OUT_DIR: ${{ runner.temp }}/gsc
         run: node scripts/gsc-report.mjs >> "$GITHUB_STEP_SUMMARY"
+      - name: Pull Google Analytics 4 data
+        if: env.HAS_KEY == 'true'
+        continue-on-error: true   # GA4 access is optional; Search Console still saves
+        env:
+          GSC_SERVICE_ACCOUNT_JSON: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON }}
+          GA4_PROPERTY_ID: ${{ vars.GA4_PROPERTY_ID }}   # empty = auto-detect via G-J25SG73ES5
+          OUT_DIR: ${{ runner.temp }}/ga4
+        run: node scripts/ga4-report.mjs >> "$GITHUB_STEP_SUMMARY"
       - name: Save to seo-data branch
         if: env.HAS_KEY == 'true'
         run: |
@@ -52,7 +61,9 @@ jobs:
           else
             git checkout --orphan seo-data && git rm -rf --quiet . || true
           fi
-          mkdir -p gsc && cp -r "$RUNNER_TEMP"/gsc/* gsc/
-          git add gsc
-          git commit -m "Search Console snapshot $(date -u +%F)" || echo "no changes"
+          mkdir -p gsc ga4
+          cp -r "$RUNNER_TEMP"/gsc/* gsc/
+          if [ -d "$RUNNER_TEMP/ga4" ]; then cp -r "$RUNNER_TEMP"/ga4/* ga4/; fi
+          git add gsc ga4
+          git commit -m "Search Console + GA4 snapshot $(date -u +%F)" || echo "no changes"
           git push origin seo-data

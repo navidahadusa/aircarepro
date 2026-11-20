@@ -66,8 +66,8 @@ File: `marketing/daily-reports/YYYY-MM-DD.md` (template: `marketing/daily-report
 - **Don't switch to `production`** until the blog posts, About/Contact/Reviews/Financing/FAQ/Blog pages and WordPress redirects are ported and forms deliver leads.
 
 ## Search Console
-- `scripts/gsc-report.mjs` + `.github/workflows/seo-daily.yml`: daily at 12:20 UTC, submits the sitemap, pulls 28-day clicks/impressions/CTR/position (current vs previous), top and local queries, and index status of key URLs. Writes to branch `seo-data` (`gsc/latest.md`, `gsc/latest.json`).
-- Needs repo secret `GSC_SERVICE_ACCOUNT_JSON` (Google Cloud service account with the Search Console API enabled, added as a Full user on the `sc-domain:aircareprohvac.com` property). Optional variable `GSC_SITE`.
+- `scripts/gsc-report.mjs` + `scripts/ga4-report.mjs` + `.github/workflows/seo-daily.yml` (**free, no paid connector**): daily at 12:20 UTC, submits the sitemap, pulls 28-day clicks/impressions/CTR/position (current vs previous), top and local queries, index status of key URLs, and GA4 sessions, channels, landing pages, cities and lead events. Writes to branch `seo-data` (`gsc/latest.md|json`, `ga4/latest.md|json`). Owner setup: `marketing/seo/google-data-setup.md`. Windsor.ai is optional (paid after its trial); never depend on it.
+- Needs repo secret `GSC_SERVICE_ACCOUNT_JSON` (Google Cloud service account; Search Console API + Analytics Data API + Analytics Admin API enabled; email added as Full user in Search Console and Viewer in GA4). Properties are auto-detected (optional variables `GSC_SITE`, `GA4_PROPERTY_ID`).
 - Google has no API to request indexing for normal pages. The sitemap + internal links + URL Inspection status are the supported path; the owner can still click "Request indexing" in Search Console for urgent pages.
 
 ## Commands
@@ -181,6 +181,6 @@ Known NAP issues: duplicate LocalBusiness schema on the live site (unformatted p
 | Comfort Club signups | TODO | $150 (placeholder) | TODO |
 
 - **Lead destination:** **Housecall Pro booking link** (owner decision 2026-11-19). On-page forms are off (`leadCapture: 'housecall-pro'`).
-- **Analytics:** GTM `GTM-K3PBQCR9` (installed on the live site)
+- **Analytics:** GTM `GTM-K3PBQCR9` (installed on the live site) → GA4 `G-J25SG73ES5` (Google tag inside GTM, enhanced measurement on; verified 2026-11-19). Reporting: `ga4/latest.md` on the `seo-data` branch (free service account). Custom click events → GA4: owner step in GTM, see `marketing/lead-gen/tracking-plan.md`
 - **Built in this repo (Sprint 1):** forms on 60 pages, tap-to-text on every page, tracked booking clicks, lead scoring, Comfort Club signup. **Still open:** Comfort Club pricing, CRM endpoint. Google review link live (`business.googleReviewUrl`, `/review/` page, QR in `marketing/reviews/`)
 - **Financing partner:** Optimus (owner-confirmed). **Call tracking / baseline leads:** TODO

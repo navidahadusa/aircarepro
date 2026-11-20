@@ -14,31 +14,26 @@
  * Note: Google offers no API to "request indexing" for normal pages; sitemap submission +
  * internal links are the supported way. URL Inspection here is read-only status.
  */
-import { createSign } from 'node:crypto';
 import { mkdirSync, writeFileSync } from 'node:fs';
+import { loadKey, googleClient } from './lib/google-auth.mjs';
 
-const SITE = process.env.GSC_SITE || 'sc-domain:aircareprohvac.com';
 const ORIGIN = 'https://aircareprohvac.com';
 const OUT = process.env.OUT_DIR || 'gsc';
-const key = JSON.parse(process.env.GSC_SERVICE_ACCOUNT_JSON || '{}');
-if (!key.client_email || !key.private_key) { console.error('GSC_SERVICE_ACCOUNT_JSON missing or invalid'); process.exit(1); }
+const key = loadKey();
+const api = await googleClient(key, ['https://www.googleapis.com/auth/webmasters']);
 
-const b64 = (o) => Buffer.from(typeof o === 'string' ? o : JSON.stringify(o)).toString('base64url');
-async function token() {
-  const now = Math.floor(Date.now() / 1000);
-  const unsigned = `${b64({ alg: 'RS256', typ: 'JWT' })}.${b64({ iss: key.client_email, scope: 'https://www.googleapis.com/auth/webmasters', aud: 'https://oauth2.googleapis.com/token', iat: now, exp: now + 3600 })}`;
-  const sig = createSign('RSA-SHA256').update(unsigned).sign(key.private_key).toString('base64url');
-  const r = await fetch('https://oauth2.googleapis.com/token', { method: 'POST', headers: { 'content-type': 'application/x-www-form-urlencoded' }, body: new URLSearchParams({ grant_type: 'urn:ietf:params:oauth:grant-type:jwt-bearer', assertion: `${unsigned}.${sig}` }) });
-  if (!r.ok) throw new Error(`token: ${r.status} ${await r.text()}`);
-  return (await r.json()).access_token;
+// Property: GSC_SITE if set, else auto-detect (Domain property first, then URL-prefix).
+let SITE = process.env.GSC_SITE;
+if (!SITE) {
+  const sites = (await api('GET', 'https://www.googleapis.com/webmasters/v3/sites')).siteEntry ?? [];
+  const pick = ['sc-domain:aircareprohvac.com', 'https://aircareprohvac.com/', 'https://www.aircareprohvac.com/']
+    .find((u) => sites.some((s) => s.siteUrl === u));
+  if (!pick) {
+    console.error(`No aircareprohvac.com property visible to ${key.client_email}. Add this email as a user in Search Console (Settings → Users and permissions). Visible: ${sites.map((s) => s.siteUrl).join(', ') || 'none'}`);
+    process.exit(1);
+  }
+  SITE = pick;
 }
-const T = await token();
-const api = async (method, url, body) => {
-  const r = await fetch(url, { method, headers: { authorization: `Bearer ${T}`, 'content-type': 'application/json' }, body: body ? JSON.stringify(body) : undefined });
-  const text = await r.text();
-  if (!r.ok) throw new Error(`${method} ${url}: ${r.status} ${text.slice(0, 300)}`);
-  return text ? JSON.parse(text) : {};
-};
 const site = encodeURIComponent(SITE);
 const day = (offset) => new Date(Date.now() - offset * 864e5).toISOString().slice(0, 10);
 const query = (start, end, dimensions, rowLimit = 250, filters) => api('POST', `https://www.googleapis.com/webmasters/v3/sites/${site}/searchAnalytics/query`, { startDate: start, endDate: end, dimensions, rowLimit, ...(filters && { dimensionFilterGroups: [{ filters }] }) });

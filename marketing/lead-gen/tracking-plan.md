@@ -34,3 +34,14 @@ Placements include `mobile_bar`, `emergency_banner`, `emergency_banner_mobile`, 
 1. `npm run build && npm run preview`
 2. GTM Preview → submit each funnel → confirm event, params and the tag fired.
 3. Confirm the CRM/webhook received the payload, including attribution fields.
+
+## GA4 status (Rachel Morgan, 2026-11-19)
+- **Installed:** GA4 property `G-J25SG73ES5` runs through GTM `GTM-K3PBQCR9` (read from the public container). Enhanced measurement is on: page views, scrolls, outbound clicks (includes Housecall Pro booking clicks), form and file events.
+- **Not yet in GA4:** our own dataLayer events (`click_to_call`, `click_to_sms`, `click_book_online`, `click_review_link`, `click_form_link`). The container has no GA4 Event tag for them, so **phone and text taps are not counted as conversions yet**.
+
+### Owner step in Google Tag Manager (about 5 minutes)
+1. tagmanager.google.com → container GTM-K3PBQCR9 → **Variables** → User-Defined → New → *Data Layer Variable*, name `placement`, variable name `placement`. Save.
+2. **Triggers** → New → *Custom Event*, event name `click_to_call|click_to_sms|click_book_online|click_review_link|click_form_link`, tick **Use regex matching**. Name it "ACP clicks". Save.
+3. **Tags** → New → *Google Analytics: GA4 Event*, Measurement ID `G-J25SG73ES5`, Event name `{{Event}}`, Event parameter `placement` = `{{placement}}`. Trigger: "ACP clicks". Save.
+4. **Preview** on aircareprohvac.com, tap Call / Text / Book, confirm the tag fires → **Submit / Publish**.
+5. GA4 → Admin → **Events** (after the events show up, usually within 24 h) → mark `click_to_call`, `click_to_sms` and `click_book_online` as **Key events**.
