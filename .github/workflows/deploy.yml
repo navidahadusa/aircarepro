@@ -58,6 +58,10 @@ jobs:
           protocol: ftps
           local-dir: ./dist/
           server-dir: ${{ vars.FTP_SERVER_DIR || './' }}
+      - name: Notify Bing / IndexNow (production only)
+        if: env.DEPLOY_TARGET == 'production' && env.HAS_FTP == 'true'
+        continue-on-error: true
+        run: node scripts/indexnow.mjs dist
       - name: FTP not configured yet
         if: env.HAS_FTP != 'true'
         run: echo "::notice::Build OK. Add FTP_SERVER, FTP_USERNAME and FTP_PASSWORD secrets to enable publishing to Hostinger."
