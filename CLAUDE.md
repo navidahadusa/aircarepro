@@ -42,6 +42,7 @@ Owner shortcuts (`.claude/commands/`): `/daily [focus]` · `/sprint <goal>` · `
 - **Brand confirmed by the owner:** CHICAGO AIRCARE PRO. "Manager" = Sophia Reynolds. All 6 photos in `src/data/photos.ts` are confirmed as the company's own.
 - **Advertising is the team's job (owner, 2026-11-19):** Rachel Morgan owns paid ads, with Sophia approving. **No spend, launch or budget change without the owner's explicit OK.** Plan: `marketing/ads/ads-plan.md`.
 - **Owner priorities:** SEO, local SEO and lead generation come first. Daily posts on the website to rank on Google.
+- **GBP API: deferred (owner, 2026-11-20: setup too complex).** Don't ask the owner for GBP API setup again. Instead, Hannah Carter reads GBP numbers from screenshots the owner sends (Performance + Reviews) and logs them in the daily report. `scripts/gbp-report.mjs` stays ready and only runs if the GBP secrets ever exist (e.g. set up by a helper using `marketing/citations/gbp-api-setup.md`).
 
 ### Rebrand status (keep exact)
 - Legal rebrand **"Shad Heating and Cooling LLC" → "CHICAGO AIRCARE PRO": APPROVED.**
