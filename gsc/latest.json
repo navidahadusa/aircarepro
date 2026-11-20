@@ -1,16 +1,14 @@
 {
   "site": "https://aircareprohvac.com/",
-  "generatedAt": "2026-11-20T00:31:43.781Z",
-  "errors": [
-    "inspect /furnace-repair-chicago/: POST https://searchconsole.googleapis.com/v1/urlInspection/index:inspect: 503 {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"The service is currently unavailable.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
-  ],
+  "generatedAt": "2026-11-20T13:38:04.299Z",
+  "errors": [],
   "sitemaps": [
     {
       "path": "https://aircareprohvac.com/sitemap-index.xml",
-      "lastSubmitted": "2026-11-20T00:31:43.844Z",
+      "lastSubmitted": "2026-11-20T13:38:04.341Z",
       "isPending": true,
       "isSitemapsIndex": true,
-      "lastDownloaded": "2026-11-19T03:01:52.731Z",
+      "lastDownloaded": "2026-11-20T00:32:00.992Z",
       "warnings": "0",
       "errors": "0",
       "contents": [
@@ -26,9 +24,16 @@
       "lastSubmitted": "2026-11-18T02:10:25.549Z",
       "isPending": false,
       "isSitemapsIndex": true,
-      "lastDownloaded": "2026-11-18T02:10:26.903Z",
+      "lastDownloaded": "2026-11-20T01:55:10.946Z",
       "warnings": "0",
-      "errors": "0"
+      "errors": "0",
+      "contents": [
+        {
+          "type": "web",
+          "submitted": "108",
+          "indexed": "0"
+        }
+      ]
     }
   ],
   "period": {
@@ -2725,10 +2730,10 @@
     },
     {
       "url": "/furnace-repair-chicago/",
-      "verdict": "n/a",
-      "coverage": "n/a",
-      "lastCrawl": null,
-      "googleCanonical": null
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed",
+      "lastCrawl": "2026-11-17T04:30:06Z",
+      "googleCanonical": "https://aircareprohvac.com/furnace-repair-chicago/"
     },
     {
       "url": "/ac-repair-chicago/",

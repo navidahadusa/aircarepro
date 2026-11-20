@@ -47,7 +47,7 @@ Property: `https://aircareprohvac.com/` · Period 2026-10-21 → 2026-11-17 vs 2
 | /furnace-repair/ | PASS | Submitted and indexed | 2026-11-16 |
 | /ac-repair/ | PASS | Submitted and indexed | 2026-11-16 |
 | /boiler-repair/ | PASS | Submitted and indexed | 2026-11-16 |
-| /furnace-repair-chicago/ | n/a | n/a | — |
+| /furnace-repair-chicago/ | PASS | Submitted and indexed | 2026-11-17 |
 | /ac-repair-chicago/ | NEUTRAL | Excluded by ‘noindex’ tag | 2026-11-18 |
 | /hvac-evanston/ | PASS | Submitted and indexed | 2026-11-16 |
 | /hvac-skokie/ | PASS | Submitted and indexed | 2026-11-16 |
@@ -57,13 +57,4 @@ Property: `https://aircareprohvac.com/` · Period 2026-10-21 → 2026-11-17 vs 2
 | /furnace-wont-turn-on/ | PASS | Submitted and indexed | 2026-11-16 |
 | /service-areas/ | PASS | Submitted and indexed | 2026-11-16 |
 
-Sitemaps: https://aircareprohvac.com/sitemap-index.xml (submitted 2026-11-20, 108 URLs); https://aircareprohvac.com/sitemap_index.xml (submitted 2026-11-18, ? URLs)
-
-## Errors
-- inspect /furnace-repair-chicago/: POST https://searchconsole.googleapis.com/v1/urlInspection/index:inspect: 503 {
-  "error": {
-    "code": 503,
-    "message": "The service is currently unavailable.",
-    "status": "UNAVAILABLE"
-  }
-}
+Sitemaps: https://aircareprohvac.com/sitemap-index.xml (submitted 2026-11-20, 108 URLs); https://aircareprohvac.com/sitemap_index.xml (submitted 2026-11-18, 108 URLs)

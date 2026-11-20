@@ -1,15 +1,15 @@
 {
   "property": "564399214",
   "measurementId": "G-J25SG73ES5",
-  "generatedAt": "2026-11-20T00:35:15.890Z",
+  "generatedAt": "2026-11-20T13:41:12.163Z",
   "errors": [],
   "totals": {
     "current": {
-      "sessions": 86,
-      "totalUsers": 71,
-      "newUsers": 73,
-      "engagedSessions": 28,
-      "screenPageViews": 172,
+      "sessions": 99,
+      "totalUsers": 79,
+      "newUsers": 81,
+      "engagedSessions": 33,
+      "screenPageViews": 201,
       "keyEvents": 0
     },
     "previous": {
@@ -27,7 +27,7 @@
         "Direct"
       ],
       "vals": [
-        71,
+        81,
         0
       ]
     },
@@ -36,7 +36,7 @@
         "Organic Search"
       ],
       "vals": [
-        8,
+        11,
         0
       ]
     },
@@ -65,7 +65,7 @@
         "/"
       ],
       "vals": [
-        67,
+        72,
         0
       ]
     },
@@ -107,6 +107,24 @@
     },
     {
       "dims": [
+        "/air-in-boiler-system"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "/air-purifiers"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    },
+    {
+      "dims": [
         "/boiler-installation"
       ],
       "vals": [
@@ -116,7 +134,25 @@
     },
     {
       "dims": [
+        "/chicago-hvac-homeowner-guide"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    },
+    {
+      "dims": [
         "/cracked-heat-exchanger-signs"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "/financing"
       ],
       "vals": [
         1,
@@ -152,6 +188,33 @@
     },
     {
       "dims": [
+        "/hvac-norwood-park"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "/hvac-old-town-gold-coast"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "/hvac-ravenswood"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    },
+    {
+      "dims": [
         "/hvac-uptown"
       ],
       "vals": [
@@ -176,42 +239,6 @@
         1,
         0
       ]
-    },
-    {
-      "dims": [
-        "/mini-split-installation"
-      ],
-      "vals": [
-        1,
-        0
-      ]
-    },
-    {
-      "dims": [
-        "/refrigerant-leak-repair"
-      ],
-      "vals": [
-        1,
-        0
-      ]
-    },
-    {
-      "dims": [
-        "/reviews"
-      ],
-      "vals": [
-        1,
-        0
-      ]
-    },
-    {
-      "dims": [
-        "/sitemap"
-      ],
-      "vals": [
-        1,
-        0
-      ]
     }
   ],
   "cities": [
@@ -220,20 +247,20 @@
         "Chicago"
       ],
       "vals": [
-        18
-      ]
-    },
-    {
-      "dims": [
-        "(not set)"
-      ],
-      "vals": [
-        7
+        23
       ]
     },
     {
       "dims": [
         "Warsaw"
+      ],
+      "vals": [
+        8
+      ]
+    },
+    {
+      "dims": [
+        "(not set)"
       ],
       "vals": [
         7
@@ -266,6 +293,22 @@
     {
       "dims": [
         "Hialeah Gardens"
+      ],
+      "vals": [
+        3
+      ]
+    },
+    {
+      "dims": [
+        "Los Angeles"
+      ],
+      "vals": [
+        3
+      ]
+    },
+    {
+      "dims": [
+        "San Francisco"
       ],
       "vals": [
         3
@@ -318,22 +361,6 @@
       "vals": [
         2
       ]
-    },
-    {
-      "dims": [
-        "San Francisco"
-      ],
-      "vals": [
-        2
-      ]
-    },
-    {
-      "dims": [
-        "Springfield"
-      ],
-      "vals": [
-        2
-      ]
     }
   ],
   "devices": [
@@ -342,7 +369,7 @@
         "desktop"
       ],
       "vals": [
-        56
+        62
       ]
     },
     {
@@ -350,7 +377,7 @@
         "mobile"
       ],
       "vals": [
-        32
+        39
       ]
     }
   ],
@@ -367,6 +394,14 @@
     {
       "dims": [
         "google.com"
+      ],
+      "vals": [
+        2
+      ]
+    },
+    {
+      "dims": [
+        "g.page"
       ],
       "vals": [
         1
