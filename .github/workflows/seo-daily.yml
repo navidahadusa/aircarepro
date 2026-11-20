@@ -25,6 +25,7 @@ jobs:
     timeout-minutes: 10
     env:
       HAS_KEY: ${{ secrets.GSC_SERVICE_ACCOUNT_JSON != '' }}
+      HAS_GBP: ${{ secrets.GBP_REFRESH_TOKEN != '' }}
     steps:
       - name: Search Console key not configured yet
         if: env.HAS_KEY != 'true'
@@ -50,6 +51,16 @@ jobs:
           GA4_PROPERTY_ID: ${{ vars.GA4_PROPERTY_ID }}   # empty = auto-detect via G-J25SG73ES5
           OUT_DIR: ${{ runner.temp }}/ga4
         run: node scripts/ga4-report.mjs >> "$GITHUB_STEP_SUMMARY"
+      - name: Pull Google Business Profile data
+        if: env.HAS_KEY == 'true' && env.HAS_GBP == 'true'
+        continue-on-error: true   # optional; never blocks Search Console / GA4
+        env:
+          GBP_OAUTH_CLIENT_ID: ${{ secrets.GBP_OAUTH_CLIENT_ID }}
+          GBP_OAUTH_CLIENT_SECRET: ${{ secrets.GBP_OAUTH_CLIENT_SECRET }}
+          GBP_REFRESH_TOKEN: ${{ secrets.GBP_REFRESH_TOKEN }}
+          GBP_LOCATION: ${{ vars.GBP_LOCATION }}
+          OUT_DIR: ${{ runner.temp }}/gbp
+        run: node scripts/gbp-report.mjs >> "$GITHUB_STEP_SUMMARY"
       - name: Save to seo-data branch
         if: env.HAS_KEY == 'true'
         run: |
@@ -61,9 +72,10 @@ jobs:
           else
             git checkout --orphan seo-data && git rm -rf --quiet . || true
           fi
-          mkdir -p gsc ga4
+          mkdir -p gsc ga4 gbp
           cp -r "$RUNNER_TEMP"/gsc/* gsc/
           if [ -d "$RUNNER_TEMP/ga4" ]; then cp -r "$RUNNER_TEMP"/ga4/* ga4/; fi
-          git add gsc ga4
-          git commit -m "Search Console + GA4 snapshot $(date -u +%F)" || echo "no changes"
+          if [ -d "$RUNNER_TEMP/gbp" ]; then cp -r "$RUNNER_TEMP"/gbp/* gbp/; fi
+          git add gsc ga4 gbp
+          git commit -m "Search Console + GA4 + GBP snapshot $(date -u +%F)" || echo "no changes"
           git push origin seo-data
