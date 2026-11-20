@@ -1,0 +1,75 @@
+---
+/**
+ * Rotating carousel of REAL Google reviews (Chloe Vance design, Hannah Carter data).
+ * Hidden while src/data/reviews.ts is empty. Auto-advances every 6 s, pauses on hover/focus/touch,
+ * no auto-motion with prefers-reduced-motion, keyboard and screen-reader friendly. No review schema (self-serving).
+ */
+import { reviews as allReviews, reviewsAsOf, type Review } from '../data/reviews';
+import { business } from '../data/business';
+interface Props { items?: Review[]; placement?: string }
+const { items = allReviews, placement = 'reviews_carousel' } = Astro.props;
+const googleUrl = business.reviewProfiles.find((p) => p.platform === 'Google')?.url;
+const fmt = (d: string) => { const [y, m] = d.split('-').map(Number); return m ? new Date(Date.UTC(y, m - 1, 1)).toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' }) : d; };
+---
+{items.length > 0 && (
+  <div class="rc" data-rc aria-roledescription="carousel" aria-label="Customer reviews from Google">
+    <div class="rc-track" data-rc-track tabindex="0">
+      {items.map((r, i) => (
+        <figure class="rc-card" aria-roledescription="slide" aria-label={`Review ${i + 1} of ${items.length}`}>
+          <div class="rc-stars" role="img" aria-label={`${r.stars} out of 5 stars`}>{'★'.repeat(r.stars)}<span class="rc-off">{'★'.repeat(5 - r.stars)}</span></div>
+          <blockquote>{r.text}</blockquote>
+          <figcaption><strong>{r.author}</strong><span>{r.source} · {fmt(r.date)}</span></figcaption>
+        </figure>
+      ))}
+    </div>
+    <div class="rc-controls">
+      <button type="button" class="rc-btn" data-rc-prev aria-label="Previous review">‹</button>
+      <button type="button" class="rc-btn" data-rc-next aria-label="Next review">›</button>
+      {googleUrl && <a class="rc-more" href={googleUrl} target="_blank" rel="noopener" data-track="click_review_link" data-placement={placement}>All reviews on Google →</a>}
+    </div>
+    {reviewsAsOf && <p class="rc-note">Reviews copied from our Google Business Profile, {fmt(reviewsAsOf)}.</p>}
+  </div>
+)}
+
+<style>
+  .rc { margin-top: 2rem; }
+  .rc-track { display: grid; grid-auto-flow: column; grid-auto-columns: calc((100% - 2rem) / 3); gap: 1rem; overflow-x: auto; scroll-snap-type: x mandatory; scroll-behavior: smooth; padding: 0.25rem 0.25rem 1rem; scrollbar-width: none; }
+  .rc-track::-webkit-scrollbar { display: none; }
+  .rc-track:focus-visible { outline: 3px solid var(--cta); outline-offset: 4px; border-radius: var(--radius); }
+  @media (max-width: 1000px) { .rc-track { grid-auto-columns: calc((100% - 1rem) / 2); } }
+  @media (max-width: 640px) { .rc-track { grid-auto-columns: 88%; } }
+  .rc-card { scroll-snap-align: start; margin: 0; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.4rem; display: flex; flex-direction: column; gap: 0.75rem; }
+  .rc-stars { color: #f5a623; font-size: 1.2rem; letter-spacing: 2px; }
+  .rc-off { color: #d6dee8; }
+  .rc-card blockquote { margin: 0; color: var(--text); line-height: 1.55; display: -webkit-box; -webkit-line-clamp: 7; -webkit-box-orient: vertical; overflow: hidden; flex: 1; }
+  .rc-card figcaption { display: flex; flex-direction: column; font-size: 0.9rem; }
+  .rc-card figcaption span { color: var(--muted); }
+  .rc-controls { display: flex; align-items: center; gap: 0.5rem; margin-top: 0.25rem; }
+  .rc-btn { width: 44px; height: 44px; border-radius: 50%; border: 2px solid var(--navy-800); background: #fff; color: var(--navy-800); font-size: 1.5rem; line-height: 1; cursor: pointer; }
+  .rc-btn:hover { background: var(--blue-50); }
+  .rc-more { margin-left: auto; font-weight: 700; }
+  .rc-note { color: var(--muted); font-size: 0.85rem; margin: 0.5rem 0 0; }
+</style>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-rc]').forEach((root) => {
+    const track = root.querySelector<HTMLElement>('[data-rc-track]')!;
+    const step = (dir: number) => {
+      const card = track.firstElementChild as HTMLElement | null;
+      if (!card) return;
+      const w = card.offsetWidth + 16;
+      const atEnd = track.scrollLeft + track.clientWidth >= track.scrollWidth - 4;
+      if (dir > 0 && atEnd) track.scrollTo({ left: 0 });
+      else if (dir < 0 && track.scrollLeft <= 4) track.scrollTo({ left: track.scrollWidth });
+      else track.scrollBy({ left: dir * w });
+    };
+    root.querySelector('[data-rc-prev]')?.addEventListener('click', () => step(-1));
+    root.querySelector('[data-rc-next]')?.addEventListener('click', () => step(1));
+    track.addEventListener('keydown', (e) => { if (e.key === 'ArrowRight') step(1); if (e.key === 'ArrowLeft') step(-1); });
+    if (matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    let paused = false;
+    ['mouseenter', 'focusin', 'touchstart'].forEach((ev) => root.addEventListener(ev, () => { paused = true; }, { passive: true }));
+    ['mouseleave', 'focusout'].forEach((ev) => root.addEventListener(ev, () => { paused = false; }));
+    setInterval(() => { if (!paused && !document.hidden) step(1); }, 6000);
+  });
+</script>

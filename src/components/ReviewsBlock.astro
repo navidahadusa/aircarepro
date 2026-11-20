@@ -6,6 +6,7 @@
  */
 import { business, telHref } from '../data/business';
 import Icon from './Icon.astro';
+import ReviewsCarousel from './ReviewsCarousel.astro';
 interface Props { placement?: string }
 const { placement = 'reviews' } = Astro.props;
 ---
@@ -37,6 +38,8 @@ const { placement = 'reviews' } = Astro.props;
     ))}
   </ul>
 </div>
+
+<ReviewsCarousel placement={`${placement}_carousel`} />
 
 <style>
   .reviews { display: grid; gap: 2rem; grid-template-columns: 1.3fr 1fr; align-items: center; }
