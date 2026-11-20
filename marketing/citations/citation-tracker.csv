@@ -1,7 +1,7 @@
 priority,tier,directory,url_to_submit,listing_url,status,nap_match,claimed,login_location,date_submitted,date_live,last_checked,in_sameAs,notes
 1,1,Google Business Profile,https://business.google.com,https://www.google.com/maps?cid=18088581127472759753,name-updated,match: CHICAGO AIRCARE PRO,yes,,2026-11-20,2026-11-20,2026-11-20,yes,Renamed and live (verified via owner's Maps share link)
-2,1,Yelp,https://biz.yelp.com,TODO(owner),pending-name-update,mismatch: old name until rename,yes,,,,,no,Existing listing - rename to CHICAGO AIRCARE PRO (owner); then send URL for sameAs
-3,1,BBB,https://www.bbb.org,TODO(owner),pending-name-update,mismatch: old name until rename,yes,,,,,no,Existing listing - rename to CHICAGO AIRCARE PRO (owner); then send URL for sameAs
+2,1,Yelp,https://biz.yelp.com,TODO(owner),submitted-under-review,new page CHICAGO AIRCARE PRO; old Shad page duplicate,yes,,2026-11-20,,2026-11-20,no,Owner created a new Yelp page 2026-11-20. Ask Yelp support to merge the old Shad page into it (keeps reviews) or close it; then send URL
+3,1,BBB,https://www.bbb.org,TODO(owner),submitted-under-review,pending BBB,yes,,2026-11-20,,2026-11-20,no,Owner requested name change 2026-11-20; send profile URL when updated
 4,1,Facebook,https://www.facebook.com/Aircareprohvac/,https://www.facebook.com/Aircareprohvac/,live,audit,yes,,,,,yes,Found in live-site schema; verify NAP + hours 24/7
 5,1,Bing Places,https://www.bingplaces.com,,blocked-until-rename,,,,,,,no,Import from GBP
 6,1,Apple Business Connect,https://businessconnect.apple.com,,blocked-until-rename,,,,,,,no,
