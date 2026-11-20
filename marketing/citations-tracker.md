@@ -57,3 +57,9 @@ Former names to retire everywhere: `Shad Heating and Cooling LLC`, `Shad Heating
 ## Already done in this repo
 - `business.ts`: `legalName: CHICAGO AIRCARE PRO`, `formerNames`, `rebrand` status object, `reviewProfiles` placeholders (render without links until the URLs arrive).
 - The site footer and schema show **CHICAGO AIRCARE PRO** only. The former name appears nowhere on the site.
+
+## Old-name cleanup ("Shad" still showing), checked 2026-11-20 (Hannah Carter)
+- **Website:** clean. The only "Shad" left is the **Housecall Pro booking URL slug** (`book.housecallpro.com/book/Shad-Heating-and-Cooling/…`), and the HCP booking page itself shows the old name to customers. **Fix:** rename the company in Housecall Pro (Settings → Company profile / Online booking), then send the new booking link; it's changed once in `business.bookingUrl` and updates all 137 pages.
+- **Web search** (2026-11-20): no indexed third-party listings found for "Shad Heating and Cooling" + Chicago or + the phone number. The old name isn't widely syndicated, which keeps the cleanup small.
+- **Where it can still appear:** Google Search/Maps caches (update within days to a few weeks after the approved rename) · Apple Maps (claim at Apple Business Connect, after Yelp/BBB) · Bing Places (re-import from GBP) · old Yelp page (merge/close) · BBB (pending) · Housecall Pro texts/invoices/estimates · Facebook page name · business cards, van, invoices.
+- **Owner:** send screenshots of any place that still shows "Shad"; Hannah adds each one here with the fix.
