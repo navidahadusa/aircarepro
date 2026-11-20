@@ -1,0 +1,2790 @@
+{
+  "site": "https://aircareprohvac.com/",
+  "generatedAt": "2026-11-20T00:31:43.781Z",
+  "errors": [
+    "inspect /furnace-repair-chicago/: POST https://searchconsole.googleapis.com/v1/urlInspection/index:inspect: 503 {\n  \"error\": {\n    \"code\": 503,\n    \"message\": \"The service is currently unavailable.\",\n    \"status\": \"UNAVAILABLE\"\n  }\n}\n"
+  ],
+  "sitemaps": [
+    {
+      "path": "https://aircareprohvac.com/sitemap-index.xml",
+      "lastSubmitted": "2026-11-20T00:31:43.844Z",
+      "isPending": true,
+      "isSitemapsIndex": true,
+      "lastDownloaded": "2026-11-19T03:01:52.731Z",
+      "warnings": "0",
+      "errors": "0",
+      "contents": [
+        {
+          "type": "web",
+          "submitted": "108",
+          "indexed": "0"
+        }
+      ]
+    },
+    {
+      "path": "https://aircareprohvac.com/sitemap_index.xml",
+      "lastSubmitted": "2026-11-18T02:10:25.549Z",
+      "isPending": false,
+      "isSitemapsIndex": true,
+      "lastDownloaded": "2026-11-18T02:10:26.903Z",
+      "warnings": "0",
+      "errors": "0"
+    }
+  ],
+  "period": {
+    "current": [
+      "2026-10-21",
+      "2026-11-17"
+    ],
+    "previous": [
+      "2026-09-23",
+      "2026-10-20"
+    ]
+  },
+  "totals": {
+    "current": {
+      "clicks": 0,
+      "impressions": 364,
+      "ctr": 0,
+      "position": 44.994505494505496
+    },
+    "previous": {}
+  },
+  "topQueries": [
+    {
+      "keys": [
+        "ac capacitor replacement skokie il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 52
+    },
+    {
+      "keys": [
+        "ac company schaumburg"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 46
+    },
+    {
+      "keys": [
+        "ac contractor naperville"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 40
+    },
+    {
+      "keys": [
+        "ac contractor schaumburg il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "keys": [
+        "ac install schaumburg il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "keys": [
+        "ac installation arlington heights"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 30
+    },
+    {
+      "keys": [
+        "ac installation chicago"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 64.33333333333334
+    },
+    {
+      "keys": [
+        "ac installation in logan square"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "keys": [
+        "ac installation near me arlington heights il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 19
+    },
+    {
+      "keys": [
+        "ac installation ord"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 49.333333333333336
+    },
+    {
+      "keys": [
+        "ac installation schaumburg il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 32
+    },
+    {
+      "keys": [
+        "ac installation skokie il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "keys": [
+        "ac maintenance schaumburg il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "keys": [
+        "ac repair arlington heights"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 54.2
+    },
+    {
+      "keys": [
+        "ac repair arlington heights il"
+      ],
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 61.57142857142857
+    },
+    {
+      "keys": [
+        "ac repair des plaines il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 55
+    },
+    {
+      "keys": [
+        "ac repair evanston il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
+    },
+    {
+      "keys": [
+        "ac repair in skokie il"
+      ],
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 69.83333333333333
+    },
+    {
+      "keys": [
+        "ac repair naperville"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 30
+    },
+    {
+      "keys": [
+        "ac repair schaumburg"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
+    },
+    {
+      "keys": [
+        "ac repair schaumburg il"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 37.333333333333336
+    },
+    {
+      "keys": [
+        "ac repair skokie il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "keys": [
+        "ac replacement naperville il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 34
+    },
+    {
+      "keys": [
+        "ac replacement skokie il"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 34
+    },
+    {
+      "keys": [
+        "ac service skokie il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
+    },
+    {
+      "keys": [
+        "ac services arlington heights"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 70
+    },
+    {
+      "keys": [
+        "ac services schaumburg"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 94
+    },
+    {
+      "keys": [
+        "ac tune up chicago"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "keys": [
+        "air conditioner installation chicago il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 63
+    },
+    {
+      "keys": [
+        "air conditioner installation in chicago"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
+    },
+    {
+      "keys": [
+        "air conditioner repair arlington heights"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 34
+    },
+    {
+      "keys": [
+        "air conditioner service arlington heights"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 34
+    },
+    {
+      "keys": [
+        "air conditioning arlington heights"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 94
+    },
+    {
+      "keys": [
+        "air conditioning arlington heights il"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 77
+    },
+    {
+      "keys": [
+        "air conditioning company schaumburg"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 46
+    },
+    {
+      "keys": [
+        "air conditioning des plaines"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 97
+    },
+    {
+      "keys": [
+        "air conditioning installation ord"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 25
+    },
+    {
+      "keys": [
+        "air conditioning installation schaumburg"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
+    },
+    {
+      "keys": [
+        "air conditioning installation schaumburg il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 31
+    },
+    {
+      "keys": [
+        "air conditioning maintenance arlington heights"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "keys": [
+        "air conditioning maintenance schaumburg"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "keys": [
+        "air conditioning maintenance schaumburg il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 34
+    },
+    {
+      "keys": [
+        "air conditioning repair arlington heights"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "keys": [
+        "air conditioning repair des plaines"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 50
+    },
+    {
+      "keys": [
+        "air conditioning repair lincoln park"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "keys": [
+        "air conditioning repair naperville"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 32.5
+    },
+    {
+      "keys": [
+        "air conditioning repair schaumburg"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 33
+    },
+    {
+      "keys": [
+        "air conditioning repair schaumburg il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 81
+    },
+    {
+      "keys": [
+        "air conditioning schaumburg"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "keys": [
+        "air conditioning service arlington heights il"
+      ],
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 66.28571428571429
+    },
+    {
+      "keys": [
+        "air conditioning service schaumburg il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 44
+    },
+    {
+      "keys": [
+        "air in heating system"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 57
+    },
+    {
+      "keys": [
+        "air in system central heating"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 50
+    },
+    {
+      "keys": [
+        "air in the heating system"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 21
+    },
+    {
+      "keys": [
+        "arlington heights air conditioning service"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 33
+    },
+    {
+      "keys": [
+        "bleeding air from boiler"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 55
+    },
+    {
+      "keys": [
+        "boiler repair schaumburg il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
+    },
+    {
+      "keys": [
+        "chicago air conditioning installation"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 48
+    },
+    {
+      "keys": [
+        "chicago furnace installation"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 65.5
+    },
+    {
+      "keys": [
+        "chicago heat pump check"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "keys": [
+        "commercial hvac repair skokie il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 47
+    },
+    {
+      "keys": [
+        "condensate drain frozen"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 77.5
+    },
+    {
+      "keys": [
+        "condensate drain line frozen"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 65.2
+    },
+    {
+      "keys": [
+        "condensate drain pipe frozen"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "keys": [
+        "cooling repair naperville il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "keys": [
+        "des plaines heat pump maintenance"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "keys": [
+        "des plaines hvac"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "keys": [
+        "ductless ac chicago"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 80
+    },
+    {
+      "keys": [
+        "ductless ac repair schaumburg il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 76
+    },
+    {
+      "keys": [
+        "ductless ac service schaumburg il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 19
+    },
+    {
+      "keys": [
+        "ductless ac systems for older homes weston"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 34
+    },
+    {
+      "keys": [
+        "ductless mini split chicago il"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 48
+    },
+    {
+      "keys": [
+        "emergency hvac repair arlington heights"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "keys": [
+        "emergency hvac services evanston"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 42
+    },
+    {
+      "keys": [
+        "floor furnace repair"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 49
+    },
+    {
+      "keys": [
+        "frozen condensate drain"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 77.66666666666667
+    },
+    {
+      "keys": [
+        "furnace installation chicago"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 68
+    },
+    {
+      "keys": [
+        "furnace installation ord"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 49
+    },
+    {
+      "keys": [
+        "furnace installation services"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 17
+    },
+    {
+      "keys": [
+        "furnace installation skokie il"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "keys": [
+        "furnace installations"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 22
+    },
+    {
+      "keys": [
+        "furnace maintenance chicago"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 60
+    },
+    {
+      "keys": [
+        "furnace maintenance skokie il"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 35.5
+    },
+    {
+      "keys": [
+        "furnace repair"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 21
+    },
+    {
+      "keys": [
+        "furnace repair des plaines"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 30
+    },
+    {
+      "keys": [
+        "furnace repair naperville"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 47
+    },
+    {
+      "keys": [
+        "furnace repair naperville, il"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 48
+    },
+    {
+      "keys": [
+        "furnace repair near me"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 22
+    },
+    {
+      "keys": [
+        "furnace repair schaumburg il"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 44.5
+    },
+    {
+      "keys": [
+        "furnace repair skokie"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 38.2
+    },
+    {
+      "keys": [
+        "furnace repair skokie il"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "keys": [
+        "furnace replacement chicago"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 51.5
+    },
+    {
+      "keys": [
+        "furnace replacement in chicago"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 51
+    },
+    {
+      "keys": [
+        "furnace replacement naperville"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 47
+    },
+    {
+      "keys": [
+        "furnace replacement skokie il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 60
+    },
+    {
+      "keys": [
+        "furnace service skokie il"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 59.5
+    },
+    {
+      "keys": [
+        "furnace tune up"
+      ],
+      "clicks": 0,
+      "impressions": 29,
+      "ctr": 0,
+      "position": 47.86206896551724
+    },
+    {
+      "keys": [
+        "furnace tune up cameron park"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 48
+    },
+    {
+      "keys": [
+        "furnace tune ups in logan square"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 76
+    },
+    {
+      "keys": [
+        "furnace tune-up"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    }
+  ],
+  "topPages": [
+    {
+      "keys": [
+        "https://aircareprohvac.com/ac-installation/"
+      ],
+      "clicks": 0,
+      "impressions": 12,
+      "ctr": 0,
+      "position": 45.75
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 51,
+      "ctr": 0,
+      "position": 53.76470588235294
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/ac-repair-naperville/"
+      ],
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 49.57142857142857
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/ac-repair-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 20,
+      "ctr": 0,
+      "position": 48.9
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/ac-repair/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 55
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/ac-tune-up/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/air-in-boiler-system/"
+      ],
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 33.2
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/air-purifiers/"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 23.333333333333332
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/contact/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 169.5
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/cooling/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/frozen-furnace-condensate/"
+      ],
+      "clicks": 0,
+      "impressions": 14,
+      "ctr": 0,
+      "position": 71.35714285714286
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/furnace-installation-naperville/"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 39.75
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/furnace-installation/"
+      ],
+      "clicks": 0,
+      "impressions": 10,
+      "ctr": 0,
+      "position": 52
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/furnace-repair-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 18,
+      "ctr": 0,
+      "position": 43.27777777777778
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/furnace-repair-wilmette/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 21.5
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/furnace-tune-up/"
+      ],
+      "clicks": 0,
+      "impressions": 31,
+      "ctr": 0,
+      "position": 47.064516129032256
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/heat-pump-installation/"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 49.5
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/heat-pump-repair/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 32.5
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/heat-pumps-in-chicago/"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 30.6
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/heating/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 49
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/hvac-des-plaines/"
+      ],
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 45.666666666666664
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/hvac-evanston/"
+      ],
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 59.166666666666664
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/hvac-jefferson-park/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 48
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/hvac-logan-square/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 41
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/hvac-maintenance-checklist/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 70
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 53,
+      "ctr": 0,
+      "position": 43.79245283018868
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/mini-split-installation/"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 51.6
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/mini-split-repair/"
+      ],
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 47.5
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/privacy-policy-2/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 5
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/repair-or-replace-furnace/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 7
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/service-areas/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/thermostat-installation/"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 80
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/uv-air-sanitizers/"
+      ],
+      "clicks": 0,
+      "impressions": 51,
+      "ctr": 0,
+      "position": 27.019607843137255
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/uv-lights-worth-it/"
+      ],
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 35.333333333333336
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/whole-home-dehumidifiers/"
+      ],
+      "clicks": 0,
+      "impressions": 9,
+      "ctr": 0,
+      "position": 35.666666666666664
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/whole-home-humidifiers/"
+      ],
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 26
+    }
+  ],
+  "localQueries": [
+    {
+      "keys": [
+        "ac capacitor replacement skokie il",
+        "https://aircareprohvac.com/ac-repair-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 52
+    },
+    {
+      "keys": [
+        "ac company schaumburg",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 46
+    },
+    {
+      "keys": [
+        "ac contractor naperville",
+        "https://aircareprohvac.com/ac-repair-naperville/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 40
+    },
+    {
+      "keys": [
+        "ac contractor schaumburg il",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "keys": [
+        "ac install schaumburg il",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "keys": [
+        "ac installation arlington heights",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 30
+    },
+    {
+      "keys": [
+        "ac installation chicago",
+        "https://aircareprohvac.com/ac-installation/"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 64.33333333333334
+    },
+    {
+      "keys": [
+        "ac installation in logan square",
+        "https://aircareprohvac.com/hvac-logan-square/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 6
+    },
+    {
+      "keys": [
+        "ac installation near me arlington heights il",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 19
+    },
+    {
+      "keys": [
+        "ac installation schaumburg il",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 32
+    },
+    {
+      "keys": [
+        "ac installation skokie il",
+        "https://aircareprohvac.com/ac-repair-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "keys": [
+        "ac maintenance schaumburg il",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "keys": [
+        "ac repair arlington heights",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 54.2
+    },
+    {
+      "keys": [
+        "ac repair arlington heights il",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 61.57142857142857
+    },
+    {
+      "keys": [
+        "ac repair des plaines il",
+        "https://aircareprohvac.com/hvac-des-plaines/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 55
+    },
+    {
+      "keys": [
+        "ac repair evanston il",
+        "https://aircareprohvac.com/hvac-evanston/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
+    },
+    {
+      "keys": [
+        "ac repair in skokie il",
+        "https://aircareprohvac.com/ac-repair-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 69.83333333333333
+    },
+    {
+      "keys": [
+        "ac repair naperville",
+        "https://aircareprohvac.com/ac-repair-naperville/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 30
+    },
+    {
+      "keys": [
+        "ac repair schaumburg",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
+    },
+    {
+      "keys": [
+        "ac repair schaumburg il",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 37.333333333333336
+    },
+    {
+      "keys": [
+        "ac repair skokie il",
+        "https://aircareprohvac.com/ac-repair-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "keys": [
+        "ac replacement naperville il",
+        "https://aircareprohvac.com/ac-repair-naperville/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 34
+    },
+    {
+      "keys": [
+        "ac replacement skokie il",
+        "https://aircareprohvac.com/ac-repair-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 34
+    },
+    {
+      "keys": [
+        "ac service skokie il",
+        "https://aircareprohvac.com/ac-repair-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
+    },
+    {
+      "keys": [
+        "ac services arlington heights",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 70
+    },
+    {
+      "keys": [
+        "ac services schaumburg",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 94
+    },
+    {
+      "keys": [
+        "ac tune up chicago",
+        "https://aircareprohvac.com/ac-tune-up/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "keys": [
+        "air conditioner installation chicago il",
+        "https://aircareprohvac.com/ac-installation/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 63
+    },
+    {
+      "keys": [
+        "air conditioner installation in chicago",
+        "https://aircareprohvac.com/ac-installation/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
+    },
+    {
+      "keys": [
+        "air conditioner repair arlington heights",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 34
+    },
+    {
+      "keys": [
+        "air conditioner service arlington heights",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 34
+    },
+    {
+      "keys": [
+        "air conditioning arlington heights",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 94
+    },
+    {
+      "keys": [
+        "air conditioning arlington heights il",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 77
+    },
+    {
+      "keys": [
+        "air conditioning company schaumburg",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 46
+    },
+    {
+      "keys": [
+        "air conditioning des plaines",
+        "https://aircareprohvac.com/hvac-des-plaines/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 97
+    },
+    {
+      "keys": [
+        "air conditioning installation schaumburg",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
+    },
+    {
+      "keys": [
+        "air conditioning installation schaumburg il",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 31
+    },
+    {
+      "keys": [
+        "air conditioning maintenance arlington heights",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "keys": [
+        "air conditioning maintenance schaumburg",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "keys": [
+        "air conditioning maintenance schaumburg il",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 34
+    },
+    {
+      "keys": [
+        "air conditioning repair arlington heights",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "keys": [
+        "air conditioning repair des plaines",
+        "https://aircareprohvac.com/hvac-des-plaines/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 50
+    },
+    {
+      "keys": [
+        "air conditioning repair lincoln park",
+        "https://aircareprohvac.com/service-areas/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "keys": [
+        "air conditioning repair naperville",
+        "https://aircareprohvac.com/ac-repair-naperville/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 32.5
+    },
+    {
+      "keys": [
+        "air conditioning repair schaumburg",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 33
+    },
+    {
+      "keys": [
+        "air conditioning repair schaumburg il",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 81
+    },
+    {
+      "keys": [
+        "air conditioning schaumburg",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "keys": [
+        "air conditioning service arlington heights il",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 7,
+      "ctr": 0,
+      "position": 66.28571428571429
+    },
+    {
+      "keys": [
+        "air conditioning service schaumburg il",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 44
+    },
+    {
+      "keys": [
+        "arlington heights air conditioning service",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 33
+    },
+    {
+      "keys": [
+        "boiler repair schaumburg il",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
+    },
+    {
+      "keys": [
+        "chicago air conditioning installation",
+        "https://aircareprohvac.com/ac-installation/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 48
+    },
+    {
+      "keys": [
+        "chicago furnace installation",
+        "https://aircareprohvac.com/furnace-installation/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 65.5
+    },
+    {
+      "keys": [
+        "chicago heat pump check",
+        "https://aircareprohvac.com/heat-pumps-in-chicago/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "keys": [
+        "commercial hvac repair skokie il",
+        "https://aircareprohvac.com/ac-repair-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 47
+    },
+    {
+      "keys": [
+        "cooling repair naperville il",
+        "https://aircareprohvac.com/ac-repair-naperville/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "keys": [
+        "des plaines heat pump maintenance",
+        "https://aircareprohvac.com/hvac-des-plaines/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "keys": [
+        "des plaines hvac",
+        "https://aircareprohvac.com/hvac-des-plaines/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "keys": [
+        "ductless ac chicago",
+        "https://aircareprohvac.com/mini-split-installation/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 80
+    },
+    {
+      "keys": [
+        "ductless ac repair schaumburg il",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 76
+    },
+    {
+      "keys": [
+        "ductless ac service schaumburg il",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 19
+    },
+    {
+      "keys": [
+        "ductless mini split chicago il",
+        "https://aircareprohvac.com/mini-split-installation/"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 48
+    },
+    {
+      "keys": [
+        "emergency hvac repair arlington heights",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    },
+    {
+      "keys": [
+        "emergency hvac services evanston",
+        "https://aircareprohvac.com/hvac-evanston/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 42
+    },
+    {
+      "keys": [
+        "furnace installation chicago",
+        "https://aircareprohvac.com/furnace-installation/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 68
+    },
+    {
+      "keys": [
+        "furnace installation skokie il",
+        "https://aircareprohvac.com/furnace-repair-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "keys": [
+        "furnace maintenance chicago",
+        "https://aircareprohvac.com/furnace-tune-up/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 60
+    },
+    {
+      "keys": [
+        "furnace maintenance skokie il",
+        "https://aircareprohvac.com/furnace-repair-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 35.5
+    },
+    {
+      "keys": [
+        "furnace repair des plaines",
+        "https://aircareprohvac.com/hvac-des-plaines/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 30
+    },
+    {
+      "keys": [
+        "furnace repair naperville",
+        "https://aircareprohvac.com/ac-repair-naperville/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 47
+    },
+    {
+      "keys": [
+        "furnace repair naperville, il",
+        "https://aircareprohvac.com/ac-repair-naperville/"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 48
+    },
+    {
+      "keys": [
+        "furnace repair near me",
+        "https://aircareprohvac.com/furnace-repair-wilmette/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 22
+    },
+    {
+      "keys": [
+        "furnace repair schaumburg il",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 44.5
+    },
+    {
+      "keys": [
+        "furnace repair skokie",
+        "https://aircareprohvac.com/ac-repair-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 38
+    },
+    {
+      "keys": [
+        "furnace repair skokie",
+        "https://aircareprohvac.com/furnace-repair-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 5,
+      "ctr": 0,
+      "position": 38.2
+    },
+    {
+      "keys": [
+        "furnace repair skokie il",
+        "https://aircareprohvac.com/ac-repair-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "keys": [
+        "furnace repair skokie il",
+        "https://aircareprohvac.com/furnace-repair-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 43
+    },
+    {
+      "keys": [
+        "furnace replacement chicago",
+        "https://aircareprohvac.com/furnace-installation/"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 51.5
+    },
+    {
+      "keys": [
+        "furnace replacement in chicago",
+        "https://aircareprohvac.com/furnace-installation/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 51
+    },
+    {
+      "keys": [
+        "furnace replacement naperville",
+        "https://aircareprohvac.com/furnace-installation-naperville/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 47
+    },
+    {
+      "keys": [
+        "furnace replacement skokie il",
+        "https://aircareprohvac.com/furnace-repair-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 60
+    },
+    {
+      "keys": [
+        "furnace service skokie il",
+        "https://aircareprohvac.com/furnace-repair-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 59.5
+    },
+    {
+      "keys": [
+        "furnace tune ups in logan square",
+        "https://aircareprohvac.com/hvac-logan-square/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 76
+    },
+    {
+      "keys": [
+        "heat pump maintenance skokie il",
+        "https://aircareprohvac.com/ac-repair-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
+    },
+    {
+      "keys": [
+        "heat pump repair arlington heights il",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 6,
+      "ctr": 0,
+      "position": 63.833333333333336
+    },
+    {
+      "keys": [
+        "heat pump repair chicago il",
+        "https://aircareprohvac.com/heat-pump-repair/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
+    },
+    {
+      "keys": [
+        "heat pump repair skokie il",
+        "https://aircareprohvac.com/furnace-repair-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 40
+    },
+    {
+      "keys": [
+        "heat pump replacement chicago il",
+        "https://aircareprohvac.com/heat-pump-installation/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 49
+    },
+    {
+      "keys": [
+        "heat pump replacement chicago, illinois",
+        "https://aircareprohvac.com/heat-pump-installation/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 54
+    },
+    {
+      "keys": [
+        "heat pump replacement skokie il",
+        "https://aircareprohvac.com/ac-repair-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 42
+    },
+    {
+      "keys": [
+        "heater repair arlington heights",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 40
+    },
+    {
+      "keys": [
+        "heater repair arlington heights il",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
+    },
+    {
+      "keys": [
+        "heater repair schaumburg",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 44
+    },
+    {
+      "keys": [
+        "heating and air conditioning schaumburg",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 49
+    },
+    {
+      "keys": [
+        "heating and cooling schaumburg il",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 47
+    },
+    {
+      "keys": [
+        "heating contractor schaumburg il",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 49
+    },
+    {
+      "keys": [
+        "heating repair arlington heights il",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 3,
+      "ctr": 0,
+      "position": 47
+    },
+    {
+      "keys": [
+        "heating repair des plaines il",
+        "https://aircareprohvac.com/hvac-des-plaines/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "keys": [
+        "heating repair evanston il",
+        "https://aircareprohvac.com/hvac-evanston/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 75
+    },
+    {
+      "keys": [
+        "heating repair naperville, il",
+        "https://aircareprohvac.com/ac-repair-naperville/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
+    },
+    {
+      "keys": [
+        "heating repair schaumburg",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 39
+    },
+    {
+      "keys": [
+        "heating repair schaumburg il",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 39
+    },
+    {
+      "keys": [
+        "heating services schaumburg",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 4,
+      "ctr": 0,
+      "position": 55
+    },
+    {
+      "keys": [
+        "humidifier chicago",
+        "https://aircareprohvac.com/whole-home-humidifiers/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "keys": [
+        "humidifier installation chicago",
+        "https://aircareprohvac.com/whole-home-humidifiers/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 13
+    },
+    {
+      "keys": [
+        "hvac arlington heights",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 39
+    },
+    {
+      "keys": [
+        "hvac companies in arlington heights il",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 40.5
+    },
+    {
+      "keys": [
+        "hvac contractor arlington heights",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 36
+    },
+    {
+      "keys": [
+        "hvac contractor schaumburg",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
+    },
+    {
+      "keys": [
+        "hvac contractors schaumburg il",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 48
+    },
+    {
+      "keys": [
+        "hvac installation arlington heights",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 27
+    },
+    {
+      "keys": [
+        "hvac installation schaumburg",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
+    },
+    {
+      "keys": [
+        "hvac installation schaumburg il",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 34
+    },
+    {
+      "keys": [
+        "hvac maintenance schaumburg il",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 33
+    },
+    {
+      "keys": [
+        "hvac repair arlington heights",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 33
+    },
+    {
+      "keys": [
+        "hvac repair evanston il",
+        "https://aircareprohvac.com/hvac-evanston/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 59
+    },
+    {
+      "keys": [
+        "hvac repair schaumburg",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 30
+    },
+    {
+      "keys": [
+        "hvac repair schaumburg il",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 31
+    },
+    {
+      "keys": [
+        "hvac repair skokie",
+        "https://aircareprohvac.com/ac-repair-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 37
+    },
+    {
+      "keys": [
+        "hvac replacement schaumburg il",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
+    },
+    {
+      "keys": [
+        "hvac schaumburg il",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 49
+    },
+    {
+      "keys": [
+        "hvac service schaumburg",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 47
+    },
+    {
+      "keys": [
+        "hvac skokie",
+        "https://aircareprohvac.com/ac-repair-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 47.5
+    },
+    {
+      "keys": [
+        "hvac technician arlington heights",
+        "https://aircareprohvac.com/ac-repair-arlington-heights/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 27
+    },
+    {
+      "keys": [
+        "hvac uv light installation skokie il",
+        "https://aircareprohvac.com/uv-air-sanitizers/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 12
+    },
+    {
+      "keys": [
+        "hvac uv light installation west chicago",
+        "https://aircareprohvac.com/uv-air-sanitizers/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
+    },
+    {
+      "keys": [
+        "new furnace naperville",
+        "https://aircareprohvac.com/furnace-installation-naperville/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 73
+    },
+    {
+      "keys": [
+        "north chicago heat pump replacement",
+        "https://aircareprohvac.com/heat-pumps-in-chicago/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 18
+    },
+    {
+      "keys": [
+        "refrigeration system installation des plaines il",
+        "https://aircareprohvac.com/hvac-des-plaines/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 59
+    },
+    {
+      "keys": [
+        "schaumburg ac installation",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 41
+    },
+    {
+      "keys": [
+        "schaumburg ac repair",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 35
+    },
+    {
+      "keys": [
+        "schaumburg air conditioning installation",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 44
+    },
+    {
+      "keys": [
+        "schaumburg air conditioning replacement",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 68
+    },
+    {
+      "keys": [
+        "schaumburg heating and air conditioning",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 52
+    },
+    {
+      "keys": [
+        "schaumburg hvac",
+        "https://aircareprohvac.com/hvac-schaumburg/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 47
+    },
+    {
+      "keys": [
+        "smart thermostats chicago",
+        "https://aircareprohvac.com/thermostat-installation/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 91
+    },
+    {
+      "keys": [
+        "whole house air purifier installation skokie il",
+        "https://aircareprohvac.com/air-purifiers/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 45
+    },
+    {
+      "keys": [
+        "whole house humidifier chicago il",
+        "https://aircareprohvac.com/whole-home-dehumidifiers/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 53
+    },
+    {
+      "keys": [
+        "whole house humidifier installation chicago",
+        "https://aircareprohvac.com/whole-home-dehumidifiers/"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 14.5
+    },
+    {
+      "keys": [
+        "whole house humidifier installation chicago",
+        "https://aircareprohvac.com/whole-home-humidifiers/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 11
+    }
+  ],
+  "inspections": [
+    {
+      "url": "/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed",
+      "lastCrawl": "2026-11-19T03:03:31Z",
+      "googleCanonical": "https://aircareprohvac.com/"
+    },
+    {
+      "url": "/hvac-chicago/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed",
+      "lastCrawl": "2026-11-16T18:26:55Z",
+      "googleCanonical": "https://aircareprohvac.com/hvac-chicago/"
+    },
+    {
+      "url": "/emergency-hvac/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed",
+      "lastCrawl": "2026-11-16T10:34:05Z",
+      "googleCanonical": "https://aircareprohvac.com/emergency-hvac/"
+    },
+    {
+      "url": "/furnace-repair/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed",
+      "lastCrawl": "2026-11-16T15:13:30Z",
+      "googleCanonical": "https://aircareprohvac.com/furnace-repair/"
+    },
+    {
+      "url": "/ac-repair/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed",
+      "lastCrawl": "2026-11-16T12:47:58Z",
+      "googleCanonical": "https://aircareprohvac.com/ac-repair/"
+    },
+    {
+      "url": "/boiler-repair/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed",
+      "lastCrawl": "2026-11-16T19:21:23Z",
+      "googleCanonical": "https://aircareprohvac.com/boiler-repair/"
+    },
+    {
+      "url": "/furnace-repair-chicago/",
+      "verdict": "n/a",
+      "coverage": "n/a",
+      "lastCrawl": null,
+      "googleCanonical": null
+    },
+    {
+      "url": "/ac-repair-chicago/",
+      "verdict": "NEUTRAL",
+      "coverage": "Excluded by ‘noindex’ tag",
+      "lastCrawl": "2026-11-18T07:42:42Z",
+      "googleCanonical": "https://aircareprohvac.com/ac-repair-chicago/"
+    },
+    {
+      "url": "/hvac-evanston/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed",
+      "lastCrawl": "2026-11-16T18:41:49Z",
+      "googleCanonical": "https://aircareprohvac.com/hvac-evanston/"
+    },
+    {
+      "url": "/hvac-skokie/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed",
+      "lastCrawl": "2026-11-16T18:39:22Z",
+      "googleCanonical": "https://aircareprohvac.com/hvac-skokie/"
+    },
+    {
+      "url": "/blog/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed",
+      "lastCrawl": "2026-11-18T10:50:32Z",
+      "googleCanonical": "https://aircareprohvac.com/blog/"
+    },
+    {
+      "url": "/free-estimate/",
+      "verdict": "NEUTRAL",
+      "coverage": "Discovered - currently not indexed",
+      "lastCrawl": null,
+      "googleCanonical": null
+    },
+    {
+      "url": "/maintenance-plan/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed",
+      "lastCrawl": "2026-11-16T17:08:15Z",
+      "googleCanonical": "https://aircareprohvac.com/maintenance-plan/"
+    },
+    {
+      "url": "/furnace-wont-turn-on/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed",
+      "lastCrawl": "2026-11-16T17:07:02Z",
+      "googleCanonical": "https://aircareprohvac.com/furnace-wont-turn-on/"
+    },
+    {
+      "url": "/service-areas/",
+      "verdict": "PASS",
+      "coverage": "Submitted and indexed",
+      "lastCrawl": "2026-11-16T18:31:54Z",
+      "googleCanonical": "https://aircareprohvac.com/service-areas/"
+    }
+  ]
+}

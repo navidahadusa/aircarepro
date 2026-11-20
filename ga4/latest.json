@@ -1,0 +1,376 @@
+{
+  "property": "564399214",
+  "measurementId": "G-J25SG73ES5",
+  "generatedAt": "2026-11-20T00:35:15.890Z",
+  "errors": [],
+  "totals": {
+    "current": {
+      "sessions": 86,
+      "totalUsers": 71,
+      "newUsers": 73,
+      "engagedSessions": 28,
+      "screenPageViews": 172,
+      "keyEvents": 0
+    },
+    "previous": {
+      "sessions": 0,
+      "totalUsers": 0,
+      "newUsers": 0,
+      "engagedSessions": 0,
+      "screenPageViews": 0,
+      "keyEvents": 0
+    }
+  },
+  "channels": [
+    {
+      "dims": [
+        "Direct"
+      ],
+      "vals": [
+        71,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "Organic Search"
+      ],
+      "vals": [
+        8,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "Referral"
+      ],
+      "vals": [
+        4,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "Organic Social"
+      ],
+      "vals": [
+        3,
+        0
+      ]
+    }
+  ],
+  "landingPages": [
+    {
+      "dims": [
+        "/"
+      ],
+      "vals": [
+        67,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "/contact"
+      ],
+      "vals": [
+        3,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "/hvac-lakeview"
+      ],
+      "vals": [
+        2,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "(not set)"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "/ac-repair"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "/boiler-installation"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "/cracked-heat-exchanger-signs"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "/furnace-repair"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "/hvac-andersonville-edgewater"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "/hvac-edison-park"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "/hvac-uptown"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "/hvac-west-ridge"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "/hvac-west-town"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "/mini-split-installation"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "/refrigerant-leak-repair"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "/reviews"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "/sitemap"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    }
+  ],
+  "cities": [
+    {
+      "dims": [
+        "Chicago"
+      ],
+      "vals": [
+        18
+      ]
+    },
+    {
+      "dims": [
+        "(not set)"
+      ],
+      "vals": [
+        7
+      ]
+    },
+    {
+      "dims": [
+        "Warsaw"
+      ],
+      "vals": [
+        7
+      ]
+    },
+    {
+      "dims": [
+        "Ashburn"
+      ],
+      "vals": [
+        6
+      ]
+    },
+    {
+      "dims": [
+        "Montreal"
+      ],
+      "vals": [
+        5
+      ]
+    },
+    {
+      "dims": [
+        "Glenview"
+      ],
+      "vals": [
+        4
+      ]
+    },
+    {
+      "dims": [
+        "Hialeah Gardens"
+      ],
+      "vals": [
+        3
+      ]
+    },
+    {
+      "dims": [
+        "Anyang-si"
+      ],
+      "vals": [
+        2
+      ]
+    },
+    {
+      "dims": [
+        "Dudley"
+      ],
+      "vals": [
+        2
+      ]
+    },
+    {
+      "dims": [
+        "Frankfurt am Main"
+      ],
+      "vals": [
+        2
+      ]
+    },
+    {
+      "dims": [
+        "Franklin"
+      ],
+      "vals": [
+        2
+      ]
+    },
+    {
+      "dims": [
+        "London"
+      ],
+      "vals": [
+        2
+      ]
+    },
+    {
+      "dims": [
+        "New York"
+      ],
+      "vals": [
+        2
+      ]
+    },
+    {
+      "dims": [
+        "San Francisco"
+      ],
+      "vals": [
+        2
+      ]
+    },
+    {
+      "dims": [
+        "Springfield"
+      ],
+      "vals": [
+        2
+      ]
+    }
+  ],
+  "devices": [
+    {
+      "dims": [
+        "desktop"
+      ],
+      "vals": [
+        56
+      ]
+    },
+    {
+      "dims": [
+        "mobile"
+      ],
+      "vals": [
+        32
+      ]
+    }
+  ],
+  "leadEvents": [],
+  "outboundBooking": [
+    {
+      "dims": [
+        "book.housecallpro.com"
+      ],
+      "vals": [
+        3
+      ]
+    },
+    {
+      "dims": [
+        "google.com"
+      ],
+      "vals": [
+        1
+      ]
+    }
+  ]
+}
