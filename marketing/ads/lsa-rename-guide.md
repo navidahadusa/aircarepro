@@ -17,7 +17,7 @@ ads.google.com/localservices → sign in → **Profile** (or "Profile & budget")
 
 ## 3. If LSA support says the "old website / old name" is still showing
 - Make sure no profile field (LSA, GBP, Google Ads account) still lists the old website.
-- **Old domain (shadheatingandcooling.com):** if it still shows a site with the old name, set it up at its registrar (GoDaddy, Namecheap, Google Domains/Squarespace…) as **domain forwarding → https://aircareprohvac.com, permanent (301)**. Don't leave a live site with the old name: Google treats it as a second, conflicting business. Keep the domain registered (and forwarding) for at least a year so old links and listings land on the new site. If the team gets the registrar login details *verbally*/in the registrar's own sharing tool (never in chat), Elena can check the forwarding.
+- **Old domain (shadheatingandcooling.com):** if it still shows a site with the old name, set it up at its registrar (GoDaddy, Namecheap, Google Domains/Squarespace…) as **domain forwarding → https://aircareprohvac.com, permanent (301)**. Don't leave a live site with the old name: Google treats it as a second, conflicting business. Keep the domain registered (and forwarding) for at least a year so old links and listings land on the new site.
 - Ask LSA support (Help in the dashboard → contact) to **update the business name due to a legal rebrand**, and attach the documents from step 2.
 
 ## 4. While LSA is under review
