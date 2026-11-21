@@ -6,7 +6,6 @@ BBB has no API and the team never logs into the owner's accounts. The owner past
 | Field | Paste this |
 |---|---|
 | Business name | CHICAGO AIRCARE PRO |
-| Alternate business name (keep during the transition) | Shad Heating and Cooling LLC |
 | Phone | (773) 644-8227 |
 | Website | https://aircareprohvac.com |
 | Email | info@aircareprohvac.com |
@@ -17,7 +16,7 @@ BBB has no API and the team never logs into the owner's accounts. The owner past
 | Social | https://www.facebook.com/Aircareprohvac/ · https://www.google.com/maps?cid=18088581127472759753 |
 
 ## Business description (about 900 characters)
-CHICAGO AIRCARE PRO is a residential heating and cooling company serving Chicago and nearby suburbs, available 24/7, including nights and holidays. Our NATE-certified, EPA 608-certified technicians repair, install and maintain furnaces, steam and hot-water boilers, heat pumps, air conditioners and ductless mini-splits, plus humidifiers, air purifiers, UV air sanitizers, ductwork and carbon monoxide safety checks. We diagnose first and explain your options with prices before any work begins, and we repair what can be repaired. We know Chicago two-flats, greystones and bungalows, and we service Carrier, Lennox, Trane, Goodman, Rheem, York and Comfortmaker equipment (authorized Comfortmaker dealer). Free estimates on new systems, financing through Optimus (subject to credit approval) and the Comfort Club maintenance plan. City of Chicago License #3065598. Formerly Shad Heating and Cooling LLC.
+CHICAGO AIRCARE PRO is a residential heating and cooling company serving Chicago and nearby suburbs, available 24/7, including nights and holidays. Our NATE-certified, EPA 608-certified technicians repair, install and maintain furnaces, steam and hot-water boilers, heat pumps, air conditioners and ductless mini-splits, plus humidifiers, air purifiers, UV air sanitizers, ductwork and carbon monoxide safety checks. We diagnose first and explain your options with prices before any work begins, and we repair what can be repaired. We know Chicago two-flats, greystones and bungalows, and we service Carrier, Lennox, Trane, Goodman, Rheem, York and Comfortmaker equipment (authorized Comfortmaker dealer). Free estimates on new systems, financing through Optimus (subject to credit approval) and the Comfort Club maintenance plan. City of Chicago License #3065598.
 
 ## Products and services
 Furnace repair · Furnace installation · Furnace tune-up · Boiler repair · Boiler installation · Heat pump repair · Heat pump installation · Thermostats & zoning · AC repair · AC installation · AC tune-up · Mini-split installation · Mini-split repair · Refrigerant leak repair · Whole-home humidifiers · Whole-home dehumidifiers · Air purifiers · UV air sanitizers · Ductwork repair · Carbon monoxide safety

@@ -70,7 +70,6 @@ export interface Business {
   displayName: string;
   legalName?: string;
   /** Names the business has traded under; used to find and fix old citations. */
-  formerNames?: string[];
   rebrand: RebrandStatus;
   tagline: string;
   description: string;
@@ -139,7 +138,6 @@ export const business: Business = {
   displayName: 'Chicago Aircare Pro',
   // Legal rebrand approved by the owner (2026-11-19): Shad Heating and Cooling LLC → CHICAGO AIRCARE PRO.
   legalName: 'CHICAGO AIRCARE PRO',
-  formerNames: ['Shad Heating and Cooling LLC', 'Shad Heating and Cooling'],
   rebrand: {
     from: 'Shad Heating and Cooling LLC',
     to: 'CHICAGO AIRCARE PRO',
