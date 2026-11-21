@@ -59,6 +59,23 @@ Files: N changed (+X / −Y). Key files: …
 | Avg internal links per page · orphan pages | | |
 | Live metrics (GA4 leads, GSC clicks, GBP calls) | only when connected, never estimated | |
 
+### Google data → action (required; `marketing/seo/daily-data-playbook.md`)
+Data date: … (say so if > 2 days old; never estimate)
+
+| Source | Metric | Previous snapshot | Today |
+|---|---|---|---|
+| Search Console (28d) | Clicks · impressions · CTR · avg position | | |
+| Search Console | Key pages indexed (of 15) | | |
+| GA4 (28d) | Sessions · users · engaged · organic search | | |
+| GA4 | Booking clicks · key events | | |
+
+| Page fixed today | Data that triggered it | Change | Check on |
+|---|---|---|---|
+| | | | |
+
+Results due today (from `page-actions-log.md`): …
+Owner "Request indexing": …
+
 ## Pending owner items
 - [ ] …
 
