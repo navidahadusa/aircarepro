@@ -2,6 +2,9 @@
 
 LSA verifies the **business**, so a name change usually needs the profile updated **and** new documents in the new name. Google checks that the name on the LSA profile, the license and the insurance all match exactly. (Labels in the LSA dashboard change from time to time; the steps below describe the usual path.)
 
+## Cause found (owner, 2026-11-21)
+The disapproved ad is the **existing LSA ad under the old name**. Its profile still has the **old website**, which the owner deleted, so Google reports "Website URL not working". **Fix = change the website in the LSA profile to https://aircareprohvac.com/ and submit the name change with documents.** The old domain no longer needs forwarding work if it's gone; just make sure no Google profile points to it.
+
 ## 1. Update the LSA profile
 ads.google.com/localservices → sign in → **Profile** (or "Profile & budget") → Business details:
 - Business name: **CHICAGO AIRCARE PRO**
