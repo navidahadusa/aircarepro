@@ -33,7 +33,7 @@ Status key: ☐ to do · ✍ drafted on branch · ✅ published (merged) · **O*
 
 | Date | Type | Title | Target keyword | Links | Flags | Status |
 |---|---|---|---|---|---|---|
-| Fri Nov 20 | New guide | Chicago Heat Ordinance: What Renters and Two-Flat Owners Should Know | chicago heat ordinance | /boiler-repair/, /heating/, /hvac-chicago/ | F (point to City/311) | ☐ |
+| Fri Nov 20 | New guide | Chicago Heat Ordinance: What Renters and Two-Flat Owners Should Know | chicago heat ordinance | /boiler-repair/, /heating/, /hvac-chicago/ | F (point to City/311) | ✍ shipped Nov 21 → /chicago-heat-ordinance/ |
 | Sat Nov 21 | Refresh | boiler-not-heating | boiler not heating | /boiler-repair/, /emergency-hvac/ | | ☐ |
 | Mon Nov 23 | New | Snow Blocking Your Furnace's PVC Vents: What to Do | furnace vent blocked by snow | /furnace-repair/, /carbon-monoxide-safety/ | | ☐ |
 | Tue Nov 24 | New guide | Steam or Hot-Water Boiler? How to Tell Which You Have | steam vs hot water boiler | /boiler-repair/, /boiler-installation/ | | ☐ |

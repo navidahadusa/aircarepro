@@ -47,7 +47,8 @@ Owner shortcuts (`.claude/commands/`): `/daily [focus]` · `/sprint <goal>` · `
 ### Rebrand status (keep exact)
 - Legal rebrand **"Shad Heating and Cooling LLC" → "CHICAGO AIRCARE PRO": APPROVED.**
 - **Google Business Profile: name UPDATED, live as CHICAGO AIRCARE PRO (2026-11-20).** URL in `sameAs` + `reviewProfiles`: https://www.google.com/maps?cid=18088581127472759753 (if Google later asks for proof: `marketing/citations/gbp-rename-evidence.md`).
-- **Yelp, BBB name updates: PENDING.**
+- **Yelp: owner opened a NEW page as CHICAGO AIRCARE PRO (2026-11-20).** The old "Shad Heating and Cooling" Yelp page must be merged into it or closed via Yelp support (duplicates hurt NAP consistency). New URL: TODO(owner).
+- **BBB: name change requested by the owner (2026-11-20), pending BBB.**
 - `sameAs` / `reviewProfiles` for Yelp and BBB stay `TODO` until the owner provides the live URLs (GBP done).
 - **New citations wait** until the existing listings are updated (`business.rebrand.newCitationsBlocked = true`).
 - Code source of truth: `business.rebrand` in `src/data/business.ts`; tracker: `marketing/citations-tracker.md`.
@@ -155,8 +156,8 @@ File: `marketing/daily-reports/YYYY-MM-DD.md` (template: `marketing/daily-report
 | Platform | Status | URL (→ `sameAs`) |
 |---|---|---|
 | Google Business Profile | **Renamed to CHICAGO AIRCARE PRO (live 2026-11-20)** | https://www.google.com/maps?cid=18088581127472759753 |
-| Yelp | Existing · **name update pending** | TODO(owner) after rename |
-| BBB | Existing, accredited · **name update pending** | TODO(owner) after rename |
+| Yelp | **New page created 2026-11-20** (old Shad page to merge/close) | TODO(owner): send the new page URL |
+| BBB | Existing, accredited · **name change requested 2026-11-20** | TODO(owner) after BBB updates it |
 | Facebook | Existing (found in live-site schema) | https://www.facebook.com/Aircareprohvac/ |
 | Next: Bing Places, Apple Business Connect, Nextdoor, Comfortmaker locator, Angi/HomeAdvisor, Thumbtack, Houzz, aggregators, Andersonville/Edgewater chambers | **Blocked until Yelp and BBB renames are live** (GBP done) | |
 
