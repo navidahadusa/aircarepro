@@ -47,3 +47,12 @@ Forced-air heat dries a home out fast. A whole-home humidifier connects to your 
 Already have one? Winter is the time to replace the pad and check the water line and controls.
 
 Heating, cooling and indoor air quality for Chicago homes. Calls and texts answered 24/7.
+
+## Week of Dec 21 · Button: Learn more → https://aircareprohvac.com/boiler-not-heating/?utm_source=google&utm_medium=organic&utm_campaign=gbp_post
+Boiler running but the radiators stay cold? Here's what to check first.
+
+Look at the thermostat, the boiler's power switch and the breaker. On a hot-water boiler, check the pressure gauge; on a steam boiler, check the water level in the sight glass. If the glass is empty, turn the boiler off and don't add water while it's hot.
+
+If the boiler is hot but the house isn't, the usual causes are a failed circulator pump, a stuck zone valve, trapped air or failed steam vents. Smell gas? Leave the building and call your gas utility from outside.
+
+Steam and hot-water boilers in Chicago two-flats, greystones and bungalows. Calls and texts answered 24/7.

@@ -4,7 +4,8 @@
   "h1": "AC Repair in Arlington Heights, IL",
   "service": "ac-repair",
   "city": "arlington-heights",
-  "intro": "AC repair in Arlington Heights from certified technicians who fix it right.",
+  "meta": "AC repair, AC installation and heat pump repair in Arlington Heights, IL. 24/7 emergency HVAC service by NATE-certified techs. Options and prices first.",
+  "intro": "AC repair, AC installation and heat pump repair in Arlington Heights from NATE-certified technicians, with 24/7 emergency HVAC service. We diagnose first and show you options with prices before any work starts.",
   "faqs": [
     {
       "q": "Is a hot second floor an AC problem?",
@@ -12,7 +13,15 @@
     },
     {
       "q": "How fast can you get to Arlington Heights for ac repair?",
-      "a": "We serve Arlington Heights regularly and offer 24/7 emergency service. Call (773) 644-8227 and we'll give you the earliest available time."
+      "a": "We serve Arlington Heights regularly and offer 24/7 emergency service. Call or text {phone} and we'll give you the earliest available time."
+    },
+    {
+      "q": "Do you repair heat pumps in Arlington Heights?",
+      "a": "Yes. We repair heat pumps and dual-fuel systems (a heat pump paired with a gas furnace), including defrost, reversing valve, outdoor fan and control problems, and we check that the system switches to the furnace when it should on the coldest days."
+    },
+    {
+      "q": "Do you install new air conditioners in Arlington Heights?",
+      "a": "Yes. New-system estimates are free. We size the AC to your home, check whether the existing ductwork and coil can support it, and show you options, including a heat pump, before you decide. Financing is available through Optimus, subject to credit approval."
     },
     {
       "q": "Why is my AC blowing warm air?",
@@ -44,3 +53,12 @@
 
 <h2>AC Repair cost in Arlington Heights</h2>
 <p>AC repair cost depends on the part, refrigerant type and amount, access and the age of your system. Our technician explains the diagnosis and your options before starting any work. If your AC is old or uses an outdated refrigerant, we&#x27;ll compare repair and replacement honestly.</p>
+
+<h2>24/7 emergency HVAC service in Arlington Heights</h2>
+<p>No cooling in a heat wave, no heat on a January night, or a heat pump that stops working: call or text us any time, day or night, including holidays. For emergencies, calling is the fastest way to reach us. See <a href="/emergency-hvac/">emergency HVAC service</a> for what to check while you wait.</p>
+
+<h2>Heat pump repair in Arlington Heights</h2>
+<p>Many Arlington Heights homeowners are adding heat pumps, often as dual-fuel systems that use the heat pump in mild weather and a gas furnace in deep cold. When a heat pump stops heating or cooling, common causes are a stuck reversing valve, a failed defrost control or sensor, an outdoor fan motor, low refrigerant from a leak, or a thermostat that isn't set up to switch between the heat pump and the furnace correctly. Learn more about <a href="/heat-pump-repair/">heat pump repair</a>.</p>
+
+<h2>AC installation in Arlington Heights</h2>
+<p>If your air conditioner is old, uses an outdated refrigerant or needs repairs often, a replacement may make more sense than another repair. We size the new system to the house rather than matching the old unit, which matters in two-story homes where an oversized AC cools the first floor fast and leaves bedrooms hot and humid. See <a href="/ac-installation/">AC installation</a> and our <a href="/hvac-arlington-heights/">Arlington Heights HVAC page</a>.</p>

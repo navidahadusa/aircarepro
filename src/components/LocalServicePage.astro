@@ -23,6 +23,8 @@ interface Props { page: CollectionEntry<'local'> }
 const { page } = Astro.props;
 const d = page.data;
 const { Content } = await render(page);
+/** Local FAQ copy uses a {phone} token so NAP comes only from business.ts (Hannah Carter). */
+const faqs = d.faqs.map((f) => ({ q: f.q, a: f.a.replaceAll('{phone}', business.phoneDisplay) }));
 const svc = serviceBySlug(d.service)!;
 const area = business.serviceAreas.find((a) => a.slug === d.city);
 const cityName = area?.name ?? d.city.replace(/-/g, ' ').replace(/\b\w/g, (m) => m.toUpperCase());
@@ -62,7 +64,7 @@ const title = `${svcLabel[d.service]} ${d.city === 'chicago' ? 'Chicago' : cityN
       <ul class="check-list">{svc.signs.map((x) => <li>{x}</li>)}</ul>
       <h2>What’s included</h2>
       <ul class="check-list">{svc.included.map((x) => <li>{x}</li>)}</ul>
-      <FaqSection faqs={d.faqs} heading={`${svcLabel[d.service]} questions in ${cityName}`} id="local-faq" />
+      <FaqSection faqs={faqs} heading={`${svcLabel[d.service]} questions in ${cityName}`} id="local-faq" />
     </article>
     <aside class="local-side">
       <div class="photo side-photo"><Image quality={50} src={photo.src} alt={photo.alt} widths={[360, 640]} sizes="(max-width: 1000px) 100vw, 22rem" /></div>

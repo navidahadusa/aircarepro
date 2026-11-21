@@ -12,7 +12,7 @@
     },
     {
       "q": "How fast can you get to Evanston for furnace installation?",
-      "a": "We serve Evanston regularly and offer 24/7 emergency service. Call (773) 644-8227 and we'll give you the earliest available time."
+      "a": "We serve Evanston regularly and offer 24/7 emergency service. Call or text {phone} and we'll give you the earliest available time."
     },
     {
       "q": "How long does a furnace installation take?",

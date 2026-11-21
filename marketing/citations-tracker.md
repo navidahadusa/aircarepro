@@ -63,3 +63,11 @@ Former names to retire everywhere: `Shad Heating and Cooling LLC`, `Shad Heating
 - **Web search** (2026-11-20): no indexed third-party listings found for "Shad Heating and Cooling" + Chicago or + the phone number. The old name isn't widely syndicated, which keeps the cleanup small.
 - **Where it can still appear:** Google Search/Maps caches (update within days to a few weeks after the approved rename) · Apple Maps (claim at Apple Business Connect, after Yelp/BBB) · Bing Places (re-import from GBP) · old Yelp page (merge/close) · BBB (pending) · Housecall Pro texts/invoices/estimates · Facebook page name · business cards, van, invoices.
 - **Owner:** send screenshots of any place that still shows "Shad"; Hannah adds each one here with the fix.
+
+### Old site deleted (owner, 2026-11-21): erase remaining traces
+- **Check (Sophia):** aircareprohvac.com is fully up after the deletion (all key pages 200; WordPress paths blocked). A web search for the old domain returned no pages from it, only unrelated, similarly named companies in other cities.
+- **Old domain (shadheatingandcooling.com):** keep it registered and set a **permanent (301) redirect to https://aircareprohvac.com** (Hostinger → Domains → Redirect) for at least a year. If it expires, anyone can buy it and pose as the old company. A redirect shows no old name; visitors land on the new site.
+- **Google:** any old URL still in results → **Remove outdated content** tool (search.google.com/search-console/remove-outdated-content). Pages that no longer exist drop out of Google on their own within weeks.
+- **Bing:** Bing Webmaster Tools → Content Removal tool.
+- **Wayback Machine (archive.org):** the owner can email info@archive.org from a domain email, or with proof of ownership, asking to exclude the old domain.
+- **Where the old name really still lives:** Housecall Pro (name + booking link), LSA profile, old Yelp page, BBB (pending), Facebook page name. Fixing these matters more than the deleted site.

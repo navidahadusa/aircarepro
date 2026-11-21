@@ -8,6 +8,12 @@ DirectoryIndex index.html
   Require all denied
 </FilesMatch>
 RedirectMatch 301 ^/index\.php$ /
+# Old WordPress homepage slug + common legacy landing paths (Google Ads final URLs, old links). Elena Brooks 2026-11-21.
+RedirectMatch 301 ^/home/?$ /
+RedirectMatch 301 ^/(contact-us|contactus|get-in-touch)/?$ /contact/
+RedirectMatch 301 ^/(book|book-now|booking|schedule|schedule-service|appointment)/?$ /free-estimate/
+RedirectMatch 301 ^/(hvac-services|our-services)/?$ /services/
+RedirectMatch 301 ^/(emergency|24-7|emergency-service|emergency-hvac-service)/?$ /emergency-hvac/
 RedirectMatch 404 ^/(wp-admin|wp-includes|wp-json)(/.*)?$
 RedirectMatch 404 ^/wp-content/(plugins|themes|upgrade|cache)/.*$
 <FilesMatch "^(wp-config\.php|readme\.html|license\.txt|\.user\.ini|error_log)$">

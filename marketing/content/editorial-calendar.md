@@ -34,7 +34,7 @@ Status key: ☐ to do · ✍ drafted on branch · ✅ published (merged) · **O*
 | Date | Type | Title | Target keyword | Links | Flags | Status |
 |---|---|---|---|---|---|---|
 | Fri Nov 20 | New guide | Chicago Heat Ordinance: What Renters and Two-Flat Owners Should Know | chicago heat ordinance | /boiler-repair/, /heating/, /hvac-chicago/ | F (point to City/311) | ✍ shipped Nov 21 → /chicago-heat-ordinance/ |
-| Sat Nov 21 | Refresh | boiler-not-heating | boiler not heating | /boiler-repair/, /emergency-hvac/ | | ☐ |
+| Sat Nov 21 | Refresh | boiler-not-heating | boiler not heating | /boiler-repair/, /emergency-hvac/ | | ✍ shipped Nov 21 → /boiler-not-heating/ (rewritten: steam vs hot-water, cold-snap "heat not keeping up", 5 FAQs) |
 | Mon Nov 23 | New | Snow Blocking Your Furnace's PVC Vents: What to Do | furnace vent blocked by snow | /furnace-repair/, /carbon-monoxide-safety/ | | ☐ |
 | Tue Nov 24 | New guide | Steam or Hot-Water Boiler? How to Tell Which You Have | steam vs hot water boiler | /boiler-repair/, /boiler-installation/ | | ☐ |
 | Wed Nov 25 | Seasonal | Hosting Thanksgiving: Thermostat and Furnace Prep | thermostat settings for guests | /furnace-tune-up/, /thermostat-installation/ | | ☐ |
@@ -47,5 +47,6 @@ Status key: ☐ to do · ✍ drafted on branch · ✅ published (merged) · **O*
 | Mon Dec 7 | Guide | Cold Upstairs Rooms in Bungalows with Finished Attics | bungalow attic cold | /ductwork-repair/, /mini-split-installation/ | | ☐ |
 | Tue Dec 8 | Refresh | how-often-change-furnace-filter | change furnace filter | /furnace-tune-up/, /maintenance-plan/ | | ☐ |
 | Wed Dec 9 | Area post | Heating Courtyard Buildings in Rogers Park and Edgewater | rogers park heating | /hvac-rogers-park/, /hvac-andersonville-edgewater/, /boiler-repair/ | **O** (actual jobs there) | ☐ |
+| Thu Dec 10 | Answer | Dual-Fuel Heat Pumps in the Northwest Suburbs: When the Furnace Takes Over | dual fuel heat pump | /heat-pump-repair/, /hvac-arlington-heights/, /ac-repair-arlington-heights/ | Search Console: Arlington Heights heat pump queries at pos 10–17 | ☐ |
 
 Posts needing owner input stay `draft: true` until the details arrive. The daily run then moves the next item up.

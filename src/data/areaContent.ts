@@ -508,8 +508,8 @@ ${glance('Lincoln Park', [
 const northwestSide: Record<string, AreaContent> = {
   'logan-square': {
     h1: 'Furnace, Boiler & AC Repair in Logan Square, Chicago',
-    title: 'HVAC Repair in Logan Square, Chicago | Chicago Aircare Pro',
-    meta: 'Two-flat furnaces and boilers, garden-unit comfort, deconversions and AC repair in Logan Square, from boulevard greystones to bungalows. 24/7.',
+    title: 'HVAC & AC Installation in Logan Square | Chicago Aircare Pro',
+    meta: 'Furnace, boiler and AC repair, installation and maintenance in Logan Square two-flats, greystones and bungalows. Central air for radiator homes. 24/7.',
     intro: `${business.displayName} provides heating and cooling repair, replacement and maintenance in Logan Square, from the boulevard greystones to bungalows on the west side of the neighborhood. Two- and three-flats with a furnace per unit, shared boilers, damp garden units and two-flats being converted into single-family homes make up most of our work here.`,
     sections: [
       {
@@ -528,6 +528,11 @@ ${glance('Logan Square', [['Between 2013 and 2019, 224 two-to-four-unit building
 <p>Replacing a chimney-vented furnace with a high-efficiency model can leave a water heater alone on an oversized chimney, which can cause venting problems. We check this on every replacement.</p>`,
       },
       {
+        h2: 'AC installation and maintenance in Logan Square',
+        html: `<p>Many Logan Square greystones and two-flats heat with radiators and were never built with ductwork, so adding central air takes planning. The usual options are <a href="/mini-split-installation/">ductless mini-splits</a> mounted room by room, or a ducted system with an air handler in the attic or a closet feeding the top floor. In buildings with a furnace per unit, each unit can get its own condenser and coil on its existing ductwork, and the condensers have to fit in a narrow gangway, a rear yard or the roof.</p>
+<p>For <a href="/ac-installation/">AC installation</a>, we size the equipment to the unit’s actual heat gain rather than its square footage alone: top-floor units under a flat roof run hotter than garden units. For existing systems, a spring <a href="/ac-tune-up/">AC tune-up</a> cleans the outdoor coil, checks the refrigerant charge and clears the condensate drain, which matters in basements where a clogged drain line can leak into a finished garden unit.</p>`,
+      },
+      {
         h2: 'Heating options when a Logan Square two-flat becomes one home',
         html: `<p>There are usually three paths: keep both systems and zone them by floor, keep one boiler or furnace sized for the whole house, or replace both with one new system. Keeping both is often cheapest up front and gives natural zoning. One right-sized system is simpler to maintain. A full replacement makes sense when both systems are near the end of their life. We measure the heat loss and trace the piping or ducts before recommending one.</p>`,
       },
@@ -540,6 +545,7 @@ ${glance('Logan Square', [['Between 2013 and 2019, 224 two-to-four-unit building
       { q: 'Can each unit in my two-flat have its own thermostat?', a: 'Yes, either with separate systems or by zoning a shared boiler, depending on the piping.' },
       { q: 'We’re converting our two-flat into a single-family home. What happens to the heating?', a: 'Usually one of three paths: keep both systems and zone them by floor, keep one boiler or furnace sized for the whole house, or replace both with one new system. We measure the heat loss and trace the piping or ducts before recommending one.' },
       { q: 'Our garden unit is always cold and damp. What helps?', a: 'Its own supply and return air paths, balanced with the rest of the building, and sometimes a dehumidifier.' },
+      { q: 'Can you install central air in a Logan Square greystone with radiators?', a: 'Yes. The usual options are ductless mini-splits room by room or a ducted system with an air handler in the attic or a closet. We look at the building first and give you options with prices; new-system estimates are free.' },
       emergencyFaq('Logan Square'),
     ],
     nearbySlugs: ['avondale', 'bucktown', 'humboldt-park'],
