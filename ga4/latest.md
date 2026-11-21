@@ -1,14 +1,14 @@
-# Google Analytics 4 snapshot (2026-11-20)
+# Google Analytics 4 snapshot (2026-11-21)
 
 Property `564399214` (G-J25SG73ES5) · last 28 days vs previous 28 days
 
 | Metric | Current 28d | Previous 28d |
 |---|---|---|
-| sessions | 99 | 0 |
-| totalUsers | 79 | 0 |
-| newUsers | 81 | 0 |
-| engagedSessions | 33 | 0 |
-| screenPageViews | 201 | 0 |
+| sessions | 103 | 0 |
+| totalUsers | 82 | 0 |
+| newUsers | 84 | 0 |
+| engagedSessions | 36 | 0 |
+| screenPageViews | 206 | 0 |
 | keyEvents | 0 | 0 |
 
 ## Lead events (calls, texts, bookings, reviews)
@@ -27,7 +27,7 @@ _No data yet._
 
 | Channel | Sessions | Key events |
 |---|---|---|
-| Direct | 81 | 0 |
+| Direct | 85 | 0 |
 | Organic Search | 11 | 0 |
 | Referral | 4 | 0 |
 | Organic Social | 3 | 0 |
@@ -36,7 +36,7 @@ _No data yet._
 
 | Landing page | Sessions | Key events |
 |---|---|---|
-| / | 72 | 0 |
+| / | 76 | 0 |
 | /contact | 3 | 0 |
 | /hvac-lakeview | 2 | 0 |
 | (not set) | 1 | 0 |
@@ -62,11 +62,12 @@ _No data yet._
 | City | Sessions |
 |---|---|
 | Chicago | 23 |
+| (not set) | 8 |
 | Warsaw | 8 |
-| (not set) | 7 |
 | Ashburn | 6 |
 | Montreal | 5 |
 | Glenview | 4 |
+| Pune | 4 |
 | Hialeah Gardens | 3 |
 | Los Angeles | 3 |
 | San Francisco | 3 |
@@ -75,12 +76,11 @@ _No data yet._
 | Frankfurt am Main | 2 |
 | Franklin | 2 |
 | London | 2 |
-| New York | 2 |
 
 ## Devices
 
 | Device | Sessions |
 |---|---|
-| desktop | 62 |
+| desktop | 66 |
 | mobile | 39 |
 

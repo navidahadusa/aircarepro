@@ -1,15 +1,15 @@
 {
   "property": "564399214",
   "measurementId": "G-J25SG73ES5",
-  "generatedAt": "2026-11-20T13:41:12.163Z",
+  "generatedAt": "2026-11-21T13:26:19.092Z",
   "errors": [],
   "totals": {
     "current": {
-      "sessions": 99,
-      "totalUsers": 79,
-      "newUsers": 81,
-      "engagedSessions": 33,
-      "screenPageViews": 201,
+      "sessions": 103,
+      "totalUsers": 82,
+      "newUsers": 84,
+      "engagedSessions": 36,
+      "screenPageViews": 206,
       "keyEvents": 0
     },
     "previous": {
@@ -27,7 +27,7 @@
         "Direct"
       ],
       "vals": [
-        81,
+        85,
         0
       ]
     },
@@ -65,7 +65,7 @@
         "/"
       ],
       "vals": [
-        72,
+        76,
         0
       ]
     },
@@ -252,7 +252,7 @@
     },
     {
       "dims": [
-        "Warsaw"
+        "(not set)"
       ],
       "vals": [
         8
@@ -260,10 +260,10 @@
     },
     {
       "dims": [
-        "(not set)"
+        "Warsaw"
       ],
       "vals": [
-        7
+        8
       ]
     },
     {
@@ -285,6 +285,14 @@
     {
       "dims": [
         "Glenview"
+      ],
+      "vals": [
+        4
+      ]
+    },
+    {
+      "dims": [
+        "Pune"
       ],
       "vals": [
         4
@@ -353,14 +361,6 @@
       "vals": [
         2
       ]
-    },
-    {
-      "dims": [
-        "New York"
-      ],
-      "vals": [
-        2
-      ]
     }
   ],
   "devices": [
@@ -369,7 +369,7 @@
         "desktop"
       ],
       "vals": [
-        62
+        66
       ]
     },
     {
