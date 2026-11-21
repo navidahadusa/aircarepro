@@ -39,9 +39,9 @@
   --cta-hover: #9a3412;
   --emergency: var(--red-600);
 
-  --radius: 14px;
+  --radius: 10px;
   --radius-sm: 8px;
-  --shadow: 0 1px 2px rgb(10 31 51 / 0.06), 0 8px 24px rgb(10 31 51 / 0.08);
+  --shadow: 0 1px 2px rgb(10 31 51 / 0.06), 0 2px 8px rgb(10 31 51 / 0.05);
   --font-heading: 'Plus Jakarta Sans Variable', 'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
@@ -70,8 +70,10 @@ p { margin: 0 0 1rem; }
 .section-dark { background: var(--navy-900); color: #e8f0f8; }
 .section-dark h2, .section-dark h3 { color: #fff; }
 .section-head { max-width: 46rem; margin-bottom: 2rem; }
-.eyebrow { display: inline-flex; align-items: center; gap: 0.4rem; text-transform: uppercase; letter-spacing: 0.08em; font-size: 0.8rem; font-weight: 800; color: #bb4208; margin-bottom: 0.5rem; } /* 5.4:1 on white, 4.8:1 on ice */
-.hero .eyebrow, .section-dark .eyebrow, .post-hero .eyebrow { color: #ff9a5c; } /* 7.2:1 on navy */
+/* Unslop (Chloe, 2026-11-21): quiet, sentence-case labels instead of an orange all-caps tag over every heading. */
+.eyebrow { display: inline-flex; align-items: center; gap: 0.4rem; font-size: 0.95rem; font-weight: 600; color: var(--muted); margin-bottom: 0.4rem; }
+.eyebrow .icon { display: none; }
+.hero .eyebrow, .section-dark .eyebrow, .post-hero .eyebrow { color: #c9d8e8; }
 .lead { font-size: var(--step-1); color: var(--muted); }
 
 .grid { display: grid; gap: 1.25rem; }
@@ -100,9 +102,8 @@ p { margin: 0 0 1rem; }
 .check-list li::before { content: ''; position: absolute; left: 0; top: 0.35em; width: 1.1rem; height: 1.1rem; border-radius: 50%;
   background: var(--green-600) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/80% no-repeat; }
 
-.hero { position: relative; background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%); color: #e8f0f8; overflow: hidden; }
-.hero::after { content: ''; position: absolute; inset: auto -10% -40% auto; width: 40rem; height: 40rem; border-radius: 50%;
-  background: radial-gradient(circle, rgb(232 89 12 / 0.16), transparent 65%); pointer-events: none; }
+.hero { position: relative; background: var(--navy-900); color: #e8f0f8; overflow: hidden; }
+
 .hero h1 { color: #fff; }
 .hero .lead { color: #c9d8e8; }
 .hero-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1.15fr 1fr; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; padding-block: clamp(2rem, 1.5rem + 3vw, 4rem); }

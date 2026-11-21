@@ -24,3 +24,6 @@ description: Build a conversion landing page or improve CTAs for CHICAGO AIRCARE
 
 ## Verify
 check + build 0 errors · `site-metrics` (tel/sms/booking on every page) · browser test: click each CTA and confirm the `dataLayer` event and placement · Lighthouse mobile ≥ 95 performance on the page · screenshots desktop + mobile. Report under Rachel Morgan; propose one A/B test (hypothesis, metric, minimum sample).
+
+## Unslop (owner rule, 2026-11-21)
+Before shipping, apply `marketing/unslop-style.md`: no em dashes or filler words in visible copy, facts instead of trust adjectives, specific Chicago detail, varied rhythm; in design no label over every heading, no icon box on every item, varied section layouts, real photos first.

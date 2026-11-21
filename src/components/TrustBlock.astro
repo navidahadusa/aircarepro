@@ -3,7 +3,6 @@
  * Trust signals + how-we-work process. Owner: Chloe Vance.
  * Only verified facts from business.ts. No invented stats, years or review counts.
  */
-import Icon from './Icon.astro';
 import { business } from '../data/business';
 interface Props { variant?: 'full' | 'credentials' }
 const { variant = 'full' } = Astro.props;
@@ -24,7 +23,7 @@ const creds = [
 ---
 <div class:list={["trust", { only: variant === "credentials" }]}>
   <ul class="creds" role="list">
-    {creds.map((c) => <li><span class="icon-tile"><Icon name={c.icon} size={22} /></span><div><strong>{c.t}</strong><small>{c.d}</small></div></li>)}
+    {creds.map((c) => <li><strong>{c.t}</strong><small>{c.d}</small></li>)}
   </ul>
   {variant === "full" && <ol class="steps">
     {steps.map((s, i) => <li><span class="num" aria-hidden="true">{i + 1}</span><div><strong>{s.t}</strong><p>{s.d}</p></div></li>)}
@@ -35,8 +34,13 @@ const creds = [
   .trust { display: grid; gap: 2rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); align-items: start; }
   .creds { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.75rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); }
   .only { grid-template-columns: 1fr; }
-  .creds li { display: flex; gap: 0.75rem; align-items: flex-start; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); padding: 1rem; }
-  .creds strong { display: block; color: var(--navy-900); font-family: var(--font-heading); }
+  .only .creds { grid-template-columns: repeat(auto-fit, minmax(min(100%, 15rem), 1fr)); column-gap: 2rem; row-gap: 0; }
+  :global(.section-dark) .creds li { border-top-color: rgb(255 255 255 / 0.18); }
+  :global(.section-dark) .creds strong { color: #fff; }
+  :global(.section-dark) .creds small { color: #c9d8e8; }
+  .creds li { padding: 0.85rem 0; border-top: 1px solid var(--border); }
+  .creds strong { display: block; color: var(--navy-900); font-family: var(--font-heading); font-size: 1.02rem; }
+  .creds small { display: block; font-size: 0.92rem; }
   .creds small { color: var(--muted); }
   .steps { list-style: none; padding: 0; margin: 0; display: grid; gap: 1rem; }
   .steps li { display: flex; gap: 1rem; }

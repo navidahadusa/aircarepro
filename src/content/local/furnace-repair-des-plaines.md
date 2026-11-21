@@ -4,7 +4,7 @@
   "h1": "Furnace Repair in Des Plaines, IL",
   "service": "furnace-repair",
   "city": "des-plaines",
-  "intro": "Chicago Aircare Pro repairs furnaces throughout Des Plaines with fast service, honest options and certified technicians who fix it right the first time.",
+  "intro": "Chicago Aircare Pro repairs furnaces throughout Des Plaines with fast service, clear options and certified technicians who fix it right the first time.",
   "faqs": [
     {
       "q": "My high-efficiency furnace stopped and there's water around it. What happened?",
@@ -20,7 +20,7 @@
     },
     {
       "q": "Is it worth repairing an old furnace?",
-      "a": "It depends on age, the repair cost and the furnace's condition. If a furnace is near the end of its life and needs a major part, we'll show you both the repair and replacement options honestly so you can decide."
+      "a": "It depends on age, the repair cost and the furnace's condition. If a furnace is near the end of its life and needs a major part, we'll show you both the repair and replacement options, with prices, so you can decide."
     }
   ],
   "source": "https://aircareprohvac.com/furnace-repair-des-plaines/"

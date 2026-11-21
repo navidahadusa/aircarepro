@@ -26,3 +26,6 @@ Adding a place means: add it to `business.areas` (group, slug), add its `areaCon
 
 ## Verify
 `npm run check` and `npm run build` (0 errors) · `node scripts/site-metrics.mjs` (orphans 0, one H1, meta ≤ 160, JSON-LD errors 0) · word count: `node -e` on `dist/<slug>/index.html` text · screenshot desktop + mobile (no horizontal scroll at 360px). Report under Elena Brooks.
+
+## Unslop (owner rule, 2026-11-21)
+Before shipping, apply `marketing/unslop-style.md`: no em dashes or filler words in visible copy, facts instead of trust adjectives, specific Chicago detail, varied rhythm; in design no label over every heading, no icon box on every item, varied section layouts, real photos first.

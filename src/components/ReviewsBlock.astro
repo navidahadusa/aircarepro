@@ -12,7 +12,6 @@ const { placement = 'reviews' } = Astro.props;
 ---
 <div class="reviews">
   <div>
-    <span class="eyebrow">Reviews</span>
     <h2>Real reviews, on independent platforms</h2>
     <p>Reviews of {business.displayName} are written by customers on Google, Yelp and the BBB. We don’t edit, filter or write reviews, and we read and respond to every one.</p>
     <p>Had a visit from us? We’d appreciate an honest review, good or bad. It takes about 30 seconds and helps your neighbors choose an HVAC company. Questions about your service? Call <a href={telHref()} data-track="click_to_call" data-placement={placement}>{business.phoneDisplay}</a>.</p>

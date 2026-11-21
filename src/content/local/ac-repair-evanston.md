@@ -4,7 +4,7 @@
   "h1": "AC Repair in Evanston, IL",
   "service": "ac-repair",
   "city": "evanston",
-  "intro": "Chicago Aircare Pro repairs air conditioners and mini-splits in Evanston quickly, with certified technicians and honest options.",
+  "intro": "Chicago Aircare Pro repairs air conditioners and mini-splits in Evanston quickly, with certified technicians and clear options.",
   "faqs": [
     {
       "q": "Do you repair mini-splits in Evanston?",

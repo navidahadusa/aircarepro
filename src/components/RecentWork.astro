@@ -18,7 +18,6 @@ const {
 <section class:list={['section', { 'section-alt': alt }]} aria-labelledby="recent-work-h">
   <div class="container">
     <div class="section-head">
-      <p class="eyebrow">Our work</p>
       <h2 id="recent-work-h">{title}</h2>
       <p class="lead">{intro}</p>
     </div>
@@ -27,7 +26,6 @@ const {
         <li class="rw-item">
           <figure class="photo">
             <Image quality={50} src={p.src} alt={p.alt} widths={[300, 480]} sizes="(max-width: 600px) 50vw, (max-width: 1000px) 33vw, 18rem" loading="lazy" />
-            <figcaption aria-hidden="true">{p.alt}</figcaption>
           </figure>
         </li>
       ))}
