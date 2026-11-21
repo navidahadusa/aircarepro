@@ -12,7 +12,7 @@
     },
     {
       "q": "How fast can you get to Wilmette for furnace repair?",
-      "a": "We serve Wilmette regularly and offer 24/7 emergency service. Call (773) 644-8227 and we'll give you the earliest available time."
+      "a": "We serve Wilmette regularly and offer 24/7 emergency service. Call or text {phone} and we'll give you the earliest available time."
     },
     {
       "q": "Do you repair all furnace brands?",
