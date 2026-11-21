@@ -18,6 +18,7 @@ import { categories, servicesIn } from '../data/services';
 import { getPosts, blogCategories } from '../data/blog';
 
 const hero = heroHeadline();
+const googleUrl = business.reviewProfiles.find((p) => p.platform === 'Google')?.url;
 const svcPhoto = { Heating: photos.carrierFurnace, Cooling: photos.newCondenserRoof, 'Air Quality': photos.humidifier } as const;
 const svcGroups = categories.map((cat) => ({ cat, photo: svcPhoto[cat.name] }));
 const allPosts = await getPosts();
@@ -59,7 +60,7 @@ const faqs = [
         <h1>{hero.h1}</h1>
         <p class="h2-lead">{hero.sub}</p>
         <CallSmsCta placement="home_hero" />
-        <p class="h2-proof">City of Chicago License #{business.licenseNumber} · NATE-certified technicians · BBB accredited</p>
+        <p class="h2-proof">City of Chicago License #{business.licenseNumber} · NATE-certified technicians · BBB accredited{googleUrl && <> · <a href={googleUrl} target="_blank" rel="noopener" data-track="click_review_link" data-placement="home_hero">See our Google reviews</a></>}</p>
       </div>
     </div>
     <div class="h2-photo">
@@ -73,6 +74,13 @@ const faqs = [
       <ul role="list">{triage.map((x) => <li><a href={x.href}>{x.t}<span aria-hidden="true">→</span></a></li>)}</ul>
     </div>
   </nav>
+
+  <section class="brands" aria-label="Brands we service">
+    <div class="container brands-row">
+      <p>We service</p>
+      <ul role="list">{business.brandsServiced.map((b) => <li class:list={{ dealer: b === business.dealerOf }}>{b}{b === business.dealerOf && <small>Authorized dealer</small>}</li>)}</ul>
+    </div>
+  </section>
 
   <section class="section">
     <div class="container process">
@@ -108,6 +116,15 @@ const faqs = [
       </div>
     </div>
   </section>
+
+  {business.financingPartner && (
+    <section class="finance">
+      <div class="container finance-row">
+        <div><h2>Replacing a furnace, boiler or AC?</h2><p>Free estimates on new systems. Financing through {business.financingPartner}, subject to credit approval.</p></div>
+        <div class="finance-cta"><a class="btn btn-primary" href="/free-estimate/">Get a free estimate</a><a class="finance-link" href="/financing/">How financing works →</a></div>
+      </div>
+    </section>
+  )}
 
   <section class="section">
     <div class="container boilers">
@@ -199,6 +216,20 @@ const faqs = [
     .h2-photo { min-height: 0; aspect-ratio: 16 / 10; }
   }
 
+  .h2-proof a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+  .brands { background: #fff; border-bottom: 1px solid var(--border); }
+  .brands-row { display: flex; align-items: center; gap: 1rem 2rem; padding-block: 1.1rem; flex-wrap: wrap; }
+  .brands-row p { margin: 0; color: var(--muted); font-weight: 600; font-size: 0.95rem; }
+  .brands ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.5rem 2rem; align-items: baseline; }
+  .brands li { font-family: var(--font-heading); font-weight: 800; font-size: 1.15rem; letter-spacing: -0.01em; color: #556375; }
+  .brands li.dealer { color: var(--navy-900); }
+  .brands li small { margin-left: 0.4rem; font-family: var(--font); font-weight: 700; font-size: 0.72rem; color: var(--cta); text-transform: uppercase; letter-spacing: 0.04em; }
+  .finance { background: var(--navy-900); color: #e8f0f8; }
+  .finance-row { display: flex; justify-content: space-between; align-items: center; gap: 1.25rem 2rem; flex-wrap: wrap; padding-block: clamp(1.75rem, 3vw, 2.5rem); }
+  .finance h2 { color: #fff; margin: 0 0 0.35rem; font-size: var(--step-2); }
+  .finance p { margin: 0; color: #c9d8e8; }
+  .finance-cta { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
+  .finance-link { color: #fff; font-weight: 700; }
   .quick { border-bottom: 1px solid var(--border); background: #fff; }
   .quick-row { display: grid; grid-template-columns: auto 1fr; gap: 1rem 2rem; align-items: center; padding-block: 1.1rem; }
   .quick-title { margin: 0; font-family: var(--font-heading); font-weight: 800; color: var(--navy-900); }
