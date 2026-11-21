@@ -6,20 +6,20 @@
  */
 import { Image } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
-import LeadForm from '../components/LeadForm.astro';
 import CallSmsCta from '../components/CallSmsCta.astro';
-import ServiceCards from '../components/ServiceCards.astro';
 import TrustBlock from '../components/TrustBlock.astro';
 import ReviewsBlock from '../components/ReviewsBlock.astro';
 import FaqSection from '../components/FaqSection.astro';
 import Icon from '../components/Icon.astro';
-import Skyline from '../components/Skyline.astro';
 import RecentWork from '../components/RecentWork.astro';
 import { business, areasByGroup, heroHeadline } from '../data/business';
 import { photos } from '../data/photos';
+import { categories, servicesIn } from '../data/services';
 import { getPosts, blogCategories } from '../data/blog';
 
 const hero = heroHeadline();
+const svcPhoto = { Heating: photos.carrierFurnace, Cooling: photos.newCondenserRoof, 'Air Quality': photos.humidifier } as const;
+const svcGroups = categories.map((cat) => ({ cat, photo: svcPhoto[cat.name] }));
 const allPosts = await getPosts();
 // Seasonal picks (Maya Lin): winter topics Nov–Feb, cooling topics otherwise.
 const m = new Date().getMonth();
@@ -52,35 +52,27 @@ const faqs = [
   title={`${business.displayName} | Heating, Cooling & HVAC Repair 24/7`}
   description={`Furnace, boiler and AC repair, installation and maintenance for Chicago homes. NATE-certified, 24/7 emergency service, free estimates. ${business.phoneDisplay}.`}
 >
-  <section class="hero home-hero">
-    <div class="container hero-grid">
-      <div class="hero-copy">
+  <section class="home-hero2">
+    <div class="h2-copy">
+      <div class="h2-inner">
         <p class="hero-kicker">{hero.eyebrow}</p>
         <h1>{hero.h1}</h1>
-        <p class="lead">{hero.sub}</p>
-        <CallSmsCta placement="home_hero" showBooking={false} />
-        <div class="ribbons">
-          <span class="license-ribbon"><Icon name="license" size={18} /> City of Chicago License #{business.licenseNumber}</span>
-        </div>
-      </div>
-      <div class="hero-visual">
-        <div class="photo hero-photo">
-          <Image quality={50} src={photos.rooftopMiniSplit.src} alt={photos.rooftopMiniSplit.alt} widths={[360, 540, 720]} sizes="(max-width: 900px) calc(100vw - 2rem), 34vw" loading="eager" fetchpriority="high" />
-        </div>
-        <div class="hero-card" id="quote"><LeadForm funnel="quick" placement="home_hero" /></div>
+        <p class="h2-lead">{hero.sub}</p>
+        <CallSmsCta placement="home_hero" />
+        <p class="h2-proof">City of Chicago License #{business.licenseNumber} · NATE-certified technicians · BBB accredited</p>
       </div>
     </div>
-    <Skyline />
+    <div class="h2-photo">
+      <Image quality={45} src={photos.coilBrushing.src} alt={photos.coilBrushing.alt} widths={[400, 640, 900]} sizes="(max-width: 900px) 100vw, 45vw" loading="eager" fetchpriority="high" decoding="sync" />
+    </div>
   </section>
 
-  <section class="triage-wrap">
-    <div class="container">
-      <div class="triage card">
-        <div><strong>Need service today?</strong><span>Tell us what your system is doing, and we’ll tell you the next step.</span></div>
-        <ul role="list">{triage.map((x) => <li><a href={x.href}><Icon name={x.icon} /> {x.t}</a></li>)}</ul>
-      </div>
+  <nav class="quick" aria-label="What do you need help with?">
+    <div class="container quick-row">
+      <p class="quick-title">What’s going on at your place?</p>
+      <ul role="list">{triage.map((x) => <li><a href={x.href}>{x.t}<span aria-hidden="true">→</span></a></li>)}</ul>
     </div>
-  </section>
+  </nav>
 
   <section class="section">
     <div class="container process">
@@ -102,7 +94,18 @@ const faqs = [
     <div class="container">
       <div class="section-head"><h2>Heating, cooling and air quality for Chicago homes</h2>
         <p class="lead">Gas furnaces, hot-water and steam boilers, central air, heat pumps and ductless mini-splits, in bungalows, two-flats, greystones and suburban homes.</p></div>
-      <ServiceCards />
+      <div class="svc3">
+        {svcGroups.map((g) => (
+          <article class="svc3-col">
+            <a class="svc3-photo" href={`/${g.cat.slug}/`} tabindex="-1" aria-hidden="true">
+              <Image quality={50} src={g.photo.src} alt="" widths={[360, 540]} sizes="(max-width: 900px) 100vw, 30vw" />
+            </a>
+            <h3><a href={`/${g.cat.slug}/`}>{g.cat.name}</a></h3>
+            <ul role="list">{servicesIn(g.cat.name).map((sv) => <li><a href={`/${sv.slug}/`}>{sv.name}</a></li>)}</ul>
+            <a class="svc3-all" href={`/${g.cat.slug}/`}>All {g.cat.name.toLowerCase()} services →</a>
+          </article>
+        ))}
+      </div>
     </div>
   </section>
 
@@ -179,26 +182,45 @@ const faqs = [
 </BaseLayout>
 
 <style>
-  .home-hero .hero-grid { padding-bottom: 1rem; }
-  .ribbons { display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem; margin-top: 1.5rem; }
-  .ribbons .badge-row { margin: 0; }
-  .hero-visual { position: relative; display: grid; }
-  .hero-photo { aspect-ratio: 4 / 5; max-height: 560px; width: 78%; justify-self: end; }
-  .hero-card { position: absolute; left: 0; bottom: -1.5rem; width: min(26rem, 72%); }
+  /* Hero v2 (Chloe, Unslop redesign 2026-11-21): split editorial layout, real crew photo edge to edge, no floating card. */
+  .home-hero2 { display: grid; grid-template-columns: 1.1fr 0.9fr; background: var(--navy-900); color: #e8f0f8; min-height: min(640px, 82vh); }
+  .h2-copy { display: flex; align-items: center; justify-content: flex-end; padding: clamp(2.5rem, 5vw, 5rem) clamp(1rem, 4vw, 4rem) clamp(2.5rem, 5vw, 5rem) 1rem; }
+  .h2-inner { max-width: 38rem; }
+  .home-hero2 h1 { color: #fff; font-size: clamp(2.3rem, 1.6rem + 3vw, 3.9rem); line-height: 1.04; letter-spacing: -0.03em; margin-bottom: 1rem; }
+  .h2-lead { font-size: var(--step-1); color: #c9d8e8; max-width: 32rem; margin-bottom: 1.6rem; }
+  .home-hero2 :global(.btn-secondary) { background: transparent; color: #fff; border-color: rgb(255 255 255 / 0.55); }
+  .home-hero2 :global(.btn-secondary:hover) { background: rgb(255 255 255 / 0.1); color: #fff; }
+  .h2-proof { margin: 1.4rem 0 0; font-size: 0.92rem; color: #a9bdd3; }
+  .h2-photo { position: relative; min-height: 320px; }
+  .h2-photo :global(img) { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 35% 40%; }
   @media (max-width: 900px) {
-    .hero-photo { width: 100%; aspect-ratio: 16 / 11; }
-    .hero-card { position: static; width: 100%; margin-top: -3rem; padding-inline: 0.75rem; }
+    .home-hero2 { grid-template-columns: 1fr; min-height: 0; }
+    .h2-copy { justify-content: flex-start; padding: 2.2rem 1rem 2rem; }
+    .h2-photo { min-height: 0; aspect-ratio: 16 / 10; }
   }
 
-  .triage-wrap { margin-top: -1rem; position: relative; z-index: 2; }
-  .triage { display: grid; grid-template-columns: 1fr 2fr; gap: 1rem 2rem; align-items: center; }
-  .triage strong { display: block; font-family: var(--font-heading); font-size: 1.15rem; color: var(--navy-900); }
-  .triage span { color: var(--muted); }
-  .triage ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.5rem; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); }
-  .triage a { display: flex; gap: 0.6rem; align-items: center; padding: 0.8rem 1rem; border-radius: var(--radius-sm); background: var(--ice); font-weight: 700; text-decoration: none; color: var(--navy-900); min-height: 52px; }
-  .triage a :global(.icon) { color: var(--cta); }
-  .triage a:hover { background: #e2ece0; }
-  @media (max-width: 860px) { .triage { grid-template-columns: 1fr; } .triage-wrap { margin-top: 1.5rem; } }
+  .quick { border-bottom: 1px solid var(--border); background: #fff; }
+  .quick-row { display: grid; grid-template-columns: auto 1fr; gap: 1rem 2rem; align-items: center; padding-block: 1.1rem; }
+  .quick-title { margin: 0; font-family: var(--font-heading); font-weight: 800; color: var(--navy-900); }
+  .quick ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); }
+  .quick li + li { border-left: 1px solid var(--border); }
+  .quick a { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; min-height: 52px; padding: 0.4rem 1rem; font-weight: 700; color: var(--navy-900); text-decoration: none; }
+  .quick a span { color: var(--cta); transition: transform 0.15s; }
+  .quick a:hover span { transform: translateX(3px); }
+  @media (max-width: 1000px) { .quick-row { grid-template-columns: 1fr; } .quick ul { grid-template-columns: 1fr 1fr; } .quick li:nth-child(3) { border-left: 0; } }
+  @media (max-width: 560px) { .quick ul { grid-template-columns: 1fr; } .quick li + li { border-left: 0; border-top: 1px solid var(--border); } .quick a { padding-inline: 0; } }
+
+  .svc3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.25rem, 3vw, 2.5rem); }
+  .svc3-photo { display: block; aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--radius); margin-bottom: 1rem; }
+  .svc3-photo :global(img) { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+  .svc3-col:hover .svc3-photo :global(img) { transform: scale(1.03); }
+  .svc3-col h3 { margin-bottom: 0.6rem; } .svc3-col h3 a { color: var(--navy-900); text-decoration: none; }
+  .svc3-col ul { list-style: none; margin: 0 0 1rem; padding: 0; columns: 2; column-gap: 1rem; }
+  .svc3-col li { break-inside: avoid; padding: 0.25rem 0; }
+  .svc3-col li a { color: var(--text); text-decoration: none; font-size: 0.95rem; }
+  .svc3-col li a:hover { color: var(--brand-accent); text-decoration: underline; }
+  .svc3-all { font-weight: 800; text-decoration: none; }
+  @media (max-width: 900px) { .svc3 { grid-template-columns: 1fr; } }
 
   .process, .boilers, .crew-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; }
   .boilers { grid-template-columns: 1.2fr 1fr; }
