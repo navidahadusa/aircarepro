@@ -27,3 +27,6 @@ Prices, response times, statistics, rebate amounts, reviews, guarantees or custo
 3. Link to the new post from one relevant service or area page (Elena Brooks) so it's not an orphan.
 4. Verify: check + build 0 errors · `site-metrics` (orphans 0, one H1, meta ≤ 160) · open `/<slug>/` in the preview on mobile.
 5. Report under Maya Lin (title, URL, primary keyword, word count).
+
+## Unslop (owner rule, 2026-11-21)
+Before shipping, apply `marketing/unslop-style.md`: no em dashes or filler words in visible copy, facts instead of trust adjectives, specific Chicago detail, varied rhythm; in design no label over every heading, no icon box on every item, varied section layouts, real photos first.

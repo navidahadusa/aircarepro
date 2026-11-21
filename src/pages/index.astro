@@ -55,15 +55,12 @@ const faqs = [
   <section class="hero home-hero">
     <div class="container hero-grid">
       <div class="hero-copy">
-        <span class="eyebrow"><Icon name="clock" size={16} /> {hero.eyebrow}</span>
+        <p class="hero-kicker">{hero.eyebrow}</p>
         <h1>{hero.h1}</h1>
         <p class="lead">{hero.sub}</p>
         <CallSmsCta placement="home_hero" showBooking={false} />
         <div class="ribbons">
           <span class="license-ribbon"><Icon name="license" size={18} /> City of Chicago License #{business.licenseNumber}</span>
-          <ul class="badge-row">
-            <li>NATE &amp; EPA 608</li><li>BBB accredited</li><li>{business.dealerOf} dealer</li>
-          </ul>
         </div>
       </div>
       <div class="hero-visual">
@@ -91,11 +88,10 @@ const faqs = [
         <Image quality={50} src={photos.gasPressureTest.src} alt={photos.gasPressureTest.alt} widths={[360, 540, 700]} sizes="(max-width: 900px) calc(100vw - 2rem), 35vw" />
       </div>
       <div>
-        <span class="eyebrow">How every visit works</span>
         <h2>Diagnosis first. Options and prices before any work.</h2>
         <ol class="steps">
           {steps.map((s, i) => (
-            <li><span class="icon-tile amber"><Icon name={s.icon} size={22} /></span><div><strong>{i + 1}. {s.t}</strong><p>{s.d}</p></div></li>
+            <li><span class="step-num" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span><div><strong>{s.t}</strong><p>{s.d}</p></div></li>
           ))}
         </ol>
       </div>
@@ -104,7 +100,7 @@ const faqs = [
 
   <section class="section section-alt">
     <div class="container">
-      <div class="section-head"><span class="eyebrow">What we do</span><h2>Heating, cooling and air quality for Chicago homes</h2>
+      <div class="section-head"><h2>Heating, cooling and air quality for Chicago homes</h2>
         <p class="lead">Gas furnaces, hot-water and steam boilers, central air, heat pumps and ductless mini-splits, in bungalows, two-flats, greystones and suburban homes.</p></div>
       <ServiceCards />
     </div>
@@ -113,7 +109,6 @@ const faqs = [
   <section class="section">
     <div class="container boilers">
       <div>
-        <span class="eyebrow"><Icon name="thermometer" size={16} /> Chicago boilers &amp; radiators</span>
         <h2>Steam and hot-water heat in greystones, two-flats and bungalows</h2>
         <p>Much of Chicago still heats with boilers. We troubleshoot pressure, air in the lines, low-water cut-offs, zone valves and circulators, and keep old radiator systems running safely.</p>
         <ul class="link-list">
@@ -135,7 +130,6 @@ const faqs = [
         <Image quality={50} src={photos.gangwayCondenser.src} alt={photos.gangwayCondenser.alt} widths={[360, 540, 720]} sizes="(max-width: 900px) calc(100vw - 2rem), 40vw" />
       </div>
       <div>
-        <span class="eyebrow">Why {business.displayName}</span>
         <h2>A certified, owner-led crew, on call every day</h2>
         <p>Every technician is NATE and EPA 608 certified. We know Chicago housing, from gangway condensers to rooftop units and basement boilers.</p>
         <TrustBlock variant="credentials" />
@@ -151,7 +145,7 @@ const faqs = [
 
   <section class="section">
     <div class="container">
-      <div class="section-head"><span class="eyebrow"><Icon name="pin" size={16} /> Service areas</span><h2>Chicago neighborhoods and nearby suburbs</h2>
+      <div class="section-head"><h2>Chicago neighborhoods and nearby suburbs</h2>
         <p><a href="/hvac-chicago/">HVAC service in Chicago</a> · <a href="/service-areas/">All service areas</a></p></div>
       <div class="grid grid-4 areas">
         {[...areasByGroup()].map(([g, list]) => (
@@ -163,7 +157,7 @@ const faqs = [
 
   <section class="section">
     <div class="container">
-      <div class="section-head"><span class="eyebrow">From our blog</span><h2>{m >= 10 || m <= 1 ? 'Winter guides for Chicago homes' : 'Cooling guides for Chicago homes'}</h2>
+      <div class="section-head"><h2>{m >= 10 || m <= 1 ? 'Winter guides for Chicago homes' : 'Cooling guides for Chicago homes'}</h2>
         <p><a href="/blog/">All {allPosts.length} HVAC guides <Icon name="arrow" size={16} /></a></p></div>
       <ul class="home-posts" role="list">
         {featuredPosts.map((p) => <li><a href={`/${p.id}/`}><span class="eyebrow">{blogCategories[p.data.category].name}</span><strong>{p.data.title}</strong><span>{p.data.description}</span></a></li>)}
@@ -175,7 +169,7 @@ const faqs = [
     <div class="container grid grid-2">
       <div class="prose"><FaqSection faqs={faqs} /></div>
       <div class="card guide-cta">
-        <span class="eyebrow">Free homeowner resource</span>
+        <p class="kicker">Free homeowner resource</p>
         <h2>The Chicago Homeowner’s HVAC Guide</h2>
         <p>What to do when the heat goes out, how to prepare for a cold snap or heat wave, a month-by-month maintenance calendar and carbon monoxide safety.</p>
         <a class="btn btn-secondary" href="/chicago-hvac-homeowner-guide/">Read the guide <Icon name="arrow" size={18} /></a>
@@ -216,7 +210,10 @@ const faqs = [
     .boilers .photo { order: -1; }
   }
   .steps { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 1.1rem; }
-  .steps li { display: flex; gap: 1rem; align-items: flex-start; }
+  .steps li { display: flex; gap: 1.1rem; align-items: baseline; padding-top: 1rem; border-top: 1px solid var(--border); }
+  .step-num { font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem; color: var(--cta); min-width: 2.4rem; line-height: 1; }
+  .hero-kicker { color: #c9d8e8; font-weight: 600; margin: 0 0 0.6rem; }
+  .kicker { color: var(--muted); font-weight: 600; margin: 0 0 0.4rem; }
   .steps strong { font-family: var(--font-heading); color: var(--navy-900); font-size: 1.05rem; }
   .steps p { margin: 0.2rem 0 0; color: var(--muted); }
   .link-list { list-style: none; padding: 0; margin: 1.25rem 0 0; display: grid; gap: 0.5rem; }

@@ -4,7 +4,7 @@
   "h1": "Furnace Installation in Skokie, IL",
   "service": "furnace-installation",
   "city": "skokie",
-  "intro": "New furnace installation in Skokie with free estimates, honest options and financing available.",
+  "intro": "New furnace installation in Skokie with free estimates, clear options and financing available.",
   "faqs": [
     {
       "q": "How long does furnace installation take in Skokie?",
@@ -31,7 +31,7 @@
 <p>Skokie&#x27;s mid-century homes are ideal candidates for high-efficiency furnace upgrades. We size each furnace properly, install new venting and condensate lines, and make sure everything is code-compliant.</p>
 
 <h2>About homes in Skokie</h2>
-<p>Skokie grew quickly in the years after World War II, and much of its housing dates from that era: brick ranches, split-levels, raised ranches and Cape Cods on quiet residential streets, along with townhomes and condos near Old Orchard and downtown Skokie. Most of these homes use forced-air furnaces and central air conditioning, often in the same basement or utility room where the original equipment sat.</p><h3>Split-level comfort problems</h3><p>Split-levels often have one level too warm and another too cool. Balancing dampers, adding returns or zoning can even it out.</p><h3>Aging furnaces and ACs</h3><p>Many Skokie systems are at or past their expected life. We&#x27;ll repair what&#x27;s worth repairing and give honest replacement options when it isn&#x27;t.</p>
+<p>Skokie grew quickly in the years after World War II, and much of its housing dates from that era: brick ranches, split-levels, raised ranches and Cape Cods on quiet residential streets, along with townhomes and condos near Old Orchard and downtown Skokie. Most of these homes use forced-air furnaces and central air conditioning, often in the same basement or utility room where the original equipment sat.</p><h3>Split-level comfort problems</h3><p>Split-levels often have one level too warm and another too cool. Balancing dampers, adding returns or zoning can even it out.</p><h3>Aging furnaces and ACs</h3><p>Many Skokie systems are at or past their expected life. We&#x27;ll repair what&#x27;s worth repairing and lay out replacement options with prices when it isn&#x27;t.</p>
 
 <h2>Furnace Installation problems we fix in Skokie</h2>
 <ul><li><strong>Choosing the right efficiency</strong></li><li><strong>Single-stage, two-stage or variable-speed</strong></li><li><strong>Sizing with a load calculation</strong></li><li><strong>Venting, gas and condensate done right</strong></li><li><strong>Ductwork and airflow</strong></li></ul><p>We start with a load calculation, not a guess based on the old furnace&#x27;s size. Many older Chicago homes have oversized furnaces that short cycle and waste fuel. We look at your home&#x27;s square footage, insulation, windows and ductwork, then recommend the right capacity and efficiency level. Installation includes proper venting, a correctly sloped condensate line, gas line connection and leak testing, and full start-up with combustion and temperature-rise checks. As a Comfortmaker dealer we can offer reliable equipment with strong warranties, and we install other major brands as well.</p>

@@ -21,3 +21,6 @@ description: Design and quality check for any UI change on the CHICAGO AIRCARE P
 
 ## Output
 Before/after screenshots (desktop + mobile) attached or described, Lighthouse scores per page, list of issues fixed and any left open. Report under Chloe Vance; Sophia Reynolds approves before the PR.
+
+## Unslop (owner rule, 2026-11-21)
+Before shipping, apply `marketing/unslop-style.md`: no em dashes or filler words in visible copy, facts instead of trust adjectives, specific Chicago detail, varied rhythm; in design no label over every heading, no icon box on every item, varied section layouts, real photos first.

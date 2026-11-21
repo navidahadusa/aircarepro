@@ -43,6 +43,7 @@ Owner shortcuts (`.claude/commands/`): `/daily [focus]` · `/sprint <goal>` · `
 - **Advertising is the team's job (owner, 2026-11-19):** Rachel Morgan owns paid ads, with Sophia approving. **No spend, launch or budget change without the owner's explicit OK.** Plan: `marketing/ads/ads-plan.md`.
 - **Owner priorities:** SEO, local SEO and lead generation come first. Daily posts on the website to rank on Google.
 - **Daily Google data review (owner, 2026-11-21):** every day the team checks GA4 and Search Console and, based on the data, strengthens pages or reworks content (titles/meta, sections, FAQs, internal links, CTAs). Playbook: `marketing/seo/daily-data-playbook.md`; results log: `marketing/seo/page-actions-log.md`. Never estimate numbers.
+- **Unslop (owner, 2026-11-21):** everything must read and look like a professional human agency's work, not an AI template. Rules: `marketing/unslop-style.md` (no em dashes or filler words, facts over trust adjectives, no label over every heading, no icon box on every item, varied layouts). Every skill applies it before shipping.
 - **GBP API: deferred (owner, 2026-11-20: setup too complex).** Don't ask the owner for GBP API setup again. Instead, Hannah Carter reads GBP numbers from screenshots the owner sends (Performance + Reviews) and logs them in the daily report. `scripts/gbp-report.mjs` stays ready and only runs if the GBP secrets ever exist (e.g. set up by a helper using `marketing/citations/gbp-api-setup.md`).
 
 ### Rebrand status (keep exact)

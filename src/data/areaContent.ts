@@ -110,7 +110,7 @@ ${glance('Chicago', [['Chicago has about 1.27 million housing units, from bungal
 };
 
 /* ------------------------------------------------------------------ */
-/* Chicago — North Side                                                */
+/* Chicago North Side                                                */
 /* ------------------------------------------------------------------ */
 const northSide: Record<string, AreaContent> = {
   'lincoln-park': {
@@ -503,7 +503,7 @@ ${glance('Lincoln Park', [
 };
 
 /* ------------------------------------------------------------------ */
-/* Chicago — Northwest Side                                            */
+/* Chicago Northwest Side                                            */
 /* ------------------------------------------------------------------ */
 const northwestSide: Record<string, AreaContent> = {
   'logan-square': {
@@ -828,7 +828,7 @@ ${glance('Logan Square', [['Between 2013 and 2019, 224 two-to-four-unit building
 };
 
 /* ------------------------------------------------------------------ */
-/* Chicago — West Side                                                 */
+/* Chicago West Side                                                 */
 /* ------------------------------------------------------------------ */
 const westSide: Record<string, AreaContent> = {
   bucktown: {

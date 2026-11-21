@@ -20,7 +20,7 @@
     },
     {
       "q": "Is it worth repairing an old furnace?",
-      "a": "It depends on age, the repair cost and the furnace's condition. If a furnace is near the end of its life and needs a major part, we'll show you both the repair and replacement options honestly so you can decide."
+      "a": "It depends on age, the repair cost and the furnace's condition. If a furnace is near the end of its life and needs a major part, we'll show you both the repair and replacement options, with prices, so you can decide."
     }
   ],
   "source": "https://aircareprohvac.com/furnace-repair-arlington-heights/"

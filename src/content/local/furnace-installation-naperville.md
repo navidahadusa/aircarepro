@@ -8,7 +8,7 @@
   "faqs": [
     {
       "q": "Should we replace both furnaces at once?",
-      "a": "Not always. We'll evaluate each and give honest recommendations."
+      "a": "Not always. We'll evaluate each and give a straight recommendation."
     },
     {
       "q": "How fast can you get to Naperville for furnace installation?",

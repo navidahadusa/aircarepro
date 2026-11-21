@@ -28,9 +28,9 @@ export interface OpeningHours {
 }
 
 export type AreaGroup =
-  | 'Chicago — North Side'
-  | 'Chicago — Northwest Side'
-  | 'Chicago — West Side'
+  | 'Chicago North Side'
+  | 'Chicago Northwest Side'
+  | 'Chicago West Side'
   | 'North suburbs'
   | 'Northwest & west suburbs';
 
@@ -174,33 +174,33 @@ export const business: Business = {
   priceRange: '$$',
   serviceAreas: [
     { name: 'Chicago', slug: 'chicago', type: 'City', primary: true },
-    // Chicago — North Side
-    area('Lincoln Park', 'Chicago — North Side'),
-    area('Lakeview', 'Chicago — North Side'),
-    area('Old Town & Gold Coast', 'Chicago — North Side', 'old-town-gold-coast'),
-    area('Lincoln Square', 'Chicago — North Side'),
-    area('North Center', 'Chicago — North Side'),
-    area('Ravenswood', 'Chicago — North Side'),
-    area('Uptown', 'Chicago — North Side'),
-    area('Andersonville & Edgewater', 'Chicago — North Side', 'andersonville-edgewater'),
-    area('Rogers Park', 'Chicago — North Side'),
-    area('West Ridge', 'Chicago — North Side'),
-    // Chicago — Northwest Side
-    area('Logan Square', 'Chicago — Northwest Side'),
-    area('Avondale', 'Chicago — Northwest Side'),
-    area('Irving Park', 'Chicago — Northwest Side'),
-    area('Albany Park', 'Chicago — Northwest Side'),
-    area('Portage Park', 'Chicago — Northwest Side'),
-    area('Jefferson Park', 'Chicago — Northwest Side'),
-    area('Norwood Park', 'Chicago — Northwest Side'),
-    area('Edison Park', 'Chicago — Northwest Side'),
-    // Chicago — West Side
-    area('Bucktown', 'Chicago — West Side'),
-    area('Wicker Park', 'Chicago — West Side'),
-    area('Humboldt Park', 'Chicago — West Side'),
-    area('Ukrainian Village', 'Chicago — West Side'),
-    area('West Town', 'Chicago — West Side'),
-    area('Austin', 'Chicago — West Side'),
+    // Chicago North Side
+    area('Lincoln Park', 'Chicago North Side'),
+    area('Lakeview', 'Chicago North Side'),
+    area('Old Town & Gold Coast', 'Chicago North Side', 'old-town-gold-coast'),
+    area('Lincoln Square', 'Chicago North Side'),
+    area('North Center', 'Chicago North Side'),
+    area('Ravenswood', 'Chicago North Side'),
+    area('Uptown', 'Chicago North Side'),
+    area('Andersonville & Edgewater', 'Chicago North Side', 'andersonville-edgewater'),
+    area('Rogers Park', 'Chicago North Side'),
+    area('West Ridge', 'Chicago North Side'),
+    // Chicago Northwest Side
+    area('Logan Square', 'Chicago Northwest Side'),
+    area('Avondale', 'Chicago Northwest Side'),
+    area('Irving Park', 'Chicago Northwest Side'),
+    area('Albany Park', 'Chicago Northwest Side'),
+    area('Portage Park', 'Chicago Northwest Side'),
+    area('Jefferson Park', 'Chicago Northwest Side'),
+    area('Norwood Park', 'Chicago Northwest Side'),
+    area('Edison Park', 'Chicago Northwest Side'),
+    // Chicago West Side
+    area('Bucktown', 'Chicago West Side'),
+    area('Wicker Park', 'Chicago West Side'),
+    area('Humboldt Park', 'Chicago West Side'),
+    area('Ukrainian Village', 'Chicago West Side'),
+    area('West Town', 'Chicago West Side'),
+    area('Austin', 'Chicago West Side'),
     // North suburbs
     area('Evanston', 'North suburbs'),
     area('Skokie', 'North suburbs'),

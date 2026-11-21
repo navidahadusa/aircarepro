@@ -4,7 +4,7 @@
   "h1": "Furnace Repair in Evanston, IL",
   "service": "furnace-repair",
   "city": "evanston",
-  "intro": "When your Evanston furnace quits, Chicago Aircare Pro is a short drive away. We repair every make and model with honest diagnosis and 24/7 emergency service.",
+  "intro": "When your Evanston furnace quits, Chicago Aircare Pro is a short drive away. We repair every make and model with accurate diagnosis and 24/7 emergency service.",
   "faqs": [
     {
       "q": "My Evanston furnace keeps shutting off. Why?",
@@ -20,7 +20,7 @@
     },
     {
       "q": "Is it worth repairing an old furnace?",
-      "a": "It depends on age, the repair cost and the furnace's condition. If a furnace is near the end of its life and needs a major part, we'll show you both the repair and replacement options honestly so you can decide."
+      "a": "It depends on age, the repair cost and the furnace's condition. If a furnace is near the end of its life and needs a major part, we'll show you both the repair and replacement options, with prices, so you can decide."
     }
   ],
   "source": "https://aircareprohvac.com/furnace-repair-evanston/"
