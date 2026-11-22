@@ -10,7 +10,7 @@ Google ranks a local business higher when the profile and the website say **exac
 | Additional categories (pick those Google offers) | Heating contractor · Air conditioning contractor · Furnace repair service · Air conditioning repair service | Service hubs /heating/, /cooling/ ✅ |
 | Phone | **(773) 644-8227** | Every page ✅ |
 | Website | `https://aircareprohvac.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp` | Homepage ✅ (the UTM lets GA4 count profile visits) |
-| Appointment link | Housecall Pro booking link, **after** renaming Housecall Pro (the current link still contains the old name) | Book buttons ✅ |
+| Appointment link | `https://book.housecallpro.com/book/CHICAGO-AIRCARE-PRO/8d48b75104b0455da0f38ddcf1519bd3?v2=true` (Housecall Pro renamed 2026-11-22) | Book buttons ✅ (live since PR #19) |
 | Hours | **Open 24 hours**, all 7 days | Schema 24/7 ✅ |
 | Address | Hidden (service-area business) | `showAddress: false` ✅ |
 | Opening date | Leave as is | — |
@@ -48,4 +48,4 @@ Pick Google's suggested service when it matches, otherwise add a custom one with
 ## Already done on the website side
 - Name, phone, 24/7 hours and the GBP link (`sameAs`) are in the HVACBusiness schema on all pages.
 - One page for each of the 20 areas above, and one page for each of the 20 services.
-- No "Shad" text anywhere on the site (only the Housecall Pro booking URL until Housecall Pro is renamed).
+- No "Shad" text anywhere on the site, booking URL included (new Housecall Pro link live 2026-11-22).

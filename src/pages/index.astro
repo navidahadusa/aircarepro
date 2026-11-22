@@ -56,8 +56,8 @@ const faqs = [
   <section class="home-hero2">
     <div class="h2-copy">
       <div class="h2-inner">
-        <p class="hero-kicker">{hero.eyebrow}</p>
-        <h1>{hero.h1}</h1>
+        {!hero.h1Lead && <p class="hero-kicker">{hero.eyebrow}</p>}
+        <h1>{hero.h1Lead && <span class="h1-lead">{hero.h1Lead}<span class="sr-only">. </span></span>}{hero.h1}</h1>
         <p class="h2-lead">{hero.sub}</p>
         <CallSmsCta placement="home_hero" />
         <p class="h2-proof">City of Chicago License #{business.licenseNumber} · NATE-certified technicians · BBB accredited{googleUrl && <> · <a href={googleUrl} target="_blank" rel="noopener" data-track="click_review_link" data-placement="home_hero">See our Google reviews</a></>}</p>
@@ -106,7 +106,7 @@ const faqs = [
         {svcGroups.map((g) => (
           <article class="svc3-col">
             <a class="svc3-photo" href={`/${g.cat.slug}/`} tabindex="-1" aria-hidden="true">
-              <Image quality={50} src={g.photo.src} alt="" widths={[360, 540]} sizes="(max-width: 900px) 100vw, 30vw" />
+              <Image quality={50} src={g.photo.src} alt={g.photo.alt} widths={[360, 540]} sizes="(max-width: 900px) 100vw, 30vw" />
             </a>
             <h3><a href={`/${g.cat.slug}/`}>{g.cat.name}</a></h3>
             <ul role="list">{servicesIn(g.cat.name).map((sv) => <li><a href={`/${sv.slug}/`}>{sv.name}</a></li>)}</ul>
@@ -265,6 +265,7 @@ const faqs = [
   .steps { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 1.1rem; }
   .steps li { display: flex; gap: 1.1rem; align-items: baseline; padding-top: 1rem; border-top: 1px solid var(--border); }
   .step-num { font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem; color: var(--cta); min-width: 2.4rem; line-height: 1; }
+  .h1-lead { display: block; font-size: clamp(1rem, 0.9rem + 0.5vw, 1.25rem); font-weight: 700; letter-spacing: 0; color: #ffd9b8; margin-bottom: 0.5rem; }
   .hero-kicker { color: #c9d8e8; font-weight: 600; margin: 0 0 0.6rem; }
   .kicker { color: var(--muted); font-weight: 600; margin: 0 0 0.4rem; }
   .steps strong { font-family: var(--font-heading); color: var(--navy-900); font-size: 1.05rem; }

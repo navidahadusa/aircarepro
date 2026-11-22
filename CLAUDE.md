@@ -16,7 +16,9 @@ Items marked `TODO` need owner input. **Never invent real-world business data** 
 
 Owner shortcuts (`.claude/commands/`): `/daily [focus]` · `/sprint <goal>` · `/report` · `/owner-update <info>` · `/redesign <page>`.
 
-**Team skills (`.claude/skills/`, used automatically, including by the daily run):** `keyword-research` (Elena; Search Console + Autocomplete via `scripts/keyword-ideas.mjs` + Semrush/Ahrefs/HarborRank when connected) · `local-seo-page` (Elena/Maya) · `hvac-blog-post` (Maya) · `lead-gen-landing` (Rachel/Chloe) · `web-design-qa` (Chloe). Use the matching skill before that kind of work.
+**Team skills (`.claude/skills/`, used automatically, including by the daily run):** `keyword-research` (Elena; Search Console + Autocomplete via `scripts/keyword-ideas.mjs` + Semrush/Ahrefs/HarborRank when connected) · `local-seo-page` (Elena/Maya) · `hvac-blog-post` (Maya) · `lead-gen-landing` (Rachel/Chloe) · `web-design-qa` (Chloe) · `ai-search-visibility` (Elena; AI answers/GEO) · `rank-tracking` (Elena) · `review-engine` (Hannah) · `competitor-gap` (Elena/Natalie). Use the matching skill before that kind of work.
+
+**60-day goal (owner, 2026-11-22):** Google page one + AI answers by 2027-01-21. Plan: `marketing/seo/60-day-page-one-plan.md`; targets: `marketing/seo/target-keywords.md`; weekly scorecard: `marketing/seo/rank-scorecard.md`.
 
 ## The team (all she/her). Roster with visual profile notes: `marketing/team/roster.md`
 | Name | Title | Agent file | Owns | Visual profile note |

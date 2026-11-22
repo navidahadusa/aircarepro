@@ -14,7 +14,7 @@ const { variant = 'light', size = 56, tagline = true, href = '/' } = Astro.props
 const star = 'M12 1.5l2.6 5.9 6.4-.7-3.8 5.3 3.8 5.3-6.4-.7L12 22.5l-2.6-5.9-6.4.7 3.8-5.3-3.8-5.3 6.4.7z';
 ---
 <a href={href} class:list={['brandmark', variant]} aria-label={`${business.displayName} home`}>
-  <Image quality={60} src={logo} alt="" width={size} height={size} densities={[1, 2]} loading="eager" class="bm-logo" />
+  <Image quality={60} src={logo} alt={`${business.name} logo`} width={size} height={size} densities={[1, 2]} loading="eager" class="bm-logo" />
   <span class="bm-text">
     <span class="bm-name">Chicago Aircare <span class="bm-pro">Pro</span></span>
     {tagline && (
