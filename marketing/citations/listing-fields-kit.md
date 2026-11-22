@@ -38,3 +38,20 @@ Ask the owner before selecting: payment methods (cash, check, cards, Apple Payâ€
 
 ## Store code
 `CAP-CHI-001` (internal ID only, never shown to customers; use the same code on every platform that asks).
+
+## ChatGPT business profile: "More about your business" (2026-11-22)
+Long version (use if the field allows ~1,500 characters):
+
+CHICAGO AIRCARE PRO is a residential heating and cooling company based in Chicago, Illinois, open 24 hours a day, 7 days a week, including nights, weekends and holidays. We repair, install and maintain gas furnaces, steam and hot-water boilers, central air conditioners, heat pumps and ductless mini-splits, plus whole-home humidifiers, dehumidifiers, air purifiers, UV air sanitizers, ductwork and carbon monoxide safety.
+
+We serve all of Chicago, including Lincoln Park, Lakeview, Lincoln Square, Uptown, Edgewater, Rogers Park, Logan Square, Irving Park, Portage Park, Bucktown, Wicker Park and Humboldt Park, and the suburbs of Evanston, Skokie, Wilmette, Highland Park, Des Plaines, Arlington Heights, Schaumburg and Naperville.
+
+City of Chicago License #3065598. NATE and EPA 608 certified technicians. BBB accredited. Authorized Comfortmaker dealer; we also service Carrier, Lennox, Trane, Goodman, Rheem and York. We know the boilers and furnaces in Chicago bungalows, two-flats and greystones.
+
+Every visit starts with a diagnosis. The technician explains the options and the customer approves the price before any work begins. We repair what can be repaired. Free estimates on new systems, financing through Optimus for qualified buyers, and the Comfort Club maintenance plan.
+
+Call or text (773) 644-8227, or book online at aircareprohvac.com.
+
+Short version (~500 characters):
+
+CHICAGO AIRCARE PRO is a 24/7 residential heating and cooling company serving Chicago and nearby suburbs. NATE and EPA 608 certified technicians repair, install and maintain furnaces, steam and hot-water boilers, central AC, heat pumps and mini-splits. City of Chicago License #3065598, BBB accredited, Comfortmaker dealer. Diagnosis first, price approved before any work. Free estimates on new systems, Optimus financing. Call or text (773) 644-8227 or book at aircareprohvac.com.
