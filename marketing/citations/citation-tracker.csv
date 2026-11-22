@@ -17,6 +17,6 @@ priority,tier,directory,url_to_submit,listing_url,status,nap_match,claimed,login
 16,4,Andersonville Chamber of Commerce,TBD,,blocked-until-rename,,,,,,,no,Closest to business geo point
 17,4,Edgewater Chamber of Commerce,TBD,,blocked-until-rename,,,,,,,no,
 18,3,Utility trade-ally lists (ComEd / Peoples Gas / North Shore Gas / Nicor Gas),TBD,,blocked-until-rename,,,,,,,no,Check program eligibility
-19,3,Housecall Pro public profile,https://pro.housecallpro.com,https://book.housecallpro.com/book/Shad-Heating-and-Cooling/8d48b75104b0455da0f38ddcf1519bd3,pending-name-update,mismatch: name shows Shad Heating and Cooling,yes,,,,,no,Rename public business name to brand
+19,3,Housecall Pro public profile,https://pro.housecallpro.com,https://book.housecallpro.com/book/CHICAGO-AIRCARE-PRO/8d48b75104b0455da0f38ddcf1519bd3?v2=true,live,match: CHICAGO AIRCARE PRO,yes,,2026-11-22,2026-11-22,2026-11-22,no,Owner renamed Housecall Pro 2026-11-22; site and GBP use the new booking link
 20,3,Porch,https://pro.porch.com,,blocked-until-rename,,,,,,,no,
 21,1,ChatGPT business profile (OpenAI),,TODO(owner) after approval,submitted-under-review,match: CHICAGO AIRCARE PRO,yes,,2026-11-22,,2026-11-22,no,Owner submitted 2026-11-22 after DNS TXT verification of aircareprohvac.com; in OpenAI review. Text: listing-fields-kit.md
