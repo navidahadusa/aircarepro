@@ -17,8 +17,8 @@ const fmt = (d: string) => { const [y, m] = d.split('-').map(Number); return m ?
       {items.map((r, i) => (
         <figure class="rc-card" aria-roledescription="slide" aria-label={`Review ${i + 1} of ${items.length}`}>
           <div class="rc-stars" role="img" aria-label={`${r.stars} out of 5 stars`}>{'★'.repeat(r.stars)}<span class="rc-off">{'★'.repeat(5 - r.stars)}</span></div>
-          <blockquote>{r.text}</blockquote>
-          <figcaption><strong>{r.author}</strong><span>{r.source} · {fmt(r.date)}</span></figcaption>
+          <blockquote>{r.text}{r.excerpt && ' …'}</blockquote>
+          <figcaption><strong>{r.author}</strong><span>{r.source} review{r.date ? ` · ${fmt(r.date)}` : ''}</span></figcaption>
         </figure>
       ))}
     </div>
