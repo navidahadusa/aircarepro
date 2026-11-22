@@ -106,7 +106,7 @@ const faqs = [
         {svcGroups.map((g) => (
           <article class="svc3-col">
             <a class="svc3-photo" href={`/${g.cat.slug}/`} tabindex="-1" aria-hidden="true">
-              <Image quality={50} src={g.photo.src} alt="" widths={[360, 540]} sizes="(max-width: 900px) 100vw, 30vw" />
+              <Image quality={50} src={g.photo.src} alt={g.photo.alt} widths={[360, 540]} sizes="(max-width: 900px) 100vw, 30vw" />
             </a>
             <h3><a href={`/${g.cat.slug}/`}>{g.cat.name}</a></h3>
             <ul role="list">{servicesIn(g.cat.name).map((sv) => <li><a href={`/${sv.slug}/`}>{sv.name}</a></li>)}</ul>
