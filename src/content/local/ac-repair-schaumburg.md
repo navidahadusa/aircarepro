@@ -4,7 +4,8 @@
   "h1": "AC Repair in Schaumburg, IL",
   "service": "ac-repair",
   "city": "schaumburg",
-  "intro": "Chicago Aircare Pro repairs air conditioners in Schaumburg homes and townhomes.",
+  "meta": "AC repair and heat pump repair in Schaumburg, IL, plus heat pump maintenance and 24/7 emergency HVAC. NATE-certified techs, options and prices first.",
+  "intro": "Chicago Aircare Pro repairs air conditioners and heat pumps in Schaumburg homes and townhomes, with 24/7 emergency service. We diagnose first and show you options with prices before any work starts.",
   "faqs": [
     {
       "q": "Can you repair condensers on shared pads?",
@@ -13,6 +14,10 @@
     {
       "q": "How fast can you get to Schaumburg for ac repair?",
       "a": "We serve Schaumburg regularly and offer 24/7 emergency service. Call or text {phone} and we'll give you the earliest available time."
+    },
+    {
+      "q": "Do you repair and maintain heat pumps in Schaumburg?",
+      "a": "Yes. We repair heat pumps and dual-fuel systems, including defrost, reversing valve, outdoor fan and control problems, and we offer heat pump maintenance: coil cleaning, electrical checks, refrigerant readings and a test of both heating and cooling modes."
     },
     {
       "q": "Why is my AC blowing warm air?",
@@ -44,3 +49,9 @@
 
 <h2>AC Repair cost in Schaumburg</h2>
 <p>AC repair cost depends on the part, refrigerant type and amount, access and the age of your system. Our technician explains the diagnosis and your options before starting any work. If your AC is old or uses an outdated refrigerant, we&#x27;ll compare repair and replacement honestly.</p>
+
+<h2>Emergency AC and heat pump repair in Schaumburg</h2>
+<p>No cooling in a heat wave or a heat pump that quits on a cold night: call or text us any time, day or night, including holidays. For emergencies, calling is the fastest way to reach us. See <a href="/emergency-hvac/">emergency HVAC service</a> for what to check while you wait.</p>
+
+<h2>Heat pump repair and maintenance in Schaumburg</h2>
+<p>Heat pumps in Schaumburg townhomes often share the tight pads and closet air handlers described above, and many single-family homes pair a heat pump with a gas furnace as a dual-fuel system. Common repairs are a stuck reversing valve, a failed defrost board or sensor, an outdoor fan motor, a refrigerant leak, or a thermostat that isn't switching to the furnace when it should. A yearly maintenance visit cleans the outdoor coil, checks the electrical parts and refrigerant readings, and tests both heating and cooling. Learn more about <a href="/heat-pump-repair/">heat pump repair</a> or see <a href="/hvac-schaumburg/">all HVAC services in Schaumburg</a>.</p>

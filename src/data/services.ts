@@ -198,7 +198,7 @@ export const services: Service[] = [
 <h3>Draft inducer and pressure switch</h3>
 <p>Before the gas valve opens, the inducer motor must prove that the vent is clear. A failing inducer, a cracked hose or a blocked vent stops the sequence. That is a safety feature, not a fault to bypass.</p>
 <h3>Frozen or clogged condensate on high-efficiency furnaces</h3>
-<p>Condensing furnaces drain water. In a Chicago cold snap, a PVC drain or vent pipe on an outside wall can freeze, and the furnace locks out. We clear the blockage and correct the cause: pipe routing, slope or insulation. More in our guide to a <a href="/frozen-furnace-condensate/">frozen furnace condensate line</a>.</p>
+<p>Condensing furnaces drain water. In a Chicago cold snap, a PVC drain or vent pipe on an outside wall can freeze, and the furnace locks out. We clear the blockage and correct the cause: pipe routing, slope or insulation. More in our guide to a <a href="/frozen-furnace-condensate/">frozen furnace condensate line</a>. After a storm, snow drifted over the vent pipes outside causes the same kind of shutdown: see <a href="/furnace-vent-blocked-by-snow/">furnace vent blocked by snow</a>.</p>
 <h3>Blower motor, capacitor and control board</h3>
 <p>A weak capacitor keeps a blower from starting. Variable-speed ECM motors fail differently from older PSC motors and need different testing. We diagnose the motor and its module before replacing anything.</p>
 <h3>Limit switch trips and short-cycling</h3>
