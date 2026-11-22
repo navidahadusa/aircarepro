@@ -132,7 +132,7 @@ File: `marketing/daily-reports/YYYY-MM-DD.md` (template: `marketing/daily-report
 | Phone | **(773) 644-8227** · `tel:+17736448227` (calls and texts) |
 | Email | info@aircareprohvac.com |
 | Website | https://aircareprohvac.com |
-| Booking | Housecall Pro (`business.bookingUrl`); public profile still shows the former name "Shad Heating and Cooling" → rename (Hannah Carter) |
+| Booking | Housecall Pro (`business.bookingUrl`); **company name updated by the owner 2026-11-22**. The booking URL still contains the old slug: TODO(owner) send the new booking link from Housecall Pro → Online booking |
 | Hours | 24/7, every day, nights and holidays |
 | License | City of Chicago License #3065598 |
 | Credentials | NATE-certified techs · EPA 608 · BBB accredited · Comfortmaker dealer |
@@ -163,7 +163,7 @@ File: `marketing/daily-reports/YYYY-MM-DD.md` (template: `marketing/daily-report
 | Facebook | Existing (found in live-site schema) | https://www.facebook.com/Aircareprohvac/ |
 | Next: Bing Places, Apple Business Connect, Nextdoor, Comfortmaker locator, Angi/HomeAdvisor, Thumbtack, Houzz, aggregators, Andersonville/Edgewater chambers | **Blocked until Yelp and BBB renames are live** (GBP done) | |
 
-Known NAP issues: duplicate LocalBusiness schema on the live site (unformatted phone, malformed hours); Housecall Pro public name "Shad Heating and Cooling"; name casing.
+Known NAP issues: duplicate LocalBusiness schema on the live site (unformatted phone, malformed hours); Housecall Pro booking URL slug still "Shad-Heating-and-Cooling" (name itself updated 2026-11-22); name casing.
 
 ## Outreach targets
 > Plan: `marketing/backlink-outreach.md`. Pipeline: `marketing/backlinks/opportunities-tracker.csv`.
