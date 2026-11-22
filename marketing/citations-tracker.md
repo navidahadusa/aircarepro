@@ -71,3 +71,6 @@ Former names to retire everywhere: `Shad Heating and Cooling LLC`, `Shad Heating
 - **Bing:** Bing Webmaster Tools → Content Removal tool.
 - **Wayback Machine (archive.org):** the owner can email info@archive.org from a domain email, or with proof of ownership, asking to exclude the old domain.
 - **Where the old name really still lives:** Housecall Pro (name + booking link), LSA profile, old Yelp page, BBB (pending), Facebook page name. Fixing these matters more than the deleted site.
+
+- **2026-11-22:** owner renamed the company in **Housecall Pro**. Next: the new booking link (Online booking → copy link) → update `business.bookingUrl` once (all pages).
+- **2026-11-22:** new Housecall Pro booking link live in `business.bookingUrl` (orgName CHICAGO-AIRCARE-PRO, same token). The site no longer contains the old name anywhere.
