@@ -36,6 +36,8 @@ import coilBrushing from '../assets/photos/jobs/technician-brushing-condenser-co
 import fanCoilAssembly from '../assets/photos/jobs/technician-fan-coil-assembly.jpg';
 import coilCleanerSpray from '../assets/photos/jobs/technician-coil-cleaner-spray.jpg';
 import miniSplitInstall from '../assets/photos/jobs/technicians-mini-split-install.jpg';
+import zoneHumidifierWiring from '../assets/photos/jobs/furnace-zone-humidifier-wiring.jpg';
+import blowerMotor from '../assets/photos/jobs/ecm-blower-motor-replacement.jpg';
 
 export interface Photo { src: ImageMetadata; alt: string }
 
@@ -70,6 +72,8 @@ export const photos = {
   coilBrushing: { src: coilBrushing, alt: 'Technician brushing the coil of an outdoor AC condenser during a tune-up' },
   fanCoilAssembly: { src: fanCoilAssembly, alt: 'Technician assembling a new hydronic fan coil unit inside an apartment' },
   coilCleanerSpray: { src: coilCleanerSpray, alt: 'Technician spraying coil cleaner into an opened AC condenser during maintenance' },
+  zoneHumidifierWiring: { src: zoneHumidifierWiring, alt: 'Furnace with the panel open while a zone control board and humidifier controller are wired, a clamp meter on the duct' },
+  blowerMotor: { src: blowerMotor, alt: 'New ECM blower motor mounted in a furnace blower housing during a repair' },
   miniSplitInstall: { src: miniSplitInstall, alt: 'Two technicians mounting a ductless mini-split outdoor unit, with a digital refrigerant manifold connected' },
 } satisfies Record<string, Photo>;
 
@@ -94,7 +98,7 @@ export const servicePhoto: Record<string, Photo> = {
   'heat-pump-installation': photos.rooftopMiniSplit,
   'heat-pump-repair': photos.rooftopMiniSplit,
   'refrigerant-leak-repair': photos.nitrogenTest,
-  'thermostat-installation': photos.zoneValves,
+  'thermostat-installation': photos.zoneHumidifierWiring,
   'uv-air-sanitizers': photos.uvSanitizer,
   'whole-home-humidifiers': photos.humidifier,
 };

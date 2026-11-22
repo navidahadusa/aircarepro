@@ -38,7 +38,8 @@
   ],
   "source": "https://aircareprohvac.com/furnace-blowing-cold-air/",
   "intent": "emergency",
-  "migrated": true
+  "migrated": true,
+  "photo": "blowerMotor"
 }
 ---
 
