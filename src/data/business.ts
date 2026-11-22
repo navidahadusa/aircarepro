@@ -158,7 +158,8 @@ export const business: Business = {
   phoneDisplay: PHONE_DISPLAY,
   phoneE164: PHONE_E164,
   email: 'info@aircareprohvac.com',
-  bookingUrl: 'https://book.housecallpro.com/book/Shad-Heating-and-Cooling/8d48b75104b0455da0f38ddcf1519bd3?v2=true',
+  // Housecall Pro booking page (owner's widget code 2026-11-22: token unchanged, orgName CHICAGO-AIRCARE-PRO).
+  bookingUrl: 'https://book.housecallpro.com/book/CHICAGO-AIRCARE-PRO/8d48b75104b0455da0f38ddcf1519bd3?v2=true',
   leadCapture: 'housecall-pro',
   // Live site and schema publish no street address → service-area business.
   showAddress: false,
