@@ -3,7 +3,7 @@ priority,tier,directory,url_to_submit,listing_url,status,nap_match,claimed,login
 2,1,Yelp,https://biz.yelp.com,TODO(owner),submitted-under-review,new page CHICAGO AIRCARE PRO; old Shad page duplicate,yes,,2026-11-20,,2026-11-20,no,Owner created a new Yelp page 2026-11-20. Ask Yelp support to merge the old Shad page into it (keeps reviews) or close it; then send URL
 3,1,BBB,https://www.bbb.org,TODO(owner),submitted-under-review,pending BBB,yes,,2026-11-20,,2026-11-20,no,Owner requested name change 2026-11-20; send profile URL when updated
 4,1,Facebook,https://www.facebook.com/Aircareprohvac/,https://www.facebook.com/Aircareprohvac/,live,audit,yes,,,,,yes,Found in live-site schema; verify NAP + hours 24/7
-5,1,Bing Places,https://www.bingplaces.com,TODO(owner) after verification,submitted-under-review,imported from renamed GBP: CHICAGO AIRCARE PRO,yes,,2026-11-22,,2026-11-22,no,Owner created a new profile via Import from GBP 2026-11-22; waiting for Bing verification email. Then set website UTM (utm_source=bing) and send the listing URL
+5,1,Bing Places,https://www.bingplaces.com,TODO(owner) after publish,verified-pending-publish,imported from renamed GBP: CHICAGO AIRCARE PRO,yes,,2026-11-22,,2026-11-22,no,Created via Import from GBP and VERIFIED 2026-11-22; Bing says publishing ETA 7-12 days (~Dec 1-4). Then set website UTM (utm_source=bing) and send the listing URL
 6,1,Apple Business Connect,https://businessconnect.apple.com,,blocked-until-rename,,,,,,,no,
 7,1,Nextdoor,https://business.nextdoor.com,,blocked-until-rename,,,,,,,no,Strong in North Side neighborhoods
 8,3,Comfortmaker dealer locator,TBD (via distributor/Comfortmaker dealer portal),,blocked-until-rename,,,,,,,no,Confirmed dealer per site - verify listing
