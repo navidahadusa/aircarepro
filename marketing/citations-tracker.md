@@ -40,7 +40,7 @@ Former names to retire everywhere: `Shad Heating and Cooling LLC`, `Shad Heating
 ## Step 2: Rollout queue (starts when Step 1 is complete)
 | # | Directory | Why |
 |---|---|---|
-| 1 | Bing Places | Imports from GBP; feeds Bing, Copilot and ChatGPT search |
+| 1 | Bing Places | Imports from GBP; feeds Bing, Copilot and ChatGPT search. **Created by the owner via GBP import 2026-11-22, awaiting verification email** |
 | 2 | Apple Business Connect | Apple Maps and Siri. **Owner files right after Yelp is live** (2026-11-22). Kit: `citations/apple-business-connect-kit.md` |
 | 3 | Nextdoor Business | Neighborhood referrals (Edgewater, Lincoln Square, Evanston) |
 | 4 | Comfortmaker dealer locator | Confirmed dealer: high-trust, relevant |
