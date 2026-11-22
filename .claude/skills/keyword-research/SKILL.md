@@ -16,6 +16,8 @@ Goal: one clear **primary keyword per URL**, chosen from real data, mapped in `m
    - Semrush (`keyword_research`, `organic_research`): volume, difficulty, competitor keywords
    - Ahrefs: volume, keyword difficulty, competitor backlinks
    - HarborRank SEO: keyword research, Google Maps rank, local SEO
+   - **Local_SEO connector** (free, no account): `find_local_searches` (business + city → real Google searches with monthly volumes, counted US-wide) and `check_local_page` (on-page local check of a URL). Use it for every new page/post and each area page.
+   - Semrush returns `no API units` when the plan is out of units: say so and fall back to the free sources.
    Use only numbers these tools return. Record the tool and date next to each number.
 3. **Google Autocomplete** (real phrases people type, **no volumes**):
    ```
