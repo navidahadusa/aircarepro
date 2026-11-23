@@ -1,42 +1,42 @@
-# Search Console snapshot (2026-11-22)
+# Search Console snapshot (2026-11-23)
 
-Property: `https://aircareprohvac.com/` · Period 2026-10-23 → 2026-11-19 vs 2026-09-25 → 2026-10-22
+Property: `https://aircareprohvac.com/` · Period 2026-10-24 → 2026-11-20 vs 2026-09-26 → 2026-10-23
 
 | Metric | Current 28d | Previous 28d |
 |---|---|---|
 | Clicks | 0 | — |
-| Impressions | 1647 | — |
+| Impressions | 2238 | — |
 | CTR | 0.0% | — |
-| Avg position | 49.4 | — |
+| Avg position | 51.7 | — |
 
 ## Top local queries
 | Query | Page | Clicks | Impr. | Pos. |
 |---|---|---|---|---|
 | 24 hour ac repair arlington heights | /ac-repair-arlington-heights/ | 0 | 1 | 83.0 |
-| 24 hour hvac service edgewater | /hvac-andersonville-edgewater/ | 0 | 1 | 67.0 |
-| ac capacitor replacement skokie il | /ac-repair-skokie/ | 0 | 6 | 29.2 |
-| ac coil cleaning skokie il | /ac-repair-skokie/ | 0 | 2 | 38.5 |
+| 24 hour hvac service edgewater | /hvac-andersonville-edgewater/ | 0 | 3 | 52.7 |
+| ac capacitor replacement skokie il | /ac-repair-skokie/ | 0 | 8 | 31.6 |
+| ac coil cleaning skokie il | /ac-repair-skokie/ | 0 | 4 | 44.0 |
 | ac company schaumburg | /hvac-schaumburg/ | 0 | 2 | 66.5 |
 | ac compressor repair skokie il | /ac-repair-skokie/ | 0 | 2 | 39.0 |
 | ac contractor arlington heights il | /ac-repair-arlington-heights/ | 0 | 1 | 80.0 |
 | ac contractor naperville | /ac-repair-naperville/ | 0 | 2 | 38.5 |
+| ac contractor rogers park | /hvac-west-town/ | 0 | 3 | 54.7 |
 | ac contractor schaumburg il | /hvac-schaumburg/ | 0 | 2 | 61.0 |
 | ac emergency repair near arlington heights | /ac-repair-arlington-heights/ | 0 | 1 | 13.0 |
+| ac install in bucktown | /hvac-bucktown/ | 0 | 1 | 67.0 |
+| ac install in rogers park | / | 0 | 2 | 1.5 |
+| ac install in rogers park | /hvac-norwood-park/ | 0 | 1 | 84.0 |
+| ac install in rogers park | /hvac-portage-park/ | 0 | 2 | 80.5 |
+| ac install in rogers park | /hvac-rogers-park/ | 0 | 3 | 52.0 |
+| ac install in rogers park | /hvac-uptown/ | 0 | 1 | 88.0 |
 | ac install schaumburg il | /hvac-schaumburg/ | 0 | 1 | 36.0 |
 | ac installation arlington heights | /ac-repair-arlington-heights/ | 0 | 2 | 29.5 |
 | ac installation arlington heights il | /ac-repair-arlington-heights/ | 0 | 1 | 24.0 |
+| ac installation bucktown il | / | 0 | 3 | 1.0 |
 | ac installation chicago | /ac-installation/ | 0 | 5 | 59.4 |
 | ac installation evanston il | /hvac-evanston/ | 0 | 1 | 34.0 |
-| ac installation in logan square | /hvac-logan-square/ | 0 | 1 | 6.0 |
+| ac installation in logan square | /hvac-logan-square/ | 0 | 4 | 4.0 |
 | ac installation near me arlington heights il | /ac-repair-arlington-heights/ | 0 | 2 | 19.0 |
-| ac installation schaumburg il | /ac-repair-schaumburg/ | 0 | 1 | 27.0 |
-| ac installation schaumburg il | /hvac-schaumburg/ | 0 | 1 | 32.0 |
-| ac installation skokie | /ac-repair-skokie/ | 0 | 1 | 42.0 |
-| ac installation skokie il | /ac-repair-skokie/ | 0 | 5 | 36.0 |
-| ac installation ukrainian village il | / | 0 | 1 | 1.0 |
-| ac maintenance arlington heights | /ac-repair-arlington-heights/ | 0 | 1 | 84.0 |
-| ac maintenance arlington heights il | /ac-repair-arlington-heights/ | 0 | 2 | 57.0 |
-| ac maintenance in logan square | /hvac-logan-square/ | 0 | 2 | 7.5 |
 
 ## Index status of key pages
 | URL | Verdict | Coverage | Last crawl |
@@ -57,4 +57,4 @@ Property: `https://aircareprohvac.com/` · Period 2026-10-23 → 2026-11-19 vs 2
 | /furnace-wont-turn-on/ | PASS | Submitted and indexed | 2026-11-16 |
 | /service-areas/ | PASS | Submitted and indexed | 2026-11-16 |
 
-Sitemaps: https://aircareprohvac.com/sitemap-index.xml (submitted 2026-11-22, 137 URLs); https://aircareprohvac.com/sitemap_index.xml (submitted 2026-11-18, 137 URLs)
+Sitemaps: https://aircareprohvac.com/sitemap-index.xml (submitted 2026-11-23, 137 URLs); https://aircareprohvac.com/sitemap_index.xml (submitted 2026-11-18, 137 URLs)

@@ -1,15 +1,15 @@
 {
   "property": "564399214",
   "measurementId": "G-J25SG73ES5",
-  "generatedAt": "2026-11-22T13:24:09.725Z",
+  "generatedAt": "2026-11-23T13:47:50.375Z",
   "errors": [],
   "totals": {
     "current": {
-      "sessions": 108,
-      "totalUsers": 84,
-      "newUsers": 86,
-      "engagedSessions": 38,
-      "screenPageViews": 215,
+      "sessions": 120,
+      "totalUsers": 93,
+      "newUsers": 95,
+      "engagedSessions": 41,
+      "screenPageViews": 231,
       "keyEvents": 0
     },
     "previous": {
@@ -27,7 +27,7 @@
         "Direct"
       ],
       "vals": [
-        89,
+        100,
         0
       ]
     },
@@ -36,7 +36,7 @@
         "Organic Search"
       ],
       "vals": [
-        12,
+        13,
         0
       ]
     },
@@ -74,7 +74,7 @@
         "/"
       ],
       "vals": [
-        79,
+        90,
         0
       ]
     },
@@ -93,15 +93,6 @@
       ],
       "vals": [
         2,
-        0
-      ]
-    },
-    {
-      "dims": [
-        ""
-      ],
-      "vals": [
-        1,
         0
       ]
     },
@@ -206,6 +197,15 @@
     },
     {
       "dims": [
+        "/hvac-arlington-heights"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    },
+    {
+      "dims": [
         "/hvac-austin"
       ],
       "vals": [
@@ -256,7 +256,7 @@
         "Chicago"
       ],
       "vals": [
-        24
+        29
       ]
     },
     {
@@ -264,7 +264,7 @@
         "Warsaw"
       ],
       "vals": [
-        9
+        10
       ]
     },
     {
@@ -285,7 +285,7 @@
     },
     {
       "dims": [
-        "Montreal"
+        "Glenview"
       ],
       "vals": [
         5
@@ -293,10 +293,10 @@
     },
     {
       "dims": [
-        "Glenview"
+        "Montreal"
       ],
       "vals": [
-        4
+        5
       ]
     },
     {
@@ -318,6 +318,14 @@
     {
       "dims": [
         "Los Angeles"
+      ],
+      "vals": [
+        3
+      ]
+    },
+    {
+      "dims": [
+        "New York"
       ],
       "vals": [
         3
@@ -362,14 +370,6 @@
       "vals": [
         2
       ]
-    },
-    {
-      "dims": [
-        "London"
-      ],
-      "vals": [
-        2
-      ]
     }
   ],
   "devices": [
@@ -378,7 +378,7 @@
         "desktop"
       ],
       "vals": [
-        68
+        71
       ]
     },
     {
@@ -386,7 +386,7 @@
         "mobile"
       ],
       "vals": [
-        42
+        51
       ]
     }
   ],
@@ -405,7 +405,7 @@
         "google.com"
       ],
       "vals": [
-        3
+        4
       ]
     },
     {
