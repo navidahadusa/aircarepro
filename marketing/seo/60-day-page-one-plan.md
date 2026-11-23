@@ -26,7 +26,7 @@ Nobody can guarantee rankings. We report real positions every week and adjust.
 - [ ] Strengthen `/hvac-chicago/` for "hvac chicago / contractors / repair": title, H1, quick answer, FAQ, links from every area page (Elena)
 - [ ] Logan Square + Arlington Heights pages: push from 6–19 to top 3 (FAQ, photo, internal links) (Elena)
 - [ ] Owner: Request indexing for `/ac-repair-chicago/` and `/free-estimate/` in Search Console
-- [ ] Owner: Yelp URL → Apple Business Connect (kit ready) → Bing Places
+- [x] Owner: Yelp URL (2026-11-23) · [ ] next: Apple Business Connect (kit ready, `citations/apple-business-connect-kit.md`) → Bing Places
 
 ## Weeks 3–4 (Dec 7 → Dec 20): authority
 - [ ] Cost guides (no invented prices): furnace repair cost in Chicago, boiler replacement cost, repair vs replace (Maya)

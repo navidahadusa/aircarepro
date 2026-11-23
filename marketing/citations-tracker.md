@@ -8,10 +8,10 @@ Rows: `citations/citation-tracker.csv` · Rules: `citations/nap-standard.md` · 
 |---|---|
 | Legal rebrand **Shad Heating and Cooling LLC → CHICAGO AIRCARE PRO** | ✅ **Approved** |
 | Google Business Profile name update | ✅ **Live 2026-11-20** → `sameAs`: https://www.google.com/maps?cid=18088581127472759753 |
-| Yelp name update | 🆕 **New page created 2026-11-20**; old Shad page: merge or close via Yelp support · URL TODO |
+| Yelp name update | ✅ **New page live**: https://www.yelp.com/biz/chicago-aircare-pro-chicago-2 (URL from the owner 2026-11-23) · old Shad page: merge or close via Yelp support (open) |
 | BBB name update (business name / DBA on the accredited profile) | 📨 **Requested 2026-11-20**, pending BBB |
 | Housecall Pro public booking name (still "Shad Heating and Cooling") | ⏳ Pending: owner can change it in HCP settings |
-| `sameAs` / review links for GBP, Yelp, BBB | 🔒 `TODO` until the owner sends the live URLs |
+| `sameAs` / review links for GBP, Yelp, BBB | ✅ GBP · ✅ Yelp (2026-11-23) · 🔒 BBB `TODO` |
 | New citations (Bing, Apple, Nextdoor, aggregators, directories) | 🔒 **Blocked** until all three existing listings show the new name |
 
 **Why we wait:** if new directories go live while Google, Yelp and BBB still show the old name, the aggregators spread two competing names, which is the NAP inconsistency that suppresses local rankings. Rename the core three first, then roll out.

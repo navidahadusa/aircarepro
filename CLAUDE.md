@@ -51,9 +51,9 @@ Owner shortcuts (`.claude/commands/`): `/daily [focus]` · `/sprint <goal>` · `
 ### Rebrand status (keep exact)
 - Legal rebrand **"Shad Heating and Cooling LLC" → "CHICAGO AIRCARE PRO": APPROVED.**
 - **Google Business Profile: name UPDATED, live as CHICAGO AIRCARE PRO (2026-11-20).** URL in `sameAs` + `reviewProfiles`: https://www.google.com/maps?cid=18088581127472759753 (if Google later asks for proof: `marketing/citations/gbp-rename-evidence.md`).
-- **Yelp: owner opened a NEW page as CHICAGO AIRCARE PRO (2026-11-20).** The old "Shad Heating and Cooling" Yelp page must be merged into it or closed via Yelp support (duplicates hurt NAP consistency). New URL: TODO(owner).
+- **Yelp: owner opened a NEW page as CHICAGO AIRCARE PRO (2026-11-20).** The old "Shad Heating and Cooling" Yelp page must be merged into it or closed via Yelp support (duplicates hurt NAP consistency). **New page live, URL from the owner 2026-11-23: https://www.yelp.com/biz/chicago-aircare-pro-chicago-2** (in `sameAs` + `reviewProfiles`). Old page merge/close still open.
 - **BBB: name change requested by the owner (2026-11-20), pending BBB.**
-- `sameAs` / `reviewProfiles` for Yelp and BBB stay `TODO` until the owner provides the live URLs (GBP done).
+- `sameAs` / `reviewProfiles`: GBP and Yelp done; BBB stays `TODO` until the owner provides its live URL.
 - **New citations wait** until the existing listings are updated (`business.rebrand.newCitationsBlocked = true`).
 - Code source of truth: `business.rebrand` in `src/data/business.ts`; tracker: `marketing/citations-tracker.md`.
 
@@ -160,10 +160,10 @@ File: `marketing/daily-reports/YYYY-MM-DD.md` (template: `marketing/daily-report
 | Platform | Status | URL (→ `sameAs`) |
 |---|---|---|
 | Google Business Profile | **Renamed to CHICAGO AIRCARE PRO (live 2026-11-20)** | https://www.google.com/maps?cid=18088581127472759753 |
-| Yelp | **New page created 2026-11-20** (old Shad page to merge/close) | TODO(owner): send the new page URL |
+| Yelp | **New page live (URL 2026-11-23)**; old Shad page still to merge/close | https://www.yelp.com/biz/chicago-aircare-pro-chicago-2 |
 | BBB | Existing, accredited · **name change requested 2026-11-20** | TODO(owner) after BBB updates it |
 | Facebook | Existing (found in live-site schema) | https://www.facebook.com/Aircareprohvac/ |
-| Next: Bing Places, Apple Business Connect, Nextdoor, Comfortmaker locator, Angi/HomeAdvisor, Thumbtack, Houzz, aggregators, Andersonville/Edgewater chambers | **Blocked until Yelp and BBB renames are live** (GBP done) | |
+| Next: Bing Places, Apple Business Connect, Nextdoor, Comfortmaker locator, Angi/HomeAdvisor, Thumbtack, Houzz, aggregators, Andersonville/Edgewater chambers | **Apple Business Connect: unblocked (queued right after Yelp, kit ready).** The rest wait for the BBB rename (GBP + Yelp done) | |
 
 Known NAP issues: duplicate LocalBusiness schema on the live site (unformatted phone, malformed hours); name casing.
 
