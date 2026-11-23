@@ -16,7 +16,9 @@ Google ranks a local business higher when the profile and the website say **exac
 | Opening date | Leave as is | — |
 
 ## 2. Description (About, max 750 characters), paste:
-> CHICAGO AIRCARE PRO is a residential heating and cooling company serving Chicago and nearby suburbs, 24/7, nights and holidays included. Our NATE-certified technicians repair, install and maintain furnaces, steam and hot-water boilers, heat pumps, air conditioners and ductless mini-splits, plus humidifiers, air purifiers and UV air sanitizers. We diagnose first, explain your options with prices before any work, and repair what can be repaired. We know Chicago two-flats, greystones and bungalows. Free estimates on new systems, financing through Optimus (subject to credit approval) and the Comfort Club maintenance plan. City of Chicago License #3065598.
+> CHICAGO AIRCARE PRO is a licensed (City of Chicago License #3065598), BBB accredited heating and cooling company serving Chicago homes and nearby suburbs 24 hours a day, 7 days a week, nights and holidays included. Our NATE and EPA 608 certified technicians repair, install and maintain gas furnaces, steam and hot-water boilers, central air conditioners, heat pumps and ductless mini-splits, plus humidifiers and air purifiers. We know the greystone, two-flat and bungalow heating systems common in Chicago. Every visit starts with a diagnosis, and you approve the price before any work begins. Free estimates on new systems, financing through Optimus for qualified buyers and the Comfort Club maintenance plan. Authorized Comfortmaker dealer.
+
+No prices, phone numbers or links in the description (owner, 2026-11-22). Prices change and Google may flag them.
 
 ## 3. Service areas (Google allows up to 20), exactly these 20
 Chicago · Evanston · Skokie · Wilmette · Highland Park · Des Plaines · Arlington Heights · Schaumburg · Naperville · Lincoln Park · Lakeview · Logan Square · Rogers Park · Edgewater · Uptown · Lincoln Square · Wicker Park · Bucktown · Irving Park · Portage Park

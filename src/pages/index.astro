@@ -19,6 +19,7 @@ import { getPosts, blogCategories } from '../data/blog';
 
 const hero = heroHeadline();
 const googleUrl = business.reviewProfiles.find((p) => p.platform === 'Google')?.url;
+const yelpUrl = business.reviewProfiles.find((p) => p.platform === 'Yelp')?.url;
 const svcPhoto = { Heating: photos.carrierFurnace, Cooling: photos.newCondenserRoof, 'Air Quality': photos.humidifier } as const;
 const svcGroups = categories.map((cat) => ({ cat, photo: svcPhoto[cat.name] }));
 const allPosts = await getPosts();
@@ -60,7 +61,7 @@ const faqs = [
         <h1>{hero.h1Lead && <span class="h1-lead">{hero.h1Lead}<span class="sr-only">. </span></span>}{hero.h1}</h1>
         <p class="h2-lead">{hero.sub}</p>
         <CallSmsCta placement="home_hero" />
-        <p class="h2-proof">City of Chicago License #{business.licenseNumber} · NATE-certified technicians · BBB accredited{googleUrl && <> · <a href={googleUrl} target="_blank" rel="noopener" data-track="click_review_link" data-placement="home_hero">See our Google reviews</a></>}</p>
+        <p class="h2-proof">City of Chicago License #{business.licenseNumber} · NATE-certified technicians · BBB accredited{googleUrl && <> · <a href={googleUrl} target="_blank" rel="noopener" data-track="click_review_link" data-placement="home_hero">See our Google reviews</a></>}{yelpUrl && <> · <a href={yelpUrl} target="_blank" rel="noopener" data-track="click_review_link" data-placement="home_hero_yelp">Yelp</a></>}</p>
       </div>
     </div>
     <div class="h2-photo">

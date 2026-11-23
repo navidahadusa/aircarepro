@@ -233,8 +233,8 @@ ${glance('Lincoln Park', [
 
   'lincoln-square': {
     h1: 'Furnace, Boiler & AC Repair in Lincoln Square, Chicago',
-    title: 'HVAC Repair in Lincoln Square, Chicago | Chicago Aircare Pro',
-    meta: 'Bungalow attic cooling, two-flat boiler zoning and furnace and AC repair in Lincoln Square. Ductless mini-splits to replace window units. 24/7.',
+    title: 'Furnace Repair & HVAC in Lincoln Square | Chicago Aircare Pro',
+    meta: 'Furnace and boiler repair, bungalow attic cooling and two-flat zoning in Lincoln Square. Local HVAC contractor, options with prices first. 24/7.',
     intro: `${business.displayName} repairs and installs heating and cooling systems in Lincoln Square, including its brick bungalows, two-flats and courtyard buildings. The most common request we hear: a finished bungalow attic that’s too hot in summer and too cold in winter.`,
     sections: [
       {
@@ -252,6 +252,11 @@ ${glance('Lincoln Park', [
 <p>Courtyard condo owners replacing window units often choose ductless mini-splits for quieter, more efficient cooling. The outdoor unit location usually needs association approval, and we can help you prepare the details they ask for.</p>`,
       },
       {
+        h2: 'Furnace and boiler repair in Lincoln Square',
+        html: `<p>Most Lincoln Square bungalows heat with a basement furnace, and many two-flats and courtyard buildings still run on a boiler. When the heat stops, we test the thermostat and controls, ignition and flame sensor, the blower or circulator, and the venting before recommending anything. You get the findings and your options with prices before any work starts. See <a href="/furnace-repair/">furnace repair</a> and <a href="/boiler-repair/">boiler repair</a>.</p>
+<p>Older furnaces here often share a chimney with the water heater. If a furnace is replaced with a high-efficiency model vented through the wall, the water heater can be left alone on a chimney that is now too big for it, so we check the venting on every replacement.</p>`,
+      },
+      {
         h2: 'Choosing between ductless and ducted for a Lincoln Square bungalow',
         html: `<p>If the attic is one or two rooms, a single <a href="/mini-split-installation/">ductless mini-split</a> is usually the simplest and least disruptive fix. If the whole house needs central air and there is attic space for an air handler, a small ducted system upstairs can serve the attic and drop supplies to the main floor. We compare both on cost, disruption and comfort, and show you the numbers before you choose.</p>`,
       },
@@ -264,6 +269,7 @@ ${glance('Lincoln Park', [
       { q: 'What’s the best way to cool a finished bungalow attic?', a: 'Usually a ductless mini-split. It heats as well, which helps in winter too.' },
       { q: 'Can each unit in my Lincoln Square two-flat control its own heat?', a: 'Yes, either by zoning a shared boiler, if the piping is arranged by unit, or with separate systems. We inspect the piping first.' },
       { q: 'Can I replace window AC units in a courtyard condo?', a: 'Often with a ductless mini-split, once the association approves the outdoor unit location. It is quieter and frees your windows.' },
+      { q: 'Do you repair furnaces in Lincoln Square bungalows and two-flats?', a: 'Yes, along with hot-water and steam boilers. We diagnose first and give you your options with prices before any work starts.' },
       emergencyFaq('Lincoln Square'),
     ],
     nearbySlugs: ['ravenswood', 'north-center', 'albany-park'],
@@ -425,9 +431,9 @@ ${glance('Lincoln Park', [
   },
 
   'rogers-park': {
-    h1: 'Steam Boiler, Furnace & AC Repair in Rogers Park, Chicago',
-    title: 'Boiler & Furnace Repair in Rogers Park | Chicago Aircare Pro',
-    meta: 'Steam heat, banging pipes, radiator vents, furnace safety checks and ductless cooling in Rogers Park near Loyola and the lake. 24/7 HVAC.',
+    h1: 'Heating & Cooling in Rogers Park, Chicago: Furnace, Steam Boiler & AC',
+    title: 'Heating & Cooling Contractor in Rogers Park | Chicago Aircare Pro',
+    meta: 'Furnace repair, tune-ups and replacement, steam boiler service and AC installation in Rogers Park, near Loyola and the lake. 24/7 HVAC.',
     intro: `${business.displayName} services heating and cooling equipment in Rogers Park homes and condo units, near Loyola and the lakefront. Steam heat is everywhere here, and so are window AC units, so steam repairs and ductless upgrades are our most common Rogers Park calls.`,
     sections: [
       {
@@ -449,6 +455,15 @@ ${glance('Lincoln Park', [
         html: `<p>We check the sight glass and water level, test the low-water cutoff, inspect the pressure control and burner, and look at the venting. Then we walk the system: main vents, radiator vents, and pipes that have lost their pitch and trap condensate. Water level and venting fixes are usually small jobs, and they often solve years of banging and uneven heat. See <a href="/boiler-repair/">boiler repair</a>.</p>`,
       },
       {
+        h2: 'Furnace repair, tune-ups and replacement in Rogers Park',
+        html: `<p>Not every Rogers Park building runs steam. Many single-family homes, two-flats with a furnace per unit and condo units with their own equipment heat with a forced-air furnace. For a <a href="/furnace-repair/">furnace repair</a>, we read the fault codes and test ignition, flame sensing, the inducer and pressure switch, the blower and the venting before recommending a part. A fall <a href="/furnace-tune-up/">furnace tune-up</a> covers the same safety checks plus cleaning, a condensate trap flush on high-efficiency models and a carbon monoxide test.</p>
+<p>When a furnace is near the end of its life, we compare repair and <a href="/furnace-installation/">furnace replacement</a> with prices for both, and size any new furnace to the home rather than to the old unit. New-system estimates are free.</p>`,
+      },
+      {
+        h2: 'AC installation in Rogers Park',
+        html: `<p>Courtyard condos and vintage buildings here mostly cool with window units, because there's no ductwork to carry central air. <a href="/mini-split-installation/">Ductless mini-splits</a> are the usual upgrade; in a condo, the association approves where the outdoor unit goes. Homes with a furnace and ducts can add central air with a matched condenser and coil. See <a href="/ac-installation/">AC installation</a>.</p>`,
+      },
+      {
         h2: 'Utilities and rebates in Rogers Park',
         html: peoplesGas('Rogers Park', 'Steam boilers have their own line on the Peoples Gas list, which matters in a neighborhood where so many buildings still run steam. Two-flats and single-family homes qualify.'),
       },
@@ -457,6 +472,7 @@ ${glance('Lincoln Park', [
       { q: 'Why do my steam pipes bang?', a: 'Usually condensate pooling in pipes that have lost their pitch, or a boiler water level that’s too high. Both are fixable.' },
       { q: 'One radiator never gets hot. What’s wrong?', a: 'On steam systems it’s often a radiator vent stuck closed, so air can’t escape and steam can’t enter. Replacing the vent usually fixes it.' },
       { q: 'Can I replace window AC units with a ductless system?', a: 'Yes. Ductless mini-splits give quieter cooling and supplemental heat. In condos, the association approves the outdoor unit location.' },
+      { q: 'Do you do furnace tune-ups and replacements in Rogers Park?', a: 'Yes. We tune up, repair and replace furnaces in Rogers Park homes, two-flats and condo units, as well as steam and hot-water boilers. New-system estimates are free, and you get prices before any work starts.' },
       { q: "Should I get my older furnace checked even if it still runs?", a: "Yes. A yearly safety check of the heat exchanger and venting catches problems a running furnace won’t show, such as a crack or a blocked flue. Working carbon monoxide alarms matter too." },
       emergencyFaq('Rogers Park'),
     ],
@@ -708,10 +724,10 @@ ${glance('Logan Square', [['Between 2013 and 2019, 224 two-to-four-unit building
   },
 
   'jefferson-park': {
-    h1: 'Furnace & AC Repair in Jefferson Park, Chicago',
-    title: 'Furnace & AC Repair in Jefferson Park | Chicago Aircare Pro',
+    h1: 'HVAC Repair in Jefferson Park, Chicago: Furnace, Boiler & AC',
+    title: 'HVAC Repair in Jefferson Park, Chicago | Chicago Aircare Pro',
     meta: 'Cape Cod upstairs comfort, bungalow attics, chimney and venting checks and right-sized furnace replacement in Jefferson Park. 24/7 HVAC.',
-    intro: `${business.displayName} services furnaces, boilers and air conditioners in Jefferson Park homes. Cape Cod upper floors and bungalow attics are the most common comfort problems here, and furnace replacements need careful attention to chimney venting.`,
+    intro: `${business.displayName} is an HVAC contractor serving Jefferson Park, Chicago: furnace, boiler and air conditioner repair, replacement and maintenance. Cape Cod upper floors and bungalow attics are the most common comfort problems here, and furnace replacements need careful attention to chimney venting.`,
     sections: [
       {
         h2: 'Homes and HVAC systems in Jefferson Park',

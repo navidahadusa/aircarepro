@@ -1,5 +1,5 @@
 # Paid advertising plan: CHICAGO AIRCARE PRO
-Owner: **Rachel Morgan, Lead Generation Architect (+ Paid Ads)** · Approval: **Sophia Reynolds** · **Budget and launch: the owner only.**
+Lead: **Olivia Bennett, Lead Generation Manager** · Channels: **Grace Whitman** (Google Search ads), **Lauren Hayes** (Local Services Ads), **Ava Martinez** (Meta) · Tracking: **Rachel Morgan** · Approval: **Sophia Reynolds** · **Budget and launch: the owner only.** (Team expanded by the owner 2026-11-23.) Owner to-do list for all lead channels: `marketing/lead-gen/lead-channels-playbook.md`.
 
 **Hard rules:** no campaign goes live, and no budget changes, without the owner's explicit OK. No claims we can't prove (prices, response times, "#1", "best", guarantees, reviews/ratings we don't have). Every ad lands on a real page with Call / Text / Book.
 
@@ -36,7 +36,15 @@ Owner: **Rachel Morgan, Lead Generation Architect (+ Paid Ads)** · Approval: **
 Keywords: "furnace replacement chicago", "new furnace cost chicago", "boiler replacement", "heat pump installation chicago" → /free-estimate/ and /furnace-installation-<city>/. Mention "Financing through Optimus, subject to credit approval".
 
 ## Budgets
-**TODO(owner).** Rachel will propose a test budget per campaign with a 30-day review once the owner shares a monthly ad budget and average job value. No numbers are assumed here.
+**Owner budget (2026-11-23): $1,000** (read as per month, all channels; owner to confirm). **Olivia Bennett's proposed split, owner approves each change:**
+
+| Channel | Monthly | How it's set | Why |
+|---|---|---|---|
+| Local Services Ads (Lauren Hayes) | **$600** | ≈ $140/week (LSA uses weekly budgets) · Maximize leads | Pay per lead, highest-intent calls; LSA is live on the new account. Unspent if no leads come in. |
+| Meta (Ava Martinez) | **$300** | $10/day, call ads | Owner wants Meta; replacement + boiler/steam + retargeting. Plan: `meta-launch-plan.md` |
+| Reserve | **$100** | not spent | Goes to whichever channel brings booked jobs; Google Search (Grace Whitman) waits until LSA is producing |
+
+Review after 14 days with real numbers (calls, booked jobs, cost per lead). If LSA stays silent, fix it first (`lsa-no-leads-checklist.md`) before moving more money.
 
 ## What the team needs from the owner
 1. Monthly ad budget (total) and which channels to start with (recommended: LSA + Google Search).

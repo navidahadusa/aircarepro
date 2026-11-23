@@ -2,7 +2,7 @@
 import SimplePage from '../../components/SimplePage.astro';
 import BookingPanel from '../../components/BookingPanel.astro';
 import NapBlock from '../../components/NapBlock.astro';
-import { business } from '../../data/business';
+import { business, profileLabel } from '../../data/business';
 ---
 <SimplePage title={`Contact ${business.displayName} | Chicago HVAC | ${business.phoneDisplay}`} description={`Call or text ${business.phoneDisplay} for heating and cooling service in Chicago, 24/7 for emergencies. Book online or email ${business.email}.`}
   h1={`Contact ${business.displayName}`} lead="Call, text, book online or email. Emergency service 24/7." crumb="Contact" path="/contact/" eyebrow="Contact">
@@ -12,6 +12,7 @@ import { business } from '../../data/business';
         <h2>Ways to reach us</h2>
         <NapBlock showHours />
         <p>Email is best for non-urgent questions. For no heat or no cooling, call or text.</p>
+        <p>Find us on {business.sameAs.map((u, i) => <>{i > 0 && ' · '}<a href={u} target="_blank" rel="noopener" data-track="click_review_link" data-placement={`contact_${profileLabel(u).toLowerCase()}`}>{profileLabel(u)}</a></>)}.</p>
         <h2>When you call, it helps to have</h2>
         <ul>
           <li>What the system is doing (or not doing) and when it started</li>

@@ -10,7 +10,7 @@ Items marked `TODO` need owner input. **Never invent real-world business data** 
 2. **Apply changes directly** in the repo: code, design, content, schema, trackers.
 3. **Verify:** `npm run check` and `npm run build` must finish with **0 errors**. Run `node scripts/site-metrics.mjs` for KPIs. Screenshot UI changes on desktop and mobile.
 4. **Ship:** commit (message credits the team members involved) and `git push -u origin <branch>`. Default branch for agency work: `agency/sprint-3` (current sprint branch; `agency/sprint-2` and `feat/citations-backlinks-leadgen` are merged/retired). Ship by keeping **one open PR from the sprint branch to `main`** (open it if none exists); **the owner merges** (or tells Sophia to merge). Merging to `main` publishes via the deploy workflow once the FTP secrets exist. Never push directly to `main`.
-5. **Daily content (owner priority: SEO, local SEO, lead gen):** follow `marketing/content/editorial-calendar.md`. Every run ships that day's item: a new post (Mon/Wed/Fri) or a refresh of a migrated post (Tue/Thu) in `src/content/blog/` per `marketing/content/post-template.md`. **GBP: one post per week** (owner decision 2026-11-20): keep 4 weekly drafts ready in `marketing/content/gbp-post-drafts.md`, always with the same image `marketing/gbp/gbp-weekly-post-1200x900.jpg` (cover: `marketing/gbp/gbp-cover-2048x1152.jpg`); no phone numbers or unconfirmed offers in post text. Mark the calendar row ✍. Skip items flagged **O** until the owner supplies details, and move the next item up.
+5. **Daily content (owner priority: SEO, local SEO, lead gen):** follow `marketing/content/editorial-calendar.md`. Every run ships that day's item: a new post (Mon/Wed/Fri) or a refresh of a migrated post (Tue/Thu) in `src/content/blog/` per `marketing/content/post-template.md`. **GBP: one post per week** (owner decision 2026-11-20): keep 4 weekly drafts ready in `marketing/content/gbp-post-drafts.md`, same photo and layout every week with a **new headline on the image per post** (owner 2026-11-23; `scripts/gbp-post-image.py` → `marketing/gbp/posts/YYYY-MM-DD.jpg`) (cover: `marketing/gbp/gbp-cover-2048x1152.jpg`); no phone numbers or unconfirmed offers in post text. Mark the calendar row ✍. Skip items flagged **O** until the owner supplies details, and move the next item up.
 6. **Google data → page fixes (daily, required; owner 2026-11-21). Follow `marketing/seo/daily-data-playbook.md`.** Elena Brooks (Search Console) + Rachel Morgan (GA4) read both every run and drive 2–4 page fixes a day (Maya/Chloe/Hannah execute), logged in `marketing/seo/page-actions-log.md` with a 14-day before/after check. **Search Console (Elena Brooks):** read the latest Google data with `git fetch origin +seo-data:refs/remotes/origin/seo-data && git show origin/seo-data:gsc/latest.md` (written each morning by `.github/workflows/seo-daily.yml`). Act on it: pages not indexed → fix internal links/content; queries ranking 5–20 → strengthen that page's title, H1, content and FAQ; high impressions + low CTR → rewrite title/meta. Put the numbers in the report's KPI section (never estimate if the data is missing).
 7. **Report:** write/update `marketing/daily-reports/YYYY-MM-DD.md` from `marketing/daily-reports/TEMPLATE.md`, commit and push it, and end the reply with the **Daily Executive Report** signed by Sophia Reynolds.
 
@@ -20,16 +20,20 @@ Owner shortcuts (`.claude/commands/`): `/daily [focus]` · `/sprint <goal>` · `
 
 **60-day goal (owner, 2026-11-22):** Google page one + AI answers by 2027-01-21. Plan: `marketing/seo/60-day-page-one-plan.md`; targets: `marketing/seo/target-keywords.md`; weekly scorecard: `marketing/seo/rank-scorecard.md`.
 
-## The team (all she/her). Roster with visual profile notes: `marketing/team/roster.md`
+## The team (all she/her; 11 people since 2026-11-23). Roster with visual profile notes: `marketing/team/roster.md`
 | Name | Title | Agent file | Owns | Visual profile note |
 |---|---|---|---|---|
-| **Sophia Reynolds** | Marketing Manager (Agency Director) | `marketing-director` | Supervises all six specialists, assigns daily tasks, full redesign authority, verifies build + push, delivers the Daily Executive Report | Portrait `marketing/team/portraits/sophia-reynolds.jpg` (pending) · navy |
+| **Sophia Reynolds** | Marketing Manager (Agency Director) | `marketing-director` | Supervises all ten specialists, assigns daily tasks, full redesign authority, verifies build + push, delivers the Daily Executive Report | Portrait `marketing/team/portraits/sophia-reynolds.jpg` (pending) · navy |
 | **Elena Brooks** | Local SEO Architect | `local-seo-architect` | Chicago & suburb location pages, local internal linking, `HVACBusiness` JSON-LD | `elena-brooks.jpg` (pending) · lake blue |
 | **Maya Lin** | HVAC Content Strategist | `hvac-content-strategist` | Service pages, seasonal HVAC guides, FAQ schema | `maya-lin.jpg` (pending) · furnace orange |
 | **Chloe Vance** | UI/UX & CRO Designer | `cro-designer` | Visual redesign, site structure, trust signals, mobile/desktop conversion | `chloe-vance.jpg` (pending) · red |
 | **Hannah Carter** | Local Citations & NAP Specialist | `local-citations-specialist` | Rebrand transition, GBP/Yelp/BBB alignment, citation rollouts | `hannah-carter.jpg` (pending) · green |
 | **Natalie Foster** | Backlink & PR Specialist | `backlink-linkbuilder` | Chicago local & HVAC industry backlinks, link-worthy resources, outreach | `natalie-foster.jpg` (pending) · violet |
-| **Rachel Morgan** | Lead Generation Architect + Paid Ads | `lead-gen-architect` | 24/7 emergency dispatch, call/SMS/booking CTAs for (773) 644-8227, conversion tracking, **paid ads** (Google LSA, Google Search, Meta; `marketing/ads/ads-plan.md`) | `rachel-morgan.jpg` (pending) · amber |
+| **Rachel Morgan** | Lead Generation Architect | `lead-gen-architect` | Website conversion: 24/7 emergency dispatch, call/SMS/booking CTAs for (773) 644-8227, conversion tracking (GTM/GA4/ads conversions) | `rachel-morgan.jpg` (pending) · amber |
+| **Olivia Bennett** | Lead Generation Manager | `lead-gen-manager` | Lead strategy across all channels; tells the owner what to do to get leads (`marketing/lead-gen/lead-channels-playbook.md`); directs the three ads experts; budget-split proposals | `olivia-bennett.jpg` (pending) · teal |
+| **Grace Whitman** | Google Ads Expert | `google-ads-expert` | Google Search / call ads: keywords, negatives, ad copy, conversions, search-term reviews (`marketing/ads/ads-plan.md`) | `grace-whitman.jpg` (pending) · blue |
+| **Lauren Hayes** | Google Local Services Ads Expert | `google-lsa-expert` | LSA (Google Guaranteed/Screened): profile, verification, rebrand, job types, lead disputes (`marketing/ads/lsa-rename-guide.md`) | `lauren-hayes.jpg` (pending) · gold |
+| **Ava Martinez** | Meta Ads Expert | `meta-ads-expert` | Facebook/Instagram ads for planned work: tune-ups, Comfort Club, replacements, retargeting; Pixel | `ava-martinez.jpg` (pending) · pink |
 
 ### Redesign authority
 **Sophia Reynolds, Chloe Vance and Elena Brooks** are explicitly authorized to overhaul the site's visual look, UI components, navigation, page templates and architecture whenever the current design or structure (including patterns inherited from aircareprohvac.com) is weak, outdated or under-optimized for conversions or SEO. Don't preserve weak legacy layouts; upgrade them to a modern, high-trust Chicago HVAC brand standard. Keep URLs stable or document redirects.
@@ -42,7 +46,9 @@ Owner shortcuts (`.claude/commands/`): `/daily [focus]` · `/sprint <goal>` · `
 - **Approval:** Sophia Reynolds gives final approval inside the team. Publishing happens only when the owner merges to `main`.
 - **Daily run:** scheduled task every day 7:45 AM Central (report ready by 8:00), works on `agency/sprint-3`, keeps one PR open to `main`, never merges or publishes.
 - **Brand confirmed by the owner:** CHICAGO AIRCARE PRO. "Manager" = Sophia Reynolds. All 6 photos in `src/data/photos.ts` are confirmed as the company's own.
-- **Advertising is the team's job (owner, 2026-11-19):** Rachel Morgan owns paid ads, with Sophia approving. **No spend, launch or budget change without the owner's explicit OK.** Plan: `marketing/ads/ads-plan.md`.
+- **Ads budget (owner, 2026-11-23): $1,000** (read as monthly, all channels). Proposed split: LSA $600 · Meta $300 · reserve $100 (`marketing/ads/ads-plan.md`). LSA is connected to the owner's new account and active, with no leads yet (`marketing/ads/lsa-no-leads-checklist.md`). Meta: owner starting now (`marketing/ads/meta-launch-plan.md`, creatives in `marketing/ads/meta/`).
+- **Team expanded (owner, 2026-11-23):** Olivia Bennett (Lead Generation Manager), Grace Whitman (Google Ads), Lauren Hayes (Local Services Ads), Ava Martinez (Meta Ads). Paid ads move from Rachel to the three experts under Olivia; Rachel keeps website conversion and tracking.
+- **Advertising is the team's job (owner, 2026-11-19):** the ads experts (Grace, Lauren, Ava) run their channels under Olivia Bennett, with Sophia approving. **No spend, launch or budget change without the owner's explicit OK.** Plan: `marketing/ads/ads-plan.md`.
 - **Owner priorities:** SEO, local SEO and lead generation come first. Daily posts on the website to rank on Google.
 - **Daily Google data review (owner, 2026-11-21):** every day the team checks GA4 and Search Console and, based on the data, strengthens pages or reworks content (titles/meta, sections, FAQs, internal links, CTAs). Playbook: `marketing/seo/daily-data-playbook.md`; results log: `marketing/seo/page-actions-log.md`. Never estimate numbers.
 - **Unslop (owner, 2026-11-21):** everything must read and look like a professional human agency's work, not an AI template. Rules: `marketing/unslop-style.md` (no em dashes or filler words, facts over trust adjectives, no label over every heading, no icon box on every item, varied layouts). Every skill applies it before shipping.
@@ -51,16 +57,16 @@ Owner shortcuts (`.claude/commands/`): `/daily [focus]` · `/sprint <goal>` · `
 ### Rebrand status (keep exact)
 - Legal rebrand **"Shad Heating and Cooling LLC" → "CHICAGO AIRCARE PRO": APPROVED.**
 - **Google Business Profile: name UPDATED, live as CHICAGO AIRCARE PRO (2026-11-20).** URL in `sameAs` + `reviewProfiles`: https://www.google.com/maps?cid=18088581127472759753 (if Google later asks for proof: `marketing/citations/gbp-rename-evidence.md`).
-- **Yelp: owner opened a NEW page as CHICAGO AIRCARE PRO (2026-11-20).** The old "Shad Heating and Cooling" Yelp page must be merged into it or closed via Yelp support (duplicates hurt NAP consistency). New URL: TODO(owner).
+- **Yelp: owner opened a NEW page as CHICAGO AIRCARE PRO (2026-11-20).** The old "Shad Heating and Cooling" Yelp page must be merged into it or closed via Yelp support (duplicates hurt NAP consistency). **New page live, URL from the owner 2026-11-23: https://www.yelp.com/biz/chicago-aircare-pro-chicago-2** (in `sameAs` + `reviewProfiles`). Old page merge/close still open.
 - **BBB: name change requested by the owner (2026-11-20), pending BBB.**
-- `sameAs` / `reviewProfiles` for Yelp and BBB stay `TODO` until the owner provides the live URLs (GBP done).
+- `sameAs` / `reviewProfiles`: GBP and Yelp done; BBB stays `TODO` until the owner provides its live URL.
 - **New citations wait** until the existing listings are updated (`business.rebrand.newCitationsBlocked = true`).
 - Code source of truth: `business.rebrand` in `src/data/business.ts`; tracker: `marketing/citations-tracker.md`.
 
 ### Daily Executive Report (required after every run)
 File: `marketing/daily-reports/YYYY-MM-DD.md` (template: `marketing/daily-reports/TEMPLATE.md`). Sections, in order:
 1. Header (date · branch · commit · signed **Sophia Reynolds, Marketing Manager**) + executive summary
-2. Team updates by name and role, in this order: **Sophia Reynolds, Chloe Vance, Elena Brooks, Maya Lin, Rachel Morgan, Hannah Carter, Natalie Foster**
+2. Team updates by name and role, in this order: **Sophia Reynolds, Chloe Vance, Elena Brooks, Maya Lin, Rachel Morgan, Olivia Bennett, Grace Whitman, Lauren Hayes, Ava Martinez, Hannah Carter, Natalie Foster** (ads experts: one line each when there's nothing new)
 3. Files changed + build/verification status
 4. KPIs and measurable impact (`scripts/site-metrics.mjs`; live analytics only when actually available)
 5. Pending owner items (e.g. live GBP/Yelp/BBB URLs once name updates go live)
@@ -160,10 +166,10 @@ File: `marketing/daily-reports/YYYY-MM-DD.md` (template: `marketing/daily-report
 | Platform | Status | URL (→ `sameAs`) |
 |---|---|---|
 | Google Business Profile | **Renamed to CHICAGO AIRCARE PRO (live 2026-11-20)** | https://www.google.com/maps?cid=18088581127472759753 |
-| Yelp | **New page created 2026-11-20** (old Shad page to merge/close) | TODO(owner): send the new page URL |
+| Yelp | **New page live (URL 2026-11-23)**; old Shad page still to merge/close | https://www.yelp.com/biz/chicago-aircare-pro-chicago-2 |
 | BBB | Existing, accredited · **name change requested 2026-11-20** | TODO(owner) after BBB updates it |
 | Facebook | Existing (found in live-site schema) | https://www.facebook.com/Aircareprohvac/ |
-| Next: Bing Places, Apple Business Connect, Nextdoor, Comfortmaker locator, Angi/HomeAdvisor, Thumbtack, Houzz, aggregators, Andersonville/Edgewater chambers | **Blocked until Yelp and BBB renames are live** (GBP done) | |
+| Next: Bing Places, Apple Business Connect, Nextdoor, Comfortmaker locator, Angi/HomeAdvisor, Thumbtack, Houzz, aggregators, Andersonville/Edgewater chambers | **Apple Business Connect: unblocked (queued right after Yelp, kit ready).** The rest wait for the BBB rename (GBP + Yelp done) | |
 
 Known NAP issues: duplicate LocalBusiness schema on the live site (unformatted phone, malformed hours); name casing.
 
@@ -187,6 +193,7 @@ Known NAP issues: duplicate LocalBusiness schema on the live site (unformatted p
 | Free estimate | TODO | $500 (placeholder) | TODO hrs |
 | Comfort Club signups | TODO | $150 (placeholder) | TODO |
 
+- **Lead playbook (owner to-do, ranked channels):** `marketing/lead-gen/lead-channels-playbook.md` (Olivia Bennett).
 - **Lead destination:** **Housecall Pro booking link** (owner decision 2026-11-19). On-page forms are off (`leadCapture: 'housecall-pro'`).
 - **Analytics:** GTM `GTM-K3PBQCR9` (installed on the live site) → GA4 `G-J25SG73ES5` (Google tag inside GTM, enhanced measurement on; verified 2026-11-19). Reporting: `ga4/latest.md` on the `seo-data` branch (free service account). Custom click events → GA4: owner step in GTM, see `marketing/lead-gen/tracking-plan.md`
 - **Built in this repo (Sprint 1):** forms on 60 pages, tap-to-text on every page, tracked booking clicks, lead scoring, Comfort Club signup. **Still open:** Comfort Club pricing, CRM endpoint. Google review link live (`business.googleReviewUrl`, `/review/` page, QR in `marketing/reviews/`)

@@ -29,6 +29,12 @@ Prepared and signed by **Sophia Reynolds, Marketing Manager**
 - Completed: …
 - Files: …
 
+### Olivia Bennett, Lead Generation Manager
+- Lead actions this week · owner to-dos from `marketing/lead-gen/lead-channels-playbook.md` · real lead numbers by channel
+
+### Ads experts: Grace Whitman (Google Ads) · Lauren Hayes (Local Services Ads) · Ava Martinez (Meta Ads)
+- One line each: status, approvals needed, numbers from the account (only when connected)
+
 ### Hannah Carter, Local Citations & NAP Specialist
 - Rebrand status: legal ✅ approved · GBP ⏳ · Yelp ⏳ · BBB ⏳ · new citations 🔒 blocked
 - Completed: …

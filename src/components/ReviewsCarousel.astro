@@ -9,6 +9,7 @@ import { business } from '../data/business';
 interface Props { items?: Review[]; placement?: string }
 const { items = allReviews, placement = 'reviews_carousel' } = Astro.props;
 const googleUrl = business.reviewProfiles.find((p) => p.platform === 'Google')?.url;
+const yelpUrl = business.reviewProfiles.find((p) => p.platform === 'Yelp')?.url;
 const fmt = (d: string) => { const [y, m] = d.split('-').map(Number); return m ? new Date(Date.UTC(y, m - 1, 1)).toLocaleDateString('en-US', { month: 'short', year: 'numeric', timeZone: 'UTC' }) : d; };
 ---
 {items.length > 0 && (
@@ -26,6 +27,7 @@ const fmt = (d: string) => { const [y, m] = d.split('-').map(Number); return m ?
       <button type="button" class="rc-btn" data-rc-prev aria-label="Previous review">‹</button>
       <button type="button" class="rc-btn" data-rc-next aria-label="Next review">›</button>
       {googleUrl && <a class="rc-more" href={googleUrl} target="_blank" rel="noopener" data-track="click_review_link" data-placement={placement}>All reviews on Google →</a>}
+      {yelpUrl && <a class="rc-more" href={yelpUrl} target="_blank" rel="noopener" data-track="click_review_link" data-placement={`${placement}_yelp`}>Yelp →</a>}
     </div>
     {reviewsAsOf && <p class="rc-note">Reviews copied from our Google Business Profile, {fmt(reviewsAsOf)}.</p>}
   </div>

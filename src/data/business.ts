@@ -144,7 +144,7 @@ export const business: Business = {
     legalApproved: true,
     listings: {
       'Google Business Profile': 'name-updated', // live as CHICAGO AIRCARE PRO (verified from the owner's Maps link 2026-11-20)
-      Yelp: 'submitted-under-review', // owner opened a NEW Yelp page under CHICAGO AIRCARE PRO (2026-11-20); old 'Shad' page must be merged/closed; URL TODO(owner)
+      Yelp: 'name-updated', // NEW Yelp page live as CHICAGO AIRCARE PRO; URL from the owner 2026-11-23. Old 'Shad' page still to be merged/closed via Yelp support
       BBB: 'submitted-under-review', // owner requested the BBB name change (2026-11-20)
     },
     newCitationsBlocked: true,
@@ -217,14 +217,15 @@ export const business: Business = {
     'https://www.facebook.com/Aircareprohvac/', // listed in the live site's schema
     // Google Business Profile: owner's share link (2026-11-20) resolves to "CHICAGO AIRCARE PRO" (ftid …:0xfb078cb2b1d943c9 → cid below).
     'https://www.google.com/maps?cid=18088581127472759753',
-    // TODO(owner): add these ONLY after each listing's name update to CHICAGO AIRCARE PRO is live:
-    // Yelp → 'https://www.yelp.com/biz/…'
+    // Yelp: owner's new CHICAGO AIRCARE PRO page (2026-11-23; m.yelp.com link normalized to www).
+    'https://www.yelp.com/biz/chicago-aircare-pro-chicago-2',
+    // TODO(owner): add ONLY after the BBB name update to CHICAGO AIRCARE PRO is live:
     // BBB  → 'https://www.bbb.org/us/il/chicago/profile/…'
   ],
   // TODO(owner): set each url once that listing shows CHICAGO AIRCARE PRO (also add to sameAs).
   // Google write-review link from the owner (2026-11-19).
   googleReviewUrl: 'https://g.page/r/CclD2bGyjAf7EBE/review',
-  reviewProfiles: [{ platform: 'Google', url: 'https://www.google.com/maps?cid=18088581127472759753', writeReviewUrl: 'https://g.page/r/CclD2bGyjAf7EBE/review' }, { platform: 'Yelp' }, { platform: 'BBB' }],
+  reviewProfiles: [{ platform: 'Google', url: 'https://www.google.com/maps?cid=18088581127472759753', writeReviewUrl: 'https://g.page/r/CclD2bGyjAf7EBE/review' }, { platform: 'Yelp', url: 'https://www.yelp.com/biz/chicago-aircare-pro-chicago-2' }, { platform: 'BBB' }],
   licenseNumber: '3065598', // City of Chicago
   credentials: [
     'NATE-certified technicians',
@@ -273,4 +274,14 @@ export const heroHeadline = (date = new Date()) => {
   return heatingSeason
     ? { eyebrow: 'Answering 24/7 · nights & holidays', h1Lead: 'Chicago furnace and boiler repair', h1: 'No heat tonight? Call or text, day or night.', sub: 'Furnaces, hot-water and steam boilers. Diagnosis first, then options and prices before any work.' }
     : { eyebrow: 'One crew for both seasons', h1Lead: '', h1: 'Furnace, boiler and AC service from one Chicago crew.', sub: 'Diagnosis first, then options and prices before any work. Two-flats, greystones, bungalows, steam boilers. Call or text 24/7.' };
+};
+
+/** Readable name for a sameAs / review profile URL (footer, contact page). Owner: Hannah Carter. */
+export const profileLabel = (url: string): string => {
+  const h = new URL(url).hostname.replace(/^www\./, '');
+  if (h.startsWith('google.') || h === 'g.page') return 'Google';
+  if (h.endsWith('yelp.com')) return 'Yelp';
+  if (h.endsWith('facebook.com')) return 'Facebook';
+  if (h.endsWith('bbb.org')) return 'BBB';
+  return h;
 };
