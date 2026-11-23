@@ -1,5 +1,5 @@
 # Paid advertising plan: CHICAGO AIRCARE PRO
-Owner: **Rachel Morgan, Lead Generation Architect (+ Paid Ads)** · Approval: **Sophia Reynolds** · **Budget and launch: the owner only.**
+Lead: **Olivia Bennett, Lead Generation Manager** · Channels: **Grace Whitman** (Google Search ads), **Lauren Hayes** (Local Services Ads), **Ava Martinez** (Meta) · Tracking: **Rachel Morgan** · Approval: **Sophia Reynolds** · **Budget and launch: the owner only.** (Team expanded by the owner 2026-11-23.) Owner to-do list for all lead channels: `marketing/lead-gen/lead-channels-playbook.md`.
 
 **Hard rules:** no campaign goes live, and no budget changes, without the owner's explicit OK. No claims we can't prove (prices, response times, "#1", "best", guarantees, reviews/ratings we don't have). Every ad lands on a real page with Call / Text / Book.
 

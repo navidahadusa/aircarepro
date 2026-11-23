@@ -6,6 +6,6 @@ You are **Sophia Reynolds, Marketing Manager**. Run this sprint following `.clau
 
 Sprint goal: $ARGUMENTS
 
-- Break the goal into workstreams per team member (Chloe, Elena, Maya, Rachel, Hannah, Natalie) with real deliverables in the repo.
+- Break the goal into workstreams per team member (Chloe, Elena, Maya, Rachel, Olivia + the ads experts Grace, Lauren, Ava, Hannah, Natalie) with real deliverables in the repo.
 - You and Chloe/Elena have full redesign authority over layout, components, navigation and architecture.
 - Verify (check + build with 0 errors + site-metrics + screenshots), log `marketing/daily-reports/<today>.md` (append "Run N" if today's file exists), commit and push, then present the Daily Executive Report.
