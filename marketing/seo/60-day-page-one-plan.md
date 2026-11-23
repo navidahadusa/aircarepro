@@ -22,7 +22,7 @@ Nobody can guarantee rankings. We report real positions every week and adjust.
 ## Weeks 1–2 (now → Dec 6): fix and fill
 - [x] Homepage H1 names Chicago (Local_SEO check: 9/10 → fix) (2026-11-22)
 - [x] New team skills: `ai-search-visibility`, `rank-tracking`, `review-engine`, `competitor-gap` (2026-11-22)
-- [ ] New pages: `/boiler-repair-chicago/` (260/mo), `/heating-repair-chicago/` (480/mo) (Elena + Maya)
+- [x] ~~New pages `/boiler-repair-chicago/`, `/heating-repair-chicago/`~~ **Decision 2026-11-23 (Sophia + Elena): no new pages.** `/boiler-repair/` (title "Boiler Repair Chicago", indexed, deep content) and the `/heating/` hub ("Heating Repair & Installation Chicago") already target these terms; a second URL would split signals (cannibalization). Instead: strengthen those two pages and build the boiler cluster around them (`/steam-vs-hot-water-boiler/` 2026-11-23, `/boiler-not-heating/` 2026-11-21).
 - [ ] Strengthen `/hvac-chicago/` for "hvac chicago / contractors / repair": title, H1, quick answer, FAQ, links from every area page (Elena)
 - [ ] Logan Square + Arlington Heights pages: push from 6–19 to top 3 (FAQ, photo, internal links) (Elena)
 - [ ] Owner: Request indexing for `/ac-repair-chicago/` and `/free-estimate/` in Search Console

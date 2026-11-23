@@ -322,9 +322,9 @@ export const services: Service[] = [
   },
   {
     slug: 'furnace-tune-up', name: 'Furnace Tune-Up', category: 'Heating', funnel: 'maintenance',
-    title: 'Furnace Tune-Up Chicago | Inspection',
+    title: 'Furnace Tune-Up & Maintenance in Chicago',
     card: 'Fall safety and efficiency check',
-    meta: `Furnace tune-up in Chicago: igniter, flame sensor, venting, safety controls and a carbon monoxide check. Comfort Club available. ${PHONE_DISPLAY}.`,
+    meta: `Furnace tune-up and maintenance in Chicago: igniter, flame sensor, venting, condensate trap, safety controls and a CO check. Comfort Club available.`,
     intro: 'A furnace tune-up is a yearly inspection, cleaning and safety check done before the heating season, so the parts most likely to fail are caught early. Chicago Aircare Pro performs furnace tune-ups in Chicago and nearby suburbs. A fall visit catches worn igniters, dirty flame sensors and venting problems before the first cold snap, when every HVAC company in Chicago is booked solid.',
     signs: ['No tune-up in the last 12 months', 'The furnace was slow to start or short-cycled last winter', 'A high-efficiency furnace that has never had its condensate trap cleaned', 'You’re planning to sell or rent the home', 'You want to keep the manufacturer’s warranty in good standing'],
     included: ['Igniter inspection and flame sensor cleaning', 'Gas pressure and temperature rise readings', 'Inducer, pressure switch and limit switch tests', 'Venting check and condensate trap flush', 'Carbon monoxide test at the furnace and in the living space'],
@@ -369,6 +369,7 @@ export const services: Service[] = [
     faqs: [
       { q: 'How long does a furnace tune-up take?', a: 'Usually about an hour, longer if we find something that needs attention. We tell you before doing any repair.' },
       { q: 'Does a tune-up keep my warranty valid?', a: 'Many manufacturers’ warranties ask for professional annual maintenance. Check your warranty terms; we leave a record of each visit.' },
+      { q: 'How often does a furnace need maintenance in Chicago?', a: 'Once a year, ideally in the fall before the first cold snap. Between visits, check the filter monthly during the heating season and change it when it looks dirty.' },
       { q: 'When is the best time for a furnace tune-up?', a: 'September through November, before the first sustained cold. A mid-winter tune-up still helps if the furnace hasn’t been checked in over a year.' },
       { q: 'Is a tune-up included in the Comfort Club?', a: 'Yes. Members get a fall furnace tune-up and a spring AC tune-up each year, plus priority appointments and member repair discounts.' },
       { q: 'Do you also maintain boilers?', a: 'Yes. Boilers need different checks, such as pressure, expansion tank, low-water cutoff and venting, and we service both hot-water and steam systems.' },
@@ -386,7 +387,7 @@ export const services: Service[] = [
     sections: [
       {
         h2: 'Hot water or steam? It changes the repair',
-        html: `<p><strong>Hot-water boilers</strong> pump heated water through radiators, baseboard or radiant floors. They run on a closed, pressurized loop with a circulator pump and an expansion tank. <strong>Steam boilers</strong> boil water and send steam to the radiators. They run at very low pressure, depend on venting and pipe pitch, and need the water level watched. A tag on the boiler or a gauge glass showing water usually tells you which you have. We work on both.</p>`,
+        html: `<p><strong>Hot-water boilers</strong> pump heated water through radiators, baseboard or radiant floors. They run on a closed, pressurized loop with a circulator pump and an expansion tank. <strong>Steam boilers</strong> boil water and send steam to the radiators. They run at very low pressure, depend on venting and pipe pitch, and need the water level watched. A tag on the boiler or a gauge glass showing water usually tells you which you have. We work on both.</p> <p>Not sure which you have? See <a href="/steam-vs-hot-water-boiler/">how to tell a steam boiler from a hot-water boiler</a>.</p>`,
       },
       {
         h2: 'One-pipe and two-pipe steam',

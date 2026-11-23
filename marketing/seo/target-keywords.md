@@ -9,11 +9,11 @@ Volumes: Local_SEO connector (`find_local_searches`, 2026-11-22), Google searche
 | ac repair chicago | 880 | /ac-repair-chicago/ | — (was noindex on old crawl; live page is indexable) | top 20 |
 | air conditioning repair chicago | 880 | /ac-repair-chicago/ | — | top 20 |
 | furnace repair chicago | 480 | /furnace-repair-chicago/ | — | top 10 |
-| heater / heating repair chicago | 480 | **new page needed** (/heating-repair-chicago/) | — | top 10 |
+| heater / heating repair chicago | 480 | /heating/ (hub; decision 2026-11-23: no new page) | — | top 10 |
 | hvac repair chicago | 480 | /hvac-chicago/ | — | top 20 |
 | hvac contractors chicago | 480 | /hvac-chicago/ | — | top 20 |
 | hvac installation chicago | 320 | /hvac-chicago/ + /furnace-installation-chicago/ | — | top 20 |
-| boiler repair chicago | 260 | **new page needed** (/boiler-repair-chicago/) | — | top 10 |
+| boiler repair chicago | 260 | /boiler-repair/ (decision 2026-11-23: no new page) | — | top 10 |
 
 ## Tier B: emergency + specific (realistic page one in 60 days)
 | Keyword | Volume | Our page |

@@ -36,7 +36,7 @@ Status key: ☐ to do · ✍ drafted on branch · ✅ published (merged) · **O*
 | Fri Nov 20 | New guide | Chicago Heat Ordinance: What Renters and Two-Flat Owners Should Know | chicago heat ordinance | /boiler-repair/, /heating/, /hvac-chicago/ | F (point to City/311) | ✍ shipped Nov 21 → /chicago-heat-ordinance/ |
 | Sat Nov 21 | Refresh | boiler-not-heating | boiler not heating | /boiler-repair/, /emergency-hvac/ | | ✍ shipped Nov 21 → /boiler-not-heating/ (rewritten: steam vs hot-water, cold-snap "heat not keeping up", 5 FAQs) |
 | Mon Nov 23 | New | Snow Blocking Your Furnace's PVC Vents: What to Do | furnace vent blocked by snow | /furnace-repair/, /carbon-monoxide-safety/ | | ✍ shipped Nov 22 → /furnace-vent-blocked-by-snow/ |
-| Tue Nov 24 | New guide | Steam or Hot-Water Boiler? How to Tell Which You Have | steam vs hot water boiler | /boiler-repair/, /boiler-installation/ | | ☐ |
+| Tue Nov 24 | New guide | Steam or Hot-Water Boiler? How to Tell Which You Have | steam vs hot water boiler | /boiler-repair/, /boiler-installation/ | | ✍ shipped Nov 23 → /steam-vs-hot-water-boiler/ |
 | Wed Nov 25 | Seasonal | Hosting Thanksgiving: Thermostat and Furnace Prep | thermostat settings for guests | /furnace-tune-up/, /thermostat-installation/ | | ☐ |
 | Fri Nov 27 | Refresh | carbon-monoxide-safety-tips | carbon monoxide safety | /carbon-monoxide-safety/, /furnace-repair/ | F | ☐ |
 | Mon Nov 30 | Job story | Furnace replacement in a Chicago bungalow | furnace replacement chicago | /furnace-installation/, matching /hvac-<area>/ | **O** (real photos, area, what was found) | ☐ |
@@ -48,6 +48,7 @@ Status key: ☐ to do · ✍ drafted on branch · ✅ published (merged) · **O*
 | Tue Dec 8 | Refresh | how-often-change-furnace-filter | change furnace filter | /furnace-tune-up/, /maintenance-plan/ | | ☐ |
 | Wed Dec 9 | Area post | Heating Courtyard Buildings in Rogers Park and Edgewater | rogers park heating | /hvac-rogers-park/, /hvac-andersonville-edgewater/, /boiler-repair/ | **O** (actual jobs there) | ☐ |
 | Fri Dec 11 | Guide | Heat Pump Maintenance Before a Chicago Winter: What Gets Checked | heat pump maintenance | /heat-pump-repair/, /ac-repair-schaumburg/, /hvac-des-plaines/ | Search Console: Schaumburg 19.5 · Des Plaines 11 heat pump maintenance | ☐ |
+| Mon Dec 14 | Guide | Boiler Service in Chicago: What a Yearly Steam or Hot-Water Check Covers | boiler service chicago | /boiler-repair/, /maintenance-plan/ | Target keyword Tier B | ☐ |
 | Thu Dec 10 | Answer | Dual-Fuel Heat Pumps in the Northwest Suburbs: When the Furnace Takes Over | dual fuel heat pump | /heat-pump-repair/, /hvac-arlington-heights/, /ac-repair-arlington-heights/ | Search Console: Arlington Heights heat pump queries at pos 10–17 | ☐ |
 
 Posts needing owner input stay `draft: true` until the details arrive. The daily run then moves the next item up.
