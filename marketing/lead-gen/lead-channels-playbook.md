@@ -81,6 +81,11 @@ Bing Places, Apple Business Connect (**ready now**, kit: `marketing/citations/ap
 
 ---
 
+## Update 2026-11-23: budget $1,000, LSA live, Meta starting
+- **Split (proposal):** LSA $600/month (≈$140/week) · Meta $300 ($10/day) · reserve $100. `marketing/ads/ads-plan.md`.
+- **LSA is live but quiet:** go through `marketing/ads/lsa-no-leads-checklist.md` and send Lauren the screenshots.
+- **Meta:** follow `marketing/ads/meta-launch-plan.md`; 3 ads ready in `marketing/ads/meta/`.
+
 ## This week (owner to-do, in order)
 1. Post the Monday GBP update.
 2. Merge the open PR (the site improvements go live).

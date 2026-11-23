@@ -36,7 +36,15 @@ Lead: **Olivia Bennett, Lead Generation Manager** · Channels: **Grace Whitman**
 Keywords: "furnace replacement chicago", "new furnace cost chicago", "boiler replacement", "heat pump installation chicago" → /free-estimate/ and /furnace-installation-<city>/. Mention "Financing through Optimus, subject to credit approval".
 
 ## Budgets
-**TODO(owner).** Rachel will propose a test budget per campaign with a 30-day review once the owner shares a monthly ad budget and average job value. No numbers are assumed here.
+**Owner budget (2026-11-23): $1,000** (read as per month, all channels; owner to confirm). **Olivia Bennett's proposed split, owner approves each change:**
+
+| Channel | Monthly | How it's set | Why |
+|---|---|---|---|
+| Local Services Ads (Lauren Hayes) | **$600** | ≈ $140/week (LSA uses weekly budgets) · Maximize leads | Pay per lead, highest-intent calls; LSA is live on the new account. Unspent if no leads come in. |
+| Meta (Ava Martinez) | **$300** | $10/day, call ads | Owner wants Meta; replacement + boiler/steam + retargeting. Plan: `meta-launch-plan.md` |
+| Reserve | **$100** | not spent | Goes to whichever channel brings booked jobs; Google Search (Grace Whitman) waits until LSA is producing |
+
+Review after 14 days with real numbers (calls, booked jobs, cost per lead). If LSA stays silent, fix it first (`lsa-no-leads-checklist.md`) before moving more money.
 
 ## What the team needs from the owner
 1. Monthly ad budget (total) and which channels to start with (recommended: LSA + Google Search).

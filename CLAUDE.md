@@ -46,6 +46,7 @@ Owner shortcuts (`.claude/commands/`): `/daily [focus]` · `/sprint <goal>` · `
 - **Approval:** Sophia Reynolds gives final approval inside the team. Publishing happens only when the owner merges to `main`.
 - **Daily run:** scheduled task every day 7:45 AM Central (report ready by 8:00), works on `agency/sprint-3`, keeps one PR open to `main`, never merges or publishes.
 - **Brand confirmed by the owner:** CHICAGO AIRCARE PRO. "Manager" = Sophia Reynolds. All 6 photos in `src/data/photos.ts` are confirmed as the company's own.
+- **Ads budget (owner, 2026-11-23): $1,000** (read as monthly, all channels). Proposed split: LSA $600 · Meta $300 · reserve $100 (`marketing/ads/ads-plan.md`). LSA is connected to the owner's new account and active, with no leads yet (`marketing/ads/lsa-no-leads-checklist.md`). Meta: owner starting now (`marketing/ads/meta-launch-plan.md`, creatives in `marketing/ads/meta/`).
 - **Team expanded (owner, 2026-11-23):** Olivia Bennett (Lead Generation Manager), Grace Whitman (Google Ads), Lauren Hayes (Local Services Ads), Ava Martinez (Meta Ads). Paid ads move from Rachel to the three experts under Olivia; Rachel keeps website conversion and tracking.
 - **Advertising is the team's job (owner, 2026-11-19):** the ads experts (Grace, Lauren, Ava) run their channels under Olivia Bennett, with Sophia approving. **No spend, launch or budget change without the owner's explicit OK.** Plan: `marketing/ads/ads-plan.md`.
 - **Owner priorities:** SEO, local SEO and lead generation come first. Daily posts on the website to rank on Google.
