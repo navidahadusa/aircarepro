@@ -275,3 +275,13 @@ export const heroHeadline = (date = new Date()) => {
     ? { eyebrow: 'Answering 24/7 · nights & holidays', h1Lead: 'Chicago furnace and boiler repair', h1: 'No heat tonight? Call or text, day or night.', sub: 'Furnaces, hot-water and steam boilers. Diagnosis first, then options and prices before any work.' }
     : { eyebrow: 'One crew for both seasons', h1Lead: '', h1: 'Furnace, boiler and AC service from one Chicago crew.', sub: 'Diagnosis first, then options and prices before any work. Two-flats, greystones, bungalows, steam boilers. Call or text 24/7.' };
 };
+
+/** Readable name for a sameAs / review profile URL (footer, contact page). Owner: Hannah Carter. */
+export const profileLabel = (url: string): string => {
+  const h = new URL(url).hostname.replace(/^www\./, '');
+  if (h.startsWith('google.') || h === 'g.page') return 'Google';
+  if (h.endsWith('yelp.com')) return 'Yelp';
+  if (h.endsWith('facebook.com')) return 'Facebook';
+  if (h.endsWith('bbb.org')) return 'BBB';
+  return h;
+};
