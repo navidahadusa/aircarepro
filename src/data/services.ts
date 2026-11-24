@@ -347,7 +347,7 @@ export const services: Service[] = [
       },
       {
         h2: 'Why it matters in Chicago',
-        html: `<p>The first cold week of the season is when furnaces that sat idle all summer fail. A dirty flame sensor, a worn igniter or a weak capacitor are cheap to deal with in October and stressful at midnight in January. On high-efficiency furnaces, a clogged condensate trap is one of the most common causes of winter lockouts, and a drain line that runs along a cold outside wall can freeze in a cold snap (see <a href="/frozen-furnace-condensate/">frozen furnace condensate</a>). The control board’s fault history often shows a problem building before it stops the heat.</p>`,
+        html: `<p>The first cold week of the season is when furnaces that sat idle all summer fail. A dirty flame sensor, a worn igniter or a weak capacitor are cheap to deal with in October and stressful at midnight in January. On high-efficiency furnaces, a clogged condensate trap is one of the most common causes of winter lockouts, and a drain line that runs along a cold outside wall can freeze in a cold snap (see <a href="/frozen-furnace-condensate/">frozen furnace condensate</a>). The control board’s fault history often shows a problem building before it stops the heat. Hosting this week? See <a href="/thanksgiving-thermostat-furnace-prep/">Thanksgiving thermostat and furnace prep</a>.</p>`,
       },
       {
         h2: 'Tune-up vs. repair: what happens if we find something',
@@ -1180,9 +1180,9 @@ export const services: Service[] = [
   },
   {
     slug: 'uv-air-sanitizers', name: 'UV Air Sanitizers', category: 'Air Quality', funnel: 'quick',
-    title: 'UV Air Sanitizer Installation Chicago',
+    title: 'HVAC UV Light Installation in Chicago',
     card: 'UV lights for coils and air',
-    meta: `UV air sanitizer installation in Chicago: ozone-free UV-C lamps that keep the AC coil and drain pan clean of mold and odors. Straight advice. ${PHONE_DISPLAY}.`,
+    meta: `HVAC UV light (UV air sanitizer) installation in Chicago, Skokie, Evanston and nearby suburbs: ozone-free UV-C lamps that keep the AC coil free of mold.`,
     intro: 'A UV air sanitizer is a UV-C lamp installed inside your HVAC system, usually aimed at the AC coil and drain pan, to stop mold and bacteria from growing on these damp surfaces. A clean coil keeps airflow and efficiency up and odors down. Chicago Aircare Pro installs and services ozone-free UV systems in Chicago homes, and we’ll tell you plainly whether your home would benefit.',
     signs: ['A musty smell when the AC starts', 'Slime in the drain pan or a drain that keeps clogging', 'A dirty indoor coil that keeps coming back', 'Household members with allergies'],
     included: ['Coil or air-stream UV options explained', 'Lamp mounted near the coil, with a safety switch where required', 'Power connection, often from the furnace', 'Labelled access panel and lamp replacement schedule'],
@@ -1221,6 +1221,7 @@ export const services: Service[] = [
       },
     ],
     faqs: [
+      { q: 'Do you install HVAC UV lights in Skokie and the north suburbs?', a: 'Yes. We install UV air sanitizers in Chicago and in Skokie, Evanston, Wilmette, Highland Park and the northwest suburbs, on the furnace or air handler at the AC coil.' },
       { q: 'Are UV lights worth it?', a: 'They’re most useful for keeping coils and drain pans clean in humid conditions. If your home doesn’t have musty smells, drain slime or recurring coil growth, we’ll tell you plainly it probably isn’t worth adding.' },
       { q: 'Is UV-C safe?', a: 'The lamp is enclosed inside the HVAC system. UV-C should never be looked at directly. Turn the power off before opening the plenum, and we label the access panel.' },
       { q: 'Does UV produce ozone?', a: 'We install lamps rated as ozone-free for residential HVAC.' },

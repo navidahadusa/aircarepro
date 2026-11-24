@@ -1286,7 +1286,7 @@ const westSuburbs: Record<string, AreaContent> = {
       },
       {
         h2: 'Sizing a new furnace for a Des Plaines home',
-        html: `<p>Many older furnaces are oversized. An oversized furnace heats in short bursts, leaves rooms uneven and cycles more often, which wears parts. We size from the home’s heating load, accounting for insulation, windows and any additions, not from the old furnace’s rating. The same goes for the AC: right-sized equipment runs longer, steadier cycles and removes more humidity. New-system estimates are free. See <a href="/furnace-installation/">furnace installation</a>.</p>`,
+        html: `<p>For a breakdown, see <a href="/furnace-repair-des-plaines/">furnace repair in Des Plaines</a>; for a new system, <a href="/furnace-installation-des-plaines/">furnace and central air installation in Des Plaines</a>.</p><p>Many older furnaces are oversized. An oversized furnace heats in short bursts, leaves rooms uneven and cycles more often, which wears parts. We size from the home’s heating load, accounting for insulation, windows and any additions, not from the old furnace’s rating. The same goes for the AC: right-sized equipment runs longer, steadier cycles and removes more humidity. New-system estimates are free. See <a href="/furnace-installation/">furnace installation</a>.</p>`,
       },
       {
         h2: 'Utilities and rebates in Des Plaines',

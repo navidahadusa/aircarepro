@@ -4,11 +4,16 @@
   "h1": "Furnace Installation in Des Plaines, IL",
   "service": "furnace-installation",
   "city": "des-plaines",
-  "intro": "Chicago Aircare Pro installs new furnaces in Des Plaines with free estimates and financing available.",
+  "meta": "Furnace and central air installation in Des Plaines, IL: sized with a load calculation, free estimates on new systems, financing through Optimus.",
+  "intro": "Chicago Aircare Pro installs new furnaces and central air conditioning in Des Plaines homes, with free estimates on new systems and financing through Optimus, subject to credit approval.",
   "faqs": [
     {
       "q": "Is financing available in Des Plaines?",
       "a": "Yes, financing is available subject to credit approval."
+    },
+    {
+      "q": "Do you install central air in Des Plaines?",
+      "a": "Yes. We install central air on existing ductwork, often at the same time as a new furnace so the coil, blower and AC are matched. Homes without ducts can use ductless mini-splits. New-system estimates are free."
     },
     {
       "q": "How fast can you get to Des Plaines for furnace installation?",
@@ -28,7 +33,10 @@
 ---
 
 <h2>Furnace installation in Des Plaines</h2>
-<p>Many Des Plaines furnaces are reaching the end of their life. We install efficient replacements sized to your home and explain each option clearly.</p>
+<p>Many Des Plaines furnaces are reaching the end of their life. We install efficient replacements sized to your home and explain each option clearly. If your furnace just stopped and you'd rather fix it, see <a href="/furnace-repair-des-plaines/">furnace repair in Des Plaines</a>.</p>
+
+<h2>Central air installation in Des Plaines</h2>
+<p>Many Des Plaines ranches and bi-levels already have ductwork, so central air goes in on the existing ducts: a new outdoor condenser and an indoor coil matched to the furnace. Replacing the furnace and the AC together usually makes sense when both are around the same age, because the coil, blower and condenser are designed to work as a set. For rooms the ducts don't reach well, such as a finished lower level or an addition, a ductless mini-split can cover them. We check the ducts and size the system before quoting. See <a href="/ac-installation/">AC installation</a>.</p>
 
 <h2>About homes in Des Plaines</h2>
 <p>Des Plaines is a hardworking suburb next to O&#x27;Hare with a mix of brick ranches, bi-levels, Cape Cods and two-story homes, plus condos and townhomes near downtown and the Metra station. Many homes still have original ductwork and furnaces or ACs that have been replaced once already and are coming due again.</p><h3>Systems nearing end of life</h3><p>Many furnaces and ACs here are 15 years old or more. We help you plan replacement before a breakdown.</p><h3>Bi-level comfort</h3><p>Lower levels stay cool while upper levels get warm. Balancing and return air fixes help.</p>

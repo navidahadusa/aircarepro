@@ -83,6 +83,14 @@ const website = {
     <LocalBusinessSchema pageUrl={canonical} />
     <JsonLd data={website} />
     <slot name="head" />
+    <!-- Module script: runs after parsing, before LeadFormScript (document order). -->
+    <script>
+      import { bindClickTracking, captureAttribution, track } from '../lib/tracking';
+      captureAttribution();
+      bindClickTracking();
+      // Shared with LeadFormScript (when forms are on) so tracking.js ships once, inside this script.
+      (window as unknown as { acpTracking: unknown }).acpTracking = { track, captureAttribution };
+    </script>
   </head>
   <body>
     <a class="skip-link" href="#main">Skip to content</a>
@@ -93,10 +101,5 @@ const website = {
     </main>
     <SiteFooter />
     <MobileCtaBar />
-    <script>
-      import { bindClickTracking, captureAttribution } from '../lib/tracking';
-      captureAttribution();
-      bindClickTracking();
-    </script>
   </body>
 </html>
