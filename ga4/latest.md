@@ -1,14 +1,14 @@
-# Google Analytics 4 snapshot (2026-11-23)
+# Google Analytics 4 snapshot (2026-11-24)
 
 Property `564399214` (G-J25SG73ES5) · last 28 days vs previous 28 days
 
 | Metric | Current 28d | Previous 28d |
 |---|---|---|
-| sessions | 120 | 0 |
-| totalUsers | 93 | 0 |
-| newUsers | 95 | 0 |
-| engagedSessions | 41 | 0 |
-| screenPageViews | 231 | 0 |
+| sessions | 131 | 0 |
+| totalUsers | 100 | 0 |
+| newUsers | 102 | 0 |
+| engagedSessions | 44 | 0 |
+| screenPageViews | 248 | 0 |
 | keyEvents | 0 | 0 |
 
 ## Lead events (calls, texts, bookings, reviews)
@@ -22,14 +22,15 @@ _No data yet._
 | book.housecallpro.com | 4 |
 | google.com | 4 |
 | g.page | 1 |
+| yelp.com | 1 |
 
 ## Channels
 
 | Channel | Sessions | Key events |
 |---|---|---|
-| Direct | 100 | 0 |
-| Organic Search | 13 | 0 |
-| Referral | 4 | 0 |
+| Direct | 108 | 0 |
+| Organic Search | 15 | 0 |
+| Referral | 5 | 0 |
 | Organic Social | 3 | 0 |
 | Unassigned | 1 | 0 |
 
@@ -37,7 +38,7 @@ _No data yet._
 
 | Landing page | Sessions | Key events |
 |---|---|---|
-| / | 90 | 0 |
+| / | 101 | 0 |
 | /contact | 3 | 0 |
 | /hvac-lakeview | 2 | 0 |
 | (not set) | 1 | 0 |
@@ -62,26 +63,26 @@ _No data yet._
 
 | City | Sessions |
 |---|---|
-| Chicago | 29 |
-| Warsaw | 10 |
-| (not set) | 8 |
+| Chicago | 31 |
+| Warsaw | 12 |
+| (not set) | 9 |
 | Ashburn | 6 |
 | Glenview | 5 |
 | Montreal | 5 |
-| Pune | 4 |
+| Pune | 5 |
+| Anyang-si | 3 |
 | Hialeah Gardens | 3 |
 | Los Angeles | 3 |
+| Minneapolis | 3 |
 | New York | 3 |
 | San Francisco | 3 |
-| Anyang-si | 2 |
 | Dudley | 2 |
 | Frankfurt am Main | 2 |
-| Franklin | 2 |
 
 ## Devices
 
 | Device | Sessions |
 |---|---|
-| desktop | 71 |
-| mobile | 51 |
+| desktop | 73 |
+| mobile | 60 |
 

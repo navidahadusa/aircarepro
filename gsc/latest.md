@@ -1,21 +1,21 @@
-# Search Console snapshot (2026-11-23)
+# Search Console snapshot (2026-11-24)
 
-Property: `https://aircareprohvac.com/` · Period 2026-10-24 → 2026-11-20 vs 2026-09-26 → 2026-10-23
+Property: `https://aircareprohvac.com/` · Period 2026-10-25 → 2026-11-21 vs 2026-09-27 → 2026-10-24
 
 | Metric | Current 28d | Previous 28d |
 |---|---|---|
-| Clicks | 0 | — |
-| Impressions | 2238 | — |
+| Clicks | 1 | — |
+| Impressions | 2484 | — |
 | CTR | 0.0% | — |
-| Avg position | 51.7 | — |
+| Avg position | 52.5 | — |
 
 ## Top local queries
 | Query | Page | Clicks | Impr. | Pos. |
 |---|---|---|---|---|
 | 24 hour ac repair arlington heights | /ac-repair-arlington-heights/ | 0 | 1 | 83.0 |
-| 24 hour hvac service edgewater | /hvac-andersonville-edgewater/ | 0 | 3 | 52.7 |
+| 24 hour hvac service edgewater | /hvac-andersonville-edgewater/ | 0 | 6 | 44.0 |
 | ac capacitor replacement skokie il | /ac-repair-skokie/ | 0 | 8 | 31.6 |
-| ac coil cleaning skokie il | /ac-repair-skokie/ | 0 | 4 | 44.0 |
+| ac coil cleaning skokie il | /ac-repair-skokie/ | 0 | 5 | 45.0 |
 | ac company schaumburg | /hvac-schaumburg/ | 0 | 2 | 66.5 |
 | ac compressor repair skokie il | /ac-repair-skokie/ | 0 | 2 | 39.0 |
 | ac contractor arlington heights il | /ac-repair-arlington-heights/ | 0 | 1 | 80.0 |
@@ -52,9 +52,9 @@ Property: `https://aircareprohvac.com/` · Period 2026-10-24 → 2026-11-20 vs 2
 | /hvac-evanston/ | PASS | Submitted and indexed | 2026-11-16 |
 | /hvac-skokie/ | PASS | Submitted and indexed | 2026-11-16 |
 | /blog/ | PASS | Submitted and indexed | 2026-11-18 |
-| /free-estimate/ | NEUTRAL | URL is unknown to Google | — |
+| /free-estimate/ | NEUTRAL | Discovered - currently not indexed | — |
 | /maintenance-plan/ | PASS | Submitted and indexed | 2026-11-16 |
 | /furnace-wont-turn-on/ | PASS | Submitted and indexed | 2026-11-16 |
 | /service-areas/ | PASS | Submitted and indexed | 2026-11-16 |
 
-Sitemaps: https://aircareprohvac.com/sitemap-index.xml (submitted 2026-11-23, 137 URLs); https://aircareprohvac.com/sitemap_index.xml (submitted 2026-11-18, 137 URLs)
+Sitemaps: https://aircareprohvac.com/sitemap-index.xml (submitted 2026-11-24, 137 URLs); https://aircareprohvac.com/sitemap_index.xml (submitted 2026-11-18, 137 URLs)
