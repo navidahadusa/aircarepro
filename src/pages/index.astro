@@ -4,7 +4,7 @@
  * Design: Chloe Vance · Copy/photos: Maya Lin · CTAs: Rachel Morgan · Structure: Elena Brooks.
  * Leads go to Housecall Pro (owner decision): BookingPanel replaces on-page forms.
  */
-import { Image } from 'astro:assets';
+import { Image, getImage } from 'astro:assets';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CallSmsCta from '../components/CallSmsCta.astro';
 import TrustBlock from '../components/TrustBlock.astro';
@@ -18,6 +18,10 @@ import { categories, servicesIn } from '../data/services';
 import { getPosts, blogCategories } from '../data/blog';
 
 const hero = heroHeadline();
+// Mobile/tablet hero: the photo is portrait (1050×1400) but shows as a wide strip under the text, so phones get a
+// pre-cropped 16:10 version instead of downloading the full portrait (Lighthouse image savings, 2026-11-24). Chloe Vance.
+const heroCrops = await Promise.all([480, 768, 1050].map((w) => getImage({ src: photos.coilBrushing.src, width: w, height: Math.round(w * 0.625), fit: 'cover', position: 'center', format: 'webp', quality: 45 })));
+const heroMobileSrcset = heroCrops.map((c, i) => `${c.src} ${[480, 768, 1050][i]}w`).join(', ');
 const googleUrl = business.reviewProfiles.find((p) => p.platform === 'Google')?.url;
 const yelpUrl = business.reviewProfiles.find((p) => p.platform === 'Yelp')?.url;
 const svcPhoto = { Heating: photos.carrierFurnace, Cooling: photos.newCondenserRoof, 'Air Quality': photos.humidifier } as const;
@@ -65,7 +69,10 @@ const faqs = [
       </div>
     </div>
     <div class="h2-photo">
-      <Image quality={45} src={photos.coilBrushing.src} alt={photos.coilBrushing.alt} widths={[400, 640, 900]} sizes="(max-width: 900px) 100vw, 45vw" loading="eager" fetchpriority="high" decoding="sync" />
+      <picture>
+        <source media="(max-width: 900px)" srcset={heroMobileSrcset} sizes="100vw" type="image/webp" />
+        <Image quality={45} src={photos.coilBrushing.src} alt={photos.coilBrushing.alt} widths={[400, 640, 900]} sizes="45vw" loading="eager" fetchpriority="high" decoding="sync" />
+      </picture>
     </div>
   </section>
 
