@@ -1,4 +1,6 @@
 # Yelp Ads plan (Olivia Bennett, Lead Generation Manager, with Hannah Carter) · 2026-11-24
+
+> **Owner update (2026-11-24, later):** the actual setup is **$10/day for ads (≈ $300/30 days) + $4/day for another Yelp service (≈ $120/30 days)**, about **$14/day ≈ $420/month** in total. Which service the $4/day is for: TODO(owner) (we track it separately to see whether it pays for itself). Still open: is Yelp on top of the $1,000 or part of it? The budget table below is the earlier $15/day version.
 Approval: Sophia Reynolds · **launch and budget: the owner**
 
 **Owner decision (2026-11-24):** start Yelp Ads at **$15/day** on the new page https://www.yelp.com/biz/chicago-aircare-pro-chicago-2.
