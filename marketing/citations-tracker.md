@@ -8,7 +8,7 @@ Rows: `citations/citation-tracker.csv` · Rules: `citations/nap-standard.md` · 
 |---|---|
 | Legal rebrand **Shad Heating and Cooling LLC → CHICAGO AIRCARE PRO** | ✅ **Approved** |
 | Google Business Profile name update | ✅ **Live 2026-11-20** → `sameAs`: https://www.google.com/maps?cid=18088581127472759753 |
-| Yelp name update | ✅ **New page live**: https://www.yelp.com/biz/chicago-aircare-pro-chicago-2 (URL from the owner 2026-11-23) · old Shad page: merge or close via Yelp support (open) |
+| Yelp name update | ✅ **New page live**: https://www.yelp.com/biz/chicago-aircare-pro-chicago-2 (URL from the owner 2026-11-23) · old Shad page **merged** (owner, by phone with Yelp, 2026-11-24) |
 | BBB name update (business name / DBA on the accredited profile) | 📨 **Requested 2026-11-20**, pending BBB |
 | Housecall Pro public booking name (still "Shad Heating and Cooling") | ⏳ Pending: owner can change it in HCP settings |
 | `sameAs` / review links for GBP, Yelp, BBB | ✅ GBP · ✅ Yelp (2026-11-23) · 🔒 BBB `TODO` |
@@ -61,7 +61,7 @@ Former names to retire everywhere: `Shad Heating and Cooling LLC`, `Shad Heating
 ## Old-name cleanup ("Shad" still showing), checked 2026-11-20 (Hannah Carter)
 - **Website:** clean. The only "Shad" left is the **Housecall Pro booking URL slug** (`book.housecallpro.com/book/Shad-Heating-and-Cooling/…`), and the HCP booking page itself shows the old name to customers. **Fix:** rename the company in Housecall Pro (Settings → Company profile / Online booking), then send the new booking link; it's changed once in `business.bookingUrl` and updates all 137 pages.
 - **Web search** (2026-11-20): no indexed third-party listings found for "Shad Heating and Cooling" + Chicago or + the phone number. The old name isn't widely syndicated, which keeps the cleanup small.
-- **Where it can still appear:** Google Search/Maps caches (update within days to a few weeks after the approved rename) · Apple Maps (claim at Apple Business Connect, after Yelp/BBB) · Bing Places (re-import from GBP) · old Yelp page (merge/close) · BBB (pending) · Housecall Pro texts/invoices/estimates · Facebook page name · business cards, van, invoices.
+- **Where it can still appear:** Google Search/Maps caches (update within days to a few weeks after the approved rename) · Apple Maps (claim at Apple Business Connect, after Yelp/BBB) · Bing Places (re-import from GBP) · BBB (pending) · Housecall Pro texts/invoices/estimates · Facebook page name · business cards, van, invoices.
 - **Owner:** send screenshots of any place that still shows "Shad"; Hannah adds each one here with the fix.
 
 ### Old site deleted (owner, 2026-11-21): erase remaining traces
@@ -70,7 +70,7 @@ Former names to retire everywhere: `Shad Heating and Cooling LLC`, `Shad Heating
 - **Google:** any old URL still in results → **Remove outdated content** tool (search.google.com/search-console/remove-outdated-content). Pages that no longer exist drop out of Google on their own within weeks.
 - **Bing:** Bing Webmaster Tools → Content Removal tool.
 - **Wayback Machine (archive.org):** the owner can email info@archive.org from a domain email, or with proof of ownership, asking to exclude the old domain.
-- **Where the old name really still lives:** Housecall Pro (name + booking link), LSA profile, old Yelp page, BBB (pending), Facebook page name. Fixing these matters more than the deleted site.
+- **Where the old name really still lives:** Housecall Pro (name + booking link), LSA profile, BBB (pending), Facebook page name. Fixing these matters more than the deleted site.
 
 - **2026-11-22:** owner renamed the company in **Housecall Pro**. Next: the new booking link (Online booking → copy link) → update `business.bookingUrl` once (all pages).
 - **2026-11-22:** new Housecall Pro booking link live in `business.bookingUrl` (orgName CHICAGO-AIRCARE-PRO, same token). The site no longer contains the old name anywhere.

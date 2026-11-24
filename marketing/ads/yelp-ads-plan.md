@@ -18,7 +18,7 @@ Olivia's recommendation: **A for the first 30 days if you can**, then cut whiche
 
 ## Before you turn ads on (15 minutes, matters a lot)
 Yelp ads send people to your Yelp page. If the page is thin, you pay for clicks that don't call.
-1. **Old page:** ask Yelp support (biz.yelp.com → Support) to **merge or close the old "Shad Heating and Cooling" page**. Two pages split reviews and confuse customers.
+1. ✅ **Old page merged** (owner, by phone, 2026-11-24). ~~Ask Yelp support (biz.yelp.com → Support) to **merge or close the old "Shad Heating and Cooling" page**. Two pages split reviews and confuse customers.~~
 2. **Business info** on the new page: name CHICAGO AIRCARE PRO · phone (773) 644-8227 · website https://aircareprohvac.com · **hours: open 24 hours, every day** · service area (Chicago North, Northwest and West Sides + Evanston, Skokie, Wilmette, Highland Park, Des Plaines, Arlington Heights, Schaumburg, Naperville) · categories: **Heating & Air Conditioning/HVAC** (add Water Heater or others only if you do that work).
 3. **Services list:** furnace repair and installation, boiler repair and installation (steam and hot water), heat pumps, AC repair and installation, mini-splits, ductwork, thermostats, humidifiers, air purifiers, UV lights, carbon monoxide checks.
 4. **"From the business" text** (paste, plain words):

@@ -144,7 +144,7 @@ export const business: Business = {
     legalApproved: true,
     listings: {
       'Google Business Profile': 'name-updated', // live as CHICAGO AIRCARE PRO (verified from the owner's Maps link 2026-11-20)
-      Yelp: 'name-updated', // NEW Yelp page live as CHICAGO AIRCARE PRO; URL from the owner 2026-11-23. Old 'Shad' page still to be merged/closed via Yelp support
+      Yelp: 'name-updated', // NEW Yelp page live as CHICAGO AIRCARE PRO; URL from the owner 2026-11-23. old 'Shad' page merged into it (owner, by phone with Yelp, 2026-11-24)
       BBB: 'submitted-under-review', // owner requested the BBB name change (2026-11-20)
     },
     newCitationsBlocked: true,
