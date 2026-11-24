@@ -22,7 +22,7 @@ Furnaces, steam and hot-water boilers, heat pumps. Chicago and nearby suburbs.
 
 More: https://aircareprohvac.com/furnace-wont-turn-on/?utm_source=google&utm_medium=organic&utm_campaign=gbp_post
 
-## Holiday extra: Thanksgiving (post Nov 24–25) · Button: Learn more → https://aircareprohvac.com/thanksgiving-thermostat-furnace-prep/?utm_source=google&utm_medium=organic&utm_campaign=gbp_post
+## ✅ Posted 2026-11-24 by the owner · Holiday extra: Thanksgiving · Button: Learn more → https://aircareprohvac.com/thanksgiving-thermostat-furnace-prep/?utm_source=google&utm_medium=organic&utm_campaign=gbp_post
 Image: `marketing/gbp/posts/2026-11-24-thanksgiving.jpg` (owner request 2026-11-24; extra to the weekly Monday post)
 Hosting Thanksgiving this week? Check your heat before the guests arrive.
 
