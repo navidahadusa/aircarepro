@@ -86,6 +86,9 @@ Bing Places, Apple Business Connect (**ready now**, kit: `marketing/citations/ap
 - **LSA is live but quiet:** go through `marketing/ads/lsa-no-leads-checklist.md` and send Lauren the screenshots.
 - **Meta:** follow `marketing/ads/meta-launch-plan.md`; 3 ads ready in `marketing/ads/meta/`.
 
+## Update 2026-11-24: Yelp Ads at $15/day
+Setup checklist and budget options: `marketing/ads/yelp-ads-plan.md`. Fix the Yelp page first (merge the old page, 24/7 hours, services, photos, Request a Quote on).
+
 ## This week (owner to-do, in order)
 1. Post the Monday GBP update.
 2. Merge the open PR (the site improvements go live).
