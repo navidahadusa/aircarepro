@@ -4,7 +4,8 @@
   "h1": "AC Repair in Skokie, IL",
   "service": "ac-repair",
   "city": "skokie",
-  "intro": "AC not cooling in Skokie? We repair central air conditioners of every brand, fast.",
+  "meta": "AC repair, replacement and tune-ups in Skokie, IL: capacitors, coils, refrigerant leaks and R-22 systems. NATE-certified techs, prices before any work.",
+  "intro": "AC repair, AC replacement and tune-ups in Skokie, IL. We repair central air conditioners of every brand, and you see the diagnosis and the price before any work starts.",
   "faqs": [
     {
       "q": "My Skokie AC uses R-22. Can you still fix it?",
@@ -13,6 +14,10 @@
     {
       "q": "How fast can you get to Skokie for ac repair?",
       "a": "We serve Skokie regularly and offer 24/7 emergency service. Call or text {phone} and we'll give you the earliest available time."
+    },
+    {
+      "q": "Should I repair or replace my AC in Skokie?",
+      "a": "It depends on the age of the system, the refrigerant it uses and what failed. A capacitor or contactor is a small repair on any AC. An older R-22 system with a leak or a failed compressor is often a better candidate for replacement. We show you both options, with prices, so you can decide."
     },
     {
       "q": "Why is my AC blowing warm air?",
@@ -44,3 +49,9 @@
 
 <h2>AC Repair cost in Skokie</h2>
 <p>AC repair cost depends on the part, refrigerant type and amount, access and the age of your system. Our technician explains the diagnosis and your options before starting any work. If your AC is old or uses an outdated refrigerant, we&#x27;ll compare repair and replacement honestly.</p>
+
+<h2>Common AC repairs in Skokie: capacitors, coils and refrigerant</h2>
+<p>The most common summer call is an outdoor unit that hums but won't start, which is usually a failed capacitor or contactor. Those are tested and replaced on the spot when we have the part. A frozen indoor coil usually points to low airflow (a clogged filter or dirty coil) or low refrigerant from a leak. A dirty outdoor coil packed with cottonwood makes the system run hot and lose capacity. Cleaning it is part of every <a href="/ac-tune-up/">AC tune-up</a>.</p>
+
+<h2>AC replacement and installation in Skokie</h2>
+<p>Many Skokie homes have air conditioners that are 15 years old or more, and some still run on R-22, a refrigerant that's no longer produced. When a repair doesn't make sense, we size a new system to the house, match the indoor coil to the furnace and check the ductwork before quoting. New-system estimates are free, and financing is available through Optimus, subject to credit approval. See <a href="/ac-installation/">AC installation</a> or <a href="/hvac-skokie/">all heating and cooling services in Skokie</a>.</p>

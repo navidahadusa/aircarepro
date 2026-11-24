@@ -44,6 +44,8 @@ Keywords: "furnace replacement chicago", "new furnace cost chicago", "boiler rep
 | Meta (Ava Martinez) | **$300** | $10/day, call ads | Owner wants Meta; replacement + boiler/steam + retargeting. Plan: `meta-launch-plan.md` |
 | Reserve | **$100** | not spent | Goes to whichever channel brings booked jobs; Google Search (Grace Whitman) waits until LSA is producing |
 
+**Yelp (owner, 2026-11-24, updated): $10/day ads + $4/day another Yelp service (TODO: which) ≈ $420/month.** Earlier figure was $15/day. That's above the $1,000 split: owner to choose option A (add on top, ~$1,350/month total), B (stay at $1,000: LSA $400 · Meta $150 · Yelp ~$450) or C (Yelp smaller). Plan and setup: `yelp-ads-plan.md`.
+
 Review after 14 days with real numbers (calls, booked jobs, cost per lead). If LSA stays silent, fix it first (`lsa-no-leads-checklist.md`) before moving more money.
 
 ## What the team needs from the owner

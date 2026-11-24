@@ -22,6 +22,20 @@ Furnaces, steam and hot-water boilers, heat pumps. Chicago and nearby suburbs.
 
 More: https://aircareprohvac.com/furnace-wont-turn-on/?utm_source=google&utm_medium=organic&utm_campaign=gbp_post
 
+## ✅ Posted 2026-11-24 by the owner · Holiday extra: Thanksgiving · Button: Learn more → https://aircareprohvac.com/thanksgiving-thermostat-furnace-prep/?utm_source=google&utm_medium=organic&utm_campaign=gbp_post
+Image: `marketing/gbp/posts/2026-11-24-thanksgiving.jpg` (owner request 2026-11-24; extra to the weekly Monday post)
+Hosting Thanksgiving this week? Check your heat before the guests arrive.
+
+Run the furnace or boiler through a full cycle a few days ahead, not Thursday morning. Change the furnace filter. Press the test button on every carbon monoxide alarm: the furnace, water heater and a gas oven will all be running for hours.
+
+The day before, open the doors and vents in guest rooms that stay closed most of the year, and move rugs and furniture off the registers.
+
+On the day, lower the thermostat a degree or two once the oven is on and the house fills up. Cooking and a full house add a lot of heat.
+
+Traveling instead? Don't turn the heat off. Keep it in the mid-50s or higher so pipes don't freeze.
+
+If the heat goes out on the holiday, we answer calls and texts 24/7, including Thanksgiving. Furnaces, steam and hot-water boilers and heat pumps in Chicago and nearby suburbs.
+
 ## Week of Nov 30 · Button: Learn more → https://aircareprohvac.com/carbon-monoxide-safety/?utm_source=google&utm_medium=organic&utm_campaign=gbp_post
 Image: `marketing/gbp/posts/2026-11-30.jpg`
 Heating season is carbon monoxide season. Is your CO alarm working?
