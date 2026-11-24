@@ -1,0 +1,67 @@
+---
+/**
+ * Client script for on-page lead forms (Rachel Morgan). Split out of LeadForm.astro so it only ships when forms
+ * are actually rendered: with business.leadCapture = 'housecall-pro' it isn't loaded at all, which removes a
+ * shared tracking.js chunk from every page's critical chain (PageSpeed insight, 2026-11-24, Chloe Vance).
+ */
+---
+<script>
+  import type { track as Track, captureAttribution as Capture } from '../lib/tracking';
+  // Provided by BaseLayout's script (loaded on every page), so tracking.js isn't a separate shared chunk.
+  const { track, captureAttribution } = (window as unknown as { acpTracking: { track: typeof Track; captureAttribution: typeof Capture } }).acpTracking;
+  import { scoreLead } from '../lib/leadScore';
+
+  const attribution = captureAttribution();
+
+  document.querySelectorAll<HTMLFormElement>('form[data-lead-form]').forEach((form) => {
+    if (form.dataset.bound) return;
+    form.dataset.bound = '1';
+    const status = form.querySelector<HTMLElement>('.form-status')!;
+    const { funnel, event, value, placement, endpoint } = form.dataset;
+
+    let started = false;
+    form.addEventListener('focusin', () => {
+      if (started) return;
+      started = true;
+      track('form_start', { funnel, placement });
+    });
+
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        track('form_error', { funnel, placement, reason: 'validation' });
+        return;
+      }
+      const data = Object.fromEntries(new FormData(form).entries());
+      if (data.company_website) return; // bot
+      delete data.company_website;
+
+      const { score, tier, inArea } = scoreLead(data);
+      const payload = { ...data, ...attribution, placement, lead_score: score, lead_tier: tier, in_service_area: inArea, submitted_at: new Date().toISOString(), page: location.href };
+      const button = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
+      button.disabled = true;
+      status.textContent = 'Sending…';
+
+      try {
+        if (endpoint) {
+          const res = await fetch(endpoint, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+            body: JSON.stringify(payload),
+          });
+          if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        } else {
+          console.warn('[LeadForm] PUBLIC_LEAD_ENDPOINT not set — payload:', payload);
+        }
+        // Lead value + funnel let GTM fire Google Ads / Meta conversions with value.
+        track(event as Parameters<typeof track>[0], { funnel, placement, value: Number(value), currency: 'USD', lead_score: score, lead_tier: tier });
+        location.href = `/thank-you/?funnel=${funnel}`;
+      } catch (err) {
+        track('form_error', { funnel, placement, reason: String(err) });
+        status.textContent = 'Something went wrong. Please call or text us instead. We answer 24/7.';
+        button.disabled = false;
+      }
+    });
+  });
+</script>

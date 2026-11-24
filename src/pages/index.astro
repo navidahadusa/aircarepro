@@ -20,8 +20,8 @@ import { getPosts, blogCategories } from '../data/blog';
 const hero = heroHeadline();
 // Mobile/tablet hero: the photo is portrait (1050×1400) but shows as a wide strip under the text, so phones get a
 // pre-cropped 16:10 version instead of downloading the full portrait (Lighthouse image savings, 2026-11-24). Chloe Vance.
-const heroCrops = await Promise.all([480, 768, 1050].map((w) => getImage({ src: photos.coilBrushing.src, width: w, height: Math.round(w * 0.625), fit: 'cover', position: 'center', format: 'webp', quality: 45 })));
-const heroMobileSrcset = heroCrops.map((c, i) => `${c.src} ${[480, 768, 1050][i]}w`).join(', ');
+const heroCrops = await Promise.all([480, 760, 1050].map((w) => getImage({ src: photos.coilBrushing.src, width: w, height: Math.round(w * 0.625), fit: 'cover', position: 'center', format: 'webp', quality: 40 })));
+const heroMobileSrcset = heroCrops.map((c, i) => `${c.src} ${[480, 760, 1050][i]}w`).join(', ');
 const googleUrl = business.reviewProfiles.find((p) => p.platform === 'Google')?.url;
 const yelpUrl = business.reviewProfiles.find((p) => p.platform === 'Yelp')?.url;
 const svcPhoto = { Heating: photos.carrierFurnace, Cooling: photos.newCondenserRoof, 'Air Quality': photos.humidifier } as const;
@@ -93,7 +93,7 @@ const faqs = [
   <section class="section">
     <div class="container process">
       <div class="photo process-photo">
-        <Image quality={50} src={photos.gasPressureTest.src} alt={photos.gasPressureTest.alt} widths={[360, 540, 700]} sizes="(max-width: 900px) calc(100vw - 2rem), 35vw" />
+        <Image quality={40} src={photos.gasPressureTest.src} alt={photos.gasPressureTest.alt} widths={[360, 480, 680]} sizes="(max-width: 900px) calc(100vw - 2rem), 35vw" />
       </div>
       <div>
         <h2>Diagnosis first. Options and prices before any work.</h2>
@@ -114,7 +114,7 @@ const faqs = [
         {svcGroups.map((g) => (
           <article class="svc3-col">
             <a class="svc3-photo" href={`/${g.cat.slug}/`} tabindex="-1" aria-hidden="true">
-              <Image quality={50} src={g.photo.src} alt={g.photo.alt} widths={[360, 540]} sizes="(max-width: 900px) 100vw, 30vw" />
+              <Image quality={40} src={g.photo.src} alt={g.photo.alt} widths={[360, 540]} sizes="(max-width: 900px) 100vw, 30vw" />
             </a>
             <h3><a href={`/${g.cat.slug}/`}>{g.cat.name}</a></h3>
             <ul role="list">{servicesIn(g.cat.name).map((sv) => <li><a href={`/${sv.slug}/`}>{sv.name}</a></li>)}</ul>
@@ -147,7 +147,7 @@ const faqs = [
         </ul>
       </div>
       <div class="photo boiler-photo">
-        <Image quality={50} src={photos.boilerCirculator.src} alt={photos.boilerCirculator.alt} widths={[360, 540, 700]} sizes="(max-width: 900px) calc(100vw - 2rem), 35vw" />
+        <Image quality={40} src={photos.boilerCirculator.src} alt={photos.boilerCirculator.alt} widths={[360, 480, 680]} sizes="(max-width: 900px) calc(100vw - 2rem), 35vw" />
       </div>
     </div>
   </section>
@@ -155,7 +155,7 @@ const faqs = [
   <section class="section section-dark crew">
     <div class="container crew-grid">
       <div class="photo">
-        <Image quality={50} src={photos.gangwayCondenser.src} alt={photos.gangwayCondenser.alt} widths={[360, 540, 720]} sizes="(max-width: 900px) calc(100vw - 2rem), 40vw" />
+        <Image quality={40} src={photos.gangwayCondenser.src} alt={photos.gangwayCondenser.alt} widths={[360, 480, 720]} sizes="(max-width: 900px) calc(100vw - 2rem), 40vw" />
       </div>
       <div>
         <h2>A certified, owner-led crew, on call every day</h2>

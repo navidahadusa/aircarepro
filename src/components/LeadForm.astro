@@ -12,6 +12,7 @@
 import { funnels, type FunnelId } from '../data/leadForms';
 import { business, telHref } from '../data/business';
 import BookingPanel from './BookingPanel.astro';
+import LeadFormScript from './LeadFormScript.astro';
 const useBooking = business.leadCapture === 'housecall-pro';
 
 interface Props {
@@ -93,64 +94,7 @@ const formId = `lead-${f.id}-${placement}`;
 </form>
 )}
 
-<script>
-  import { track, captureAttribution } from '../lib/tracking';
-  import { scoreLead } from '../lib/leadScore';
-
-  const attribution = captureAttribution();
-
-  document.querySelectorAll<HTMLFormElement>('form[data-lead-form]').forEach((form) => {
-    if (form.dataset.bound) return;
-    form.dataset.bound = '1';
-    const status = form.querySelector<HTMLElement>('.form-status')!;
-    const { funnel, event, value, placement, endpoint } = form.dataset;
-
-    let started = false;
-    form.addEventListener('focusin', () => {
-      if (started) return;
-      started = true;
-      track('form_start', { funnel, placement });
-    });
-
-    form.addEventListener('submit', async (e) => {
-      e.preventDefault();
-      if (!form.checkValidity()) {
-        form.reportValidity();
-        track('form_error', { funnel, placement, reason: 'validation' });
-        return;
-      }
-      const data = Object.fromEntries(new FormData(form).entries());
-      if (data.company_website) return; // bot
-      delete data.company_website;
-
-      const { score, tier, inArea } = scoreLead(data);
-      const payload = { ...data, ...attribution, placement, lead_score: score, lead_tier: tier, in_service_area: inArea, submitted_at: new Date().toISOString(), page: location.href };
-      const button = form.querySelector<HTMLButtonElement>('button[type=submit]')!;
-      button.disabled = true;
-      status.textContent = 'Sending…';
-
-      try {
-        if (endpoint) {
-          const res = await fetch(endpoint, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
-            body: JSON.stringify(payload),
-          });
-          if (!res.ok) throw new Error(`HTTP ${res.status}`);
-        } else {
-          console.warn('[LeadForm] PUBLIC_LEAD_ENDPOINT not set — payload:', payload);
-        }
-        // Lead value + funnel let GTM fire Google Ads / Meta conversions with value.
-        track(event as Parameters<typeof track>[0], { funnel, placement, value: Number(value), currency: 'USD', lead_score: score, lead_tier: tier });
-        location.href = `/thank-you/?funnel=${funnel}`;
-      } catch (err) {
-        track('form_error', { funnel, placement, reason: String(err) });
-        status.textContent = 'Something went wrong. Please call or text us instead. We answer 24/7.';
-        button.disabled = false;
-      }
-    });
-  });
-</script>
+{!useBooking && <LeadFormScript />}
 
 <style>
   .lead-form {
