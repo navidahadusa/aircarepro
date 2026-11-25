@@ -4,13 +4,20 @@
  * Only verified facts from business.ts. No invented stats, years or review counts.
  */
 import { business } from '../data/business';
-interface Props { variant?: 'full' | 'credentials' }
+interface Props { variant?: 'full' | 'credentials' | 'estimate' }
 const { variant = 'full' } = Astro.props;
 const steps = [
   { t: 'Test the system', d: 'Gas pressure, temperature rise, refrigerant readings, electrical and airflow, measured before any part is replaced.' },
   { t: 'Explain what we found', d: 'You see the cause and your options, with prices, before any work begins.' },
   { t: 'Repair with your approval', d: 'We repair what can be repaired and recommend replacement only when it’s unsafe or uneconomical.' },
   { t: 'Leave it clean', d: 'Shoe covers, protected floors, and the work area left as we found it.' },
+];
+// New-system estimate process (free-estimate page; owner 2026-11-25: the repair steps didn't fit there).
+const estimateSteps = [
+  { t: 'Look at the home and the system', d: 'Your current furnace, boiler or AC, the ductwork or piping, the venting, and the rooms that are hard to heat or cool.' },
+  { t: 'Size it to the home', d: 'We size the new system to the house with a load calculation, not by copying the old unit.' },
+  { t: 'Written options with prices', d: `Free, in writing, with your options side by side. Financing through ${business.financingPartner}, subject to credit approval, and we check current utility rebates.` },
+  { t: 'You decide, no pressure', d: 'If you go ahead, we install, start up and test the system, and leave the work area clean.' },
 ];
 const creds = [
   { icon: 'license' as const, t: `City of Chicago License #${business.licenseNumber}`, d: 'Licensed for HVAC work in Chicago' },
@@ -25,8 +32,8 @@ const creds = [
   <ul class="creds" role="list">
     {creds.map((c) => <li><strong>{c.t}</strong><small>{c.d}</small></li>)}
   </ul>
-  {variant === "full" && <ol class="steps">
-    {steps.map((s, i) => <li><span class="num" aria-hidden="true">{i + 1}</span><div><strong>{s.t}</strong><p>{s.d}</p></div></li>)}
+  {variant !== "credentials" && <ol class="steps">
+    {(variant === "estimate" ? estimateSteps : steps).map((s, i) => <li><span class="num" aria-hidden="true">{i + 1}</span><div><strong>{s.t}</strong><p>{s.d}</p></div></li>)}
   </ol>}
 </div>
 
