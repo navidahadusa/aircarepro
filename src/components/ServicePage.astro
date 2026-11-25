@@ -11,6 +11,7 @@ import CallSmsCta from '../components/CallSmsCta.astro';
 import FaqSection from '../components/FaqSection.astro';
 import ServiceCards from '../components/ServiceCards.astro';
 import TrustBlock from '../components/TrustBlock.astro';
+import Icon from '../components/Icon.astro';
 import JsonLd from '../components/JsonLd.astro';
 import { business } from '../data/business';
 import { categories, services, servicesIn, serviceBySlug, type Service, type Category } from '../data/services';
@@ -64,7 +65,6 @@ const schema = buildServiceSchema({ name: svc ? svc.name : `${cat.name} services
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <span class="eyebrow">{cat.name} · Chicago &amp; suburbs</span>
         <h1>{svc ? `${svc.name} in Chicago` : cat.headline}</h1>
         <p class="lead">{svc ? svc.intro : cat.intro}</p>
         <CallSmsCta placement={`${svc ? svc.slug : cat.slug}_hero`} heading={svc?.funnel === 'emergency' ? 'Need it fixed now? Call or text 24/7' : undefined} />
@@ -102,22 +102,46 @@ const schema = buildServiceSchema({ name: svc ? svc.name : `${cat.name} services
 
   {sections.length > 0 && (
     <section class="section svc-content">
-      <div class="container">
+      <div class="container svc-layout">
         <div class="prose svc-prose">
-          {sections.map((s) => (
-            <>
-              <h2>{s.h2}</h2>
+          {sections.map((s, i) => (
+            <section id={`s-${i + 1}`} aria-labelledby={`s-${i + 1}-h`}>
+              <h2 id={`s-${i + 1}-h`}>{s.h2}</h2>
               <Fragment set:html={s.html} />
-            </>
+            </section>
           ))}
         </div>
+        <aside class="svc-aside">
+          {sections.length > 2 && (
+            <nav class="card side-box" aria-label="On this page">
+              <h2 class="side-h">On this page</h2>
+              <ul role="list" class="side-list">
+                {sections.map((s, i) => <li><a href={`#s-${i + 1}`}>{s.h2}</a></li>)}
+                <li><a href="#faq">Questions</a></li>
+              </ul>
+            </nav>
+          )}
+          {related.length > 0 && (
+            <nav class="card side-box" aria-label="Related services">
+              <h2 class="side-h">Related services</h2>
+              <ul role="list" class="side-list">
+                {related.map((r) => <li><a href={`/${r.slug}/`}>{r.name} <Icon name="arrow" size={16} /></a></li>)}
+              </ul>
+            </nav>
+          )}
+          <div class="card side-box">
+            <h2 class="side-h">No heat or no AC right now?</h2>
+            <p>We answer calls and texts 24/7, including nights and holidays.</p>
+            <a class="btn btn-emergency" href="/emergency-hvac/#dispatch">Request emergency dispatch</a>
+          </div>
+        </aside>
       </div>
     </section>
   )}
 
   <section class="section section-alt">
     <div class="container">
-      <div class="section-head"><span class="eyebrow">Why homeowners call us</span><h2>Diagnosis first. Options before any work.</h2></div>
+      <div class="section-head"><h2>Diagnosis first. Options before any work.</h2></div>
       <TrustBlock />
     </div>
   </section>
@@ -128,7 +152,7 @@ const schema = buildServiceSchema({ name: svc ? svc.name : `${cat.name} services
         <FaqSection faqs={svc ? svc.faqs : catFaqs} heading={svc ? `${svc.name} questions` : `${cat.name} questions`} />
       </div>
       <div>
-        {related.length > 0 && (
+        {related.length > 0 && sections.length === 0 && (
           <>
             <h2>Related services</h2>
             <ServiceCards items={related} />
@@ -136,7 +160,7 @@ const schema = buildServiceSchema({ name: svc ? svc.name : `${cat.name} services
         )}
         {svc && cityLinks.length > 0 && (
           <>
-            <h2 class="mt">{svc.name} by city</h2>
+            <h2 class:list={{ mt: related.length > 0 && sections.length === 0 }}>{svc.name} by city</h2>
             <ul class="area-pills" role="list">
               {cityLinks.map((c) => <li><a href={c.href}>{svc!.name} {c.name}</a></li>)}
             </ul>
@@ -155,8 +179,8 @@ const schema = buildServiceSchema({ name: svc ? svc.name : `${cat.name} services
     <section class="section section-alt">
       <div class="container">
         <h2>From our blog</h2>
-        <ul class="blog-links" role="list">
-          {blogPosts.map((p) => <li><a href={`/${p.id}/`}><span class="eyebrow">{blogCategories[p.data.category].name}</span><strong>{p.data.title}</strong></a></li>)}
+        <ul class="ruled" role="list">
+          {blogPosts.map((p) => <li><a href={`/${p.id}/`}><strong>{p.data.title}</strong><small>{blogCategories[p.data.category].name}</small><Icon name="arrow" size={18} /></a></li>)}
         </ul>
       </div>
     </section>
@@ -165,10 +189,20 @@ const schema = buildServiceSchema({ name: svc ? svc.name : `${cat.name} services
 
 <style>
   .mt { margin-top: 2rem; }
-  .blog-links { list-style: none; padding: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 16rem), 1fr)); }
-  .blog-links a { display: grid; gap: 0.3rem; padding: 1.1rem 1.25rem; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); text-decoration: none; color: var(--navy-900); }
-  .blog-links a:hover { border-color: var(--blue-500); }
-  .blog-links strong { font-family: var(--font-heading); }
+  .svc-layout { display: grid; gap: 2.5rem; grid-template-columns: minmax(0, 1fr); }
+  @media (min-width: 960px) {
+    .svc-layout { grid-template-columns: minmax(0, 2fr) minmax(16rem, 1fr); }
+    .svc-aside { position: sticky; top: 6rem; align-self: start; }
+  }
+  .svc-aside { display: grid; gap: 1rem; align-content: start; }
+  .side-h { font-size: 1.1rem; margin: 0 0 0.6rem; }
+  .side-box p { margin-bottom: 0.9rem; }
+  .side-list { list-style: none; padding: 0; margin: 0; }
+  .side-list a { display: inline-flex; align-items: center; gap: 0.35rem; min-height: 40px; padding: 0.3rem 0; font-weight: 700; text-decoration: none; line-height: 1.35; }
+  .side-list a :global(.icon) { transition: transform var(--dur-fast) var(--ease-out); }
+  @media (hover: hover) { .side-list a:hover :global(.icon) { transform: translateX(3px); } }
+  .svc-prose > section:first-child h2 { margin-top: 0; }
+  @media (max-width: 959px) { .svc-aside > nav:first-child { display: none; } }
   .svc-grid { display: grid; gap: 1.25rem; grid-template-columns: 1fr 1fr; }
   .svc-grid.has-photo { grid-template-columns: 0.9fr 1fr 1fr; align-items: stretch; }
   .svc-photo { min-height: 320px; }

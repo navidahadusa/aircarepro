@@ -20,7 +20,6 @@ const description = cat ? `${cat.blurb} Practical advice from ${business.display
   <section class="section">
     <div class="container">
       <div class="section-head">
-        <span class="eyebrow">{business.displayName} blog</span>
         <h1>{cat ? `${cat.name} guides` : 'HVAC guides for Chicago homeowners'}</h1>
         <p class="lead">{cat ? cat.blurb : 'Straight answers on furnaces, boilers, AC, heat pumps and indoor air, written by our technicians for Chicago homes.'}</p>
       </div>
@@ -32,9 +31,9 @@ const description = cat ? `${cat.blurb} Practical advice from ${business.display
         {posts.map((p) => (
           <li>
             <a class="post-card" href={`/${p.id}/`}>
-              <span class="eyebrow">{blogCategories[p.data.category].name}{p.data.intent === 'emergency' ? ' · Urgent fix' : ''}</span>
               <strong>{p.data.title}</strong>
-              <span>{p.data.description}</span>
+              <span class="desc">{p.data.description}</span>
+              <span class="cat">{blogCategories[p.data.category].name}{p.data.intent === 'emergency' ? ' · Urgent fix' : ''}</span>
             </a>
           </li>
         ))}
@@ -48,9 +47,13 @@ const description = cat ? `${cat.blurb} Practical advice from ${business.display
   .cats a { padding: 0.45rem 0.9rem; border-radius: 999px; background: var(--ice); text-decoration: none; font-weight: 700; color: var(--navy-900); }
   .cats a[aria-current] { background: var(--navy-800); color: #fff; }
   .posts { list-style: none; padding: 0; display: grid; gap: 1rem; grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr)); }
-  .post-card { display: grid; gap: 0.4rem; align-content: start; height: 100%; padding: 1.25rem; background: #fff; border: 1px solid var(--border); border-radius: var(--radius); text-decoration: none; color: var(--text); }
-  .post-card:hover { border-color: var(--blue-500); box-shadow: var(--shadow); }
-  .post-card strong { font-family: var(--font-heading); color: var(--navy-900); font-size: 1.08rem; }
-  .post-card span:last-child { color: var(--muted); font-size: 0.92rem; }
+  /* 2026-11-25 redesign: ruled two-column index (title, one line, category) instead of a wall of same-size cards. */
+  .posts { gap: 0 clamp(1.25rem, 3vw, 2.5rem); grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); border-top: 1px solid var(--border); }
+  .posts li { border-bottom: 1px solid var(--border); }
+  .post-card { display: grid; gap: 0.3rem; padding: 1.1rem 0.25rem; text-decoration: none; color: var(--text); }
+  .post-card strong { font-family: var(--font-heading); color: var(--navy-900); font-size: 1.1rem; line-height: 1.3; transition: color var(--dur-fast) var(--ease-out); }
+  .post-card:hover strong { color: var(--brand-accent); }
+  .post-card .desc { color: var(--muted); font-size: 0.93rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .post-card .cat { font-size: 0.82rem; font-weight: 700; color: var(--cta); }
   .end { margin-top: 2rem; }
 </style>

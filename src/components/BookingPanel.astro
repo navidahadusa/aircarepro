@@ -21,7 +21,6 @@ const copy: Record<FunnelId, { title: string; sub: string; bookLabel: string }> 
 const c = copy[funnel];
 ---
 <div class:list={['booking', { emergency }]} id={`book-${funnel}`}>
-  <p class="kicker">{emergency ? <><Icon name="siren" size={16} /> Emergency dispatch</> : <><Icon name="calendar" size={16} /> Online booking</>}</p>
   <h2>{c.title}</h2>
   <p class="sub">{c.sub}</p>
 
@@ -52,10 +51,7 @@ const c = copy[funnel];
 </div>
 
 <style>
-  .booking { background: #fff; color: var(--text); border-radius: var(--radius); padding: clamp(1.25rem, 1rem + 1vw, 1.75rem); box-shadow: 0 20px 50px rgb(11 37 69 / 0.25); border-top: 5px solid var(--cta); max-width: 30rem; }
-  .booking.emergency { border-top-color: var(--emergency); }
-  .kicker { display: flex; align-items: center; gap: 0.4rem; margin: 0 0 0.4rem; font-size: 0.8rem; font-weight: 800; letter-spacing: 0.06em; text-transform: uppercase; color: var(--cta); }
-  .emergency .kicker { color: var(--emergency); }
+  .booking { background: #fff; color: var(--text); border-radius: var(--radius); padding: clamp(1.25rem, 1rem + 1vw, 1.75rem); box-shadow: 0 2px 6px rgb(11 37 69 / 0.12), 0 20px 50px rgb(11 37 69 / 0.25); max-width: 30rem; }
   h2 { margin: 0 0 0.4rem; font-size: clamp(1.4rem, 1.2rem + 0.8vw, 1.75rem); }
   .sub { color: var(--muted); margin-bottom: 1.1rem; }
   .big { width: 100%; font-size: 1.1rem; min-height: 56px; }
