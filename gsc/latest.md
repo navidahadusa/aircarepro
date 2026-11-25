@@ -1,19 +1,19 @@
-# Search Console snapshot (2026-11-24)
+# Search Console snapshot (2026-11-25)
 
-Property: `https://aircareprohvac.com/` · Period 2026-10-25 → 2026-11-21 vs 2026-09-27 → 2026-10-24
+Property: `https://aircareprohvac.com/` · Period 2026-10-26 → 2026-11-22 vs 2026-09-28 → 2026-10-25
 
 | Metric | Current 28d | Previous 28d |
 |---|---|---|
 | Clicks | 1 | — |
-| Impressions | 2484 | — |
+| Impressions | 2723 | — |
 | CTR | 0.0% | — |
-| Avg position | 52.5 | — |
+| Avg position | 53.2 | — |
 
 ## Top local queries
 | Query | Page | Clicks | Impr. | Pos. |
 |---|---|---|---|---|
 | 24 hour ac repair arlington heights | /ac-repair-arlington-heights/ | 0 | 1 | 83.0 |
-| 24 hour hvac service edgewater | /hvac-andersonville-edgewater/ | 0 | 6 | 44.0 |
+| 24 hour hvac service edgewater | /hvac-andersonville-edgewater/ | 0 | 8 | 49.5 |
 | ac capacitor replacement skokie il | /ac-repair-skokie/ | 0 | 8 | 31.6 |
 | ac coil cleaning skokie il | /ac-repair-skokie/ | 0 | 5 | 45.0 |
 | ac company schaumburg | /hvac-schaumburg/ | 0 | 2 | 66.5 |
@@ -25,6 +25,7 @@ Property: `https://aircareprohvac.com/` · Period 2026-10-25 → 2026-11-21 vs 2
 | ac emergency repair near arlington heights | /ac-repair-arlington-heights/ | 0 | 1 | 13.0 |
 | ac install in bucktown | /hvac-bucktown/ | 0 | 1 | 67.0 |
 | ac install in rogers park | / | 0 | 2 | 1.5 |
+| ac install in rogers park | /?utm_source=google&utm_medium=organic&utm_campaign=gbp | 0 | 1 | 1.0 |
 | ac install in rogers park | /hvac-norwood-park/ | 0 | 1 | 84.0 |
 | ac install in rogers park | /hvac-portage-park/ | 0 | 2 | 80.5 |
 | ac install in rogers park | /hvac-rogers-park/ | 0 | 3 | 52.0 |
@@ -36,7 +37,6 @@ Property: `https://aircareprohvac.com/` · Period 2026-10-25 → 2026-11-21 vs 2
 | ac installation chicago | /ac-installation/ | 0 | 5 | 59.4 |
 | ac installation evanston il | /hvac-evanston/ | 0 | 1 | 34.0 |
 | ac installation in logan square | /hvac-logan-square/ | 0 | 4 | 4.0 |
-| ac installation near me arlington heights il | /ac-repair-arlington-heights/ | 0 | 2 | 19.0 |
 
 ## Index status of key pages
 | URL | Verdict | Coverage | Last crawl |
@@ -57,4 +57,4 @@ Property: `https://aircareprohvac.com/` · Period 2026-10-25 → 2026-11-21 vs 2
 | /furnace-wont-turn-on/ | PASS | Submitted and indexed | 2026-11-16 |
 | /service-areas/ | PASS | Submitted and indexed | 2026-11-16 |
 
-Sitemaps: https://aircareprohvac.com/sitemap-index.xml (submitted 2026-11-24, 137 URLs); https://aircareprohvac.com/sitemap_index.xml (submitted 2026-11-18, 137 URLs)
+Sitemaps: https://aircareprohvac.com/sitemap-index.xml (submitted 2026-11-25, 140 URLs); https://aircareprohvac.com/sitemap_index.xml (submitted 2026-11-18, 140 URLs)

@@ -1,15 +1,15 @@
 {
   "property": "564399214",
   "measurementId": "G-J25SG73ES5",
-  "generatedAt": "2026-11-24T13:43:31.816Z",
+  "generatedAt": "2026-11-25T13:46:57.872Z",
   "errors": [],
   "totals": {
     "current": {
-      "sessions": 131,
-      "totalUsers": 100,
-      "newUsers": 102,
-      "engagedSessions": 44,
-      "screenPageViews": 248,
+      "sessions": 137,
+      "totalUsers": 104,
+      "newUsers": 106,
+      "engagedSessions": 49,
+      "screenPageViews": 272,
       "keyEvents": 0
     },
     "previous": {
@@ -27,7 +27,7 @@
         "Direct"
       ],
       "vals": [
-        108,
+        112,
         0
       ]
     },
@@ -42,7 +42,7 @@
     },
     {
       "dims": [
-        "Referral"
+        "Organic Social"
       ],
       "vals": [
         5,
@@ -51,19 +51,10 @@
     },
     {
       "dims": [
-        "Organic Social"
+        "Referral"
       ],
       "vals": [
-        3,
-        0
-      ]
-    },
-    {
-      "dims": [
-        "Unassigned"
-      ],
-      "vals": [
-        1,
+        5,
         0
       ]
     }
@@ -74,7 +65,7 @@
         "/"
       ],
       "vals": [
-        101,
+        106,
         0
       ]
     },
@@ -256,7 +247,7 @@
         "Chicago"
       ],
       "vals": [
-        31
+        33
       ]
     },
     {
@@ -309,6 +300,14 @@
     },
     {
       "dims": [
+        "New York"
+      ],
+      "vals": [
+        4
+      ]
+    },
+    {
+      "dims": [
         "Anyang-si"
       ],
       "vals": [
@@ -334,14 +333,6 @@
     {
       "dims": [
         "Minneapolis"
-      ],
-      "vals": [
-        3
-      ]
-    },
-    {
-      "dims": [
-        "New York"
       ],
       "vals": [
         3
@@ -378,7 +369,7 @@
         "desktop"
       ],
       "vals": [
-        73
+        75
       ]
     },
     {
@@ -386,7 +377,7 @@
         "mobile"
       ],
       "vals": [
-        60
+        64
       ]
     }
   ],
@@ -397,7 +388,7 @@
         "book.housecallpro.com"
       ],
       "vals": [
-        4
+        5
       ]
     },
     {
