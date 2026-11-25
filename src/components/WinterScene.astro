@@ -35,8 +35,16 @@ for (const [x, w, h] of near) {
 }
 // Snow (static), varied size and opacity.
 const flakes: Array<[number, number, number, number]> = [];
-for (let i = 0; i < 140; i++) flakes.push([rnd() * 600, rnd() * 760, rnd() < 0.85 ? 0.8 + rnd() * 1.4 : 2.4 + rnd() * 1.6, 0.35 + rnd() * 0.55]);
+for (let i = 0; i < 70; i++) flakes.push([rnd() * 600, rnd() * 760, rnd() < 0.85 ? 0.8 + rnd() * 1.4 : 2.4 + rnd() * 1.6, 0.35 + rnd() * 0.55]);
 const r1 = (n: number) => Math.round(n * 10) / 10;
+// Falling snow (2026-11-25, Impeccable + Emil Kowalski pass): two tiled layers drift down at different speeds, the
+// page's one authored motion. Transform-only (composited), off for prefers-reduced-motion, no effect on LCP.
+// Inline SVG patterns, not CSS background images, so the snow layer is never picked as the LCP element.
+type Flake = [number, number, number, number];
+const layer = (n: number, rMin: number, rMax: number, oMin: number, oMax: number): Flake[] =>
+  Array.from({ length: n }, () => [r1(rnd() * 300), r1(rnd() * 400), r1(rMin + rnd() * (rMax - rMin)), r1(oMin + rnd() * (oMax - oMin))] as Flake);
+const fallFar = layer(26, 0.8, 1.6, 0.35, 0.7);
+const fallNear = layer(12, 1.8, 2.8, 0.55, 0.9);
 ---
 <svg class:list={['winter-scene', className]} viewBox="0 0 600 800" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
   <defs>
@@ -83,4 +91,14 @@ const r1 = (n: number) => Math.round(n * 10) / 10;
     {flakes.map(([x, y, r, o]) => <circle cx={r1(x)} cy={r1(y)} r={r1(r)} opacity={r1(o)} filter={r > 2.3 ? 'url(#ws-blur)' : undefined} />)}
   </g>
 </svg>
-<style>.winter-scene { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }</style>
+<div class="ws-fall ws-far" aria-hidden="true"><svg width="100%" height="100%" focusable="false"><defs><pattern id="ws-p-far" width="300" height="400" patternUnits="userSpaceOnUse">{fallFar.map(([x, y, r, o]) => <circle cx={x} cy={y} r={r} fill="#fff" fill-opacity={o} />)}</pattern></defs><rect width="100%" height="100%" fill="url(#ws-p-far)" /></svg></div>
+<div class="ws-fall ws-near" aria-hidden="true"><svg width="100%" height="100%" focusable="false"><defs><pattern id="ws-p-near" width="300" height="400" patternUnits="userSpaceOnUse">{fallNear.map(([x, y, r, o]) => <circle cx={x} cy={y} r={r} fill="#fff" fill-opacity={o} />)}</pattern></defs><rect width="100%" height="100%" fill="url(#ws-p-near)" /></svg></div>
+<style>
+  .winter-scene { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+  .ws-fall { position: absolute; left: 0; right: 0; top: -400px; height: calc(100% + 400px); pointer-events: none;
+    animation: ws-fall 26s linear infinite; will-change: transform; }
+  .ws-near { animation-duration: 15s; }
+  .ws-fall svg { display: block; }
+  @keyframes ws-fall { from { transform: translate3d(0, 0, 0); } to { transform: translate3d(0, 400px, 0); } }
+  @media (prefers-reduced-motion: reduce) { .ws-fall { animation: none; } }
+</style>
