@@ -14,7 +14,9 @@ Backlinks feed the third point and the website's authority overall. For a local 
 Target: **3–5 relevant local referring domains per month**, plus 15–20 consistent listings in the first month.
 
 ## Baseline (real numbers only)
-- **Referring domains today:** unknown. The Semrush connector has no API units left. Owner step, 1 minute: Search Console → Links → "Top linking sites" → screenshot. Elena logs it as the baseline.
+- **Referring domains (baseline, owner check 2026-11-25): 0.** Search Console → Links shows only internal links, no external ones.
+  - Note: the Search Console property is the URL-prefix `https://aircareprohvac.com/`. Links that point to `http://` or `www.` versions (common for older links from the WordPress years) are not counted there.
+  - A **Domain property** (DNS verification at Hostinger) would show all of them. Search Console also lags weeks behind new links.
 - **Listings live with the new name:** Google ✅ · Yelp ✅ · Facebook ✅ · Housecall Pro ✅ · ChatGPT business profile ✅ · Bing (pending publish) · BBB (rename pending).
 
 ## Decision needed from the owner first
