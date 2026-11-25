@@ -236,7 +236,7 @@ export const business: Business = {
   ],
   brandsServiced: ['Carrier', 'Lennox', 'Trane', 'Goodman', 'Rheem', 'York', 'Comfortmaker'],
   dealerOf: 'Comfortmaker',
-  foundingYear: 2026,
+  // foundingYear removed 2026-11-25: 2026 is the rebrand year, not the founding year. TODO(owner): the year the company started.
   maintenancePlanName: 'Comfort Club',
   financingPartner: 'Optimus',
   serviceCategories,
