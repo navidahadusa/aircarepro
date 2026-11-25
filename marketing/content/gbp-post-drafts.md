@@ -36,11 +36,11 @@ Traveling instead? Don't turn the heat off. Keep it in the mid-50s or higher so 
 
 If the heat goes out on the holiday, we answer calls and texts 24/7, including Thanksgiving. Furnaces, steam and hot-water boilers and heat pumps in Chicago and nearby suburbs.
 
-## Week of Nov 30 · Button: Learn more → https://aircareprohvac.com/carbon-monoxide-safety/?utm_source=google&utm_medium=organic&utm_campaign=gbp_post
+## Week of Nov 30 · Button: Learn more → https://aircareprohvac.com/carbon-monoxide-safety-tips/?utm_source=google&utm_medium=organic&utm_campaign=gbp_post
 Image: `marketing/gbp/posts/2026-11-30.jpg`
 Heating season is carbon monoxide season. Is your CO alarm working?
 
-CO has no smell and no color. Test your alarms this week, and replace any alarm past its expiration date. If an alarm sounds, or anyone feels headache, dizziness or nausea at home, get everyone outside and call 911 first.
+CO has no smell and no color. Illinois requires a working CO alarm within 15 feet of every bedroom in homes with gas heat, a fireplace or an attached garage. Test your alarms this week, and replace any alarm past its expiration date. If an alarm sounds, or anyone feels headache, dizziness or nausea at home, get everyone outside and call 911 first.
 
 During every furnace and boiler visit, our technicians check venting, the heat exchanger and safety controls, because that's where CO problems usually start. Rusted flue pipes and cracked heat exchangers are common in older Chicago homes.
 

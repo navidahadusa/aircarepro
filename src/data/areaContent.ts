@@ -83,6 +83,16 @@ ${glance('Chicago', [['Chicago has about 1.27 million housing units, from bungal
 <p>High-efficiency furnaces vent through PVC on an outside wall. Placement near walkways, gangways and windows, and protection from snow drifts, matter in tight city lots. Removing a chimney-vented furnace can also leave the water heater alone on an oversized chimney, so we check its venting on every replacement.</p>`,
       },
       {
+        h2: 'Furnace repair, furnace installation and AC repair in Chicago',
+        html: `<p>Most calls we get in the city fall into three jobs. Each has its own page with what we check and the causes we see most in Chicago homes:</p>
+<ul>
+<li><a href="/furnace-repair-chicago/">Furnace repair in Chicago</a>: no heat, short-cycling, ignition and flame-sensor faults, blower and pressure-switch problems, day or night.</li>
+<li><a href="/furnace-installation-chicago/">Furnace installation in Chicago</a>: sized to the home with a load calculation, with the chimney and water heater venting checked on every replacement.</li>
+<li><a href="/ac-repair-chicago/">AC repair in Chicago</a>: central air, heat pumps and ductless systems, from capacitors and contactors to refrigerant leaks.</li>
+</ul>
+<p>For radiator heat, see <a href="/boiler-repair/">boiler repair</a> for hot-water and steam systems. Estimates on new systems are free.</p>`,
+      },
+      {
         h2: 'Chicago neighborhoods we serve',
         html: `<p>We focus on the North Side, Northwest Side and West Side. Each neighborhood page covers its own housing stock and the problems we see there:</p>
 <ul>
@@ -314,9 +324,9 @@ ${glance('Lincoln Park', [
   },
 
   ravenswood: {
-    h1: 'Boiler, Radiator & AC Service in Ravenswood, Chicago',
-    title: 'Boiler & AC Repair in Ravenswood | Chicago Aircare Pro',
-    meta: 'Hot-water boiler and radiator service, ductless cooling and loft HVAC in Ravenswood’s Victorian homes, two-flats and conversions. 24/7.',
+    h1: 'Boiler, Furnace & AC Service in Ravenswood, Chicago',
+    title: 'Boiler, Furnace & AC Repair in Ravenswood | Chicago Aircare Pro',
+    meta: 'Boiler and radiator service, furnace installation and ductless cooling for Ravenswood’s Victorian homes, two-flats and loft conversions. 24/7.',
     intro: `${business.displayName} services furnaces, boilers, air conditioners and mini-splits in Ravenswood homes. Many older homes here still heat with radiators, so boiler care and adding cooling without ductwork are a big part of our work in the neighborhood.`,
     sections: [
       {
@@ -332,6 +342,10 @@ ${glance('Lincoln Park', [
 <p>Bleeding radiators, checking the expansion tank and circulator, and verifying safety controls keeps older boilers reliable. A waterlogged expansion tank shows up as a pressure relief valve that drips or a pressure gauge that swings; a weak circulator shows up as cold radiators at the end of the loop.</p>
 <h3>Lofts near the tracks</h3>
 <p>Open loft spaces need careful supply and return placement for even temperatures. Supplies aimed at the living space and returns placed to pull warm air from up high keep a tall room from layering.</p>`,
+      },
+      {
+        h2: 'Furnace installation in Ravenswood',
+        html: `<p>Not every Ravenswood home runs on radiators. Frame houses, rehabbed two-flats and the loft conversions often have forced-air furnaces, and many are on their second or third. When one is due for replacement, we size the new furnace to the home with a load calculation instead of copying the old unit, check the ductwork and returns, and look at the venting: moving to a high-efficiency furnace that vents through PVC can leave the water heater alone on the old chimney. Estimates are free. More on <a href="/furnace-installation-chicago/">furnace installation in Chicago</a> and <a href="/furnace-installation/">how we install furnaces</a>.</p>`,
       },
       {
         h2: 'Start-of-season boiler checklist for Ravenswood homes',
@@ -686,10 +700,10 @@ ${glance('Logan Square', [['Between 2013 and 2019, 224 two-to-four-unit building
   },
 
   'portage-park': {
-    h1: 'Furnace & AC Repair in Portage Park, Chicago',
-    title: 'Furnace & AC Repair in Portage Park | Chicago Aircare Pro',
-    meta: 'Bungalow furnace and AC repair, hot attic fixes, added returns and matched replacements in Portage Park, around Six Corners. 24/7 HVAC service.',
-    intro: `${business.displayName} repairs and installs heating and cooling systems in Portage Park homes, in the heart of Chicago’s Bungalow Belt around Six Corners. Bungalow furnaces on original ducts, finished attics that never get enough air, and furnaces and ACs reaching the end of their life together are what we see most.`,
+    h1: 'Furnace & AC Repair in Portage Park, Chicago (Northwest Side)',
+    title: 'Furnace & AC Repair in Portage Park, Chicago | Chicago Aircare Pro',
+    meta: 'Furnace, boiler and AC repair for Portage Park, Chicago: bungalows around Six Corners on the Northwest Side. Hot attics, added returns, 24/7 service.',
+    intro: `${business.displayName} repairs and installs heating and cooling systems in Portage Park, the Chicago neighborhood on the Northwest Side around Six Corners, next to Jefferson Park and Irving Park. It sits in the heart of the city’s Bungalow Belt. Bungalow furnaces on original ducts, finished attics that never get enough air, and furnaces and ACs reaching the end of their life together are what we see most.`,
     sections: [
       {
         h2: 'Homes and HVAC systems in Portage Park',
@@ -718,6 +732,7 @@ ${glance('Logan Square', [['Between 2013 and 2019, 224 two-to-four-unit building
       { q: 'Why is my bungalow attic so hot?', a: 'Heat collects under the roof and the attic usually gets little or no conditioned air. A mini-split is often the simplest fix.' },
       { q: 'My registers are noisy. Why?', a: 'Many bungalows have too few or too small returns, so the blower strains. Adding return air often fixes the noise and improves airflow.' },
       { q: 'Should I replace my furnace and AC at the same time?', a: 'If both are near end of life, replacing them together gives a matched system and one installation visit. If one is healthy, we’ll say so.' },
+      { q: 'Do you also serve the neighborhoods around Portage Park?', a: 'Yes. We work across Chicago’s Northwest Side, including Jefferson Park, Irving Park, Norwood Park, Albany Park and Avondale. We don’t serve Portage, Indiana; our area is Chicago and nearby Illinois suburbs.' },
       emergencyFaq('Portage Park'),
     ],
     nearbySlugs: ['jefferson-park', 'irving-park', 'norwood-park'],

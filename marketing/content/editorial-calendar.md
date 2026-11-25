@@ -38,7 +38,7 @@ Status key: ☐ to do · ✍ drafted on branch · ✅ published (merged) · **O*
 | Mon Nov 23 | New | Snow Blocking Your Furnace's PVC Vents: What to Do | furnace vent blocked by snow | /furnace-repair/, /carbon-monoxide-safety/ | | ✍ shipped Nov 22 → /furnace-vent-blocked-by-snow/ |
 | Tue Nov 24 | New guide | Steam or Hot-Water Boiler? How to Tell Which You Have | steam vs hot water boiler | /boiler-repair/, /boiler-installation/ | | ✍ shipped Nov 23 → /steam-vs-hot-water-boiler/ |
 | Wed Nov 25 | Seasonal | Hosting Thanksgiving: Thermostat and Furnace Prep | thermostat settings for guests | /furnace-tune-up/, /thermostat-installation/ | | ✍ shipped Nov 24 → /thanksgiving-thermostat-furnace-prep/ (before the holiday) |
-| Fri Nov 27 | Refresh | carbon-monoxide-safety-tips | carbon monoxide safety | /carbon-monoxide-safety/, /furnace-repair/ | F | ☐ |
+| Fri Nov 27 | Refresh | carbon-monoxide-safety-tips | carbon monoxide safety | /carbon-monoxide-safety/, /furnace-repair/ | F (Illinois CO Alarm Detector Act 430 ILCS 135; Chicago rules → 311) | ✍ shipped Nov 25 → /carbon-monoxide-safety-tips/ (rewritten: Illinois/Chicago alarm rules, placement, symptoms, alarm steps, Chicago chimney/vent sources, 5 FAQs) |
 | Mon Nov 30 | Job story | Furnace replacement in a Chicago bungalow | furnace replacement chicago | /furnace-installation/, matching /hvac-<area>/ | **O** (real photos, area, what was found) | ☐ |
 | Tue Dec 1 | Answer | Heat Pump Defrost Mode: Why It Steams in Chicago Cold | heat pump defrost mode | /heat-pump-repair/, /heating/ | | ☐ |
 | Wed Dec 2 | Refresh | cracked-heat-exchanger-signs | cracked heat exchanger | /furnace-repair/, /carbon-monoxide-safety/ | | ☐ |
@@ -47,6 +47,7 @@ Status key: ☐ to do · ✍ drafted on branch · ✅ published (merged) · **O*
 | Mon Dec 7 | Guide | Cold Upstairs Rooms in Bungalows with Finished Attics | bungalow attic cold | /ductwork-repair/, /mini-split-installation/ | | ☐ |
 | Tue Dec 8 | Refresh | how-often-change-furnace-filter | change furnace filter | /furnace-tune-up/, /maintenance-plan/ | | ☐ |
 | Wed Dec 9 | Area post | Heating Courtyard Buildings in Rogers Park and Edgewater | rogers park heating | /hvac-rogers-park/, /hvac-andersonville-edgewater/, /boiler-repair/ | **O** (actual jobs there) | ☐ |
+| Thu Dec 10 | Answer | Are Carbon Monoxide Detectors Required in Chicago Rentals? | chicago carbon monoxide detector law | /carbon-monoxide-safety-tips/, /carbon-monoxide-safety/, /hvac-chicago/ | F (state Act + City code; Autocomplete 2026-11-25: "chicago carbon monoxide detector law", "are carbon monoxide detectors required in chicago") | ☐ |
 | Fri Dec 11 | Guide | Heat Pump Maintenance Before a Chicago Winter: What Gets Checked | heat pump maintenance | /heat-pump-repair/, /ac-repair-schaumburg/, /hvac-des-plaines/ | Search Console: Schaumburg 19.5 · Des Plaines 11 heat pump maintenance | ☐ |
 | Tue Dec 15 | Answer | What Temperature Should a Vacant Chicago House Be Kept at in Winter? | thermostat setting for vacant house winter | /furnace-tune-up/, /maintenance-plan/ | Autocomplete 2026-11-24 | ☐ |
 | Mon Dec 14 | Guide | Boiler Service in Chicago: What a Yearly Steam or Hot-Water Check Covers | boiler service chicago | /boiler-repair/, /maintenance-plan/ | Target keyword Tier B | ☐ |
