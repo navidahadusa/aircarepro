@@ -27,7 +27,7 @@ draft: false
 4. What our technician does: diagnosis first, options and prices before any work
 5. When it's urgent: tie into 24/7 call (the page template adds the emergency box and CTAs automatically)
 
-The template already adds: breadcrumbs, BlogPosting + FAQPage + BreadcrumbList schema, author (Navid, NATE-certified), the safety callout for emergency posts, quick-answer and takeaways boxes, an intent-aware booking panel, related services, more posts, and tracked CTAs (`data-placement="blog_<slug>_…"`).
+The template already adds: breadcrumbs, BlogPosting + FAQPage + BreadcrumbList schema, author (the company: "the Chicago Aircare Pro team"; no personal names, owner 2026-11-25), the safety callout for emergency posts, quick-answer and takeaways boxes, an intent-aware booking panel, related services, more posts, and tracked CTAs (`data-placement="blog_<slug>_…"`).
 
 ## Never
 Prices, response times, statistics, reviews, guarantees or customer stories the owner hasn't confirmed. Stock photos posing as the team. Keyword-stuffed or city-swapped duplicates.

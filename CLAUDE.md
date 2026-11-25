@@ -136,7 +136,7 @@ File: `marketing/daily-reports/YYYY-MM-DD.md` (template: `marketing/daily-report
 | Field | Value |
 |---|---|
 | NAP name (GBP) | **CHICAGO AIRCARE PRO** (copy/headings: "Chicago Aircare Pro") |
-| Legal name | **CHICAGO AIRCARE PRO** (legal rebrand from Shad Heating and Cooling LLC approved); founder Navid, NATE-certified |
+| Legal name | **CHICAGO AIRCARE PRO** (legal rebrand from Shad Heating and Cooling LLC approved). **Owner (2026-11-25): never publish the founder's name anywhere** (site, schema, posts, review replies); content is by "the Chicago Aircare Pro team" |
 | Address | Service-area business: **Chicago, IL**, street hidden (TODO(owner): private record of the GBP verification address) |
 | Phone | **(773) 644-8227** · `tel:+17736448227` (calls and texts) |
 | Email | info@aircareprohvac.com |

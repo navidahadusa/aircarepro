@@ -11,7 +11,7 @@ description: Grow and use Google reviews for CHICAGO AIRCARE PRO (the strongest 
 - Weekly goal: TODO(owner). Suggested: ask 100% of completed jobs.
 
 ## Reply (within 48 hours, every review)
-- Thank by first name, mention the job and area in natural words, sign "Navid, CHICAGO AIRCARE PRO". 2–3 sentences. No phone numbers or offers.
+- Thank by first name, mention the job and area in natural words, sign "The Chicago Aircare Pro team" (never a personal name, owner 2026-11-25). 2–3 sentences. No phone numbers or offers.
 - Negative review: acknowledge, no arguing, offer to make it right offline. Draft only; the owner posts.
 - Drafts go in `marketing/reviews/reply-drafts.md`.
 
