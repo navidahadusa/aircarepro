@@ -268,9 +268,11 @@ export const areasByGroup = (b: Business = business) => {
  * Homepage hero headline. Recommended by Maya Lin, approved by Sophia Reynolds (2026-11-19).
  * Brand-name independent. The heating message runs Nov–Feb, year-round copy the rest of the year.
  */
+/** Heating season (Nov–Feb): drives the winter headline and the winter hero design on the homepage. */
+export const isHeatingSeason = (date = new Date()) => { const m = date.getMonth(); return m >= 10 || m <= 1; };
+
 export const heroHeadline = (date = new Date()) => {
-  const m = date.getMonth(); // 0 = Jan
-  const heatingSeason = m >= 10 || m <= 1;
+  const heatingSeason = isHeatingSeason(date);
   return heatingSeason
     ? { eyebrow: 'Answering 24/7 · nights & holidays', h1Lead: 'Chicago furnace and boiler repair', h1: 'No heat tonight? Call or text, day or night.', sub: 'Furnaces, hot-water and steam boilers. Diagnosis first, then options and prices before any work.' }
     : { eyebrow: 'One crew for both seasons', h1Lead: '', h1: 'Furnace, boiler and AC service from one Chicago crew.', sub: 'Diagnosis first, then options and prices before any work. Two-flats, greystones, bungalows, steam boilers. Call or text 24/7.' };
