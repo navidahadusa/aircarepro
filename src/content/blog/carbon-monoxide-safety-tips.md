@@ -1,40 +1,48 @@
 ---
 {
-  "title": "Carbon Monoxide Safety Tips for Your Home",
-  "description": "Carbon monoxide safety: where to place alarms, warning signs and why yearly furnace and boiler inspections matter. Call (773) 644-8227. 24/7 service.",
+  "title": "Carbon Monoxide Safety in Chicago Homes: Alarms and Signs",
+  "description": "Carbon monoxide safety for Chicago homes: what Illinois requires for CO alarms, where to put them, symptoms, what to do if one sounds, and prevention.",
   "pubDate": "2026-11-15",
-  "updatedDate": "2026-11-15",
+  "updatedDate": "2026-11-25",
   "category": "air-quality",
-  "quickAnswer": "Install CO alarms on every level and near bedrooms, test them monthly, keep vents clear of snow, never run engines or generators indoors and have gas appliances inspected every year.",
+  "quickAnswer": "Put a carbon monoxide alarm on every level of the home and near each bedroom (Illinois law requires one within 15 feet of every room used for sleeping in homes with a gas appliance, fireplace or attached garage). Test alarms monthly and replace them by the date on the back. If an alarm sounds, get everyone outside first, then call 911 or your gas utility from outside. Prevent CO with a yearly furnace or boiler inspection, clear vents after snow, and never run a generator, grill or car in an enclosed space.",
   "takeaways": [
-    "Alarms on every level and near bedrooms",
-    "Know the symptoms",
-    "Get out first, then call",
-    "Inspect equipment yearly"
+    "Illinois: a CO alarm within 15 feet of every sleeping room",
+    "Alarms on every level, tested monthly, replaced by their date",
+    "Alarm sounds: get out first, call from outside",
+    "Flu-like symptoms that ease outside are a warning sign",
+    "Yearly furnace or boiler inspection and clear vents prevent most leaks"
   ],
   "faqs": [
     {
-      "q": "How many CO alarms do I need?",
-      "a": "At least one on every level and near sleeping areas."
+      "q": "Are carbon monoxide detectors required in Chicago?",
+      "a": "Yes. Under the Illinois Carbon Monoxide Alarm Detector Act (430 ILCS 135), homes with a fossil-fuel heater or appliance, a fireplace or an attached garage need at least one working CO alarm within 15 feet of every room used for sleeping. The City of Chicago has its own requirements in the Municipal Code as well. For your building's exact obligations, check the current text of the Act or call 311."
     },
     {
-      "q": "Can I smell carbon monoxide?",
-      "a": "No, it's odorless, which is why alarms are essential."
+      "q": "Who provides CO alarms in a Chicago rental?",
+      "a": "The Illinois Act generally makes the building owner responsible for supplying and installing CO alarms, and the tenant responsible for testing them and replacing batteries. Read the current Act or ask 311 if you're unsure what applies to your building."
     },
     {
-      "q": "What should I do if my alarm chirps?",
-      "a": "A chirp often means low battery or end of life. Check the manual and replace if needed."
+      "q": "Where should carbon monoxide alarms go?",
+      "a": "On every level of the home, including the basement, and in the hallway outside each sleeping area. Follow the height and placement in the alarm's instructions, and keep it several feet away from the furnace, water heater and stove so normal start-up doesn't trigger false alarms."
+    },
+    {
+      "q": "What are the symptoms of carbon monoxide poisoning?",
+      "a": "Headache, dizziness, weakness, nausea or vomiting, chest pain and confusion. They are often described as flu-like. A clue is that several people or pets in the home feel sick at once, and they feel better after leaving the house. Get outside and call 911 if you suspect CO."
+    },
+    {
+      "q": "My CO alarm is chirping. Is that carbon monoxide?",
+      "a": "Usually not. A short chirp every minute or so typically means a low battery or that the alarm has reached its end of life. A full alarm is a loud, repeating pattern. Check the label or manual: if the alarm is past its replacement date, replace it."
     }
   ],
   "related": [
     "carbon-monoxide-safety",
-    "cracked-heat-exchanger-signs",
-    "dry-air-in-winter",
-    "furnace-blowing-cold-air",
     "furnace-tune-up",
-    "how-often-change-furnace-filter",
-    "humidifier-vs-portable",
-    "uv-lights-worth-it"
+    "boiler-repair",
+    "emergency-hvac",
+    "cracked-heat-exchanger-signs",
+    "furnace-vent-blocked-by-snow",
+    "hvac-chicago"
   ],
   "source": "https://aircareprohvac.com/carbon-monoxide-safety-tips/",
   "intent": "emergency",
@@ -43,4 +51,65 @@
 }
 ---
 
-<h2>Install CO alarms</h2><p>Put carbon monoxide alarms on every level and near sleeping areas. Test them monthly and replace them according to the manufacturer&#x27;s date.</p><h2>Know the symptoms</h2><p>Headaches, dizziness, nausea and fatigue that get better when you leave the house can be signs of CO exposure.</p><h2>If the alarm sounds</h2><p>Get everyone outside, call 911 or your gas utility, and don&#x27;t return until it&#x27;s declared safe.</p><h2>Prevention</h2><p>A yearly inspection of your furnace, boiler and venting is the best way to catch problems early.</p><h2>Keep vents clear</h2><p>After snowstorms, check that furnace and water heater vent pipes outside your home aren&#x27;t blocked by snow or ice.</p><h2>Never use these indoors</h2><p>Generators, grills, and gas ovens should never be used to heat your home or run in enclosed spaces like garages.</p><h2>Replace old alarms</h2><p>CO alarms have a limited life. Check the date on the back and replace them when they expire.</p><h2>Where CO comes from</h2><p>Any fuel-burning appliance can produce carbon monoxide, including furnaces, boilers, water heaters, gas stoves, fireplaces, generators and cars. Proper venting and maintenance keep it out of your living space.</p><h2>Why winter is riskier</h2><p>Homes are closed up, heating equipment runs constantly and snow can block vents. That&#x27;s why most CO incidents happen in cold months.</p><h2>What an inspection includes</h2><p>A professional safety inspection includes combustion analysis, CO testing, heat exchanger inspection and venting checks.</p><h2>CO alarm placement tips</h2><p>Install alarms on every level of your home, including the basement, and outside each sleeping area. Follow the manufacturer&#x27;s instructions for height and placement, and avoid putting alarms right next to fuel-burning appliances, which can cause false alarms.</p><h2>Signs of a venting problem</h2><p>Soot around a furnace or water heater, rust on vent pipes, excess moisture on windows near appliances, a yellow or flickering flame and a burning smell can all signal a venting or combustion problem. Call a professional to inspect right away.</p><h2>Carbon monoxide and older Chicago homes</h2><p>Many Chicago homes have furnaces or boilers venting into old masonry chimneys. When an older furnace is replaced with a high-efficiency model that vents through PVC, a water heater left alone in a large chimney may not draft well, which can cause spillage. Chimney liners can also deteriorate over time. A professional inspection checks draft and venting for every gas appliance, not just the furnace.</p><h2>What we look for during a safety inspection</h2><p>We measure carbon monoxide at the appliance and in the living space, perform a combustion analysis, inspect the heat exchanger, check venting for corrosion, disconnections and proper slope, verify draft on atmospheric appliances and check that CO alarms are present and working. Rusted or corroded vent pipes, like those we sometimes find in basements, can leak combustion gases and need replacement.</p><h2>Garages and attached spaces</h2><p>Never warm up a car in an attached garage, even with the door open, and never run generators or gas-powered equipment in garages, basements or near windows. Carbon monoxide can seep into living spaces through doors and gaps.</p><h2>Educating your family</h2><p>Make sure everyone in your home knows what the CO alarm sounds like, how it differs from the smoke alarm and what to do if it goes off: get outside first, then call for help.</p><h2>Space heaters and fireplaces</h2><p>Unvented gas space heaters, gas logs and wood-burning fireplaces can all produce carbon monoxide. Make sure fireplace dampers are open when in use, chimneys are inspected regularly and any gas fireplace is serviced according to the manufacturer&#x27;s recommendations. Never use outdoor propane heaters indoors.</p><h2>CO alarms vs. smoke alarms</h2><p>Smoke alarms don&#x27;t detect carbon monoxide unless they are combination units. Check the label on your alarms, and make sure you have dedicated CO detection on every level of your home. Combination alarms are convenient, but replace them according to the date on the unit.</p><h2>Why yearly inspections matter most</h2><p>Most carbon monoxide problems develop slowly: venting corrodes, chimney liners deteriorate, burners get dirty and heat exchangers fatigue over years. A yearly inspection by a trained technician catches these issues before they become dangerous. We include carbon monoxide testing and venting inspection in every furnace and boiler tune-up, and we&#x27;ll show you anything we find that needs attention.</p><h2>What to do after an alarm</h2><p>After a carbon monoxide alarm, once emergency responders or your gas utility say it&#x27;s safe to return, have every gas appliance inspected before using it again. The source might be a furnace, boiler, water heater, stove or fireplace, or a blocked vent. Our technicians test each appliance, inspect venting and explain what caused the problem and how it was fixed, so your family can feel safe at home again.</p>
+<p>Carbon monoxide (CO) is a gas you can't see, smell or taste. It's produced whenever fuel burns: furnaces, boilers, water heaters, gas stoves, fireplaces, generators and cars. In a healthy system the CO goes up the flue and outside. When a burner runs poorly or a vent is blocked, cracked or disconnected, it can collect inside the home instead. Chicago winters raise the risk: houses are closed up, heating runs for months, and snow and ice can block vents.</p>
+
+<p>This guide covers what Illinois requires, where alarms belong, the warning signs, what to do when an alarm goes off, and the maintenance that prevents most CO problems.</p>
+
+<h2>What Illinois and Chicago require for CO alarms</h2>
+<p>The <strong>Illinois Carbon Monoxide Alarm Detector Act (430 ILCS 135)</strong> requires at least one working carbon monoxide alarm within 15 feet of every room used for sleeping in a home that has a fossil-fuel heater or appliance, a fireplace or an attached garage. That covers most Chicago bungalows, two-flats, greystones and condos with gas heat.</p>
+<ul>
+<li><strong>Rentals:</strong> the Act generally puts supplying and installing the alarms on the building owner, and testing and battery changes on the tenant.</li>
+<li><strong>Chicago:</strong> the City also has carbon monoxide detector requirements in its Municipal Code. For the rules that apply to your building, check the current text or call <strong>311</strong>.</li>
+<li><strong>Free alarms:</strong> the City has offered free smoke and CO alarms to residents through 311. Call 311 to ask whether the program is running and whether you qualify.</li>
+</ul>
+<p>Laws change, so treat this as a summary and confirm the details with the official source.</p>
+
+<h2>Where to put carbon monoxide alarms</h2>
+<ul>
+<li><strong>Every level</strong> of the home, including the basement where the furnace or boiler usually sits.</li>
+<li><strong>Outside each sleeping area</strong>, in the hallway, within 15 feet of the bedroom doors. In a two-flat, each unit needs its own.</li>
+<li><strong>Not right next to fuel-burning appliances.</strong> Keep alarms several feet from the furnace, water heater and stove, and away from bathrooms and drafty windows. Follow the height in the instructions.</li>
+<li><strong>Attached garage:</strong> put an alarm in the room that shares a wall or door with it.</li>
+</ul>
+<p>Test every alarm monthly with its test button, change batteries per the manual, and look at the date on the back. CO alarms wear out; replace them when they reach the date printed on the unit. A combination smoke and CO alarm works too, but a smoke-only alarm does not detect CO, so check the label.</p>
+
+<h2>Signs of carbon monoxide in the house</h2>
+<p>Common symptoms of CO exposure are headache, dizziness, weakness, nausea or vomiting, chest pain and confusion, often mistaken for the flu. Two clues point to CO instead of a virus:</p>
+<ul>
+<li>Several people, or people and pets, feel sick at the same time.</li>
+<li>Symptoms ease when you leave the house and return when you come back.</li>
+</ul>
+<p>Signs on the equipment itself can show a venting or combustion problem before anyone feels sick:</p>
+<ul>
+<li>Soot or scorch marks around the furnace, boiler or water heater.</li>
+<li>A yellow, orange or flickering burner flame instead of a steady blue one.</li>
+<li>Rusted, sagging or disconnected vent pipes (like the corroded flue section pictured above, removed during a repair).</li>
+<li>Heavy condensation on windows near the appliances, or a stale, burning smell when the heat runs.</li>
+</ul>
+<p>Any of these deserve an inspection soon, even if the alarms are quiet.</p>
+
+<h2>If the CO alarm goes off</h2>
+<ol>
+<li><strong>Get everyone outside</strong> into fresh air, including pets. Don't stop to open windows or look for the source.</li>
+<li><strong>Call 911 from outside</strong>, especially if anyone has symptoms. You can also call your gas utility's emergency line: Peoples Gas in Chicago, North Shore Gas or Nicor Gas in the suburbs.</li>
+<li><strong>Stay out</strong> until the fire department or utility says it's safe to go back in.</li>
+<li><strong>Don't restart the equipment</strong> until it has been inspected. The source might be the furnace, boiler, water heater, stove, a fireplace or a blocked vent, and the appliance that was shut off shouldn't run again until the cause is found and fixed.</li>
+</ol>
+<p>After responders clear the house, we can test each gas appliance, inspect the venting and explain what caused the alarm. We answer calls and texts 24/7, including nights and holidays.</p>
+
+<h2>Where carbon monoxide comes from in Chicago homes</h2>
+<p><strong>Old masonry chimneys.</strong> Many Chicago furnaces, boilers and water heaters vent into brick chimneys. Liners deteriorate with age and freeze-thaw cycles. When an old furnace is replaced with a high-efficiency model that vents through PVC, the water heater may be left alone in a chimney sized for two appliances and not draft well, which can spill exhaust into the basement. Checking draft on every gas appliance, not just the furnace, catches this.</p>
+<p><strong>Snow-blocked vents.</strong> High-efficiency furnaces and many boilers vent through PVC pipes in a side wall. Drifting snow or ice can cover them. Most furnaces shut down when the vent is blocked, but the vent should be cleared right away. See <a href="/furnace-vent-blocked-by-snow/">furnace vent blocked by snow</a>.</p>
+<p><strong>Cracked heat exchangers.</strong> In a furnace, the heat exchanger keeps combustion gases separate from the air blown through the house. Cracks develop with age and overheating. Learn the <a href="/cracked-heat-exchanger-signs/">signs of a cracked heat exchanger</a>.</p>
+<p><strong>Things that should never run indoors.</strong> Generators, charcoal or gas grills, outdoor propane heaters and gas-powered tools belong outside, away from windows and doors. Never warm up a car in an attached garage, even with the door open, and never use a gas oven or stove to heat the house. Unvented gas space heaters and gas logs need the manufacturer's clearances and service.</p>
+
+<h2>Prevention: the yearly inspection</h2>
+<p>Most CO problems build slowly: venting corrodes, burners get dirty, liners crumble and heat exchangers fatigue over years. A yearly check by a trained technician catches them early. During a <a href="/furnace-tune-up/">furnace tune-up</a> or boiler service we:</p>
+<ul>
+<li>Measure carbon monoxide at the appliance and in the living space.</li>
+<li>Run a combustion analysis and look at the burner flame.</li>
+<li>Inspect the heat exchanger on furnaces.</li>
+<li>Check vent pipes for corrosion, gaps and proper slope, and verify draft on chimney-vented appliances.</li>
+<li>Check that CO alarms are present and working, and show you anything we find before any repair.</li>
+</ul>
+<p>For steam and hot-water systems, see <a href="/boiler-repair/">boiler repair</a>. For the full safety visit, see <a href="/carbon-monoxide-safety/">carbon monoxide safety</a> service, or our <a href="/emergency-hvac/">24/7 emergency HVAC</a> page if the heat is out and something seems wrong.</p>

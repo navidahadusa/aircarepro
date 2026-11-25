@@ -4,13 +4,12 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import Breadcrumbs from './Breadcrumbs.astro';
 import CallSmsCta from './CallSmsCta.astro';
 interface Props { title: string; description: string; h1: string; lead: string; crumb: string; path: string; eyebrow?: string; noindex?: boolean }
-const { title, description, h1, lead, crumb, path, eyebrow, noindex = false } = Astro.props;
+const { title, description, h1, lead, crumb, path, noindex = false } = Astro.props;
 ---
 <BaseLayout {title} {description} {noindex}>
   <Breadcrumbs items={[{ name: crumb, href: path }]} />
   <section class="hero">
     <div class="container simple-hero">
-      {eyebrow && <span class="eyebrow">{eyebrow}</span>}
       <h1>{h1}</h1>
       <p class="lead">{lead}</p>
       <CallSmsCta placement={`${crumb.toLowerCase()}_hero`} />

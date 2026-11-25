@@ -119,8 +119,27 @@ p { margin: 0 0 1rem; }
 .hero .lead-form { color: var(--text); }
 @media (max-width: 900px) { .hero-grid { grid-template-columns: 1fr; } }
 
-.badge-row { display: flex; flex-wrap: wrap; gap: 0.5rem; list-style: none; padding: 0; margin: 1.25rem 0 0; }
-.badge-row li { background: rgb(255 255 255 / 0.1); border: 1px solid rgb(255 255 255 / 0.2); color: #fff; padding: 0.35rem 0.75rem; border-radius: 999px; font-size: 0.85rem; font-weight: 700; }
+/* Proof line (2026-11-25 redesign): credentials as one quiet line with separators, not a row of pills. */
+.badge-row { display: flex; flex-wrap: wrap; gap: 0.25rem 0; list-style: none; padding: 0; margin: 1.25rem 0 0; font-size: 0.92rem; color: #a9bdd3; }
+.badge-row li:not(:last-child)::after { content: '·'; margin: 0 0.55rem; color: rgb(255 255 255 / 0.35); }
+
+/* Ruled link list (2026-11-25 redesign): rows with a title, an optional line of detail and an arrow.
+   Replaces grids of same-size icon cards for service, post and related links. */
+.ruled { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr)); column-gap: clamp(1.25rem, 3vw, 2.5rem); border-top: 1px solid var(--border); }
+.ruled li { border-bottom: 1px solid var(--border); }
+.ruled a { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 0.1rem 1rem; min-height: 44px; padding: 0.9rem 0.25rem; text-decoration: none; color: var(--text); }
+.ruled strong { grid-column: 1; font-family: var(--font-heading); font-size: 1.05rem; color: var(--navy-900); line-height: 1.3; transition: color var(--dur-fast) var(--ease-out); }
+.ruled small, .ruled .sub { grid-column: 1; font-size: 0.9rem; color: var(--muted); line-height: 1.45; }
+.ruled .icon { grid-column: 2; grid-row: 1 / span 2; color: var(--cta); transition: transform var(--dur-fast) var(--ease-out); }
+.ruled a:hover strong { color: var(--brand-accent); }
+@media (hover: hover) { .ruled a:hover .icon { transform: translateX(3px); } }
+.ruled.one-col { grid-template-columns: 1fr; }
+.section-alt .ruled a { background: transparent; }
+
+/* Callouts: full border + tint (no bar down one side). */
+.note { padding: 1rem 1.15rem; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--blue-50); margin-bottom: 1.25rem; }
+.note.danger { background: #fdecec; border-color: #f2c4c0; }
+.note.answer { background: var(--orange-50); border-color: #f6d6c0; }
 
 .prose { max-width: 46rem; }
 .prose h2 { margin-top: 2.25rem; }

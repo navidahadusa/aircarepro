@@ -58,8 +58,8 @@ const faqs = [
 
   <section class="hero">
     <div class="container hero-inner">
-      <span class="eyebrow">Free resource · Updated {updated}</span>
       <h1>The Chicago Homeowner’s HVAC Guide</h1>
+      <p class="guide-updated">Free resource · Updated {updated}</p>
       <p class="lead">Practical, no-sales advice for Chicago homes and two-flats: what to do when the heat goes out, how to get ready for a cold snap or heat wave, a month-by-month maintenance calendar, and carbon monoxide safety.</p>
       <nav class="toc" aria-label="On this page">
         <a href="#no-heat">No heat checklist</a><a href="#cold-snap">Cold snap</a><a href="#heat-wave">Heat wave</a>
@@ -166,8 +166,9 @@ const faqs = [
   .toc { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 1.25rem; }
   .toc a { color: #fff; background: rgb(255 255 255 / 0.1); border: 1px solid rgb(255 255 255 / 0.25); padding: 0.35rem 0.8rem; border-radius: 999px; text-decoration: none; font-weight: 700; font-size: 0.9rem; }
   .guide ol li, .guide ul li { margin-bottom: 0.4rem; }
-  .callout { padding: 1rem 1.1rem; border-radius: var(--radius-sm); background: var(--blue-50); border-left: 4px solid var(--blue-500); margin: 1rem 0; }
-  .callout.danger { background: #fdecec; border-color: var(--emergency); }
+  .callout { padding: 1rem 1.15rem; border-radius: var(--radius-sm); background: var(--blue-50); border: 1px solid #cddcea; margin: 1rem 0; }
+  .callout.danger { background: #fdecec; border-color: #f2c4c0; }
+  .guide-updated { margin: -0.25rem 0 0.75rem; font-size: 0.92rem; color: #a9bdd3; }
   .cal { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
   .cal th, .cal td { text-align: left; padding: 0.6rem 0.75rem; border-bottom: 1px solid var(--border); vertical-align: top; }
   .cal thead th { background: var(--navy-800); color: #fff; }
