@@ -42,6 +42,11 @@
   --radius: 10px;
   --radius-sm: 8px;
   --shadow: 0 1px 2px rgb(10 31 51 / 0.06), 0 2px 8px rgb(10 31 51 / 0.05);
+  --shadow-lift: 0 2px 4px rgb(10 31 51 / 0.06), 0 10px 24px rgb(10 31 51 / 0.1);
+  /* Motion (Emil Kowalski / Impeccable pass 2026-11-25): strong ease-out, short UI durations. */
+  --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
+  --dur-fast: 160ms;
+  --dur: 240ms;
   --font-heading: 'Plus Jakarta Sans Variable', 'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
@@ -55,10 +60,13 @@
 html { -webkit-text-size-adjust: 100%; scroll-padding-top: 6rem; }
 body { margin: 0; font-family: var(--font); font-size: var(--step-0); color: var(--text); background: var(--bg); line-height: 1.6; }
 img, svg { max-width: 100%; height: auto; }
-a { color: var(--brand-accent); }
+a { color: var(--brand-accent); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+/* Browser surfaces carry the palette too (Impeccable craft floor). */
+::selection { background: #cfe0f2; color: var(--navy-900); }
+html { accent-color: var(--cta); caret-color: var(--cta); }
 a:hover { color: var(--navy-700); }
 :focus-visible { outline: 3px solid var(--cta); outline-offset: 2px; border-radius: 4px; }
-h1, h2, h3 { font-family: var(--font-heading); line-height: 1.12; color: var(--navy-900); letter-spacing: -0.02em; font-weight: 800; }
+h1, h2, h3 { text-wrap: balance; font-family: var(--font-heading); line-height: 1.12; color: var(--navy-900); letter-spacing: -0.02em; font-weight: 800; }
 h1 { font-size: var(--step-3); margin: 0 0 0.75rem; }
 h2 { font-size: var(--step-2); margin: 0 0 0.75rem; }
 h3 { font-size: var(--step-1); margin: 0 0 0.5rem; }
@@ -86,8 +94,9 @@ p { margin: 0 0 1rem; }
 
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 52px;
   padding: 0.8rem 1.4rem; border-radius: 12px; font-weight: 800; font-family: var(--font-heading); font-size: 1rem; text-decoration: none;
-  border: 2px solid transparent; cursor: pointer; white-space: nowrap; transition: background 0.15s, transform 0.15s; line-height: 1.1; }
-.btn:active { transform: translateY(1px); }
+  border: 2px solid transparent; cursor: pointer; white-space: nowrap; line-height: 1.1;
+  transition: background-color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out); }
+.btn:active { transform: scale(0.97); }
 .btn-primary { background: var(--cta); color: #fff; }
 .btn-primary:hover { background: var(--cta-hover); color: #fff; }
 .btn-secondary { background: #fff; color: var(--navy-800); border-color: var(--navy-800); }
