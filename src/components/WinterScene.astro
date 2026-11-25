@@ -1,0 +1,86 @@
+---
+/**
+ * Winter hero scene for the homepage (Nov–Feb). Owner 2026-11-24: winter design in the style of the GBP cover,
+ * no furnace/boiler or other equipment. Original illustration: winter-night sky, layered city silhouette with warm lit
+ * windows (heat inside), static snow and a snowy foreground. Decorative only (aria-hidden). Owner: Chloe Vance.
+ */
+interface Props { class?: string }
+const { class: className } = Astro.props;
+
+// Deterministic pseudo-random so every build renders the same scene.
+let seed = 20261124;
+const rnd = () => ((seed = (seed * 1664525 + 1013904223) % 4294967296) / 4294967296);
+
+// Near skyline: [x, width, height] in a 600×800 viewBox; ground line at y = 690.
+const G = 690;
+const S = 0.66; // building height scale: leaves winter sky above the skyline
+const near: Array<[number, number, number]> = ([
+  [0, 46, 150], [44, 38, 210], [80, 52, 170], [130, 34, 260], [162, 58, 330], [218, 30, 230],
+  [246, 54, 420], [298, 40, 300], [336, 62, 360], [396, 36, 250], [430, 56, 470], [484, 42, 280],
+  [524, 40, 340], [562, 44, 200],
+] as Array<[number, number, number]>).map(([x, w, h]) => [x, w, Math.round(h * S)] as [number, number, number]);
+// Far skyline (lighter, behind).
+const far: Array<[number, number, number]> = ([
+  [0, 70, 230], [64, 50, 300], [110, 60, 260], [168, 44, 380], [208, 70, 290], [276, 50, 350],
+  [322, 64, 280], [384, 46, 400], [428, 70, 320], [494, 52, 370], [544, 60, 260],
+] as Array<[number, number, number]>).map(([x, w, h]) => [x, w, Math.round(h * S)] as [number, number, number]);
+const windows: Array<[number, number, number]> = [];
+for (const [x, w, h] of near) {
+  const top = G - h;
+  for (let y = top + 14; y < G - 18; y += 16) {
+    for (let wx = x + 6; wx < x + w - 8; wx += 10) {
+      if (rnd() < 0.16) windows.push([wx, y, rnd() < 0.35 ? 0.95 : 0.6]);
+    }
+  }
+}
+// Snow (static), varied size and opacity.
+const flakes: Array<[number, number, number, number]> = [];
+for (let i = 0; i < 140; i++) flakes.push([rnd() * 600, rnd() * 760, rnd() < 0.85 ? 0.8 + rnd() * 1.4 : 2.4 + rnd() * 1.6, 0.35 + rnd() * 0.55]);
+const r1 = (n: number) => Math.round(n * 10) / 10;
+---
+<svg class:list={['winter-scene', className]} viewBox="0 0 600 800" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+  <defs>
+    <linearGradient id="ws-sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0b1f3d" />
+      <stop offset="0.45" stop-color="#1d4677" />
+      <stop offset="0.78" stop-color="#5f8fc4" />
+      <stop offset="1" stop-color="#a9c8e8" />
+    </linearGradient>
+    <radialGradient id="ws-glow" cx="0.5" cy="0.37" r="0.32">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.35" />
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="ws-snow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f4f8fd" />
+      <stop offset="1" stop-color="#c9dbef" />
+    </linearGradient>
+    <filter id="ws-blur"><feGaussianBlur stdDeviation="1.1" /></filter>
+  </defs>
+  <rect width="600" height="800" fill="url(#ws-sky)" />
+  <rect width="600" height="800" fill="url(#ws-glow)" />
+  <circle cx="300" cy="300" r="20" fill="#eef4fb" opacity="0.85" />
+  <g fill="#5d84b3" opacity="0.55">
+    {far.map(([x, w, h]) => <rect x={x} y={G - h} width={w} height={h} />)}
+  </g>
+  <g fill="#14315a">
+    {near.map(([x, w, h], i) => <>
+      <rect x={x} y={G - h} width={w} height={h} />
+      {(i === 6 || i === 10) && <>
+        <rect x={x + w * 0.3} y={G - h - 34} width="3" height="34" />
+        <rect x={x + w * 0.65} y={G - h - 28} width="3" height="28" />
+      </>}
+      {i === 8 && <polygon points={`${x},${G - h} ${x + w},${G - h} ${x + w - 10},${G - h - 24} ${x + 10},${G - h - 24}`} />}
+    </>)}
+  </g>
+  <g fill="#ffcf7a">
+    {windows.map(([x, y, o]) => <rect x={x} y={y} width="5" height="7" opacity={o} />)}
+  </g>
+  <g fill="#f4f8fd">
+    {near.map(([x, w, h]) => <rect x={x} y={G - h - 3} width={w} height="4" rx="2" opacity="0.9" />)}
+  </g>
+  <path d={`M0 ${G - 8} C 120 ${G - 26}, 240 ${G + 4}, 360 ${G - 14} S 540 ${G - 20}, 600 ${G - 10} L600 800 L0 800 Z`} fill="url(#ws-snow)" />
+  <g fill="#ffffff">
+    {flakes.map(([x, y, r, o]) => <circle cx={r1(x)} cy={r1(y)} r={r1(r)} opacity={r1(o)} filter={r > 2.3 ? 'url(#ws-blur)' : undefined} />)}
+  </g>
+</svg>
+<style>.winter-scene { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }</style>
