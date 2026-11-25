@@ -149,7 +149,7 @@ export function buildBlogPostingSchema(opts: {
     datePublished: opts.pubDate.toISOString().slice(0, 10),
     dateModified: (opts.updatedDate ?? opts.pubDate).toISOString().slice(0, 10),
     ...(opts.image && { image: opts.image }),
-    author: { '@type': 'Person', name: 'Navid', jobTitle: 'Founder, NATE-certified HVAC technician', worksFor: { '@id': businessId(b) } },
+    author: { '@id': businessId(b) }, // Owner (2026-11-25): no personal name on the site; posts are by the company.
     publisher: { '@id': businessId(b) },
   };
 }

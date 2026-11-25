@@ -29,9 +29,9 @@ Owners: **Hannah Carter** (profiles), **Rachel Morgan** (requests and tracking) 
 Customers who mention the **service** and the **neighborhood** ("fixed our boiler in Rogers Park") help local rankings. It's fine to say: "If you mention what we fixed, that helps other people with the same problem."
 
 ## Replying to reviews
-- **5★:** "Thank you, {name}! Glad we could get your {furnace/boiler/AC} running again in {area}. We're here 24/7 if you ever need us. – Navid, Chicago Aircare Pro"
+- **5★:** "Thank you, {name}! Glad we could get your {furnace/boiler/AC} running again in {area}. We're here 24/7 if you ever need us. – The Chicago Aircare Pro team"
 - **4★:** "Thanks for the review, {name}! If there's anything we could have done better, call us at (773) 644-8227. We'd love to hear it."
-- **1–3★:** "We're sorry, {name}. That's not the experience we want for anyone. Please call Navid directly at (773) 644-8227 so we can make it right." (No arguing, no customer details in public.)
+- **1–3★:** "We're sorry, {name}. That's not the experience we want for anyone. Please call us directly at (773) 644-8227 so we can make it right." (No arguing, no customer details in public.)
 
 ## Leave-behind card (print)
 "Thanks for choosing Chicago Aircare Pro! Scan to leave a Google review." + QR code (`review-qr.png` → https://aircareprohvac.com/review/) + phone (773) 644-8227.

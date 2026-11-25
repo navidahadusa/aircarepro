@@ -11,7 +11,7 @@ AI assistants answer "best HVAC company in Chicago / furnace repair near Lincoln
 - Every service, area and blog page opens with a **2–3 sentence direct answer** (the `quickAnswer` / intro): who, what, where in Chicago, 24/7, how to reach us. Facts only, no fluff (`marketing/unslop-style.md`).
 - Question-style H2s that match how people ask ("How much does furnace repair cost in Chicago?"). Answer in the first sentence under the heading. **Never invent prices**: say what drives the price and that we quote before any work.
 - FAQ sections via `FaqSection` (FAQPage schema must match visible text).
-- Entity facts identical everywhere: `business.name`, phone, 24/7, license #3065598, areas, services, founder Navid, NATE/EPA 608, BBB, Comfortmaker dealer. Pull from `business.*`, never retype.
+- Entity facts identical everywhere: `business.name`, phone, 24/7, license #3065598, areas, services, NATE/EPA 608 (never the founder's name, owner 2026-11-25), BBB, Comfortmaker dealer. Pull from `business.*`, never retype.
 - Keep `/llms.txt` (`src/pages/llms.txt.ts`) current when pages, services or areas change.
 - `robots.txt` must not block GPTBot, OAI-SearchBot, PerplexityBot, ClaudeBot, Google-Extended, Bingbot, Applebot. Check after any robots change.
 - Bing matters for ChatGPT/Copilot: IndexNow pings run on deploy (`scripts/indexnow.mjs`); Bing Places is in the citation queue.

@@ -58,7 +58,7 @@ Owner shortcuts (`.claude/commands/`): `/daily [focus]` · `/sprint <goal>` · `
 ### Rebrand status (keep exact)
 - Legal rebrand **"Shad Heating and Cooling LLC" → "CHICAGO AIRCARE PRO": APPROVED.**
 - **Google Business Profile: name UPDATED, live as CHICAGO AIRCARE PRO (2026-11-20).** URL in `sameAs` + `reviewProfiles`: https://www.google.com/maps?cid=18088581127472759753 (if Google later asks for proof: `marketing/citations/gbp-rename-evidence.md`).
-- **Yelp: owner opened a NEW page as CHICAGO AIRCARE PRO (2026-11-20).** The old "Shad Heating and Cooling" Yelp page must be merged into it or closed via Yelp support (duplicates hurt NAP consistency). **New page live, URL from the owner 2026-11-23: https://www.yelp.com/biz/chicago-aircare-pro-chicago-2** (in `sameAs` + `reviewProfiles`). Old page merge/close still open.
+- **Yelp: owner opened a NEW page as CHICAGO AIRCARE PRO (2026-11-20).** The old "Shad Heating and Cooling" Yelp page must be merged into it or closed via Yelp support (duplicates hurt NAP consistency). **New page live, URL from the owner 2026-11-23: https://www.yelp.com/biz/chicago-aircare-pro-chicago-2** (in `sameAs` + `reviewProfiles`). **Old "Shad" page merged into the new one: owner resolved it by phone with Yelp (confirmed 2026-11-24).**
 - **BBB: name change requested by the owner (2026-11-20), pending BBB.**
 - `sameAs` / `reviewProfiles`: GBP and Yelp done; BBB stays `TODO` until the owner provides its live URL.
 - **New citations wait** until the existing listings are updated (`business.rebrand.newCitationsBlocked = true`).
@@ -136,7 +136,7 @@ File: `marketing/daily-reports/YYYY-MM-DD.md` (template: `marketing/daily-report
 | Field | Value |
 |---|---|
 | NAP name (GBP) | **CHICAGO AIRCARE PRO** (copy/headings: "Chicago Aircare Pro") |
-| Legal name | **CHICAGO AIRCARE PRO** (legal rebrand from Shad Heating and Cooling LLC approved); founder Navid, NATE-certified |
+| Legal name | **CHICAGO AIRCARE PRO** (legal rebrand from Shad Heating and Cooling LLC approved). **Owner (2026-11-25): never publish the founder's name anywhere** (site, schema, posts, review replies); content is by "the Chicago Aircare Pro team" |
 | Address | Service-area business: **Chicago, IL**, street hidden (TODO(owner): private record of the GBP verification address) |
 | Phone | **(773) 644-8227** · `tel:+17736448227` (calls and texts) |
 | Email | info@aircareprohvac.com |
@@ -167,7 +167,7 @@ File: `marketing/daily-reports/YYYY-MM-DD.md` (template: `marketing/daily-report
 | Platform | Status | URL (→ `sameAs`) |
 |---|---|---|
 | Google Business Profile | **Renamed to CHICAGO AIRCARE PRO (live 2026-11-20)** | https://www.google.com/maps?cid=18088581127472759753 |
-| Yelp | **New page live (URL 2026-11-23)**; old Shad page still to merge/close | https://www.yelp.com/biz/chicago-aircare-pro-chicago-2 |
+| Yelp | **New page live (URL 2026-11-23)**; old Shad page **merged** (owner, by phone, 2026-11-24) | https://www.yelp.com/biz/chicago-aircare-pro-chicago-2 |
 | BBB | Existing, accredited · **name change requested 2026-11-20** | TODO(owner) after BBB updates it |
 | Facebook | Existing (found in live-site schema) | https://www.facebook.com/Aircareprohvac/ |
 | Next: Bing Places, Apple Business Connect, Nextdoor, Comfortmaker locator, Angi/HomeAdvisor, Thumbtack, Houzz, aggregators, Andersonville/Edgewater chambers | **Apple Business Connect: unblocked (queued right after Yelp, kit ready).** The rest wait for the BBB rename (GBP + Yelp done) | |

@@ -7,7 +7,7 @@ Crawled from the live site's sitemaps (Rank Math): **105 URLs**, made up of 35 b
 | Item | Value on the live site |
 |---|---|
 | Brand | "Chicago Aircare Pro" in copy and titles; "CHICAGO AIRCARE PRO" in Rank Math schema |
-| Legal entity | Shad Heating and Cooling LLC (registered in Illinois, 2026); founder Navid, NATE-certified |
+| Legal entity | Shad Heating and Cooling LLC (registered in Illinois, 2026); founder NATE-certified (name not published, owner 2026-11-25) |
 | Phone | (773) 644-8227 · `tel:+17736448227` |
 | Email | info@aircareprohvac.com |
 | Address | **None published.** Schema gives Chicago, IL only, with geo 41.98881, -87.6606 (Andersonville/Edgewater area) → service-area business |

@@ -47,7 +47,7 @@ const placement = `blog_${post.id}`;
         <a class="eyebrow" href={`/blog/${d.category}/`}>{cat.name}</a>
         <h1>{d.title}</h1>
         <p class="lead">{d.description}</p>
-        <p class="meta">By Navid, NATE-certified technician · {business.displayName} · Updated {fmt(d.updatedDate ?? d.pubDate)}</p>
+        <p class="meta">By the {business.displayName} team (NATE-certified technicians) · Updated {fmt(d.updatedDate ?? d.pubDate)}</p>
         {emergency && (
           <div class="urgent">
             <a class="btn btn-emergency" href={telHref()} data-track="click_to_call" data-placement={`${placement}_top`}><Icon name="phone" /> Call {business.phoneDisplay}</a>
