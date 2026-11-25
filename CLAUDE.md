@@ -18,6 +18,8 @@ Owner shortcuts (`.claude/commands/`): `/daily [focus]` · `/sprint <goal>` · `
 
 **Team skills (`.claude/skills/`, used automatically, including by the daily run):** `keyword-research` (Elena; Search Console + Autocomplete via `scripts/keyword-ideas.mjs` + Semrush/Ahrefs/HarborRank when connected) · `local-seo-page` (Elena/Maya) · `hvac-blog-post` (Maya) · `lead-gen-landing` (Rachel/Chloe) · `web-design-qa` (Chloe) · `ai-search-visibility` (Elena; AI answers/GEO) · `rank-tracking` (Elena) · `review-engine` (Hannah) · `competitor-gap` (Elena/Natalie). Use the matching skill before that kind of work.
 
+**Design skills (third-party, added 2026-11-25 by owner request; Chloe Vance + Sophia; list and exclusions in `.claude/skills/README.md`):** `impeccable` (design/critique/polish/audit) · `ui-ux-pro-max` (UX guidelines, palettes, fonts, accessibility) · `design-taste-frontend` (Taste skill: anti-template layouts and copy) · Emil Kowalski's `emil-design-eng`, `improve-animations`, `review-animations`, `animation-performance`, `animation-vocabulary`, `find-animation-opportunities`, `choreograph`, `break-ui`. **Project rules always win** (this file, `marketing/unslop-style.md`, real photos only, no invented facts, Lakefront Trust design system). Their scripts, binaries and hooks are not installed; verify with `web-design-qa`.
+
 **60-day goal (owner, 2026-11-22):** Google page one + AI answers by 2027-01-21. Plan: `marketing/seo/60-day-page-one-plan.md`; targets: `marketing/seo/target-keywords.md`; weekly scorecard: `marketing/seo/rank-scorecard.md`.
 
 ## The team (all she/her; 11 people since 2026-11-23). Roster with visual profile notes: `marketing/team/roster.md`
