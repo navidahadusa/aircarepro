@@ -147,7 +147,7 @@ export const business: Business = {
       Yelp: 'name-updated', // NEW Yelp page live as CHICAGO AIRCARE PRO; URL from the owner 2026-11-23. old 'Shad' page merged into it (owner, by phone with Yelp, 2026-11-24)
       BBB: 'submitted-under-review', // owner requested the BBB name change (2026-11-20)
     },
-    newCitationsBlocked: true,
+    newCitationsBlocked: false, // owner 2026-11-25: start the directory rollout (GBP + Yelp + site match; BBB updated when it lands)
   },
   tagline: 'Heating & Cooling',
   description:

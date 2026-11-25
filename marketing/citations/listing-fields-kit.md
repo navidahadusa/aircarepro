@@ -8,7 +8,8 @@ CHICAGO AIRCARE PRO is a licensed (City of Chicago License #3065598), BBB accred
 ## Social profiles
 - Facebook: https://www.facebook.com/Aircareprohvac/
 - Google: https://www.google.com/maps?cid=18088581127472759753
-- Yelp / BBB: add once the owner sends the new URLs
+- Yelp: https://www.yelp.com/biz/chicago-aircare-pro-chicago-2
+- BBB: add once BBB finishes the rename
 
 ## Services (name: description)
 Furnace Repair: No heat, short-cycling and error codes on gas furnaces, 24/7.
@@ -44,7 +45,7 @@ Long version (use if the field allows ~1,500 characters):
 
 CHICAGO AIRCARE PRO is a residential heating and cooling company based in Chicago, Illinois, open 24 hours a day, 7 days a week, including nights, weekends and holidays. We repair, install and maintain gas furnaces, steam and hot-water boilers, central air conditioners, heat pumps and ductless mini-splits, plus whole-home humidifiers, dehumidifiers, air purifiers, UV air sanitizers, ductwork and carbon monoxide safety.
 
-We serve all of Chicago, including Lincoln Park, Lakeview, Lincoln Square, Uptown, Edgewater, Rogers Park, Logan Square, Irving Park, Portage Park, Bucktown, Wicker Park and Humboldt Park, and the suburbs of Evanston, Skokie, Wilmette, Highland Park, Des Plaines, Arlington Heights, Schaumburg and Naperville.
+We serve Chicago’s North, Northwest and West Sides, including Lincoln Park, Lakeview, Lincoln Square, Uptown, Edgewater, Rogers Park, Logan Square, Irving Park, Portage Park, Bucktown, Wicker Park and Humboldt Park, and the suburbs of Evanston, Skokie, Wilmette, Highland Park, Des Plaines, Arlington Heights, Schaumburg and Naperville.
 
 City of Chicago License #3065598. NATE and EPA 608 certified technicians. BBB accredited. Authorized Comfortmaker dealer; we also service Carrier, Lennox, Trane, Goodman, Rheem and York. We know the boilers and furnaces in Chicago bungalows, two-flats and greystones.
 

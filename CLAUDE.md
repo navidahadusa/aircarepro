@@ -63,7 +63,7 @@ Owner shortcuts (`.claude/commands/`): `/daily [focus]` · `/sprint <goal>` · `
 - **Yelp: owner opened a NEW page as CHICAGO AIRCARE PRO (2026-11-20).** The old "Shad Heating and Cooling" Yelp page must be merged into it or closed via Yelp support (duplicates hurt NAP consistency). **New page live, URL from the owner 2026-11-23: https://www.yelp.com/biz/chicago-aircare-pro-chicago-2** (in `sameAs` + `reviewProfiles`). **Old "Shad" page merged into the new one: owner resolved it by phone with Yelp (confirmed 2026-11-24).**
 - **BBB: name change requested by the owner (2026-11-20), pending BBB.**
 - `sameAs` / `reviewProfiles`: GBP and Yelp done; BBB stays `TODO` until the owner provides its live URL.
-- **New citations wait** until the existing listings are updated (`business.rebrand.newCitationsBlocked = true`).
+- **New citations: rollout STARTED (owner, 2026-11-25)** (`business.rebrand.newCitationsBlocked = false`). GBP, Yelp and the site match; BBB is updated when its rename lands. Owner submits, Hannah prepares each listing: `marketing/citations/directory-rollout-2026-11.md`.
 - Code source of truth: `business.rebrand` in `src/data/business.ts`; tracker: `marketing/citations-tracker.md`.
 
 ### Daily Executive Report (required after every run)
@@ -172,7 +172,7 @@ File: `marketing/daily-reports/YYYY-MM-DD.md` (template: `marketing/daily-report
 | Yelp | **New page live (URL 2026-11-23)**; old Shad page **merged** (owner, by phone, 2026-11-24) | https://www.yelp.com/biz/chicago-aircare-pro-chicago-2 |
 | BBB | Existing, accredited · **name change requested 2026-11-20** | TODO(owner) after BBB updates it |
 | Facebook | Existing (found in live-site schema) | https://www.facebook.com/Aircareprohvac/ |
-| Next: Bing Places, Apple Business Connect, Nextdoor, Comfortmaker locator, Angi/HomeAdvisor, Thumbtack, Houzz, aggregators, Andersonville/Edgewater chambers | **Apple Business Connect: unblocked (queued right after Yelp, kit ready).** The rest wait for the BBB rename (GBP + Yelp done) | |
+| Next: Bing Places, Apple Business Connect, Nextdoor, Comfortmaker locator, Angi/HomeAdvisor, Thumbtack, Houzz, aggregators, Andersonville/Edgewater chambers | **Rollout started 2026-11-25 (owner OK).** Order and paste-ready fields: `marketing/citations/directory-rollout-2026-11.md` | |
 
 Known NAP issues: duplicate LocalBusiness schema on the live site (unformatted phone, malformed hours); name casing.
 
