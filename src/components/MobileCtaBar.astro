@@ -26,13 +26,13 @@ import { business, telHref, smsHref } from '../data/business';
       position: fixed; left: 0; right: 0; bottom: 0; z-index: 60;
       display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 0.5rem;
       padding: 0.6rem 0.75rem calc(0.6rem + env(safe-area-inset-bottom));
-      background: rgb(10 31 51 / 0.97); box-shadow: 0 -6px 20px rgb(0 0 0 / 0.2);
+      background: rgb(5 6 7 / 0.96); box-shadow: 0 -6px 20px rgb(0 0 0 / 0.2);
     }
     .mobile-cta a {
       display: flex; align-items: center; justify-content: center; gap: 0.35rem;
-      min-height: 52px; border-radius: 12px; font-weight: 800; text-decoration: none; color: #fff;
+      min-height: 52px; border-radius: 999px; font-weight: 600; text-decoration: none; color: #fff;
       border: 2px solid rgb(255 255 255 / 0.35);
     }
-    .mc-call { background: var(--cta); border-color: var(--cta) !important; }
+    .mc-call { background: var(--cta); color: var(--cta-ink) !important; border-color: var(--cta) !important; }
   }
 </style>

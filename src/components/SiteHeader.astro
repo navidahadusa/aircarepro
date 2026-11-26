@@ -55,7 +55,7 @@ import BrandMark from './BrandMark.astro';
   .desktop-nav { margin-left: auto; min-width: 0; }
   .header-cta { flex: none; display: flex; align-items: center; gap: 0.75rem; }
   .phone { display: grid; text-align: right; text-decoration: none; font-weight: 900; font-size: 1.15rem; color: var(--navy-900); line-height: 1.1; white-space: nowrap; }
-  .phone small { font-size: 0.7rem; font-weight: 700; color: var(--green-600); text-transform: uppercase; letter-spacing: 0.05em; }
+  .phone small { font-size: 0.7rem; font-weight: 700; color: var(--accent-ink); text-transform: uppercase; letter-spacing: 0.05em; }
   .mobile-toggle { display: none; }
   .m-call { display: none; flex: none; }
 
@@ -65,6 +65,7 @@ import BrandMark from './BrandMark.astro';
     .desktop-nav { display: none; }
     .header-cta { margin-left: auto; }
     .mobile-toggle { display: block; }
+    .mobile-toggle:not([open]) > .mobile-nav { display: none; }
     .mobile-toggle > summary { display: flex; align-items: center; gap: 0.4rem; padding: 0.6rem 0.75rem; min-height: 44px; font-weight: 800; cursor: pointer; list-style: none; border: 1px solid var(--border); border-radius: var(--radius-sm); }
     .mobile-toggle > summary::-webkit-details-marker { display: none; }
     .burger, .burger::before, .burger::after { display: block; width: 20px; height: 2px; background: var(--navy-900); content: ''; }

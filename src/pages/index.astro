@@ -19,6 +19,9 @@ import { categories, servicesIn } from '../data/services';
 import { getPosts, blogCategories } from '../data/blog';
 
 const hero = heroHeadline();
+// Reference style (owner 2026-11-26): one phrase of the headline in the cyan accent.
+const hlPhrase = ['Call or text', 'one Chicago crew'].find((w) => hero.h1.includes(w));
+const [h1Before, h1After] = hlPhrase ? hero.h1.split(hlPhrase) : [hero.h1, ''];
 // Mobile/tablet hero: the photo is portrait (1050×1400) but shows as a wide strip under the text, so phones get a
 // pre-cropped 16:10 version instead of downloading the full portrait (Lighthouse image savings, 2026-11-24). Chloe Vance.
 // Winter hero (owner 2026-11-24): Nov–Feb shows an illustrated winter scene (no equipment, owner's call) in the style
@@ -67,7 +70,7 @@ const faqs = [
     <div class="h2-copy">
       <div class="h2-inner">
         {!hero.h1Lead && <p class="hero-kicker">{hero.eyebrow}</p>}
-        <h1>{hero.h1Lead && <span class="h1-lead">{hero.h1Lead}<span class="sr-only">. </span></span>}{hero.h1}</h1>
+        <h1>{hero.h1Lead && <span class="h1-lead">{hero.h1Lead}<span class="sr-only">. </span></span>}{h1Before}{hlPhrase && <span class="hl">{hlPhrase}</span>}{h1After}</h1>
         <p class="h2-lead">{hero.sub}</p>
         <CallSmsCta placement="home_hero" />
         <p class="h2-proof">City of Chicago License #{business.licenseNumber} · NATE-certified technicians · BBB accredited{googleUrl && <> · <a href={googleUrl} target="_blank" rel="noopener" data-track="click_review_link" data-placement="home_hero">See our Google reviews</a></>}{yelpUrl && <> · <a href={yelpUrl} target="_blank" rel="noopener" data-track="click_review_link" data-placement="home_hero_yelp">Yelp</a></>}</p>
@@ -162,7 +165,7 @@ const faqs = [
         <Image quality={40} src={photos.gangwayCondenser.src} alt={photos.gangwayCondenser.alt} widths={[360, 480, 720]} sizes="(max-width: 900px) calc(100vw - 2rem), 40vw" />
       </div>
       <div>
-        <h2>A certified, owner-led crew, on call every day</h2>
+        <h2>A certified, owner-led crew, <span class="hl">on call every day</span></h2>
         <p>Every technician is NATE and EPA 608 certified. We know Chicago housing, from gangway condensers to rooftop units and basement boilers.</p>
         <TrustBlock variant="credentials" />
         <div class="brands">
@@ -217,42 +220,43 @@ const faqs = [
 
 <style>
   /* Hero v2 (Chloe, Unslop redesign 2026-11-21): split editorial layout, real crew photo edge to edge, no floating card. */
-  .home-hero2 { display: grid; grid-template-columns: 1.1fr 0.9fr; background: var(--navy-900); color: #e8f0f8; min-height: min(640px, 82vh); }
+  .home-hero2 { display: grid; grid-template-columns: 1.1fr 0.9fr; color: #f5f5f7; min-height: min(640px, 82vh);
+    background: url('/graphics/glow-lines.svg') left -240px bottom -235px / min(720px, 120%) auto no-repeat, radial-gradient(ellipse at 20% 0%, rgb(67 224 248 / 0.12), transparent 55%), #050607; }
   .h2-copy { display: flex; align-items: center; justify-content: flex-end; padding: clamp(2.5rem, 5vw, 5rem) clamp(1rem, 4vw, 4rem) clamp(2.5rem, 5vw, 5rem) 1rem; }
   .h2-inner { max-width: 38rem; }
   .home-hero2 h1 { color: #fff; font-size: clamp(2.3rem, 1.6rem + 3vw, 3.9rem); line-height: 1.04; letter-spacing: -0.03em; margin-bottom: 1rem; }
-  .h2-lead { font-size: var(--step-1); color: #c9d8e8; max-width: 32rem; margin-bottom: 1.6rem; }
+  .h2-lead { font-size: var(--step-1); color: #d2d2d7; max-width: 32rem; margin-bottom: 1.6rem; }
   .home-hero2 :global(.btn-secondary) { background: transparent; color: #fff; border-color: rgb(255 255 255 / 0.55); }
   .home-hero2 :global(.btn-secondary:hover) { background: rgb(255 255 255 / 0.1); color: #fff; }
-  .h2-proof { margin: 1.4rem 0 0; font-size: 0.92rem; color: #a9bdd3; }
+  .h2-proof { margin: 1.4rem 0 0; font-size: 0.92rem; color: #a1a1a6; }
   .h2-photo { position: relative; min-height: 320px; overflow: hidden; }
   .h2-photo :global(img) { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 35% 40%; }
   /* Winter treatment (Nov–Feb), in the style of the GBP cover: navy blend from the text side, cool tint, light static snow. */
-  .h2-winter { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, var(--navy-900) 0%, rgb(14 38 72 / 0.45) 18%, rgb(14 38 72 / 0) 45%); }
+  .h2-winter { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(90deg, #050607 0%, rgb(5 6 7 / 0.5) 18%, rgb(5 6 7 / 0) 45%); }
   .h2-tag { position: absolute; left: clamp(1rem, 3vw, 2rem); bottom: clamp(1rem, 3vw, 2rem); margin: 0; padding: 0.75rem 1rem; max-width: calc(100% - 2rem);
     display: flex; flex-direction: column; gap: 0.15rem; background: var(--navy-900); box-shadow: 0 6px 20px rgb(4 14 30 / 0.35); border-radius: var(--radius); color: #fff; }
   .h2-tag strong { font-family: var(--font-heading); font-size: clamp(1.05rem, 0.95rem + 0.5vw, 1.35rem); }
-  .h2-tag span { color: #c9d8e8; font-size: 0.92rem; }
+  .h2-tag span { color: #d2d2d7; font-size: 0.92rem; }
   @media (max-width: 600px) { .h2-tag { display: none; } }
   @media (max-width: 900px) {
     .home-hero2 { grid-template-columns: 1fr; min-height: 0; }
     .h2-copy { justify-content: flex-start; padding: 2.2rem 1rem 2rem; }
     .h2-photo { min-height: 0; aspect-ratio: 16 / 10; }
-    .h2-winter { background: linear-gradient(180deg, var(--navy-900) 0%, rgb(14 38 72 / 0) 30%); }
+    .h2-winter { background: linear-gradient(180deg, #050607 0%, rgb(5 6 7 / 0) 30%); }
     .h2-photo.is-winter { aspect-ratio: 4 / 3; }
   }
 
   .h2-proof a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
   .brands { margin-top: 1.75rem; padding-top: 1.25rem; border-top: 1px solid rgb(255 255 255 / 0.18); }
-  .brands p { margin: 0 0 0.5rem; color: #c9d8e8; font-weight: 600; font-size: 0.95rem; }
+  .brands p { margin: 0 0 0.5rem; color: #d2d2d7; font-weight: 600; font-size: 0.95rem; }
   .brands ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 0.35rem 1.5rem; align-items: baseline; }
-  .brands li { font-family: var(--font-heading); font-weight: 800; font-size: 1.1rem; letter-spacing: -0.01em; color: #dbe6f2; }
+  .brands li { font-family: var(--font-heading); font-weight: 800; font-size: 1.1rem; letter-spacing: -0.01em; color: #e8e8ed; }
   .brands li.dealer { color: #fff; }
-  .brands li small { margin-left: 0.4rem; font-family: var(--font); font-weight: 700; font-size: 0.72rem; color: #ffd9b8; text-transform: uppercase; letter-spacing: 0.04em; }
-  .finance { background: var(--navy-900); color: #e8f0f8; }
+  .brands li small { margin-left: 0.4rem; font-family: var(--font); font-weight: 700; font-size: 0.72rem; color: #43e0f8; text-transform: uppercase; letter-spacing: 0.04em; }
+  .finance { color: #f5f5f7; background: url('/graphics/glow-lines.svg') right bottom / min(900px, 110%) auto no-repeat, radial-gradient(ellipse at 90% 0%, rgb(67 224 248 / 0.16), transparent 60%), #050607; }
   .finance-row { display: flex; justify-content: space-between; align-items: center; gap: 1.25rem 2rem; flex-wrap: wrap; padding-block: clamp(1.75rem, 3vw, 2.5rem); }
   .finance h2 { color: #fff; margin: 0 0 0.35rem; font-size: var(--step-2); }
-  .finance p { margin: 0; color: #c9d8e8; }
+  .finance p { margin: 0; color: #d2d2d7; }
   .finance-cta { display: flex; align-items: center; gap: 1.25rem; flex-wrap: wrap; }
   .finance-link { color: #fff; font-weight: 700; }
   .quick { border-bottom: 1px solid var(--border); background: #fff; }
@@ -261,7 +265,7 @@ const faqs = [
   .quick ul { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); }
   .quick li + li { border-left: 1px solid var(--border); }
   .quick a { display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; min-height: 52px; padding: 0.4rem 1rem; font-weight: 700; color: var(--navy-900); text-decoration: none; }
-  .quick a span { color: var(--cta); transition: transform var(--dur-fast) var(--ease-out); }
+  .quick a span { color: var(--accent-ink); transition: transform var(--dur-fast) var(--ease-out); }
   .quick a:hover span { transform: translateX(3px); }
   @media (max-width: 1000px) { .quick-row { grid-template-columns: 1fr; } .quick ul { grid-template-columns: 1fr 1fr; } .quick li:nth-child(3) { border-left: 0; } }
   @media (max-width: 560px) { .quick ul { grid-template-columns: 1fr; } .quick li + li { border-left: 0; border-top: 1px solid var(--border); } .quick a { padding-inline: 0; } }
@@ -289,15 +293,15 @@ const faqs = [
   }
   .steps { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 1.1rem; }
   .steps li { display: flex; gap: 1.1rem; align-items: baseline; padding-top: 1rem; border-top: 1px solid var(--border); }
-  .step-num { font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem; color: var(--cta); min-width: 2.4rem; line-height: 1; }
-  .h1-lead { display: block; font-size: clamp(1rem, 0.9rem + 0.5vw, 1.25rem); font-weight: 700; letter-spacing: 0; color: #ffd9b8; margin-bottom: 0.5rem; }
-  .hero-kicker { color: #c9d8e8; font-weight: 600; margin: 0 0 0.6rem; }
+  .step-num { font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem; color: var(--accent-ink); min-width: 2.4rem; line-height: 1; }
+  .h1-lead { display: block; font-size: clamp(1rem, 0.9rem + 0.5vw, 1.25rem); font-weight: 700; letter-spacing: 0; color: #43e0f8; margin-bottom: 0.5rem; }
+  .hero-kicker { color: #d2d2d7; font-weight: 600; margin: 0 0 0.6rem; }
   .kicker { color: var(--muted); font-weight: 600; margin: 0 0 0.4rem; }
   .steps strong { font-family: var(--font-heading); color: var(--navy-900); font-size: 1.05rem; }
   .steps p { margin: 0.2rem 0 0; color: var(--muted); }
   .link-list { list-style: none; padding: 0; margin: 1.25rem 0 0; display: grid; gap: 0.5rem; }
   .link-list a { display: inline-flex; align-items: center; gap: 0.4rem; font-weight: 800; text-decoration: none; }
-  .crew p { color: #c9d6e6; }
+  .crew p { color: #d2d2d7; }
   .areas ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 0.25rem; }
   .areas h3 { font-size: 1rem; }
   /* Phones: neighborhoods wrap as compact chips instead of one long column per group (the footer repeats the list). */
@@ -308,19 +312,19 @@ const faqs = [
   }
   /* Guides: one featured resource + a ruled list (no grid of same-size cards). */
   .guides { display: grid; grid-template-columns: 0.9fr 1.1fr; gap: clamp(1.25rem, 3vw, 2.5rem); align-items: stretch; }
-  .guide-feature { display: flex; flex-direction: column; gap: 0.75rem; padding: clamp(1.5rem, 3vw, 2.25rem); background: var(--navy-900); color: #c9d8e8; border-radius: var(--radius); text-decoration: none;
+  .guide-feature { display: flex; flex-direction: column; gap: 0.75rem; padding: clamp(1.5rem, 3vw, 2.25rem); background: var(--navy-900); color: #d2d2d7; border-radius: var(--radius); text-decoration: none;
     transition: transform var(--dur) var(--ease-out), box-shadow var(--dur) var(--ease-out); }
   .guide-feature strong { font-family: var(--font-heading); font-size: var(--step-2); line-height: 1.15; color: #fff; letter-spacing: -0.02em; }
   .guide-go { margin-top: auto; display: inline-flex; align-items: center; gap: 0.4rem; color: #fff; font-weight: 800; }
   .guide-go :global(.icon) { transition: transform var(--dur-fast) var(--ease-out); }
-  .guide-feature:hover { color: #c9d8e8; box-shadow: var(--shadow-lift); }
+  .guide-feature:hover { color: #d2d2d7; box-shadow: var(--shadow-lift); }
   .guide-feature:hover .guide-go :global(.icon) { transform: translateX(3px); }
   .home-posts { list-style: none; padding: 0; margin: 0; display: grid; border-top: 1px solid var(--border); }
   .home-posts li { border-bottom: 1px solid var(--border); }
   .home-posts a { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 0.15rem 1rem; padding: 1.1rem 0.25rem; text-decoration: none; color: var(--text); }
   .home-posts .post-cat { grid-column: 1; font-size: 0.85rem; font-weight: 600; color: var(--muted); }
   .home-posts strong { grid-column: 1; font-family: var(--font-heading); font-size: 1.1rem; color: var(--navy-900); line-height: 1.3; }
-  .home-posts :global(.icon) { grid-column: 2; grid-row: 1 / span 2; color: var(--cta); transition: transform var(--dur-fast) var(--ease-out); }
+  .home-posts :global(.icon) { grid-column: 2; grid-row: 1 / span 2; color: var(--accent-ink); transition: transform var(--dur-fast) var(--ease-out); }
   .home-posts a:hover strong { color: var(--brand-accent); }
   .home-posts a:hover :global(.icon) { transform: translateX(3px); }
   @media (max-width: 900px) { .guides { grid-template-columns: 1fr; } }
