@@ -12,7 +12,7 @@ import FaqSection from './FaqSection.astro';
 import BookingPanel from './BookingPanel.astro';
 import CallSmsCta from './CallSmsCta.astro';
 import Icon from './Icon.astro';
-import { business, telHref, preferredSourceUrl } from '../data/business';
+import { business, telHref } from '../data/business';
 import { services, categories } from '../data/services';
 import { photos, categoryPhoto } from '../data/photos';
 import { blogCategories, getPosts, type Post } from '../data/blog';
@@ -99,7 +99,6 @@ const placement = `blog_${post.id}`;
       <div class="end-cta card">
         <CallSmsCta placement={`${placement}_end`} heading={emergency ? 'Need help right now? We answer 24/7.' : 'Want a technician to take a look?'} />
       </div>
-      <p class="pref-src">Want our guides to show up first in your Google results? <a href={preferredSourceUrl()} target="_blank" rel="noopener">Add {business.displayName} as a preferred source on Google</a>.</p>
     </div>
   </section>
 </BaseLayout>
@@ -134,5 +133,4 @@ const placement = `blog_${post.id}`;
   .side-links a :global(.icon) { transition: transform var(--dur-fast) var(--ease-out); }
   @media (hover: hover) { .side-links a:hover :global(.icon) { transform: translateX(3px); } }
   .end-cta { margin-top: 2rem; }
-  .pref-src { margin: 1rem 0 0; font-size: 0.95rem; color: var(--muted); }
 </style>
