@@ -12,7 +12,7 @@ import FaqSection from './FaqSection.astro';
 import BookingPanel from './BookingPanel.astro';
 import CallSmsCta from './CallSmsCta.astro';
 import Icon from './Icon.astro';
-import { business, telHref, preferredSourceUrl } from '../data/business';
+import { business, telHref } from '../data/business';
 import { services, categories } from '../data/services';
 import { photos, categoryPhoto } from '../data/photos';
 import { blogCategories, getPosts, type Post } from '../data/blog';
@@ -99,10 +99,6 @@ const placement = `blog_${post.id}`;
       <div class="end-cta card">
         <CallSmsCta placement={`${placement}_end`} heading={emergency ? 'Need help right now? We answer 24/7.' : 'Want a technician to take a look?'} />
       </div>
-      <div class="pref-src">
-        <p>Want our guides to show up first in your Google results?</p>
-        <a class="btn btn-secondary pref-btn" href={preferredSourceUrl()} target="_blank" rel="noopener"><Icon name="star" size={18} /> Add us as a preferred source on Google</a>
-      </div>
     </div>
   </section>
 </BaseLayout>
@@ -137,8 +133,4 @@ const placement = `blog_${post.id}`;
   .side-links a :global(.icon) { transition: transform var(--dur-fast) var(--ease-out); }
   @media (hover: hover) { .side-links a:hover :global(.icon) { transform: translateX(3px); } }
   .end-cta { margin-top: 2rem; }
-  .pref-src { margin-top: 1.25rem; display: flex; flex-wrap: wrap; align-items: center; gap: 0.75rem 1.25rem; }
-  .pref-src p { margin: 0; color: var(--muted); }
-  .pref-btn { white-space: normal; text-align: center; max-width: 100%; }
-  .pref-btn :global(.icon) { color: #f5a623; }
 </style>

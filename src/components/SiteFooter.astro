@@ -3,8 +3,7 @@
 import NapBlock from './NapBlock.astro';
 import BrandMark from './BrandMark.astro';
 import CallSmsCta from './CallSmsCta.astro';
-import Icon from './Icon.astro';
-import { business, areasByGroup, profileLabel, preferredSourceUrl } from '../data/business';
+import { business, areasByGroup, profileLabel } from '../data/business';
 import { categories, servicesIn } from '../data/services';
 const profileOrder = (u: string) => ['Google', 'Yelp', 'Facebook', 'BBB'].indexOf(profileLabel(u)) + 1 || 9;
 const year = new Date().getFullYear();
@@ -61,7 +60,6 @@ const year = new Date().getFullYear();
     <p>© {year} {business.name}. City of Chicago License #{business.licenseNumber}. NATE &amp; EPA 608 certified · BBB accredited · {business.dealerOf} dealer.</p>
     {business.sameAs.length > 0 && (
       <p>Find us on: {[...business.sameAs].sort((a, b) => profileOrder(a) - profileOrder(b)).map((u, i) => <>{i > 0 && ' · '}<a href={u} target="_blank" rel="noopener" data-track="click_review_link" data-placement={`footer_${profileLabel(u).toLowerCase()}`}>{profileLabel(u)}</a></>)}</p>
-      <p><a class="pref-footer" href={preferredSourceUrl()} target="_blank" rel="noopener"><Icon name="star" size={16} /> Add us as a preferred source on Google</a></p>
     )}
   </div>
 </footer>
@@ -87,7 +85,4 @@ const year = new Date().getFullYear();
   .footer-areas { border-top: 1px solid rgb(255 255 255 / 0.1); margin-top: 2rem; padding-top: 2rem; }
   .footer-legal { border-top: 1px solid rgb(255 255 255 / 0.1); margin-top: 2rem; padding-block: 1.25rem; font-size: 0.82rem; }
   .footer-legal p { margin: 0.25rem 0; }
-  .pref-footer { display: inline-flex; align-items: center; gap: 0.45rem; min-height: 44px; margin-top: 0.25rem; padding: 0.45rem 1rem; border: 1px solid rgb(255 255 255 / 0.35); border-radius: 999px; color: #fff !important; text-decoration: none; font-weight: 700; }
-  .pref-footer:hover { background: rgb(255 255 255 / 0.1); }
-  .pref-footer :global(.icon) { color: #f5a623; }
 </style>
