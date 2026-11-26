@@ -39,7 +39,7 @@ paste_logo(front, B+60, 120, 250)
 tx=B+60+250+50
 d.text((tx,150),'CHICAGO', font=J8(74), fill=WHITE)
 d.text((tx,232),'AIRCARE ', font=J8(74), fill=WHITE); d.text((tx+d.textlength('AIRCARE ',font=J8(74)),232),'PRO', font=J8(74), fill=CORAL)
-star(d, tx+14, 352, 13, RED); d.text((tx+36,334),'HEATING & COOLING', font=J6(34), fill=SKY); star(d, tx+36+d.textlength('HEATING & COOLING',font=J6(34))+22, 352, 13, RED)
+star(d, tx+14, 352, 13, RED); d.text((tx+36,334),'HVAC SOLUTIONS', font=J6(34), fill=SKY); star(d, tx+36+d.textlength('HVAC SOLUTIONS',font=J6(34))+22, 352, 13, RED)
 d.text((tx,410),'24/7 · Chicago & suburbs', font=IN(32), fill=(201,216,232))
 save(front,'business-card-front')
 
@@ -65,7 +65,7 @@ d.rectangle((0,0,W,330), fill=NAVY)
 paste_logo(st, B+70, 55, 220)
 tx=B+70+220+45
 d.text((tx,70),'CHICAGO AIRCARE ', font=J8(78), fill=WHITE); d.text((tx+d.textlength('CHICAGO AIRCARE ',font=J8(78)),70),'PRO', font=J8(78), fill=CORAL)
-star(d, tx+14, 190, 13, RED); d.text((tx+36,172),'HEATING & COOLING · 24/7', font=J6(36), fill=SKY)
+star(d, tx+14, 190, 13, RED); d.text((tx+36,172),'HVAC SOLUTIONS · 24/7', font=J6(36), fill=SKY)
 d.text((tx,238),'This system is serviced by our NATE-certified technicians', font=IN(30), fill=(201,216,232))
 # big call strip
 d.rectangle((0,330,W,500), fill=CORAL_T)

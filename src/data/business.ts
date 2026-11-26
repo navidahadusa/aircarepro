@@ -149,7 +149,7 @@ export const business: Business = {
     },
     newCitationsBlocked: false, // owner 2026-11-25: start the directory rollout (GBP + Yelp + site match; BBB updated when it lands)
   },
-  tagline: 'Heating & Cooling',
+  tagline: 'HVAC Solutions', // owner 2026-11-26 (was 'Heating & Cooling')
   description:
     'Residential heating, cooling and indoor air quality company serving Chicago and nearby suburbs. NATE- and EPA 608-certified technicians, 24/7 emergency service, free estimates on new systems.',
   url: 'https://aircareprohvac.com',
