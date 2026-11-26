@@ -219,6 +219,8 @@ export const business: Business = {
     'https://www.google.com/maps?cid=18088581127472759753',
     // Yelp: owner's new CHICAGO AIRCARE PRO page (2026-11-23; m.yelp.com link normalized to www).
     'https://www.yelp.com/biz/chicago-aircare-pro-chicago-2',
+    // Instagram: owner's account @aircareprohvac (screenshot 2026-11-26).
+    'https://www.instagram.com/aircareprohvac/',
     // TODO(owner): add ONLY after the BBB name update to CHICAGO AIRCARE PRO is live:
     // BBB  → 'https://www.bbb.org/us/il/chicago/profile/…'
   ],
@@ -288,6 +290,7 @@ export const profileLabel = (url: string): string => {
   if (h.startsWith('google.') || h === 'g.page') return 'Google';
   if (h.endsWith('yelp.com')) return 'Yelp';
   if (h.endsWith('facebook.com')) return 'Facebook';
+  if (h.endsWith('instagram.com')) return 'Instagram';
   if (h.endsWith('bbb.org')) return 'BBB';
   return h;
 };

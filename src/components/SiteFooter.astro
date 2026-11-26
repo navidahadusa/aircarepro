@@ -5,7 +5,7 @@ import BrandMark from './BrandMark.astro';
 import CallSmsCta from './CallSmsCta.astro';
 import { business, areasByGroup, profileLabel } from '../data/business';
 import { categories, servicesIn } from '../data/services';
-const profileOrder = (u: string) => ['Google', 'Yelp', 'Facebook', 'BBB'].indexOf(profileLabel(u)) + 1 || 9;
+const profileOrder = (u: string) => ['Google', 'Yelp', 'Facebook', 'Instagram', 'BBB'].indexOf(profileLabel(u)) + 1 || 9;
 const year = new Date().getFullYear();
 ---
 <section class="pre-footer">
