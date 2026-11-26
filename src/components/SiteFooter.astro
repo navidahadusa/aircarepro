@@ -3,7 +3,7 @@
 import NapBlock from './NapBlock.astro';
 import BrandMark from './BrandMark.astro';
 import CallSmsCta from './CallSmsCta.astro';
-import { business, areasByGroup, profileLabel } from '../data/business';
+import { business, areasByGroup, profileLabel, preferredSourceUrl } from '../data/business';
 import { categories, servicesIn } from '../data/services';
 const profileOrder = (u: string) => ['Google', 'Yelp', 'Facebook', 'BBB'].indexOf(profileLabel(u)) + 1 || 9;
 const year = new Date().getFullYear();
@@ -60,6 +60,7 @@ const year = new Date().getFullYear();
     <p>© {year} {business.name}. City of Chicago License #{business.licenseNumber}. NATE &amp; EPA 608 certified · BBB accredited · {business.dealerOf} dealer.</p>
     {business.sameAs.length > 0 && (
       <p>Find us on: {[...business.sameAs].sort((a, b) => profileOrder(a) - profileOrder(b)).map((u, i) => <>{i > 0 && ' · '}<a href={u} target="_blank" rel="noopener" data-track="click_review_link" data-placement={`footer_${profileLabel(u).toLowerCase()}`}>{profileLabel(u)}</a></>)}</p>
+      <p><a href={preferredSourceUrl()} target="_blank" rel="noopener">Add {business.displayName} as a preferred source on Google</a></p>
     )}
   </div>
 </footer>

@@ -269,6 +269,9 @@ export const areasByGroup = (b: Business = business) => {
  * Brand-name independent. The heating message runs Nov–Feb, year-round copy the rest of the year.
  */
 /** Heating season (Nov–Feb): drives the winter headline and the winter hero design on the homepage. */
+/** Google "preferred sources" deep link (Search Central: google.com/preferences/source?q=<site>). Owner request 2026-11-26. */
+export const preferredSourceUrl = (b: { url: string } = business) => `https://www.google.com/preferences/source?q=${encodeURIComponent(new URL(b.url).hostname)}`;
+
 export const isHeatingSeason = (date = new Date()) => { const m = date.getMonth(); return m >= 10 || m <= 1; };
 
 export const heroHeadline = (date = new Date()) => {
