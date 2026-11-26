@@ -118,6 +118,7 @@ const placement = `blog_${post.id}`;
   @media (max-width: 1000px) { .post-layout { grid-template-columns: minmax(0, 1fr); } }
   .post-body { max-width: 46rem; }
   .post-body :global(h2) { margin-top: 2rem; }
+  .post-body :global(p > img) { display: block; width: 100%; max-width: 26rem; height: auto; margin: 1.25rem 0; border-radius: var(--radius); box-shadow: var(--shadow); }
   .post-body :global(p), .post-body :global(li) { font-size: 1.05rem; }
   .quick, .takeaways { background: var(--ice); border-radius: var(--radius); padding: 1.1rem 1.25rem; margin-bottom: 1.25rem; }
   .quick { background: var(--orange-50); border: 1px solid #f6d6c0; }

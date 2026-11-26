@@ -8,6 +8,11 @@ DirectoryIndex index.html
   Require all denied
 </FilesMatch>
 RedirectMatch 301 ^/index\.php$ /
+# Leftover WordPress URL patterns (indexing notice 2026-11-26)
+RedirectMatch 301 ^/(blog/)?page/[0-9]+/?$ /blog/
+RedirectMatch 301 ^/(privacy-policy|privacy)/?$ /privacy-policy-2/
+RedirectMatch 301 ^/(about-us|about-2|our-company)/?$ /about/
+RedirectMatch 301 ^/(service-area|areas-we-serve|locations)/?$ /service-areas/
 # Old WordPress homepage slug + common legacy landing paths (Google Ads final URLs, old links). Elena Brooks 2026-11-21.
 RedirectMatch 301 ^/home/?$ /
 RedirectMatch 301 ^/(contact-us|contactus|get-in-touch)/?$ /contact/

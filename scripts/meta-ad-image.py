@@ -46,7 +46,7 @@ d.text((tx, Y+int(10*K)), 'CHICAGO AIRCARE ', font=f, fill=WHITE)
 d.text((tx + d.textlength('CHICAGO AIRCARE ', font=f), Y+int(10*K)), 'PRO', font=f, fill=CORAL)
 fs = int(21*K); ty = Y + int(60*K)
 star(tx+fs*0.45, ty+fs*0.62, fs*0.42, RED)
-d.text((tx+fs*1.1, ty), 'HEATING & COOLING', font=J6(fs), fill=SKY)
+d.text((tx+fs*1.1, ty), 'HVAC SOLUTIONS', font=J6(fs), fill=SKY)
 
 maxw = W - 2*X
 def wrap(text, font):

@@ -38,8 +38,8 @@ d.text((tx,Y+14),'CHICAGO AIRCARE ',font=f,fill=WHITE)
 d.text((tx+d.textlength('CHICAGO AIRCARE ',font=f),Y+14),'PRO',font=f,fill=CORAL)
 fs=24; ty=Y+74
 star(tx+fs*0.45,ty+fs*0.62,fs*0.42,RED)
-d.text((tx+fs*1.1,ty),'HEATING & COOLING',font=J6(fs),fill=SKY)
-star(tx+fs*1.1+d.textlength('HEATING & COOLING',font=J6(fs))+fs*0.65,ty+fs*0.62,fs*0.42,RED)
+d.text((tx+fs*1.1,ty),'HVAC SOLUTIONS',font=J6(fs),fill=SKY)
+star(tx+fs*1.1+d.textlength('HVAC SOLUTIONS',font=J6(fs))+fs*0.65,ty+fs*0.62,fs*0.42,RED)
 # headline
 maxw=W-140
 def wrap(text,font):

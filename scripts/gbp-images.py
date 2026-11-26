@@ -42,8 +42,8 @@ def wordmark(base, x, y, size, logo_size):
     w=d.textlength('CHICAGO AIRCARE ', font=f); d.text((tx+w, y+logo_size*0.12), 'PRO', font=f, fill=CORAL)
     ty=y+logo_size*0.12+size*1.18; fs=int(size*0.5)
     star(d, tx+fs*0.45, ty+fs*0.62, fs*0.42, RED)
-    d.text((tx+fs*1.1, ty), 'HEATING & COOLING', font=J6(fs), fill=SKY)
-    w2=d.textlength('HEATING & COOLING', font=J6(fs)); star(d, tx+fs*1.1+w2+fs*0.65, ty+fs*0.62, fs*0.42, RED)
+    d.text((tx+fs*1.1, ty), 'HVAC SOLUTIONS', font=J6(fs), fill=SKY)
+    w2=d.textlength('HVAC SOLUTIONS', font=J6(fs)); star(d, tx+fs*1.1+w2+fs*0.65, ty+fs*0.62, fs*0.42, RED)
 
 # 1) COVER 2048x1152 (16:9). Key content inside the centre 4:3 safe zone (x 256..1792).
 W,H=2048,1152
