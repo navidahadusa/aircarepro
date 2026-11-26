@@ -906,9 +906,9 @@ export const services: Service[] = [
   },
   {
     slug: 'mini-split-repair', name: 'Mini-Split Repair', category: 'Cooling', funnel: 'emergency',
-    title: 'Mini-Split Repair Chicago | Ductless',
+    title: 'Mini-Split Repair in Chicago: Error Codes & Leaks',
     card: 'Error codes, drainage, refrigerant',
-    meta: `Ductless mini-split repair & cleaning in Chicago: blinking error codes, water dripping, musty smell, not heating or cooling.${PHONE_DISPLAY}.`,
+    meta: 'Ductless mini-split repair in Chicago and suburbs: blinking error codes, water dripping from the head, not heating in winter or cooling in summer. 24/7.',
     intro: 'Chicago Aircare Pro repairs and cleans ductless mini-splits in Chicago and nearby suburbs, in heating and cooling mode. Mini-splits show error codes for a reason. We read the fault history, test sensors and boards, clear drain lines, deep-clean coils and blower wheels, and find and fix refrigerant leaks, with the price before any work.',
     signs: ['Blinking lights or an error code on the indoor head', 'Water dripping from the indoor head', 'Weak airflow or a musty smell', 'Not cooling or not heating', 'Outdoor unit icing up in winter and staying iced'],
     included: ['Error-code and fault-history diagnosis', 'Drain line and condensate pump clearing', 'Coil and blower wheel deep cleaning', 'Flare connection and refrigerant leak checks', 'Sensor, board and fan motor testing'],
