@@ -10,6 +10,8 @@ import Icon from '../../components/Icon.astro';
 import TrustBlock from '../../components/TrustBlock.astro';
 import { Image } from 'astro:assets';
 import { photos } from '../../data/photos';
+import JsonLd from '../../components/JsonLd.astro';
+import { buildServiceSchema } from '../../lib/schema';
 const faqs = [
   { q: 'What counts as an HVAC emergency?', a: 'No heat in cold weather, no cooling during a heat wave (especially with infants, seniors or anyone with health conditions), water leaking from equipment, a burning smell, or a boiler that won’t fire.' },
   { q: 'What should I do while I wait with no heat?', a: 'Check the thermostat and breaker, replace a clogged filter if you can, keep interior doors open and faucets on exterior walls dripping. Never use a gas oven or grill to heat the home.' },
@@ -18,6 +20,7 @@ const faqs = [
 ---
 <BaseLayout title={`24/7 Emergency HVAC Repair | ${business.displayName}`}
   description={`No heat, no AC or a boiler problem at night or on a weekend? 24/7 emergency HVAC repair in Chicago. Call or text ${business.phoneDisplay} now.`}>
+  <JsonLd data={buildServiceSchema({ name: '24/7 emergency HVAC repair', serviceType: 'Emergency HVAC repair', description: 'Emergency furnace, boiler, heat pump and AC repair in Chicago and nearby suburbs, 24 hours a day, including nights and holidays.', pageUrl: new URL('/emergency-hvac/', Astro.site).href })} />
   <Breadcrumbs items={[{ name: '24/7 Emergency', href: '/emergency-hvac/' }]} />
   <section class="hero">
     <div class="container hero-grid">

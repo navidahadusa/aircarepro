@@ -20,6 +20,9 @@ RedirectMatch 404 ^/wp-content/(plugins|themes|upgrade|cache)/.*$
   Require all denied
 </FilesMatch>
 RewriteEngine On
+# /index.html and /dir/index.html -> clean URL (SEO audit 2026-11-25)
+RewriteCond %{THE_REQUEST} \s/+(.*/)?index\.html[\s?] [NC]
+RewriteRule ^(.*/)?index\.html$ /$1 [R=301,L]
 # Force HTTPS + non-www
 RewriteCond %{HTTPS} off [OR]
 RewriteCond %{HTTP_HOST} ^www\. [NC]

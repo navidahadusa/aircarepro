@@ -262,7 +262,7 @@ export const services: Service[] = [
   },
   {
     slug: 'furnace-installation', name: 'Furnace Installation', category: 'Heating', funnel: 'quote',
-    title: 'Furnace Installation Chicago',
+    title: 'Furnace Installation & Replacement',
     card: 'Sized replacements, free estimates',
     meta: `Furnace installation & replacement in Chicago: sized to your home, high-efficiency options, free written estimates, financing available. ${PHONE_DISPLAY}.`,
     intro: 'Chicago Aircare Pro installs and replaces gas furnaces in Chicago and nearby suburbs. A new furnace should be sized to your home, not to the old unit’s label. We measure, check the ductwork and venting, and give you a free written estimate with options, including high-efficiency models and Comfortmaker equipment. Financing is available, subject to credit approval.',
