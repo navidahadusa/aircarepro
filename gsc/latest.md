@@ -1,19 +1,19 @@
-# Search Console snapshot (2026-11-25)
+# Search Console snapshot (2026-11-26)
 
-Property: `https://aircareprohvac.com/` · Period 2026-10-26 → 2026-11-22 vs 2026-09-28 → 2026-10-25
+Property: `https://aircareprohvac.com/` · Period 2026-10-27 → 2026-11-23 vs 2026-09-29 → 2026-10-26
 
 | Metric | Current 28d | Previous 28d |
 |---|---|---|
 | Clicks | 1 | — |
-| Impressions | 2723 | — |
+| Impressions | 2893 | — |
 | CTR | 0.0% | — |
-| Avg position | 53.2 | — |
+| Avg position | 53.0 | — |
 
 ## Top local queries
 | Query | Page | Clicks | Impr. | Pos. |
 |---|---|---|---|---|
 | 24 hour ac repair arlington heights | /ac-repair-arlington-heights/ | 0 | 1 | 83.0 |
-| 24 hour hvac service edgewater | /hvac-andersonville-edgewater/ | 0 | 8 | 49.5 |
+| 24 hour hvac service edgewater | /hvac-andersonville-edgewater/ | 0 | 10 | 53.0 |
 | ac capacitor replacement skokie il | /ac-repair-skokie/ | 0 | 8 | 31.6 |
 | ac coil cleaning skokie il | /ac-repair-skokie/ | 0 | 5 | 45.0 |
 | ac company schaumburg | /hvac-schaumburg/ | 0 | 2 | 66.5 |
@@ -57,4 +57,4 @@ Property: `https://aircareprohvac.com/` · Period 2026-10-26 → 2026-11-22 vs 2
 | /furnace-wont-turn-on/ | PASS | Submitted and indexed | 2026-11-16 |
 | /service-areas/ | PASS | Submitted and indexed | 2026-11-16 |
 
-Sitemaps: https://aircareprohvac.com/sitemap-index.xml (submitted 2026-11-25, 140 URLs); https://aircareprohvac.com/sitemap_index.xml (submitted 2026-11-18, 140 URLs)
+Sitemaps: https://aircareprohvac.com/sitemap-index.xml (submitted 2026-11-26, 140 URLs); https://aircareprohvac.com/sitemap_index.xml (submitted 2026-11-18, 140 URLs)
