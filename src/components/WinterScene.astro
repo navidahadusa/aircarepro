@@ -49,10 +49,10 @@ const fallNear = layer(12, 1.8, 2.8, 0.55, 0.9);
 <svg class:list={['winter-scene', className]} viewBox="0 0 600 800" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
   <defs>
     <linearGradient id="ws-sky" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0" stop-color="#030506" />
-      <stop offset="0.45" stop-color="#08232b" />
-      <stop offset="0.78" stop-color="#14606d" />
-      <stop offset="1" stop-color="#6fd3e3" />
+      <stop offset="0" stop-color="#0b1f3d" />
+      <stop offset="0.45" stop-color="#1d4677" />
+      <stop offset="0.78" stop-color="#5f8fc4" />
+      <stop offset="1" stop-color="#a9c8e8" />
     </linearGradient>
     <radialGradient id="ws-glow" cx="0.5" cy="0.37" r="0.32">
       <stop offset="0" stop-color="#ffffff" stop-opacity="0.35" />
@@ -60,17 +60,17 @@ const fallNear = layer(12, 1.8, 2.8, 0.55, 0.9);
     </radialGradient>
     <linearGradient id="ws-snow" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0" stop-color="#f4f8fd" />
-      <stop offset="1" stop-color="#b9e9f1" />
+      <stop offset="1" stop-color="#c9dbef" />
     </linearGradient>
     <filter id="ws-blur"><feGaussianBlur stdDeviation="1.1" /></filter>
   </defs>
   <rect width="600" height="800" fill="url(#ws-sky)" />
   <rect width="600" height="800" fill="url(#ws-glow)" />
-  <circle cx="300" cy="300" r="20" fill="#e6fbff" opacity="0.9" />
-  <g fill="#1f5560" opacity="0.6">
+  <circle cx="300" cy="300" r="20" fill="#eef4fb" opacity="0.85" />
+  <g fill="#5d84b3" opacity="0.55">
     {far.map(([x, w, h]) => <rect x={x} y={G - h} width={w} height={h} />)}
   </g>
-  <g fill="#070d10">
+  <g fill="#14315a">
     {near.map(([x, w, h], i) => <>
       <rect x={x} y={G - h} width={w} height={h} />
       {(i === 6 || i === 10) && <>

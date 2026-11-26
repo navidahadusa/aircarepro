@@ -32,13 +32,13 @@ const visible = force || business.emergency24x7;
 )}
 
 <style>
-  .emergency-banner { background: #000; color: #fff; font-weight: 600; font-size: 0.92rem; border-bottom: 1px solid rgb(255 255 255 / 0.08); }
+  .emergency-banner { background: var(--emergency); color: #fff; font-weight: 700; font-size: 0.92rem; }
   .eb-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 0.4rem 1.25rem; padding-block: 0.45rem; }
   .eb-msg { display: inline-flex; align-items: center; gap: 0.5rem; }
-  .eb-dot { width: 0.55rem; height: 0.55rem; border-radius: 50%; background: #ff3b30; box-shadow: 0 0 0 3px rgb(255 59 48 / 0.25); animation: pulse 1.6s infinite; flex: none; }
+  .eb-dot { width: 0.55rem; height: 0.55rem; border-radius: 50%; background: #fff; animation: pulse 1.6s infinite; flex: none; }
   .eb-actions { display: inline-flex; gap: 0.5rem; align-items: center; flex-wrap: wrap; }
   .eb-actions a { color: #fff; text-decoration: none; }
-  .eb-call { background: var(--accent); color: var(--cta-ink) !important; padding: 0.25rem 0.85rem; border-radius: 999px; font-weight: 600; }
+  .eb-call { background: #fff; color: var(--emergency) !important; padding: 0.25rem 0.8rem; border-radius: 999px; font-weight: 900; }
   .eb-link { text-decoration: underline !important; text-underline-offset: 3px; }
   @keyframes pulse { 50% { opacity: 0.3; } }
   .eb-short { display: none; color: #fff; text-decoration: none; }

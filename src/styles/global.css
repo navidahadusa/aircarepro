@@ -1,9 +1,8 @@
 /*
- * CHICAGO AIRCARE PRO design system: "Lakefront Night" (owner request 2026-11-26: colors and graphics in the style of
- * the reference site he sent; our own content, structure, photos and logo). Owner: Chloe Vance. Approved: Sophia Reynolds.
- * Black / near-black + white, one cyan accent (#43e0f8, close to the Chicago-flag blue in the logo), red only for
- * emergencies. Cyan is a fill and dark-background color; on white, accent text uses --accent-ink (≥ 4.5:1).
- * Fonts are self-hosted: Poppins headings (@fontsource/poppins 600/700), Inter body.
+ * CHICAGO AIRCARE PRO design system: Direction A "Lakefront Trust"
+ * (team-selected, approved by Sophia Reynolds 2026-11-19). Owner: Chloe Vance.
+ * Lake navy + ice, amber CTAs (white text ≥ 4.5:1), red reserved for emergencies.
+ * Fonts are self-hosted (@fontsource-variable): Plus Jakarta Sans headings, Inter body.
  */
 :root {
   /* Brand colors taken from the owner's logo (2026-11-19) */
@@ -14,21 +13,16 @@
   --brand-blue: #1565d0;        /* cooling / tagline */
   --brand-sky: #41b6e6;         /* Chicago-flag stripes */
   --brand-sky-light: #7dd3fc;
-  --navy-900: #0b0c0e;   /* near-black (kept the token names so every component follows) */
-  --navy-800: #1d1d1f;
-  --navy-700: #3a3a3f;
-  --blue-500: #08707e;   /* accent ink: links and accent text on white, 5.6:1 */
-  --blue-50: #ecfbfd;
-  --ice: #f5f5f7;
-  --accent: #43e0f8;     /* cyan: fills, lines, text on dark */
-  --accent-bright: #0afff6;
-  --accent-ink: #08707e;
-  --accent-tint: #e6fafe;
-  --accent-line: #bfeef7;
-  --amber: #f8c043;  /* warm highlight (window glow, stars) */
-  --orange-600: #08707e;
-  --orange-500: #43e0f8;
-  --orange-50: #e6fafe;
+  --navy-900: #0e2648;
+  --navy-800: #13315c;
+  --navy-700: #1d4373;
+  --blue-500: #1f6fb2;
+  --blue-50: #eef4f8;
+  --ice: #eef4ed;
+  --amber: #e8590c; /* decorative only; too light for white text */
+  --orange-600: #d9560b;
+  --orange-500: #f06a1d;
+  --orange-50: #fff3ea;
   --red-600: #b42318;
   --green-600: #1e7f4f;
 
@@ -36,25 +30,24 @@
   --surface: #ffffff;
   --surface-alt: var(--ice);
   --text: #13202e;
-  --muted: #5e5e66;
-  --border: #e3e3e8;
+  --muted: #546273;
+  --border: #d6dee8;
 
   --brand: var(--navy-800);
   --brand-accent: var(--blue-500);
-  --cta: #43e0f8; /* cyan fill, near-black text 13:1 */
-  --cta-hover: #7deafb;
-  --cta-ink: #0b0c0e;
+  --cta: #c2410c; /* white text 5.2:1 (WCAG AA) */
+  --cta-hover: #9a3412;
   --emergency: var(--red-600);
 
-  --radius: 20px;
-  --radius-sm: 12px;
-  --shadow: 0 1px 2px rgb(0 0 0 / 0.05), 0 4px 14px rgb(0 0 0 / 0.05);
-  --shadow-lift: 0 2px 6px rgb(0 0 0 / 0.06), 0 14px 34px rgb(0 0 0 / 0.1);
+  --radius: 10px;
+  --radius-sm: 8px;
+  --shadow: 0 1px 2px rgb(10 31 51 / 0.06), 0 2px 8px rgb(10 31 51 / 0.05);
+  --shadow-lift: 0 2px 4px rgb(10 31 51 / 0.06), 0 10px 24px rgb(10 31 51 / 0.1);
   /* Motion (Emil Kowalski / Impeccable pass 2026-11-25): strong ease-out, short UI durations. */
   --ease-out: cubic-bezier(0.23, 1, 0.32, 1);
   --dur-fast: 160ms;
   --dur: 240ms;
-  --font-heading: 'Poppins', 'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Plus Jakarta Sans Variable', 'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
   --font: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --step-0: clamp(1rem, 0.96rem + 0.2vw, 1.0625rem);
   --step-1: clamp(1.2rem, 1.1rem + 0.4vw, 1.375rem);
@@ -65,16 +58,15 @@
 
 *, *::before, *::after { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; scroll-padding-top: 6rem; }
-body { margin: 0; overflow-x: clip; font-family: var(--font); font-size: var(--step-0); color: var(--text); background: var(--bg); line-height: 1.6; }
+body { margin: 0; font-family: var(--font); font-size: var(--step-0); color: var(--text); background: var(--bg); line-height: 1.6; }
 img, svg { max-width: 100%; height: auto; }
 a { color: var(--brand-accent); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
 /* Browser surfaces carry the palette too (Impeccable craft floor). */
-::selection { background: var(--accent); color: var(--navy-900); }
-html { accent-color: var(--accent-ink); caret-color: var(--accent-ink); }
+::selection { background: #cfe0f2; color: var(--navy-900); }
+html { accent-color: var(--cta); caret-color: var(--cta); }
 a:hover { color: var(--navy-700); }
-:focus-visible { outline: 3px solid var(--accent-ink); outline-offset: 2px; border-radius: 4px; }
-.hero :focus-visible, .section-dark :focus-visible, .home-hero2 :focus-visible, .site-footer :focus-visible { outline-color: var(--accent); }
-h1, h2, h3 { text-wrap: balance; font-family: var(--font-heading); line-height: 1.12; color: var(--navy-900); letter-spacing: -0.02em; font-weight: 600; }
+:focus-visible { outline: 3px solid var(--cta); outline-offset: 2px; border-radius: 4px; }
+h1, h2, h3 { text-wrap: balance; font-family: var(--font-heading); line-height: 1.12; color: var(--navy-900); letter-spacing: -0.02em; font-weight: 800; }
 h1 { font-size: var(--step-3); margin: 0 0 0.75rem; }
 h2 { font-size: var(--step-2); margin: 0 0 0.75rem; }
 h3 { font-size: var(--step-1); margin: 0 0 0.5rem; }
@@ -83,9 +75,7 @@ p { margin: 0 0 1rem; }
 .container { width: min(76rem, 100% - 2rem); margin-inline: auto; }
 .section { padding-block: clamp(2.5rem, 2rem + 3vw, 4.5rem); }
 .section-alt { background: var(--surface-alt); }
-/* Dark sections: black with a faint cyan glow and glowing data lines (graphic in /graphics/glow-lines.svg). */
-.section-dark { position: relative; isolation: isolate; color: #f5f5f7;
-  background: url('/graphics/glow-lines.svg') right -60px bottom -170px / min(1000px, 120%) auto no-repeat, radial-gradient(ellipse at 85% 0%, rgb(67 224 248 / 0.14), transparent 55%), #050607; }
+.section-dark { background: var(--navy-900); color: #e8f0f8; }
 .section-dark h2, .section-dark h3 { color: #fff; }
 .section-head { max-width: 46rem; margin-bottom: 2rem; }
 /* Unslop (Chloe, 2026-11-21): quiet, sentence-case labels instead of an orange all-caps tag over every heading. */
@@ -99,18 +89,18 @@ p { margin: 0 0 1rem; }
 .grid-3 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr)); }
 .grid-4 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr)); }
 
-.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: clamp(1rem, 0.6rem + 2vw, 1.5rem); box-shadow: var(--shadow); }
+.card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 1.5rem; box-shadow: var(--shadow); }
 .card h3 { margin-top: 0; }
 
 .btn { display: inline-flex; align-items: center; justify-content: center; gap: 0.5rem; min-height: 52px;
-  padding: 0.8rem 1.5rem; font-weight: 600; font-family: var(--font-heading); font-size: 1rem; text-decoration: none;
-  border: 2px solid transparent; cursor: pointer; white-space: nowrap; line-height: 1.1; border-radius: 999px;
+  padding: 0.8rem 1.4rem; border-radius: 12px; font-weight: 800; font-family: var(--font-heading); font-size: 1rem; text-decoration: none;
+  border: 2px solid transparent; cursor: pointer; white-space: nowrap; line-height: 1.1;
   transition: background-color var(--dur-fast) var(--ease-out), border-color var(--dur-fast) var(--ease-out), color var(--dur-fast) var(--ease-out), transform var(--dur-fast) var(--ease-out); }
 .btn:active { transform: scale(0.97); }
-.btn-primary { background: var(--cta); color: var(--cta-ink); }
-.btn-primary:hover { background: var(--cta-hover); color: var(--cta-ink); }
-.btn-secondary { background: #fff; color: var(--navy-900); border-color: var(--navy-900); }
-.btn-secondary:hover { background: var(--navy-900); color: #fff; }
+.btn-primary { background: var(--cta); color: #fff; }
+.btn-primary:hover { background: var(--cta-hover); color: #fff; }
+.btn-secondary { background: #fff; color: var(--navy-800); border-color: var(--navy-800); }
+.btn-secondary:hover { background: var(--blue-50); color: var(--navy-900); }
 .btn-ghost { background: transparent; color: #fff; border-color: rgb(255 255 255 / 0.6); }
 .btn-ghost:hover { background: rgb(255 255 255 / 0.1); color: #fff; }
 .btn-emergency { background: var(--emergency); color: #fff; }
@@ -119,10 +109,9 @@ p { margin: 0 0 1rem; }
 .check-list { list-style: none; padding: 0; margin: 0 0 1rem; display: grid; gap: 0.5rem; }
 .check-list li { position: relative; padding-left: 1.75rem; }
 .check-list li::before { content: ''; position: absolute; left: 0; top: 0.35em; width: 1.1rem; height: 1.1rem; border-radius: 50%;
-  background: var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='%230b0c0e' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/80% no-repeat; }
+  background: var(--green-600) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath d='M4 8.5l2.5 2.5L12 5.5' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/80% no-repeat; }
 
-.hero { position: relative; color: #f5f5f7; overflow: hidden;
-  background: url('/graphics/glow-lines.svg') right -120px bottom -40px / min(1000px, 140%) auto no-repeat, radial-gradient(ellipse at 90% 10%, rgb(67 224 248 / 0.16), transparent 50%), #050607; }
+.hero { position: relative; background: var(--navy-900); color: #e8f0f8; overflow: hidden; }
 
 .hero h1 { color: #fff; }
 .hero .lead { color: #c9d8e8; }
@@ -132,7 +121,7 @@ p { margin: 0 0 1rem; }
 
 /* Proof line (2026-11-25 redesign): credentials as one quiet line with separators, not a row of pills. */
 .badge-row { display: flex; flex-wrap: wrap; gap: 0.25rem 0; list-style: none; padding: 0; margin: 1.25rem 0 0; font-size: 0.92rem; color: #a9bdd3; }
-.badge-row li:not(:last-child)::after { content: '·'; margin: 0 0.55rem; color: var(--accent); }
+.badge-row li:not(:last-child)::after { content: '·'; margin: 0 0.55rem; color: rgb(255 255 255 / 0.35); }
 
 /* Ruled link list (2026-11-25 redesign): rows with a title, an optional line of detail and an arrow.
    Replaces grids of same-size icon cards for service, post and related links. */
@@ -141,7 +130,7 @@ p { margin: 0 0 1rem; }
 .ruled a { display: grid; grid-template-columns: 1fr auto; align-items: center; gap: 0.1rem 1rem; min-height: 44px; padding: 0.9rem 0.25rem; text-decoration: none; color: var(--text); }
 .ruled strong { grid-column: 1; font-family: var(--font-heading); font-size: 1.05rem; color: var(--navy-900); line-height: 1.3; transition: color var(--dur-fast) var(--ease-out); }
 .ruled small, .ruled .sub { grid-column: 1; font-size: 0.9rem; color: var(--muted); line-height: 1.45; }
-.ruled .icon { grid-column: 2; grid-row: 1 / span 2; color: var(--accent-ink); transition: transform var(--dur-fast) var(--ease-out); }
+.ruled .icon { grid-column: 2; grid-row: 1 / span 2; color: var(--cta); transition: transform var(--dur-fast) var(--ease-out); }
 .ruled a:hover strong { color: var(--brand-accent); }
 @media (hover: hover) { .ruled a:hover .icon { transform: translateX(3px); } }
 .ruled.one-col { grid-template-columns: 1fr; }
@@ -150,7 +139,7 @@ p { margin: 0 0 1rem; }
 /* Callouts: full border + tint (no bar down one side). */
 .note { padding: 1rem 1.15rem; border-radius: var(--radius-sm); border: 1px solid var(--border); background: var(--blue-50); margin-bottom: 1.25rem; }
 .note.danger { background: #fdecec; border-color: #f2c4c0; }
-.note.answer { background: var(--accent-tint); border-color: var(--accent-line); }
+.note.answer { background: var(--orange-50); border-color: #f6d6c0; }
 
 .prose { max-width: 46rem; }
 .prose h2 { margin-top: 2.25rem; }
@@ -167,12 +156,12 @@ p { margin: 0 0 1rem; }
 .icon { flex: none; vertical-align: middle; }
 .btn .icon { width: 1.15em; height: 1.15em; }
 .icon-tile { display: inline-grid; place-items: center; width: 2.75rem; height: 2.75rem; border-radius: 12px; background: var(--ice); color: var(--navy-800); flex: none; }
-.icon-tile.amber { background: var(--accent-tint); color: var(--accent-ink); }
+.icon-tile.amber { background: #fdeee4; color: var(--cta); }
 
 /* License ribbon (borrowed from Direction B) */
 .license-ribbon { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.45rem 0.9rem 0.45rem 0.7rem; background: #fff; color: var(--navy-900);
   border-radius: 999px; font-weight: 800; font-size: 0.85rem; box-shadow: 0 4px 14px rgb(0 0 0 / 0.18); }
-.license-ribbon .icon { color: var(--accent-ink); }
+.license-ribbon .icon { color: var(--cta); }
 
 /* Photos */
 .photo { border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); background: var(--ice); }
@@ -181,11 +170,3 @@ p { margin: 0 0 1rem; }
 /* Secondary CTAs on dark heroes: outline so Call stays the primary action (Chloe) */
 .hero .cta .btn-secondary, .post-hero .btn-secondary { background: transparent; color: #fff; border-color: rgb(255 255 255 / 0.55); }
 .hero .cta .btn-secondary:hover { background: rgb(255 255 255 / 0.1); color: #fff; }
-
-/* Cyan highlight inside a heading (reference style: one or two words in the accent color). */
-.hl { color: var(--accent-ink); }
-.hero .hl, .home-hero2 .hl, .section-dark .hl { color: var(--accent); }
-.card { border-radius: var(--radius); }
-
-/* Narrow phones: Poppins is wider than the old face, so buttons get tighter padding and can wrap. */
-@media (max-width: 400px) { .btn { padding-inline: 1rem; white-space: normal; text-align: center; } }
