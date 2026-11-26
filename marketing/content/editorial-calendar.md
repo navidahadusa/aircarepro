@@ -41,7 +41,7 @@ Status key: ☐ to do · ✍ drafted on branch · ✅ published (merged) · **O*
 | Fri Nov 27 | Refresh | carbon-monoxide-safety-tips | carbon monoxide safety | /carbon-monoxide-safety/, /furnace-repair/ | F (Illinois CO Alarm Detector Act 430 ILCS 135; Chicago rules → 311) | ✍ shipped Nov 25 → /carbon-monoxide-safety-tips/ (rewritten: Illinois/Chicago alarm rules, placement, symptoms, alarm steps, Chicago chimney/vent sources, 5 FAQs) |
 | Mon Nov 30 | Job story | Furnace replacement in a Chicago bungalow | furnace replacement chicago | /furnace-installation/, matching /hvac-<area>/ | **O** (real photos, area, what was found) | ☐ |
 | Tue Dec 1 | Answer | Heat Pump Defrost Mode: Why It Steams in Chicago Cold | heat pump defrost mode | /heat-pump-repair/, /heating/ | | ☐ |
-| Wed Dec 2 | Refresh | cracked-heat-exchanger-signs | cracked heat exchanger | /furnace-repair/, /carbon-monoxide-safety/ | | ☐ |
+| Wed Dec 2 | Refresh | cracked-heat-exchanger-signs | cracked heat exchanger | /furnace-repair/, /carbon-monoxide-safety/ | | ✍ shipped Nov 26 (Thu refresh slot; Mon Nov 30 is O) → /cracked-heat-exchanger-signs/ (rewritten: signs, how it's confirmed, repair vs replace, check the diagnosis, 5 FAQs) |
 | Thu Dec 3 | Seasonal | Space Heaters and CO: Cold-Snap Safety | space heater safety | /carbon-monoxide-safety/, /emergency-hvac/ | F (official safety sources) | ☐ |
 | Fri Dec 4 | Resource | Heating Help and Rebates: Where Chicago Homeowners Should Check | chicago heating assistance | /furnace-installation/, /heat-pump-installation/ | F ("check current eligibility") | ☐ |
 | Mon Dec 7 | Guide | Cold Upstairs Rooms in Bungalows with Finished Attics | bungalow attic cold | /ductwork-repair/, /mini-split-installation/ | | ☐ |

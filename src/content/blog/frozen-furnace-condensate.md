@@ -1,9 +1,9 @@
 ---
 {
-  "title": "Frozen Furnace Condensate Line: Causes and Fixes",
-  "description": "High-efficiency furnace stopped during a Chicago cold snap? A frozen or clogged condensate line may be why. Learn the signs, causes and how we prevent it.",
+  "title": "Furnace Condensate Line Frozen? Causes and Fixes",
+  "description": "Furnace condensate line frozen or keeps freezing in a Chicago cold snap? Why high-efficiency furnaces shut down, how to thaw the drain, and how to stop it.",
   "pubDate": "2026-11-15",
-  "updatedDate": "2026-11-15",
+  "updatedDate": "2026-11-26",
   "category": "heating",
   "quickAnswer": "High-efficiency furnaces produce water that drains through a condensate line. When that line freezes or clogs, a safety switch shuts the furnace down. Thawing and clearing the line restores heat, and rerouting or insulating it prevents repeat problems.",
   "takeaways": [
@@ -24,6 +24,10 @@
     {
       "q": "How do I know if my condensate pump failed?",
       "a": "Water around the pump, a pump that doesn't run or a furnace that shuts down are common signs."
+    },
+    {
+      "q": "Why does my furnace condensate line keep freezing?",
+      "a": "Usually because part of the drain runs somewhere cold: through an unheated garage, crawl space or outside wall, or out to a drain point outdoors. Water that sits in a low spot or a line with too little slope freezes first. The lasting fix is rerouting the drain to a floor drain or condensate pump inside the heated space, giving it a steady downhill slope, and insulating or heat-taping any section that has to stay in a cold area."
     }
   ],
   "related": [

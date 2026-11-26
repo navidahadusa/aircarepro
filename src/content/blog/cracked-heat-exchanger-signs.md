@@ -1,40 +1,48 @@
 ---
 {
-  "title": "Signs of a Cracked Heat Exchanger",
-  "description": "A cracked furnace heat exchanger can be a safety hazard. Learn the warning signs, how technicians inspect for cracks and what your options are if one is found.",
+  "title": "Cracked Heat Exchanger: Signs, Repair or Replace",
+  "description": "Signs of a cracked furnace heat exchanger, how a technician confirms one, whether it can be repaired or replaced, and how to check a diagnosis before you pay.",
   "pubDate": "2026-11-15",
-  "updatedDate": "2026-11-15",
+  "updatedDate": "2026-11-26",
   "category": "air-quality",
-  "quickAnswer": "Warning signs of a cracked furnace heat exchanger include soot around the burners, a flame that flickers or changes when the blower starts, rust and corrosion, unusual odors, carbon monoxide alarms and headaches or nausea that improve outside the home. Only a trained technician can confirm a crack. Because it can let combustion gases into your air, a cracked heat exchanger usually means replacing the furnace. Yearly inspections and working CO alarms are your best protection.",
+  "quickAnswer": "Signs of a cracked heat exchanger include soot or scorch marks around the burners, a flame that flickers, lifts or changes color when the blower starts, rust inside the furnace, a sharp or burning smell, and a carbon monoxide alarm or flu-like symptoms that ease outside the house. Only a technician can confirm a crack, using a visual or camera inspection, flame observation and combustion and CO testing. A cracked heat exchanger is not patched. The heat exchanger or the furnace is replaced, and the furnace should not run until then. Ask to see the evidence before you decide.",
   "takeaways": [
-    "Cracks can let combustion gases escape",
-    "Watch for soot, odors and CO alarms",
-    "Inspection requires a trained technician",
-    "Replacement is usually the safest option"
+    "Soot, flame changes, rust, odors and CO alarms are the warning signs",
+    "Only an inspection confirms a crack: ask to see photos or camera footage",
+    "Cracks are not welded or patched: the part or the furnace is replaced",
+    "The heat exchanger often has a longer warranty: check before you decide",
+    "Yearly inspections and working CO alarms are the protection"
   ],
   "faqs": [
     {
-      "q": "Can a cracked heat exchanger cause carbon monoxide?",
-      "a": "It can allow combustion gases into the airstream, which is why it's taken seriously."
+      "q": "Can a cracked heat exchanger be repaired?",
+      "a": "Not safely. Welding, sealing or patching a crack is not an accepted repair, because the metal keeps expanding and contracting every cycle. The fix is replacing the heat exchanger itself, when the part is available and worth it, or replacing the furnace."
     },
     {
-      "q": "Can a heat exchanger be repaired?",
-      "a": "Generally not. Replacement of the heat exchanger or furnace is needed."
+      "q": "Is it dangerous to run a furnace with a cracked heat exchanger?",
+      "a": "It can be. A crack can let combustion gases, including carbon monoxide, mix with the air the blower sends through the house. If a crack is confirmed, the furnace should stay off until it is replaced, and every level of the home should have a working CO alarm."
     },
     {
-      "q": "How often should my heat exchanger be inspected?",
-      "a": "Every year during your furnace tune-up."
+      "q": "Should I replace the heat exchanger or the whole furnace?",
+      "a": "It depends on the furnace's age, whether the heat exchanger is still under warranty, and whether the part is available. Many manufacturers warranty the heat exchanger longer than the rest of the furnace, so check the model and registration first. On an older furnace, replacing the whole unit is usually the better value, because labor for a heat exchanger swap is high and the other parts are just as old."
+    },
+    {
+      "q": "How do I know the diagnosis is real?",
+      "a": "Ask the technician to show you: photos or camera footage of the crack, the flame behavior when the blower starts, and the combustion and CO readings. A careful contractor documents what they found. If you're unsure, a second opinion before replacing a furnace is reasonable."
+    },
+    {
+      "q": "How often should the heat exchanger be inspected?",
+      "a": "Once a year, as part of a furnace tune-up. Inspections matter more after about 15 years, in furnaces that short-cycle, and in homes with restricted airflow from dirty filters or too few returns."
     }
   ],
   "related": [
+    "furnace-repair",
+    "furnace-installation",
+    "furnace-tune-up",
     "carbon-monoxide-safety",
     "carbon-monoxide-safety-tips",
-    "dry-air-in-winter",
-    "furnace-blowing-cold-air",
-    "furnace-installation",
-    "how-often-change-furnace-filter",
-    "humidifier-vs-portable",
-    "uv-lights-worth-it"
+    "repair-or-replace-furnace",
+    "furnace-short-cycling"
   ],
   "source": "https://aircareprohvac.com/cracked-heat-exchanger-signs/",
   "intent": "emergency",
@@ -43,4 +51,60 @@
 }
 ---
 
-<h2>What the heat exchanger does</h2><p>The heat exchanger separates the burner flame and combustion gases from the air your blower circulates through your home. Heat passes through the metal walls while exhaust gases go out the vent.</p><h2>How cracks form</h2><p>Every heating cycle makes the metal expand and contract. Over many years, especially in furnaces that overheat because of poor airflow or oversizing, the metal can fatigue and crack.</p><h2>Warning signs</h2><p>Soot around the burners, a burner flame that flickers or changes when the blower starts, rust and corrosion, unusual odors, a carbon monoxide alarm or physical symptoms like headaches that improve outside the home can all be warning signs.</p><h2>How we inspect</h2><p>Technicians inspect the heat exchanger visually, sometimes with a camera, and watch the flame behavior when the blower starts. Combustion analysis and carbon monoxide testing provide additional information.</p><h2>Corroded venting is another red flag</h2><p>During safety inspections we also check venting. Rusted or corroded flue pipes can leak combustion gases and should be replaced.</p><h2>What happens if a crack is found</h2><p>A cracked heat exchanger is a safety issue. In most cases, replacing the furnace is the safest and most cost-effective option. We&#x27;ll explain what we found and your options clearly.</p><h2>Why oversized furnaces crack more often</h2><p>Oversized furnaces short cycle, heating and cooling rapidly many times a day. That constant expansion and contraction fatigues the heat exchanger metal. Poor airflow from dirty filters and undersized ducts adds overheating stress. Correctly sizing furnaces and maintaining good airflow help heat exchangers last.</p><h2>The role of combustion analysis</h2><p>A combustion analyzer measures carbon monoxide, oxygen and other values in the flue gases. While it can&#x27;t directly confirm a crack, unusual readings or changes when the blower starts can point to a problem. We use it alongside visual inspection.</p><h2>What a crack doesn&#x27;t mean</h2><p>Not every heat exchanger issue means immediate danger, but any suspected crack should be taken seriously. We explain what we find, show you when possible and recommend the safest path forward.</p><h2>Your options</h2><p>If a crack is confirmed, options include replacing the heat exchanger if it&#x27;s under warranty and practical, or replacing the furnace. In most older furnaces, replacement is more cost-effective and gives you a more efficient, safer system.</p><h2>Prevention</h2><p>Yearly inspections catch early warning signs. Keep filters clean, keep vents open and make sure your furnace is properly sized when it&#x27;s time to replace it.</p><h2>Second opinions on heat exchangers</h2><p>Because a cracked heat exchanger usually means replacing a furnace, it&#x27;s reasonable to ask the technician to show you what they found, with photos or a camera inspection. Reputable companies are happy to explain. If you&#x27;re unsure, get a second opinion before making a major decision.</p><h2>Furnace age and risk</h2><p>Heat exchanger problems become more common as furnaces age, particularly after 15 years. Regular inspections are the best protection.</p><h2>Carbon monoxide alarms</h2><p>No matter the age of your furnace, keep working CO alarms on every level of your home. They&#x27;re your last line of defense.</p><h2>Symptoms in your home</h2><p>Beyond what a technician sees inside the furnace, some homeowners notice that family members feel unwell, with headaches, dizziness or nausea that improve when they leave the house. Others notice an unusual odor, more condensation on windows or soot around registers. If you notice any of these along with a carbon monoxide alarm, get everyone outside and call for help. If symptoms are mild and there&#x27;s no alarm, still schedule an inspection promptly.</p><h2>What we document</h2><p>When we find a suspected crack, we document it with photos or video, record combustion readings and explain the findings clearly so you can make an informed decision.</p><h2>Peace of mind with a new furnace</h2><p>If your furnace has a cracked heat exchanger, replacing it brings more than safety. A new high-efficiency furnace can lower gas bills, run more quietly and provide more even comfort. Modern heat exchangers are often backed by long warranties, and proper sizing and airflow help them last.</p><h2>The bottom line</h2><p>Take heat exchanger concerns seriously, keep working CO alarms and have your furnace inspected every year. If a problem is found, we&#x27;ll explain it clearly and help you choose the safest path forward.</p>
+<p>The heat exchanger is the metal chamber inside a gas furnace that keeps the burner flame and its exhaust separate from the air your blower pushes through the house. Heat passes through the metal; the combustion gases go out the vent. A crack breaks that separation, which is why a cracked heat exchanger is treated as a safety problem and not a comfort problem.</p>
+
+<p>This guide covers the warning signs, how a technician confirms a crack, whether it can be repaired or replaced, and how to check the diagnosis before you spend money on a new furnace.</p>
+
+<h2>Signs of a cracked heat exchanger</h2>
+<p>Some signs show up at the furnace, some in the house:</p>
+<ul>
+<li><strong>Soot or scorch marks</strong> around the burners or on the furnace cabinet.</li>
+<li><strong>A flame that changes when the blower starts:</strong> flickering, lifting off the burner, rolling out of the burner area, or turning from blue to yellow or orange.</li>
+<li><strong>Rust and corrosion</strong> inside the burner compartment or on the heat exchanger surfaces you can see.</li>
+<li><strong>A sharp, chemical or burning smell</strong> from the registers when the heat runs.</li>
+<li><strong>A carbon monoxide alarm</strong>, or headaches, dizziness or nausea in the family that ease when you leave the house.</li>
+<li><strong>The furnace shutting itself off</strong> on a flame rollout or high-limit safety switch.</li>
+</ul>
+<p>None of these proves a crack on its own. A dirty burner, a blocked vent or a weak draft can cause several of them. They are reasons to have the furnace inspected soon. If a CO alarm sounds, get everyone outside first and call 911 or your gas utility from outside. Our <a href="/carbon-monoxide-safety-tips/">carbon monoxide safety guide</a> covers what to do step by step.</p>
+
+<h2>How a technician confirms a crack</h2>
+<p>A heat exchanger is mostly hidden inside the furnace, so confirming a crack takes more than a glance:</p>
+<ol>
+<li><strong>Visual and camera inspection.</strong> With the burners off, the technician looks at the heat exchanger surfaces, often with an inspection camera that reaches the sections you can't see.</li>
+<li><strong>Flame observation.</strong> Watching the burner flame as the blower starts. If air from the blower pushes into the combustion side through a crack, the flame moves.</li>
+<li><strong>Combustion analysis.</strong> Measuring CO, oxygen and other values in the flue gases, and watching whether they change when the blower comes on.</li>
+<li><strong>CO testing in the living space</strong> at the registers and in the room.</li>
+</ol>
+<p>A combustion analyzer can't see a crack by itself, but readings that jump when the blower starts point to one. The strongest evidence is a visible crack or hole, documented with photos or video.</p>
+
+<h2>Can a cracked heat exchanger be repaired?</h2>
+<p>Not safely. Welding, sealing or patching a crack is not an accepted repair: the metal heats and cools with every cycle, and a patch won't hold. The two real options are:</p>
+<ul>
+<li><strong>Replace the heat exchanger</strong> when the furnace is newer, the part is available, and especially when it's still under warranty. Many manufacturers warranty the heat exchanger longer than the rest of the furnace, so look up the model and whether it was registered. Even with a covered part, the labor for the swap is significant, because the furnace has to be largely taken apart.</li>
+<li><strong>Replace the furnace</strong> when it's older or out of warranty. The rest of the furnace is the same age as the cracked part, and a new <a href="/furnace-installation/">correctly sized furnace</a> brings a new warranty and higher efficiency.</li>
+</ul>
+<p>Until one of those is done, the furnace should stay off. A technician who confirms a crack may shut the gas to the furnace and tag it as unsafe. In a Chicago cold snap, ask about temporary heat for the time between the diagnosis and the replacement.</p>
+
+<h2>Check the diagnosis before you pay</h2>
+<p>A cracked heat exchanger usually means a new furnace, so it's fair to ask for proof. Before you agree:</p>
+<ul>
+<li>Ask to <strong>see the crack</strong>: photos or camera footage, with the location on the heat exchanger.</li>
+<li>Ask for the <strong>combustion and CO readings</strong>, and whether they changed when the blower started.</li>
+<li>Ask whether the heat exchanger is <strong>under warranty</strong> and whether replacing just the part is possible.</li>
+<li>If anything is unclear, <strong>get a second opinion</strong>. A careful contractor won't object.</li>
+</ul>
+<p>When we find a suspected crack, we document it with photos or video, record the readings and walk you through the options with prices before any work starts.</p>
+
+<h2>Why heat exchangers crack</h2>
+<p>Every heating cycle expands and contracts the metal. Over years, that fatigues it, and a few things make it happen faster:</p>
+<ul>
+<li><strong>Oversizing and short-cycling.</strong> An oversized furnace runs in short bursts many times a day, which means more heating and cooling cycles on the metal. See <a href="/furnace-short-cycling/">why furnaces short-cycle</a>.</li>
+<li><strong>Restricted airflow.</strong> Dirty filters, closed registers and too few returns, common in Chicago bungalows, make the heat exchanger run hotter than it should.</li>
+<li><strong>Age.</strong> Problems become more common as furnaces pass about 15 years.</li>
+<li><strong>Corrosion</strong> from poor venting or acidic condensate in high-efficiency furnaces.</li>
+</ul>
+
+<h2>Prevention</h2>
+<p>A yearly <a href="/furnace-tune-up/">furnace tune-up</a> includes a heat exchanger inspection, combustion check and CO test. Between visits, change the filter on schedule, keep supply and return registers open, and keep a working CO alarm on every level of the home. When it's time to replace the furnace, size it to the house with a load calculation instead of copying the old unit; a right-sized furnace cycles less and its heat exchanger lasts longer.</p>
+
+<p>If your furnace is showing any of the signs above, or a CO alarm has gone off, <a href="/furnace-repair/">schedule a furnace inspection</a>. We answer calls and texts 24/7.</p>
