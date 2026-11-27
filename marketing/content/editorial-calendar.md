@@ -47,23 +47,25 @@ Don't write new posts on: furnace won't turn on, furnace noises, short-cycling, 
 | Mon Nov 30 | Job story | Steam Boiler Not Working? A Clogged Gauge Glass and Pigtail | steam boiler not working, clogged pigtail steam boiler | /boiler-repair/, /boiler-not-heating/ | Owner photos + details 2026-11-26 (area not given) | ✍ shipped Nov 26 → /steam-boiler-not-working-clogged-gauge-glass/ |
 | Wed Dec 2 | Refresh | cracked-heat-exchanger-signs | cracked heat exchanger | /furnace-repair/, /carbon-monoxide-safety/ | | ✍ shipped Nov 26 (Thu refresh slot; Mon Nov 30 is O) → /cracked-heat-exchanger-signs/ (rewritten: signs, how it's confirmed, repair vs replace, check the diagnosis, 5 FAQs) |
 
-## Next 14 days (one new article per day)
-| Date | Type | Title | Target keyword | Links | External sources to cite | Status |
+## Next 14 days (one new article per day, lead-first: owner 2026-11-27)
+Owner: "Topics must be real, the ones that bring leads and customers." Every topic below is a phrase Google Autocomplete returned on 2026-11-27 (`scripts/keyword-ideas.mjs`), with **repair, emergency or replacement intent** (someone with a problem, about to call or book). Each article ends with Call/Text + booking and links to the service page that converts.
+
+| Date | Type | Title | Real search (Autocomplete) | Converts on | External sources to cite | Status |
 |---|---|---|---|---|---|---|
-| Fri Nov 27 | Job story | How to Clean a Furnace Blower Wheel (and How Often) | how to clean furnace blower wheel | /furnace-tune-up/, /furnace-repair/ | ENERGY STAR maintenance checklist; Illinois Keep Warm heating guide | ✍ shipped Nov 27 → /how-to-clean-furnace-blower-wheel/ (owner photo) |
-| Sat Nov 28 | Answer | How to Keep Pipes From Freezing in a Chicago Cold Snap | how to keep pipes from freezing | /emergency-hvac/, /boiler-repair/ | City of Chicago / 311 winter guidance | ☐ |
-| Sun Nov 29 | Seasonal | Space Heaters and Carbon Monoxide: Cold-Snap Safety | space heater safety | /carbon-monoxide-safety/, /emergency-hvac/ | U.S. CPSC, CDC CO page | ☐ |
-| Mon Nov 30 | Answer | Heat Pump Defrost Mode: Why It Steams in Chicago Cold | heat pump defrost mode | /heat-pump-repair/, /heating/ | energy.gov heat pump page, manufacturer manual | ☐ |
-| Tue Dec 1 | Answer | One Radiator Not Getting Hot? Steam and Hot-Water Checks | radiator not getting hot | /boiler-repair/, /boiler-not-heating/ | manufacturer / energy.gov | ☐ |
-| Wed Dec 2 | Resource | Heating Help and Rebates: Where Chicago Homeowners Should Check | chicago heating assistance | /furnace-installation/, /heat-pump-installation/ | LIHEAP / Illinois, Peoples Gas, ComEd (check current eligibility) | ☐ |
-| Thu Dec 3 | Answer | Thermostat Blank or Not Working? What to Check First | thermostat blank screen | /thermostat-installation/, /furnace-repair/ | manufacturer support pages | ☐ |
-| Fri Dec 4 | Guide | Cold Upstairs Rooms in Bungalows with Finished Attics | bungalow attic cold | /ductwork-repair/, /mini-split-installation/ | ENERGY STAR / energy.gov | ☐ |
-| Sat Dec 5 | Answer | Furnace Smells Like Burning When It First Turns On | furnace burning smell | /furnace-repair/, /carbon-monoxide-safety/ | CPSC / manufacturer | ☐ |
-| Sun Dec 6 | Answer | Which Furnace Filter (MERV) for a Chicago Home? | best furnace filter merv | /how-often-change-furnace-filter/, /air-purifiers/ | EPA indoor air / filter guide | ☐ |
-| Mon Dec 7 | Guide | Boiler Service in Chicago: What a Yearly Steam or Hot-Water Check Covers | boiler service chicago | /boiler-repair/, /maintenance-plan/ | Illinois Keep Warm guide | ☐ |
-| Tue Dec 8 | Answer | Are Carbon Monoxide Detectors Required in Chicago Rentals? | chicago carbon monoxide detector law | /carbon-monoxide-safety-tips/, /carbon-monoxide-safety/ | Illinois CO Alarm Detector Act (ILGA), City of Chicago | ☐ |
-| Wed Dec 9 | Guide | Heat Pump Maintenance Before a Chicago Winter | heat pump maintenance | /heat-pump-repair/, /ac-repair-schaumburg/ | energy.gov | ☐ |
-| Thu Dec 10 | Answer | Dual-Fuel Heat Pumps in the Northwest Suburbs | dual fuel heat pump | /heat-pump-installation/, /hvac-arlington-heights/ | energy.gov, ComEd | ☐ |
-| Fri Dec 11 | Answer | What Temperature Should a Vacant Chicago House Be Kept At? | thermostat setting for vacant house winter | /furnace-tune-up/, /maintenance-plan/ | City of Chicago / insurer guidance | ☐ |
+| Fri Nov 27 | Job story | How to Clean a Furnace Blower Wheel (and How Often) | how to clean furnace blower wheel | /furnace-tune-up/, /furnace-repair/ | ENERGY STAR checklist; Illinois Keep Warm | ✍ shipped → /how-to-clean-furnace-blower-wheel/ |
+| Sat Nov 28 | Emergency | Furnace Not Working? How to Keep the House Warm Until We Get There | furnace not working how to keep house warm · is heat not working an emergency | /emergency-hvac/, /furnace-repair/ | CDC / CPSC space heater + CO safety | ☐ |
+| Sun Nov 29 | Repair | Heat Pump Not Heating When It's Cold Outside | heat pump not heating when cold outside · why is my heat pump not heating but ac works | /heat-pump-repair/ | energy.gov heat pump page | ☐ |
+| Mon Nov 30 | Local repair | Steam Boiler Repair in Chicago: What We Fix Most Often | steam boiler repair chicago · boiler repair chicago | /boiler-repair/, /hvac-chicago/ | Illinois Keep Warm; manufacturer manual | ☐ |
+| Tue Dec 1 | Repair | Radiator Not Heating Up? How to Fix It (Steam and Hot Water) | radiator not heating up how to fix | /boiler-repair/, /boiler-not-heating/ | energy.gov / manufacturer | ☐ |
+| Wed Dec 2 | Replacement | Furnace Replacement Cost in Chicago: What Changes the Price | furnace replacement cost chicago · hvac replacement cost chicago | /furnace-installation/, /free-estimate/, /financing/ | ENERGY STAR furnace page; utility rebate pages (check current) | ☐ no invented prices: factors + free estimate |
+| Thu Dec 3 | Landlord | No Heat in a Chicago Two-Flat: A Landlord's Same-Day Checklist | no heat complaint chicago · landlord will not fix heat | /emergency-hvac/, /boiler-repair/, /chicago-heat-ordinance/ | City of Chicago heat ordinance / 311 | ☐ |
+| Fri Dec 4 | Repair | Furnace Smells Like Burning When Turned On: Normal or Not? | furnace smells like burning when turned on · what to do if furnace smells like burning | /furnace-repair/, /carbon-monoxide-safety/ | CPSC / U.S. Fire Administration | ☐ |
+| Sat Dec 5 | Repair | Furnace Repair Cost: What Drives the Price of a Service Call | furnace not working repair cost | /furnace-repair/, /maintenance-plan/ | ENERGY STAR | ☐ no invented prices |
+| Sun Dec 6 | Emergency | Frozen Pipes in Chicago: When the Furnace Goes Out Overnight | frozen pipes chicago · do pipes freeze in chicago | /emergency-hvac/ | City of Chicago winter guidance | ☐ |
+| Mon Dec 7 | Replacement | Boiler Replacement Cost in Chicago: Steam vs. Hot Water | boiler replacement cost chicago | /boiler-installation/, /free-estimate/, /financing/ | Peoples Gas / Nicor rebate pages (check current) | ☐ no invented prices |
+| Tue Dec 8 | Repair | Emergency Heat on the Thermostat Not Working | emergency heat on thermostat not working | /heat-pump-repair/, /thermostat-installation/ | manufacturer support | ☐ |
+| Wed Dec 9 | Replacement | Furnace and AC Replacement Together: When It Makes Sense | furnace and ac replacement cost chicago | /furnace-installation/, /ac-installation/, /free-estimate/ | ENERGY STAR; ComEd rebates | ☐ |
+| Thu Dec 10 | Repair | Furnace Not Turning On When the Temperature Drops | furnace not turning on when temp drops | /furnace-repair/, /emergency-hvac/ | manufacturer manual | ☐ |
+| Fri Dec 11 | Local | Furnace Repair Near Me With a Free Estimate: What to Ask on the Phone | furnace repair near me free estimate | /furnace-repair/, /free-estimate/ | FTC / BBB hiring-a-contractor tips | ☐ |
 | Later | Area post | Heating Courtyard Buildings in Rogers Park and Edgewater | rogers park heating | /hvac-rogers-park/ | | **O** (actual jobs there) |
 | Later | Job story | Furnace replacement in a Chicago bungalow | furnace replacement chicago | /furnace-installation/ | | **O** (photos, area, findings) |
