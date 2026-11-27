@@ -25,6 +25,12 @@ Write like an experienced Chicago technician explaining it at the kitchen table:
 - Cut AI tells: no em dashes; no "delve", "navigate", "crucial", "comprehensive", "in conclusion", "it's important to note", "whether you're… or…"; no stacked adjectives; no summary paragraph repeating the post; no same-length bullet lists everywhere.
 - Before shipping, read it out loud (or run the `seo-content` skill's AI-phrasing cleanup). If a sentence sounds like a brochure, rewrite it.
 
+## External links (owner rule, 2026-11-27)
+Every article links out to **1–3 authoritative sources** that back up a fact in the text: City of Chicago / 311, State of Illinois (ILGA, Keep Warm), ComEd, Peoples Gas, North Shore Gas, Nicor Gas, ENERGY STAR, energy.gov, EPA, CDC, CPSC, or the equipment manufacturer.
+- Take the URL from a WebSearch result (or a page you opened). **Never type a URL from memory.**
+- Link the specific page, with descriptive anchor text ("ENERGY STAR's maintenance checklist"), inside the sentence it supports.
+- No links to competitors, other contractors, lead sites or affiliate pages.
+
 ## Write it
 - Follow `marketing/content/post-template.md` exactly (frontmatter, 900–1,500 words, body sections). File: `src/content/blog/<keyword-slug>.md`; URL `/<keyword-slug>/`. Some migrated posts use JSON frontmatter: keep the format of the file you edit.
 - Primary keyword in title (≤ 60 chars), description (≤ 160), first 100 words and one H2. Answer the query in `quickAnswer`.
