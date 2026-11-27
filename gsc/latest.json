@@ -1,36 +1,20 @@
 {
   "site": "https://aircareprohvac.com/",
-  "generatedAt": "2026-11-26T13:44:42.171Z",
+  "generatedAt": "2026-11-27T13:41:18.195Z",
   "errors": [],
   "sitemaps": [
     {
       "path": "https://aircareprohvac.com/sitemap-index.xml",
-      "lastSubmitted": "2026-11-26T13:44:42.356Z",
+      "lastSubmitted": "2026-11-27T13:41:18.260Z",
       "isPending": true,
       "isSitemapsIndex": true,
-      "lastDownloaded": "2026-11-25T13:49:55.865Z",
+      "lastDownloaded": "2026-11-26T13:44:43.159Z",
       "warnings": "0",
       "errors": "0",
       "contents": [
         {
           "type": "web",
-          "submitted": "140",
-          "indexed": "0"
-        }
-      ]
-    },
-    {
-      "path": "https://aircareprohvac.com/sitemap_index.xml",
-      "lastSubmitted": "2026-11-18T02:10:25.549Z",
-      "isPending": false,
-      "isSitemapsIndex": true,
-      "lastDownloaded": "2026-11-26T05:24:06.690Z",
-      "warnings": "0",
-      "errors": "0",
-      "contents": [
-        {
-          "type": "web",
-          "submitted": "140",
+          "submitted": "141",
           "indexed": "0"
         }
       ]
@@ -38,20 +22,20 @@
   ],
   "period": {
     "current": [
-      "2026-10-27",
-      "2026-11-23"
+      "2026-10-28",
+      "2026-11-24"
     ],
     "previous": [
-      "2026-09-29",
-      "2026-10-26"
+      "2026-09-30",
+      "2026-10-27"
     ]
   },
   "totals": {
     "current": {
       "clicks": 1,
-      "impressions": 2893,
-      "ctr": 0.0003456619426201175,
-      "position": 53.02972692706533
+      "impressions": 3091,
+      "ctr": 0.00032351989647363315,
+      "position": 53.42672274344872
     },
     "previous": {}
   },
@@ -79,99 +63,99 @@
         "24 hour hvac service edgewater"
       ],
       "clicks": 0,
-      "impressions": 10,
+      "impressions": 13,
       "ctr": 0,
-      "position": 53
+      "position": 56.07692307692308
     },
     {
       "keys": [
         "247 ac installation portage"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 60.5
+      "position": 59.666666666666664
     },
     {
       "keys": [
         "247 ac repair portage"
       ],
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 6,
       "ctr": 0,
-      "position": 67.8
+      "position": 67.66666666666667
     },
     {
       "keys": [
         "247 commercial hvac repairs portage"
       ],
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
-      "position": 79.33333333333333
+      "position": 79.28571428571429
     },
     {
       "keys": [
         "247 furnace installation portage"
       ],
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 8,
       "ctr": 0,
-      "position": 65.42857142857143
+      "position": 65.75
     },
     {
       "keys": [
         "247 furnace repair portage"
       ],
       "clicks": 0,
-      "impressions": 4,
+      "impressions": 5,
       "ctr": 0,
-      "position": 61.5
+      "position": 61.8
     },
     {
       "keys": [
         "247 heating and cooling portage"
       ],
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 10,
       "ctr": 0,
-      "position": 61.666666666666664
+      "position": 64.4
     },
     {
       "keys": [
         "247 heating installation portage"
       ],
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 6,
       "ctr": 0,
-      "position": 71.8
+      "position": 68.83333333333333
     },
     {
       "keys": [
         "247 heating repair portage"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 53
+      "position": 59
     },
     {
       "keys": [
         "247 hvac installation portage"
       ],
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 6,
       "ctr": 0,
-      "position": 64.2
+      "position": 63.833333333333336
     },
     {
       "keys": [
         "247 hvac repair portage"
       ],
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 6,
       "ctr": 0,
-      "position": 67.6
+      "position": 68.16666666666667
     },
     {
       "keys": [
@@ -439,9 +423,18 @@
         "ac installation ukrainian village il"
       ],
       "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 21.5
+    },
+    {
+      "keys": [
+        "ac installation west town il"
+      ],
+      "clicks": 0,
       "impressions": 1,
       "ctr": 0,
-      "position": 1
+      "position": 77
     },
     {
       "keys": [
@@ -526,12 +519,21 @@
     },
     {
       "keys": [
+        "ac maintenance ukrainian village il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "keys": [
         "ac repair"
       ],
       "clicks": 0,
-      "impressions": 19,
+      "impressions": 20,
       "ctr": 0,
-      "position": 1.0526315789473684
+      "position": 1.05
     },
     {
       "keys": [
@@ -655,9 +657,9 @@
         "ac repair portage"
       ],
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 10,
       "ctr": 0,
-      "position": 63.125
+      "position": 62.3
     },
     {
       "keys": [
@@ -715,12 +717,21 @@
     },
     {
       "keys": [
+        "ac repair ukrainian village il"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "keys": [
         "ac repair west chicago"
       ],
       "clicks": 0,
-      "impressions": 13,
+      "impressions": 14,
       "ctr": 0,
-      "position": 76.53846153846153
+      "position": 76.21428571428571
     },
     {
       "keys": [
@@ -736,9 +747,9 @@
         "ac repair west town il"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 4,
       "ctr": 0,
-      "position": 69
+      "position": 71.25
     },
     {
       "keys": [
@@ -757,6 +768,15 @@
       "impressions": 3,
       "ctr": 0,
       "position": 74.33333333333333
+    },
+    {
+      "keys": [
+        "ac repair zilker"
+      ],
+      "clicks": 0,
+      "impressions": 2,
+      "ctr": 0,
+      "position": 83.5
     },
     {
       "keys": [
@@ -844,9 +864,9 @@
         "ac service portage"
       ],
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
-      "position": 74.66666666666667
+      "position": 74.14285714285714
     },
     {
       "keys": [
@@ -919,42 +939,6 @@
       "impressions": 1,
       "ctr": 0,
       "position": 43
-    },
-    {
-      "keys": [
-        "ac tune up service"
-      ],
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 96.5
-    },
-    {
-      "keys": [
-        "ac tune up skokie il"
-      ],
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 27.666666666666668
-    },
-    {
-      "keys": [
-        "ac tune-up portage"
-      ],
-      "clicks": 0,
-      "impressions": 4,
-      "ctr": 0,
-      "position": 72
-    },
-    {
-      "keys": [
-        "ac zoning system"
-      ],
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 90
     }
   ],
   "topPages": [
@@ -963,36 +947,36 @@
         "https://aircareprohvac.com/hvac-austin/"
       ],
       "clicks": 1,
-      "impressions": 3,
-      "ctr": 0.3333333333333333,
-      "position": 55.333333333333336
+      "impressions": 5,
+      "ctr": 0.2,
+      "position": 66.6
     },
     {
       "keys": [
         "https://aircareprohvac.com/"
       ],
       "clicks": 0,
-      "impressions": 158,
+      "impressions": 163,
       "ctr": 0,
-      "position": 2.791139240506329
+      "position": 2.9079754601226995
     },
     {
       "keys": [
         "https://aircareprohvac.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp"
       ],
       "clicks": 0,
-      "impressions": 28,
+      "impressions": 38,
       "ctr": 0,
-      "position": 1.3571428571428572
+      "position": 3.3947368421052633
     },
     {
       "keys": [
         "https://aircareprohvac.com/about/"
       ],
       "clicks": 0,
-      "impressions": 11,
+      "impressions": 12,
       "ctr": 0,
-      "position": 68.72727272727273
+      "position": 63.25
     },
     {
       "keys": [
@@ -1086,6 +1070,15 @@
     },
     {
       "keys": [
+        "https://aircareprohvac.com/blog/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 8
+    },
+    {
+      "keys": [
         "https://aircareprohvac.com/boiler-not-heating/"
       ],
       "clicks": 0,
@@ -1098,9 +1091,9 @@
         "https://aircareprohvac.com/boiler-pressure-guide/"
       ],
       "clicks": 0,
-      "impressions": 49,
+      "impressions": 54,
       "ctr": 0,
-      "position": 62.775510204081634
+      "position": 64.16666666666666
     },
     {
       "keys": [
@@ -1116,27 +1109,36 @@
         "https://aircareprohvac.com/contact/"
       ],
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 10,
       "ctr": 0,
-      "position": 144
+      "position": 116.3
     },
     {
       "keys": [
         "https://aircareprohvac.com/cooling/"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 15.666666666666666
+      "position": 13.25
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/faq/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 9
     },
     {
       "keys": [
         "https://aircareprohvac.com/financing/"
       ],
       "clicks": 0,
-      "impressions": 5,
+      "impressions": 6,
       "ctr": 0,
-      "position": 56.8
+      "position": 48.5
     },
     {
       "keys": [
@@ -1188,9 +1190,9 @@
         "https://aircareprohvac.com/furnace-installation-skokie/"
       ],
       "clicks": 0,
-      "impressions": 84,
+      "impressions": 105,
       "ctr": 0,
-      "position": 40.583333333333336
+      "position": 42.44761904761905
     },
     {
       "keys": [
@@ -1224,9 +1226,9 @@
         "https://aircareprohvac.com/furnace-replacement-vs-repair/"
       ],
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 9,
       "ctr": 0,
-      "position": 72.14285714285714
+      "position": 74.33333333333333
     },
     {
       "keys": [
@@ -1242,9 +1244,9 @@
         "https://aircareprohvac.com/heat-pump-installation-chicago/"
       ],
       "clicks": 0,
-      "impressions": 26,
+      "impressions": 29,
       "ctr": 0,
-      "position": 73.42307692307692
+      "position": 75.24137931034483
     },
     {
       "keys": [
@@ -1305,27 +1307,27 @@
         "https://aircareprohvac.com/hvac-andersonville-edgewater/"
       ],
       "clicks": 0,
-      "impressions": 83,
+      "impressions": 120,
       "ctr": 0,
-      "position": 58.72289156626506
+      "position": 60.49166666666667
     },
     {
       "keys": [
         "https://aircareprohvac.com/hvac-avondale/"
       ],
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
-      "position": 77
+      "position": 76.42857142857143
     },
     {
       "keys": [
         "https://aircareprohvac.com/hvac-bucktown/"
       ],
       "clicks": 0,
-      "impressions": 23,
+      "impressions": 24,
       "ctr": 0,
-      "position": 53.17391304347826
+      "position": 52.375
     },
     {
       "keys": [
@@ -1341,9 +1343,9 @@
         "https://aircareprohvac.com/hvac-edison-park/"
       ],
       "clicks": 0,
-      "impressions": 14,
+      "impressions": 17,
       "ctr": 0,
-      "position": 48.07142857142857
+      "position": 51.1764705882353
     },
     {
       "keys": [
@@ -1359,9 +1361,9 @@
         "https://aircareprohvac.com/hvac-irving-park/"
       ],
       "clicks": 0,
-      "impressions": 26,
+      "impressions": 30,
       "ctr": 0,
-      "position": 77.57692307692308
+      "position": 78.46666666666667
     },
     {
       "keys": [
@@ -1377,9 +1379,9 @@
         "https://aircareprohvac.com/hvac-lakeview/"
       ],
       "clicks": 0,
-      "impressions": 86,
+      "impressions": 117,
       "ctr": 0,
-      "position": 60.127906976744185
+      "position": 59.64102564102564
     },
     {
       "keys": [
@@ -1431,9 +1433,9 @@
         "https://aircareprohvac.com/hvac-portage-park/"
       ],
       "clicks": 0,
-      "impressions": 208,
+      "impressions": 256,
       "ctr": 0,
-      "position": 70.78365384615384
+      "position": 70.828125
     },
     {
       "keys": [
@@ -1464,6 +1466,24 @@
     },
     {
       "keys": [
+        "https://aircareprohvac.com/hvac-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 10
+    },
+    {
+      "keys": [
+        "https://aircareprohvac.com/hvac-ukrainian-village/"
+      ],
+      "clicks": 0,
+      "impressions": 8,
+      "ctr": 0,
+      "position": 56.25
+    },
+    {
+      "keys": [
         "https://aircareprohvac.com/hvac-uptown/"
       ],
       "clicks": 0,
@@ -1476,18 +1496,18 @@
         "https://aircareprohvac.com/hvac-west-ridge/"
       ],
       "clicks": 0,
-      "impressions": 16,
+      "impressions": 17,
       "ctr": 0,
-      "position": 72.0625
+      "position": 72.05882352941177
     },
     {
       "keys": [
         "https://aircareprohvac.com/hvac-west-town/"
       ],
       "clicks": 0,
-      "impressions": 38,
+      "impressions": 46,
       "ctr": 0,
-      "position": 67.94736842105263
+      "position": 68.06521739130434
     },
     {
       "keys": [
@@ -1530,9 +1550,9 @@
         "https://aircareprohvac.com/privacy-policy-2/"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 6,
       "ctr": 0,
-      "position": 5
+      "position": 8.333333333333332
     },
     {
       "keys": [
@@ -1548,9 +1568,9 @@
         "https://aircareprohvac.com/reviews/"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 4,
       "ctr": 0,
-      "position": 23
+      "position": 13.75
     },
     {
       "keys": [
@@ -1566,18 +1586,18 @@
         "https://aircareprohvac.com/service-areas/"
       ],
       "clicks": 0,
-      "impressions": 19,
+      "impressions": 22,
       "ctr": 0,
-      "position": 55.21052631578947
+      "position": 51.36363636363637
     },
     {
       "keys": [
         "https://aircareprohvac.com/services/"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 70.33333333333333
+      "position": 53.25
     },
     {
       "keys": [
@@ -1593,9 +1613,9 @@
         "https://aircareprohvac.com/thermostat-installation/"
       ],
       "clicks": 0,
-      "impressions": 31,
+      "impressions": 35,
       "ctr": 0,
-      "position": 64.51612903225806
+      "position": 63.77142857142857
     },
     {
       "keys": [
@@ -1651,9 +1671,9 @@
         "https://aircareprohvac.com/hvac-andersonville-edgewater/"
       ],
       "clicks": 0,
-      "impressions": 10,
+      "impressions": 13,
       "ctr": 0,
-      "position": 53
+      "position": 56.07692307692308
     },
     {
       "keys": [
@@ -1967,6 +1987,26 @@
     },
     {
       "keys": [
+        "ac installation ukrainian village il",
+        "https://aircareprohvac.com/hvac-ukrainian-village/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 42
+    },
+    {
+      "keys": [
+        "ac installation west town il",
+        "https://aircareprohvac.com/hvac-west-town/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 77
+    },
+    {
+      "keys": [
         "ac maintenance arlington heights",
         "https://aircareprohvac.com/ac-repair-arlington-heights/"
       ],
@@ -2164,6 +2204,16 @@
       "impressions": 2,
       "ctr": 0,
       "position": 30
+    },
+    {
+      "keys": [
+        "ac maintenance ukrainian village il",
+        "https://aircareprohvac.com/hvac-ukrainian-village/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
     },
     {
       "keys": [
@@ -2367,13 +2417,23 @@
     },
     {
       "keys": [
+        "ac repair ukrainian village il",
+        "https://aircareprohvac.com/hvac-ukrainian-village/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 65
+    },
+    {
+      "keys": [
         "ac repair west chicago",
         "https://aircareprohvac.com/hvac-west-ridge/"
       ],
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 8,
       "ctr": 0,
-      "position": 72.57142857142857
+      "position": 72.5
     },
     {
       "keys": [
@@ -2381,9 +2441,9 @@
         "https://aircareprohvac.com/hvac-west-town/"
       ],
       "clicks": 0,
-      "impressions": 7,
+      "impressions": 8,
       "ctr": 0,
-      "position": 80.71428571428571
+      "position": 80.5
     },
     {
       "keys": [
@@ -2401,9 +2461,9 @@
         "https://aircareprohvac.com/hvac-west-town/"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 4,
       "ctr": 0,
-      "position": 69
+      "position": 71.25
     },
     {
       "keys": [
@@ -3291,9 +3351,9 @@
         "https://aircareprohvac.com/furnace-installation-skokie/"
       ],
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 7,
       "ctr": 0,
-      "position": 49.166666666666664
+      "position": 49.142857142857146
     },
     {
       "keys": [
@@ -3311,9 +3371,9 @@
         "https://aircareprohvac.com/furnace-installation-skokie/"
       ],
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 10,
       "ctr": 0,
-      "position": 34
+      "position": 33.8
     },
     {
       "keys": [
@@ -3441,9 +3501,9 @@
         "https://aircareprohvac.com/hvac-lakeview/"
       ],
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 12,
       "ctr": 0,
-      "position": 68.125
+      "position": 69.33333333333333
     },
     {
       "keys": [
@@ -3544,6 +3604,16 @@
       "impressions": 3,
       "ctr": 0,
       "position": 81.66666666666667
+    },
+    {
+      "keys": [
+        "commercial ac installation skokie il",
+        "https://aircareprohvac.com/furnace-installation-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 40
     },
     {
       "keys": [
@@ -4091,9 +4161,9 @@
         "https://aircareprohvac.com/furnace-installation-skokie/"
       ],
       "clicks": 0,
-      "impressions": 19,
+      "impressions": 23,
       "ctr": 0,
-      "position": 43.78947368421053
+      "position": 42.95652173913044
     },
     {
       "keys": [
@@ -4104,6 +4174,26 @@
       "impressions": 4,
       "ctr": 0,
       "position": 44
+    },
+    {
+      "keys": [
+        "furnace installation ukrainian village il",
+        "https://aircareprohvac.com/hvac-ukrainian-village/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 44
+    },
+    {
+      "keys": [
+        "furnace installation west town il",
+        "https://aircareprohvac.com/hvac-west-town/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 82
     },
     {
       "keys": [
@@ -4221,9 +4311,9 @@
         "https://aircareprohvac.com/hvac-lakeview/"
       ],
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 12,
       "ctr": 0,
-      "position": 56.55555555555556
+      "position": 55.333333333333336
     },
     {
       "keys": [
@@ -4241,9 +4331,9 @@
         "https://aircareprohvac.com/service-areas/"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 40
+      "position": 40.5
     },
     {
       "keys": [
@@ -4291,7 +4381,7 @@
         "https://aircareprohvac.com/furnace-installation-skokie/"
       ],
       "clicks": 0,
-      "impressions": 8,
+      "impressions": 11,
       "ctr": 0,
       "position": 56
     },
@@ -4304,6 +4394,16 @@
       "impressions": 5,
       "ctr": 0,
       "position": 48
+    },
+    {
+      "keys": [
+        "furnace maintenance ukrainian village il",
+        "https://aircareprohvac.com/hvac-ukrainian-village/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 66
     },
     {
       "keys": [
@@ -4351,9 +4451,9 @@
         "https://aircareprohvac.com/hvac-andersonville-edgewater/"
       ],
       "clicks": 0,
-      "impressions": 10,
+      "impressions": 12,
       "ctr": 0,
-      "position": 56.1
+      "position": 58.5
     },
     {
       "keys": [
@@ -4411,9 +4511,9 @@
         "https://aircareprohvac.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
-      "position": 1
+      "position": 1.5
     },
     {
       "keys": [
@@ -4461,9 +4561,9 @@
         "https://aircareprohvac.com/hvac-lakeview/"
       ],
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 13,
       "ctr": 0,
-      "position": 43.888888888888886
+      "position": 47.07692307692308
     },
     {
       "keys": [
@@ -4531,7 +4631,7 @@
         "https://aircareprohvac.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp"
       ],
       "clicks": 0,
-      "impressions": 1,
+      "impressions": 2,
       "ctr": 0,
       "position": 1
     },
@@ -4618,12 +4718,32 @@
     {
       "keys": [
         "furnace repair skokie il",
+        "https://aircareprohvac.com/furnace-installation-skokie/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 34
+    },
+    {
+      "keys": [
+        "furnace repair skokie il",
         "https://aircareprohvac.com/furnace-repair-skokie/"
       ],
       "clicks": 0,
       "impressions": 6,
       "ctr": 0,
       "position": 40.333333333333336
+    },
+    {
+      "keys": [
+        "furnace repair ukrainian village il",
+        "https://aircareprohvac.com/hvac-ukrainian-village/"
+      ],
+      "clicks": 0,
+      "impressions": 1,
+      "ctr": 0,
+      "position": 48
     },
     {
       "keys": [
@@ -4651,9 +4771,9 @@
         "https://aircareprohvac.com/hvac-west-town/"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 3,
       "ctr": 0,
-      "position": 60.5
+      "position": 53.333333333333336
     },
     {
       "keys": [
@@ -4771,7 +4891,7 @@
         "https://aircareprohvac.com/?utm_source=google&utm_medium=organic&utm_campaign=gbp"
       ],
       "clicks": 0,
-      "impressions": 2,
+      "impressions": 4,
       "ctr": 0,
       "position": 1
     },
@@ -4871,9 +4991,9 @@
         "https://aircareprohvac.com/furnace-installation-skokie/"
       ],
       "clicks": 0,
-      "impressions": 6,
+      "impressions": 8,
       "ctr": 0,
-      "position": 55
+      "position": 54.875
     },
     {
       "keys": [
@@ -4911,9 +5031,9 @@
         "https://aircareprohvac.com/hvac-andersonville-edgewater/"
       ],
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 11,
       "ctr": 0,
-      "position": 49.55555555555556
+      "position": 53.36363636363637
     },
     {
       "keys": [
@@ -4931,9 +5051,9 @@
         "https://aircareprohvac.com/furnace-installation-skokie/"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 8,
       "ctr": 0,
-      "position": 62.333333333333336
+      "position": 61.875
     },
     {
       "keys": [
@@ -5111,9 +5231,9 @@
         "https://aircareprohvac.com/hvac-lakeview/"
       ],
       "clicks": 0,
-      "impressions": 12,
+      "impressions": 16,
       "ctr": 0,
-      "position": 71.91666666666667
+      "position": 71.375
     },
     {
       "keys": [
@@ -5141,9 +5261,9 @@
         "https://aircareprohvac.com/hvac-andersonville-edgewater/"
       ],
       "clicks": 0,
-      "impressions": 9,
+      "impressions": 14,
       "ctr": 0,
-      "position": 43.44444444444444
+      "position": 43.642857142857146
     },
     {
       "keys": [
@@ -5231,9 +5351,9 @@
         "https://aircareprohvac.com/heat-pump-installation-chicago/"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 87
+      "position": 87.25
     },
     {
       "keys": [
@@ -5261,9 +5381,9 @@
         "https://aircareprohvac.com/heat-pump-installation-chicago/"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 81
+      "position": 83.75
     },
     {
       "keys": [
@@ -5291,9 +5411,9 @@
         "https://aircareprohvac.com/heat-pump-installation-chicago/"
       ],
       "clicks": 0,
-      "impressions": 3,
+      "impressions": 4,
       "ctr": 0,
-      "position": 92.33333333333333
+      "position": 92.5
     },
     {
       "keys": [
@@ -5324,126 +5444,6 @@
       "impressions": 1,
       "ctr": 0,
       "position": 42
-    },
-    {
-      "keys": [
-        "heat pumps repair schaumburg",
-        "https://aircareprohvac.com/ac-repair-schaumburg/"
-      ],
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 18
-    },
-    {
-      "keys": [
-        "heat pumpstallation near me",
-        "https://aircareprohvac.com/heat-pump-installation-chicago/"
-      ],
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 15
-    },
-    {
-      "keys": [
-        "heater repair arlington heights",
-        "https://aircareprohvac.com/ac-repair-arlington-heights/"
-      ],
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 35.666666666666664
-    },
-    {
-      "keys": [
-        "heater repair arlington heights il",
-        "https://aircareprohvac.com/ac-repair-arlington-heights/"
-      ],
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 34
-    },
-    {
-      "keys": [
-        "heater repair schaumburg",
-        "https://aircareprohvac.com/hvac-schaumburg/"
-      ],
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 44.5
-    },
-    {
-      "keys": [
-        "heater repair wilmette il",
-        "https://aircareprohvac.com/furnace-repair-wilmette/"
-      ],
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 77
-    },
-    {
-      "keys": [
-        "heating and air conditioning arlington heights il",
-        "https://aircareprohvac.com/ac-repair-arlington-heights/"
-      ],
-      "clicks": 0,
-      "impressions": 3,
-      "ctr": 0,
-      "position": 55.666666666666664
-    },
-    {
-      "keys": [
-        "heating and air conditioning schaumburg",
-        "https://aircareprohvac.com/ac-repair-schaumburg/"
-      ],
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 49
-    },
-    {
-      "keys": [
-        "heating and air conditioning schaumburg",
-        "https://aircareprohvac.com/hvac-schaumburg/"
-      ],
-      "clicks": 0,
-      "impressions": 2,
-      "ctr": 0,
-      "position": 49.5
-    },
-    {
-      "keys": [
-        "heating and air conditioning schaumburg il",
-        "https://aircareprohvac.com/ac-repair-schaumburg/"
-      ],
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 53
-    },
-    {
-      "keys": [
-        "heating and cooling arlington heights",
-        "https://aircareprohvac.com/ac-repair-arlington-heights/"
-      ],
-      "clicks": 0,
-      "impressions": 1,
-      "ctr": 0,
-      "position": 49
-    },
-    {
-      "keys": [
-        "heating and cooling edgewater",
-        "https://aircareprohvac.com/hvac-andersonville-edgewater/"
-      ],
-      "clicks": 0,
-      "impressions": 12,
-      "ctr": 0,
-      "position": 69.83333333333333
     }
   ],
   "inspections": [
@@ -5451,7 +5451,7 @@
       "url": "/",
       "verdict": "PASS",
       "coverage": "Submitted and indexed",
-      "lastCrawl": "2026-11-19T03:03:31Z",
+      "lastCrawl": "2026-11-26T16:45:49Z",
       "googleCanonical": "https://aircareprohvac.com/"
     },
     {
@@ -5527,7 +5527,7 @@
     {
       "url": "/free-estimate/",
       "verdict": "NEUTRAL",
-      "coverage": "Discovered - currently not indexed",
+      "coverage": "URL is unknown to Google",
       "lastCrawl": null,
       "googleCanonical": null
     },

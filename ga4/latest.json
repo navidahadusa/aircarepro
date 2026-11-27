@@ -1,15 +1,15 @@
 {
   "property": "564399214",
   "measurementId": "G-J25SG73ES5",
-  "generatedAt": "2026-11-26T13:46:20.290Z",
+  "generatedAt": "2026-11-27T13:42:55.270Z",
   "errors": [],
   "totals": {
     "current": {
-      "sessions": 147,
-      "totalUsers": 109,
-      "newUsers": 111,
-      "engagedSessions": 55,
-      "screenPageViews": 303,
+      "sessions": 155,
+      "totalUsers": 114,
+      "newUsers": 116,
+      "engagedSessions": 59,
+      "screenPageViews": 319,
       "keyEvents": 0
     },
     "previous": {
@@ -27,7 +27,7 @@
         "Direct"
       ],
       "vals": [
-        122,
+        128,
         0
       ]
     },
@@ -36,7 +36,7 @@
         "Organic Search"
       ],
       "vals": [
-        15,
+        16,
         0
       ]
     },
@@ -45,7 +45,7 @@
         "Organic Social"
       ],
       "vals": [
-        5,
+        6,
         0
       ]
     },
@@ -74,7 +74,7 @@
         "/"
       ],
       "vals": [
-        113,
+        119,
         0
       ]
     },
@@ -102,6 +102,15 @@
       ],
       "vals": [
         2,
+        0
+      ]
+    },
+    {
+      "dims": [
+        ""
+      ],
+      "vals": [
+        1,
         0
       ]
     },
@@ -144,6 +153,15 @@
     {
       "dims": [
         "/boiler-installation"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "/boiler-repair"
       ],
       "vals": [
         1,
@@ -206,6 +224,15 @@
     },
     {
       "dims": [
+        "/how-to-clean-furnace-blower-wheel"
+      ],
+      "vals": [
+        1,
+        0
+      ]
+    },
+    {
+      "dims": [
         "/hvac-andersonville-edgewater"
       ],
       "vals": [
@@ -221,33 +248,6 @@
         1,
         0
       ]
-    },
-    {
-      "dims": [
-        "/hvac-austin"
-      ],
-      "vals": [
-        1,
-        0
-      ]
-    },
-    {
-      "dims": [
-        "/hvac-edison-park"
-      ],
-      "vals": [
-        1,
-        0
-      ]
-    },
-    {
-      "dims": [
-        "/hvac-norwood-park"
-      ],
-      "vals": [
-        1,
-        0
-      ]
     }
   ],
   "cities": [
@@ -256,7 +256,15 @@
         "Chicago"
       ],
       "vals": [
-        33
+        37
+      ]
+    },
+    {
+      "dims": [
+        "(not set)"
+      ],
+      "vals": [
+        13
       ]
     },
     {
@@ -265,14 +273,6 @@
       ],
       "vals": [
         12
-      ]
-    },
-    {
-      "dims": [
-        "(not set)"
-      ],
-      "vals": [
-        9
       ]
     },
     {
@@ -305,14 +305,6 @@
       ],
       "vals": [
         5
-      ]
-    },
-    {
-      "dims": [
-        ""
-      ],
-      "vals": [
-        4
       ]
     },
     {
@@ -365,7 +357,15 @@
     },
     {
       "dims": [
-        "Dudley"
+        "Springfield"
+      ],
+      "vals": [
+        3
+      ]
+    },
+    {
+      "dims": [
+        "Des Moines"
       ],
       "vals": [
         2
@@ -378,7 +378,7 @@
         "desktop"
       ],
       "vals": [
-        80
+        85
       ]
     },
     {
@@ -386,7 +386,7 @@
         "mobile"
       ],
       "vals": [
-        69
+        73
       ]
     }
   ],
