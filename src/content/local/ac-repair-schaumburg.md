@@ -1,7 +1,7 @@
 ---
 {
-  "title": "AC Repair in Schaumburg, IL",
-  "h1": "AC Repair in Schaumburg, IL",
+  "title": "AC & Heat Pump Repair in Schaumburg, IL",
+  "h1": "AC and Heat Pump Repair in Schaumburg, IL",
   "service": "ac-repair",
   "city": "schaumburg",
   "meta": "AC repair and heat pump repair in Schaumburg, IL, plus heat pump maintenance and 24/7 emergency HVAC. NATE-certified techs, options and prices first.",
