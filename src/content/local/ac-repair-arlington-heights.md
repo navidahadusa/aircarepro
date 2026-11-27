@@ -1,7 +1,7 @@
 ---
 {
-  "title": "AC Repair in Arlington Heights, IL",
-  "h1": "AC Repair in Arlington Heights, IL",
+  "title": "AC & Heat Pump Repair in Arlington Heights, IL",
+  "h1": "AC and Heat Pump Repair in Arlington Heights, IL",
   "service": "ac-repair",
   "city": "arlington-heights",
   "meta": "AC repair, AC installation and heat pump repair in Arlington Heights, IL. 24/7 emergency HVAC service by NATE-certified techs. Options and prices first.",
@@ -58,7 +58,7 @@
 <p>No cooling in a heat wave, no heat on a January night, or a heat pump that stops working: call or text us any time, day or night, including holidays. For emergencies, calling is the fastest way to reach us. See <a href="/emergency-hvac/">emergency HVAC service</a> for what to check while you wait.</p>
 
 <h2>Heat pump repair in Arlington Heights</h2>
-<p>Many Arlington Heights homeowners are adding heat pumps, often as dual-fuel systems that use the heat pump in mild weather and a gas furnace in deep cold. When a heat pump stops heating or cooling, common causes are a stuck reversing valve, a failed defrost control or sensor, an outdoor fan motor, low refrigerant from a leak, or a thermostat that isn't set up to switch between the heat pump and the furnace correctly. Learn more about <a href="/heat-pump-repair/">heat pump repair</a>.</p>
+<p>Many Arlington Heights homeowners are adding heat pumps, often as dual-fuel systems that use the heat pump in mild weather and a gas furnace in deep cold. When a heat pump stops heating or cooling, common causes are a stuck reversing valve, a failed defrost control or sensor, an outdoor fan motor, low refrigerant from a leak, or a thermostat that isn't set up to switch between the heat pump and the furnace correctly. Learn more about <a href="/heat-pump-repair/">heat pump repair</a>. If the problem is on the furnace side of a dual-fuel system, see <a href="/furnace-repair-arlington-heights/">furnace repair in Arlington Heights</a>.</p>
 
 <h2>AC installation in Arlington Heights</h2>
 <p>If your air conditioner is old, uses an outdated refrigerant or needs repairs often, a replacement may make more sense than another repair. We size the new system to the house rather than matching the old unit, which matters in two-story homes where an oversized AC cools the first floor fast and leaves bedrooms hot and humid. See <a href="/ac-installation/">AC installation</a> and our <a href="/hvac-arlington-heights/">Arlington Heights HVAC page</a>.</p>

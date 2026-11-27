@@ -38,7 +38,10 @@ const svcLabel: Record<string, string> = { 'furnace-repair': 'Furnace Repair', '
 const cityLabel = (slug: string) => business.serviceAreas.find((a) => a.slug === slug)?.name ?? slug;
 const description = d.meta ?? `${svcLabel[d.service]} in ${place} by NATE-certified technicians. 24/7 emergency service, upfront options. Call ${business.phoneDisplay}.`;
 const schema = buildServiceSchema({ name: `${svcLabel[d.service]} in ${place}`, serviceType: svc.name, description, pageUrl, areas: area ? [area] : undefined });
-const title = `${svcLabel[d.service]} ${d.city === 'chicago' ? 'Chicago' : cityName + ', IL'} | ${svc.funnel === 'emergency' ? '24/7 | ' : ''}${business.displayName}`;
+// A custom title in the page's front matter (set from Search Console findings) wins over the generated one.
+const generic = [`${svcLabel[d.service]} in ${place}`, `${svcLabel[d.service]} in ${cityName}, IL`];
+const customTitle = d.title && !generic.includes(d.title) ? `${d.title} | ${business.displayName}` : null;
+const title = customTitle ?? `${svcLabel[d.service]} ${d.city === 'chicago' ? 'Chicago' : cityName + ', IL'} | ${svc.funnel === 'emergency' ? '24/7 | ' : ''}${business.displayName}`;
 ---
 <BaseLayout title={title.length > 70 ? `${svcLabel[d.service]} ${cityName} | ${business.displayName}` : title} description={description}>
   <Breadcrumbs items={[{ name: svc.name, href: `/${svc.slug}/` }, { name: `${svcLabel[d.service]} in ${cityName}`, href: `/${page.id}/` }]} />

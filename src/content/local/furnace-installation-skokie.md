@@ -1,10 +1,11 @@
 ---
 {
-  "title": "Furnace Installation in Skokie, IL",
-  "h1": "Furnace Installation in Skokie, IL",
+  "title": "Furnace Installation & Replacement in Skokie, IL",
+  "h1": "Furnace Installation and Replacement in Skokie, IL",
+  "meta": "Furnace installation and replacement in Skokie, IL: sized with a load calculation, free estimate with options and prices, financing through Optimus.",
   "service": "furnace-installation",
   "city": "skokie",
-  "intro": "New furnace installation in Skokie with free estimates, clear options and financing available.",
+  "intro": "Replacing a furnace in Skokie? We size the new one with a load calculation, not the old furnace's label, give you a free estimate with options and prices, and offer financing through Optimus, subject to credit approval.",
   "faqs": [
     {
       "q": "How long does furnace installation take in Skokie?",
@@ -15,12 +16,16 @@
       "a": "We serve Skokie regularly and offer 24/7 emergency service. Call or text {phone} and we'll give you the earliest available time."
     },
     {
-      "q": "How long does a furnace installation take?",
-      "a": "Most furnace replacements are completed in a single day."
+      "q": "Should I repair or replace my furnace in Skokie?",
+      "a": "If the furnace is 15 to 20 years old, needs repairs every winter, or has a cracked heat exchanger, replacement is usually the better value. If it's younger and the problem is a single part, we repair it. We look at the furnace first and tell you which way we'd go, with prices for both."
+    },
+    {
+      "q": "Do you also do furnace maintenance in Skokie?",
+      "a": "Yes. A yearly furnace tune-up includes a safety and combustion check, the blower, the flame sensor, the filter and the condensate drain. See our furnace tune-up page or the Comfort Club maintenance plan."
     },
     {
       "q": "Do you offer financing?",
-      "a": "Yes. We offer financing options for new installations, subject to credit approval."
+      "a": "Yes. Financing for new installations is available through Optimus, subject to credit approval."
     }
   ],
   "source": "https://aircareprohvac.com/furnace-installation-skokie/"
@@ -44,3 +49,6 @@
 
 <h2>Furnace Installation cost in Skokie</h2>
 <p>Furnace installation cost depends on the furnace&#x27;s capacity and efficiency, single-stage versus two-stage or variable-speed operation, venting changes, ductwork modifications, permits and any accessories like a humidifier or media filter. We give you a free, detailed estimate with clear options at different price points, and financing is available subject to credit approval. Utility rebates may also be available for high-efficiency equipment, and we&#x27;ll help you check current programs.</p>
+
+<h2>Furnace repair or service in Skokie</h2>
+<p>Not ready to replace? Many furnace problems are a single part. See <a href="/furnace-repair-skokie/">furnace repair in Skokie</a>, the yearly <a href="/furnace-tune-up/">furnace tune-up</a>, or book a <a href="/free-estimate/">free estimate</a> for a new system. More about the area on our <a href="/hvac-skokie/">Skokie HVAC page</a>.</p>
