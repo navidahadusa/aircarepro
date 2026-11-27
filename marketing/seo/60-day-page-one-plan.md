@@ -23,9 +23,9 @@ Nobody can guarantee rankings. We report real positions every week and adjust.
 - [x] Homepage H1 names Chicago (Local_SEO check: 9/10 → fix) (2026-11-22)
 - [x] New team skills: `ai-search-visibility`, `rank-tracking`, `review-engine`, `competitor-gap` (2026-11-22)
 - [x] ~~New pages `/boiler-repair-chicago/`, `/heating-repair-chicago/`~~ **Decision 2026-11-23 (Sophia + Elena): no new pages.** `/boiler-repair/` (title "Boiler Repair Chicago", indexed, deep content) and the `/heating/` hub ("Heating Repair & Installation Chicago") already target these terms; a second URL would split signals (cannibalization). Instead: strengthen those two pages and build the boiler cluster around them (`/steam-vs-hot-water-boiler/` 2026-11-23, `/boiler-not-heating/` 2026-11-21).
-- [ ] Strengthen `/hvac-chicago/` for "hvac chicago / contractors / repair": title, H1, quick answer, FAQ, links from every area page (Elena)
+- [~] Strengthen `/hvac-chicago/` for "hvac chicago / contractors / repair": in-body links to the Chicago furnace/AC pages added 2026-11-25; title/H1/FAQ pass still to do (Elena)
 - [ ] Logan Square + Arlington Heights pages: push from 6–19 to top 3 (FAQ, photo, internal links) (Elena)
-- [ ] Owner: Request indexing for `/ac-repair-chicago/` and `/free-estimate/` in Search Console
+- [x] Owner: Request indexing for `/ac-repair-chicago/` and `/free-estimate/` in Search Console (done 2026-11-26; validation running)
 - [x] Owner: Yelp URL (2026-11-23) · [ ] next: Apple Business Connect (kit ready, `citations/apple-business-connect-kit.md`) → Bing Places
 
 ## Weeks 3–4 (Dec 7 → Dec 20): authority
@@ -46,3 +46,16 @@ Nobody can guarantee rankings. We report real positions every week and adjust.
 
 ## Scorecard
 Weekly (Mondays) in `marketing/seo/rank-scorecard.md`: target keyword positions, impressions, clicks, GA4 booking clicks/calls, review count. Day-60 review on 2027-01-21.
+
+## Progress check (2026-11-27, day 5 of 60)
+| Measure | Start (to 2026-11-18) | Now (to 2026-11-23) |
+|---|---|---|
+| Impressions (28d) | 1,095 | 2,893 |
+| Clicks (28d) | 0 | 1 |
+| Avg position | 45.8 | 53.0 (more pages showing, many deep) |
+| Queries on page one (any impressions) | — | 17 (mostly neighborhood terms: Rogers Park, Bucktown, Ukrainian Village, Logan Square, Ravenswood) |
+| Queries on page two | — | 19 (Arlington Heights, Schaumburg, Des Plaines emergency/heat pump) |
+| Referring domains | — | 0 (Search Console, 2026-11-25) |
+
+Done since the plan started: daily posts/refreshes, ~15 data-driven page fixes, full SEO audit + fixes, site-wide redesign (Lighthouse 98–100), first real job story, directory rollout approved, Instagram + Yelp in schema.
+Main blockers: 0 backlinks, directories not submitted yet, review count/velocity unknown, GTM lead tracking not set up.

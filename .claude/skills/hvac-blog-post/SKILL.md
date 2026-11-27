@@ -1,6 +1,6 @@
 ---
 name: hvac-blog-post
-description: Write the daily blog post or refresh a migrated post for CHICAGO AIRCARE PRO, following the editorial calendar, with keyword targeting, FAQ schema, internal links, a real job photo and a matching Google Business Profile post draft. Use for every Mon/Wed/Fri new post and Tue/Thu refresh. Owner: Maya Lin, with Elena Brooks (links/schema), Rachel Morgan (CTAs) and Hannah Carter (GBP draft).
+description: Write the daily blog post or refresh a migrated post for CHICAGO AIRCARE PRO, following the editorial calendar, with keyword targeting, FAQ schema, internal links, a real job photo and a matching Google Business Profile post draft. Use for the new article every day and for refreshes. Owner: Maya Lin, with Elena Brooks (links/schema), Rachel Morgan (CTAs) and Hannah Carter (GBP draft).
 ---
 
 # Daily HVAC blog post (Maya Lin)
@@ -24,6 +24,15 @@ Write like an experienced Chicago technician explaining it at the kitchen table:
 - Use the owner's real job details and photos when he sends them ("Last winter in a Rogers Park two-flat…"). **Never invent** a job, customer, quote or number to sound human.
 - Cut AI tells: no em dashes; no "delve", "navigate", "crucial", "comprehensive", "in conclusion", "it's important to note", "whether you're… or…"; no stacked adjectives; no summary paragraph repeating the post; no same-length bullet lists everywhere.
 - Before shipping, read it out loud (or run the `seo-content` skill's AI-phrasing cleanup). If a sentence sounds like a brochure, rewrite it.
+
+## Lead-first topics (owner rule, 2026-11-27)
+The owner wants leads and customers. Pick topics from real searches (Autocomplete / Search Console) where the searcher has a problem now or is about to buy: "not working", "not heating", "repair", "replacement cost", "emergency", "near me", landlord no-heat. Each article links to the service page that converts (repair, emergency, installation, free estimate, financing) and ends with Call/Text + booking. Cost articles explain what changes the price and offer the free estimate; never publish prices.
+
+## External links (owner rule, 2026-11-27)
+Every article links out to **1–3 authoritative sources** that back up a fact in the text: City of Chicago / 311, State of Illinois (ILGA, Keep Warm), ComEd, Peoples Gas, North Shore Gas, Nicor Gas, ENERGY STAR, energy.gov, EPA, CDC, CPSC, or the equipment manufacturer.
+- Take the URL from a WebSearch result (or a page you opened). **Never type a URL from memory.**
+- Link the specific page, with descriptive anchor text ("ENERGY STAR's maintenance checklist"), inside the sentence it supports.
+- No links to competitors, other contractors, lead sites or affiliate pages.
 
 ## Write it
 - Follow `marketing/content/post-template.md` exactly (frontmatter, 900–1,500 words, body sections). File: `src/content/blog/<keyword-slug>.md`; URL `/<keyword-slug>/`. Some migrated posts use JSON frontmatter: keep the format of the file you edit.
