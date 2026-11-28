@@ -29,8 +29,9 @@ const heroCrops = await Promise.all([480, 760, 1050].map((w) => getImage({ src: 
 const heroMobileSrcset = heroCrops.map((c, i) => `${c.src} ${[480, 760, 1050][i]}w`).join(', ');
 const googleUrl = business.reviewProfiles.find((p) => p.platform === 'Google')?.url;
 const yelpUrl = business.reviewProfiles.find((p) => p.platform === 'Yelp')?.url;
-const svcPhoto = { Heating: photos.carrierFurnace, Cooling: photos.newCondenserRoof, 'Air Quality': photos.humidifier } as const;
-const svcGroups = categories.map((cat) => ({ cat, photo: svcPhoto[cat.name] }));
+const svcGroups = categories.map((cat) => ({ cat }));
+// Homepage photos live in one place (owner 2026-11-28: the page felt crowded with photos scattered through every section).
+const homeWork = [photos.inducerInstalled, photos.gaugeGlassClogged, photos.blowerWheelWashing, photos.newBoiler, photos.coilBrushing, photos.miniSplitInstall, photos.newCondenserRoof, photos.gangwayCondenser];
 const allPosts = await getPosts();
 // Seasonal picks (Maya Lin): winter topics Nov–Feb, cooling topics otherwise.
 const m = new Date().getMonth();
@@ -94,22 +95,6 @@ const faqs = [
     </div>
   </nav>
 
-  <section class="section">
-    <div class="container process">
-      <div class="photo process-photo">
-        <Image quality={40} src={photos.gasPressureTest.src} alt={photos.gasPressureTest.alt} widths={[360, 480, 680]} sizes="(max-width: 900px) calc(100vw - 2rem), 35vw" />
-      </div>
-      <div>
-        <h2>Diagnosis first. Options and prices before any work.</h2>
-        <ol class="steps">
-          {steps.map((s, i) => (
-            <li><span class="step-num" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span><div><strong>{s.t}</strong><p>{s.d}</p></div></li>
-          ))}
-        </ol>
-      </div>
-    </div>
-  </section>
-
   <section class="section section-alt">
     <div class="container">
       <div class="section-head"><h2>Heating, cooling and air quality for Chicago homes</h2>
@@ -117,9 +102,6 @@ const faqs = [
       <div class="svc3">
         {svcGroups.map((g) => (
           <article class="svc3-col">
-            <a class="svc3-photo" href={`/${g.cat.slug}/`} tabindex="-1" aria-hidden="true">
-              <Image quality={40} src={g.photo.src} alt={g.photo.alt} widths={[360, 540]} sizes="(max-width: 900px) 100vw, 30vw" />
-            </a>
             <h3><a href={`/${g.cat.slug}/`}>{g.cat.name}</a></h3>
             <ul role="list">{servicesIn(g.cat.name).map((sv) => <li><a href={`/${sv.slug}/`}>{sv.name}</a></li>)}</ul>
             <a class="svc3-all" href={`/${g.cat.slug}/`}>All {g.cat.name.toLowerCase()} services →</a>
@@ -128,6 +110,19 @@ const faqs = [
       </div>
     </div>
   </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="process-h">Diagnosis first. Options and prices before any work.</h2>
+      <ol class="steps steps-row">
+        {steps.map((s, i) => (
+          <li><span class="step-num" aria-hidden="true">{String(i + 1).padStart(2, "0")}</span><div><strong>{s.t}</strong><p>{s.d}</p></div></li>
+        ))}
+      </ol>
+    </div>
+  </section>
+
+  <RecentWork title="Recent work from our crew" intro={`Every photo here is from a ${business.displayName} job. No stock photos.`} items={homeWork} />
 
   {business.financingPartner && (
     <section class="finance">
@@ -140,8 +135,8 @@ const faqs = [
 
   <section class="section">
     <div class="container boilers">
+      <h2>Steam and hot-water heat in greystones, two-flats and bungalows</h2>
       <div>
-        <h2>Steam and hot-water heat in greystones, two-flats and bungalows</h2>
         <p>Much of Chicago still heats with boilers. We troubleshoot pressure, air in the lines, low-water cut-offs, zone valves and circulators, and keep old radiator systems running safely.</p>
         <ul class="link-list">
           <li><a href="/boiler-repair/">Boiler repair <Icon name="arrow" size={16} /></a></li>
@@ -150,20 +145,16 @@ const faqs = [
           <li><a href="/chicago-hvac-homeowner-guide/">Chicago homeowner’s HVAC guide <Icon name="arrow" size={16} /></a></li>
         </ul>
       </div>
-      <div class="photo boiler-photo">
-        <Image quality={40} src={photos.boilerCirculator.src} alt={photos.boilerCirculator.alt} widths={[360, 480, 680]} sizes="(max-width: 900px) calc(100vw - 2rem), 35vw" />
-      </div>
     </div>
   </section>
 
   <section class="section section-dark crew">
     <div class="container crew-grid">
-      <div class="photo">
-        <Image quality={40} src={photos.gangwayCondenser.src} alt={photos.gangwayCondenser.alt} widths={[360, 480, 720]} sizes="(max-width: 900px) calc(100vw - 2rem), 40vw" />
-      </div>
       <div>
         <h2>A certified, owner-led crew, on call every day</h2>
         <p>Every technician is NATE and EPA 608 certified. We know Chicago housing, from gangway condensers to rooftop units and basement boilers.</p>
+      </div>
+      <div>
         <TrustBlock variant="credentials" />
         <div class="brands">
           <p>Brands we service</p>
@@ -173,7 +164,6 @@ const faqs = [
     </div>
   </section>
 
-  <RecentWork />
 
   <section class="section section-alt">
     <div class="container"><ReviewsBlock /></div>
@@ -267,6 +257,7 @@ const faqs = [
   @media (max-width: 560px) { .quick ul { grid-template-columns: 1fr; } .quick li + li { border-left: 0; border-top: 1px solid var(--border); } .quick a { padding-inline: 0; } }
 
   .svc3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(1.25rem, 3vw, 2.5rem); }
+  .svc3-col { padding-top: 1.1rem; border-top: 3px solid var(--navy-900); }
   .svc3-photo { display: block; aspect-ratio: 4 / 3; overflow: hidden; border-radius: var(--radius); margin-bottom: 1rem; }
   .svc3-photo :global(img) { width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s var(--ease-out); }
   .svc3-col:hover .svc3-photo :global(img) { transform: scale(1.03); }
@@ -278,15 +269,17 @@ const faqs = [
   .svc3-all { font-weight: 800; text-decoration: none; }
   @media (max-width: 900px) { .svc3 { grid-template-columns: 1fr; gap: 2rem; } .svc3-photo { aspect-ratio: 16 / 9; } }
 
-  .process, .boilers, .crew-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: clamp(1.5rem, 4vw, 3.5rem); align-items: center; }
-  .boilers { grid-template-columns: 1.2fr 1fr; }
-  .process-photo, .boiler-photo { aspect-ratio: 4 / 5; max-height: 520px; }
-  .crew-grid .photo { aspect-ratio: 4 / 5; max-height: 560px; }
+  /* Text-only sections (2026-11-28): photos moved to the one Recent work gallery. */
+  .boilers, .crew-grid { display: grid; grid-template-columns: 1fr 1.1fr; gap: clamp(1.25rem, 4vw, 3.5rem); align-items: start; }
+  .boilers h2, .crew-grid h2 { margin-top: 0; }
+  .process-h { max-width: 34rem; }
+  .steps-row { grid-template-columns: repeat(4, 1fr); gap: 1.5rem; }
+  .steps-row li { flex-direction: column; gap: 0.5rem; }
   @media (max-width: 900px) {
-    .process, .boilers, .crew-grid { grid-template-columns: 1fr; }
-    .process-photo, .boiler-photo, .crew-grid .photo { aspect-ratio: 16 / 10; }
-    .boilers .photo { order: -1; }
+    .boilers, .crew-grid { grid-template-columns: 1fr; }
+    .steps-row { grid-template-columns: 1fr 1fr; }
   }
+  @media (max-width: 560px) { .steps-row { grid-template-columns: 1fr; } .steps-row li { flex-direction: row; gap: 1.1rem; } }
   .steps { list-style: none; padding: 0; margin: 1.5rem 0 0; display: grid; gap: 1.1rem; }
   .steps li { display: flex; gap: 1.1rem; align-items: baseline; padding-top: 1rem; border-top: 1px solid var(--border); }
   .step-num { font-family: var(--font-heading); font-weight: 800; font-size: 1.5rem; color: var(--cta); min-width: 2.4rem; line-height: 1; }
