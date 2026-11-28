@@ -10,7 +10,7 @@ priority,tier,directory,url_to_submit,listing_url,status,nap_match,claimed,login
 8,3,Comfortmaker dealer locator,TBD (via distributor/Comfortmaker dealer portal),,ready-owner-submits,,,,,,,no,Confirmed dealer per site - verify listing
 9,3,Angi,https://www.angi.com/pro,,ready-owner-submits,,,,,,,no,
 10,3,HomeAdvisor,https://pro.homeadvisor.com,,ready-owner-submits,,,,,,,no,
-11,3,Thumbtack,https://www.thumbtack.com/pro,,ready-owner-submits,,,,,,,no,
+11,3,Thumbtack,https://www.thumbtack.com/pro,,created-owner,name-ok (phone/website/hours not yet checked),yes,owner,2026-11-27,,2026-11-27,no,Owner screenshot 2026-11-27: business profile CHICAGO AIRCARE PRO exists; send public profile URL; free profile only (paid leads = budget decision)
 12,3,Houzz,https://pro.houzz.com,,ready-owner-submits,,,,,,,no,
 13,2,Data Axle,https://www.data-axle.com,,ready-owner-submits,,,,,,,no,Aggregator
 14,2,Neustar Localeze,https://www.neustarlocaleze.biz,,ready-owner-submits,,,,,,,no,Aggregator
