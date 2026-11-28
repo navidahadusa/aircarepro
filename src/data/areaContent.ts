@@ -1445,132 +1445,140 @@ const westSuburbs: Record<string, AreaContent> = {
 
 
 /* ------------------------------------------------------------------ */
-/* Added 2026-11-28 (owner: "add Lincolnwood, Niles, Park Ridge, Morton Grove").
- * No source pages exist for these towns, so the copy states no local housing statistics or utility claims:
- * only services, how we work, geography and the owner's real Lincolnwood job. */
-const gasNote = (place: string) =>
-  `<p>Gas service in ${place} depends on the address, and your gas bill shows which utility serves you. Utility rebates on high-efficiency furnaces, boilers and smart thermostats change from year to year, so we check what applies to your address when we quote new equipment.</p>`;
+/* Added 2026-11-28 (owner: "add Lincolnwood, Niles, Park Ridge, Morton Grove"; "make them unique").
+ * No WordPress source pages exist for these towns. Local facts come only from the cited sources in each
+ * "at a glance" list (ACS-based aggregators) and from the owner's own jobs; utilities only where a Nicor Gas
+ * document lists the town (Niles, Park Ridge: Nicor municipality tariff list; Morton Grove: Nicor project notice).
+ * Lincolnwood's gas utility was not verified, so that page makes no utility claim. */
+const NICOR_TOWNS = 'https://www.nicorgas.com/content/dam/southern-co-gas/nicor-gas/docs/rates-and-riders/nicor-terms-and-conditions-territory-municipalities-to-which-this-schedule-is-applicable.pdf';
+const NS_LW = 'https://www.neighborhoodscout.com/il/lincolnwood/real-estate';
+const NS_NILES = 'https://www.neighborhoodscout.com/il/niles/rates/';
+const NS_PR = 'https://www.neighborhoodscout.com/il/park-ridge/rates/';
+const NS_MG = 'https://locationinc.neighborhoodscout.com/il/morton-grove/real-estate';
 
 const addedSuburbs: Record<string, AreaContent> = {
   lincolnwood: {
-    h1: 'HVAC Repair in Lincolnwood, IL: Furnace, Boiler & AC',
-    title: 'HVAC Repair in Lincolnwood, IL | Chicago Aircare Pro',
-    meta: 'Furnace, boiler, AC and heat pump repair and replacement in Lincolnwood, IL. Diagnosis first, prices before work, 24/7 service.',
-    intro: `${business.displayName} repairs and replaces furnaces, boilers, air conditioners and heat pumps in Lincolnwood, the village between Skokie and Chicago’s North Side. We diagnose first and give you options with prices before any work starts.`,
+    h1: 'Furnace & AC Repair in Lincolnwood, IL',
+    title: 'Furnace & AC Repair in Lincolnwood, IL | Chicago Aircare Pro',
+    meta: 'Furnace, AC and boiler repair in Lincolnwood, IL, from mid-century homes to newer two-system houses. Recent job: inducer motor replacement. 24/7.',
+    intro: `Our most recent Lincolnwood job was a furnace inducer motor replacement. Most of the village’s homes went up in the 1940s through the 1960s, and a newer group of larger houses was built after 2000, so we see everything from original-era ductwork to two-system homes with high-efficiency venting.`,
     sections: [
       {
-        h2: 'Recent work in Lincolnwood',
-        html: `<p>Our most recent Lincolnwood call was a gas furnace with a failed draft inducer motor: the small fan that pushes exhaust out the flue before the burners are allowed to light. When it quits, the furnace tries to start, gives up and locks out. We replaced the inducer and ran the furnace through full heating cycles. Here’s <a href="/furnace-inducer-motor-replacement/">what that repair involves and what changes the cost</a>.</p>`,
+        h2: 'Recent job in Lincolnwood: an inducer motor',
+        html: `<p>We replaced the draft inducer motor on a gas furnace in Lincolnwood. The inducer is the small fan that pushes exhaust out the flue before the burners are allowed to light; when it fails, the pressure switch never proves the venting and the furnace won’t fire. Here’s <a href="/furnace-inducer-motor-replacement/">what an inducer replacement involves and what changes the cost</a>.</p>
+<p>Inducers wear out with hours of run time, and a worn one usually gets louder before it quits. A high whine or rattle in the first seconds after the furnace starts is the warning.</p>`,
       },
       {
-        h2: 'Heating and cooling service in Lincolnwood',
-        html: `<h3>Furnace repair and replacement</h3>
-<p>No heat, short-cycling, error codes, noisy blowers and inducers. When a furnace is near the end of its life, we size the replacement with a load calculation instead of copying the old nameplate. See <a href="/furnace-repair/">furnace repair</a> and <a href="/furnace-installation/">furnace installation</a>.</p>
-<h3>Boilers and radiators</h3>
-<p>Hot-water and steam boilers: no heat, pressure and water-level problems, banging pipes, cold radiators. See <a href="/boiler-repair/">boiler repair</a>.</p>
-<h3>Air conditioning and heat pumps</h3>
-<p>AC repair and replacement, heat pumps and dual-fuel systems, and ductless mini-splits for rooms or homes without ductwork.</p>`,
+        h2: 'Two kinds of Lincolnwood homes, two kinds of service calls',
+        html: `<h3>Mid-century homes</h3>
+<p>In homes from the 1940s to the 1960s, the ductwork is often original and was sized for heat, with fewer returns than today’s furnaces and ACs want. Weak airflow shows up as noisy registers, an AC that freezes its coil, or a furnace that trips its high limit. We measure static pressure before blaming the equipment.</p>
+<h3>Homes built since 2000</h3>
+<p>Newer, larger houses often have two systems and 90%+ furnaces vented with plastic pipe through a side wall. Those vents and condensate drains are the weak points: snow and ice over the vent, or a drain that freezes or clogs, will shut the furnace down on a cold night. Attic or second-floor equipment also needs its condensate safety switch tested every year.</p>
+${glance('Lincolnwood', [['The median Lincolnwood home was built in 1959 (ACS data via a secondary aggregator).', 'City-Stats: Lincolnwood housing', 'https://city-stats.com/illinois/lincolnwood/housing'], ['About 65% of homes date from the 1940s through the 1960s, and about 14% were built in 2000 or later.', 'NeighborhoodScout: Lincolnwood', NS_LW]])}`,
       },
       {
-        h2: 'Replacing a system in Lincolnwood',
-        html: `<p>New-system estimates are free. We check the ductwork, venting and electrical the job needs, so the quote covers a system that works, and financing is available through ${business.financingPartner}, subject to credit approval. Book a <a href="/free-estimate/">free estimate</a>.</p>`,
+        h2: 'Replacing a furnace or AC in Lincolnwood',
+        html: `<p>When a furnace is past repair, we size the new one with a load calculation instead of copying the old nameplate, and we price the venting and condensate work a high-efficiency furnace needs. New-system estimates are free, and financing is available through ${business.financingPartner}, subject to credit approval. Book a <a href="/free-estimate/">free estimate</a>.</p>`,
       },
-      { h2: 'Utilities and rebates in Lincolnwood', html: gasNote('Lincolnwood') },
     ],
     faqs: [
-      { q: 'Do you serve Lincolnwood?', a: 'Yes. We repair and replace furnaces, boilers, air conditioners and heat pumps in Lincolnwood, along with neighboring Skokie and Chicago’s North Side.' },
-      { q: 'My furnace tries to start and then shuts off. What is it?', a: 'Often the draft inducer, the pressure switch, a blocked vent or a dirty flame sensor. We test before replacing parts, so you only pay for the part that failed.' },
-      { q: 'Do you give free estimates for a new furnace or AC in Lincolnwood?', a: `Yes. New-system estimates are free, and financing is available through ${business.financingPartner}, subject to credit approval.` },
+      { q: 'My furnace starts, a fan runs, then it shuts off. What could it be?', a: 'Often the draft inducer, the pressure switch or its hose, a blocked vent, or a dirty flame sensor. We test each one before replacing anything, so you only pay for the part that failed.' },
+      { q: 'Why does my side-wall furnace vent matter in winter?', a: 'High-efficiency furnaces vent through plastic pipe on a side wall. If snow or ice covers the vent or intake, the furnace shuts itself off. Keep them clear after a storm.' },
+      { q: 'Is my older Lincolnwood home’s ductwork big enough for a new AC?', a: 'Sometimes not. Original ductwork from the 1950s was often sized for heating. We measure static pressure and look at the returns before sizing a new system.' },
       emergencyFaq('Lincolnwood'),
     ],
-    nearbySlugs: ['skokie', 'west-ridge', 'evanston'],
+    nearbySlugs: ['skokie', 'west-ridge', 'morton-grove'],
   },
 
   niles: {
-    h1: 'HVAC Repair in Niles, IL: Furnace & AC Service',
-    title: 'HVAC Repair in Niles, IL | Chicago Aircare Pro',
-    meta: 'Furnace, AC, boiler and heat pump repair and replacement in Niles, IL. Diagnosis first, options with prices, free estimates on new systems. 24/7.',
-    intro: `${business.displayName} repairs and replaces heating and cooling systems in Niles, between Park Ridge, Morton Grove and Skokie. We diagnose first and show you options with prices before any work starts.`,
+    h1: 'HVAC Service in Niles, IL: Homes, Condos & Townhomes',
+    title: 'HVAC Service in Niles, IL: Homes & Condos | Chicago Aircare Pro',
+    meta: 'Furnace and AC repair in Niles, IL for houses, condos and townhomes: shared condenser pads, closet furnaces, aging 1970s–90s systems. 24/7.',
+    intro: `About half of the homes in Niles are detached houses; the rest are condos, townhomes and apartments. That split shapes most of our calls here: closet furnaces and air handlers in condo units, condensers on shared pads in townhome rows, and houses on systems that are on their second or third replacement.`,
     sections: [
       {
-        h2: 'Heating and cooling service in Niles',
-        html: `<h3>Furnace repair</h3>
-<p>No heat, a furnace that starts and shuts off, error codes, ignition and inducer problems. See <a href="/furnace-repair/">furnace repair</a>.</p>
-<h3>Air conditioning and heat pumps</h3>
-<p>AC repair and replacement, refrigerant leaks found and fixed instead of topped off, heat pumps and dual-fuel systems.</p>
-<h3>Boilers and air quality</h3>
-<p>Hot-water and steam boilers, whole-home humidifiers for dry winter air, and carbon monoxide safety checks.</p>`,
+        h2: 'Condos and townhomes in Niles',
+        html: `<p>In a condo or townhome, the equipment that serves your unit is usually yours to maintain, even when it sits in a hallway closet, on a shared pad or on the roof. We work on unit equipment and coordinate with the association when access or a shared area is involved.</p>
+<ul><li><strong>Closet furnaces and air handlers:</strong> tight access, small filters that load up fast, and condensate drains that back up into the closet floor.</li>
+<li><strong>Condensers on shared pads:</strong> make sure the outdoor unit we’re working on is actually yours. We match it to your unit before any work.</li>
+<li><strong>Older AC units:</strong> many systems from the 1970s to the 1990s used R-22 refrigerant, which is no longer produced. When one of those leaks, replacement often makes more sense than refilling it.</li></ul>`,
       },
       {
-        h2: 'Repair or replace?',
-        html: `<p>If a furnace or AC is 15 to 20 years old and needs repairs every season, replacement is usually the better value. If it’s younger and one part failed, we repair it. You get both prices when it’s close. Read <a href="/repair-or-replace-furnace/">how we decide between repair and replacement</a>, or book a <a href="/free-estimate/">free estimate</a> for a new system. Financing is available through ${business.financingPartner}, subject to credit approval.</p>`,
+        h2: 'Houses in Niles',
+        html: `<p>Most Niles houses date from the 1940s through the 1960s, with a median build year of 1965, and close to a third were built from 1970 to 1999. That means many are on their second or third furnace and AC. The ductwork stayed the same while the equipment changed, so a new system can be noisy or short-cycle if it was oversized or the returns are small. We check airflow before recommending a size.</p>
+${glance('Niles', [['The median Niles home was built in 1965 (ACS data via a secondary aggregator).', 'City-Stats: Niles housing', 'https://city-stats.com/illinois/niles/housing'], ['About 52.6% of Niles housing units are detached single-family homes.', 'Point2: Niles demographics', 'https://www.point2homes.com/US/Neighborhood/IL/Niles-Demographics.html'], ['About 62% of housing dates from the 1940s through the 1960s and about 29% from 1970 to 1999.', 'NeighborhoodScout: Niles', NS_NILES]])}`,
       },
-      { h2: 'Utilities and rebates in Niles', html: gasNote('Niles') },
+      {
+        h2: 'Utilities and rebates in Niles',
+        html: `<p>Niles is on Nicor Gas’s list of municipalities it serves (${ext(NICOR_TOWNS, 'Nicor Gas territory list')}), and electricity comes from ComEd. Your gas bill confirms the utility for your address.</p>${NICOR_AMOUNTS}${CONFIRM}`,
+      },
     ],
     faqs: [
-      { q: 'Do you serve Niles?', a: 'Yes. We repair and replace furnaces, air conditioners, boilers and heat pumps in Niles and the neighboring towns of Park Ridge, Morton Grove and Skokie.' },
-      { q: 'Do you give free estimates for a new system in Niles?', a: `Yes. New-system estimates are free, and financing is available through ${business.financingPartner}, subject to credit approval.` },
-      { q: 'Should I repair or replace my old furnace?', a: 'It depends on the age, the repair and the furnace’s condition. We look first and give you prices for both when it’s close.' },
+      { q: 'Do you service furnaces and ACs in Niles condos?', a: 'Yes, for the equipment that serves your unit, including closet furnaces, air handlers and condensers on shared pads. We coordinate with the association when access is needed.' },
+      { q: 'My AC uses R-22. Should I repair or replace it?', a: 'R-22 is no longer produced, so refilling a leaking system gets expensive and the leak comes back. On an older R-22 system with a leak, replacement is usually the better value. We give you both prices.' },
+      { q: 'Why is my condo closet furnace leaking water?', a: 'Usually a clogged or disconnected condensate drain, or a frozen AC coil melting. Turn the system off and call; water near a furnace can damage the floor and the controls.' },
       emergencyFaq('Niles'),
     ],
     nearbySlugs: ['park-ridge', 'morton-grove', 'skokie'],
   },
 
   'park-ridge': {
-    h1: 'HVAC Repair in Park Ridge, IL: Furnaces, Boilers & AC',
-    title: 'HVAC Repair in Park Ridge, IL | Chicago Aircare Pro',
-    meta: 'Furnace, boiler, AC and heat pump repair and replacement in Park Ridge, IL. Free estimates on new systems, financing, 24/7 service.',
-    intro: `${business.displayName} repairs and replaces furnaces, boilers, air conditioners and heat pumps in Park Ridge, next to Chicago’s Edison Park and Norwood Park. We diagnose first and give you options with prices before any work starts.`,
+    h1: 'Furnace, Boiler & AC Repair in Park Ridge, IL',
+    title: 'Furnace, Boiler & AC Repair in Park Ridge, IL | Chicago Aircare Pro',
+    meta: 'Park Ridge heating and cooling: boilers and radiators in older homes, furnace and AC replacement in mid-century houses, mini-splits. 24/7.',
+    intro: `Park Ridge has more older homes than most of the suburbs around it: about one in six was built before 1940, and half date from the 1940s to the 1960s. That gives us a steady mix of hot-water and steam boilers in the older houses and forced-air systems in the post-war ones.`,
     sections: [
       {
-        h2: 'Heating and cooling service in Park Ridge',
-        html: `<h3>Furnaces</h3>
-<p>Repair, tune-ups and replacement sized with a load calculation. See <a href="/furnace-repair/">furnace repair</a> and <a href="/furnace-installation/">furnace installation</a>.</p>
-<h3>Boilers and radiators</h3>
-<p>Hot-water and steam boilers, cold radiators, pressure and water-level problems. Ductless mini-splits add cooling to boiler-heated homes without new ductwork. See <a href="/boiler-repair/">boiler repair</a> and <a href="/mini-split-installation/">mini-split installation</a>.</p>
-<h3>Air conditioning and heat pumps</h3>
-<p>AC repair and replacement, heat pumps and dual-fuel systems, and the second system many larger homes have upstairs.</p>`,
+        h2: 'Boilers and radiators in older Park Ridge homes',
+        html: `<p>Pre-war houses are where we find most boilers in Park Ridge. Hot-water systems need the right pressure, working air vents and an expansion tank that isn’t waterlogged. Steam systems need a steady water line in the gauge glass, a clean low-water cutoff and radiator vents that open and close.</p>
+<p>The usual complaints: one radiator that never gets hot, banging pipes, and a boiler that locks out on a cold morning. See <a href="/boiler-repair/">boiler repair</a>, <a href="/steam-heat-banging-pipes/">why steam pipes bang</a> and our job story on <a href="/steam-boiler-not-working-clogged-gauge-glass/">a steam boiler brought back by cleaning the gauge glass and pigtail</a>.</p>
+<h3>Adding cooling without ductwork</h3>
+<p>Boiler homes have no ducts for central air. Ductless <a href="/mini-split-installation/">mini-splits</a> cool the bedrooms and living areas without opening walls, and a heat pump model also heats in mild weather.</p>`,
       },
       {
-        h2: 'Replacing a system in Park Ridge',
-        html: `<p>We start with a load calculation and a look at the ductwork, venting and electrical, then quote options, from a matched furnace and AC to a heat pump paired with a furnace. New-system estimates are free, and financing is available through ${business.financingPartner}, subject to credit approval. Book a <a href="/free-estimate/">free estimate</a>.</p>`,
+        h2: 'Forced air in mid-century Park Ridge homes',
+        html: `<p>Post-war homes mostly heat with a furnace and cool with central air on the same ductwork. When they’re due for replacement, we size the furnace and AC with a load calculation and check the returns, because the original ducts were usually sized for heat. See <a href="/furnace-installation/">furnace installation</a> and <a href="/ac-installation/">AC installation</a>.</p>
+${glance('Park Ridge', [['The median Park Ridge home was built in 1960, and about 85% of homes are owner-occupied (ACS data via a secondary aggregator).', 'City-Stats: Park Ridge housing', 'https://city-stats.com/illinois/park-ridge/housing'], ['About 51% of housing dates from the 1940s through the 1960s, and about 16% was built before 1940.', 'NeighborhoodScout: Park Ridge', NS_PR]])}`,
       },
-      { h2: 'Utilities and rebates in Park Ridge', html: gasNote('Park Ridge') },
+      {
+        h2: 'Utilities and rebates in Park Ridge',
+        html: `<p>Park Ridge is on Nicor Gas’s list of municipalities it serves (${ext(NICOR_TOWNS, 'Nicor Gas territory list')}), and electricity comes from ComEd. Boiler homes should look at the Nicor boiler rebates; forced-air homes at the furnace rebates.</p>${NICOR_AMOUNTS}${CONFIRM}`,
+      },
     ],
     faqs: [
-      { q: 'Do you serve Park Ridge?', a: 'Yes. We repair and replace furnaces, boilers, air conditioners and heat pumps in Park Ridge, along with Niles, Des Plaines and Chicago’s Edison Park and Norwood Park.' },
-      { q: 'Can you add central air or cooling to a Park Ridge home with radiators?', a: 'Yes. Ductless mini-splits are the usual answer for boiler-heated homes, because they need no ductwork.' },
-      { q: 'Do you give free estimates in Park Ridge?', a: `Yes, on new systems. Financing is available through ${business.financingPartner}, subject to credit approval.` },
+      { q: 'Do you work on steam and hot-water boilers in Park Ridge?', a: 'Yes, both: no heat, cold radiators, banging pipes, pressure and water-level problems, and boiler replacement when it’s time.' },
+      { q: 'Can I get air conditioning in a Park Ridge home with radiators?', a: 'Yes. Ductless mini-splits are the usual answer, because they need no ductwork. A heat pump model can also take some of the heating load in spring and fall.' },
+      { q: 'One radiator in my house never gets hot. Why?', a: 'On steam, usually a stuck radiator vent or a pipe that’s lost its pitch. On hot water, usually air in the radiator or a balancing problem. Both are fixable; see our guide on a boiler that’s not heating.' },
       emergencyFaq('Park Ridge'),
     ],
     nearbySlugs: ['edison-park', 'norwood-park', 'niles', 'des-plaines'],
   },
 
   'morton-grove': {
-    h1: 'HVAC Repair in Morton Grove, IL: Furnace & AC Service',
-    title: 'HVAC Repair in Morton Grove, IL | Chicago Aircare Pro',
-    meta: 'Furnace, AC, boiler and heat pump repair and replacement in Morton Grove, IL. Diagnosis first, prices before work, free estimates. 24/7.',
-    intro: `${business.displayName} repairs and replaces heating and cooling systems in Morton Grove, between Skokie and Niles. We diagnose first and show you options with prices before any work starts.`,
+    h1: 'Furnace & AC Replacement and Repair in Morton Grove, IL',
+    title: 'Furnace & AC Repair in Morton Grove, IL | Chicago Aircare Pro',
+    meta: 'Morton Grove homes are mostly 1940s–60s builds: furnace and AC replacement, chimney liners, duct and return fixes, repairs 24/7.',
+    intro: `Two out of three Morton Grove homes were built between the 1940s and the 1960s. In houses that age, the questions we get most are about replacement: what size, what efficiency, and what has to change around the furnace when the old one comes out.`,
     sections: [
       {
-        h2: 'Heating and cooling service in Morton Grove',
-        html: `<h3>Furnace repair and replacement</h3>
-<p>No heat, short-cycling, ignition, inducer and blower problems, and replacements sized to the house. See <a href="/furnace-repair/">furnace repair</a>.</p>
-<h3>Air conditioning and heat pumps</h3>
-<p>AC repair and replacement, refrigerant leak repair, heat pumps and dual-fuel systems.</p>
-<h3>Comfort and air quality</h3>
-<p>Uneven rooms, weak airflow, dry winter air and carbon monoxide safety checks. See <a href="/ductwork-repair/">ductwork repair</a> and <a href="/whole-home-humidifiers/">whole-home humidifiers</a>.</p>`,
+        h2: 'What changes when you replace an older furnace',
+        html: `<p>Many older furnaces in Morton Grove vent up the chimney, often sharing it with the water heater. Moving to a 90%+ furnace changes that: the new furnace vents through plastic pipe, and the water heater can be left alone in a chimney that’s now too big for it. That “orphaned” water heater may need a chimney liner to draft safely. We check it on every quote, so it isn’t a surprise after the install.</p>
+<p>A high-efficiency furnace also makes condensate, so it needs a drain, and in some basements a condensate pump. All of that belongs in the price you see. See <a href="/furnace-installation/">furnace installation</a> and <a href="/repair-or-replace-furnace/">repair or replace</a>.</p>`,
       },
       {
-        h2: 'New systems in Morton Grove',
-        html: `<p>New-system estimates are free. We size the equipment with a load calculation, check the ductwork and venting, and quote options with prices. Financing is available through ${business.financingPartner}, subject to credit approval. Book a <a href="/free-estimate/">free estimate</a>.</p>`,
+        h2: 'Ductwork that was sized for heat',
+        html: `<p>Ducts in homes from this era were usually designed for a furnace, before central air. Adding or upsizing AC on the same ducts can mean noisy registers, a coil that freezes, and rooms that never cool. Before we size a new system, we measure static pressure and look at the returns; sometimes adding a return does more than a bigger AC. See <a href="/ductwork-repair/">ductwork repair</a>.</p>
+${glance('Morton Grove', [['The median Morton Grove home was built in 1960 (ACS data via a secondary aggregator).', 'City-Stats: Morton Grove housing', 'https://city-stats.com/illinois/morton-grove/housing'], ['About 66% of housing dates from the 1940s through the 1960s.', 'NeighborhoodScout: Morton Grove', NS_MG]])}`,
       },
-      { h2: 'Utilities and rebates in Morton Grove', html: gasNote('Morton Grove') },
+      {
+        h2: 'Utilities and rebates in Morton Grove',
+        html: `<p>Nicor Gas works on gas lines in Morton Grove under its system-upgrade program (${ext('https://www.nicorgas.com/company/where-we-are/work-in-your-neighborhood/current-projects.html', 'Nicor Gas current projects')}), and electricity comes from ComEd. Your gas bill confirms the utility for your address.</p>${NICOR_AMOUNTS}${CONFIRM}`,
+      },
     ],
     faqs: [
-      { q: 'Do you serve Morton Grove?', a: 'Yes. We repair and replace furnaces, air conditioners, boilers and heat pumps in Morton Grove and neighboring Skokie and Niles.' },
-      { q: 'Why is one room always colder than the rest?', a: 'Usually airflow: a weak or missing return, a long duct run or leaky ducts. We measure before recommending dampers, added returns or zoning.' },
-      { q: 'Do you give free estimates in Morton Grove?', a: `Yes, on new systems. Financing is available through ${business.financingPartner}, subject to credit approval.` },
+      { q: 'Does my water heater need a chimney liner if I get a new furnace?', a: 'It can. When a high-efficiency furnace stops venting into the chimney, the water heater may be left in a chimney too large for it to draft properly. We check it during the estimate and include a liner in the quote if it’s needed.' },
+      { q: 'Can I add central air to my Morton Grove home’s existing ducts?', a: 'Often, but older ducts were sized for heating. We measure airflow and returns first; sometimes a return or duct change is needed for the AC to work as rated.' },
+      { q: 'Do you give free estimates for furnace and AC replacement?', a: `Yes, on new systems. Financing is available through ${business.financingPartner}, subject to credit approval.` },
       emergencyFaq('Morton Grove'),
     ],
     nearbySlugs: ['skokie', 'niles', 'lincolnwood'],
