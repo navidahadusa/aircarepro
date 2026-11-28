@@ -74,3 +74,6 @@ Former names to retire everywhere: `Shad Heating and Cooling LLC`, `Shad Heating
 
 - **2026-11-22:** owner renamed the company in **Housecall Pro**. Next: the new booking link (Online booking → copy link) → update `business.bookingUrl` once (all pages).
 - **2026-11-22:** new Housecall Pro booking link live in `business.bookingUrl` (orgName CHICAGO-AIRCARE-PRO, same token). The site no longer contains the old name anywhere.
+
+## Service-area log
+- **2026-11-28:** owner added Lincolnwood, Niles, Park Ridge and Morton Grove to the website (`/hvac-<town>/`, PR #39) **and to the Google Business Profile service area** (owner confirmed in chat). Next: add the same towns on Yelp, Bing Places, Thumbtack and Facebook when each profile is edited.
