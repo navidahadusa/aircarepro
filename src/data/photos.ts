@@ -33,6 +33,8 @@ import gaugeGlassClogged from '../assets/photos/jobs/steam-boiler-gauge-glass-cl
 import gaugeGlassValve from '../assets/photos/jobs/steam-boiler-gauge-glass-valve-sediment.jpg';
 import pigtailCleaned from '../assets/photos/jobs/steam-boiler-pigtail-cleaned.jpg';
 import blowerWheelWashing from '../assets/photos/jobs/furnace-blower-wheel-washing.jpg';
+import inducerInstalled from '../assets/photos/jobs/furnace-inducer-motor-installed.jpg';
+import inducerRemoved from '../assets/photos/jobs/furnace-inducer-assembly-removed.jpg';
 import newCondenserRoof from '../assets/photos/jobs/new-ac-condenser-rooftop.jpg';
 import dirtyCondenserCoil from '../assets/photos/jobs/condenser-coil-before-cleaning.jpg';
 import nitrogenTest from '../assets/photos/jobs/nitrogen-pressure-test.jpg';
@@ -61,6 +63,8 @@ export const photos = {
   gaugeGlassClogged: { src: gaugeGlassClogged, alt: 'Steam boiler gauge glass stained and clogged with rust and sediment, before cleaning' },
   gaugeGlassValve: { src: gaugeGlassValve, alt: 'Lower gauge glass valve on a steam boiler, its opening packed with rust sediment' },
   pigtailCleaned: { src: pigtailCleaned, alt: 'Technician holding a rust-packed fitting removed from a steam boiler during cleaning, with the water-level plate behind' },
+  inducerInstalled: { src: inducerInstalled, alt: 'Replacement draft inducer motor mounted on a gas furnace next to the flue pipe' },
+  inducerRemoved: { src: inducerRemoved, alt: 'Furnace draft inducer assembly with its blower wheel, removed from the furnace during an inducer replacement' },
   blowerWheelWashing: { src: blowerWheelWashing, alt: 'Furnace blower wheel and housing being rinsed outdoors with a hose during a blower cleaning' },
   corrodedFlue: { src: corrodedFlue, alt: 'Section of rusted, corroded flue vent pipe removed from a heating system' },
   burnersCleaning: { src: burnersCleaning, alt: 'Boiler burner tubes removed and laid out for cleaning during a tune-up' },
