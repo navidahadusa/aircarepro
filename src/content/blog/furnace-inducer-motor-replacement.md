@@ -28,7 +28,7 @@ photo: inducerInstalled
 draft: false
 ---
 
-The furnace clicks on, you hear a fan start, and then nothing. No flame. A minute later it tries again. On a lot of service calls like that, the part at fault is the **draft inducer motor**, and that's the part we replaced today on a gas furnace in Lincolnwood, just west of Skokie.
+The furnace clicks on, you hear a fan start, and then nothing. No flame. A minute later it tries again. On a lot of service calls like that, the part at fault is the **draft inducer motor**, and that's the part we replaced today on a gas furnace in [Lincolnwood](/hvac-lincolnwood/), next to Skokie.
 
 ![Furnace draft inducer assembly with its blower wheel, removed during an inducer replacement](../../assets/photos/jobs/furnace-inducer-assembly-removed.jpg)
 

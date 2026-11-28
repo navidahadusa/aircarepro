@@ -113,7 +113,7 @@ File: `marketing/daily-reports/YYYY-MM-DD.md` (template: `marketing/daily-report
 | `src/components/ServiceCards.astro`, `TrustBlock.astro`, `ReviewsBlock.astro` | Conversion blocks | Chloe / Maya |
 | `src/components/FaqSection.astro`, `Breadcrumbs.astro`, `JsonLd.astro`, `LocalBusinessSchema.astro` | FAQPage / BreadcrumbList / JSON-LD | Elena / Maya |
 | `src/components/LeadForm.astro`, `NapBlock.astro` | Forms; canonical NAP display | Rachel / Hannah |
-| `src/pages/hvac-[slug].astro` | 33 area pages (Chicago hub + 32 neighborhoods/suburbs) | Elena |
+| `src/pages/hvac-[slug].astro` | 37 area pages (Chicago hub + 36 neighborhoods/suburbs) | Elena |
 | `src/content/blog/*.md`, `src/content.config.ts`, `src/data/blog.ts` | Blog: 34 posts migrated from the live site at their **root URLs**, plus daily new posts | Maya / Elena |
 | `src/components/BlogPost.astro`, `BlogIndex.astro`, `src/pages/blog/` | Post template (BlogPosting/FAQ schema, intent-aware CTAs), `/blog/` + category hubs | Maya / Elena / Rachel |
 | `src/components/ServicePage.astro` | Service + category page template (routed by `src/pages/[slug].astro`, which also routes posts) | Maya / Elena |
@@ -152,12 +152,12 @@ File: `marketing/daily-reports/YYYY-MM-DD.md` (template: `marketing/daily-report
 | Offers | Free estimates on new systems · financing through **Optimus** (subject to credit approval) · **Comfort Club** maintenance plan (pricing TODO) · utility rebate help |
 | Positioning | "One crew for both seasons." Diagnosis first, options with prices before any work, repair what can be repaired; Chicago two-flat, greystone and bungalow know-how |
 
-### Service areas (Chicago hub + 32 neighborhoods & suburbs)
+### Service areas (Chicago hub + 36 neighborhoods & suburbs)
 - **Chicago, North Side:** Lincoln Park, Lakeview, Old Town & Gold Coast, Lincoln Square, North Center, Ravenswood, Uptown, Andersonville & Edgewater, Rogers Park, West Ridge
 - **Chicago, Northwest Side:** Logan Square, Avondale, Irving Park, Albany Park, Portage Park, Jefferson Park, Norwood Park, Edison Park
 - **Chicago, West Side:** Bucktown, Wicker Park, Humboldt Park, Ukrainian Village, West Town, Austin
-- **North suburbs:** Evanston, Skokie, Wilmette, Highland Park
-- **Northwest & west suburbs:** Des Plaines, Arlington Heights, Schaumburg, Naperville
+- **North suburbs:** Evanston, Skokie, Wilmette, Highland Park, Lincolnwood, Morton Grove, Niles (last three added by the owner 2026-11-28)
+- **Northwest & west suburbs:** Park Ridge (owner 2026-11-28), Des Plaines, Arlington Heights, Schaumburg, Naperville
 
 ### Services (20)
 - **Heating:** Furnace repair, installation and tune-up · Boiler repair and installation (hot-water and steam) · Heat pump repair and installation · Thermostats & zoning

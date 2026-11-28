@@ -1,5 +1,5 @@
 /**
- * Area page content for /hvac-<slug>/ (33 pages). Owner: Elena Brooks (Local SEO Architect).
+ * Area page content for /hvac-<slug>/ (37 pages). Owner: Elena Brooks (Local SEO Architect).
  *
  * Source: the owner's own published WordPress area pages (aircareprohvac.com/hvac-<slug>/),
  * ported and expanded. Rules:
@@ -1443,7 +1443,141 @@ const westSuburbs: Record<string, AreaContent> = {
   },
 };
 
-/** All 33 area pages keyed by slug (must match business.serviceAreas). */
+
+/* ------------------------------------------------------------------ */
+/* Added 2026-11-28 (owner: "add Lincolnwood, Niles, Park Ridge, Morton Grove").
+ * No source pages exist for these towns, so the copy states no local housing statistics or utility claims:
+ * only services, how we work, geography and the owner's real Lincolnwood job. */
+const gasNote = (place: string) =>
+  `<p>Gas service in ${place} depends on the address, and your gas bill shows which utility serves you. Utility rebates on high-efficiency furnaces, boilers and smart thermostats change from year to year, so we check what applies to your address when we quote new equipment.</p>`;
+
+const addedSuburbs: Record<string, AreaContent> = {
+  lincolnwood: {
+    h1: 'HVAC Repair in Lincolnwood, IL: Furnace, Boiler & AC',
+    title: 'HVAC Repair in Lincolnwood, IL | Chicago Aircare Pro',
+    meta: 'Furnace, boiler, AC and heat pump repair and replacement in Lincolnwood, IL. Diagnosis first, prices before work, 24/7 service.',
+    intro: `${business.displayName} repairs and replaces furnaces, boilers, air conditioners and heat pumps in Lincolnwood, the village between Skokie and Chicago’s North Side. We diagnose first and give you options with prices before any work starts.`,
+    sections: [
+      {
+        h2: 'Recent work in Lincolnwood',
+        html: `<p>Our most recent Lincolnwood call was a gas furnace with a failed draft inducer motor: the small fan that pushes exhaust out the flue before the burners are allowed to light. When it quits, the furnace tries to start, gives up and locks out. We replaced the inducer and ran the furnace through full heating cycles. Here’s <a href="/furnace-inducer-motor-replacement/">what that repair involves and what changes the cost</a>.</p>`,
+      },
+      {
+        h2: 'Heating and cooling service in Lincolnwood',
+        html: `<h3>Furnace repair and replacement</h3>
+<p>No heat, short-cycling, error codes, noisy blowers and inducers. When a furnace is near the end of its life, we size the replacement with a load calculation instead of copying the old nameplate. See <a href="/furnace-repair/">furnace repair</a> and <a href="/furnace-installation/">furnace installation</a>.</p>
+<h3>Boilers and radiators</h3>
+<p>Hot-water and steam boilers: no heat, pressure and water-level problems, banging pipes, cold radiators. See <a href="/boiler-repair/">boiler repair</a>.</p>
+<h3>Air conditioning and heat pumps</h3>
+<p>AC repair and replacement, heat pumps and dual-fuel systems, and ductless mini-splits for rooms or homes without ductwork.</p>`,
+      },
+      {
+        h2: 'Replacing a system in Lincolnwood',
+        html: `<p>New-system estimates are free. We check the ductwork, venting and electrical the job needs, so the quote covers a system that works, and financing is available through ${business.financingPartner}, subject to credit approval. Book a <a href="/free-estimate/">free estimate</a>.</p>`,
+      },
+      { h2: 'Utilities and rebates in Lincolnwood', html: gasNote('Lincolnwood') },
+    ],
+    faqs: [
+      { q: 'Do you serve Lincolnwood?', a: 'Yes. We repair and replace furnaces, boilers, air conditioners and heat pumps in Lincolnwood, along with neighboring Skokie and Chicago’s North Side.' },
+      { q: 'My furnace tries to start and then shuts off. What is it?', a: 'Often the draft inducer, the pressure switch, a blocked vent or a dirty flame sensor. We test before replacing parts, so you only pay for the part that failed.' },
+      { q: 'Do you give free estimates for a new furnace or AC in Lincolnwood?', a: `Yes. New-system estimates are free, and financing is available through ${business.financingPartner}, subject to credit approval.` },
+      emergencyFaq('Lincolnwood'),
+    ],
+    nearbySlugs: ['skokie', 'west-ridge', 'evanston'],
+  },
+
+  niles: {
+    h1: 'HVAC Repair in Niles, IL: Furnace & AC Service',
+    title: 'HVAC Repair in Niles, IL | Chicago Aircare Pro',
+    meta: 'Furnace, AC, boiler and heat pump repair and replacement in Niles, IL. Diagnosis first, options with prices, free estimates on new systems. 24/7.',
+    intro: `${business.displayName} repairs and replaces heating and cooling systems in Niles, between Park Ridge, Morton Grove and Skokie. We diagnose first and show you options with prices before any work starts.`,
+    sections: [
+      {
+        h2: 'Heating and cooling service in Niles',
+        html: `<h3>Furnace repair</h3>
+<p>No heat, a furnace that starts and shuts off, error codes, ignition and inducer problems. See <a href="/furnace-repair/">furnace repair</a>.</p>
+<h3>Air conditioning and heat pumps</h3>
+<p>AC repair and replacement, refrigerant leaks found and fixed instead of topped off, heat pumps and dual-fuel systems.</p>
+<h3>Boilers and air quality</h3>
+<p>Hot-water and steam boilers, whole-home humidifiers for dry winter air, and carbon monoxide safety checks.</p>`,
+      },
+      {
+        h2: 'Repair or replace?',
+        html: `<p>If a furnace or AC is 15 to 20 years old and needs repairs every season, replacement is usually the better value. If it’s younger and one part failed, we repair it. You get both prices when it’s close. Read <a href="/repair-or-replace-furnace/">how we decide between repair and replacement</a>, or book a <a href="/free-estimate/">free estimate</a> for a new system. Financing is available through ${business.financingPartner}, subject to credit approval.</p>`,
+      },
+      { h2: 'Utilities and rebates in Niles', html: gasNote('Niles') },
+    ],
+    faqs: [
+      { q: 'Do you serve Niles?', a: 'Yes. We repair and replace furnaces, air conditioners, boilers and heat pumps in Niles and the neighboring towns of Park Ridge, Morton Grove and Skokie.' },
+      { q: 'Do you give free estimates for a new system in Niles?', a: `Yes. New-system estimates are free, and financing is available through ${business.financingPartner}, subject to credit approval.` },
+      { q: 'Should I repair or replace my old furnace?', a: 'It depends on the age, the repair and the furnace’s condition. We look first and give you prices for both when it’s close.' },
+      emergencyFaq('Niles'),
+    ],
+    nearbySlugs: ['park-ridge', 'morton-grove', 'skokie'],
+  },
+
+  'park-ridge': {
+    h1: 'HVAC Repair in Park Ridge, IL: Furnaces, Boilers & AC',
+    title: 'HVAC Repair in Park Ridge, IL | Chicago Aircare Pro',
+    meta: 'Furnace, boiler, AC and heat pump repair and replacement in Park Ridge, IL. Free estimates on new systems, financing, 24/7 service.',
+    intro: `${business.displayName} repairs and replaces furnaces, boilers, air conditioners and heat pumps in Park Ridge, next to Chicago’s Edison Park and Norwood Park. We diagnose first and give you options with prices before any work starts.`,
+    sections: [
+      {
+        h2: 'Heating and cooling service in Park Ridge',
+        html: `<h3>Furnaces</h3>
+<p>Repair, tune-ups and replacement sized with a load calculation. See <a href="/furnace-repair/">furnace repair</a> and <a href="/furnace-installation/">furnace installation</a>.</p>
+<h3>Boilers and radiators</h3>
+<p>Hot-water and steam boilers, cold radiators, pressure and water-level problems. Ductless mini-splits add cooling to boiler-heated homes without new ductwork. See <a href="/boiler-repair/">boiler repair</a> and <a href="/mini-split-installation/">mini-split installation</a>.</p>
+<h3>Air conditioning and heat pumps</h3>
+<p>AC repair and replacement, heat pumps and dual-fuel systems, and the second system many larger homes have upstairs.</p>`,
+      },
+      {
+        h2: 'Replacing a system in Park Ridge',
+        html: `<p>We start with a load calculation and a look at the ductwork, venting and electrical, then quote options, from a matched furnace and AC to a heat pump paired with a furnace. New-system estimates are free, and financing is available through ${business.financingPartner}, subject to credit approval. Book a <a href="/free-estimate/">free estimate</a>.</p>`,
+      },
+      { h2: 'Utilities and rebates in Park Ridge', html: gasNote('Park Ridge') },
+    ],
+    faqs: [
+      { q: 'Do you serve Park Ridge?', a: 'Yes. We repair and replace furnaces, boilers, air conditioners and heat pumps in Park Ridge, along with Niles, Des Plaines and Chicago’s Edison Park and Norwood Park.' },
+      { q: 'Can you add central air or cooling to a Park Ridge home with radiators?', a: 'Yes. Ductless mini-splits are the usual answer for boiler-heated homes, because they need no ductwork.' },
+      { q: 'Do you give free estimates in Park Ridge?', a: `Yes, on new systems. Financing is available through ${business.financingPartner}, subject to credit approval.` },
+      emergencyFaq('Park Ridge'),
+    ],
+    nearbySlugs: ['edison-park', 'norwood-park', 'niles', 'des-plaines'],
+  },
+
+  'morton-grove': {
+    h1: 'HVAC Repair in Morton Grove, IL: Furnace & AC Service',
+    title: 'HVAC Repair in Morton Grove, IL | Chicago Aircare Pro',
+    meta: 'Furnace, AC, boiler and heat pump repair and replacement in Morton Grove, IL. Diagnosis first, prices before work, free estimates. 24/7.',
+    intro: `${business.displayName} repairs and replaces heating and cooling systems in Morton Grove, between Skokie and Niles. We diagnose first and show you options with prices before any work starts.`,
+    sections: [
+      {
+        h2: 'Heating and cooling service in Morton Grove',
+        html: `<h3>Furnace repair and replacement</h3>
+<p>No heat, short-cycling, ignition, inducer and blower problems, and replacements sized to the house. See <a href="/furnace-repair/">furnace repair</a>.</p>
+<h3>Air conditioning and heat pumps</h3>
+<p>AC repair and replacement, refrigerant leak repair, heat pumps and dual-fuel systems.</p>
+<h3>Comfort and air quality</h3>
+<p>Uneven rooms, weak airflow, dry winter air and carbon monoxide safety checks. See <a href="/ductwork-repair/">ductwork repair</a> and <a href="/whole-home-humidifiers/">whole-home humidifiers</a>.</p>`,
+      },
+      {
+        h2: 'New systems in Morton Grove',
+        html: `<p>New-system estimates are free. We size the equipment with a load calculation, check the ductwork and venting, and quote options with prices. Financing is available through ${business.financingPartner}, subject to credit approval. Book a <a href="/free-estimate/">free estimate</a>.</p>`,
+      },
+      { h2: 'Utilities and rebates in Morton Grove', html: gasNote('Morton Grove') },
+    ],
+    faqs: [
+      { q: 'Do you serve Morton Grove?', a: 'Yes. We repair and replace furnaces, air conditioners, boilers and heat pumps in Morton Grove and neighboring Skokie and Niles.' },
+      { q: 'Why is one room always colder than the rest?', a: 'Usually airflow: a weak or missing return, a long duct run or leaky ducts. We measure before recommending dampers, added returns or zoning.' },
+      { q: 'Do you give free estimates in Morton Grove?', a: `Yes, on new systems. Financing is available through ${business.financingPartner}, subject to credit approval.` },
+      emergencyFaq('Morton Grove'),
+    ],
+    nearbySlugs: ['skokie', 'niles', 'lincolnwood'],
+  },
+};
+
+/** All 37 area pages keyed by slug (must match business.serviceAreas). */
 export const areaContent: Record<string, AreaContent> = {
   ...hub,
   ...northSide,
@@ -1451,6 +1585,7 @@ export const areaContent: Record<string, AreaContent> = {
   ...westSide,
   ...northSuburbs,
   ...westSuburbs,
+  ...addedSuburbs,
 };
 
 /** Area slugs that have dedicated service+city pages (/furnace-repair-<city>/, /ac-repair-<city>/, /furnace-installation-<city>/). */
