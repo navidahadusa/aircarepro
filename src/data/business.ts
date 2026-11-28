@@ -207,7 +207,11 @@ export const business: Business = {
     area('Skokie', 'North suburbs'),
     area('Wilmette', 'North suburbs'),
     area('Highland Park', 'North suburbs'),
+    area('Lincolnwood', 'North suburbs'), // owner 2026-11-28
+    area('Morton Grove', 'North suburbs'), // owner 2026-11-28
+    area('Niles', 'North suburbs'), // owner 2026-11-28
     // Northwest & west suburbs
+    area('Park Ridge', 'Northwest & west suburbs'), // owner 2026-11-28
     area('Des Plaines', 'Northwest & west suburbs'),
     area('Arlington Heights', 'Northwest & west suburbs'),
     area('Schaumburg', 'Northwest & west suburbs'),
