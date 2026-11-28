@@ -167,7 +167,7 @@ ${glance('Lincoln Park', [
 
   lakeview: {
     h1: 'Furnace, Boiler & AC Repair in Lakeview, Chicago',
-    title: 'HVAC Repair in Lakeview, Chicago | Chicago Aircare Pro',
+    title: 'Furnace & Boiler Repair in Lakeview, Chicago | 24/7 HVAC',
     meta: 'Closet furnace, condo AC, steam boiler and mini-split service in Lakeview, Wrigleyville and Northalsted. 24/7 emergency HVAC. Call or text.',
     intro: `${business.displayName} services furnaces, boilers, central air and mini-splits in Lakeview, including Wrigleyville and Northalsted, with 24/7 emergency service. Much of our Lakeview work is in condo units with their own closet furnace and a condenser on a rear deck or roof, plus two-flats and courtyard buildings still on boilers.`,
     sections: [
@@ -198,6 +198,7 @@ ${glance('Lincoln Park', [
       { q: 'Do you service condo units with their own furnace?', a: 'Yes, as long as the equipment serves your unit. For building-wide systems, the building’s management decides who services them.' },
       { q: 'Why is the furnace in my Lakeview condo closet so loud?', a: 'Most often the return air or filter is too small for the equipment, so the blower strains. We measure static pressure to find the cause before suggesting a fix.' },
       { q: 'Can you replace a condenser on a rear deck or roof?', a: 'Yes, where there is safe access. We plan mounting, clearance and access for future service as part of the job.' },
+      { q: 'Do you do furnace repair and yearly furnace maintenance in Lakeview?', a: 'Yes, for closet furnaces in condo units, basement furnaces in houses and two-flats, and the high-efficiency furnaces with side-wall vents in newer buildings. A yearly tune-up covers the igniter, flame sensor, inducer, venting, condensate drain and a CO check.' },
       emergencyFaq('Lakeview'),
     ],
     nearbySlugs: ['lincoln-park', 'north-center', 'uptown'],
@@ -406,8 +407,8 @@ ${glance('Lincoln Park', [
   },
 
   'andersonville-edgewater': {
-    h1: 'Boiler, Furnace & AC Repair in Andersonville & Edgewater',
-    title: 'HVAC Repair Andersonville & Edgewater | Chicago Aircare Pro',
+    h1: 'Furnace, Boiler & AC Repair in Andersonville & Edgewater',
+    title: 'Furnace Repair & 24-Hour HVAC in Edgewater & Andersonville',
     meta: 'Boiler, radiator, furnace and AC service in Andersonville, Edgewater Glen and Lakewood Balmoral. Two-flat zoning, indirect water heaters. 24/7.',
     intro: `${business.displayName} repairs and installs heating and cooling systems in Andersonville and Edgewater, including Edgewater Glen and Lakewood Balmoral. Large older homes with hot-water boilers, two-flats with one warm unit and one cold one, and central air that is reaching replacement age are the jobs we see most.`,
     sections: [
@@ -439,6 +440,7 @@ ${glance('Lincoln Park', [
       { q: 'Why is the upstairs unit of my two-flat always warmer?', a: 'Heat rises and the upper unit gains heat from below. Separate thermostats or zoning by unit is usually the fix.' },
       { q: 'How do you add cooling to a large radiator-heated home?', a: 'With ductless mini-splits, or a high-velocity system that uses small ducts routed through closets and floor cavities. We assess the house first.' },
       { q: "My central air is decades old. Should the new one be the same size?", a: "Not necessarily. We size new systems to the home rather than the old unit. A properly sized system runs longer, quieter cycles and removes more humidity." },
+      { q: 'Do you service and maintain heat pumps in Edgewater?', a: 'Yes. Heat pump maintenance covers the outdoor coil, the electrical connections, refrigerant readings, the defrost cycle and a test in both heating and cooling. In dual-fuel homes we also check that the furnace takes over in deep cold.' },
       emergencyFaq('Andersonville & Edgewater'),
     ],
     nearbySlugs: ['uptown', 'rogers-park', 'ravenswood'],
