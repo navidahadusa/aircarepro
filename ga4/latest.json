@@ -1,15 +1,15 @@
 {
   "property": "564399214",
   "measurementId": "G-J25SG73ES5",
-  "generatedAt": "2026-11-27T13:42:55.270Z",
+  "generatedAt": "2026-11-28T13:28:57.653Z",
   "errors": [],
   "totals": {
     "current": {
-      "sessions": 155,
-      "totalUsers": 114,
-      "newUsers": 116,
-      "engagedSessions": 59,
-      "screenPageViews": 319,
+      "sessions": 164,
+      "totalUsers": 117,
+      "newUsers": 119,
+      "engagedSessions": 66,
+      "screenPageViews": 341,
       "keyEvents": 0
     },
     "previous": {
@@ -27,7 +27,7 @@
         "Direct"
       ],
       "vals": [
-        128,
+        134,
         0
       ]
     },
@@ -36,7 +36,7 @@
         "Organic Search"
       ],
       "vals": [
-        16,
+        18,
         0
       ]
     },
@@ -54,16 +54,7 @@
         "Referral"
       ],
       "vals": [
-        5,
-        0
-      ]
-    },
-    {
-      "dims": [
-        "Unassigned"
-      ],
-      "vals": [
-        1,
+        6,
         0
       ]
     }
@@ -74,7 +65,7 @@
         "/"
       ],
       "vals": [
-        119,
+        125,
         0
       ]
     },
@@ -84,6 +75,15 @@
       ],
       "vals": [
         3,
+        0
+      ]
+    },
+    {
+      "dims": [
+        "/how-to-clean-furnace-blower-wheel"
+      ],
+      "vals": [
+        2,
         0
       ]
     },
@@ -102,15 +102,6 @@
       ],
       "vals": [
         2,
-        0
-      ]
-    },
-    {
-      "dims": [
-        ""
-      ],
-      "vals": [
-        1,
         0
       ]
     },
@@ -224,15 +215,6 @@
     },
     {
       "dims": [
-        "/how-to-clean-furnace-blower-wheel"
-      ],
-      "vals": [
-        1,
-        0
-      ]
-    },
-    {
-      "dims": [
         "/hvac-andersonville-edgewater"
       ],
       "vals": [
@@ -248,6 +230,15 @@
         1,
         0
       ]
+    },
+    {
+      "dims": [
+        "/hvac-austin"
+      ],
+      "vals": [
+        1,
+        0
+      ]
     }
   ],
   "cities": [
@@ -256,7 +247,7 @@
         "Chicago"
       ],
       "vals": [
-        37
+        41
       ]
     },
     {
@@ -309,6 +300,14 @@
     },
     {
       "dims": [
+        "Minneapolis"
+      ],
+      "vals": [
+        4
+      ]
+    },
+    {
+      "dims": [
         "New York"
       ],
       "vals": [
@@ -334,14 +333,6 @@
     {
       "dims": [
         "Los Angeles"
-      ],
-      "vals": [
-        3
-      ]
-    },
-    {
-      "dims": [
-        "Minneapolis"
       ],
       "vals": [
         3
@@ -378,7 +369,7 @@
         "desktop"
       ],
       "vals": [
-        85
+        87
       ]
     },
     {
@@ -386,7 +377,7 @@
         "mobile"
       ],
       "vals": [
-        73
+        80
       ]
     }
   ],
@@ -413,7 +404,7 @@
         "facebook.com"
       ],
       "vals": [
-        2
+        3
       ]
     },
     {

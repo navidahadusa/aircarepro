@@ -1,14 +1,14 @@
-# Google Analytics 4 snapshot (2026-11-27)
+# Google Analytics 4 snapshot (2026-11-28)
 
 Property `564399214` (G-J25SG73ES5) · last 28 days vs previous 28 days
 
 | Metric | Current 28d | Previous 28d |
 |---|---|---|
-| sessions | 155 | 0 |
-| totalUsers | 114 | 0 |
-| newUsers | 116 | 0 |
-| engagedSessions | 59 | 0 |
-| screenPageViews | 319 | 0 |
+| sessions | 164 | 0 |
+| totalUsers | 117 | 0 |
+| newUsers | 119 | 0 |
+| engagedSessions | 66 | 0 |
+| screenPageViews | 341 | 0 |
 | keyEvents | 0 | 0 |
 
 ## Lead events (calls, texts, bookings, reviews)
@@ -21,7 +21,7 @@ _No data yet._
 |---|---|
 | book.housecallpro.com | 5 |
 | google.com | 5 |
-| facebook.com | 2 |
+| facebook.com | 3 |
 | g.page | 1 |
 | yelp.com | 1 |
 
@@ -29,21 +29,20 @@ _No data yet._
 
 | Channel | Sessions | Key events |
 |---|---|---|
-| Direct | 128 | 0 |
-| Organic Search | 16 | 0 |
+| Direct | 134 | 0 |
+| Organic Search | 18 | 0 |
 | Organic Social | 6 | 0 |
-| Referral | 5 | 0 |
-| Unassigned | 1 | 0 |
+| Referral | 6 | 0 |
 
 ## Top landing pages
 
 | Landing page | Sessions | Key events |
 |---|---|---|
-| / | 119 | 0 |
+| / | 125 | 0 |
 | /contact | 3 | 0 |
+| /how-to-clean-furnace-blower-wheel | 2 | 0 |
 | /hvac-lakeview | 2 | 0 |
 | /hvac-logan-square | 2 | 0 |
-|  | 1 | 0 |
 | (not set) | 1 | 0 |
 | /ac-repair | 1 | 0 |
 | /air-in-boiler-system | 1 | 0 |
@@ -56,26 +55,26 @@ _No data yet._
 | /financing | 1 | 0 |
 | /furnace-repair | 1 | 0 |
 | /how-often-change-furnace-filter | 1 | 0 |
-| /how-to-clean-furnace-blower-wheel | 1 | 0 |
 | /hvac-andersonville-edgewater | 1 | 0 |
 | /hvac-arlington-heights | 1 | 0 |
+| /hvac-austin | 1 | 0 |
 
 ## Cities
 
 | City | Sessions |
 |---|---|
-| Chicago | 37 |
+| Chicago | 41 |
 | (not set) | 13 |
 | Warsaw | 12 |
 | Ashburn | 6 |
 | Pune | 6 |
 | Glenview | 5 |
 | Montreal | 5 |
+| Minneapolis | 4 |
 | New York | 4 |
 | Anyang-si | 3 |
 | Hialeah Gardens | 3 |
 | Los Angeles | 3 |
-| Minneapolis | 3 |
 | San Francisco | 3 |
 | Springfield | 3 |
 | Des Moines | 2 |
@@ -84,6 +83,6 @@ _No data yet._
 
 | Device | Sessions |
 |---|---|
-| desktop | 85 |
-| mobile | 73 |
+| desktop | 87 |
+| mobile | 80 |
 
