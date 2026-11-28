@@ -317,6 +317,8 @@ const faqs = [
   .home-posts a:hover strong { color: var(--brand-accent); }
   .home-posts a:hover :global(.icon) { transform: translateX(3px); }
   @media (max-width: 900px) { .guides { grid-template-columns: 1fr; } }
+  /* Below-the-fold sections skip style/layout/paint until they near the viewport (PageSpeed long tasks, 2026-11-28). */
+  main > :global(section:not(.home-hero2)) { content-visibility: auto; contain-intrinsic-size: auto 700px; }
   .faq-wrap { display: grid; justify-items: center; }
   .faq-wrap .prose { width: 100%; }
   .faq-wrap .prose :global(h2:first-child) { margin-top: 0; }
