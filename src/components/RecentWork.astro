@@ -25,7 +25,7 @@ const {
       {items.map((p) => (
         <li class="rw-item">
           <figure class="photo">
-            <Image quality={50} src={p.src} alt={p.alt} widths={[300, 480]} sizes="(max-width: 600px) 50vw, (max-width: 1000px) 33vw, 18rem" loading="lazy" />
+            <Image quality={38} src={p.src} alt={p.alt} widths={[240, 320, 420]} sizes="(max-width: 600px) 62vw, (max-width: 1000px) 31vw, 17rem" loading="lazy" decoding="async" />
           </figure>
         </li>
       ))}
