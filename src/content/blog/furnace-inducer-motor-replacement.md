@@ -1,6 +1,6 @@
 ---
 title: "Furnace Inducer Motor Replacement: Signs, Testing and Cost"
-description: "What the draft inducer motor does, the signs it's failing, how we test it before replacing it, motor vs. whole assembly, and what changes the cost."
+description: "A furnace inducer motor replacement in Lincolnwood: what the inducer does, signs it's failing, how we test it first, motor vs. assembly, and the cost factors."
 pubDate: 2026-11-28
 updatedDate: 2026-11-28
 category: heating
@@ -28,7 +28,7 @@ photo: inducerInstalled
 draft: false
 ---
 
-The furnace clicks on, you hear a fan start, and then nothing. No flame. A minute later it tries again. On a lot of service calls like that, the part at fault is the **draft inducer motor**, and that's the part we replaced on a gas furnace today.
+The furnace clicks on, you hear a fan start, and then nothing. No flame. A minute later it tries again. On a lot of service calls like that, the part at fault is the **draft inducer motor**, and that's the part we replaced today on a gas furnace in Lincolnwood, just west of Skokie.
 
 ![Furnace draft inducer assembly with its blower wheel, removed during an inducer replacement](../../assets/photos/jobs/furnace-inducer-assembly-removed.jpg)
 
@@ -86,4 +86,4 @@ We diagnose first and give you the price before any work starts. If the furnace 
 
 A yearly [furnace tune-up](/furnace-tune-up/) is when a noisy inducer gets caught early. ENERGY STAR's [maintenance checklist](https://www.energystar.gov/saveathome/heating-cooling/maintenance-checklist) includes checking the furnace's electrical connections and motors for the same reason.
 
-Furnace humming, whining, or trying to start and giving up? [Schedule a furnace repair](/furnace-repair/). We answer calls and texts 24/7.
+Furnace humming, whining, or trying to start and giving up? [Schedule a furnace repair](/furnace-repair/). We work in Lincolnwood and the neighboring north suburbs, including [Skokie](/furnace-repair-skokie/) and [Evanston](/furnace-repair-evanston/). We answer calls and texts 24/7.
